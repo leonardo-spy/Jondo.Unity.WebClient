@@ -1,0 +1,26 @@
+# Git LFS tracking for large files
+
+# Decompiled output (Il2CppDumper + Ghidra)
+Decompiled/dump.cs filter=lfs diff=lfs merge=lfs -text
+Decompiled/script.json filter=lfs diff=lfs merge=lfs -text
+Decompiled/decompiled_all.c filter=lfs diff=lfs merge=lfs -text
+Decompiled/DummyDll/*.dll filter=lfs diff=lfs merge=lfs -text
+
+# Generated index (41MB, substitute for 964MB decompiled_all.c)
+Generated/output/decompiled_index.json filter=lfs diff=lfs merge=lfs -text
+
+# Unity Plugin DLLs (binary)
+UnityProject/Assets/Plugins/*.dll filter=lfs diff=lfs merge=lfs -text
+UnityProject/Assets/Plugins/WebGL/*.a filter=lfs diff=lfs merge=lfs -text
+
+# Unity scenes (binary)
+UnityProject/Assets/Scenes/**/*.unity filter=lfs diff=lfs merge=lfs -text
+
+# Font atlas textures
+UnityProject/Assets/Resources/*.asset filter=lfs diff=lfs merge=lfs -text
+
+# Screenshots
+Screenshots/*.png filter=lfs diff=lfs merge=lfs -text
+
+# Auto-detect text files
+* text=auto
