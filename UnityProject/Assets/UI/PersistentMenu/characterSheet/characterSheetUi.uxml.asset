@@ -1,0 +1,4501 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: characterSheetUi.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings:
+  - alias: socialButton
+    path: 
+    asset: {fileID: 11400000, guid: 3c44d3b68cd977541a872c6dc9934edd, type: 2}
+  inlineSheet: {fileID: 5131016349732052131}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 780643737
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 598321369
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: xsi
+          value: http://www.w3.org/2001/XMLSchema-instance
+        - name: engine
+          value: UnityEngine.UIElements
+        - name: editor
+          value: UnityEditor.UIElements
+        - name: noNamespaceSchemaLocation
+          value: ../../UIElementsSchema/UIElements.xsd
+        - name: editor-extension-mode
+          value: False
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: characterSheetUi
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets:
+        - {fileID: 7433441132597879392, guid: 394b9e0c60ee77742be37aa67a20ba12, type: 3}
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.WindowFigma
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1105135294
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        - rid: 1003
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: StatSheet
+        - name: title
+          value: "[Caract\xE9ristiques]"
+        - name: apply-localization
+          value: true
+        - name: header-style
+          value: primary
+        - name: show-close-button
+          value: true
+        - name: with-title-bar
+          value: true
+        - name: no-ornament-header
+          value: true
+        - name: img-url
+          value: Assets/UI/Themes/Figma/menuIcons/characteristic.png
+        m_RuleIndex: 1
+        m_Classes:
+        - characterSheetUi
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -34758956
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1005
+        - rid: 1006
+        - rid: 1007
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1008
+        m_SkipClone: 0
+    - rid: 1003
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.EntityPortrait
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -661111501
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ed_player
+        m_RuleIndex: 60
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -485516913
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1010
+        - rid: 1011
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_header
+        m_RuleIndex: 3
+        m_Classes:
+        - backgroundColor_background_medium90
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1012
+        m_SkipClone: 0
+    - rid: 1006
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1559259269
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1013
+        - rid: 1014
+        - rid: 1015
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_content
+        m_RuleIndex: 10
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1016
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1827696986
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1017
+        - rid: 1018
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_footer
+        m_RuleIndex: 55
+        m_Classes:
+        - Footer
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1019
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -34758956
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1837558131
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1020
+        - rid: 1021
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_characterInfo
+        m_RuleIndex: 4
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1022
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonGroupCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1741581637
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1023
+        - rid: 1024
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tg_statsView
+        m_RuleIndex: 9
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1012
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -485516913
+        name: ctr_header
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1013
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.CharacterSheet.Components.EntityMainStats
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -309926581
+        m_Parent:
+          rid: 1006
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_entityMainStats
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1014
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1831060876
+        m_Parent:
+          rid: 1006
+        m_Children:
+        - rid: 1027
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_detailedStats
+        m_RuleIndex: 11
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1028
+        m_SkipClone: 0
+    - rid: 1015
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -578362170
+        m_Parent:
+          rid: 1006
+        m_Children:
+        - rid: 1029
+        - rid: 1030
+        - rid: 1031
+        - rid: 1032
+        - rid: 1033
+        - rid: 1034
+        - rid: 1035
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_simpleStats
+        - name: gap-value
+          value: 6
+        m_RuleIndex: 12
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1016
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1559259269
+        name: ctr_content
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1017
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -846802015
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: btn_distributeMyPoints
+        - name: text
+          value: "[r\xE9partir mes point]"
+        m_RuleIndex: 56
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1018
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1927030986
+        m_Parent:
+          rid: 1007
+        m_Children:
+        - rid: 1038
+        - rid: 1039
+        - rid: 1040
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_pointsRemaining
+        m_RuleIndex: 57
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1041
+        m_SkipClone: 0
+    - rid: 1019
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1827696986
+        name: ctr_footer
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1020
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1655468416
+        m_Parent:
+          rid: 1010
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_name
+        - name: text
+          value: '[NomDePersonnage]'
+        m_RuleIndex: -1
+        m_Classes:
+        - title_medium
+        - textColor_white_white100
+        - labelShadow_dropShadows_light
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1021
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1118364585
+        m_Parent:
+          rid: 1010
+        m_Children:
+        - rid: 1043
+        - rid: 1044
+        - rid: 1045
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 5
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1022
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1837558131
+        name: ctr_characterInfo
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1023
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -223813360
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: lines
+        - name: name
+          value: btn_detailedView
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1024
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1744947655
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: chart
+        - name: name
+          value: btn_simpleView
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1027
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.CharacterSheet.Components.CharacterStatsDetailed
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 670970518
+        m_Parent:
+          rid: 1014
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_statsTwoColumns
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1028
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1831060876
+        name: ctr_detailedStats
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1029
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1118599366
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1050
+        - rid: 1051
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 13
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1052
+        m_SkipClone: 0
+    - rid: 1030
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.Divider
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1565754396
+        m_Parent:
+          rid: 1015
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: diamond
+          value: diamondOutline
+        m_RuleIndex: 27
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1031
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 44620101
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1054
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_graph
+        m_RuleIndex: 28
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1055
+        m_SkipClone: 0
+    - rid: 1032
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.Divider
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -223815488
+        m_Parent:
+          rid: 1015
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: diamond
+          value: diamondOutline
+        m_RuleIndex: 31
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1033
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1744949783
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1057
+        - rid: 1058
+        - rid: 1059
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 32
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1034
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.Divider
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -44859138
+        m_Parent:
+          rid: 1015
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: diamond
+          value: diamondOutline
+        m_RuleIndex: 45
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1035
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1565993433
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1062
+        - rid: 1063
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 46
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1064
+        m_SkipClone: 0
+    - rid: 1038
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -134342633
+        m_Parent:
+          rid: 1018
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_pointsRemainingTitle
+        - name: text
+          value: '[points restants :]'
+        m_RuleIndex: -1
+        m_Classes:
+        - section_medium
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1039
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1655476928
+        m_Parent:
+          rid: 1018
+        m_Children:
+        - rid: 1066
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: bg_pointsRemaining
+        m_RuleIndex: 58
+        m_Classes:
+        - backgroundColor_black_black15
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1067
+        m_SkipClone: 0
+    - rid: 1040
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -402778222
+        m_Parent:
+          rid: 1018
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: focusable
+          value: false
+        - name: icon
+          value: info
+        - name: name
+          value: tx_pointsInfo
+        m_RuleIndex: 59
+        m_Classes:
+        - tintColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1041
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1927030986
+        name: ctr_pointsRemaining
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1043
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1121963256
+        m_Parent:
+          rid: 1021
+        m_Children:
+        - rid: 1069
+        - rid: 1070
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 6
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1071
+        m_SkipClone: 0
+    - rid: 1044
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1390398845
+        m_Parent:
+          rid: 1021
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 8
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1072
+        m_SkipClone: 0
+    - rid: 1045
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1383434156
+        m_Parent:
+          rid: 1021
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_class
+        - name: text
+          value: '[FORGELANCE]'
+        m_RuleIndex: -1
+        m_Classes:
+        - textColor_white_white65
+        - section_small
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1050
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1114996439
+        m_Parent:
+          rid: 1029
+        m_Children:
+        - rid: 1074
+        - rid: 1075
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 14
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1076
+        m_SkipClone: 0
+    - rid: 1051
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 309689672
+        m_Parent:
+          rid: 1029
+        m_Children:
+        - rid: 1077
+        - rid: 1078
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 21
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1079
+        m_SkipClone: 0
+    - rid: 1052
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1118599366
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1054
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -853531923
+        m_Parent:
+          rid: 1031
+        m_Children:
+        - rid: 1080
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 29
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1081
+        m_SkipClone: 0
+    - rid: 1055
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 44620101
+        name: ctr_graph
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1057
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -137704395
+        m_Parent:
+          rid: 1033
+        m_Children:
+        - rid: 1082
+        - rid: 1083
+        - rid: 1084
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_pa
+        m_RuleIndex: 33
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1085
+        m_SkipClone: 0
+    - rid: 1058
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1927274279
+        m_Parent:
+          rid: 1033
+        m_Children:
+        - rid: 1086
+        - rid: 1087
+        - rid: 1088
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_pm
+        m_RuleIndex: 37
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1089
+        m_SkipClone: 0
+    - rid: 1059
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 578123133
+        m_Parent:
+          rid: 1033
+        m_Children:
+        - rid: 1090
+        - rid: 1091
+        - rid: 1092
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_po
+        m_RuleIndex: 41
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1093
+        m_SkipClone: 0
+    - rid: 1062
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 220208305
+        m_Parent:
+          rid: 1035
+        m_Children:
+        - rid: 1094
+        - rid: 1095
+        - rid: 1096
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 47
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1063
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1569361579
+        m_Parent:
+          rid: 1035
+        m_Children:
+        - rid: 1098
+        - rid: 1099
+        - rid: 1100
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 51
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1064
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1565993433
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1066
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1830815455
+        m_Parent:
+          rid: 1039
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_pointsRemaining
+        - name: text
+          value: 999
+        m_RuleIndex: -1
+        m_Classes:
+        - textColor_highlight_primary100
+        - labelShadow_dropShadows_medium
+        - textShort_hugeBold
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1067
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1655476928
+        name: bg_pointsRemaining
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1069
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -588458096
+        m_Parent:
+          rid: 1043
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_levelText
+        - name: text
+          value: '[NIV.]'
+        m_RuleIndex: -1
+        m_Classes:
+        - section_small
+        - textColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1070
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -2109592391
+        m_Parent:
+          rid: 1043
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_levelValue
+        - name: text
+          value: 200
+        m_RuleIndex: 7
+        m_Classes:
+        - textShort_mediumBold
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1071
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1121963256
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1072
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1390398845
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1074
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1827457949
+        m_Parent:
+          rid: 1050
+        m_Children:
+        - rid: 1105
+        - rid: 1106
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 15
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1107
+        m_SkipClone: 0
+    - rid: 1075
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.ExtendedProgressBarInt
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -230547524
+        m_Parent:
+          rid: 1050
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gauge-color
+          value: primary
+        - name: sections
+          value: 10
+        - name: value
+          value: 7500000
+        - name: high-value
+          value: 9999999
+        - name: name
+          value: pb_xp
+        m_RuleIndex: 20
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1076
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1114996439
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1077
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 216844415
+        m_Parent:
+          rid: 1051
+        m_Children:
+        - rid: 1109
+        - rid: 1110
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 22
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1111
+        m_SkipClone: 0
+    - rid: 1078
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.ExtendedProgressBarInt
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -320026763
+        m_Parent:
+          rid: 1051
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gauge-color
+          value: green
+        - name: sections
+          value: 10
+        - name: value
+          value: 7500
+        - name: high-value
+          value: 10000
+        - name: name
+          value: pb_energy
+        - name: gauge-size
+          value: small
+        m_RuleIndex: 26
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1079
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 309689672
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1080
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.CharacterSheet.Components.EntityStatsGraph
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1022149054
+        m_Parent:
+          rid: 1054
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: number_of_sides
+          value: 6
+        - name: name
+          value: statsGraph
+        - name: icon-offset
+          value: 20
+        - name: stat-count
+          value: 5
+        - name: offsetRotation
+          value: 36
+        - name: radius
+          value: 80
+        - name: thickness
+          value: 2
+        m_RuleIndex: 30
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1081
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -853531923
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1082
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -51593302
+        m_Parent:
+          rid: 1057
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_pa
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 34
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1114
+        m_SkipClone: 0
+    - rid: 1083
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1572727597
+        m_Parent:
+          rid: 1057
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_paText
+        - name: text
+          value: PA
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 35
+        m_Classes:
+        - textShort_hugeRegular
+        - textColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1084
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1201105404
+        m_Parent:
+          rid: 1057
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_paValue
+        - name: text
+          value: 11
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 36
+        m_Classes:
+        - textShort_hugeBold
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1085
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -137704395
+        name: ctr_pa
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1086
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 664234226
+        m_Parent:
+          rid: 1058
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_pm
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 38
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1117
+        m_SkipClone: 0
+    - rid: 1087
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -856900069
+        m_Parent:
+          rid: 1058
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_pmText
+        - name: text
+          value: PM
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 39
+        m_Classes:
+        - textShort_hugeRegular
+        - textColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1088
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1916932932
+        m_Parent:
+          rid: 1058
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_pmValue
+        - name: text
+          value: '6
+
+'
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 40
+        m_Classes:
+        - textShort_hugeBold
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1089
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1927274279
+        name: ctr_pm
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1090
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1380061754
+        m_Parent:
+          rid: 1059
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_po
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 42
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1120
+        m_SkipClone: 0
+    - rid: 1091
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -141072541
+        m_Parent:
+          rid: 1059
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_poText
+        - name: text
+          value: PO
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 43
+        m_Classes:
+        - textShort_hugeRegular
+        - textColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1092
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1662206836
+        m_Parent:
+          rid: 1059
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_poValue
+        - name: text
+          value: '2
+
+'
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 44
+        m_Classes:
+        - textShort_hugeBold
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1093
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 578123133
+        name: ctr_po
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1094
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 485275748
+        m_Parent:
+          rid: 1062
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_achievements
+        m_RuleIndex: 48
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1123
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1095
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1035858547
+        m_Parent:
+          rid: 1062
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_guild
+        m_RuleIndex: 49
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1124
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1096
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1737974454
+        m_Parent:
+          rid: 1062
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_alliance
+        m_RuleIndex: 50
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1125
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1098
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1201103276
+        m_Parent:
+          rid: 1063
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_alignment
+        m_RuleIndex: 52
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1126
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1099
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -320031019
+        m_Parent:
+          rid: 1063
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_spouse
+        m_RuleIndex: 53
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1127
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1100
+      type: {class: TemplateAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Instance
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1841165314
+        m_Parent:
+          rid: 1063
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: template
+          value: socialButton
+        - name: name
+          value: btn_house
+        m_RuleIndex: 54
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1128
+        m_SkipClone: 0
+        m_TemplateAlias: socialButton
+        m_AttributeOverrides: []
+        m_SerializedDataOverride: []
+        m_SlotUsages: []
+    - rid: 1105
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1018785164
+        m_Parent:
+          rid: 1074
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_xpText
+        - name: text
+          value: "[Exp\xE9rience]"
+        m_RuleIndex: -1
+        m_Classes:
+        - textShort_largeRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1106
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -502349131
+        m_Parent:
+          rid: 1074
+        m_Children:
+        - rid: 1130
+        - rid: 1131
+        - rid: 1132
+        - rid: 1133
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 16
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1134
+        m_SkipClone: 0
+    - rid: 1107
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1827457949
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1109
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1397135137
+        m_Parent:
+          rid: 1077
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_energyText
+        - name: text
+          value: '[Energie]'
+        m_RuleIndex: -1
+        m_Classes:
+        - textShort_largeRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1110
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1376697864
+        m_Parent:
+          rid: 1077
+        m_Children:
+        - rid: 1136
+        - rid: 1137
+        - rid: 1138
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 23
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1139
+        m_SkipClone: 0
+    - rid: 1111
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 216844415
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1114
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -51593302
+        name: tx_pa
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1117
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 664234226
+        name: tx_pm
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1120
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1380061754
+        name: tx_po
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1123
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 485275748
+        name: btn_achievements
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1124
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1035858547
+        name: btn_guild
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1125
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1737974454
+        name: btn_alliance
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1126
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1201103276
+        name: btn_alignment
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1127
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -320031019
+        name: btn_spouse
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1128
+      type: {class: TemplateContainer/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1841165314
+        name: btn_house
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        template: {fileID: 0}
+        template_UxmlAttributeFlags: 0
+        templateId: socialButton
+        templateId_UxmlAttributeFlags: 1
+    - rid: 1130
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -58323210
+        m_Parent:
+          rid: 1106
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_xpValue
+        - name: text
+          value: 7 500 000
+        m_RuleIndex: -1
+        m_Classes:
+        - textShort_largeBold
+        - textColor_highlight_primary100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1131
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1579457505
+        m_Parent:
+          rid: 1106
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_xpMax
+        - name: text
+          value: / 9 999 999
+        m_RuleIndex: 17
+        m_Classes:
+        - textShort_largeBold
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1132
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1194375496
+        m_Parent:
+          rid: 1106
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_xp
+        - name: icon
+          value: experience
+        m_RuleIndex: 18
+        m_Classes:
+        - tintColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1133
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -326758799
+        m_Parent:
+          rid: 1106
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: btn_limitExperience
+        - name: main-style
+          value: secondary
+        - name: icon
+          value: arrowBottomLine
+        m_RuleIndex: 19
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1134
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -502349131
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1136
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1015417018
+        m_Parent:
+          rid: 1110
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_energyValue
+        - name: text
+          value: 7 500
+        m_RuleIndex: -1
+        m_Classes:
+        - textShort_largeBold
+        - textColor_qualitative_lightGreen100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1137
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -505717277
+        m_Parent:
+          rid: 1110
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_energyMax
+        - name: text
+          value: / 10 000
+        m_RuleIndex: 24
+        m_Classes:
+        - textShort_largeBold
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1138
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -2026851572
+        m_Parent:
+          rid: 1110
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_energy
+        m_RuleIndex: 25
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1146
+        m_SkipClone: 0
+    - rid: 1139
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1376697864
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1146
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -2026851572
+        name: tx_energy
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+--- !u!114 &5131016349732052131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11998, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: inlineSheet
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_ImportedWithWarnings: 0
+  m_Rules:
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131102
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 0
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 0
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 1
+    - m_Id: 458752
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 4
+        valueIndex: 0
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 0
+    - m_Id: 131081
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 1
+        valueIndex: 6
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 2
+    - m_Id: 131074
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 1
+    - m_Id: 131102
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 2
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 1
+    - m_Id: 458760
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 3
+    - m_Id: 458759
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 4
+    - m_Id: 458768
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 3
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 5
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 2
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 6
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 7
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 8
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 9
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 4
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 5
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 3
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 6
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 10
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 7
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 11
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 8
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 9
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 12
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 13
+    - m_Id: 458752
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 4
+        valueIndex: 1
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 14
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 15
+    - m_Id: 131074
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 10
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 11
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 16
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131081
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 1
+        valueIndex: 6
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 4
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 17
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 18
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 19
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 20
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 5
+    - m_Id: 131097
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 21
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 22
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 23
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 24
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 25
+    - m_Id: 131081
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 12
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 6
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 7
+    - m_Id: 131097
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 26
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 8
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 9
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 13
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 14
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 15
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 16
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 17
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 10
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 27
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 28
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 29
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 30
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 31
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 32
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 33
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 34
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 35
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 11
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 18
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 19
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 20
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 21
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 22
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 36
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 37
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 38
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 39
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 40
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 41
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 42
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 12
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 43
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 13
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 23
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 24
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 44
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 45
+    - m_Id: 458753
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 6
+        valueIndex: 0
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 25
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 26
+    - m_Id: 131102
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 27
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 46
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 47
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 28
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 29
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 14
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 30
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 31
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 48
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 49
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 32
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 15
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 16
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 33
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 34
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 50
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 51
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 52
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 53
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 17
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 35
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 36
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 54
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 55
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 56
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 57
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 18
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 37
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 38
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 58
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 59
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 60
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 61
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 19
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 20
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 39
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 62
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 63
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 64
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 40
+    - m_Id: 131093
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 65
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 66
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 67
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 68
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 21
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 69
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 70
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 71
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 72
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 41
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 42
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 43
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131095
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 73
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 22
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 44
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 45
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 46
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 74
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 75
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 76
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 47
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 48
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 77
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 78
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 79
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 80
+    - m_Id: 131091
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 81
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131102
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 49
+    - m_Id: 131089
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 82
+    - m_Id: 131104
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 83
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 84
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 85
+    line: -1
+  floats:
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1
+  dimensions:
+  - unit: 1
+    value: 341
+  - unit: 1
+    value: 747
+  - unit: 1
+    value: 880
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 70
+  - unit: 1
+    value: 126
+  - unit: 1
+    value: 10
+  - unit: 1
+    value: 10
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 24
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 1
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 32
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 416
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 416
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 10
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 4
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 6
+  - unit: 1
+    value: 228
+  - unit: 1
+    value: 256
+  - unit: 1
+    value: 256
+  - unit: 1
+    value: 1
+  - unit: 1
+    value: 1
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 6
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 6
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 6
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 8
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 230
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 60
+  - unit: 1
+    value: 32
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 4
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 5
+  - unit: 1
+    value: 21
+  - unit: 1
+    value: -22
+  - unit: 1
+    value: 96
+  - unit: 1
+    value: 96
+  colors:
+  - {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 0}
+  - {r: 1, g: 1, b: 1, a: 0.5}
+  strings:
+  - absolute
+  - center
+  - absolute
+  - hidden
+  - row
+  - space-between
+  - row
+  - center
+  - row
+  - center
+  - flex-end
+  - row
+  - flex
+  - row
+  - space-between
+  - center
+  - row
+  - center
+  - row
+  - space-between
+  - center
+  - row
+  - center
+  - center
+  - center
+  - center
+  - center
+  - absolute
+  - center
+  - center
+  - row
+  - center
+  - space-between
+  - row
+  - center
+  - row
+  - center
+  - row
+  - center
+  - row
+  - row
+  - row
+  - center
+  - space-between
+  - row
+  - center
+  - flex-end
+  - center
+  - center
+  - absolute
+  assets:
+  - {fileID: 2800000, guid: 48d43e47d236be242806d2d9813afab8, type: 3}
+  imports: []
+  m_FlattenedImportedStyleSheets: []
+  m_ContentHash: 0
+  scalableImages: []

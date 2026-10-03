@@ -1,0 +1,33 @@
+﻿#btn_head:checked {
+    --unity-checkmarkImgVar: url("/Assets/UI/InlineTextures/InlineGridItem_gd_heads_default_1_bgHeadChoiceSelected.png");
+}
+
+#btn_head .unity-radio-button__checkmark {
+    background-image: var( --unity-checkmarkImgVar);
+    background-color: rgb(1, 0, 0);
+    -unity-background-image-tint-color: white;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    display: flex;
+    border-radius: 0;
+}
+
+#btn_head .unity-radio-button__input {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#btn_head .unity-radio-button__checkmark-background {
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+

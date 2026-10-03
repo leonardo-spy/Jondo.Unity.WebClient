@@ -1,0 +1,1096 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: jobRecipeItem.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: 3733423596022846507}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 2045699259
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1863376891
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: editor-extension-mode
+          value: False
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets:
+        - {fileID: 0}
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 159920228
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: jobRecipeItem
+        m_RuleIndex: 0
+        m_Classes:
+        - backgroundColor_buttons_buttonSecondary
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1230296566
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1004
+        - rid: 1005
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_content
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 779538609
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1007
+        - rid: 1008
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_craftedItem
+        - name: gap-value
+          value: 2
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 511103020
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1010
+        - rid: 1011
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_right
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 4
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1192353643
+        m_Parent:
+          rid: 1004
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: with-background
+          value: false
+        - name: tile-content
+          value: asset
+        - name: name
+          value: craftedItemTile
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1581479358
+        m_Parent:
+          rid: 1004
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_craftPossibleQuantity
+        - name: text
+          value: '[x10]'
+        m_RuleIndex: 3
+        m_Classes:
+        - textShort_mediumRegular
+        - textColor_highlight_secondary80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1729224821
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1015
+        - rid: 1016
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_texts
+        m_RuleIndex: 5
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1013397293
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1018
+        - rid: 1019
+        - rid: 1020
+        - rid: 1021
+        - rid: 1022
+        - rid: 1023
+        - rid: 1024
+        - rid: 1025
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_slots
+        - name: gap-value
+          value: 4
+        m_RuleIndex: 11
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1015
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1195719661
+        m_Parent:
+          rid: 1010
+        m_Children:
+        - rid: 1027
+        - rid: 1028
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_name
+        m_RuleIndex: 6
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1016
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1464155250
+        m_Parent:
+          rid: 1010
+        m_Children:
+        - rid: 1030
+        - rid: 1031
+        - rid: 1032
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_xp
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 8
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1018
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 235935395
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile1
+        m_RuleIndex: 12
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1019
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1285198900
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile2
+        m_RuleIndex: 13
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1020
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1488634101
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile3
+        m_RuleIndex: 14
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1021
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -32500194
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile4
+        m_RuleIndex: 15
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1022
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1553634489
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile5
+        m_RuleIndex: 16
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1023
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1220198512
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile6
+        m_RuleIndex: 17
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1024
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -300935783
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile7
+        m_RuleIndex: 18
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1025
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Slots.Tile
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1822070078
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tile-size
+          value: small
+        - name: tile-content
+          value: asset
+        - name: show-counter
+          value: true
+        - name: name
+          value: tile8
+        m_RuleIndex: 19
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1027
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 2111618500
+        m_Parent:
+          rid: 1015
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: text
+          value: "[Planche Agglom\xE9r\xE9e]"
+        - name: name
+          value: lbl_name
+        m_RuleIndex: 7
+        m_Classes:
+        - title_small
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1028
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 590484205
+        m_Parent:
+          rid: 1015
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_lvl
+        - name: text
+          value: '[Niv. 200]'
+        m_RuleIndex: -1
+        m_Classes:
+        - textColor_highlight_secondary80
+        - textShort_mediumRegular
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1030
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1574747322
+        m_Parent:
+          rid: 1016
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: name
+          value: lbl_xp
+        - name: text
+          value: 9999
+        m_RuleIndex: -1
+        m_Classes:
+        - textColor_white_white65
+        - textShort_hugeBold
+        - labelShadow_dropShadows_light
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1031
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 53613027
+        m_Parent:
+          rid: 1016
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: focusable
+          value: false
+        - name: icon
+          value: experience
+        - name: has-shadow
+          value: true
+        - name: name
+          value: ic_xp
+        m_RuleIndex: 9
+        m_Classes:
+        - tintColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1032
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1467521268
+        m_Parent:
+          rid: 1016
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: enable-rich-text
+          value: false
+        - name: name
+          value: btn_transferIngredients
+        - name: icon
+          value: send
+        - name: main-style
+          value: secondary
+        m_RuleIndex: 10
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+--- !u!114 &3733423596022846507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11998, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: inlineSheet
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_ImportedWithWarnings: 0
+  m_Rules:
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 0
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 1
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 2
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 3
+    - m_Id: 458764
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 4
+    - m_Id: 458759
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 5
+    - m_Id: 458765
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 6
+    - m_Id: 458760
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 7
+    - m_Id: 131090
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 8
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 0
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 0
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131074
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 1
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 9
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 2
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 3
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 10
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 11
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 12
+    - m_Id: 458768
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 4
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 13
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 14
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 5
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 6
+    - m_Id: 131074
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 7
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 1
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 15
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 16
+    - m_Id: 131074
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 8
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 17
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 18
+    - m_Id: 131081
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 1
+        valueIndex: 6
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 9
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 2
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 3
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 4
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 5
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 6
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 7
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 8
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 9
+    line: -1
+  floats:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  dimensions:
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 8
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 20
+  - unit: 1
+    value: 22
+  - unit: 1
+    value: 22
+  colors: []
+  strings:
+  - row
+  - center
+  - row
+  - space-between
+  - hidden
+  - row
+  - center
+  - center
+  - flex-end
+  - row
+  assets: []
+  imports: []
+  m_FlattenedImportedStyleSheets: []
+  m_ContentHash: 0
+  scalableImages: []

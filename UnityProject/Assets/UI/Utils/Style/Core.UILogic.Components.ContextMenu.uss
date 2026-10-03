@@ -1,0 +1,229 @@
+﻿.contextMenu {
+    position: absolute;
+    min-width: 50px;
+    max-width: 560px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 4px 0;
+}
+
+.contextMenu .listElement {
+    width: 100%;
+}
+
+.contextMenu .contextualMenuHeader {
+    width: 100%;
+}
+
+.contextMenu__separator {
+    background-color: rgb(64, 64, 64);
+    height: 1px;
+}
+
+.contextMenu__title {
+    font-size: 16px;
+    -unity-text-align: middle-left;
+    color: rgb(179, 179, 177);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 8px;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 22px;
+    background-color: rgba(81, 74, 60, 0.8);
+}
+
+.contextMenu__item {
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: row;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+.contextMenu__item:disabled {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+}
+
+.contextMenu__item:hover:disabled {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+}
+
+.contextMenu__item-label {
+    flex-grow: 1;
+    -unity-text-align: lower-left;
+    font-size: 16px;
+    color: rgb(178, 179, 178);
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contextMenu__item-label:disabled {
+    -unity-text-align: lower-left;
+    font-size: 16px;
+    color: rgb(122, 122, 119);
+}
+
+.contextMenu__item-label:hover:disabled {
+    -unity-text-align: lower-left;
+    font-size: 16px;
+    color: rgb(122, 122, 119);
+}
+
+.contextMenu__item-status-none {
+    background-image: none;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+}
+
+.contextMenu__item-status-checked {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/tx_puce_selected.png");
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.contextMenu__item-status-dot {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/tx_puce_radio.png");
+    flex-shrink: 0;
+    -unity-background-scale-mode: scale-to-fit;
+    width: 22px;
+    height: 22px;
+}
+
+.contextMenu__item-submenu-indicator {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/ContextMenuRightArrow.png");
+    width: 10px;
+    height: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+    margin-right: 8px;
+}
+
+.contextMenu__item-unfolded {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(113, 113, 104, 0.86);
+}
+
+.contextMenu__item:hover {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(113, 113, 104, 0.86);
+}
+
+.contextMenu__item-ctr-submenu {
+    align-items: center;
+    justify-content: center;
+}
+
+.contextMenu__item-picture {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    margin-left: 0;
+    margin-right: 6px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.contextMenu__item-picture:disabled {
+    opacity: 0.7;
+}
+
+.contextMenu__item-picture:hover:disabled {
+    opacity: 0.7;
+}
+
+.contextMenu__item-pagination-previous {
+    background-image: url("/Assets/UI/InlineTextures/commonSpellsList_1_contextMenuUpArrow.png");
+    flex-shrink: 0;
+    width: 14px;
+    height: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.contextMenu__item-pagination-next {
+    background-image: url("/Assets/UI/InlineTextures/forgettableSpellList_5_contextMenuDownArrow.png");
+    flex-shrink: 0;
+    width: 14px;
+    height: 10px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.contextMenu__item-pagination {
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: row;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+    height: 22px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+.contextMenu__item-pagination:hover {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(113, 113, 104, 0.86);
+}
+
+.contextMenu__item-keyboardSelection {
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(113, 113, 104, 0.86);
+}
+

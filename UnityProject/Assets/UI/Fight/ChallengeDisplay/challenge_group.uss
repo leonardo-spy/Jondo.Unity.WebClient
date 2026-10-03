@@ -1,0 +1,67 @@
+﻿.btn_fold--unfolded {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/hud/icon_minus_floating_menu.png");
+}
+
+.btn_fold--folded {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/hud/icon_plus_floating_menu.png");
+}
+
+.challenge_group_h {
+    flex-direction: row;
+    height: 73px;
+}
+
+.challenge_group_v {
+    width: 73px;
+}
+
+.menu_h {
+    width: 23px;
+    height: 100%;
+    background-image: url("/Assets/UI/USSTextures/left_floating_menu.png");
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_v {
+    height: 23px;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-image: url("/Assets/UI/USSTextures/left_floating_menu.png");
+    -unity-slice-left: 5;
+    -unity-slice-top: 5;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+    justify-content: space-around;
+}
+
+.challenges_h {
+    justify-content: center;
+    left: -1px;
+}
+
+.challenges_v {
+    align-items: center;
+    top: -1px;
+}
+
+.tx_background_h {
+    background-image: url("/Assets/UI/USSTextures/floatingWindow_horizontal_bg_0.png");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scale: -1 1;
+}
+
+.tx_background_v {
+    background-image: url("/Assets/UI/USSTextures/floatingWindow_bg_0.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+

@@ -1,0 +1,90 @@
+﻿.stock__arrowButton {
+    background-image: url("/Assets/UI/USSTextures/btn_greenBigArrow_normal.png");
+    background-color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 51px;
+}
+
+.stock__arrowButton:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_greenBigArrow_over.png");
+    background-color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 51px;
+}
+
+.stock__arrowButton:active {
+    background-image: url("/Assets/UI/USSTextures/btn_greenBigArrow_pressed.png");
+    background-color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 51px;
+}
+
+.stock__arrowButton:disabled {
+    background-image: url("/Assets/UI/USSTextures/btn_greenBigArrow_disabled.png");
+    background-color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 51px;
+}
+
+.stock__nameLabel {
+    color: rgb(199, 199, 197);
+    font-size: 18px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    letter-spacing: 0.3px;
+    -unity-text-align: middle-left;
+    text-overflow: ellipsis;
+    -unity-text-overflow-position: end;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.stock__priceLabel {
+    color: rgb(199, 199, 197);
+    font-size: 18px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    -unity-text-align: middle-right;
+    text-overflow: ellipsis;
+    -unity-text-overflow-position: end;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.stock__itemEtheral {
+    color: rgb(138, 183, 238);
+    font-size: 17px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    letter-spacing: 0.3px;
+}
+
+.stock__itemSet {
+    color: rgb(254, 179, 54);
+    font-size: 17px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    letter-spacing: 0.3px;
+}
+
+.stock__itemMalus {
+    color: rgb(255, 1, 66);
+    font-size: 18px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    letter-spacing: 0.3px;
+}
+
+.stock__normalShopItemGridSize {
+    height: 624px;
+}
+
+.stock__tokenShopItemGridSize {
+    height: 595px;
+}
+
+.slot-item__background {
+    flex-grow: 1;
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/emptySlot.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+#btn_itemsFilter .unity-toggle__label {
+    color: rgb(199, 199, 197);
+}
+

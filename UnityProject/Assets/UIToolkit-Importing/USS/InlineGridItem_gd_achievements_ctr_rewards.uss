@@ -1,0 +1,43 @@
+﻿#btn_accept:hover {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept:active {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept:disabled {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept:focus {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept:focus:hover {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_accept:focus:active {
+    --bgTexturebtn_acceptImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_acceptImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#bgTexturebtn_accept {
+    background-image: var( --bgTexturebtn_acceptImgVar);
+}
+
+#iconTexturebtn_accept {
+    background-image: var( --iconTexturebtn_acceptImgVar);
+}
+

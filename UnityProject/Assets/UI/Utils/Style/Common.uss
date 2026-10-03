@@ -1,0 +1,26 @@
+﻿.worldLayer_blackArea {
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.worldLayer_world {
+    background-color: transparent;
+    flex-grow: 0;
+}
+
+.worldLayer_root {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.worldLayer_debug-black {
+    background-color: rgba(255, 49, 49, 0.35);
+}
+
+.worldLayer_debug-world {
+    background-color: rgba(152, 255, 141, 0.35);
+}
+

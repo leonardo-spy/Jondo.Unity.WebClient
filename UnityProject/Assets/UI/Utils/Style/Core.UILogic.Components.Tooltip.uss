@@ -1,0 +1,322 @@
+﻿.tooltip-root {
+    position: absolute;
+    background-color: transparent;
+}
+
+.tooltip__background {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-bottom: 8px;
+}
+
+.tooltip__text {
+    -unity-text-align: middle-left;
+    color: rgb(199, 199, 197);
+    max-width: 400px;
+    white-space: normal;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 15px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.tooltip__arrow {
+    position: absolute;
+    background-image: url("/Assets/UI/Themes/darkStone/common/arrow.png");
+    transform-origin: right;
+    -unity-background-image-tint-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.tooltip__image {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.tooltip__separator {
+    background-image: url("/Assets/UI/USSTextures/window_separator_grey_horizontal.png");
+    height: 17px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.baseWithBackground {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    color: rgb(199, 199, 197);
+}
+
+.italiclightgrey {
+    color: rgb(109, 109, 109);
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    -unity-font-style: italic;
+}
+
+.tooltip__centerLineElements {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tooltip__statFloorsText {
+    width: 100px;
+    -unity-text-align: upper-center;
+    height: 20px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.tooltip__emblemUp {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background-image: none;
+}
+
+.tooltip__emblemBack {
+    width: 40px;
+    height: 40px;
+    background-image: none;
+}
+
+.tooltip__emptyStar {
+    background-image: url("/Assets/UI/USSTextures/etoile0.png");
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.tooltip__yellowStar {
+    background-image: url("/Assets/UI/USSTextures/etoile1.png");
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.tooltip__redStar {
+    background-image: url("/Assets/UI/USSTextures/etoile2.png");
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.tooltip__redInteractionText {
+    color: rgb(255, 1, 66);
+    -unity-font-style: bold;
+}
+
+.tooltip__infoInteractionText {
+    -unity-font-style: normal;
+    color: rgb(248, 205, 1);
+}
+
+.tooltip__texture__fightOption0 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Assets/UI/Themes/darkStone/assets_darkStone/fightOption0.png");
+}
+
+.tooltip__texture__fightOption1 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Assets/UI/Themes/darkStone/assets_darkStone/fightOption1.png");
+}
+
+.tooltip__texture__fightOption2 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Assets/UI/Themes/darkStone/assets_darkStone/fightOption2.png");
+}
+
+.tooltip__texture__fightOption3 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Assets/UI/Themes/darkStone/assets_darkStone/fightOption3.png");
+}
+
+.tooltip__texture__fightOption4 {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    background-image: url("/Assets/UI/Themes/darkStone/assets_darkStone/fightOption4.png");
+}
+
+.tooltip__paddockTitle {
+    -unity-font-style: bold;
+    font-size: 17px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    color: rgb(231, 222, 218);
+}
+
+.tooltip__descriptionText {
+    max-width: none;
+    color: rgb(230, 137, 61);
+    font-size: 15px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    padding-top: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: normal;
+    justify-content: space-around;
+    padding-left: 6px;
+}
+
+.tooltip__conditions__malus {
+    max-width: none;
+    color: rgb(203, 104, 94);
+    font-size: 15px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    padding-left: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: normal;
+}
+
+.tooltip__conditions__requirement {
+    max-width: none;
+    color: rgb(217, 173, 103);
+    font-size: 15px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    padding-left: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: normal;
+}
+
+.tooltip__conditions__theoretical {
+    max-width: none;
+    color: rgb(150, 150, 149);
+    font-size: 15px;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    padding-left: 6px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    white-space: normal;
+}
+
+.tooltip__span {
+    flex-direction: row;
+}
+
+.tooltip__valuesCloseTogether {
+    margin-top: 6px;
+    margin-bottom: -6px;
+}
+
+.tooltip__emptySeparator {
+    height: 25px;
+}
+
+.tooltip__noBg {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.tooltip__bgSelectedOutline {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(111, 111, 111);
+    border-right-color: rgb(111, 111, 111);
+    border-top-color: rgb(111, 111, 111);
+    border-bottom-color: rgb(111, 111, 111);
+}
+
+.tooltip__red {
+    color: rgb(235, 0, 0);
+    font-size: 18px;
+}
+
+.tooltip__exotic_left {
+    color: rgb(163, 188, 253);
+    font-size: 18px;
+}
+
+.tooltip__bonus_left {
+    color: rgb(101, 228, 86);
+    font-size: 18px;
+}
+
+.tooltip__categographyIcon {
+    width: 70px;
+    height: 70px;
+}
+
+.tooltip__categographyLabel {
+    margin-right: 5px;
+    margin-left: 4px;
+}
+
+.tooltip__backgroundCategographyMap {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.tooltip__categographySeparator {
+    color: rgb(210, 210, 210);
+}
+
+.tooltip__probaLabel {
+    margin-left: 8px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    flex-grow: 1;
+}
+
+.tooltip__emptySeparator_small {
+    height: 10px;
+}
+
+.tooltip__effectElement_line {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 32px;
+}
+
+.tooltip__effectElement_keyValue {
+    flex-direction: row;
+    width: 50%;
+}
+
+.tooltip__effectElement_subeffect {
+    margin-left: 30px;
+    white-space: normal;
+}
+
+.tooltip__effectElement_monsterOffset {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+

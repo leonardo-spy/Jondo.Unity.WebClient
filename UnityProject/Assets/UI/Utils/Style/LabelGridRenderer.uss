@@ -1,0 +1,38 @@
+﻿:root {
+    --grid_line: rgb(255, 255, 255);
+    --grid_background: rgb(255, 255, 255);
+    --grid_over: rgb(255, 255, 255);
+    --grid_selected: rgb(255, 255, 255);
+    --grid_text: rgb(255, 255, 255);
+}
+
+.unity-list-view {
+    width: 100%;
+    height: 100%;
+}
+
+#unity-content-container {
+    background-color: var( --grid_background);
+}
+
+.unity-list-view__item {
+    background-color: var( --grid_background);
+    color: var( --grid_text);
+}
+
+.unity-list-view__item--alternative-background {
+    background-color: var( --grid_line);
+}
+
+.unity-list-view__item:hover {
+    background-color: var( --grid_over);
+}
+
+.unity-list-view__item--selected {
+    background-color: var( --grid_selected);
+}
+
+.unity-list-view__item--selected:hover {
+    background-color: var( --grid_selected);
+}
+

@@ -1,0 +1,63 @@
+﻿#btn_info:hover {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info:active {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info:disabled {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info:focus {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info:focus:hover {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#btn_info:focus:active {
+    --bgTexturebtn_infoImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_infoImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_key.png");
+}
+
+#bgTexturebtn_info {
+    background-image: var( --bgTexturebtn_infoImgVar);
+}
+
+#iconTexturebtn_info {
+    background-image: var( --iconTexturebtn_infoImgVar);
+}
+
+#btn_join:hover {
+    --btn_texture_btn_joinImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_join {
+    --btn_texture_btn_joinImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_join:active {
+    --btn_texture_btn_joinImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_join:disabled {
+    --btn_texture_btn_joinImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_join {
+    background-image: var( --btn_texture_btn_joinImgVar);
+}
+

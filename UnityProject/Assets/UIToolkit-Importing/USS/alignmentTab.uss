@@ -1,0 +1,51 @@
+﻿#tab_general {
+    display: flex;
+}
+
+#tab_quest {
+    display: none;
+}
+
+.isQuest #tab_general {
+    display: none;
+}
+
+.isQuest #tab_quest {
+    display: flex;
+}
+
+#lbl_honourValue {
+    color: var( --white_white25);
+}
+
+.PVP #lbl_honourValue {
+    color: var( --highlight_primary100);
+}
+
+#ctr_avatarHeader {
+    background-color: var( --header_gradient);
+    -unity-background-image-tint-color: var( --header_background);
+    border-width: 1px;
+    border-color: var( --white_white10);
+    background-image: none;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+#lbl_JCJActivated {
+    color: var( --highlight_secondary80);
+}
+
+.PVP #lbl_JCJActivated {
+    color: var( --highlight_primary100);
+}
+
+#lbl_order {
+    -unity-text-outline-color: rgba(0, 0, 0, 0.35);
+    -unity-text-outline-width: 1px;
+}
+
+#lbl_grade {
+    -unity-text-outline-color: rgba(0, 0, 0, 0.35);
+    -unity-text-outline-width: 1px;
+}
+

@@ -1,0 +1,762 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: RemoveRank.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: 5199167751201280621}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 2272994
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -180049374
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: xsi
+          value: http://www.w3.org/2001/XMLSchema-instance
+        - name: engine
+          value: UnityEngine.UIElements
+        - name: editor
+          value: UnityEditor.UIElements
+        - name: noNamespaceSchemaLocation
+          value: ../../../UIElementsSchema/UIElements.xsd
+        - name: editor-extension-mode
+          value: False
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1883506037
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1003
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.WindowFigma
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -813129699
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1004
+        - rid: 1005
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_removeRank
+        - name: header-style
+          value: secondary
+        - name: title
+          value: '[Supprimer un rang]'
+        - name: is-movable
+          value: false
+        - name: is-modal
+          value: true
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1003
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1883506037
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1263887656
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1007
+        - rid: 1008
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 12
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 973074167
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1010
+        - rid: 1011
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 12
+        m_RuleIndex: 9
+        m_Classes:
+        - Footer
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1059187388
+        m_Parent:
+          rid: 1004
+        m_Children:
+        - rid: 1013
+        - rid: 1014
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 3
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1015
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 790751799
+        m_Parent:
+          rid: 1004
+        m_Children:
+        - rid: 1016
+        - rid: 1017
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 6
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1018
+        m_SkipClone: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1238143738
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[Annuler]'
+        - name: main-style
+          value: secondary
+        - name: name
+          value: btn_cancel
+        m_RuleIndex: 10
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -282990557
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[Supprimer]'
+        - name: status
+          value: negative
+        - name: name
+          value: btn_remove
+        m_RuleIndex: 11
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1013
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1861128137
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: text
+          value: '[Vous allez supprimer le rang]'
+        - name: name
+          value: lbl_removeRankText
+        m_RuleIndex: 4
+        m_Classes:
+        - textLong_largeRegular
+        - textColor_white_white80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1014
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 339993842
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: text
+          value: '[Nom du rang]'
+        - name: name
+          value: lbl_rank
+        m_RuleIndex: 5
+        m_Classes:
+        - textLong_largeRegular
+        - textColor_highlight_primary100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1015
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1059187388
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1016
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1324256959
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: tabindex
+          value: -1
+        - name: text
+          value: '[Attribuer un autre rang aux membres du rang Nom du rang]'
+        - name: is-single-line
+          value: false
+        - name: name
+          value: lbl_associateRank
+        m_RuleIndex: 7
+        m_Classes:
+        - textLong_largeRegular
+        - textColor_white_white80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1017
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.Dropdown
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -196877336
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: focusable
+          value: true
+        - name: name
+          value: dd_associateRank
+        m_RuleIndex: 8
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1018
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 790751799
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+--- !u!114 &5199167751201280621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11998, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: inlineSheet
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_ImportedWithWarnings: 0
+  m_Rules:
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 458752
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 4
+        valueIndex: 0
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 0
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 1
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 0
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 1
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131102
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 2
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 2
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 3
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 4
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 5
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 6
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 0
+    - m_Id: 458752
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 4
+        valueIndex: 1
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 65546
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 3
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 65546
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 4
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131084
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 1
+    - m_Id: 458752
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 4
+        valueIndex: 2
+    - m_Id: 131073
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 5
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 65546
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 6
+    - m_Id: 65552
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 7
+    - m_Id: 131090
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 7
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 8
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131083
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 8
+    - m_Id: 131088
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 7
+        valueIndex: 9
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 9
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 10
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 11
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 12
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 13
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 14
+    line: -1
+  floats:
+  - 1
+  - 1
+  dimensions:
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 400
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 8
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 12
+  - unit: 1
+    value: 12
+  - unit: 2
+    value: 50
+  - unit: 2
+    value: 50
+  colors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  strings:
+  - center
+  - center
+  - absolute
+  - upper-center
+  - upper-center
+  - center
+  - upper-center
+  - normal
+  - row
+  - center
+  assets: []
+  imports: []
+  m_FlattenedImportedStyleSheets: []
+  m_ContentHash: 0
+  scalableImages: []

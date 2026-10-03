@@ -1,0 +1,23 @@
+﻿.configqualityinfo {
+    font-size: 17px;
+    color: rgb(128, 128, 128);
+    -unity-font-style: italic;
+    -unity-text-align: upper-center;
+    -unity-font-definition: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.renderstudio-grid-view__item--selected .selectionTexture {
+    display: flex;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.renderstudio-grid-view__item__background:hover .selectionTexture {
+    display: flex;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.5);
+}
+
+.renderstudio-grid-view__item--selected:hover .selectionTexture {
+    display: flex;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+

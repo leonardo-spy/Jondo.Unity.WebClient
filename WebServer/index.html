@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jondo — Dofus 3 Web</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .container { max-width: 700px; padding: 40px; text-align: center; }
+  h1 { font-size: 48px; color: #58a6ff; margin-bottom: 8px; letter-spacing: 2px; }
+  .subtitle { color: #8b949e; font-size: 16px; margin-bottom: 40px; }
+  .status-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: left; }
+  .status-card h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  .check { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: 14px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .dot.ok { background: #3fb950; }
+  .dot.wait { background: #d29922; }
+  .dot.fail { background: #f85149; }
+  .dot.info { background: #58a6ff; }
+  .instructions { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; text-align: left; font-size: 14px; line-height: 1.8; }
+  .instructions h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+  code { background: #0d1117; border: 1px solid #30363d; border-radius: 4px; padding: 2px 6px; font-family: monospace; color: #79c0ff; }
+  .step { color: #58a6ff; font-weight: bold; }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>JONDO</h1>
+  <p class="subtitle">Dofus 3 Web Client</p>
+
+  <div class="status-card">
+    <h2>Status</h2>
+    <div class="check">
+      <span class="dot" id="dotServer"></span>
+      <span id="statusServer">Checking emulator...</span>
+    </div>
+    <div class="check">
+      <span class="dot" id="dotWs"></span>
+      <span id="statusWs">Checking WebSocket bridge...</span>
+    </div>
+    <div class="check">
+      <span class="dot" id="dotAssets"></span>
+      <span id="statusAssets">Checking assets...</span>
+    </div>
+    <div class="check">
+      <span class="dot" id="dotBuild"></span>
+      <span id="statusBuild">Checking Unity WebGL build...</span>
+    </div>
+  </div>
+
+  <div class="instructions" id="instructions">
+    <h2>Next steps</h2>
+    <p>The Node.js server is running. To get the game in the browser:</p>
+    <br>
+    <p><span class="step">1.</span> Install <a href="https://github.com/AssetRipper/AssetRipper/releases" target="_blank">AssetRipper</a> and extract the Unity project from the client:</p>
+    <p><code>AssetRipper "Cliente 3.6.10.11"</code></p>
+    <br>
+    <p><span class="step">2.</span> Open the extracted project in <strong>Unity 6</strong> Editor</p>
+    <br>
+    <p><span class="step">3.</span> Switch build target to <strong>WebGL</strong> and build</p>
+    <br>
+    <p><span class="step">4.</span> Copy the build output into <code>PlayBrowser/WebClient/unity-build/</code></p>
+    <br>
+    <p>The game will then load at <code>http://localhost:3000</code></p>
+  </div>
+</div>
+
+<script>
+async function check(id, label, testFn) {
+  const dot = document.getElementById('dot' + id);
+  const text = document.getElementById('status' + id);
+  try {
+    const result = await testFn();
+    dot.className = 'dot ' + (result.ok ? 'ok' : 'fail');
+    text.textContent = result.msg;
+  } catch (e) {
+    dot.className = 'dot fail';
+    text.textContent = label + ': ' + e.message;
+  }
+}
+
+async function checkAll() {
+  await check('Server', 'Emulator', async () => {
+    const r = await fetch('/api/config/dofus3.json', { signal: AbortSignal.timeout(2000) });
+    return r.ok
+      ? { ok: true, msg: 'Emulator running (HAAPI reachable)' }
+      : { ok: false, msg: 'Emulator returned ' + r.status };
+  });
+
+  await check('Ws', 'WebSocket', () => new Promise((resolve) => {
+    const ws = new WebSocket(`ws://${location.host}/game-ws`);
+    ws.binaryType = 'arraybuffer';
+    const timer = setTimeout(() => { ws.close(); resolve({ ok: false, msg: 'WebSocket bridge: timeout' }); }, 3000);
+    ws.onopen = () => { clearTimeout(timer); ws.close(); resolve({ ok: true, msg: 'WebSocket bridge: connected' }); };
+    ws.onerror = () => { clearTimeout(timer); resolve({ ok: false, msg: 'WebSocket bridge: connection failed' }); };
+  }));
+
+  await check('Assets', 'Assets', async () => {
+    try {
+      const r = await fetch('/assets/Data/catalog_1.0.hash', { signal: AbortSignal.timeout(2000) });
+      return r.ok
+        ? { ok: true, msg: 'Asset bundles available (' + (await r.text()).trim().substring(0,8) + '...)' }
+        : { ok: false, msg: 'Assets not found (place client in "Cliente 3.6.10.11/")' };
+    } catch { return { ok: false, msg: 'Assets directory not accessible' }; }
+  });
+
+  await check('Build', 'WebGL', async () => {
+    try {
+      const r = await fetch('/game/index.html', { signal: AbortSignal.timeout(2000) });
+      return r.ok
+        ? { ok: true, msg: 'Unity WebGL build found — ready to play!' }
+        : { ok: false, msg: 'No WebGL build yet (see instructions below)' };
+    } catch { return { ok: false, msg: 'No WebGL build yet (see instructions below)' }; }
+  });
+}
+
+checkAll();
+</script>
+</body>
+</html>

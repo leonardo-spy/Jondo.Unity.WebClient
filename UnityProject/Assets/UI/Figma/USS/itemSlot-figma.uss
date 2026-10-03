@@ -1,0 +1,606 @@
+﻿.itemSlot {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSlot.medium {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+}
+
+.itemSlot.medium.cosmetic {
+    border-radius: 11px;
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledTrue {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledTrue.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledFalse {
+    padding: 2px 2px 2px 2px;
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledFalse.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.cosmetic.selectedFalse.filledTrue.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.cosmetic.selectedFalse.filledFalse.hover:enabled {
+    padding: 2px 2px 2px 2px;
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.spell {
+    border-radius: 14px;
+}
+
+.itemSlot.medium.spell.selectedTrue.filledFalse {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledFalse.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledTrue {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledTrue.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.spell.selectedFalse.filledFalse.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.spell.selectedFalse.filledTrue.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.button {
+    border-radius: 11px;
+}
+
+.itemSlot.medium.button.selectedTrue.filledTrue {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.button.selectedTrue.filledTrue.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.button.selectedFalse.filledTrue.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.navigation {
+    border-radius: 11px;
+    padding: 2px 2px 2px 2px;
+}
+
+.itemSlot.medium.navigation.selectedTrue.filledTrue {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.navigation.selectedTrue.filledTrue.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.inventory {
+    border-radius: 6px;
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledTrue {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledTrue.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledTrue.gold {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledTrue.silver {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse {
+    border-color: var( --highlight_secondary80);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse.hover:enabled {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse.gold {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse.silver {
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledTrue.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledFalse.hover:enabled {
+    border-color: var( --highlight_secondary35);
+}
+
+.itemSlot.large {
+    border-width: 4px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.gold {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.silver {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledTrue.gold {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledTrue.silver {
+    width: 112px;
+    height: 112px;
+    border-radius: 24px;
+}
+
+.itemSlot.large.inventory {
+    width: 112px;
+    height: 112px;
+    border-radius: 10px;
+}
+
+.itemSlot.small {
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+}
+
+.itemSlot.small.spell {
+    border-radius: 8px;
+}
+
+.itemSlot.small.spell.selectedTrue.filledFalse {
+    border-color: var( --highlight_secondary50);
+}
+
+.itemSlot.small.spell.selectedTrue.filledTrue {
+    border-color: var( --white_white100);
+}
+
+.itemSlot.small.inventory.selectedFalse {
+    border-radius: 2px;
+}
+
+.itemSlot.small.inventory.selectedTrue.filledFalse {
+    border-radius: 2px;
+    border-color: var( --highlight_secondary50);
+}
+
+.itemSlot.small.inventory.selectedTrue.filledTrue {
+    border-radius: 3px;
+    border-color: var( --highlight_secondary100);
+}
+
+.itemSlot.xSmall {
+    width: 26px;
+    height: 26px;
+}
+
+.itemSlot.xSmall.spell.selectedFalse.filledFalse {
+    border-radius: 8px;
+}
+
+.itemSlot.xSmall.spell.selectedFalse.filledTrue {
+    border-radius: 4px;
+}
+
+.itemSlot.xSmall.inventory {
+    border-radius: 2px;
+}
+
+.itemSlot #itemSlot_outlineDark {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSlot.medium.cosmetic #itemSlot_outlineDark {
+    border-radius: 10px;
+    border-color: var( --black_black25);
+    border-width: 2px;
+}
+
+.itemSlot.medium.spell #itemSlot_outlineDark {
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+.itemSlot.medium.spell.selectedTrue.filledFalse #itemSlot_outlineDark {
+    border-color: var( --black_black25);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledTrue #itemSlot_outlineDark {
+    border-color: var( --black_black25);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledTrue.gold #itemSlot_outlineDark {
+    background-color: var( --background_dark100);
+    border-color: var( --background_dark100);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledTrue.silver #itemSlot_outlineDark {
+    background-color: var( --background_dark100);
+    border-color: var( --background_dark100);
+}
+
+.itemSlot.medium.spell.selectedFalse #itemSlot_outlineDark {
+    border-color: var( --black_black25);
+}
+
+.itemSlot.medium.button #itemSlot_outlineDark {
+    border-radius: 10px;
+    border-color: var( --black_black25);
+    border-width: 2px;
+}
+
+.itemSlot.medium.navigation #itemSlot_outlineDark {
+    border-radius: 10px;
+}
+
+.itemSlot.medium.inventory #itemSlot_outlineDark {
+    border-radius: 4px;
+    border-color: var( --black_black25);
+    border-width: 2px;
+}
+
+.itemSlot.large #itemSlot_outlineDark {
+    border-width: 4px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse #itemSlot_outlineDark {
+    border-color: var( --black_black25);
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.gold #itemSlot_outlineDark {
+    border-radius: 18px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.silver #itemSlot_outlineDark {
+    border-radius: 20px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledTrue #itemSlot_outlineDark {
+    background-color: var( --background_dark100);
+    border-color: var( --background_dark100);
+}
+
+.itemSlot.large.spell.selectedTrue.filledTrue.gold #itemSlot_outlineDark {
+    border-radius: 18px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledTrue.silver #itemSlot_outlineDark {
+    border-radius: 20px;
+}
+
+.itemSlot.large.inventory #itemSlot_outlineDark {
+    border-radius: 6px;
+    border-color: var( --black_black25);
+}
+
+.itemSlot.small.spell #itemSlot_outlineDark {
+    border-radius: 8px;
+}
+
+.itemSlot.small.inventory #itemSlot_outlineDark {
+    border-radius: 2px;
+}
+
+.itemSlot.xSmall.spell #itemSlot_outlineDark {
+    border-radius: 8px;
+}
+
+.itemSlot.xSmall.inventory #itemSlot_outlineDark {
+    border-radius: 2px;
+}
+
+.itemSlot.medium.cosmetic .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.spell .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.button .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.navigation.selectedTrue.filledTrue .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.navigation.selectedTrue.filledTrue.hover:enabled .itemTile#itemSlot_itemTile {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    min-height: 72px;
+}
+
+.itemSlot.medium.navigation.selectedFalse .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.inventory .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.large .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.small .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.xSmall .itemTile#itemSlot_itemTile {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot #itemSlot_container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSlot.medium #itemSlot_container {
+    --shadow: "inset 0px 2px rgba(0,0,0,0.35)";
+}
+
+.itemSlot.medium.cosmetic #itemSlot_container {
+    border-radius: 8px;
+    padding: 2px 2px 2px 2px;
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledFalse #itemSlot_container {
+    background-color: var( --black_black35);
+}
+
+.itemSlot.medium.cosmetic.selectedTrue.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black50);
+}
+
+.itemSlot.medium.cosmetic.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black35);
+}
+
+.itemSlot.medium.cosmetic.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black50);
+}
+
+.itemSlot.medium.spell #itemSlot_container {
+    border-radius: 10px;
+    --gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemSlot.medium.spell.selectedTrue.filledFalse #itemSlot_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemSlot.medium.spell.selectedTrue.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemSlot.medium.spell.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black35);
+}
+
+.itemSlot.medium.spell.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemSlot.medium.inventory #itemSlot_container {
+    border-radius: 2px;
+    --gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse #itemSlot_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemSlot.medium.inventory.selectedTrue.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black35);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemSlot.large #itemSlot_container {
+    --gap: 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: var( --buttons_buttonSecondary);
+    --shadow: "inset 0px 2px rgba(0,0,0,0.35)";
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.gold #itemSlot_container {
+    border-radius: 14px;
+}
+
+.itemSlot.large.spell.selectedTrue.filledFalse.silver #itemSlot_container {
+    border-radius: 16px;
+}
+
+.itemSlot.large.inventory #itemSlot_container {
+    border-radius: 2px;
+}
+
+.itemSlot.small #itemSlot_container {
+    --gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemSlot.small.spell #itemSlot_container {
+    border-radius: 8px;
+}
+
+.itemSlot.small.spell.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.small.spell.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot.small.spell.selectedTrue.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.small.spell.selectedTrue.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot.small.inventory #itemSlot_container {
+    border-radius: 2px;
+}
+
+.itemSlot.small.inventory.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.small.inventory.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot.small.inventory.selectedTrue.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.small.inventory.selectedTrue.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot.xSmall #itemSlot_container {
+    --gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemSlot.xSmall.spell #itemSlot_container {
+    border-radius: 4px;
+}
+
+.itemSlot.xSmall.spell.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.xSmall.spell.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot.xSmall.inventory #itemSlot_container {
+    border-radius: 2px;
+}
+
+.itemSlot.xSmall.inventory.selectedFalse.filledFalse #itemSlot_container {
+    background-color: var( --black_black15);
+}
+
+.itemSlot.xSmall.inventory.selectedFalse.filledFalse.hover:enabled #itemSlot_container {
+    background-color: var( --black_black25);
+}
+
+.itemSlot #itemSlot_asset {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSlot #itemSlot_asset_asset {
+    width: 100%;
+    height: 100%;
+    background-image: none;
+}
+
+.itemSlot #itemSlot_icon {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemSlot #itemSlot_icon_Vector {
+    width: 100%;
+    height: 100%;
+}
+
+.itemSlot.medium.cosmetic #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemSlot.medium.inventory.selectedTrue #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white50);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledFalse #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemSlot.medium.inventory.selectedFalse.filledFalse.hover:enabled #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white50);
+}
+
+.itemSlot.large #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white50);
+}
+
+.itemSlot.small #itemSlot_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+

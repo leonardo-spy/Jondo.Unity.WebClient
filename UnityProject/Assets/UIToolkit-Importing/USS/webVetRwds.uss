@@ -1,0 +1,20 @@
+﻿#btn_addSub:hover {
+    --btn_texture_btn_addSubImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_addSub {
+    --btn_texture_btn_addSubImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_addSub:active {
+    --btn_texture_btn_addSubImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_addSub:disabled {
+    --btn_texture_btn_addSubImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_addSub {
+    background-image: var( --btn_texture_btn_addSubImgVar);
+}
+

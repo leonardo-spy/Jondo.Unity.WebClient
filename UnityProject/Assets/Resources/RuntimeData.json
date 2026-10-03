@@ -1,0 +1,660 @@
+{
+  "screens": {
+    "ConnectionBackground": {
+      "handler": "fyr",
+      "authUi": 8,
+      "uxml": "Assets/UI/Auth/connectionBackground.uxml",
+      "binding": "ConnectionBackgroundBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "connectionBackground",
+          "t": "VisualElement"
+        },
+        {
+          "n": "img",
+          "t": "VisualElement"
+        },
+        {
+          "n": "iconLoading",
+          "t": "VisualElement"
+        }
+      ]
+    },
+    "Login": {
+      "handler": "fys",
+      "authUi": 0,
+      "uxml": "Assets/UI/Auth/login.uxml",
+      "binding": "LoginBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "login",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_gradient",
+          "t": "VisualElement"
+        },
+        {
+          "n": "tx_dofusLogo",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_error",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_message",
+          "t": "VisualElement"
+        },
+        {
+          "n": "lbl_message",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_login",
+          "t": "VisualElement"
+        },
+        {
+          "n": "VisualElement",
+          "t": "VisualElement"
+        },
+        {
+          "n": "btn_play",
+          "t": "PlayButton"
+        },
+        {
+          "n": "ctr_portSelection",
+          "t": "VisualElement"
+        },
+        {
+          "n": "dd_host",
+          "t": "Dropdown"
+        }
+      ]
+    },
+    "LoginMobile": {
+      "handler": "fyt",
+      "authUi": null,
+      "uxml": "Assets/UI/Auth/login_mobile.uxml",
+      "binding": "Login_mobileBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "login",
+          "t": "VisualElement"
+        },
+        {
+          "n": "windowLogin",
+          "t": "WindowFigma"
+        },
+        {
+          "n": "VisualElement",
+          "t": "VisualElement"
+        },
+        {
+          "n": "lbl_account",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "input_account",
+          "t": "TextInput"
+        },
+        {
+          "n": "lbl_password",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "input_password",
+          "t": "TextInput"
+        },
+        {
+          "n": "btn_valid",
+          "t": "DofusButtonCustom"
+        }
+      ]
+    },
+    "PreGameMainMenu": {
+      "handler": "fyv",
+      "authUi": 4,
+      "uxml": "Assets/UI/Auth/preGameMainMenu.uxml",
+      "binding": "PreGameMainMenuBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "preGameMainMenu",
+          "t": "WindowFigma"
+        },
+        {
+          "n": "ctr_content",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_mainPart",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_options",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "btn_options",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "btn_quit",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "ctr_subPart",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_sub_txt",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "tx_shield",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "lbl_sub_text",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "btn_sub",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "ctr_footer",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "btn_close",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "lbl_buildNumber",
+          "t": "DofusLabel"
+        }
+      ]
+    },
+    "CharacterSelection": {
+      "handler": "CharacterSelection",
+      "authUi": 2,
+      "uxml": "Assets/UI/Auth/characterSelection/characterSelection.uxml",
+      "binding": "CharacterSelectionBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_characterSelection",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "leftPart",
+          "t": "VisualElement"
+        },
+        {
+          "n": "window_shadow",
+          "t": "VisualElement"
+        },
+        {
+          "n": "win_characterSelection",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_header",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_headerText",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_headerTextTop",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "lbl_title",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "lbl_serverName",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_button",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "dd_servers",
+          "t": "DropdownButton"
+        },
+        {
+          "n": "ctr_content",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_columnHeader",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "head_name",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_class",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_level",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "gd_character",
+          "t": "ScrollView"
+        },
+        {
+          "n": "ctr_characterContent",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_footer",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "btn_createCharacter",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "txt_xp",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_display",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "socle",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_center",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_entity",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ed_main",
+          "t": "EntityDisplayer"
+        },
+        {
+          "n": "ctr_infoMain",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_class",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_info",
+          "t": "VisualElement"
+        },
+        {
+          "n": "lbl_nameMain",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "tx_omega",
+          "t": "VisualElement"
+        },
+        {
+          "n": "lbl_infoMain",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "txt_xpMain",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_death",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "icon_skull",
+          "t": "DofusIcon"
+        },
+        {
+          "n": "lbl_death",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "btn_play",
+          "t": "PlayButton"
+        },
+        {
+          "n": "tx_bonusEpic",
+          "t": "VisualElement"
+        }
+      ]
+    },
+    "ServerSelection": {
+      "handler": "ServerSelection",
+      "authUi": 1,
+      "uxml": "Assets/UI/Auth/ServerSelection/ServerSelection.uxml",
+      "binding": "ServerSelectionBinding",
+      "fields": [
+        {
+          "n": "root_____",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_serverSelection",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_header",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_tabSection",
+          "t": "VisualElement"
+        },
+        {
+          "n": "m_tabs",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "tab_pioneer",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_pioneer_mono",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_classic",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_classic_mono",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_epic",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_tournament",
+          "t": "DofusTab"
+        },
+        {
+          "n": "tab_temporis",
+          "t": "DofusTab"
+        },
+        {
+          "n": "lbl_title",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_search",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_line",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "inp_search",
+          "t": "TextInput"
+        },
+        {
+          "n": "btn_search",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "btn_friends",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "lbl_errorSearch",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_searchResult",
+          "t": "VisualElement"
+        },
+        {
+          "n": "gd_searchResults",
+          "t": "ListView"
+        },
+        {
+          "n": "ctr_searchFooter",
+          "t": "VisualElement"
+        },
+        {
+          "n": "lbl_searchResultsCount",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_force",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_freeAccount",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "lbl_accountName",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "btn_freeAccount",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "ctr_forceAccount",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_forceInput",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "inp_force",
+          "t": "TextInput"
+        },
+        {
+          "n": "btn_force",
+          "t": "DofusButtonCustom"
+        },
+        {
+          "n": "lbl_errorForce",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_mode",
+          "t": "VisualElement"
+        },
+        {
+          "n": "tgGroup_mode",
+          "t": "DofusToggleButtonGroupCustom"
+        },
+        {
+          "n": "tg_carousel",
+          "t": "DofusToggleButtonCustom"
+        },
+        {
+          "n": "tg_list",
+          "t": "DofusToggleButtonCustom"
+        },
+        {
+          "n": "VisualElement",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_warning",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "icon_warning",
+          "t": "DofusIcon"
+        },
+        {
+          "n": "lbl_warning",
+          "t": "DofusLabel"
+        },
+        {
+          "n": "ctr_listMode",
+          "t": "VisualElement"
+        },
+        {
+          "n": "ctr_content",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_columns",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "head_name",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_character",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_type",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_friends",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "head_community",
+          "t": "TableColumnHeader"
+        },
+        {
+          "n": "lv_server",
+          "t": "ListView"
+        },
+        {
+          "n": "ctr_filter",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "ctr_characterScroll",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "icon_left",
+          "t": "DofusIcon"
+        },
+        {
+          "n": "sv_filter",
+          "t": "ScrollView"
+        },
+        {
+          "n": "ctr_filterContent",
+          "t": "DofusVisualElement"
+        },
+        {
+          "n": "icon_right",
+          "t": "DofusIcon"
+        },
+        {
+          "n": "ctr_carouselMode",
+          "t": "VisualElement"
+        },
+        {
+          "n": "serverCard_0",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_1",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_2",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_3",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_4",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_5",
+          "t": "ServerCard"
+        },
+        {
+          "n": "serverCard_6",
+          "t": "ServerCard"
+        },
+        {
+          "n": "btn_moveLeft",
+          "t": "VisualElement"
+        },
+        {
+          "n": "btn_moveRight",
+          "t": "VisualElement"
+        },
+        {
+          "n": "btn_play",
+          "t": "PlayButton"
+        },
+        {
+          "n": "cb_onlyCharacter",
+          "t": "CheckboxCustom"
+        },
+        {
+          "n": "lbl_noServer",
+          "t": "DofusLabel"
+        }
+      ]
+    }
+  },
+  "authUis": {
+    "Login": 0,
+    "ServerSelection": 1,
+    "CharacterSelection": 2,
+    "CharacterCreation": 3,
+    "PreGameMenu": 4,
+    "SecretPopup": 5,
+    "PseudoChoice": 6,
+    "CharacterHeader": 7,
+    "ConnectionBackground": 8,
+    "OptionLoadingError": 9
+  },
+  "serverTypes": {
+    "0": "Server",
+    "1": "Classic",
+    "2": "Epic",
+    "3": "Tournament",
+    "4": "Temporis",
+    "5": "Pioneer"
+  }
+}

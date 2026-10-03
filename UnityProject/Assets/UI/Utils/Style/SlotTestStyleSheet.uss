@@ -1,0 +1,88 @@
+﻿:root {
+    --whiteborder: rgb(200, 200, 200);
+    --normal: rgb(74, 74, 63);
+    --over: rgb(85, 94, 44);
+    --pressed: rgb(203, 223, 78);
+    --selected: rgb(187, 195, 24);
+    --selected_over: rgb(58, 58, 54);
+    --selected_pressed: rgb(34, 111, 124);
+}
+
+.renderstudio-grid-view__row {
+    flex-direction: row;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    border-width: 3%;
+    border-color: var( --whiteborder);
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+}
+
+.renderstudio-grid-view__item {
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    border-color: var( --normal);
+    background-color: var( --normal);
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.renderstudio-grid-view__item:hover {
+    width: 100%;
+    height: 100%;
+    border-color: var( --over);
+    position: absolute;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.renderstudio-grid-view__item--selected {
+    width: 100%;
+    height: 100%;
+    border-color: var( --selected);
+    position: absolute;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.renderstudio-grid-view__item--selected:hover {
+    width: 100%;
+    height: 100%;
+    border-color: var( --selected_over);
+    position: absolute;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+}
+
+.iconBackground {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    top: 10%;
+}
+
+.icon {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    top: 5%;
+}
+

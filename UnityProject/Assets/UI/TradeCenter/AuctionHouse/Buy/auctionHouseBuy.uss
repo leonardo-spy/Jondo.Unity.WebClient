@@ -1,0 +1,48 @@
+﻿#btn_displayAllItems .unity-toggle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#btn_displayAllItems .unity-toggle__label {
+    position: absolute;
+    left: 35px;
+    color: rgb(199, 199, 197);
+}
+
+#btn_displayAllItems .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+    width: 25px;
+    height: 25px;
+    border-width: 0;
+    -unity-background-image-tint-color: white;
+    background-color: transparent;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+#btn_displayAllItems .unity-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+.buttonBuy {
+    background-image: url("/Assets/UI/InlineTextures/collectedTaxCollector_0_bg_dark.png");
+}
+
+.buttonBuy:hover {
+    -unity-background-image-tint-color: rgb(158, 159, 163);
+}
+
+.buttonBuy:active {
+    -unity-background-image-tint-color: rgba(158, 159, 163, 0.39);
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}
+
+#footer {
+    border-left-width: 1px;
+    border-left-color: var( --white_white15);
+}
+

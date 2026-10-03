@@ -1,0 +1,391 @@
+﻿.unity-content {
+    margin: 0;
+}
+
+.unity-collection-view__item--selected {
+    background-color: rgba(204, 204, 204, 0.3);
+}
+
+.unity-collection-view__item:hover {
+    background-color: rgba(204, 204, 204, 0.2);
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}
+
+.filterButton:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#dropdownButton {
+    margin: 0;
+}
+
+#btn_sortConquests:hover {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests:active {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests:disabled {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests:focus {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests:focus:hover {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#btn_sortConquests:focus:active {
+    --bgTexturebtn_sortConquestsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_sortConquestsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_filter.png");
+}
+
+#bgTexturebtn_sortConquests {
+    background-image: var( --bgTexturebtn_sortConquestsImgVar);
+}
+
+#iconTexturebtn_sortConquests {
+    background-image: var( --iconTexturebtn_sortConquestsImgVar);
+}
+
+#btn_help:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_over.png");
+}
+
+#btn_help {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_question.png");
+}
+
+#btn_help:focus {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#btn_help:focus:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#bgTexturebtn_help {
+    background-image: var( --bgTexturebtn_helpImgVar);
+}
+
+#btn_worldmap:hover {
+    --bgTexturebtn_worldmapImgVar: url("/Assets/UI/USSTextures/btn_transparent_over.png");
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap {
+    --bgTexturebtn_worldmapImgVar: url("/Assets/UI/USSTextures/btn_transparent_normal.png");
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap:active {
+    --bgTexturebtn_worldmapImgVar: url("/Assets/UI/USSTextures/btn_transparent_pressed.png");
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap:disabled {
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap:focus {
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap:focus:hover {
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#btn_worldmap:focus:active {
+    --iconTexturebtn_worldmapImgVar: url("/Assets/UI/Themes/darkStone/texture/map/icon_univers.png");
+}
+
+#bgTexturebtn_worldmap {
+    background-image: var( --bgTexturebtn_worldmapImgVar);
+}
+
+#iconTexturebtn_worldmap {
+    background-image: var( --iconTexturebtn_worldmapImgVar);
+}
+
+#btnReward:hover {
+    --bgTexturebtnRewardImgVar: url("/Assets/UI/USSTextures/btn_transparent_over.png");
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward {
+    --bgTexturebtnRewardImgVar: url("/Assets/UI/USSTextures/btn_transparent_normal.png");
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward:active {
+    --bgTexturebtnRewardImgVar: url("/Assets/UI/USSTextures/btn_transparent_pressed.png");
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward:disabled {
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward:focus {
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward:focus:hover {
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#btnReward:focus:active {
+    --iconTexturebtnRewardImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterSpiral_On.png");
+}
+
+#bgTexturebtnReward {
+    background-image: var( --bgTexturebtnRewardImgVar);
+}
+
+#iconTexturebtnReward {
+    background-image: var( --iconTexturebtnRewardImgVar);
+}
+
+#btnConquest:hover {
+    --bgTexturebtnConquestImgVar: url("/Assets/UI/USSTextures/btn_transparent_over.png");
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest {
+    --bgTexturebtnConquestImgVar: url("/Assets/UI/USSTextures/btn_transparent_normal.png");
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest:active {
+    --bgTexturebtnConquestImgVar: url("/Assets/UI/USSTextures/btn_transparent_pressed.png");
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest:disabled {
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest:focus {
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest:focus:hover {
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#btnConquest:focus:active {
+    --iconTexturebtnConquestImgVar: url("/Assets/UI/Themes/darkStone/texture/map/filterPrism_On.png");
+}
+
+#bgTexturebtnConquest {
+    background-image: var( --bgTexturebtnConquestImgVar);
+}
+
+#iconTexturebtnConquest {
+    background-image: var( --iconTexturebtnConquestImgVar);
+}
+
+#btnBestiary:hover {
+    --bgTexturebtnBestiaryImgVar: url("/Assets/UI/USSTextures/btn_transparent_over.png");
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary {
+    --bgTexturebtnBestiaryImgVar: url("/Assets/UI/USSTextures/btn_transparent_normal.png");
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary:active {
+    --bgTexturebtnBestiaryImgVar: url("/Assets/UI/USSTextures/btn_transparent_pressed.png");
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary:disabled {
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary:focus {
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary:focus:hover {
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#btnBestiary:focus:active {
+    --iconTexturebtnBestiaryImgVar: url("/Assets/UI/Themes/Figma/menuIcons/2x/bestiary.png");
+}
+
+#bgTexturebtnBestiary {
+    background-image: var( --bgTexturebtnBestiaryImgVar);
+}
+
+#iconTexturebtnBestiary {
+    background-image: var( --iconTexturebtnBestiaryImgVar);
+}
+
+#btn_player:hover {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+}
+
+#btn_player {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+}
+
+#btn_player:active {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+}
+
+#btn_player:disabled {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+}
+
+#btn_player:focus {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+}
+
+#btn_player:focus:hover {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+}
+
+#btn_player:focus:active {
+    --bgTexturebtn_playerImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+}
+
+#bgTexturebtn_player {
+    background-image: var( --bgTexturebtn_playerImgVar);
+}
+
+#btn_zoomIn:hover {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+}
+
+#btn_zoomIn {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+}
+
+#btn_zoomIn:active {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+}
+
+#btn_zoomIn:disabled {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+}
+
+#btn_zoomIn:focus {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+}
+
+#btn_zoomIn:focus:hover {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+}
+
+#btn_zoomIn:focus:active {
+    --bgTexturebtn_zoomInImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+}
+
+#bgTexturebtn_zoomIn {
+    background-image: var( --bgTexturebtn_zoomInImgVar);
+}
+
+#btn_zoomOut:hover {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+}
+
+#btn_zoomOut {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+}
+
+#btn_zoomOut:active {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+}
+
+#btn_zoomOut:disabled {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+}
+
+#btn_zoomOut:focus {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+}
+
+#btn_zoomOut:focus:hover {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+}
+
+#btn_zoomOut:focus:active {
+    --bgTexturebtn_zoomOutImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+}
+
+#bgTexturebtn_zoomOut {
+    background-image: var( --bgTexturebtn_zoomOutImgVar);
+}
+
+#btn_openConfig:hover {
+    --btn_texture_btn_openConfigImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_openConfig {
+    --btn_texture_btn_openConfigImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_openConfig:active {
+    --btn_texture_btn_openConfigImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_openConfig:disabled {
+    --btn_texture_btn_openConfigImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_openConfig {
+    background-image: var( --btn_texture_btn_openConfigImgVar);
+}
+
+#ctr_close {
+    background-color: var( --background_medium90);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+#gd_searchResults ScrollView {
+    flex-grow: 0;
+}
+
+.quantityColor {
+    border-width: 1px;
+    border-color: var( --white_white80);
+    border-radius: 2px;
+}
+
+#lbl_displayAll {
+    color: var( --highlight_secondary100);
+}
+
+#lbl_displayAll.Hover {
+    color: var( --white_white80);
+}
+
+#tx_displayAll {
+    -unity-background-image-tint-color: var( --highlight_secondary100);
+}
+
+#tx_displayAll.Hover {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+

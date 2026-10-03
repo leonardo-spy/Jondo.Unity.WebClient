@@ -1,0 +1,16 @@
+﻿#btn_resetSearch:hover {
+    --bgTexturebtn_resetSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+}
+
+#btn_resetSearch {
+    --bgTexturebtn_resetSearchImgVar: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+}
+
+#btn_resetSearch:active {
+    --bgTexturebtn_resetSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_pressed.png");
+}
+
+#bgTexturebtn_resetSearch {
+    background-image: var( --bgTexturebtn_resetSearchImgVar);
+}
+

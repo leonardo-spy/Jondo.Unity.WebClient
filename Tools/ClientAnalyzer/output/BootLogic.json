@@ -1,0 +1,1910 @@
+{
+  "phases": [
+    {
+      "name": "RegisterServices",
+      "decompiled": "GameCompositor.bkqa (dump.cs L405366)",
+      "services": [
+        "glo (service bus)",
+        "ecr (coordinator)",
+        "fyh (debug/loading)"
+      ]
+    },
+    {
+      "name": "PreInitServices",
+      "decompiled": "Compositor.bkpy (dump.cs L405224)",
+      "description": "Iterates dxnz Dictionary<Type, gao>, calls each pre-init"
+    },
+    {
+      "name": "InitializeServices",
+      "decompiled": "Compositor.bkpz (dump.cs L405228)",
+      "description": "Finds [ServiceInit] methods via reflection, calls each. 182 services.",
+      "serviceInits": [
+        {
+          "type": "vc",
+          "method": "qqc",
+          "va": "0x181FBF730"
+        },
+        {
+          "type": "Core.Rendering.Displayables.DisplayableService",
+          "method": "rup",
+          "va": "0x1824B0600"
+        },
+        {
+          "type": "Core.UILogic.Components.Hyperlink.HyperlinkService",
+          "method": "Init",
+          "va": "0x182DF31A0"
+        },
+        {
+          "type": "Core.UILogic.Components.DragAndDrop.DragAndDropService",
+          "method": "Initialize",
+          "va": "0x18145F200"
+        },
+        {
+          "type": "Core.UILogic.Components.ContextMenu.DofusContextualMenuService",
+          "method": "Initialize",
+          "va": "0x180649C80"
+        },
+        {
+          "type": "eam",
+          "method": "uso",
+          "va": "0x181599FD0"
+        },
+        {
+          "type": "ean",
+          "method": "uss",
+          "va": "0x18159AFA0"
+        },
+        {
+          "type": "eap",
+          "method": "uth",
+          "va": "0x1815A0FB0"
+        },
+        {
+          "type": "ear",
+          "method": "utx",
+          "va": "0x1815A2640"
+        },
+        {
+          "type": "eau",
+          "method": "uuv",
+          "va": "0x1815A5640"
+        },
+        {
+          "type": "eax",
+          "method": "uwo",
+          "va": "0x1815B4080"
+        },
+        {
+          "type": "eaz",
+          "method": "uws",
+          "va": "0x1815B4AB0"
+        },
+        {
+          "type": "ebd",
+          "method": "uxl",
+          "va": "0x1815B8190"
+        },
+        {
+          "type": "ebf",
+          "method": "uxq",
+          "va": "0x1815BBE40"
+        },
+        {
+          "type": "ebh",
+          "method": "uzn",
+          "va": "0x1815BFAA0"
+        },
+        {
+          "type": "ebi",
+          "method": "uzx",
+          "va": "0x1815E2C70"
+        },
+        {
+          "type": "ebj",
+          "method": "vbg",
+          "va": "0x1815E3AE0"
+        },
+        {
+          "type": "ebm",
+          "method": "vbz",
+          "va": "0x1815E5490"
+        },
+        {
+          "type": "ebq",
+          "method": "vcw",
+          "va": "0x1815E7370"
+        },
+        {
+          "type": "Core.Services.Rendering.MapDisplayService.MapDisplayService",
+          "method": "vdo",
+          "va": "0x1815DA0F0"
+        },
+        {
+          "type": "ecg",
+          "method": "vpi",
+          "va": "0x1815ED130"
+        },
+        {
+          "type": "ecj",
+          "method": "vqk",
+          "va": "0x1815EE450"
+        },
+        {
+          "type": "ecr",
+          "method": "vrt",
+          "va": "0x1815F1CA0"
+        },
+        {
+          "type": "ecw",
+          "method": "vtb",
+          "va": "0x1815F7E40"
+        },
+        {
+          "type": "ecz",
+          "method": "vuo",
+          "va": "0x1815FCB30"
+        },
+        {
+          "type": "edb",
+          "method": "vvf",
+          "va": "0x181605B30"
+        },
+        {
+          "type": "ede",
+          "method": "wop",
+          "va": "0x18160D390"
+        },
+        {
+          "type": "edm",
+          "method": "wpn",
+          "va": "0x1816133A0"
+        },
+        {
+          "type": "eeo",
+          "method": "wsx",
+          "va": "0x1816282D0"
+        },
+        {
+          "type": "eet",
+          "method": "xan",
+          "va": "0x181641580"
+        },
+        {
+          "type": "Core.Services.Player.OptionsService.CachedDataService",
+          "method": "Init",
+          "va": "0x181644640"
+        },
+        {
+          "type": "Core.Services.Player.OptionsService.DataStoreJsonService",
+          "method": "xbo",
+          "va": "0x181646330"
+        },
+        {
+          "type": "eeu",
+          "method": "xbw",
+          "va": "0x181648970"
+        },
+        {
+          "type": "eew",
+          "method": "xcm",
+          "va": "0x181649C20"
+        },
+        {
+          "type": "eex",
+          "method": "xct",
+          "va": "0x18164D900"
+        },
+        {
+          "type": "efk",
+          "method": "xdy",
+          "va": "0x1816523F0"
+        },
+        {
+          "type": "efo",
+          "method": "xgo",
+          "va": "0x18165A630"
+        },
+        {
+          "type": "efu",
+          "method": "xjw",
+          "va": "0x18166B310"
+        },
+        {
+          "type": "egh",
+          "method": "xmd",
+          "va": "0x18167DA90"
+        },
+        {
+          "type": "egn",
+          "method": "xno",
+          "va": "0x18167FAE0"
+        },
+        {
+          "type": "egv",
+          "method": "xqp",
+          "va": "0x18168D400"
+        },
+        {
+          "type": "egy",
+          "method": "xsf",
+          "va": "0x181694D40"
+        },
+        {
+          "type": "ehb",
+          "method": "xsk",
+          "va": "0x181697E40"
+        },
+        {
+          "type": "ehe",
+          "method": "xuk",
+          "va": "0x1816B9400"
+        },
+        {
+          "type": "ehh",
+          "method": "xvd",
+          "va": "0x1816BA950"
+        },
+        {
+          "type": "Core.Services.Entities.RoleplayEntitiesService.RoleplayEntitiesService",
+          "method": "xyu",
+          "va": "0x1816D4EF0"
+        },
+        {
+          "type": "eid",
+          "method": "yfo",
+          "va": "0x1816EBD20"
+        },
+        {
+          "type": "eif",
+          "method": "yft",
+          "va": "0x1816ECBF0"
+        },
+        {
+          "type": "eik",
+          "method": "yji",
+          "va": "0x1816F7D70"
+        },
+        {
+          "type": "eiw",
+          "method": "yke",
+          "va": "0x1816FE5C0"
+        },
+        {
+          "type": "ejn",
+          "method": "ypp",
+          "va": "0x18170A3A0"
+        },
+        {
+          "type": "ejp",
+          "method": "ysd",
+          "va": "0x181711CF0"
+        },
+        {
+          "type": "ejr",
+          "method": "ysw",
+          "va": "0x181714EB0"
+        },
+        {
+          "type": "ejt",
+          "method": "yth",
+          "va": "0x181718E50"
+        },
+        {
+          "type": "ekb",
+          "method": "ywx",
+          "va": "0x181726910"
+        },
+        {
+          "type": "ekc",
+          "method": "yyg",
+          "va": "0x18172EB40"
+        },
+        {
+          "type": "ekj",
+          "method": "yzm",
+          "va": "0x181735620"
+        },
+        {
+          "type": "ekk",
+          "method": "zav",
+          "va": "0x181736C90"
+        },
+        {
+          "type": "ekl",
+          "method": "zba",
+          "va": "0x1817370F0"
+        },
+        {
+          "type": "ekm",
+          "method": "zbm",
+          "va": "0x181738550"
+        },
+        {
+          "type": "ekn",
+          "method": "zbu",
+          "va": "0x1817392F0"
+        },
+        {
+          "type": "ekr",
+          "method": "zcl",
+          "va": "0x18173B150"
+        },
+        {
+          "type": "ekv",
+          "method": "zdd",
+          "va": "0x18173C120"
+        },
+        {
+          "type": "ekw",
+          "method": "zdj",
+          "va": "0x18173C7D0"
+        },
+        {
+          "type": "ekz",
+          "method": "zea",
+          "va": "0x181742550"
+        },
+        {
+          "type": "elc",
+          "method": "zgh",
+          "va": "0x181749C80"
+        },
+        {
+          "type": "eld",
+          "method": "zgj",
+          "va": "0x181749F20"
+        },
+        {
+          "type": "eli",
+          "method": "zgz",
+          "va": "0x1817512B0"
+        },
+        {
+          "type": "eln",
+          "method": "zht",
+          "va": "0x1817534A0"
+        },
+        {
+          "type": "elv",
+          "method": "zlf",
+          "va": "0x18175B200"
+        },
+        {
+          "type": "emc",
+          "method": "zof",
+          "va": "0x1816523F0"
+        },
+        {
+          "type": "emp",
+          "method": "zqu",
+          "va": "0x18177C8F0"
+        },
+        {
+          "type": "ems",
+          "method": "ztx",
+          "va": "0x1817881A0"
+        },
+        {
+          "type": "emt",
+          "method": "zup",
+          "va": "0x181789700"
+        },
+        {
+          "type": "enf",
+          "method": "zxb",
+          "va": "0x18179E6E0"
+        },
+        {
+          "type": "eng",
+          "method": "zxf",
+          "va": "0x1817A6FA0"
+        },
+        {
+          "type": "enh",
+          "method": "zym",
+          "va": "0x1817AB490"
+        },
+        {
+          "type": "eni",
+          "method": "zyp",
+          "va": "0x1817AC6D0"
+        },
+        {
+          "type": "eno",
+          "method": "zzp",
+          "va": "0x1817B26B0"
+        },
+        {
+          "type": "enp",
+          "method": "baac",
+          "va": "0x1817B2F80"
+        },
+        {
+          "type": "enq",
+          "method": "baaw",
+          "va": "0x1817BAE50"
+        },
+        {
+          "type": "Core.Services.Roleplay.RoleplayIntroductionService",
+          "method": "bach",
+          "va": "0x1817B8020"
+        },
+        {
+          "type": "enw",
+          "method": "badr",
+          "va": "0x1817C3280"
+        },
+        {
+          "type": "eoa",
+          "method": "baem",
+          "va": "0x1817C7A60"
+        },
+        {
+          "type": "eoh",
+          "method": "bafv",
+          "va": "0x1817CE4A0"
+        },
+        {
+          "type": "eoj",
+          "method": "baie",
+          "va": "0x1818021A0"
+        },
+        {
+          "type": "eoo",
+          "method": "bajk",
+          "va": "0x181806BB0"
+        },
+        {
+          "type": "eov",
+          "method": "balj",
+          "va": "0x181812A30"
+        },
+        {
+          "type": "epe",
+          "method": "baou",
+          "va": "0x181828B40"
+        },
+        {
+          "type": "epl",
+          "method": "barz",
+          "va": "0x181837180"
+        },
+        {
+          "type": "epw",
+          "method": "baun",
+          "va": "0x18184B380"
+        },
+        {
+          "type": "epz",
+          "method": "bawg",
+          "va": "0x181852FA0"
+        },
+        {
+          "type": "eqd",
+          "method": "baxz",
+          "va": "0x181895B90"
+        },
+        {
+          "type": "eqg",
+          "method": "bayl",
+          "va": "0x1818974C0"
+        },
+        {
+          "type": "eqs",
+          "method": "bblf",
+          "va": "0x1818AE710"
+        },
+        {
+          "type": "eqy",
+          "method": "bbop",
+          "va": "0x1818BEA00"
+        },
+        {
+          "type": "ere",
+          "method": "bbrj",
+          "va": "0x1818CBB80"
+        },
+        {
+          "type": "eri",
+          "method": "bbsk",
+          "va": "0x1818D43C0"
+        },
+        {
+          "type": "erp",
+          "method": "bbto",
+          "va": "0x1818E0700"
+        },
+        {
+          "type": "ese",
+          "method": "bbva",
+          "va": "0x1818E5ED0"
+        },
+        {
+          "type": "etw",
+          "method": "bcik",
+          "va": "0x1819BB170"
+        },
+        {
+          "type": "eux",
+          "method": "bcvm",
+          "va": "0x1819DDF90"
+        },
+        {
+          "type": "euz",
+          "method": "bcwp",
+          "va": "0x1819E64F0"
+        },
+        {
+          "type": "evd",
+          "method": "bcwt",
+          "va": "0x1819E7720"
+        },
+        {
+          "type": "evi",
+          "method": "bcxr",
+          "va": "0x1819E9C70"
+        },
+        {
+          "type": "fbw",
+          "method": "bdll",
+          "va": "0x1819F2CB0"
+        },
+        {
+          "type": "ffa",
+          "method": "bdwc",
+          "va": "0x1819F3780"
+        },
+        {
+          "type": "ffb",
+          "method": "bdwk",
+          "va": "0x181A12F00"
+        },
+        {
+          "type": "ffm",
+          "method": "becy",
+          "va": "0x181A2A710"
+        },
+        {
+          "type": "fgb",
+          "method": "bemc",
+          "va": "0x181A73E70"
+        },
+        {
+          "type": "fge",
+          "method": "bemr",
+          "va": "0x181A78160"
+        },
+        {
+          "type": "fgt",
+          "method": "besp",
+          "va": "0x181AF1BB0"
+        },
+        {
+          "type": "fgx",
+          "method": "beyf",
+          "va": "0x181AFEFE0"
+        },
+        {
+          "type": "fha",
+          "method": "beyj",
+          "va": "0x181B001F0"
+        },
+        {
+          "type": "fhd",
+          "method": "beym",
+          "va": "0x181B00970"
+        },
+        {
+          "type": "fhl",
+          "method": "bfcc",
+          "va": "0x181B1C870"
+        },
+        {
+          "type": "fhm",
+          "method": "bfcn",
+          "va": "0x1815FCBE0"
+        },
+        {
+          "type": "fhn",
+          "method": "bfcs",
+          "va": "0x181B20300"
+        },
+        {
+          "type": "fho",
+          "method": "bfcx",
+          "va": "0x181B20E30"
+        },
+        {
+          "type": "fhr",
+          "method": "bfde",
+          "va": "0x181B21AE0"
+        },
+        {
+          "type": "fht",
+          "method": "bfga",
+          "va": "0x181B3E320"
+        },
+        {
+          "type": "fhy",
+          "method": "bfhg",
+          "va": "0x181B43190"
+        },
+        {
+          "type": "Core.Services.Fight.MarkedCellsService.MarkedCellsService",
+          "method": "bfjj",
+          "va": "0x181B36710"
+        },
+        {
+          "type": "fio",
+          "method": "bflu",
+          "va": "0x181B4F3F0"
+        },
+        {
+          "type": "fiw",
+          "method": "bfnw",
+          "va": "0x181B56CA0"
+        },
+        {
+          "type": "fjj",
+          "method": "bfrr",
+          "va": "0x181B6AA30"
+        },
+        {
+          "type": "fjx",
+          "method": "bfwu",
+          "va": "0x181B88710"
+        },
+        {
+          "type": "Core.Services.Fight.FightEntitiesService.FightEntitiesService",
+          "method": "bfya",
+          "va": "0x181B859E0"
+        },
+        {
+          "type": "fkf",
+          "method": "bgba",
+          "va": "0x181BA66B0"
+        },
+        {
+          "type": "Core.Services.Fight.Fight.FightPreview.FightPreviewMovedEntitiesService",
+          "method": "bges",
+          "va": "0x181BA1310"
+        },
+        {
+          "type": "flc",
+          "method": "bgfk",
+          "va": "0x181BC1290"
+        },
+        {
+          "type": "Core.Services.Fight.Fight.FightPreview.FightPreviewSummonedEntitiesService",
+          "method": "bghk",
+          "va": "0x181BBB760"
+        },
+        {
+          "type": "flr",
+          "method": "bgjr",
+          "va": "0x181C22F60"
+        },
+        {
+          "type": "flw",
+          "method": "bgkb",
+          "va": "0x181C25570"
+        },
+        {
+          "type": "fmc",
+          "method": "bglt",
+          "va": "0x181BD5C10"
+        },
+        {
+          "type": "fml",
+          "method": "bgpm",
+          "va": "0x181C28A50"
+        },
+        {
+          "type": "fmo",
+          "method": "bgqk",
+          "va": "0x181C2EB30"
+        },
+        {
+          "type": "fnk",
+          "method": "bhaq",
+          "va": "0x181C48A90"
+        },
+        {
+          "type": "fob",
+          "method": "bheh",
+          "va": "0x181C69E10"
+        },
+        {
+          "type": "fpd",
+          "method": "bhmm",
+          "va": "0x181C75E80"
+        },
+        {
+          "type": "fpf",
+          "method": "bhmr",
+          "va": "0x181C768D0"
+        },
+        {
+          "type": "fpm",
+          "method": "bhng",
+          "va": "0x181C78E90"
+        },
+        {
+          "type": "fpn",
+          "method": "bhpp",
+          "va": "0x181C836E0"
+        },
+        {
+          "type": "fpt",
+          "method": "bhqd",
+          "va": "0x181C85890"
+        },
+        {
+          "type": "fqb",
+          "method": "bhqq",
+          "va": "0x181C89210"
+        },
+        {
+          "type": "fqh",
+          "method": "bhtc",
+          "va": "0x181C978E0"
+        },
+        {
+          "type": "fqu",
+          "method": "bhud",
+          "va": "0x181C9C120"
+        },
+        {
+          "type": "fqw",
+          "method": "bhxd",
+          "va": "0x181CB56E0"
+        },
+        {
+          "type": "frh",
+          "method": "bhzh",
+          "va": "0x181CBC330"
+        },
+        {
+          "type": "fro",
+          "method": "biay",
+          "va": "0x181CC5020"
+        },
+        {
+          "type": "frq",
+          "method": "bibs",
+          "va": "0x181CC7BD0"
+        },
+        {
+          "type": "frs",
+          "method": "biby",
+          "va": "0x181CC8910"
+        },
+        {
+          "type": "frx",
+          "method": "bice",
+          "va": "0x181CCAE30"
+        },
+        {
+          "type": "fsd",
+          "method": "bidd",
+          "va": "0x181CCF2C0"
+        },
+        {
+          "type": "fsf",
+          "method": "biee",
+          "va": "0x181CD4C50"
+        },
+        {
+          "type": "fsm",
+          "method": "bieo",
+          "va": "0x181CD7D80"
+        },
+        {
+          "type": "fsn",
+          "method": "bifl",
+          "va": "0x1816523F0"
+        },
+        {
+          "type": "fss",
+          "method": "bifx",
+          "va": "0x181CDFA20"
+        },
+        {
+          "type": "fsw",
+          "method": "bigf",
+          "va": "0x181CE3DC0"
+        },
+        {
+          "type": "ftc",
+          "method": "bihe",
+          "va": "0x181CEAE20"
+        },
+        {
+          "type": "ftn",
+          "method": "biil",
+          "va": "0x181CF3390"
+        },
+        {
+          "type": "fts",
+          "method": "biju",
+          "va": "0x181CF9430"
+        },
+        {
+          "type": "ftv",
+          "method": "bimf",
+          "va": "0x181D0ADE0"
+        },
+        {
+          "type": "fud",
+          "method": "bimt",
+          "va": "0x181D0FD70"
+        },
+        {
+          "type": "fvl",
+          "method": "biph",
+          "va": "0x181D16890"
+        },
+        {
+          "type": "fvu",
+          "method": "bite",
+          "va": "0x181D38FE0"
+        },
+        {
+          "type": "fwy",
+          "method": "bive",
+          "va": "0x181D3E940"
+        },
+        {
+          "type": "fxa",
+          "method": "bixr",
+          "va": "0x181D72760"
+        },
+        {
+          "type": "fxw",
+          "method": "biyt",
+          "va": "0x181D77840"
+        },
+        {
+          "type": "fxy",
+          "method": "bjad",
+          "va": "0x181D81290"
+        },
+        {
+          "type": "fyb",
+          "method": "bjar",
+          "va": "0x181D83B20"
+        },
+        {
+          "type": "fyd",
+          "method": "bjbr",
+          "va": "0x181D87E40"
+        },
+        {
+          "type": "fye",
+          "method": "bjby",
+          "va": "0x181D8D370"
+        },
+        {
+          "type": "fyf",
+          "method": "bjcc",
+          "va": "0x181D8E340"
+        },
+        {
+          "type": "fyh",
+          "method": "bjcg",
+          "va": "0x180649C80"
+        },
+        {
+          "type": "fyk",
+          "method": "bjcm",
+          "va": "0x181D91220"
+        },
+        {
+          "type": "gau",
+          "method": "bjrc",
+          "va": "0x181DC6260"
+        },
+        {
+          "type": "gsn",
+          "method": "blli",
+          "va": "0x181EDE110"
+        },
+        {
+          "type": "gte",
+          "method": "blog",
+          "va": "0x181EFB6C0"
+        },
+        {
+          "type": "gum",
+          "method": "blwa",
+          "va": "0x181F20440"
+        },
+        {
+          "type": "gvm",
+          "method": "bmbc",
+          "va": "0x181F3FD20"
+        },
+        {
+          "type": "hbc",
+          "method": "bnim",
+          "va": "0x181FF1320"
+        }
+      ]
+    },
+    {
+      "name": "LoadDataDependencies",
+      "decompiled": "Compositor.bkqe (dump.cs L405245)",
+      "description": "Addressables.InitializeAsync, loads configuration assets",
+      "assets": [
+        "Assets/Configuration/Audio/AudioManagerLibrary.asset",
+        "Assets/Configuration/Audio/AudioManagerSettings.asset",
+        "Assets/UI/DofusUISettings.asset"
+      ]
+    },
+    {
+      "name": "Compose",
+      "decompiled": "GameCompositor.bkqk (dump.cs L405374)",
+      "steps": [
+        "bkqb() — setup",
+        "bkqc(2) — progress step 2",
+        "PreInitServices → await",
+        "InitializeServices → await",
+        "bkqc(3) — progress step 3",
+        "bkqh — UI setup",
+        "bkqc(4) — progress step 4",
+        "isRunning = true"
+      ]
+    },
+    {
+      "name": "OpenAuthScreens",
+      "decompiled": "fpm (dump.cs L371728)",
+      "screens": [
+        "ConnectionBackground",
+        "Login"
+      ]
+    }
+  ],
+  "services": {
+    "vc": {
+      "type": "vc",
+      "method": "qqc",
+      "va": "0x181FBF730"
+    },
+    "Core.Rendering.Displayables.DisplayableService": {
+      "type": "Core.Rendering.Displayables.DisplayableService",
+      "method": "rup",
+      "va": "0x1824B0600"
+    },
+    "Core.UILogic.Components.Hyperlink.HyperlinkService": {
+      "type": "Core.UILogic.Components.Hyperlink.HyperlinkService",
+      "method": "Init",
+      "va": "0x182DF31A0"
+    },
+    "Core.UILogic.Components.DragAndDrop.DragAndDropService": {
+      "type": "Core.UILogic.Components.DragAndDrop.DragAndDropService",
+      "method": "Initialize",
+      "va": "0x18145F200"
+    },
+    "Core.UILogic.Components.ContextMenu.DofusContextualMenuService": {
+      "type": "Core.UILogic.Components.ContextMenu.DofusContextualMenuService",
+      "method": "Initialize",
+      "va": "0x180649C80"
+    },
+    "eam": {
+      "type": "eam",
+      "method": "uso",
+      "va": "0x181599FD0"
+    },
+    "ean": {
+      "type": "ean",
+      "method": "uss",
+      "va": "0x18159AFA0"
+    },
+    "eap": {
+      "type": "eap",
+      "method": "uth",
+      "va": "0x1815A0FB0"
+    },
+    "ear": {
+      "type": "ear",
+      "method": "utx",
+      "va": "0x1815A2640"
+    },
+    "eau": {
+      "type": "eau",
+      "method": "uuv",
+      "va": "0x1815A5640"
+    },
+    "eax": {
+      "type": "eax",
+      "method": "uwo",
+      "va": "0x1815B4080"
+    },
+    "eaz": {
+      "type": "eaz",
+      "method": "uws",
+      "va": "0x1815B4AB0"
+    },
+    "ebd": {
+      "type": "ebd",
+      "method": "uxl",
+      "va": "0x1815B8190"
+    },
+    "ebf": {
+      "type": "ebf",
+      "method": "uxq",
+      "va": "0x1815BBE40"
+    },
+    "ebh": {
+      "type": "ebh",
+      "method": "uzn",
+      "va": "0x1815BFAA0"
+    },
+    "ebi": {
+      "type": "ebi",
+      "method": "uzx",
+      "va": "0x1815E2C70"
+    },
+    "ebj": {
+      "type": "ebj",
+      "method": "vbg",
+      "va": "0x1815E3AE0"
+    },
+    "ebm": {
+      "type": "ebm",
+      "method": "vbz",
+      "va": "0x1815E5490"
+    },
+    "ebq": {
+      "type": "ebq",
+      "method": "vcw",
+      "va": "0x1815E7370"
+    },
+    "Core.Services.Rendering.MapDisplayService.MapDisplayService": {
+      "type": "Core.Services.Rendering.MapDisplayService.MapDisplayService",
+      "method": "vdo",
+      "va": "0x1815DA0F0"
+    },
+    "ecg": {
+      "type": "ecg",
+      "method": "vpi",
+      "va": "0x1815ED130"
+    },
+    "ecj": {
+      "type": "ecj",
+      "method": "vqk",
+      "va": "0x1815EE450"
+    },
+    "ecr": {
+      "type": "ecr",
+      "method": "vrt",
+      "va": "0x1815F1CA0"
+    },
+    "ecw": {
+      "type": "ecw",
+      "method": "vtb",
+      "va": "0x1815F7E40"
+    },
+    "ecz": {
+      "type": "ecz",
+      "method": "vuo",
+      "va": "0x1815FCB30"
+    },
+    "edb": {
+      "type": "edb",
+      "method": "vvf",
+      "va": "0x181605B30"
+    },
+    "ede": {
+      "type": "ede",
+      "method": "wop",
+      "va": "0x18160D390"
+    },
+    "edm": {
+      "type": "edm",
+      "method": "wpn",
+      "va": "0x1816133A0"
+    },
+    "eeo": {
+      "type": "eeo",
+      "method": "wsx",
+      "va": "0x1816282D0"
+    },
+    "eet": {
+      "type": "eet",
+      "method": "xan",
+      "va": "0x181641580"
+    },
+    "Core.Services.Player.OptionsService.CachedDataService": {
+      "type": "Core.Services.Player.OptionsService.CachedDataService",
+      "method": "Init",
+      "va": "0x181644640"
+    },
+    "Core.Services.Player.OptionsService.DataStoreJsonService": {
+      "type": "Core.Services.Player.OptionsService.DataStoreJsonService",
+      "method": "xbo",
+      "va": "0x181646330"
+    },
+    "eeu": {
+      "type": "eeu",
+      "method": "xbw",
+      "va": "0x181648970"
+    },
+    "eew": {
+      "type": "eew",
+      "method": "xcm",
+      "va": "0x181649C20"
+    },
+    "eex": {
+      "type": "eex",
+      "method": "xct",
+      "va": "0x18164D900"
+    },
+    "efk": {
+      "type": "efk",
+      "method": "xdy",
+      "va": "0x1816523F0"
+    },
+    "efo": {
+      "type": "efo",
+      "method": "xgo",
+      "va": "0x18165A630"
+    },
+    "efu": {
+      "type": "efu",
+      "method": "xjw",
+      "va": "0x18166B310"
+    },
+    "egh": {
+      "type": "egh",
+      "method": "xmd",
+      "va": "0x18167DA90"
+    },
+    "egn": {
+      "type": "egn",
+      "method": "xno",
+      "va": "0x18167FAE0"
+    },
+    "egv": {
+      "type": "egv",
+      "method": "xqp",
+      "va": "0x18168D400"
+    },
+    "egy": {
+      "type": "egy",
+      "method": "xsf",
+      "va": "0x181694D40"
+    },
+    "ehb": {
+      "type": "ehb",
+      "method": "xsk",
+      "va": "0x181697E40"
+    },
+    "ehe": {
+      "type": "ehe",
+      "method": "xuk",
+      "va": "0x1816B9400"
+    },
+    "ehh": {
+      "type": "ehh",
+      "method": "xvd",
+      "va": "0x1816BA950"
+    },
+    "Core.Services.Entities.RoleplayEntitiesService.RoleplayEntitiesService": {
+      "type": "Core.Services.Entities.RoleplayEntitiesService.RoleplayEntitiesService",
+      "method": "xyu",
+      "va": "0x1816D4EF0"
+    },
+    "eid": {
+      "type": "eid",
+      "method": "yfo",
+      "va": "0x1816EBD20"
+    },
+    "eif": {
+      "type": "eif",
+      "method": "yft",
+      "va": "0x1816ECBF0"
+    },
+    "eik": {
+      "type": "eik",
+      "method": "yji",
+      "va": "0x1816F7D70"
+    },
+    "eiw": {
+      "type": "eiw",
+      "method": "yke",
+      "va": "0x1816FE5C0"
+    },
+    "ejn": {
+      "type": "ejn",
+      "method": "ypp",
+      "va": "0x18170A3A0"
+    },
+    "ejp": {
+      "type": "ejp",
+      "method": "ysd",
+      "va": "0x181711CF0"
+    },
+    "ejr": {
+      "type": "ejr",
+      "method": "ysw",
+      "va": "0x181714EB0"
+    },
+    "ejt": {
+      "type": "ejt",
+      "method": "yth",
+      "va": "0x181718E50"
+    },
+    "ekb": {
+      "type": "ekb",
+      "method": "ywx",
+      "va": "0x181726910"
+    },
+    "ekc": {
+      "type": "ekc",
+      "method": "yyg",
+      "va": "0x18172EB40"
+    },
+    "ekj": {
+      "type": "ekj",
+      "method": "yzm",
+      "va": "0x181735620"
+    },
+    "ekk": {
+      "type": "ekk",
+      "method": "zav",
+      "va": "0x181736C90"
+    },
+    "ekl": {
+      "type": "ekl",
+      "method": "zba",
+      "va": "0x1817370F0"
+    },
+    "ekm": {
+      "type": "ekm",
+      "method": "zbm",
+      "va": "0x181738550"
+    },
+    "ekn": {
+      "type": "ekn",
+      "method": "zbu",
+      "va": "0x1817392F0"
+    },
+    "ekr": {
+      "type": "ekr",
+      "method": "zcl",
+      "va": "0x18173B150"
+    },
+    "ekv": {
+      "type": "ekv",
+      "method": "zdd",
+      "va": "0x18173C120"
+    },
+    "ekw": {
+      "type": "ekw",
+      "method": "zdj",
+      "va": "0x18173C7D0"
+    },
+    "ekz": {
+      "type": "ekz",
+      "method": "zea",
+      "va": "0x181742550"
+    },
+    "elc": {
+      "type": "elc",
+      "method": "zgh",
+      "va": "0x181749C80"
+    },
+    "eld": {
+      "type": "eld",
+      "method": "zgj",
+      "va": "0x181749F20"
+    },
+    "eli": {
+      "type": "eli",
+      "method": "zgz",
+      "va": "0x1817512B0"
+    },
+    "eln": {
+      "type": "eln",
+      "method": "zht",
+      "va": "0x1817534A0"
+    },
+    "elv": {
+      "type": "elv",
+      "method": "zlf",
+      "va": "0x18175B200"
+    },
+    "emc": {
+      "type": "emc",
+      "method": "zof",
+      "va": "0x1816523F0"
+    },
+    "emp": {
+      "type": "emp",
+      "method": "zqu",
+      "va": "0x18177C8F0"
+    },
+    "ems": {
+      "type": "ems",
+      "method": "ztx",
+      "va": "0x1817881A0"
+    },
+    "emt": {
+      "type": "emt",
+      "method": "zup",
+      "va": "0x181789700"
+    },
+    "enf": {
+      "type": "enf",
+      "method": "zxb",
+      "va": "0x18179E6E0"
+    },
+    "eng": {
+      "type": "eng",
+      "method": "zxf",
+      "va": "0x1817A6FA0"
+    },
+    "enh": {
+      "type": "enh",
+      "method": "zym",
+      "va": "0x1817AB490"
+    },
+    "eni": {
+      "type": "eni",
+      "method": "zyp",
+      "va": "0x1817AC6D0"
+    },
+    "eno": {
+      "type": "eno",
+      "method": "zzp",
+      "va": "0x1817B26B0"
+    },
+    "enp": {
+      "type": "enp",
+      "method": "baac",
+      "va": "0x1817B2F80"
+    },
+    "enq": {
+      "type": "enq",
+      "method": "baaw",
+      "va": "0x1817BAE50"
+    },
+    "Core.Services.Roleplay.RoleplayIntroductionService": {
+      "type": "Core.Services.Roleplay.RoleplayIntroductionService",
+      "method": "bach",
+      "va": "0x1817B8020"
+    },
+    "enw": {
+      "type": "enw",
+      "method": "badr",
+      "va": "0x1817C3280"
+    },
+    "eoa": {
+      "type": "eoa",
+      "method": "baem",
+      "va": "0x1817C7A60"
+    },
+    "eoh": {
+      "type": "eoh",
+      "method": "bafv",
+      "va": "0x1817CE4A0"
+    },
+    "eoj": {
+      "type": "eoj",
+      "method": "baie",
+      "va": "0x1818021A0"
+    },
+    "eoo": {
+      "type": "eoo",
+      "method": "bajk",
+      "va": "0x181806BB0"
+    },
+    "eov": {
+      "type": "eov",
+      "method": "balj",
+      "va": "0x181812A30"
+    },
+    "epe": {
+      "type": "epe",
+      "method": "baou",
+      "va": "0x181828B40"
+    },
+    "epl": {
+      "type": "epl",
+      "method": "barz",
+      "va": "0x181837180"
+    },
+    "epw": {
+      "type": "epw",
+      "method": "baun",
+      "va": "0x18184B380"
+    },
+    "epz": {
+      "type": "epz",
+      "method": "bawg",
+      "va": "0x181852FA0"
+    },
+    "eqd": {
+      "type": "eqd",
+      "method": "baxz",
+      "va": "0x181895B90"
+    },
+    "eqg": {
+      "type": "eqg",
+      "method": "bayl",
+      "va": "0x1818974C0"
+    },
+    "eqs": {
+      "type": "eqs",
+      "method": "bblf",
+      "va": "0x1818AE710"
+    },
+    "eqy": {
+      "type": "eqy",
+      "method": "bbop",
+      "va": "0x1818BEA00"
+    },
+    "ere": {
+      "type": "ere",
+      "method": "bbrj",
+      "va": "0x1818CBB80"
+    },
+    "eri": {
+      "type": "eri",
+      "method": "bbsk",
+      "va": "0x1818D43C0"
+    },
+    "erp": {
+      "type": "erp",
+      "method": "bbto",
+      "va": "0x1818E0700"
+    },
+    "ese": {
+      "type": "ese",
+      "method": "bbva",
+      "va": "0x1818E5ED0"
+    },
+    "etw": {
+      "type": "etw",
+      "method": "bcik",
+      "va": "0x1819BB170"
+    },
+    "eux": {
+      "type": "eux",
+      "method": "bcvm",
+      "va": "0x1819DDF90"
+    },
+    "euz": {
+      "type": "euz",
+      "method": "bcwp",
+      "va": "0x1819E64F0"
+    },
+    "evd": {
+      "type": "evd",
+      "method": "bcwt",
+      "va": "0x1819E7720"
+    },
+    "evi": {
+      "type": "evi",
+      "method": "bcxr",
+      "va": "0x1819E9C70"
+    },
+    "fbw": {
+      "type": "fbw",
+      "method": "bdll",
+      "va": "0x1819F2CB0"
+    },
+    "ffa": {
+      "type": "ffa",
+      "method": "bdwc",
+      "va": "0x1819F3780"
+    },
+    "ffb": {
+      "type": "ffb",
+      "method": "bdwk",
+      "va": "0x181A12F00"
+    },
+    "ffm": {
+      "type": "ffm",
+      "method": "becy",
+      "va": "0x181A2A710"
+    },
+    "fgb": {
+      "type": "fgb",
+      "method": "bemc",
+      "va": "0x181A73E70"
+    },
+    "fge": {
+      "type": "fge",
+      "method": "bemr",
+      "va": "0x181A78160"
+    },
+    "fgt": {
+      "type": "fgt",
+      "method": "besp",
+      "va": "0x181AF1BB0"
+    },
+    "fgx": {
+      "type": "fgx",
+      "method": "beyf",
+      "va": "0x181AFEFE0"
+    },
+    "fha": {
+      "type": "fha",
+      "method": "beyj",
+      "va": "0x181B001F0"
+    },
+    "fhd": {
+      "type": "fhd",
+      "method": "beym",
+      "va": "0x181B00970"
+    },
+    "fhl": {
+      "type": "fhl",
+      "method": "bfcc",
+      "va": "0x181B1C870"
+    },
+    "fhm": {
+      "type": "fhm",
+      "method": "bfcn",
+      "va": "0x1815FCBE0"
+    },
+    "fhn": {
+      "type": "fhn",
+      "method": "bfcs",
+      "va": "0x181B20300"
+    },
+    "fho": {
+      "type": "fho",
+      "method": "bfcx",
+      "va": "0x181B20E30"
+    },
+    "fhr": {
+      "type": "fhr",
+      "method": "bfde",
+      "va": "0x181B21AE0"
+    },
+    "fht": {
+      "type": "fht",
+      "method": "bfga",
+      "va": "0x181B3E320"
+    },
+    "fhy": {
+      "type": "fhy",
+      "method": "bfhg",
+      "va": "0x181B43190"
+    },
+    "Core.Services.Fight.MarkedCellsService.MarkedCellsService": {
+      "type": "Core.Services.Fight.MarkedCellsService.MarkedCellsService",
+      "method": "bfjj",
+      "va": "0x181B36710"
+    },
+    "fio": {
+      "type": "fio",
+      "method": "bflu",
+      "va": "0x181B4F3F0"
+    },
+    "fiw": {
+      "type": "fiw",
+      "method": "bfnw",
+      "va": "0x181B56CA0"
+    },
+    "fjj": {
+      "type": "fjj",
+      "method": "bfrr",
+      "va": "0x181B6AA30"
+    },
+    "fjx": {
+      "type": "fjx",
+      "method": "bfwu",
+      "va": "0x181B88710"
+    },
+    "Core.Services.Fight.FightEntitiesService.FightEntitiesService": {
+      "type": "Core.Services.Fight.FightEntitiesService.FightEntitiesService",
+      "method": "bfya",
+      "va": "0x181B859E0"
+    },
+    "fkf": {
+      "type": "fkf",
+      "method": "bgba",
+      "va": "0x181BA66B0"
+    },
+    "Core.Services.Fight.Fight.FightPreview.FightPreviewMovedEntitiesService": {
+      "type": "Core.Services.Fight.Fight.FightPreview.FightPreviewMovedEntitiesService",
+      "method": "bges",
+      "va": "0x181BA1310"
+    },
+    "flc": {
+      "type": "flc",
+      "method": "bgfk",
+      "va": "0x181BC1290"
+    },
+    "Core.Services.Fight.Fight.FightPreview.FightPreviewSummonedEntitiesService": {
+      "type": "Core.Services.Fight.Fight.FightPreview.FightPreviewSummonedEntitiesService",
+      "method": "bghk",
+      "va": "0x181BBB760"
+    },
+    "flr": {
+      "type": "flr",
+      "method": "bgjr",
+      "va": "0x181C22F60"
+    },
+    "flw": {
+      "type": "flw",
+      "method": "bgkb",
+      "va": "0x181C25570"
+    },
+    "fmc": {
+      "type": "fmc",
+      "method": "bglt",
+      "va": "0x181BD5C10"
+    },
+    "fml": {
+      "type": "fml",
+      "method": "bgpm",
+      "va": "0x181C28A50"
+    },
+    "fmo": {
+      "type": "fmo",
+      "method": "bgqk",
+      "va": "0x181C2EB30"
+    },
+    "fnk": {
+      "type": "fnk",
+      "method": "bhaq",
+      "va": "0x181C48A90"
+    },
+    "fob": {
+      "type": "fob",
+      "method": "bheh",
+      "va": "0x181C69E10"
+    },
+    "fpd": {
+      "type": "fpd",
+      "method": "bhmm",
+      "va": "0x181C75E80"
+    },
+    "fpf": {
+      "type": "fpf",
+      "method": "bhmr",
+      "va": "0x181C768D0"
+    },
+    "fpm": {
+      "type": "fpm",
+      "method": "bhng",
+      "va": "0x181C78E90"
+    },
+    "fpn": {
+      "type": "fpn",
+      "method": "bhpp",
+      "va": "0x181C836E0"
+    },
+    "fpt": {
+      "type": "fpt",
+      "method": "bhqd",
+      "va": "0x181C85890"
+    },
+    "fqb": {
+      "type": "fqb",
+      "method": "bhqq",
+      "va": "0x181C89210"
+    },
+    "fqh": {
+      "type": "fqh",
+      "method": "bhtc",
+      "va": "0x181C978E0"
+    },
+    "fqu": {
+      "type": "fqu",
+      "method": "bhud",
+      "va": "0x181C9C120"
+    },
+    "fqw": {
+      "type": "fqw",
+      "method": "bhxd",
+      "va": "0x181CB56E0"
+    },
+    "frh": {
+      "type": "frh",
+      "method": "bhzh",
+      "va": "0x181CBC330"
+    },
+    "fro": {
+      "type": "fro",
+      "method": "biay",
+      "va": "0x181CC5020"
+    },
+    "frq": {
+      "type": "frq",
+      "method": "bibs",
+      "va": "0x181CC7BD0"
+    },
+    "frs": {
+      "type": "frs",
+      "method": "biby",
+      "va": "0x181CC8910"
+    },
+    "frx": {
+      "type": "frx",
+      "method": "bice",
+      "va": "0x181CCAE30"
+    },
+    "fsd": {
+      "type": "fsd",
+      "method": "bidd",
+      "va": "0x181CCF2C0"
+    },
+    "fsf": {
+      "type": "fsf",
+      "method": "biee",
+      "va": "0x181CD4C50"
+    },
+    "fsm": {
+      "type": "fsm",
+      "method": "bieo",
+      "va": "0x181CD7D80"
+    },
+    "fsn": {
+      "type": "fsn",
+      "method": "bifl",
+      "va": "0x1816523F0"
+    },
+    "fss": {
+      "type": "fss",
+      "method": "bifx",
+      "va": "0x181CDFA20"
+    },
+    "fsw": {
+      "type": "fsw",
+      "method": "bigf",
+      "va": "0x181CE3DC0"
+    },
+    "ftc": {
+      "type": "ftc",
+      "method": "bihe",
+      "va": "0x181CEAE20"
+    },
+    "ftn": {
+      "type": "ftn",
+      "method": "biil",
+      "va": "0x181CF3390"
+    },
+    "fts": {
+      "type": "fts",
+      "method": "biju",
+      "va": "0x181CF9430"
+    },
+    "ftv": {
+      "type": "ftv",
+      "method": "bimf",
+      "va": "0x181D0ADE0"
+    },
+    "fud": {
+      "type": "fud",
+      "method": "bimt",
+      "va": "0x181D0FD70"
+    },
+    "fvl": {
+      "type": "fvl",
+      "method": "biph",
+      "va": "0x181D16890"
+    },
+    "fvu": {
+      "type": "fvu",
+      "method": "bite",
+      "va": "0x181D38FE0"
+    },
+    "fwy": {
+      "type": "fwy",
+      "method": "bive",
+      "va": "0x181D3E940"
+    },
+    "fxa": {
+      "type": "fxa",
+      "method": "bixr",
+      "va": "0x181D72760"
+    },
+    "fxw": {
+      "type": "fxw",
+      "method": "biyt",
+      "va": "0x181D77840"
+    },
+    "fxy": {
+      "type": "fxy",
+      "method": "bjad",
+      "va": "0x181D81290"
+    },
+    "fyb": {
+      "type": "fyb",
+      "method": "bjar",
+      "va": "0x181D83B20"
+    },
+    "fyd": {
+      "type": "fyd",
+      "method": "bjbr",
+      "va": "0x181D87E40"
+    },
+    "fye": {
+      "type": "fye",
+      "method": "bjby",
+      "va": "0x181D8D370"
+    },
+    "fyf": {
+      "type": "fyf",
+      "method": "bjcc",
+      "va": "0x181D8E340"
+    },
+    "fyh": {
+      "type": "fyh",
+      "method": "bjcg",
+      "va": "0x180649C80"
+    },
+    "fyk": {
+      "type": "fyk",
+      "method": "bjcm",
+      "va": "0x181D91220"
+    },
+    "gau": {
+      "type": "gau",
+      "method": "bjrc",
+      "va": "0x181DC6260"
+    },
+    "gsn": {
+      "type": "gsn",
+      "method": "blli",
+      "va": "0x181EDE110"
+    },
+    "gte": {
+      "type": "gte",
+      "method": "blog",
+      "va": "0x181EFB6C0"
+    },
+    "gum": {
+      "type": "gum",
+      "method": "blwa",
+      "va": "0x181F20440"
+    },
+    "gvm": {
+      "type": "gvm",
+      "method": "bmbc",
+      "va": "0x181F3FD20"
+    },
+    "hbc": {
+      "type": "hbc",
+      "method": "bnim",
+      "va": "0x181FF1320"
+    }
+  },
+  "audioInit": {
+    "decompiled": "AudioManager.Initialize (dump.cs L33428)",
+    "description": "Static method: AudioManager.Initialize(settings, library)",
+    "statesMachine": "AudioManager.<InitializationRoutine>d__25",
+    "steps": [
+      "Load AudioManagerSettings.asset from Addressables",
+      "Load AudioManagerLibrary.asset from Addressables",
+      "AudioManager.Initialize(settings, library)",
+      "  → FMOD.Studio.System.create() (FMOD_Studio_System_Create)",
+      "  → studioSystem.initialize(maxChannels, studioFlags, coreFlags, extraData)",
+      "  → Load Master.bank from Content/Audio/Banks/Desktop/",
+      "  → Load Master.strings.bank",
+      "  → Load per-event banks on demand"
+    ],
+    "bankPath": "Content/Audio/Banks/Desktop/",
+    "masterBank": "Master.bank",
+    "stringsBank": "Master.strings.bank"
+  },
+  "screens": {
+    "ConnectionBackground": {
+      "authUi": 8,
+      "handler": "fyr",
+      "decompiled": "fpm opens via gax<fbz_AuthUis>.bjrn"
+    },
+    "Login": {
+      "authUi": 0,
+      "handler": "fys",
+      "decompiled": "fpm opens via gax<fbz_AuthUis>.bjrn"
+    }
+  },
+  "assetPaths": {}
+}

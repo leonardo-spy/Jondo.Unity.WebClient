@@ -1,0 +1,32 @@
+﻿#btn_link:hover {
+    --bgTexture_btn_linkImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+}
+
+#btn_link {
+    --bgTexture_btn_linkImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+}
+
+#bgTexture_btn_link {
+    background-image: var( --bgTexture_btn_linkImgVar);
+}
+
+#btn_close_popup:hover {
+    --bgTexturebtn_close_popupImgVar: url("/Assets/UI/USSTextures/btn_close_over.png");
+}
+
+#btn_close_popup {
+    --bgTexturebtn_close_popupImgVar: url("/Assets/UI/Themes/darkStone/common/btn_close_normal.png");
+}
+
+#btn_close_popup:active {
+    --bgTexturebtn_close_popupImgVar: url("/Assets/UI/USSTextures/btn_close_pressed.png");
+}
+
+#btn_close_popup:disabled {
+    --bgTexturebtn_close_popupImgVar: url("/Assets/UI/USSTextures/btn_close_disabled.png");
+}
+
+#bgTexturebtn_close_popup {
+    background-image: var( --bgTexturebtn_close_popupImgVar);
+}
+

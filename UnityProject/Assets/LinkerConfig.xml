@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <!-- Removed Core preserve="all" — causes __Il2CppComObject VTable conflict.
+       Specific types preserved in link.xml instead. -->
+  <assembly fullname="AleCore" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="Ankama.Dofus.Protocol.Game" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="ShapesRuntime" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="UniTask" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="UniTask.Addressables" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+  <assembly fullname="Ankama.SpinConnection" preserve="all" ignoreIfMissing="true">
+    <type fullname="*" preserve="all"/>
+  </assembly>
+</linker>

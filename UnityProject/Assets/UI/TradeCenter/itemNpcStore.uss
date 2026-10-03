@@ -1,0 +1,24 @@
+﻿.itemNpcStore .nameLabel {
+    text-overflow: ellipsis;
+    -unity-text-overflow-position: end;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.itemNpcStore .inputField {
+    background-image: url("/Assets/UI/Themes/darkStone/common/bg_small_border_dark.png");
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+}
+
+.itemNpcStore .unity-base-field #unity-text-input {
+    -unity-text-align: middle-right;
+    padding-right: 20px;
+    color: rgb(199, 199, 197);
+    font-size: 18px;
+    -unity-font-definition: url("/Assets/Resources/DefaultFont.asset");
+    --unity-cursor-color: rgb(200, 200, 200);
+}
+

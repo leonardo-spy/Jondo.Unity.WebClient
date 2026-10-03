@@ -1,0 +1,22 @@
+﻿.unity-toggle > .unity-toggle__label {
+    flex-grow: 0;
+    min-width: auto;
+}
+
+.unity-toggle > .unity-toggle__input {
+    flex-grow: 0;
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+    flex-shrink: 0;
+    min-height: 22px;
+    -unity-background-scale-mode: scale-to-fit;
+    min-width: 26px;
+}
+
+.unity-toggle > .unity-toggle__input:checked {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+.unity-toggle > .unity-toggle__input > .unity-toggle__checkmark {
+    display: none;
+}
+

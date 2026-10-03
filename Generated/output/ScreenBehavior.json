@@ -1,0 +1,3408 @@
+{
+  "screens": {
+    "ConnectionBackground": {
+      "handler": "fyr",
+      "authUi": 8,
+      "uxml": "Assets/UI/Auth/connectionBackground.uxml",
+      "binding": "ConnectionBackgroundBinding",
+      "elements": [
+        {
+          "name": "connectionBackground",
+          "type": "VisualElement"
+        },
+        {
+          "name": "img",
+          "type": "VisualElement"
+        },
+        {
+          "name": "iconLoading",
+          "type": "VisualElement"
+        }
+      ],
+      "i18n": {},
+      "i18nDetails": {},
+      "onEnable": {
+        "callChain": [],
+        "binds": []
+      },
+      "events": [],
+      "enables": [],
+      "uiutils": [],
+      "visibles": [],
+      "i18nAvailable": [],
+      "decompiled": {
+        "methods": 0,
+        "ops": 0
+      }
+    },
+    "Login": {
+      "handler": "fys",
+      "authUi": 0,
+      "uxml": "Assets/UI/Auth/login.uxml",
+      "binding": "LoginBinding",
+      "elements": [
+        {
+          "name": "login",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_gradient",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tx_dofusLogo",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_error",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_message",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_message",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_login",
+          "type": "VisualElement"
+        },
+        {
+          "name": "VisualElement",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_play",
+          "type": "PlayButton"
+        },
+        {
+          "name": "ctr_portSelection",
+          "type": "VisualElement"
+        },
+        {
+          "name": "dd_host",
+          "type": "Dropdown"
+        }
+      ],
+      "i18n": {
+        "btn_play": "ui.common.play"
+      },
+      "i18nDetails": {
+        "btn_play": {
+          "key": "ui.common.play",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        }
+      },
+      "onEnable": {
+        "callChain": [
+          "bjds"
+        ],
+        "binds": [
+          "ctr_login",
+          "lbl_message",
+          "btn_play",
+          "dd_host",
+          "ctr_gradient",
+          "ctr_gradient"
+        ]
+      },
+      "events": [
+        {
+          "field": "btn_play",
+          "type": "callback",
+          "source": "ctor"
+        }
+      ],
+      "enables": [
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "bjdo"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "bjdo"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "gdj"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "gdj"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "bjdp"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "bjdp"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "bjdk"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "bjdk"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "jei"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "jei"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnEnable"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "OnEnable"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "lgs"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "lgs"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "bjdt"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "bjdt"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "mft"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "mft"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "oqh"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "oqh"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "nso"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "nso"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "fig"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "fig"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "irx"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "irx"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "lef"
+        },
+        {
+          "field": "dd_host",
+          "value": "false",
+          "source": "lef"
+        }
+      ],
+      "uiutils": [],
+      "visibles": [],
+      "i18nAvailable": [
+        "ui.common.options",
+        "ui.common.optionsMenu",
+        "ui.common.play",
+        "ui.common.playAgain",
+        "ui.common.player",
+        "ui.common.player.fullWeight",
+        "ui.common.player.highWeight",
+        "ui.common.player.slot",
+        "ui.common.player.weight",
+        "ui.common.playerNotFound",
+        "ui.connection.confirmChangeServer",
+        "ui.connection.confirmDirectCharacter",
+        "ui.connection.confirmDirectServer",
+        "ui.connection.updaterConnectionFailed",
+        "ui.connection.updaterRequired"
+      ],
+      "decompiled": {
+        "methods": 38,
+        "ops": 224
+      },
+      "states": {
+        "idle": {
+          "ctr_login": "Flex",
+          "ctr_error": "None",
+          "ctr_message": "None",
+          "iconLoading": "None",
+          "btn_play.enabled": true
+        },
+        "connecting": {
+          "ctr_login": "None",
+          "iconLoading": "Flex",
+          "btn_play.enabled": false
+        },
+        "error": {
+          "ctr_error": "Flex",
+          "ctr_message": "Flex"
+        }
+      }
+    },
+    "ServerSelection": {
+      "handler": "ServerSelection",
+      "authUi": 1,
+      "uxml": "Assets/UI/Auth/ServerSelection/ServerSelection.uxml",
+      "binding": "ServerSelectionBinding",
+      "elements": [
+        {
+          "name": "ctr_serverSelection",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_header",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_tabSection",
+          "type": "VisualElement"
+        },
+        {
+          "name": "m_tabs",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "tab_pioneer",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_pioneer_mono",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_classic",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_classic_mono",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_epic",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_tournament",
+          "type": "DofusTab"
+        },
+        {
+          "name": "tab_temporis",
+          "type": "DofusTab"
+        },
+        {
+          "name": "lbl_title",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_search",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_line",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "inp_search",
+          "type": "TextInput"
+        },
+        {
+          "name": "btn_search",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "btn_friends",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "lbl_errorSearch",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_searchResult",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_searchFooter",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_searchResultsCount",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_force",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_freeAccount",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_accountName",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "btn_freeAccount",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_forceAccount",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_forceInput",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "inp_force",
+          "type": "TextInput"
+        },
+        {
+          "name": "btn_force",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "lbl_errorForce",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_mode",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tgGroup_mode",
+          "type": "DofusToggleButtonGroupCustom"
+        },
+        {
+          "name": "tg_carousel",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_list",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "VisualElement",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_warning",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_warning",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_warning",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_listMode",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_content",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_columns",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_filter",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_characterScroll",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_left",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "ctr_filterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_right",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "ctr_carouselMode",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_moveLeft",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_moveRight",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_play",
+          "type": "PlayButton"
+        },
+        {
+          "name": "cb_onlyCharacter",
+          "type": "CheckboxCustom"
+        },
+        {
+          "name": "lbl_noServer",
+          "type": "DofusLabel"
+        }
+      ],
+      "i18n": {
+        "btn_play": "ui.common.play",
+        "lbl_noServer": "ui.sersel.noServer",
+        "inp_search": "ui.sersel.findFriend",
+        "lbl_title": "ui.sersel.title",
+        "btn_freeAccount": "ui.forceAccount.freeAccount",
+        "lbl_errorForce": "ui.forceAccount.wrongId",
+        "lbl_warning": "ui.serverSelection.characterWarning",
+        "lbl_accountName": "ui.forceAccount.accountFullName",
+        "lbl_errorSearch": "ui.sersel.searchError.no_result"
+      },
+      "i18nDetails": {
+        "btn_play": {
+          "key": "ui.common.play",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "lbl_noServer": {
+          "key": "ui.sersel.noServer",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "inp_search": {
+          "key": "ui.sersel.findFriend",
+          "action": "set_placeholder",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "lbl_title": {
+          "key": "ui.sersel.title",
+          "action": "set_text",
+          "toUpper": true,
+          "source": "Localize"
+        },
+        "btn_freeAccount": {
+          "key": "ui.forceAccount.freeAccount",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "lbl_errorForce": {
+          "key": "ui.forceAccount.wrongId",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "lbl_warning": {
+          "key": "ui.serverSelection.characterWarning",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "lbl_accountName": {
+          "key": "ui.forceAccount.accountFullName",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "OnForceAccountStatus"
+        },
+        "lbl_errorSearch": {
+          "key": "ui.sersel.searchError.no_result",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "OnAcquaintanceServersError"
+        }
+      },
+      "onEnable": {
+        "callChain": [
+          "Localize"
+        ],
+        "binds": [
+          "inp_search",
+          "tgGroup_mode",
+          "ctr_force",
+          "ctr_header",
+          "ctr_listMode"
+        ]
+      },
+      "events": [
+        {
+          "field": "head_character",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "head_name",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "head_community",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "head_friends",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_search",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_freeAccount",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_play",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_friends",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "cb_onlyCharacter",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "ctr_resultFriend",
+          "type": "callback",
+          "source": "BindSearchResult"
+        }
+      ],
+      "enables": [
+        {
+          "field": "btn_search",
+          "value": "true",
+          "source": "set_m_friendSearchButtonEnableState"
+        },
+        {
+          "field": "btn_search",
+          "value": "false",
+          "source": "set_m_friendSearchButtonEnableState"
+        },
+        {
+          "field": "btn_friends",
+          "value": "false",
+          "source": "OnServerFriendList"
+        },
+        {
+          "field": "btn_search",
+          "value": "false",
+          "source": "OnValidUI"
+        },
+        {
+          "field": "inp_search",
+          "value": "false",
+          "source": "OnValidUI"
+        },
+        {
+          "field": "btn_search",
+          "value": "false",
+          "source": "StartSearch"
+        },
+        {
+          "field": "inp_search",
+          "value": "false",
+          "source": "StartSearch"
+        },
+        {
+          "field": "inp_search",
+          "value": "false",
+          "source": "OnAcquaintanceServerList"
+        },
+        {
+          "field": "inp_search",
+          "value": "false",
+          "source": "EndSearch"
+        },
+        {
+          "field": "btn_search",
+          "value": "false",
+          "source": "EndSearch"
+        },
+        {
+          "field": "btn_search",
+          "value": "false",
+          "source": "EndSearch"
+        },
+        {
+          "field": "btn_moveLeft",
+          "value": "false",
+          "source": "OnServerConnectionStarted"
+        },
+        {
+          "field": "btn_moveRight",
+          "value": "false",
+          "source": "OnServerConnectionStarted"
+        },
+        {
+          "field": "lv_server",
+          "value": "false",
+          "source": "OnServerConnectionStarted"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnServerConnectionStarted"
+        },
+        {
+          "field": "lv_server",
+          "value": "false",
+          "source": "OnSelectedServerRefused"
+        }
+      ],
+      "uiutils": [
+        {
+          "function": "par",
+          "field": "icon_left",
+          "source": "ctor"
+        },
+        {
+          "function": "par",
+          "field": "icon_right",
+          "source": "ctor"
+        },
+        {
+          "function": "pax",
+          "field": "btn_force",
+          "source": "ctor"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "ctor"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "OnSelectionChanged"
+        },
+        {
+          "function": "pdk",
+          "field": "lv_server",
+          "source": "DisplayServer"
+        },
+        {
+          "function": "pde",
+          "field": "ctr_listMode",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pde",
+          "field": "?",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pdk",
+          "field": "gd_searchResults",
+          "source": "OnUpdateSearchTimerCompleted"
+        },
+        {
+          "function": "pdk",
+          "field": "gd_searchResults",
+          "source": "OnUpdateSearchTimerCompleted"
+        }
+      ],
+      "visibles": [
+        {
+          "field": "icon_left",
+          "value": "false",
+          "source": "DisplayFilter"
+        },
+        {
+          "field": "?",
+          "value": "false",
+          "source": "DisplayFilter"
+        },
+        {
+          "field": "sv_filter",
+          "value": "false",
+          "source": "Scroll"
+        },
+        {
+          "field": "sv_filter",
+          "value": "false",
+          "source": "Scroll"
+        },
+        {
+          "field": "icon_left",
+          "value": "false",
+          "source": "OnAcquaintanceServersError"
+        },
+        {
+          "field": "?",
+          "value": "false",
+          "source": "OnAcquaintanceServersError"
+        },
+        {
+          "field": "icon_left",
+          "value": "false",
+          "source": "OnTimeOut"
+        },
+        {
+          "field": "?",
+          "value": "false",
+          "source": "OnTimeOut"
+        },
+        {
+          "field": "icon_left",
+          "value": "false",
+          "source": "CancelSearch"
+        },
+        {
+          "field": "?",
+          "value": "false",
+          "source": "CancelSearch"
+        }
+      ],
+      "i18nAvailable": [
+        "ui.common.play",
+        "ui.common.playAgain",
+        "ui.common.player",
+        "ui.common.player.fullWeight",
+        "ui.common.player.highWeight",
+        "ui.common.player.slot",
+        "ui.common.player.weight",
+        "ui.common.playerNotFound",
+        "ui.common.select",
+        "ui.common.selectAll",
+        "ui.common.selectCategory",
+        "ui.common.selectCategoryOrEffect",
+        "ui.common.selections",
+        "ui.server.cantChoose.communityNonSubscriberRestricted",
+        "ui.server.cantChoose.monoaccountNotMono",
+        "ui.server.cantChoose.monoaccountNotVerified",
+        "ui.server.cantChoose.serverDown",
+        "ui.server.cantChoose.serverForbidden",
+        "ui.server.classicalMonoServers",
+        "ui.server.classicalServers",
+        "ui.server.epicServers",
+        "ui.server.monoaccount",
+        "ui.server.pioneer",
+        "ui.server.pioneerMonoServers",
+        "ui.server.pioneerServers",
+        "ui.server.state.full",
+        "ui.server.state.maintenance",
+        "ui.server.state.offline",
+        "ui.server.state.online",
+        "ui.server.temporaryServer",
+        "ui.server.type.0",
+        "ui.server.type.1",
+        "ui.server.type.3",
+        "ui.server.type.4"
+      ],
+      "decompiled": {
+        "methods": 49,
+        "ops": 389
+      },
+      "tabs": [
+        {
+          "element": "tab_pioneer",
+          "dsp": 3,
+          "gameType": 5,
+          "i18n": "ui.server.pioneerServers"
+        },
+        {
+          "element": "tab_pioneer_mono",
+          "dsp": 2,
+          "gameType": 5,
+          "i18n": "ui.server.pioneerMonoServers",
+          "mono": true
+        },
+        {
+          "element": "tab_classic",
+          "dsp": 1,
+          "gameType": 1,
+          "i18n": "ui.server.classicalServers"
+        },
+        {
+          "element": "tab_classic_mono",
+          "dsp": 0,
+          "gameType": 1,
+          "i18n": "ui.server.classicalMonoServers",
+          "mono": true
+        },
+        {
+          "element": "tab_epic",
+          "dsp": 5,
+          "gameType": 2,
+          "i18n": "ui.server.epicServers"
+        },
+        {
+          "element": "tab_tournament",
+          "dsp": 4,
+          "gameType": 3,
+          "i18n": "ui.server.temporaryServer"
+        },
+        {
+          "element": "tab_temporis",
+          "dsp": 6,
+          "gameType": 4,
+          "i18n": "ui.server.temporaryServer"
+        }
+      ],
+      "cardTemplate": "ServerCard",
+      "initDisplay": {
+        "ctr_carouselMode": "Flex",
+        "ctr_listMode": "None",
+        "ctr_serverSelection": "Flex",
+        "ctr_header": "Flex",
+        "ctr_tabSection": "Flex",
+        "ctr_force": "None"
+      }
+    },
+    "CharacterSelection": {
+      "handler": "CharacterSelection",
+      "authUi": 2,
+      "uxml": "Assets/UI/Auth/CharacterSelection/characterSelection.uxml",
+      "binding": "CharacterSelectionBinding",
+      "elements": [
+        {
+          "name": "ctr_characterSelection",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "leftPart",
+          "type": "VisualElement"
+        },
+        {
+          "name": "window_shadow",
+          "type": "VisualElement"
+        },
+        {
+          "name": "win_characterSelection",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_header",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_headerText",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_headerTextTop",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_title",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_serverName",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_button",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "dd_servers",
+          "type": "DropdownButton"
+        },
+        {
+          "name": "ctr_content",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_columnHeader",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_characterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_footer",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_createCharacter",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "txt_xp",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_display",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "socle",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_center",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_entity",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_infoMain",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_class",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_info",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_nameMain",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "tx_omega",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_infoMain",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "txt_xpMain",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_death",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_skull",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_death",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "btn_play",
+          "type": "PlayButton"
+        },
+        {
+          "name": "tx_bonusEpic",
+          "type": "VisualElement"
+        }
+      ],
+      "i18n": {
+        "lbl_title": "ui.charsel.onServer",
+        "btn_createCharacter": "ui.charsel.createCharacter",
+        "btn_play": "ui.common.play"
+      },
+      "i18nDetails": {
+        "lbl_title": {
+          "key": "ui.charsel.onServer",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "btn_createCharacter": {
+          "key": "ui.charsel.createCharacter",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "Localize"
+        },
+        "btn_play": {
+          "key": "ui.common.play",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "UpdateSelectedCharacter"
+        }
+      },
+      "onEnable": {
+        "callChain": [
+          "Localize"
+        ],
+        "binds": [
+          "btn_play",
+          "lbl_serverName",
+          "leftPart",
+          "leftPart",
+          "leftPart",
+          "leftPart",
+          "ctr_infoMain",
+          "ctr_infoMain",
+          "socle",
+          "socle",
+          "socle",
+          "socle",
+          "ctr_entity",
+          "ctr_entity",
+          "btn_play",
+          "btn_play"
+        ]
+      },
+      "events": [
+        {
+          "field": "head_class",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "head_level",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "head_name",
+          "type": "clicked",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_play",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_createCharacter",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "ed_main",
+          "type": "?",
+          "source": "ctor"
+        },
+        {
+          "field": "ed_main",
+          "type": "?",
+          "source": "ctor"
+        },
+        {
+          "field": "ed_main",
+          "type": "?",
+          "source": "ctor"
+        },
+        {
+          "field": "ed_main",
+          "type": "?",
+          "source": "ctor"
+        },
+        {
+          "field": "dd_servers",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_delete",
+          "type": "callback",
+          "source": "BindItem"
+        },
+        {
+          "field": "ctr_characterLine",
+          "type": "callback",
+          "source": "BindItem"
+        },
+        {
+          "field": "btn_createCharacter",
+          "type": "click",
+          "source": "UpdateCreateButton"
+        }
+      ],
+      "enables": [
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnPressEnter"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "ValidateCharacterChoice"
+        },
+        {
+          "field": "dd_servers",
+          "value": "false",
+          "source": "InitServersList"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "Init"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "Init"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "CreateDataProvider"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "CreateDataProvider"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnEnable"
+        },
+        {
+          "field": "btn_createCharacter",
+          "value": "false",
+          "source": "UpdateCreateButton"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "OnCharacterImpossibleSelection"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "OnCharacterDeletionError"
+        }
+      ],
+      "uiutils": [
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "OnSelectionChanged"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "BindItem"
+        },
+        {
+          "function": "pdq",
+          "field": "?",
+          "source": "BindItem"
+        },
+        {
+          "function": "pbv",
+          "field": "?",
+          "source": "BindItem"
+        },
+        {
+          "function": "par",
+          "field": "ctr_characterLine",
+          "source": "BindItem"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "BindItem"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "Init"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "Init"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "CreateDataProvider"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "CreateDataProvider"
+        },
+        {
+          "function": "pdf",
+          "field": "leftPart",
+          "source": "OnEnable"
+        },
+        {
+          "function": "pdh",
+          "field": "socle",
+          "source": "OnEnable"
+        },
+        {
+          "function": "pdf",
+          "field": "leftPart",
+          "source": "EnableEffect"
+        },
+        {
+          "function": "pdh",
+          "field": "socle",
+          "source": "EnableEffect"
+        },
+        {
+          "function": "pdq",
+          "field": "?",
+          "source": "UpdateCreateButton"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "UpdateSelectedCharacter"
+        }
+      ],
+      "visibles": [],
+      "i18nAvailable": [
+        "ui.charsel.askCharacterDelete",
+        "ui.charsel.changeServer",
+        "ui.charsel.characterDelete",
+        "ui.charsel.createCharacter",
+        "ui.charsel.myCharacters",
+        "ui.charsel.onServer",
+        "ui.common.confirm",
+        "ui.common.confirmChangeCharacter",
+        "ui.common.confirmQuitGame",
+        "ui.common.confirmationDropItem",
+        "ui.common.confirmationUseItem",
+        "ui.common.play",
+        "ui.common.playAgain",
+        "ui.common.player",
+        "ui.common.player.fullWeight",
+        "ui.common.player.highWeight",
+        "ui.common.player.slot",
+        "ui.common.player.weight",
+        "ui.common.playerNotFound"
+      ],
+      "decompiled": {
+        "methods": 35,
+        "ops": 301
+      }
+    },
+    "CharacterCreation": {
+      "handler": "CharacterCreation",
+      "authUi": 3,
+      "uxml": "Assets/UI/Auth/CharacterCreation/characterCreation.uxml",
+      "binding": "CharacterCreationBinding",
+      "elements": [
+        {
+          "name": "tx_illuBg",
+          "type": "VisualElement"
+        },
+        {
+          "name": "stars",
+          "type": "VisualElement"
+        },
+        {
+          "name": "flashStar1",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "rotateStar1",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "flashStar2",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "flashStar3",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "rotateStar2",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "fogs",
+          "type": "VisualElement"
+        },
+        {
+          "name": "fogGray",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "fogPurple",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "ctr_creationUi",
+          "type": "VisualElement"
+        },
+        {
+          "name": "rightPart",
+          "type": "VisualElement"
+        },
+        {
+          "name": "bloc_customization",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_corps",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_corps",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_visage",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_heads",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_colors",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ColorPalette",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_1",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_2",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_3",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_4",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_5",
+          "type": "VisualElement"
+        },
+        {
+          "name": "color_6",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_randomizeColorSet",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "btn_resetColorSet",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "lbl_colorSkin",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_colorHair",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_colorCloth1",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_colorCloth2",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_colorCloth3",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_colorCloth4",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "bloc_attitude",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_attitudes",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_attitudes",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_emote1",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_emote2",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_emote3",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_emote4",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_emote5",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_emote6",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_stuffs",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_stuffs",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_stuff1",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tx_stuff1",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_stuff2",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tx_stuff2",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_stuff3",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tx_stuff3",
+          "type": "VisualElement"
+        },
+        {
+          "name": "middlePart",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_previous",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "tx_breedSymbol",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_next",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_breed",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "icon_complexity_1",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_complexity_2",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_complexity_3",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_complexity_4",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_complexity_5",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "glowPlatformBase",
+          "type": "VisualElement"
+        },
+        {
+          "name": "glowPlatformHightlight",
+          "type": "DofusTweenerVisualElement"
+        },
+        {
+          "name": "plateform",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btn_rotateLeft",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "btn_rotateRight",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "tg_showEquipment",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "lbl_playerNameTitle",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "icon_nameInfo",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "input_name",
+          "type": "TextInput"
+        },
+        {
+          "name": "btn_generateName",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "btn_play",
+          "type": "PlayButton"
+        },
+        {
+          "name": "leftPart",
+          "type": "VisualElement"
+        },
+        {
+          "name": "bloc_breeds",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "parentChangeServer",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_back",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_headerTextTop",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_serverName",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_title",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "dd_servers",
+          "type": "DropdownButton"
+        },
+        {
+          "name": "breedsParent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_breedTitle",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "tg_role_damageDealer",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_healer",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_summoner",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_prositioner",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_protector",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_debuffer",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_buffer",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "tg_role_tank",
+          "type": "DofusToggleButtonCustom"
+        },
+        {
+          "name": "ctr_breeds",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_helpToChoose",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "bloc_archetype",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_archetype",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "icon_role_1",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_role_2",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "icon_role_3",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_breedInfo",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "btn_showSpells",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "btn_mechanics",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "window_spells",
+          "type": "WindowFigma"
+        },
+        {
+          "name": "ctr_spells",
+          "type": "VisualElement"
+        },
+        {
+          "name": "window_mechanics",
+          "type": "WindowFigma"
+        },
+        {
+          "name": "ctr_mechanics",
+          "type": "VisualElement"
+        },
+        {
+          "name": "btnLeave",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_leaveModif",
+          "type": "DofusButtonCustom"
+        }
+      ],
+      "i18n": {
+        "lbl_title": "ui.charsel.onServer",
+        "lbl_breedTitle": "ui.charcrea.breed",
+        "lbl_playerNameTitle": "ui.common.characterName",
+        "lbl_corps": "ui.charcrea.body",
+        "lbl_visage": "ui.charcrea.face",
+        "lbl_colorSkin": "ui.charcrea.skin",
+        "lbl_colorHair": "ui.charcrea.hair",
+        "lbl_attitudes": "ui.common.emotes",
+        "window_spells": "ui.common.breedSpell",
+        "btn_showSpells": "ui.charcrea.spells",
+        "btn_mechanics": "ui.grimoire.mecanics",
+        "btn_play": "ui.common.play",
+        "lbl_stuffs": "ui.common.equipments",
+        "btn_leaveModif": "ui.common.cancel"
+      },
+      "i18nDetails": {
+        "lbl_title": {
+          "key": "ui.charsel.onServer",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_breedTitle": {
+          "key": "ui.charcrea.breed",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_playerNameTitle": {
+          "key": "ui.common.characterName",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_corps": {
+          "key": "ui.charcrea.body",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_visage": {
+          "key": "ui.charcrea.face",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_colorSkin": {
+          "key": "ui.charcrea.skin",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_colorHair": {
+          "key": "ui.charcrea.hair",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_attitudes": {
+          "key": "ui.common.emotes",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "window_spells": {
+          "key": "ui.common.breedSpell",
+          "action": "set_title",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "btn_showSpells": {
+          "key": "ui.charcrea.spells",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "btn_mechanics": {
+          "key": "ui.grimoire.mecanics",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "btn_play": {
+          "key": "ui.common.play",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "lbl_stuffs": {
+          "key": "ui.common.equipments",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "LocalizeTexts"
+        },
+        "btn_leaveModif": {
+          "key": "ui.common.cancel",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ModifyCharacterSetUp"
+        }
+      },
+      "onEnable": {
+        "callChain": [
+          "Reset",
+          "EnableTweeners",
+          "InitServersList",
+          "StopTweensSpawn"
+        ],
+        "binds": [
+          "lbl_serverName",
+          "leftPart",
+          "leftPart",
+          "rightPart",
+          "rightPart",
+          "middlePart",
+          "leftPart",
+          "rightPart",
+          "middlePart",
+          "leftPart",
+          "rightPart"
+        ]
+      },
+      "events": [
+        {
+          "field": "btnLeave",
+          "type": "callback",
+          "source": "ctor"
+        },
+        {
+          "field": "dd_servers",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_randomBreed",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_randomizeColorSet",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_previous",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_next",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_rotateLeft",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_rotateRight",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_generateName",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_mechanics",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_showSpells",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "window_spells",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_resetColorSet",
+          "type": "callback",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff1",
+          "type": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff1",
+          "type": "click",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff2",
+          "type": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff2",
+          "type": "click",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff3",
+          "type": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_stuff3",
+          "type": "click",
+          "source": "InitializeBinding"
+        }
+      ],
+      "enables": [
+        {
+          "field": "btn_mechanics",
+          "value": "false",
+          "source": "InitializeBinding"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "UpdateUIBySelectedMode"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "UpdateUIBySelectedMode"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "UpdateUIBySelectedMode"
+        },
+        {
+          "field": "breedsParent",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "breedsParent",
+          "value": "true",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "true",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "true",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "breedsParent",
+          "value": "true",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "ModifyCharacterSetUp"
+        },
+        {
+          "field": "breedsParent",
+          "value": "true",
+          "source": "Reset"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "Reset"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "Reset"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "Reset"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "Reset"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "Reset"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "SetUpGenderUI"
+        },
+        {
+          "field": "breedsParent",
+          "value": "true",
+          "source": "SetUpBreedUI"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "SetUpBreedUI"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "SetUpBreedUI"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "SetUpNameUI"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "SetUpNameUI"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "false",
+          "source": "SetUpColorsUI"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "true",
+          "source": "SetUpCosmeticUI"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "SetUpCosmeticUI"
+        },
+        {
+          "field": "breedsParent",
+          "value": "true",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "SetUpAll"
+        },
+        {
+          "field": "breedsParent",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "btn_next",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "btn_previous",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "switch_gender",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "ctr_heads",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "bloc_customization",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "ctr_colors",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "input_name",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "DisableAll"
+        },
+        {
+          "field": "dd_servers",
+          "value": "false",
+          "source": "InitServersList"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnCharacterCreationResult"
+        },
+        {
+          "field": "btn_generateName",
+          "value": "false",
+          "source": "OnCharacterCreationResult"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "OnCharacterCreationResult"
+        },
+        {
+          "field": "btn_play",
+          "value": "true",
+          "source": "OnCharacterImpossibleSelection"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "OnInput"
+        },
+        {
+          "field": "btn_play",
+          "value": "false",
+          "source": "CreateCharacter"
+        }
+      ],
+      "uiutils": [
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "InitializeBinding"
+        },
+        {
+          "function": "pdf",
+          "field": "leftPart",
+          "source": "OnEnable"
+        },
+        {
+          "function": "pdg",
+          "field": "rightPart",
+          "source": "OnEnable"
+        },
+        {
+          "function": "pdf",
+          "field": "leftPart",
+          "source": "SpawnEffect"
+        },
+        {
+          "function": "pdg",
+          "field": "rightPart",
+          "source": "SpawnEffect"
+        },
+        {
+          "function": "pde",
+          "field": "leftPart",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pde",
+          "field": "rightPart",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pde",
+          "field": "middlePart",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pdf",
+          "field": "leftPart",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pdg",
+          "field": "rightPart",
+          "source": "HideEffect"
+        },
+        {
+          "function": "pao",
+          "field": "?",
+          "source": "UpdateUIBySelectedMode"
+        },
+        {
+          "function": "pal",
+          "field": "?",
+          "source": "BindBreedsSlots"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "BindBreedsSlots"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "DisplayRoleIcons"
+        },
+        {
+          "function": "par",
+          "field": "?",
+          "source": "DisplayLimitedSpells"
+        },
+        {
+          "function": "pac",
+          "field": "tg_showEquipment",
+          "source": "<InitializeTooltips>g__ShowEquipmentManipulator|86_1"
+        }
+      ],
+      "visibles": [],
+      "i18nAvailable": [
+        "ui.charcrea.body",
+        "ui.charcrea.breed",
+        "ui.charcrea.cannotshowstuff",
+        "ui.charcrea.characterClassModificationWarning",
+        "ui.charcrea.characterModificationWarning",
+        "ui.charcrea.characterSexModificationWarning",
+        "ui.charcrea.chooseRandomBreed",
+        "ui.charcrea.choseName",
+        "ui.charcrea.clothes",
+        "ui.charcrea.colors",
+        "ui.charcrea.create",
+        "ui.charcrea.face",
+        "ui.charcrea.faces",
+        "ui.charcrea.generateColors",
+        "ui.charcrea.generateName",
+        "ui.charcrea.hair",
+        "ui.charcrea.hideStuff",
+        "ui.charcrea.idle",
+        "ui.charcrea.invalidNameReason1",
+        "ui.charcrea.invalidNameReason10",
+        "ui.charcrea.invalidNameReason11",
+        "ui.charcrea.invalidNameReason2",
+        "ui.charcrea.invalidNameReason3",
+        "ui.charcrea.invalidNameReason4",
+        "ui.charcrea.invalidNameReason5",
+        "ui.charcrea.invalidNameReason6",
+        "ui.charcrea.invalidNameReason7",
+        "ui.charcrea.invalidNameReason8",
+        "ui.charcrea.invalidNameReason9",
+        "ui.charcrea.mandatoryBreed",
+        "ui.charcrea.mandatoryGender",
+        "ui.charcrea.mandatoryName",
+        "ui.charcrea.nameRules.tooltip",
+        "ui.charcrea.resetColors",
+        "ui.charcrea.showStuff",
+        "ui.charcrea.skin",
+        "ui.charcrea.spells",
+        "ui.charcrea.titleRename",
+        "ui.charcrea.undo",
+        "ui.common.cancel",
+        "ui.common.cancelApplication",
+        "ui.common.cancelSearch",
+        "ui.common.cancelTheSale",
+        "ui.common.play",
+        "ui.common.playAgain",
+        "ui.common.player",
+        "ui.common.player.fullWeight",
+        "ui.common.player.highWeight",
+        "ui.common.player.slot",
+        "ui.common.player.weight",
+        "ui.common.playerNotFound"
+      ],
+      "decompiled": {
+        "methods": 95,
+        "ops": 705
+      }
+    },
+    "PreGameMainMenu": {
+      "handler": "fyv",
+      "authUi": 4,
+      "uxml": "Assets/UI/Auth/preGameMainMenu.uxml",
+      "binding": "PreGameMainMenuBinding",
+      "elements": [
+        {
+          "name": "preGameMainMenu",
+          "type": "WindowFigma"
+        },
+        {
+          "name": "ctr_content",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_mainPart",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_options",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_options",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "btn_quit",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_subPart",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_sub_txt",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "tx_shield",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_sub_text",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "btn_sub",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_footer",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_close",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "lbl_buildNumber",
+          "type": "DofusLabel"
+        }
+      ],
+      "i18n": {
+        "preGameMainMenu": "ui.common.mainMenu",
+        "btn_options": "ui.common.options",
+        "btn_quit": "ui.common.quitGame",
+        "btn_close": "ui.common.cancel",
+        "btn_sub": "ui.header.subscribe"
+      },
+      "i18nDetails": {
+        "preGameMainMenu": {
+          "key": "ui.common.mainMenu",
+          "action": "set_title",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "btn_options": {
+          "key": "ui.common.options",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "btn_quit": {
+          "key": "ui.common.quitGame",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "btn_close": {
+          "key": "ui.common.cancel",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "btn_sub": {
+          "key": "ui.header.subscribe",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        }
+      },
+      "onEnable": {
+        "callChain": [],
+        "binds": []
+      },
+      "events": [
+        {
+          "field": "tx_shield",
+          "type": "callback",
+          "source": "ctor"
+        }
+      ],
+      "enables": [],
+      "uiutils": [
+        {
+          "function": "pds",
+          "field": "lbl_sub_text",
+          "source": "ctor"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "faq"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "faq"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "cbq"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "cbq"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "inx"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "inx"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "bjeb"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "bjeb"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "kmy"
+        },
+        {
+          "function": "pcq",
+          "field": "?",
+          "source": "kmy"
+        }
+      ],
+      "visibles": [],
+      "i18nAvailable": [
+        "ui.common.cancel",
+        "ui.common.cancelApplication",
+        "ui.common.cancelSearch",
+        "ui.common.cancelTheSale",
+        "ui.common.confirm",
+        "ui.common.confirmChangeCharacter",
+        "ui.common.confirmQuitGame",
+        "ui.common.confirmationDropItem",
+        "ui.common.confirmationUseItem",
+        "ui.common.mainMenu",
+        "ui.common.no",
+        "ui.common.noCode",
+        "ui.common.noHide",
+        "ui.common.noInfo",
+        "ui.common.noInformationNow",
+        "ui.common.noName",
+        "ui.common.noSearchResult",
+        "ui.common.non_subscriber",
+        "ui.common.none",
+        "ui.common.not",
+        "ui.common.notAvailableInKoli",
+        "ui.common.notPublished",
+        "ui.common.nothingToDisplay",
+        "ui.common.notification",
+        "ui.common.options",
+        "ui.common.optionsMenu",
+        "ui.common.quit",
+        "ui.common.quitGame",
+        "ui.common.yes",
+        "ui.header.dofusPseudo",
+        "ui.header.server",
+        "ui.header.subscribe",
+        "ui.header.subscriptionEndDate",
+        "ui.information.noSafeAccount",
+        "ui.information.safeAccount",
+        "ui.information.xpFamilyBonus",
+        "ui.information.xpHardcoreEpicBonus",
+        "ui.link.addCharacterSlot",
+        "ui.link.bakBankUrl",
+        "ui.link.bakOgrineRateUrl",
+        "ui.link.betaForumReport",
+        "ui.link.bugList",
+        "ui.link.characterPage",
+        "ui.link.listOfRulesOfConduct",
+        "ui.link.secure",
+        "ui.link.subscribe",
+        "ui.link.support",
+        "ui.link.temporisLeaderboard"
+      ],
+      "decompiled": {
+        "methods": 10,
+        "ops": 61
+      }
+    },
+    "CharacterHeader": {
+      "handler": "CharacterHeader",
+      "authUi": 7,
+      "uxml": "Assets/UI/Auth/CharacterHeader/characterHeader.uxml",
+      "binding": "CharacterHeaderBinding",
+      "elements": [
+        {
+          "name": "CharacterHeader_Container",
+          "type": "VisualElement"
+        },
+        {
+          "name": "left",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_player",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_character",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_name",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_tag",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_subscription",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_subscription",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_subscription",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "btn_subscribe",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_admin",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_admin",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_admin",
+          "type": "DofusLabel"
+        }
+      ],
+      "i18n": {
+        "btn_subscribe": "ui.header.subscribe",
+        "lbl_admin": "ui.common.admin",
+        "lbl_subscription": "ui.common.infiniteSubscription"
+      },
+      "i18nDetails": {
+        "btn_subscribe": {
+          "key": "ui.header.subscribe",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "lbl_admin": {
+          "key": "ui.common.admin",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "ctor"
+        },
+        "lbl_subscription": {
+          "key": "ui.common.infiniteSubscription",
+          "action": "set_text",
+          "toUpper": false,
+          "source": "PlayerDisplay"
+        }
+      },
+      "onEnable": {
+        "callChain": [],
+        "binds": [
+          "lbl_name",
+          "lbl_tag",
+          "ctr_admin",
+          "lbl_subscription",
+          "lbl_subscription",
+          "lbl_subscription"
+        ]
+      },
+      "events": [
+        {
+          "field": "btn_subscribe",
+          "type": "?",
+          "source": "ctor"
+        },
+        {
+          "field": "btn_subscribe",
+          "type": "click",
+          "source": "ctor"
+        }
+      ],
+      "enables": [],
+      "uiutils": [],
+      "visibles": [
+        {
+          "field": "CharacterHeader_Container",
+          "value": "false",
+          "source": "Toggle"
+        },
+        {
+          "field": "btn_subscribe",
+          "value": "false",
+          "source": "Toggle"
+        },
+        {
+          "field": "CharacterHeader_Container",
+          "value": "false",
+          "source": "ShowHeader"
+        },
+        {
+          "field": "btn_subscribe",
+          "value": "false",
+          "source": "ShowHeader"
+        }
+      ],
+      "i18nAvailable": [
+        "ui.header.dofusPseudo",
+        "ui.header.server",
+        "ui.header.subscribe",
+        "ui.header.subscriptionEndDate"
+      ],
+      "decompiled": {
+        "methods": 9,
+        "ops": 74
+      }
+    }
+  },
+  "templates": {
+    "ServerCard": {
+      "binding": "ServerCardBinding",
+      "elements": [
+        {
+          "name": "ctr_serverCard",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_cardClickableArea",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_cardBackground",
+          "type": "VisualElement"
+        },
+        {
+          "name": "serverCard",
+          "type": "VisualElement"
+        },
+        {
+          "name": "img",
+          "type": "VisualElement"
+        },
+        {
+          "name": "shadow",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_serverTitle",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_background",
+          "type": "VisualElement"
+        },
+        {
+          "name": "title_bg",
+          "type": "VisualElement"
+        },
+        {
+          "name": "title_bg2",
+          "type": "VisualElement"
+        },
+        {
+          "name": "gemStone",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_name",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_infoServer",
+          "type": "VisualElement"
+        },
+        {
+          "name": "icon_status",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_characters",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_friends",
+          "type": "VisualElement"
+        },
+        {
+          "name": "icon_friends",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_friends",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_character",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_left",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_characterScroll",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_characterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_right",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_newCharacter",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_newCharacter",
+          "type": "DofusLabel"
+        }
+      ]
+    },
+    "ServerLine": {
+      "binding": "ServerLineBinding",
+      "elements": [
+        {
+          "name": "ctr_line",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_serverLine",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_background",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_mainLine",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_name",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "icon_status",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_name",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_character",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_left",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_characterScroll",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_characterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_right",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_type",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_friendsContainer",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_friends",
+          "type": "VisualElement"
+        },
+        {
+          "name": "icon_friends",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_friends",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_comu",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "asset_commu",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_shadows",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_border",
+          "type": "VisualElement"
+        }
+      ]
+    },
+    "ServerFilter": {
+      "binding": "ServerFilterBinding",
+      "elements": [
+        {
+          "name": "VisualElement",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_filter",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_serverFilter",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_backgroundGradient",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_background",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_filterContent",
+          "type": "VisualElement"
+        },
+        {
+          "name": "ctr_content",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_infos",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_type",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_characterScroll",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_left",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_characterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_right",
+          "type": "DofusButtonCustom"
+        },
+        {
+          "name": "ctr_character",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_character",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "icon_character",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "ctr_description",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "lbl_description",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_tag",
+          "type": "DofusVisualElement"
+        }
+      ]
+    },
+    "CharacterLine": {
+      "binding": "CharacterLineBinding",
+      "elements": [
+        {
+          "name": "ctr_characterLine",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_background",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_backgroundColor",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_content",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_characterContent",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "ctr_edBackground",
+          "type": "VisualElement"
+        },
+        {
+          "name": "tx_warning",
+          "type": "DofusIcon"
+        },
+        {
+          "name": "lbl_name",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "lbl_class",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_level",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "omega",
+          "type": "VisualElement"
+        },
+        {
+          "name": "bg_omega",
+          "type": "VisualElement"
+        },
+        {
+          "name": "lbl_level",
+          "type": "DofusLabel"
+        },
+        {
+          "name": "ctr_xpBonus",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "tx_xpBonus",
+          "type": "DofusVisualElement"
+        },
+        {
+          "name": "btn_delete",
+          "type": "DofusButtonCustom"
+        }
+      ]
+    }
+  },
+  "flow": {
+    "Login.onPlay": {
+      "action": "haapi_auth",
+      "nextState": "connecting"
+    },
+    "Login.onAuthAccepted": {
+      "action": "show",
+      "screen": "ServerSelection"
+    },
+    "Login.onError": {
+      "action": "state",
+      "state": "idle"
+    },
+    "ServerSelection.onValidate": {
+      "action": "server_select",
+      "nextState": "reconnect"
+    },
+    "ServerSelection.onKvi": {
+      "action": "show",
+      "screen": "CharacterSelection"
+    },
+    "CharacterSelection.onValidate": {
+      "action": "character_select"
+    },
+    "CharacterSelection.onKva": {
+      "action": "show",
+      "screen": "World"
+    },
+    "CharacterCreation.onCreate": {
+      "action": "create_character"
+    },
+    "CharacterCreation.onBack": {
+      "action": "show",
+      "screen": "ServerSelection"
+    }
+  },
+  "i18nKeys": {
+    "ui.charcrea.body": "decompiled",
+    "ui.charcrea.breed": "decompiled",
+    "ui.charcrea.cannotshowstuff": "zel",
+    "ui.charcrea.characterClassModificationWarning": "zde",
+    "ui.charcrea.characterModificationWarning": "zdg",
+    "ui.charcrea.characterSexModificationWarning": "zdf",
+    "ui.charcrea.chooseRandomBreed": "zdc",
+    "ui.charcrea.choseName": "zee",
+    "ui.charcrea.clothes": "lmh",
+    "ui.charcrea.colors": "lmx",
+    "ui.charcrea.create": "jfp",
+    "ui.charcrea.face": "decompiled",
+    "ui.charcrea.faces": "lmy",
+    "ui.charcrea.generateColors": "lmm",
+    "ui.charcrea.generateName": "zdb",
+    "ui.charcrea.hair": "decompiled",
+    "ui.charcrea.hideStuff": "zej",
+    "ui.charcrea.idle": "lna",
+    "ui.charcrea.invalidNameReason1": "zdm",
+    "ui.charcrea.invalidNameReason10": "zdv",
+    "ui.charcrea.invalidNameReason11": "zdw",
+    "ui.charcrea.invalidNameReason2": "zdn",
+    "ui.charcrea.invalidNameReason3": "zdo",
+    "ui.charcrea.invalidNameReason4": "zdp",
+    "ui.charcrea.invalidNameReason5": "zdq",
+    "ui.charcrea.invalidNameReason6": "zdr",
+    "ui.charcrea.invalidNameReason7": "zds",
+    "ui.charcrea.invalidNameReason8": "zdt",
+    "ui.charcrea.invalidNameReason9": "zdu",
+    "ui.charcrea.mandatoryBreed": "zeh",
+    "ui.charcrea.mandatoryGender": "zeg",
+    "ui.charcrea.mandatoryName": "zef",
+    "ui.charcrea.nameRules.tooltip": "zei",
+    "ui.charcrea.resetColors": "zdd",
+    "ui.charcrea.showStuff": "zek",
+    "ui.charcrea.skin": "decompiled",
+    "ui.charcrea.spells": "decompiled",
+    "ui.charcrea.titleRename": "zed",
+    "ui.charcrea.undo": "blbz",
+    "ui.charsel.askCharacterDelete": "zew",
+    "ui.charsel.changeServer": "mqe",
+    "ui.charsel.characterDelete": "nnr",
+    "ui.charsel.createCharacter": "decompiled",
+    "ui.charsel.myCharacters": "nnn",
+    "ui.charsel.onServer": "decompiled",
+    "ui.common.admin": "decompiled",
+    "ui.common.breedSpell": "decompiled",
+    "ui.common.cancel": "decompiled",
+    "ui.common.cancelApplication": "mif",
+    "ui.common.cancelSearch": "mlq",
+    "ui.common.cancelTheSale": "lyj",
+    "ui.common.characterName": "decompiled",
+    "ui.common.confirm": "icc",
+    "ui.common.confirmChangeCharacter": "mqq",
+    "ui.common.confirmQuitGame": "mqs",
+    "ui.common.confirmationDropItem": "bfem",
+    "ui.common.confirmationUseItem": "bfel",
+    "ui.common.emotes": "decompiled",
+    "ui.common.equipments": "decompiled",
+    "ui.common.infiniteSubscription": "decompiled",
+    "ui.common.mainMenu": "decompiled",
+    "ui.common.no": "lzt",
+    "ui.common.noCode": "zkn",
+    "ui.common.noHide": "krm",
+    "ui.common.noInfo": "ldz",
+    "ui.common.noInformationNow": "u",
+    "ui.common.noName": "we",
+    "ui.common.noSearchResult": "ics",
+    "ui.common.non_subscriber": "cjs",
+    "ui.common.none": "lyl",
+    "ui.common.not": "xkr",
+    "ui.common.notAvailableInKoli": "jxr",
+    "ui.common.notPublished": "miv",
+    "ui.common.nothingToDisplay": "mgx",
+    "ui.common.notification": "non",
+    "ui.common.options": "decompiled",
+    "ui.common.optionsMenu": "zjw",
+    "ui.common.play": "decompiled",
+    "ui.common.playAgain": "d",
+    "ui.common.player": "bkfb",
+    "ui.common.player.fullWeight": "llf",
+    "ui.common.player.highWeight": "llg",
+    "ui.common.player.slot": "lil",
+    "ui.common.player.weight": "lim",
+    "ui.common.playerNotFound": "bagk",
+    "ui.common.quit": "inv",
+    "ui.common.quitGame": "decompiled",
+    "ui.common.select": "nxb",
+    "ui.common.selectAll": "lyz",
+    "ui.common.selectCategory": "iua",
+    "ui.common.selectCategoryOrEffect": "iuf",
+    "ui.common.selections": "mmh",
+    "ui.common.yes": "ior",
+    "ui.connection.confirmChangeServer": "mqr",
+    "ui.connection.confirmDirectCharacter": "mqt",
+    "ui.connection.confirmDirectServer": "mqu",
+    "ui.connection.updaterConnectionFailed": "bmjn",
+    "ui.connection.updaterRequired": "bmjo",
+    "ui.forceAccount.accountFullName": "decompiled",
+    "ui.forceAccount.freeAccount": "decompiled",
+    "ui.forceAccount.wrongId": "decompiled",
+    "ui.grimoire.mecanics": "decompiled",
+    "ui.header.dofusPseudo": "jei",
+    "ui.header.server": "cbn",
+    "ui.header.subscribe": "decompiled",
+    "ui.header.subscriptionEndDate": "mqm",
+    "ui.information.noSafeAccount": "mqj",
+    "ui.information.safeAccount": "mqk",
+    "ui.information.xpFamilyBonus": "nnz",
+    "ui.information.xpHardcoreEpicBonus": "noe",
+    "ui.link.addCharacterSlot": "nol",
+    "ui.link.bakBankUrl": "iko",
+    "ui.link.bakOgrineRateUrl": "ikn",
+    "ui.link.betaForumReport": "zka",
+    "ui.link.bugList": "zjz",
+    "ui.link.characterPage": "ydl",
+    "ui.link.listOfRulesOfConduct": "jkx",
+    "ui.link.secure": "mqb",
+    "ui.link.subscribe": "nnb",
+    "ui.link.support": "bkxq",
+    "ui.link.temporisLeaderboard": "mej",
+    "ui.sersel.findFriend": "decompiled",
+    "ui.sersel.noServer": "decompiled",
+    "ui.sersel.searchError.no_result": "decompiled",
+    "ui.sersel.title": "decompiled",
+    "ui.server.cantChoose.communityNonSubscriberRestricted": "zfh",
+    "ui.server.cantChoose.monoaccountNotMono": "zfj",
+    "ui.server.cantChoose.monoaccountNotVerified": "zfi",
+    "ui.server.cantChoose.serverDown": "bkvo",
+    "ui.server.cantChoose.serverForbidden": "bkvn",
+    "ui.server.classicalMonoServers": "leb",
+    "ui.server.classicalServers": "lea",
+    "ui.server.epicServers": "lee",
+    "ui.server.monoaccount": "zep",
+    "ui.server.pioneer": "zeq",
+    "ui.server.pioneerMonoServers": "led",
+    "ui.server.pioneerServers": "lec",
+    "ui.server.state.full": "kbc",
+    "ui.server.state.maintenance": "zey",
+    "ui.server.state.offline": "jmy",
+    "ui.server.state.online": "jmv",
+    "ui.server.temporaryServer": "lel",
+    "ui.server.type.0": "nni",
+    "ui.server.type.1": "nnj",
+    "ui.server.type.3": "nnk",
+    "ui.server.type.4": "nnl",
+    "ui.serverSelection.characterWarning": "decompiled"
+  }
+}

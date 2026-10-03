@@ -1,0 +1,72 @@
+﻿.ColorPickerStyleSheet .right-panel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ColorPickerStyleSheet.content-panel {
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    position: relative;
+}
+
+.ColorPickerStyleSheet .img-color-map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.ColorPickerStyleSheet #ctr_imgColorMap {
+    position: relative;
+    height: 100%;
+    width: 90%;
+    border-width: 1px;
+    border-color: var( --highlight_secondary50);
+}
+
+.ColorPickerStyleSheet #slider {
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border-width: 1px;
+    border-color: var( --highlight_secondary50);
+}
+
+.ColorPickerStyleSheet .slider-hut-sat {
+    height: 100%;
+    width: 100%;
+}
+
+.ColorPickerStyleSheet .unity-base-slider__tracker {
+    opacity: 0;
+    width: 100%;
+}
+
+.ColorPickerStyleSheet .unity-base-slider--vertical .unity-base-slider__dragger {
+    border-width: 0;
+    border-radius: 0;
+    margin: 0;
+}
+
+.ColorPickerStyleSheet .unity-base-slider--vertical .unity-base-slider__dragger-border {
+    display: flex;
+    border-width: 0;
+    border-radius: 0;
+    margin: -8px 0 0;
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("/Assets/UI/USSTextures/cursorSlider.png");
+}
+
+.ColorPickerStyleSheet #unity-dragger {
+    display: none;
+    height: 16px;
+    border-radius: 0;
+    margin-right: -10px;
+    background-color: rgba(0, 0, 0, 0);
+}
+

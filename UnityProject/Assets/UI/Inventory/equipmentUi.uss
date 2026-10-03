@@ -1,0 +1,506 @@
+﻿#btn_idols:hover {
+    --tx_idolsBgImgVar: url("/Assets/UI/USSTextures/btn_yellow2_over.png");
+}
+
+#btn_idols {
+    --tx_idolsBgImgVar: url("/Assets/UI/USSTextures/btn_yellow2_normal.png");
+}
+
+#btn_idols:active {
+    --tx_idolsBgImgVar: url("/Assets/UI/USSTextures/btn_yellow2_pressed.png");
+}
+
+#btn_idols:disabled {
+    --tx_idolsBgImgVar: url("/Assets/UI/USSTextures/btn_yellow2_disabled.png");
+}
+
+#tx_idolsBg {
+    background-image: var( --tx_idolsBgImgVar);
+}
+
+#btn_rightArrow:hover {
+    --bgTexturebtn_rightArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_over.png");
+}
+
+#btn_rightArrow {
+    --bgTexturebtn_rightArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_normal.png");
+}
+
+#btn_rightArrow:active {
+    --bgTexturebtn_rightArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_pressed.png");
+}
+
+#btn_rightArrow:disabled {
+    --bgTexturebtn_rightArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_disabled.png");
+}
+
+#bgTexturebtn_rightArrow {
+    background-image: var( --bgTexturebtn_rightArrowImgVar);
+}
+
+#btn_leftArrow:hover {
+    --bgTexturebtn_leftArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_over.png");
+}
+
+#btn_leftArrow {
+    --bgTexturebtn_leftArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_normal.png");
+}
+
+#btn_leftArrow:active {
+    --bgTexturebtn_leftArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_pressed.png");
+}
+
+#btn_leftArrow:disabled {
+    --bgTexturebtn_leftArrowImgVar: url("/Assets/UI/USSTextures/btn_arrow_turn_outside_disabled.png");
+}
+
+#bgTexturebtn_leftArrow {
+    background-image: var( --bgTexturebtn_leftArrowImgVar);
+}
+
+#btnAll:hover {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_over.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_normal.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll:active {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_pressed.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll:disabled {
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll:focus {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_selected.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll:focus:hover {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_selectedOver.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#btnAll:focus:active {
+    --bgTexturebtnAllImgVar: url("/Assets/UI/USSTextures/tab_small_selectedPressed.png");
+    --iconTexturebtnAllImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_all.png");
+}
+
+#bgTexturebtnAll {
+    background-image: var( --bgTexturebtnAllImgVar);
+}
+
+#iconTexturebtnAll {
+    background-image: var( --iconTexturebtnAllImgVar);
+}
+
+#btnEquipable:hover {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_over.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_normal.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable:active {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_pressed.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable:disabled {
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable:focus {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_selected.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable:focus:hover {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_selectedOver.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#btnEquipable:focus:active {
+    --bgTexturebtnEquipableImgVar: url("/Assets/UI/USSTextures/tab_small_selectedPressed.png");
+    --iconTexturebtnEquipableImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_equipment.png");
+}
+
+#bgTexturebtnEquipable {
+    background-image: var( --bgTexturebtnEquipableImgVar);
+}
+
+#iconTexturebtnEquipable {
+    background-image: var( --iconTexturebtnEquipableImgVar);
+}
+
+#btnConsumables:hover {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_over.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_normal.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables:active {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_pressed.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables:disabled {
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables:focus {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_selected.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables:focus:hover {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_selectedOver.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#btnConsumables:focus:active {
+    --bgTexturebtnConsumablesImgVar: url("/Assets/UI/USSTextures/tab_small_selectedPressed.png");
+    --iconTexturebtnConsumablesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_consumable.png");
+}
+
+#bgTexturebtnConsumables {
+    background-image: var( --bgTexturebtnConsumablesImgVar);
+}
+
+#iconTexturebtnConsumables {
+    background-image: var( --iconTexturebtnConsumablesImgVar);
+}
+
+#btnRessources:hover {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_over.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_normal.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources:active {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_pressed.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources:disabled {
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources:focus {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_selected.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources:focus:hover {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_selectedOver.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#btnRessources:focus:active {
+    --bgTexturebtnRessourcesImgVar: url("/Assets/UI/USSTextures/tab_small_selectedPressed.png");
+    --iconTexturebtnRessourcesImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_resources.png");
+}
+
+#bgTexturebtnRessources {
+    background-image: var( --bgTexturebtnRessourcesImgVar);
+}
+
+#iconTexturebtnRessources {
+    background-image: var( --iconTexturebtnRessourcesImgVar);
+}
+
+#btnQuest:hover {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_over.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_normal.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest:active {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_pressed.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest:disabled {
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest:focus {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_selected.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest:focus:hover {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_selectedOver.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#btnQuest:focus:active {
+    --bgTexturebtnQuestImgVar: url("/Assets/UI/USSTextures/tab_small_selectedPressed.png");
+    --iconTexturebtnQuestImgVar: url("/Assets/UI/Themes/darkStone/texture/inventory_quest.png");
+}
+
+#bgTexturebtnQuest {
+    background-image: var( --bgTexturebtnQuestImgVar);
+}
+
+#iconTexturebtnQuest {
+    background-image: var( --iconTexturebtnQuestImgVar);
+}
+
+#btn_moveAllToLeft:hover {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft:active {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft:disabled {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft:focus {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft:focus:hover {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToLeft:focus:active {
+    --bgTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_moveAllToLeftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#bgTexturebtn_moveAllToLeft {
+    background-image: var( --bgTexturebtn_moveAllToLeftImgVar);
+}
+
+#iconTexturebtn_moveAllToLeft {
+    background-image: var( --iconTexturebtn_moveAllToLeftImgVar);
+}
+
+#btn_moveAllToRight:hover {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight:active {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight:disabled {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight:focus {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight:focus:hover {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#btn_moveAllToRight:focus:active {
+    --bgTexturebtn_moveAllToRightImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_moveAllToRightImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_arrowClaim.png");
+}
+
+#bgTexturebtn_moveAllToRight {
+    background-image: var( --bgTexturebtn_moveAllToRightImgVar);
+}
+
+#iconTexturebtn_moveAllToRight {
+    background-image: var( --iconTexturebtn_moveAllToRightImgVar);
+}
+
+#btn_options:hover {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options:active {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options:disabled {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options:focus {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options:focus:hover {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#btn_options:focus:active {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_gear.png");
+}
+
+#bgTexturebtn_options {
+    background-image: var( --bgTexturebtn_optionsImgVar);
+}
+
+#iconTexturebtn_options {
+    background-image: var( --iconTexturebtn_optionsImgVar);
+}
+
+#btn_checkCraft:hover {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft:active {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft:disabled {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft:focus {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft:focus:hover {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#btn_checkCraft:focus:active {
+    --bgTexturebtn_checkCraftImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_checkCraftImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_fork.png");
+}
+
+#bgTexturebtn_checkCraft {
+    background-image: var( --bgTexturebtn_checkCraftImgVar);
+}
+
+#iconTexturebtn_checkCraft {
+    background-image: var( --iconTexturebtn_checkCraftImgVar);
+}
+
+#btn_closeSearch:hover {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+}
+
+#btn_closeSearch {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+}
+
+#btn_closeSearch:active {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_pressed.png");
+}
+
+#bgTexturebtn_closeSearch {
+    background-image: var( --bgTexturebtn_closeSearchImgVar);
+}
+
+#btn_help:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_over.png");
+}
+
+#btn_help {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_question.png");
+}
+
+#btn_help:focus {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#btn_help:focus:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#bgTexturebtn_help {
+    background-image: var( --bgTexturebtn_helpImgVar);
+}
+
+#btn_close:hover {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_over.png");
+}
+
+#btn_close {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/Themes/darkStone/common/btn_close_normal.png");
+}
+
+#btn_close:active {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_pressed.png");
+}
+
+#btn_close:disabled {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_disabled.png");
+}
+
+#bgTexturebtn_close {
+    background-image: var( --bgTexturebtn_closeImgVar);
+}
+
+.themeColor {
+    -unity-background-image-tint-color: var( --background_highlight);
+}
+
+.ornamentThemeColor {
+    -unity-background-image-tint-color: var( --header_gradient);
+}
+

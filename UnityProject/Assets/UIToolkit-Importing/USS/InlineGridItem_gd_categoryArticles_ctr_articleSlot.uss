@@ -1,0 +1,45 @@
+﻿.buttonShop:hover .hoverTexture {
+    visibility: initial;
+}
+
+.buttonShop .hoverTexture {
+    background-image: url("/Assets/UI/InlineTextures/InlineGridItem_gd_step_ctr_big_1_btn_buy_over.png");
+    visibility: hidden;
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+}
+
+.articleSlot .iconBg {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/hud/bg_items_shop.png");
+}
+
+.articleSlot .slotBorder {
+    visibility: hidden;
+}
+
+.articleSlot #btn_getForFree {
+    display: none;
+}
+
+.freeArticle .iconBg {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/hud/bg_square_red.jpg");
+}
+
+.freeArticle .slotBorder {
+    visibility: visible;
+}
+
+.freeArticle #btn_getForFree {
+    display: flex;
+}
+
+#btn_category {
+    -unity-background-image-tint-color: rgb(173, 173, 173);
+}
+
+#btn_category:hover {
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+

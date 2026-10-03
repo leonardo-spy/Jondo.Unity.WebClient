@@ -1,0 +1,86 @@
+﻿.itemSlot #itemSlot_outlineRarity {
+    align-self: stretch;
+    position: absolute;
+}
+
+.itemSlot.silver #itemSlot_outlineRarity {
+    left: -10px;
+    right: -10px;
+    top: -12px;
+    bottom: -8px;
+}
+
+.itemSlot.gold #itemSlot_outlineRarity {
+    left: -17px;
+    right: -17px;
+    top: -19px;
+    bottom: -15px;
+}
+
+.itemSlot.inventory.medium.gold #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotInventory_goldM.png");
+}
+
+.itemSlot.inventory.large.gold #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotInventory_goldL.png");
+}
+
+.itemSlot.inventory.medium.silver #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotInventory_silverM.png");
+}
+
+.itemSlot.inventory.large.silver #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotInventory_silverL.png");
+}
+
+.itemSlot.spell.medium.gold #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotSpell_goldM.png");
+}
+
+.itemSlot.spell.large.gold #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotSpell_goldL.png");
+}
+
+.itemSlot.spell.medium.silver #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotSpell_silverM.png");
+}
+
+.itemSlot.spell.large.silver #itemSlot_outlineRarity {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/slotSpell_silverL.png");
+}
+
+.itemSlot.acceptDrop {
+    border-color: var( --qualitative_green80);
+}
+
+.itemSlot.acceptDrop:hover {
+    border-color: var( --qualitative_green100);
+}
+
+.itemSlot.refuseDrop {
+    border-color: var( --qualitative_red80);
+}
+
+.itemSlot.refuseDrop:hover {
+    border-color: var( --qualitative_red100);
+}
+
+.itemSlot.tileOnly {
+    border-color: rgba(0, 0, 0, 0);
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+}
+
+.itemSlot.tileOnly #itemSlot_outlineDark {
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+}
+
+.itemSlot.tileOnly #itemSlot_container {
+    display: none;
+}
+

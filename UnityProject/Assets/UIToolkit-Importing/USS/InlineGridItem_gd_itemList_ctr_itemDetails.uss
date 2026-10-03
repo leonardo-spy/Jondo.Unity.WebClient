@@ -1,0 +1,45 @@
+﻿#ctr_itemDetails #lbl_price {
+    --labelShadow: var( --dropShadows_light);
+    -unity-text-outline-color: var( --black_black50);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+}
+
+#ctr_itemDetails #icon_kamas {
+    --labelShadow: var( --dropShadows_light);
+    -unity-text-outline-color: var( --black_black50);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+}
+
+.noBuy#ctr_itemDetails #lbl_price {
+    color: var( --qualitative_lightRed100);
+}
+
+.noBuy#ctr_itemDetails #icon_kamas {
+    color: var( --qualitative_lightRed100);
+}
+
+.noBuy#ctr_itemDetails #lbl_quantity {
+    color: var( --white_white65);
+}
+
+.noBuy#ctr_itemDetails #lbl_name {
+    color: var( --white_white65);
+}
+
+.noBuy#ctr_itemDetails #tx_bg {
+    opacity: 0.5;
+}
+
+#ctr_itemDetails {
+    background-color: var( --buttons_buttonSecondary);
+    margin-bottom: 4px;
+    margin-top: 4px;
+    border-radius: 4px;
+}
+
+#ctr_itemDetails:hover {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+

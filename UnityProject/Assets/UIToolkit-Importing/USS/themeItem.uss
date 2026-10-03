@@ -1,0 +1,83 @@
+﻿#btn_delete:hover {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete:active {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete:disabled {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete:focus {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete:focus:hover {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#btn_delete:focus:active {
+    --bgTexturebtn_deleteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_deleteImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_trash.png");
+}
+
+#bgTexturebtn_delete {
+    background-image: var( --bgTexturebtn_deleteImgVar);
+}
+
+#iconTexturebtn_delete {
+    background-image: var( --iconTexturebtn_deleteImgVar);
+}
+
+#btn_update:hover {
+    --btn_texture_btn_updateImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_update {
+    --btn_texture_btn_updateImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_update:active {
+    --btn_texture_btn_updateImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_update:disabled {
+    --btn_texture_btn_updateImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_update {
+    background-image: var( --btn_texture_btn_updateImgVar);
+}
+
+#btn_install:hover {
+    --btn_texture_btn_installImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_install {
+    --btn_texture_btn_installImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_install:active {
+    --btn_texture_btn_installImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_install:disabled {
+    --btn_texture_btn_installImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_install {
+    background-image: var( --btn_texture_btn_installImgVar);
+}
+

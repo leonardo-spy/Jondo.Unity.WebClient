@@ -1,0 +1,36 @@
+﻿.announceType_dungeon {
+    --announceColor: var( --qualitative_exo100);
+}
+
+.announceType_quest {
+    --announceColor: var( --qualitative_green100);
+}
+
+.announceType_raid {
+    --announceColor: var( --spellElements_wisdom);
+}
+
+.announceType_infiniteDream {
+    --announceColor: var( --qualitative_pink100);
+}
+
+.announceType_wantedNotice {
+    --announceColor: var( --qualitative_sun100);
+}
+
+.announceType_archimonster {
+    --announceColor: var( --spellElements_earth);
+}
+
+.announceType_kolizeum {
+    --announceColor: var( --qualitative_kamaYellow100);
+}
+
+.announceBanner {
+    -unity-background-image-tint-color: linear-gradient( var(--announceColor),  ) var( --qualitative_exo100);
+}
+
+.announceLine {
+    -unity-background-image-tint-color: linear-gradient( var(--announceColor),  ) var( --qualitative_exo100);
+}
+

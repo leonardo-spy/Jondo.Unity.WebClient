@@ -1,0 +1,59 @@
+﻿#btn_breachTrackingMaximized:hover {
+    --tx_buttonImgVar: url("/Assets/UI/USSTextures/button_green_circle_hover.png");
+}
+
+#btn_breachTrackingMaximized {
+    --tx_buttonImgVar: url("/Assets/UI/InlineTextures/breachShop_reward_1_button_green_circle_large_normal.png");
+}
+
+#btn_breachTrackingMaximized:active {
+    --tx_buttonImgVar: url("/Assets/UI/USSTextures/button_green_circle_pressed.png");
+}
+
+#tx_button {
+    background-image: var( --tx_buttonImgVar);
+}
+
+#btn_options:hover {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options:active {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options:disabled {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options:focus {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options:focus:hover {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#btn_options:focus:active {
+    --bgTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_optionsImgVar: url("/Assets/UI/USSTextures/icon_option_floating_menu.png");
+}
+
+#bgTexturebtn_options {
+    background-image: var( --bgTexturebtn_optionsImgVar);
+}
+
+#iconTexturebtn_options {
+    background-image: var( --iconTexturebtn_optionsImgVar);
+}
+

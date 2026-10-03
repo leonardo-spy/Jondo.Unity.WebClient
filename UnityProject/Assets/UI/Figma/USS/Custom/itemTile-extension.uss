@@ -1,0 +1,56 @@
+﻿.itemTile #itemTile_outlineRarity {
+    align-self: stretch;
+    position: absolute;
+}
+
+.itemTile.silver #itemTile_outlineRarity {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.itemTile.gold #itemTile_outlineRarity {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.gold #itemTile_container {
+    border-width: 0;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.silver #itemTile_container {
+    border-width: 0;
+}
+
+.itemTile.inventory.medium.gold #itemTile_outlineRarity {
+    background-image: url("/Assets/UI/Themes/Figma/Tile/borderTileGoldMedium.png");
+}
+
+.itemTile.inventory.medium.silver #itemTile_outlineRarity {
+    background-image: url("/Assets/UI/Themes/Figma/Tile/borderTileSilverMedium.png");
+}
+
+.itemTile #itemTile_conditionalBG,
+.itemTile.medium #itemTile_conditionalBG {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 0;
+    border-width: 0;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.itemTile.medium.cosmetic.moderate #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_yellow100);
+}
+

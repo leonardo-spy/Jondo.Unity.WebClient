@@ -1,0 +1,261 @@
+﻿.unity-scroller {
+    --clear: rgba(0, 0, 0, 0);
+    --colorDragger: var( --highlight_secondary65);
+    --colorDraggerHover: var( --highlight_secondary80);
+    --colorDraggerActive: var( --highlight_secondary100);
+    --colorBackground: var( --white_white5);
+    --colorBackgroundHover: var( --white_white10);
+}
+
+.scrollbarPadding > * > .unity-scroller {
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.scrollbarPadding > * > * > .unity-scroller {
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.scrollbarPaddingSmall > * > .unity-scroller {
+    padding: 4px;
+}
+
+.scrollbarPaddingSmall > * > * > .unity-scroller {
+    padding: 4px;
+}
+
+.scrollbarPaddingXSmall > * > .unity-scroller {
+    padding: 1px;
+    flex-shrink: 0;
+}
+
+.scrollbarPaddingXSmall > * > * > .unity-scroller {
+    padding: 1px;
+    flex-shrink: 0;
+}
+
+.scrollbarOver > * > .unity-scroller {
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.scrollbarOver > * > * > .unity-scroller {
+    padding: 4px;
+    flex-shrink: 0;
+}
+
+.unity-scroller .darkScrollBar {
+    --colorBackground: var( --black_black25);
+    --colorBackgroundHover: var( --black_black35);
+}
+
+.unity-scroller__low-button,
+.unity-scroller__high-button {
+    display: none;
+}
+
+.unity-scroller__slider {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    border-color: var( --clear);
+}
+
+.unity-scroller .unity-base-slider--vertical .unity-base-slider__dragger,
+.unity-base-slider--horizontal .unity-base-slider__dragger {
+    top: 0;
+    left: 0;
+    justify-content: flex-start;
+    border-radius: 0;
+    border-width: 0;
+    min-height: 20px;
+}
+
+.scrollbarPadding > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 24px;
+}
+
+.scrollbarPadding > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 24px;
+}
+
+.scrollbarPaddingSmall > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 18px;
+}
+
+.scrollbarPaddingSmall > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 18px;
+}
+
+.scrollbarPaddingXSmall > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 10px;
+}
+
+.scrollbarPaddingXSmall > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 10px;
+}
+
+.scrollbarOver > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 0;
+}
+
+.scrollbarOver > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 0;
+}
+
+.unity-scroller--vertical {
+    right: auto;
+}
+
+.scrollbarPadding > * > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+
+.scrollbarPadding > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+
+.scrollbarPaddingSmall > * > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.scrollbarPaddingSmall > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.scrollbarPaddingXSmall > * > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 10px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.scrollbarPaddingXSmall > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 10px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+.scrollbarOver > * > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+
+.scrollbarOver > .unity-scroll-view__content-and-vertical-scroll-container > .unity-scroller--vertical {
+    width: 18px;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+}
+
+.unity-scroller--vertical {
+    width: 10px;
+}
+
+.unity-collection-view .unity-scroller--vertical {
+    margin-left: 6px;
+}
+
+.unity-scroller--horizontal {
+    margin-top: 10px;
+    height: 10px;
+}
+
+.unity-scroller .unity-base-slider--vertical .unity-base-slider__dragger {
+    background-color: var( --colorDragger);
+    width: 8px;
+    margin: 1px;
+    border-radius: 2;
+    --shadow: "inset 1px 1px rgba(255, 255, 255, 0.1) | inset -1px -1px rgba(0, 0, 0, 0.13)";
+}
+
+.unity-scroller .unity-base-slider--horizontal .unity-base-slider__dragger {
+    background-color: var( --colorDragger);
+    height: 8px;
+    margin: 1px;
+    border-radius: 2;
+    --shadow: "inset 1px 1px rgba(255, 255, 255, 0.1) | inset -1px -1px rgba(0, 0, 0, 0.13)";
+}
+
+.unity-scroller:hover .unity-base-slider--vertical:hover .unity-base-slider__dragger:hover {
+    background-color: var( --colorDraggerHover);
+}
+
+.unity-scroller:hover .unity-base-slider--horizontal .unity-base-slider__dragger {
+    background-color: var( --colorDraggerHover);
+}
+
+.unity-scroller .unity-base-slider--vertical:active .unity-base-slider__dragge:active {
+    background-color: var( --colorDraggerActive);
+}
+
+.unity-scroller:active .unity-base-slider--horizontal:active .unity-base-slider__dragger:active {
+    background-color: var( --colorDraggerActive);
+}
+
+.unity-scroller .unity-base-slider--vertical {
+    min-width: 10px;
+}
+
+.unity-scroller .unity-base-slider--horizontal {
+    min-height: 10px;
+}
+
+.unity-scroller .unity-base-slider--vertical .unity-base-slider__tracker,
+.unity-base-slider--horizontal .unity-base-slider__tracker {
+    background-color: var( --clear);
+    border-color: var( --clear);
+}
+
+.unity-scroller .unity-base-slider--vertical .unity-base-slider__tracker:hover,
+.unity-base-slider--horizontal .unity-base-slider__tracker:hover {
+    background-color: var( --clear);
+    border-color: var( --clear);
+}
+
+.unity-scroller--vertical > .unity-scroller__slider {
+    margin: 0;
+}
+
+.unity-scroller--horizontal > .unity-scroller__slider {
+    margin: 0;
+}
+
+.unity-scroller--vertical > .unity-base-slider--vertical {
+    width: 100%;
+    background-color: var( --colorBackground);
+}
+
+.unity-scroller--horizontal > .unity-base-slider--horizontal {
+    height: 100%;
+    background-color: var( --colorBackground);
+}
+
+.unity-scroller--vertical > .unity-base-slider--vertical:hover {
+    width: 100%;
+    background-color: var( --colorBackgroundHover);
+}
+
+.unity-scroller--horizontal > .unity-base-slider--horizontal:hover {
+    height: 100%;
+    background-color: var( --colorBackgroundHover);
+}
+

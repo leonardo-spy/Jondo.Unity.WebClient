@@ -1,0 +1,64 @@
+﻿#btn_assignAllgifts:hover {
+    --btn_texture_btn_assignAllgiftsImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_assignAllgifts {
+    --btn_texture_btn_assignAllgiftsImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_assignAllgifts:active {
+    --btn_texture_btn_assignAllgiftsImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_assignAllgifts:disabled {
+    --btn_texture_btn_assignAllgiftsImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_assignAllgifts {
+    background-image: var( --btn_texture_btn_assignAllgiftsImgVar);
+}
+
+#btn_not_now:hover {
+    --btn_texture_btn_not_nowImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_not_now {
+    --btn_texture_btn_not_nowImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_not_now:active {
+    --btn_texture_btn_not_nowImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_not_now:disabled {
+    --btn_texture_btn_not_nowImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_not_now {
+    background-image: var( --btn_texture_btn_not_nowImgVar);
+}
+
+#btn_help:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_over.png");
+}
+
+#btn_help {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_question.png");
+}
+
+#btn_help:focus {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#btn_help:focus:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#bgTexturebtn_help {
+    background-image: var( --bgTexturebtn_helpImgVar);
+}
+
+#gd_character_select .renderstudio-grid-view__item--selected {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+

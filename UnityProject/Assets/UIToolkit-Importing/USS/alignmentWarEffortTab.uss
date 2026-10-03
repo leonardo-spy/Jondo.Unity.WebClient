@@ -1,0 +1,40 @@
+﻿#btn_sendKamas:hover {
+    --btn_texture_btn_sendKamasImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_sendKamas {
+    --btn_texture_btn_sendKamasImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_sendKamas:active {
+    --btn_texture_btn_sendKamasImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_sendKamas:disabled {
+    --btn_texture_btn_sendKamasImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_sendKamas {
+    background-image: var( --btn_texture_btn_sendKamasImgVar);
+}
+
+#btn_help:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_over.png");
+}
+
+#btn_help {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_question.png");
+}
+
+#btn_help:focus {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#btn_help:focus:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#bgTexturebtn_help {
+    background-image: var( --bgTexturebtn_helpImgVar);
+}
+

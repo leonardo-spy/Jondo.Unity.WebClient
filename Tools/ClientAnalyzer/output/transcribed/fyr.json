@@ -1,0 +1,957 @@
+{
+  "type": "fyr",
+  "methodCount": 16,
+  "transcribed": 16,
+  "methods": [
+    {
+      "method": "OnEnable",
+      "signature": "protected override void OnEnable()",
+      "line": 386091,
+      "va": "0x1d92ee0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 281,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186787f7a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186787f7e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Inequality",
+            "line": 88
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (!bVar5) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (*(int *)&(UnityEngine_AddressableAssets_Addressables_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (pUStackX_8 != (UnityEngine_GameObject_c *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (!bVar5) goto LAB_181d930b4;"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if ((__this->fields).dwjx != (ezk_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 !="
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 212
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (peVar10 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pIVar3[uVar6].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<coc>__ + 0"
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {
+          "key": "Assets/Content/Prefabs/TitleScreen/Krosmoz/ParallaxBackground.prefab"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  UnityEngine_Object_o *x;\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *__this_00;\n\n  code *pcVar4;\n\n  bool bVar5;\n\n  ushort uVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  longlong lVar8;\n\n  System_String_o *key;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_GameObject__o *pUVar9;\n\n  UnityEngine_Camera_o *a;\n\n  ezp_o *peVar10;\n\n  System_Runtime_CompilerServices..."
+    },
+    {
+      "method": "jro",
+      "signature": "private void jro(cqa a)",
+      "line": 386094,
+      "va": "0x1d93e20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f7b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f7b == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f7b = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "ctt",
+      "signature": "private void ctt()",
+      "line": 386097,
+      "va": "0x1d937d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 177,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f7c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Inequality",
+            "line": 60
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (*(int *)&(UnityEngine_AddressableAssets_Addressables_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pUStackX_8 != (UnityEngine_GameObject_c *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((__this->fields).dwjx != (ezk_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {
+          "key": "BDr5nBLwAv5tKp0Y0WeLLCRDDR9uIuqht8ds2iGLimA="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Object_o *x;\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *__this_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_String_o *key;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_GameObject__o *pUVar3;\n\n  UnityEngine_Camera_o *a;\n\n  UnityEngine_GameObject_c *pUStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  System_String_o *pSStack_28;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOp..."
+    },
+    {
+      "method": "bjdc",
+      "signature": "private void bjdc(cqa a)",
+      "line": 386100,
+      "va": "0x1d934f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f7d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f7d == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f7d = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "bjde",
+      "signature": "private void bjde()",
+      "line": 386103,
+      "va": "0x1d93610",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 177,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f7e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Inequality",
+            "line": 60
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (*(int *)&(UnityEngine_AddressableAssets_Addressables_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pUStackX_8 != (UnityEngine_GameObject_c *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((__this->fields).dwjx != (ezk_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {
+          "key": "Assets/Content/Prefabs/TitleScreen/Krosmoz/ParallaxBackground.prefab"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Object_o *x;\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *__this_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_String_o *key;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_GameObject__o *pUVar3;\n\n  UnityEngine_Camera_o *a;\n\n  UnityEngine_GameObject_c *pUStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  System_String_o *pSStack_28;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOp..."
+    },
+    {
+      "method": "dzi",
+      "signature": "private void dzi(cqb a)",
+      "line": 386106,
+      "va": "0x1d93a20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f7f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f7f == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f7f = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "OnDisable",
+      "signature": "protected override void OnDisable()",
+      "line": 386109,
+      "va": "0x1d92da0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 93,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186787f80 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 40
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (peVar4 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Inequality",
+            "line": 54
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "Destroy",
+            "line": 66
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (*(int *)&(UnityEngine_AddressableAssets_Addressables_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AddressableAssets_Addressables",
+            "method": "ReleaseInstance",
+            "line": 76
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Object_o *pUVar1;\n\n  UnityEngine_GameObject_o *instance;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  ezp_o *peVar4;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n\n\n  if (DAT_186787f80 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_AddressableAssets_Addressables_TypeInfo);\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    FUN_1805658a0(&coc_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<coc>__);\n\n    FUN_1805658a0(&Method_fzy<ConnectionBackgroundBinding>_bjmn__..."
+    },
+    {
+      "method": "bjdd",
+      "signature": "private void bjdd(cqb a)",
+      "line": 386112,
+      "va": "0x1d93580",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f81 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f81 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f81 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "dav",
+      "signature": "private void dav(cqa a)",
+      "line": 386115,
+      "va": "0x1d93990",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f82 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f82 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f82 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "hec",
+      "signature": "private void hec(cqa a)",
+      "line": 386118,
+      "va": "0x1d93d90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f83 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f83 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f83 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "efg",
+      "signature": "private void efg()",
+      "line": 386121,
+      "va": "0x1d93ab0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 177,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f84 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Inequality",
+            "line": 60
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (*(int *)&(UnityEngine_AddressableAssets_Addressables_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pUStackX_8 != (UnityEngine_GameObject_c *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((__this->fields).dwjx != (ezk_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {
+          "key": "mZb6poYhIue4w1s0/YOGcHdyxWUQrvVC3xpHAFwtYrQ="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Object_o *x;\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *__this_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_String_o *key;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_GameObject__o *pUVar3;\n\n  UnityEngine_Camera_o *a;\n\n  UnityEngine_GameObject_c *pUStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  System_String_o *pSStack_28;\n\n  UnityEngine_ResourceManagement_AsyncOperations_AsyncOp..."
+    },
+    {
+      "method": "eoe",
+      "signature": "private void eoe(cqb a)",
+      "line": 386124,
+      "va": "0x1d93c70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f85 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f85 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f85 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "njc",
+      "signature": "private void njc(cqb a)",
+      "line": 386127,
+      "va": "0x1d93eb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f86 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f86 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f86 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "gpj",
+      "signature": "private void gpj(cqa a)",
+      "line": 386130,
+      "va": "0x1d93d00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f87 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((pCVar1 == (Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallax"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Canvas",
+            "method": "set_overrideSorting",
+            "line": 52
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_Ui_Effects_Parallax_TitleScreenBackgroundParallaxController_o *pCVar1;\n\n  UnityEngine_Canvas_o *__this_00;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n\n\n  if (DAT_186787f87 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186787f87 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields).dwjz;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object..."
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(VisualElement a, fca b, ezk c)",
+      "line": 386133,
+      "va": "0x1d93110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 311,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (DAT_186787f88 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "d__6_",
+            "method": "ctor",
+            "line": 88
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (peVar5 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (pIVar3[uVar13].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgo<cvn>__ + "
+          },
+          {
+            "type": "CALL",
+            "class": "d__6_",
+            "method": "ctor",
+            "line": 144
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (peVar5 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (uVar13 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (pIVar3[uVar14].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgo<cvl>__ + "
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 200
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pgVar9 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 210
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (pgVar9 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)&(rd_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (*(int *)&(Ankama_AddressableUtilities_Runtime_AddressableUtility_TypeInfo->_"
+          },
+          {
+            "type": "AWAIT",
+            "class": "Cysharp_Threading_Tasks_UniTaskExtensions",
+            "method": "Forget",
+            "line": 248
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (*pcVar12 == '\\0') {"
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Ankama_AddressableUtilities_Runtime_AddressableCatalogName_o addressableCatalogName;\n\n  code *pcVar4;\n\n  ushort uVar13;\n\n  ezp_o *peVar5;\n\n  QFSW_QC_Demo_Robot__KillAction_d__6_o *pQVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  longlong lVar8;\n\n  gmd_o *pgVar9;\n\n  Core_Engine_Messages_listener_T__o *pCVar10;\n\n  Cysharp_Threading_Tasks_UniTask_o *pCVar11;\n\n  char *pcVar12;\n\n  ushort uVar14;\n\n  Cysharp_Threading_Tasks_Un..."
+    },
+    {
+      "method": "get_m_canTakeFocus",
+      "signature": "protected override bool get_m_canTakeFocus()",
+      "line": 386136,
+      "va": "0xd1e2a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 49,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 0,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 4,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)(lVar9 + 0xe4) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "  if (bVar4) {\n\n    lVar9 = *(longlong *)(lVar5 + 0x20);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de21;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    lVar9 = *(longlong *)(*(longlong *)(lVar9 + 0xc0) + 0x10);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de3d;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    if (*(int *)(lVar9 + 0xe4) =..."
+    }
+  ]
+}

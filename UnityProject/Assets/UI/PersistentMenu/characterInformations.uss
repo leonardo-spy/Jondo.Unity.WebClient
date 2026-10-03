@@ -1,0 +1,249 @@
+﻿.label_characterStats {
+    color: var( --white_white100);
+    --labelShadow: var( --dropShadows_medium);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+    -unity-text-outline-color: var( --black_black65);
+    -unity-text-align: middle-center;
+}
+
+.label_characterStats.faded {
+    color: var( --white_white65);
+}
+
+.label_characterStats {
+    --text-style: "title_large";
+}
+
+.label_characterStats#lbl_pi {
+    --text-style: "title_medium";
+}
+
+.label_characterStats#lbl_shield {
+    --text-style: "title_medium";
+    top: 4px;
+}
+
+.smallUI .label_characterStats {
+    --text-style: "title_medium";
+}
+
+.smallUI .label_characterStats#lbl_shield {
+    --text-style: "title_small";
+    top: 4px;
+}
+
+.label_characterStats#lbl_ip {
+    --text-style: "title_medium";
+}
+
+.smallUI .label_characterStats#lbl_ip {
+    --text-style: "title_small";
+}
+
+.magneticwindow#CharacterInformations {
+    width: 164px;
+    height: 144px;
+    min-width: 164px;
+    min-height: 130px;
+}
+
+#tx_hp {
+    width: 106px;
+    height: 106px;
+}
+
+#tx_hp VisualElement {
+    width: 106px;
+    height: 106px;
+}
+
+#tx_hp > #hp_mask {
+    width: 106px;
+    height: 88px;
+}
+
+#tx_hp > tx_border > #tx_borderHover {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#tx_hp > tx_shield > #tx_shieldBorderHover {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#tx_hp:hover > #tx_border > #tx_borderHover {
+    opacity: 1;
+}
+
+#tx_hp:hover > tx_shield > #tx_shieldBorderHover {
+    opacity: 1;
+}
+
+#tx_shield {
+    display: none;
+    position: absolute;
+    width: 106px;
+    height: 106px;
+}
+
+#apMpCounters {
+    width: 50px;
+    height: 100px;
+}
+
+#tx_ap {
+    width: 50px;
+    height: 50px;
+}
+
+#tx_mp {
+    width: 50px;
+    height: 50px;
+}
+
+#tx_mainState {
+    width: 32px;
+    height: 32px;
+}
+
+.smallUI#CharacterInformations {
+    width: 146px;
+    height: 96px;
+    min-width: 146px;
+    min-height: 96px;
+}
+
+.smallUI #tx_hp {
+    width: 86px;
+    height: 86px;
+}
+
+.smallUI #tx_hp VisualElement {
+    width: 86px;
+    height: 86px;
+}
+
+.smallUI #tx_hp {
+    top: 3px;
+}
+
+.smallUI #tx_hp > #hp_mask {
+    width: 86px;
+    height: 70px;
+}
+
+.smallUI #tx_shield {
+    position: absolute;
+    display: none;
+    width: 86px;
+    height: 86px;
+}
+
+.smallUI #apMpCounters {
+    width: 40px;
+    height: 80px;
+}
+
+.smallUI #tx_ap {
+    width: 40px;
+    height: 40px;
+}
+
+.smallUI #tx_mp {
+    width: 40px;
+    height: 40px;
+}
+
+.smallUI #tx_mainState {
+    width: 28px;
+    height: 28px;
+}
+
+.smallUI #tx_ip {
+    width: 30px;
+    height: 26px;
+}
+
+#tx_ip {
+    width: 38px;
+    height: 34px;
+}
+
+.horizontal #h {
+    left: 0;
+    transition-duration: 3s;
+}
+
+.smallUI #ctr_ip {
+    padding-top: 36px;
+}
+
+#ctr_ip {
+    padding-top: 37px;
+}
+
+#ctr_ap {
+    padding-top: 12px;
+    padding-right: 0;
+}
+
+.withoutPI #ctr_ap {
+    padding-right: 10px;
+}
+
+.smallUI #ctr_ap {
+    padding-top: 15px;
+    padding-right: 4px;
+}
+
+.smallUI.withoutPI #ctr_ap {
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+#ctr_mp {
+    padding-top: 14px;
+    padding-left: 0;
+}
+
+.withoutPI #ctr_mp {
+    padding-left: 10px;
+}
+
+.smallUI #ctr_mp {
+    padding-top: 16px;
+    padding-left: 4px;
+}
+
+.smallUI.withoutPI #ctr_mp {
+    padding-left: 15px;
+}
+
+#hp_ctr {
+    margin-bottom: 20px;
+}
+
+.smallUI #hp_ctr {
+    margin-bottom: 15px;
+}
+
+.magneticwindow#CharacterInformations #content {
+    flex-direction: column-reverse;
+}
+
+.smallUI #ctr_ornaments {
+    display: none;
+}
+
+#ctr_pusher {
+    padding-bottom: 10px;
+    height: 140;
+}
+
+.smallUI #ctr_pusher {
+    padding-bottom: 10px;
+    height: 96;
+}
+

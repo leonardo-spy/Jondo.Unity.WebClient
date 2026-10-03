@@ -1,0 +1,20 @@
+﻿#btn_close_windowWithoutTitleBar123:hover {
+    --bgTexturebtn_close_windowWithoutTitleBar123ImgVar: url("/Assets/UI/USSTextures/btn_close_over.png");
+}
+
+#btn_close_windowWithoutTitleBar123 {
+    --bgTexturebtn_close_windowWithoutTitleBar123ImgVar: url("/Assets/UI/Themes/darkStone/common/btn_close_normal.png");
+}
+
+#btn_close_windowWithoutTitleBar123:active {
+    --bgTexturebtn_close_windowWithoutTitleBar123ImgVar: url("/Assets/UI/USSTextures/btn_close_pressed.png");
+}
+
+#btn_close_windowWithoutTitleBar123:disabled {
+    --bgTexturebtn_close_windowWithoutTitleBar123ImgVar: url("/Assets/UI/USSTextures/btn_close_disabled.png");
+}
+
+#bgTexturebtn_close_windowWithoutTitleBar123 {
+    background-image: var( --bgTexturebtn_close_windowWithoutTitleBar123ImgVar);
+}
+

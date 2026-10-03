@@ -1,0 +1,37 @@
+﻿.robotoboldcenter62 {
+    font-size: 62px;
+    color: rgb(199, 199, 197);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    -unity-font-definition: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.completed {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/rareSlot.png");
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.completed #lbl_bigId {
+    display: none;
+}
+
+#tx_element {
+    display: none;
+}
+
+.completed #tx_element {
+    display: flex;
+}
+
+#ctr_id {
+    display: none;
+}
+
+.completed #ctr_id {
+    display: flex;
+}
+

@@ -1,0 +1,80 @@
+﻿#btn_help:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_over.png");
+}
+
+#btn_help {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_question.png");
+}
+
+#btn_help:focus {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#btn_help:focus:hover {
+    --bgTexturebtn_helpImgVar: url("/Assets/UI/USSTextures/subhint_selected.png");
+}
+
+#bgTexturebtn_help {
+    background-image: var( --bgTexturebtn_helpImgVar);
+}
+
+#btn_close:hover {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_over.png");
+}
+
+#btn_close {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/Themes/darkStone/common/btn_close_normal.png");
+}
+
+#btn_close:active {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_pressed.png");
+}
+
+#btn_close:disabled {
+    --bgTexturebtn_closeImgVar: url("/Assets/UI/USSTextures/btn_close_disabled.png");
+}
+
+#bgTexturebtn_close {
+    background-image: var( --bgTexturebtn_closeImgVar);
+}
+
+#btn_save:hover {
+    --btn_texture_btn_saveImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_save {
+    --btn_texture_btn_saveImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_save:active {
+    --btn_texture_btn_saveImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_save:disabled {
+    --btn_texture_btn_saveImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_save {
+    background-image: var( --btn_texture_btn_saveImgVar);
+}
+
+#btn_undo:hover {
+    --btn_texture_btn_undoImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_undo {
+    --btn_texture_btn_undoImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_undo:active {
+    --btn_texture_btn_undoImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_undo:disabled {
+    --btn_texture_btn_undoImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_undo {
+    background-image: var( --btn_texture_btn_undoImgVar);
+}
+

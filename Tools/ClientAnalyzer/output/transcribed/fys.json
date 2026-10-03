@@ -1,0 +1,5260 @@
+{
+  "type": "fys",
+  "methodCount": 49,
+  "transcribed": 49,
+  "methods": [
+    {
+      "method": "bn",
+      "signature": "private void bn()",
+      "line": 386179,
+      "va": "0x1d957f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787f89 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (peVar9 != (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (uVar7 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar3[uVar14].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdi",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (0 < (pSVar5->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if ((pCVar12 == (Core_UILogic_Components_Figma_Dropdown_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "cwe_",
+            "method": "ctor",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (peVar13 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (uVar14 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (pIVar3[uVar7].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cwe>__ + 0"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar10": "W0jWShkav3d1oVQo0y82s1AhyFK6v4oI8fZKxqGrrOk="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Core_UILogic_Components_Figma_ListElementBase_o *pCVar4;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar5;\n\n  code *pcVar6;\n\n  ushort uVar14;\n\n  ushort uVar7;\n\n  longlong lVar8;\n\n  ewc_o *peVar9;\n\n  System_String_o *pSVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar12;\n\n  ezp_o *peVar13;\n\n  cwe_o *__this_00;\n\n  System_String_o *c;\n\n  undefined8 in_stack_fffff..."
+    },
+    {
+      "method": "get_m_appearEffects",
+      "signature": "protected override bool get_m_appearEffects()",
+      "line": 386182,
+      "va": "0xdbdd50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return true;\n\n}"
+    },
+    {
+      "method": "bjdg",
+      "signature": "private void bjdg(bee a)",
+      "line": 386185,
+      "va": "0x1d94860",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fa7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (__this_00 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pUVar6 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pIVar7[uVar4].interfaceType == (Il2CppClass *)UnityEngine_UIElements_IStyle_"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  code *pcVar3;\n\n  ushort uVar4;\n\n  VirtualInvokeData *pVVar5;\n\n  UnityEngine_UIElements_VisualElement_o *__this_00;\n\n  UnityEngine_UIElements_IStyle_o *pUVar6;\n\n  undefined8 unaff_RDI;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar7;\n\n  ulonglong uStackX_8;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIStackX_20;\n\n\n\n  if (DAT_186787fa7 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo,1,0);\n\n    FUN_1805658a0(&Method_Unity..."
+    },
+    {
+      "method": "bjdo",
+      "signature": "private void bjdo()",
+      "line": 386188,
+      "va": "0x1d95480",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 241,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 106
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (*(int *)(lVar5 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)(*(longlong *)(lVar5 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar5;\n\n  undefined1 *puVar6;\n\n  longlong lVar7;\n\n  longlong lVar8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *item;\n\n  undefined1 *puVar9..."
+    },
+    {
+      "method": "gdj",
+      "signature": "private void gdj()",
+      "line": 386191,
+      "va": "0x1d96a90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f8b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmil",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "mx",
+      "signature": "private void mx(fyq a)",
+      "line": 386194,
+      "va": "0x1d976a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 317,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787f8c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (((peVar6 != (ewm_o *)0x0) && (lVar7 = FUN_180007c70(8,ewm_TypeInfo,peVar6), "
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (a == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 92
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 174,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if ((pCVar8->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (a != 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 298
+          }
+        ],
+        "opsCount": 28,
+        "varMap": {
+          "pSVar9": "HT1YkRWtdOMfwXd5OKCVIUBVe3Jcp27GD8VG0WSPCzM="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  ewm_o *peVar6;\n\n  longlong lVar7;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar8;\n\n  System_String_o *pSVar9;\n\n  fys_Fields *__this_00;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787f8c == '\\0') {\n\n    FUN_1805658a0(&Method_Core_Engine_OptionJSON_OptionJson<int>_set_property__);\n\n  ..."
+    },
+    {
+      "method": "bjdp",
+      "signature": "private void bjdp(bdx a)",
+      "line": 386197,
+      "va": "0x1d955a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 295,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f8d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmij",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "hvi",
+      "signature": "private void hvi()",
+      "line": 386200,
+      "va": "0x1d96bd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787f8e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (peVar9 != (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (uVar7 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar3[uVar14].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdi",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (0 < (pSVar5->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if ((pCVar12 == (Core_UILogic_Components_Figma_Dropdown_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "cwe_",
+            "method": "ctor",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (peVar13 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (uVar14 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (pIVar3[uVar7].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cwe>__ + 0"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar10": "tayjafy1d8GWryZnZGlJy42s9Fjws+PwD+hBiDfDM88="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Core_UILogic_Components_Figma_ListElementBase_o *pCVar4;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar5;\n\n  code *pcVar6;\n\n  ushort uVar14;\n\n  ushort uVar7;\n\n  longlong lVar8;\n\n  ewc_o *peVar9;\n\n  System_String_o *pSVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar12;\n\n  ezp_o *peVar13;\n\n  cwe_o *__this_00;\n\n  System_String_o *c;\n\n  undefined8 in_stack_fffff..."
+    },
+    {
+      "method": "bjdk",
+      "signature": "private void bjdk()",
+      "line": 386203,
+      "va": "0x1d94e00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f8f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmij",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "bjdm",
+      "signature": "private void bjdm(fyq a)",
+      "line": 386206,
+      "va": "0x1d95100",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 317,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787f90 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (((peVar4 != (ewm_o *)0x0) && (lVar5 = FUN_180007c70(8,ewm_TypeInfo,peVar4), "
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (a == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (pUVar8 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 92
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pUVar8 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 174,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (a != 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 298
+          }
+        ],
+        "opsCount": 28,
+        "varMap": {
+          "pSVar7": ""
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  ewm_o *peVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *pSVar7;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar8;\n\n  UnityEngine_UIElements_IStyle_o *pUVar9;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787f90 == '\\0') {\n\n    FUN_1805658a0(&Method_Core_Engine_OptionJSON_OptionJson<int>_set_property__);\n\n  ..."
+    },
+    {
+      "method": "ogx",
+      "signature": "private void ogx()",
+      "line": 386209,
+      "va": "0x1d97eb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 207,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f91 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 48
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 130,
+            "string_arg": "4ze+9dPmZP7PMPLx3I8qAUV+3fpyiWY60brgRDRmnvU="
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "key": "4ze+9dPmZP7PMPLx3I8qAUV+3fpyiWY60brgRDRmnvU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *key;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  ulonglong uStackX_8;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787f91 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_Loc..."
+    },
+    {
+      "method": "bjdl",
+      "signature": "private void bjdl()",
+      "line": 386212,
+      "va": "0x1d94ea0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787f92 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (peVar9 != (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (uVar7 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar3[uVar14].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdi",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (0 < (pSVar5->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if ((pCVar12 == (Core_UILogic_Components_Figma_Dropdown_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "cwe_",
+            "method": "ctor",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (peVar13 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (uVar14 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (pIVar3[uVar7].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cwe>__ + 0"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar10": "2ca86d0feb4c42c7b45e1ad56482390d"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Core_UILogic_Components_Figma_ListElementBase_o *pCVar4;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar5;\n\n  code *pcVar6;\n\n  ushort uVar14;\n\n  ushort uVar7;\n\n  longlong lVar8;\n\n  ewc_o *peVar9;\n\n  System_String_o *pSVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar12;\n\n  ezp_o *peVar13;\n\n  cwe_o *__this_00;\n\n  System_String_o *c;\n\n  undefined8 in_stack_fffff..."
+    },
+    {
+      "method": "bzb",
+      "signature": "private void bzb()",
+      "line": 386215,
+      "va": "0x1d95af0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f93 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "get_Token",
+            "line": 28
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (*(int *)&(System_Threading_CancellationToken_TypeInfo->_2).field_0x1c == 0) "
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) goto LAB_181d95"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Cancel",
+            "line": 46
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Dispose",
+            "line": 66
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Threading_CancellationTokenSource_o *pSVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_Rendering_UnifiedRayTracing_GeometryPool_VertexBufferAttribInfo_o UStackX_8;\n\n\n\n  if (DAT_186787f93 == '\\0') {\n\n    FUN_1805658a0(&System_Threading_CancellationToken_TypeInfo);\n\n    DAT_186787f93 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dwke;\n\n  if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {\n\n    UStackX_8.fields.buffer =\n\n         (UnityEngine_GraphicsBuffer_o *)\n\n     ..."
+    },
+    {
+      "method": "gnz",
+      "signature": "private void gnz(bool a)",
+      "line": 386218,
+      "va": "0x1d96b30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f94 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (__this_00 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pUVar6 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pIVar7[uVar4].interfaceType == (Il2CppClass *)UnityEngine_UIElements_IStyle_"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  code *pcVar3;\n\n  ushort uVar4;\n\n  VirtualInvokeData *pVVar5;\n\n  UnityEngine_UIElements_VisualElement_o *__this_00;\n\n  UnityEngine_UIElements_IStyle_o *pUVar6;\n\n  undefined8 unaff_RDI;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar7;\n\n  undefined8 uStackX_8;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIStackX_20;\n\n\n\n  if (DAT_186787f94 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Method_UnityEng..."
+    },
+    {
+      "method": "cnv",
+      "signature": "private void cnv()",
+      "line": 386221,
+      "va": "0x1d95d30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 341,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f95 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (peVar3 == (ewy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (uVar2 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pIVar5[uVar17].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if ((lVar11 == 0) || (*(longlong *)(lVar11 + 0x18) == 0)) goto LAB_181d9616c;"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)(*(longlong *)(lVar11 + 0x18) + 0x18) <= (int)uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if ((pSVar6->fields)._size == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdn",
+            "line": 152
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (peVar3 == (ewy_o *)0x0) goto LAB_181d9616c;"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (uVar17 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pIVar5[uVar9].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if ((lVar11 == 0) || (lVar11 = *(longlong *)(lVar11 + 0x18), lVar11 == 0)) goto "
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if ((pSVar14 == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Split",
+            "line": 236,
+            "string_arg": "UN6LXAd/ZkmNurkeTFOgCxCoF/k07xr9monA5Bu3c0U="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 240
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if ((int)pSVar13->max_length == 3) {"
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar13->m_Items[0] == (System_String_o *)0x0) goto LAB_181d9616c;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 244
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (((peVar15 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "op_Equality",
+            "line": 266
+          },
+          {
+            "type": "IF",
+            "line": 268,
+            "condition": "if (bVar8) {"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 280,
+            "condition": "if ((int)pSVar13->max_length == 0) goto LAB_181d96172;"
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if ((pSVar13->m_Items[0] == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 284
+          },
+          {
+            "type": "IF",
+            "line": 296,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((((__this->fields).dwkc == (ewy_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) goto LAB_181d96172;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 330,
+            "string_arg": "eTXnC8o5h2LoDleQywmQj/4xYfFXSWphxI3Bfb6BLdU="
+          }
+        ],
+        "opsCount": 34,
+        "varMap": {
+          "pSVar12": "dKUXa5VB1yC0ECWYiTKR+THm6laB7i/LhkY8dwqkZuE=",
+          "pSVar14": "eTXnC8o5h2LoDleQywmQj/4xYfFXSWphxI3Bfb6BLdU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 2
+      },
+      "bodyPreview": "{\n\n  longlong lVar1;\n\n  ushort uVar2;\n\n  ewy_o *peVar3;\n\n  ewy_c *peVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar6;\n\n  code *pcVar7;\n\n  ushort uVar17;\n\n  bool bVar8;\n\n  ushort uVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  longlong lVar11;\n\n  System_String_o *pSVar12;\n\n  System_String_array *pSVar13;\n\n  System_String_o *pSVar14;\n\n  ewm_o *peVar15;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar16;\n\n  uint uVar18;\n\n  uint index;\n\n  Co..."
+    },
+    {
+      "method": "jei",
+      "signature": "private void jei()",
+      "line": 386224,
+      "va": "0x1d96f60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f96 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmiu",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "bjdr",
+      "signature": "private UniTaskVoid bjdr(CancellationToken a)",
+      "line": 386228,
+      "va": "0x1d956d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 55,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186787f97 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ulonglong extraout_RAX;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  fys_o *pfStack_28;\n\n  System_Threading_CancellationToken_Fields SStack_20;\n\n  undefined8 uStack_18;\n\n  undefined8 uStack_10;\n\n\n\n  if (DAT_186787f97 == '\\0') {\n\n    FUN_1805658a0(&\n\n                  Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskVoidMethodBuilder_Start<fys_<DisableAsync>d__25>__\n\n                 );\n\n    DAT_186787f97 = '\\x01';\n\n  }\n\n  UStack_38.klass._4_4_ = 0;\n\n  U..."
+    },
+    {
+      "method": "bjds",
+      "signature": "private void bjds()",
+      "line": 386231,
+      "va": "0x1d95750",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787f98 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "get_Token",
+            "line": 28
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (*(int *)&(System_Threading_CancellationToken_TypeInfo->_2).field_0x1c == 0) "
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) goto LAB_181d95"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Cancel",
+            "line": 46
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Dispose",
+            "line": 66
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Threading_CancellationTokenSource_o *pSVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_Rendering_UnifiedRayTracing_GeometryPool_VertexBufferAttribInfo_o UStackX_8;\n\n\n\n  if (DAT_186787f98 == '\\0') {\n\n    FUN_1805658a0(&System_Threading_CancellationToken_TypeInfo);\n\n    DAT_186787f98 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dwke;\n\n  if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {\n\n    UStackX_8.fields.buffer =\n\n         (UnityEngine_GraphicsBuffer_o *)\n\n     ..."
+    },
+    {
+      "method": "OnEnable",
+      "signature": "protected sealed override void OnEnable()",
+      "line": 386234,
+      "va": "0x1d93f40",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 473,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (DAT_186787f99 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjds",
+            "line": 94
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (peVar5 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (uVar12 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pIVar2[uVar11].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<bef>__ + "
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar8 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 160
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (lVar7 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 218
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (__this_02 != (Core_Engine_Inputs_Events_InputCustomEvent_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (__this_03 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (__this_04 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 256,
+            "condition": "if (pUVar8 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_UIElements_TimeValue",
+            "method": "op_Implicit",
+            "line": 262
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (uVar11 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (pIVar2[uVar13].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 312,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (DAT_186795b37 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 356,
+            "condition": "if (__this_05 !="
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 368
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 374
+          },
+          {
+            "type": "IF",
+            "line": 376,
+            "condition": "if (*(int *)&(DG_Tweening_DOTween_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 388,
+            "condition": "if (DAT_18679720b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 396,
+            "condition": "if (((pDVar10 !="
+          },
+          {
+            "type": "IF",
+            "line": 404,
+            "condition": "if ((pDVar10->fields).super.super.super.tweenType != 1) {"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 416
+          },
+          {
+            "type": "IF",
+            "line": 416,
+            "condition": "if (pDVar10->klass =="
+          }
+        ],
+        "opsCount": 31,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar2;\n\n  UnityEngine_UIElements_IStyle_c *pUVar3;\n\n  code *pcVar4;\n\n  float interval;\n\n  float duration;\n\n  ushort uVar11;\n\n  ezp_o *peVar5;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar8;\n\n  UnityEngine_UIElements_IStyle_o *pUVar9;\n\n  Core_UILogic_Components_DofusLabel_o *ele;\n\n  fcr_o *hyperlinkService;\n\n  Core_UI..."
+    },
+    {
+      "method": "lgs",
+      "signature": "private void lgs()",
+      "line": 386237,
+      "va": "0x1d97270",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f9a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmiv",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "njh",
+      "signature": "private void njh()",
+      "line": 386240,
+      "va": "0x1d97840",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787f9b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (peVar9 != (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (uVar7 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar3[uVar14].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdi",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (0 < (pSVar5->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if ((pCVar12 == (Core_UILogic_Components_Figma_Dropdown_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "cwe_",
+            "method": "ctor",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (peVar13 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (uVar14 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (pIVar3[uVar7].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cwe>__ + 0"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar10": "J4zNtpuqB7sKmSOjh61/OfS3U/jAQ5u+zlkiz/jWyfU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Core_UILogic_Components_Figma_ListElementBase_o *pCVar4;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar5;\n\n  code *pcVar6;\n\n  ushort uVar14;\n\n  ushort uVar7;\n\n  longlong lVar8;\n\n  ewc_o *peVar9;\n\n  System_String_o *pSVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar12;\n\n  ezp_o *peVar13;\n\n  cwe_o *__this_00;\n\n  System_String_o *c;\n\n  undefined8 in_stack_fffff..."
+    },
+    {
+      "method": "fdk",
+      "signature": "private void fdk()",
+      "line": 386243,
+      "va": "0x1d963c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 207,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f9c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 48
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 130,
+            "string_arg": "3QZUKCM30N1GNXJsUNVwg/nisliSmSRyaJvPQ/KY4UU="
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "key": "3QZUKCM30N1GNXJsUNVwg/nisliSmSRyaJvPQ/KY4UU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *key;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  ulonglong uStackX_8;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787f9c == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_Loc..."
+    },
+    {
+      "method": "bjdj",
+      "signature": "private void bjdj()",
+      "line": 386246,
+      "va": "0x1d949b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 341,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f9d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (peVar3 == (ewy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (uVar2 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pIVar5[uVar17].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if ((lVar11 == 0) || (*(longlong *)(lVar11 + 0x18) == 0)) goto LAB_181d94dec;"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)(*(longlong *)(lVar11 + 0x18) + 0x18) <= (int)uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if ((pSVar6->fields)._size == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdn",
+            "line": 152
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (peVar3 == (ewy_o *)0x0) goto LAB_181d94dec;"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (uVar17 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pIVar5[uVar9].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if ((lVar11 == 0) || (lVar11 = *(longlong *)(lVar11 + 0x18), lVar11 == 0)) goto "
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if ((pSVar14 == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Split",
+            "line": 236,
+            "string_arg": ":"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 240
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if ((int)pSVar13->max_length == 3) {"
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar13->m_Items[0] == (System_String_o *)0x0) goto LAB_181d94dec;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 244
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (((peVar15 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "op_Equality",
+            "line": 266
+          },
+          {
+            "type": "IF",
+            "line": 268,
+            "condition": "if (bVar8) {"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 280,
+            "condition": "if ((int)pSVar13->max_length == 0) goto LAB_181d94df2;"
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if ((pSVar13->m_Items[0] == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 284
+          },
+          {
+            "type": "IF",
+            "line": 296,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((((__this->fields).dwkc == (ewy_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) goto LAB_181d94df2;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 330,
+            "string_arg": "Connection server has the wrong format. It won't be added to the list: "
+          }
+        ],
+        "opsCount": 34,
+        "varMap": {
+          "pSVar12": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\UILogic\\Auth\\Login.cs",
+          "pSVar14": "Connection server has the wrong format. It won't be added to the list: "
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 2
+      },
+      "bodyPreview": "{\n\n  longlong lVar1;\n\n  ushort uVar2;\n\n  ewy_o *peVar3;\n\n  ewy_c *peVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar6;\n\n  code *pcVar7;\n\n  ushort uVar17;\n\n  bool bVar8;\n\n  ushort uVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  longlong lVar11;\n\n  System_String_o *pSVar12;\n\n  System_String_array *pSVar13;\n\n  System_String_o *pSVar14;\n\n  ewm_o *peVar15;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar16;\n\n  uint uVar18;\n\n  uint index;\n\n  Co..."
+    },
+    {
+      "method": "bjdt",
+      "signature": "private void bjdt(VisualElement a)",
+      "line": 386250,
+      "va": "0x1d94e00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787f8f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmij",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "jus",
+      "signature": "private void jus()",
+      "line": 386253,
+      "va": "0x1d97000",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 207,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787f9e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 48
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 130,
+            "string_arg": "LFfSwaGKtVmRTcsd4xVDaVVM1BM0QirPz+0XgwG5fd0="
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "key": "LFfSwaGKtVmRTcsd4xVDaVVM1BM0QirPz+0XgwG5fd0="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *key;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  ulonglong uStackX_8;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787f9e == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_Loc..."
+    },
+    {
+      "method": "bpc",
+      "signature": "private void bpc(string a)",
+      "line": 386256,
+      "va": "0x1d95a50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 355,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186787f9f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (((peVar8 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Engine_Options_OptionNotLoadedException_",
+            "method": "ctor",
+            "line": 160
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (plVar13 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((char)SStackX_10.monitor == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (lVar4 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (lVar6 != 0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined4 uVar1;\n\n  longlong lVar2;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  undefined8 uVar5;\n\n  longlong lVar6;\n\n  char cVar7;\n\n  int32_t fwfLoaded;\n\n  ewm_o *peVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n  longlong lVar11;\n\n  longlong lVar12;\n\n  longlong *plVar13;\n\n  undefined8 uVar14;\n\n  longlong *plVar15;\n\n  Core_Engine_Options_OptionNotLoadedException_o *__this_00;\n\n  System_String_o *pSVar16;\n\n  longlong *plVar17;\n\n  System_String_o SStackX_10;\n\n  undefined8 auStack_90 [5];\n\n  longl..."
+    },
+    {
+      "method": "mft",
+      "signature": "private void mft(bdx a)",
+      "line": 386259,
+      "va": "0x1d973b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 295,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787fa0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmjc",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "bjdq",
+      "signature": "public void bjdq()",
+      "line": 386262,
+      "va": "0x1d95630",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (DAT_186787fa1 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjds",
+            "line": 22
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource_",
+            "method": "ctor",
+            "line": 28
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 != (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "get_Token",
+            "line": 34
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdr",
+            "line": 38
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  System_Threading_CancellationTokenSource_o *__this_00;\n\n  System_Threading_CancellationToken_o a;\n\n  MethodInfo *method_00;\n\n  undefined1 uStackX_8;\n\n\n\n  if (DAT_186787fa1 == '\\0') {\n\n    FUN_1805658a0(&System_Threading_CancellationTokenSource_TypeInfo);\n\n    DAT_186787fa1 = '\\x01';\n\n  }\n\n  fys__bjds(__this,(MethodInfo *)0x0);\n\n  __this_00 = (System_Threading_CancellationTokenSource_o *)\n\n              func_0x000180565b00(System_Threading_CancellationTokenSource_TypeInfo);\n..."
+    },
+    {
+      "method": "get_m_canTakeFocus",
+      "signature": "protected override bool get_m_canTakeFocus()",
+      "line": 386265,
+      "va": "0xd1e2a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 49,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 0,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 4,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)(lVar9 + 0xe4) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "  if (bVar4) {\n\n    lVar9 = *(longlong *)(lVar5 + 0x20);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de21;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    lVar9 = *(longlong *)(*(longlong *)(lVar9 + 0xc0) + 0x10);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de3d;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    if (*(int *)(lVar9 + 0xe4) =..."
+    },
+    {
+      "method": "mnl",
+      "signature": "private void mnl()",
+      "line": 386268,
+      "va": "0x1d97440",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787fa2 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (peVar9 != (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (uVar7 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar3[uVar14].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdi",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((pCVar12 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (0 < (pSVar5->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if ((pCVar12 == (Core_UILogic_Components_Figma_Dropdown_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "cwe_",
+            "method": "ctor",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (peVar13 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (uVar14 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (pIVar3[uVar7].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cwe>__ + 0"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar10": "TwChd/o3SLMhqYYl5xaM5cMheoEOxPiwgK9wpwh1wBI="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezp_c *peVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  Core_UILogic_Components_Figma_ListElementBase_o *pCVar4;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar5;\n\n  code *pcVar6;\n\n  ushort uVar14;\n\n  ushort uVar7;\n\n  longlong lVar8;\n\n  ewc_o *peVar9;\n\n  System_String_o *pSVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar12;\n\n  ezp_o *peVar13;\n\n  cwe_o *__this_00;\n\n  System_String_o *c;\n\n  undefined8 in_stack_fffff..."
+    },
+    {
+      "method": "oqh",
+      "signature": "private void oqh()",
+      "line": 386271,
+      "va": "0x1d98090",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 241,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186787fa3 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 106
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (*(int *)(lVar5 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)(*(longlong *)(lVar5 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar5;\n\n  undefined1 *puVar6;\n\n  longlong lVar7;\n\n  longlong lVar8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *item;\n\n  undefined1 *puVar9..."
+    },
+    {
+      "method": "bjdf",
+      "signature": "private bool bjdf()",
+      "line": 386274,
+      "va": "0x15a5620",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 61,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_exists",
+            "line": 16
+          },
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (!bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_18677f85b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pAVar2 != (Ankama_Launcher_ZaapLink_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (pAVar3 != (Ankama_Launcher_ZaapWorker_o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  Ankama_Launcher_ZaapLink_o *pAVar2;\n\n  Ankama_Launcher_ZaapWorker_o *pAVar3;\n\n  code *pcVar4;\n\n  undefined1 uVar5;\n\n  bool bVar6;\n\n\n\n  bVar6 = Ankama_Launcher_LauncherConnection__get_exists((MethodInfo *)0x0);\n\n  if (!bVar6) {\n\n    return false;\n\n  }\n\n  if (DAT_18677f85b == '\\0') {\n\n    FUN_1805658a0(&Ankama_Launcher_LauncherConnection_TypeInfo);\n\n    DAT_18677f85b = '\\x01';\n\n  }\n\n  pAVar2 = Ankama_Launcher_LauncherConnection_TypeInfo->static_fields->s_zaapLink;\n\n  if (pAVar2 ..."
+    },
+    {
+      "method": "bbf",
+      "signature": "private void bbf(string a)",
+      "line": 386277,
+      "va": "0x1d947c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 355,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186787fa4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (((peVar8 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Engine_Options_OptionNotLoadedException_",
+            "method": "ctor",
+            "line": 160
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (plVar13 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((char)SStackX_10.monitor == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (lVar4 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (lVar6 != 0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined4 uVar1;\n\n  longlong lVar2;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  undefined8 uVar5;\n\n  longlong lVar6;\n\n  char cVar7;\n\n  int32_t fwfLoaded;\n\n  ewm_o *peVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n  longlong lVar11;\n\n  longlong lVar12;\n\n  longlong *plVar13;\n\n  undefined8 uVar14;\n\n  longlong *plVar15;\n\n  Core_Engine_Options_OptionNotLoadedException_o *__this_00;\n\n  System_String_o *pSVar16;\n\n  longlong *plVar17;\n\n  System_String_o SStackX_10;\n\n  undefined8 auStack_90 [5];\n\n  longl..."
+    },
+    {
+      "method": "eqo",
+      "signature": "private void eqo(fyq a)",
+      "line": 386280,
+      "va": "0x1d96220",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 317,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787fa5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (((peVar6 != (ewm_o *)0x0) && (lVar7 = FUN_180007c70(8,ewm_TypeInfo,peVar6), "
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (a == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 92
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 174,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if ((pCVar8->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (a != 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 298
+          }
+        ],
+        "opsCount": 28,
+        "varMap": {
+          "pSVar9": "0gHc0PcB3Dcpk3VXae/ZBGop1Zx6AcizWRR074nTfFY="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  ewm_o *peVar6;\n\n  longlong lVar7;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar8;\n\n  System_String_o *pSVar9;\n\n  fys_Fields *__this_00;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787fa5 == '\\0') {\n\n    FUN_1805658a0(&Method_Core_Engine_OptionJSON_OptionJson<int>_set_property__);\n\n  ..."
+    },
+    {
+      "method": "cev",
+      "signature": "private void cev(fyq a)",
+      "line": 386283,
+      "va": "0x1d95b90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 317,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787fa6 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (((peVar6 != (ewm_o *)0x0) && (lVar7 = FUN_180007c70(8,ewm_TypeInfo,peVar6), "
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (a == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 92
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 174,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if ((pCVar8->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (a != 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 298
+          }
+        ],
+        "opsCount": 28,
+        "varMap": {
+          "pSVar9": "LJdH77218ny5iU96uH5SrjNYCfmRvdE4KXbjje2uVhc="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  ewm_o *peVar6;\n\n  longlong lVar7;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar8;\n\n  System_String_o *pSVar9;\n\n  fys_Fields *__this_00;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787fa6 == '\\0') {\n\n    FUN_1805658a0(&Method_Core_Engine_OptionJSON_OptionJson<int>_set_property__);\n\n  ..."
+    },
+    {
+      "method": "bjdh",
+      "signature": "private void bjdh(bool a)",
+      "line": 386286,
+      "va": "0x1d94870",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fa7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (__this_00 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pUVar6 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pIVar7[uVar4].interfaceType == (Il2CppClass *)UnityEngine_UIElements_IStyle_"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  code *pcVar3;\n\n  ushort uVar4;\n\n  VirtualInvokeData *pVVar5;\n\n  UnityEngine_UIElements_VisualElement_o *__this_00;\n\n  UnityEngine_UIElements_IStyle_o *pUVar6;\n\n  undefined8 unaff_RDI;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar7;\n\n  undefined8 uStackX_8;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIStackX_20;\n\n\n\n  if (DAT_186787fa7 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Method_UnityEng..."
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(VisualElement a, fca b, ewy c, ezf d)",
+      "line": 386289,
+      "va": "0x1d94370",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 319,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787fa8 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource_",
+            "method": "ctor",
+            "line": 68
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 90
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pgVar3 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pgVar3 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 116
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "paw",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 150,
+            "string_arg": "ui.common.play"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (pCVar5 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "set_text",
+            "line": 154,
+            "string_arg": "ui.common.play"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdj",
+            "line": 162
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_exists",
+            "line": 164
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (DAT_186787f90 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (peVar7 != (ewm_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 208,
+            "condition": "if ((lVar8 != 0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (iVar10 == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 226
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdn",
+            "line": 228
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "else if (iVar10 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if (pCVar9 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 268,
+            "condition": "if (pCVar9 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if ((__this->fields).dwkc != (ewy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 280
+          }
+        ],
+        "opsCount": 31,
+        "varMap": {
+          "pSVar6": ""
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 13,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_Threading_CancellationTokenSource_o *__this_00;\n\n  gmd_o *pgVar3;\n\n  Core_Engine_Messages_listener_T__o *pCVar4;\n\n  Core_UILogic_Components_Figma_PlayButton_o *pCVar5;\n\n  System_Action_VisualElement__o *b_00;\n\n  System_String_o *pSVar6;\n\n  ewm_o *peVar7;\n\n  longlong lVar8;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar9;\n\n  int iVar10;\n\n\n\n  if (DAT_186787fa8 == '\\0') {\n\n    FUN_1805658a0(&System_Action<VisualElement>_TypeInfo);\n\n    FUN_1805658a0(&Syst..."
+    },
+    {
+      "method": "fto",
+      "signature": "private void fto()",
+      "line": 386292,
+      "va": "0x1d96640",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 341,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787fa9 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (peVar3 == (ewy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (uVar2 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pIVar5[uVar17].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if ((lVar11 == 0) || (*(longlong *)(lVar11 + 0x18) == 0)) goto LAB_181d96a7c;"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)(*(longlong *)(lVar11 + 0x18) + 0x18) <= (int)uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((pCVar16 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if ((pSVar6->fields)._size == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdn",
+            "line": 152
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (peVar3 == (ewy_o *)0x0) goto LAB_181d96a7c;"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (uVar17 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pIVar5[uVar9].interfaceType == (Il2CppClass *)ewy_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if ((lVar11 == 0) || (lVar11 = *(longlong *)(lVar11 + 0x18), lVar11 == 0)) goto "
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if ((pSVar14 == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Split",
+            "line": 236,
+            "string_arg": "SldjeCNp74nRojhEyDtaMIOMm0N/xIV1TOVOBGAWD6k="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 240
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if ((int)pSVar13->max_length == 3) {"
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar13->m_Items[0] == (System_String_o *)0x0) goto LAB_181d96a7c;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 244
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (((peVar15 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "op_Equality",
+            "line": 266
+          },
+          {
+            "type": "IF",
+            "line": 268,
+            "condition": "if (bVar8) {"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 280,
+            "condition": "if ((int)pSVar13->max_length == 0) goto LAB_181d96a82;"
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if ((pSVar13->m_Items[0] == (System_String_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Trim",
+            "line": 284
+          },
+          {
+            "type": "IF",
+            "line": 296,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((((__this->fields).dwkc == (ewy_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(uint *)(lVar11 + 0x18) <= uVar18) goto LAB_181d96a82;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 330,
+            "string_arg": "RBY/2y2ADn36zLBL94a9C+JGhhjLnQGF0e0sPhrrKbo="
+          }
+        ],
+        "opsCount": 34,
+        "varMap": {
+          "pSVar12": "j/+y+38CAn4eSLMUOn7FJ0MiGY/33qcVugpAVM9iD6M=",
+          "pSVar14": "RBY/2y2ADn36zLBL94a9C+JGhhjLnQGF0e0sPhrrKbo="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 2
+      },
+      "bodyPreview": "{\n\n  longlong lVar1;\n\n  ushort uVar2;\n\n  ewy_o *peVar3;\n\n  ewy_c *peVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  System_Collections_Generic_List_ListElementBase__o *pSVar6;\n\n  code *pcVar7;\n\n  ushort uVar17;\n\n  bool bVar8;\n\n  ushort uVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  longlong lVar11;\n\n  System_String_o *pSVar12;\n\n  System_String_array *pSVar13;\n\n  System_String_o *pSVar14;\n\n  ewm_o *peVar15;\n\n  Core_UILogic_Components_Figma_Dropdown_o *pCVar16;\n\n  uint uVar18;\n\n  uint index;\n\n  Co..."
+    },
+    {
+      "method": "nso",
+      "signature": "private void nso(bdx a)",
+      "line": 386295,
+      "va": "0x1d97c80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 295,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787faa == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmjj",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "odi",
+      "signature": "private void odi(fyq a)",
+      "line": 386298,
+      "va": "0x1d97d10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 317,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (DAT_186787fab == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (((peVar6 != (ewm_o *)0x0) && (lVar7 = FUN_180007c70(8,ewm_TypeInfo,peVar6), "
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (a == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 92
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 174,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if ((pCVar8->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (a != 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pCVar8 != (Core_UILogic_Components_DofusLabel_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdh",
+            "line": 298
+          }
+        ],
+        "opsCount": 28,
+        "varMap": {
+          "pSVar9": "W5pB+R0eqpUWcftZv/DVTWusWNukwnbPkYFPZ6J+kLY="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  ewm_o *peVar6;\n\n  longlong lVar7;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar8;\n\n  System_String_o *pSVar9;\n\n  fys_Fields *__this_00;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787fab == '\\0') {\n\n    FUN_1805658a0(&Method_Core_Engine_OptionJSON_OptionJson<int>_set_property__);\n\n  ..."
+    },
+    {
+      "method": "fig",
+      "signature": "private void fig()",
+      "line": 386301,
+      "va": "0x1d965a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 299,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787fac == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmjl",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdl",
+            "line": 94
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 128
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 142
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "eol",
+      "signature": "private void eol(string a)",
+      "line": 386304,
+      "va": "0x1d96180",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 355,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186787fad == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (((peVar8 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Engine_Options_OptionNotLoadedException_",
+            "method": "ctor",
+            "line": 160
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (plVar13 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((char)SStackX_10.monitor == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (lVar4 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (lVar6 != 0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined4 uVar1;\n\n  longlong lVar2;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  undefined8 uVar5;\n\n  longlong lVar6;\n\n  char cVar7;\n\n  int32_t fwfLoaded;\n\n  ewm_o *peVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n  longlong lVar11;\n\n  longlong lVar12;\n\n  longlong *plVar13;\n\n  undefined8 uVar14;\n\n  longlong *plVar15;\n\n  Core_Engine_Options_OptionNotLoadedException_o *__this_00;\n\n  System_String_o *pSVar16;\n\n  longlong *plVar17;\n\n  System_String_o SStackX_10;\n\n  undefined8 auStack_90 [5];\n\n  longl..."
+    },
+    {
+      "method": "mcs",
+      "signature": "private void mcs()",
+      "line": 386307,
+      "va": "0x1d97310",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787fae == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "get_Token",
+            "line": 28
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (*(int *)&(System_Threading_CancellationToken_TypeInfo->_2).field_0x1c == 0) "
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) goto LAB_181d97"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Cancel",
+            "line": 46
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pSVar1 == (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "Dispose",
+            "line": 66
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Threading_CancellationTokenSource_o *pSVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_Rendering_UnifiedRayTracing_GeometryPool_VertexBufferAttribInfo_o UStackX_8;\n\n\n\n  if (DAT_186787fae == '\\0') {\n\n    FUN_1805658a0(&System_Threading_CancellationToken_TypeInfo);\n\n    DAT_186787fae = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dwke;\n\n  if (pSVar1 != (System_Threading_CancellationTokenSource_o *)0x0) {\n\n    UStackX_8.fields.buffer =\n\n         (UnityEngine_GraphicsBuffer_o *)\n\n     ..."
+    },
+    {
+      "method": "irx",
+      "signature": "private void irx(bdx a)",
+      "line": 386310,
+      "va": "0x1d96e30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 295,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787faf == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmjm",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "bjdn",
+      "signature": "private void bjdn()",
+      "line": 386313,
+      "va": "0x1d952a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 207,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fb0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 48
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 130,
+            "string_arg": "ui.connection.updaterConnectionFailed"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "key": "ui.connection.updaterConnectionFailed"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *key;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  ulonglong uStackX_8;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787fb0 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_Loc..."
+    },
+    {
+      "method": "lef",
+      "signature": "private void lef(bdx a)",
+      "line": 386316,
+      "va": "0x1d971e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 295,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186787fb1 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "bmjp",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (peVar3 == (ezf_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (DAT_186787f8a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_PlayButton_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_PlayButton",
+            "method": "SetEnabled",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (__this_02 != (Core_UILogic_Components_Figma_Dropdown_o *)0x0) {"
+          },
+          {
+            "type": "SET_ENABLED",
+            "class": "Core_UILogic_Components_Figma_Dropdown",
+            "method": "SetEnabled",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((__this->fields).super.dwqb != (fca_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  ezf_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  Core_UILogic_Components_Figma_PlayButton_o *__this_01;\n\n  Core_UILogic_Components_Figma_Dropdown_o *__this_02;\n\n  longlong lVar6;\n\n  undefined8 *****pppppuVar7;\n\n  longlong lVar8;\n\n  longlong lVar9;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *i..."
+    },
+    {
+      "method": "bjdi",
+      "signature": "private void bjdi(string a)",
+      "line": 386319,
+      "va": "0x1d94910",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 355,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186787fb2 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (((peVar8 == (ewm_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Engine_Options_OptionNotLoadedException_",
+            "method": "ctor",
+            "line": 160
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (plVar13 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((char)SStackX_10.monitor == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (lVar4 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (-1 < *(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar6 + 0x20) + 0xc0"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (lVar6 != 0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined4 uVar1;\n\n  longlong lVar2;\n\n  code *pcVar3;\n\n  longlong lVar4;\n\n  undefined8 uVar5;\n\n  longlong lVar6;\n\n  char cVar7;\n\n  int32_t fwfLoaded;\n\n  ewm_o *peVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n  longlong lVar11;\n\n  longlong lVar12;\n\n  longlong *plVar13;\n\n  undefined8 uVar14;\n\n  longlong *plVar15;\n\n  Core_Engine_Options_OptionNotLoadedException_o *__this_00;\n\n  System_String_o *pSVar16;\n\n  longlong *plVar17;\n\n  System_String_o SStackX_10;\n\n  undefined8 auStack_90 [5];\n\n  longl..."
+    },
+    {
+      "method": "iwh",
+      "signature": "public void iwh()",
+      "line": 386322,
+      "va": "0x1d96ec0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (DAT_186787fb3 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjds",
+            "line": 22
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource_",
+            "method": "ctor",
+            "line": 28
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 != (System_Threading_CancellationTokenSource_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Threading_CancellationTokenSource",
+            "method": "get_Token",
+            "line": 34
+          },
+          {
+            "type": "CALL",
+            "class": "fys",
+            "method": "bjdr",
+            "line": 38
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  System_Threading_CancellationTokenSource_o *__this_00;\n\n  System_Threading_CancellationToken_o a;\n\n  MethodInfo *method_00;\n\n  undefined1 uStackX_8;\n\n\n\n  if (DAT_186787fb3 == '\\0') {\n\n    FUN_1805658a0(&System_Threading_CancellationTokenSource_TypeInfo);\n\n    DAT_186787fb3 = '\\x01';\n\n  }\n\n  fys__bjds(__this,(MethodInfo *)0x0);\n\n  __this_00 = (System_Threading_CancellationTokenSource_o *)\n\n              func_0x000180565b00(System_Threading_CancellationTokenSource_TypeInfo);\n..."
+    },
+    {
+      "method": "nqz",
+      "signature": "private void nqz()",
+      "line": 386325,
+      "va": "0x1d97aa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 207,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fb4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 48
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pUVar4 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "SET_STYLE",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "get_style",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pUVar5 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Launcher_LauncherConnection",
+            "method": "get_isOpened",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 130,
+            "string_arg": "7U/25nQKnfY/Q+DQjOyp7koG46Y9yDPORKFcxqIinfw="
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (DAT_1867aa9cb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((pCVar6->fields).super.super.super.super.m_PickingMode != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pUVar1 != (UnityEngine_UIElements_BaseVisualElementPanel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "key": "7U/25nQKnfY/Q+DQjOyp7koG46Y9yDPORKFcxqIinfw="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_BaseVisualElementPanel_o *pUVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar4;\n\n  UnityEngine_UIElements_IStyle_o *pUVar5;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar6;\n\n  System_String_o *key;\n\n  undefined8 unaff_RDI;\n\n  fys_Fields *__this_00;\n\n  ulonglong uStackX_8;\n\n  undefined8 uStackX_18;\n\n\n\n  if (DAT_186787fb4 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_UIElements_IStyle_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_Loc..."
+    }
+  ]
+}

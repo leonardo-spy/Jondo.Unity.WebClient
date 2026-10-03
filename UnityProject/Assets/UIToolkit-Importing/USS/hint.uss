@@ -1,0 +1,98 @@
+﻿.hint-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.75);
+}
+
+.hint-panel-guided-mode {
+    background-color: rgba(20, 20, 20, 0);
+}
+
+.hint-panel-common-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hint-component {
+    position: absolute;
+}
+
+.hint-component__border-element {
+    width: 100%;
+    height: 100%;
+    border-width: 3;
+    border-color: rgb(127, 255, 234);
+    border-left-color: rgb(255, 235, 4);
+    border-right-color: rgb(255, 235, 4);
+    border-top-color: rgb(255, 235, 4);
+    border-bottom-color: rgb(255, 235, 4);
+}
+
+.hint-component__image-parent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hint-component__image-element {
+    width: 23px;
+    height: 23px;
+    background-image: url("/Assets/UI/USSTextures/subhint_selected.png");
+    translate: -50% -50%;
+    position: absolute;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.hint-component__help-button-element {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.image-top {
+    left: 50%;
+    top: 0;
+}
+
+.image-top-left {
+    left: 0;
+    top: 0;
+}
+
+.image-top-right {
+    left: 100%;
+    top: 0;
+}
+
+.image-left {
+    left: 0;
+    top: 50%;
+}
+
+.image-center {
+    left: 50%;
+    top: 50%;
+}
+
+.image-right {
+    left: 100%;
+    top: 50%;
+}
+
+.image-bottom {
+    left: 50%;
+    top: 100%;
+}
+
+.image-bottom-left {
+    left: 0;
+    top: 100%;
+}
+
+.image-bottom-right {
+    left: 100%;
+    top: 100%;
+}
+

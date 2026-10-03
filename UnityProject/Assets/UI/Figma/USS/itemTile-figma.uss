@@ -1,0 +1,1750 @@
+﻿.itemTile {
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium {
+    width: 72px;
+    height: 72px;
+}
+
+.itemTile.medium.inventory {
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile.medium.button.icon {
+    flex-direction: row;
+    --gap: 10px;
+}
+
+.itemTile.medium.button.icon:disabled {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.itemTile.medium.spell {
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile.medium.spell.asset {
+    border-radius: 12px;
+}
+
+.itemTile.small {
+    width: 48px;
+    height: 48px;
+}
+
+.itemTile.small.inventory {
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile.small.inventory.asset.selectedTrue.acquiredTrue.green {
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.itemTile.small.button.icon {
+    flex-direction: row;
+    --gap: 10px;
+}
+
+.itemTile.small.button.icon:disabled {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.itemTile.small.spell {
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile.small.spell.asset.draggedTrue {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.itemTile.xSmall.inventory {
+    width: 26px;
+    height: 26px;
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile.xSmall.button {
+    width: 32px;
+    height: 32px;
+}
+
+.itemTile.xSmall.button.icon {
+    flex-direction: row;
+    --gap: 10px;
+}
+
+.itemTile.xSmall.button.icon:disabled {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.itemTile.xSmall.spell {
+    width: 26px;
+    height: 26px;
+    --gap: 10px;
+    flex-direction: row;
+}
+
+.itemTile #itemTile_container {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium.navigation #itemTile_container {
+    border-radius: 8px;
+    padding: 2px 2px 2px 2px;
+}
+
+.itemTile.medium.navigation.asset.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.navigation.asset.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryPressed);
+}
+
+.itemTile.medium.navigation.asset.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --slots_selected);
+}
+
+.itemTile.medium.navigation.asset.selectedTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --slots_selectedHover);
+}
+
+.itemTile.medium.navigation.asset.acquiredFalse #itemTile_container {
+    background-color: var( --black_black35);
+}
+
+.itemTile.medium.inventory #itemTile_container {
+    border-radius: 2px;
+    padding: 2px 2px 2px 2px;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.gold #itemTile_container {
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.gold.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.gold:disabled #itemTile_container {
+    background-color: var( --black_black15);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.silver #itemTile_container {
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.silver.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.silver:disabled #itemTile_container {
+    background-color: var( --black_black15);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.withBackgroundFalse #itemTile_container {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.draggedTrue #itemTile_container {
+    background-color: var( --highlight_secondary80);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.multiple #itemTile_container {
+    background-color: var( --highlight_secondary100);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.inventory.asset.ghostTrue #itemTile_container {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory.asset.ghostTrue.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemTile.medium.inventory.asset.ghostTrue.acquiredTrue.withBackgroundFalse #itemTile_container {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.itemTile.medium.inventory.asset.selectedTrue #itemTile_container {
+    border-color: var( --highlight_primary80);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemTile.medium.inventory.asset.selectedTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue #itemTile_container {
+    background-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue.draggedTrue #itemTile_container {
+    background-color: var( --highlight_secondary80);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --white_white50);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.ghostTrue #itemTile_container {
+    opacity: 0.5;
+    background-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue #itemTile_container {
+    border-color: var( --highlight_primary80);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --white_white50);
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_container {
+    background-color: var( --black_black15);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse #itemTile_container {
+    background-color: var( --buttons_buttonNegative);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse.active:enabled #itemTile_container {
+    background-color: var( --buttons_buttonNegativePressed);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonNegativeHover);
+}
+
+.itemTile.medium.inventory.asset.partial #itemTile_container {
+    background-color: var( --buttons_buttonWarning);
+}
+
+.itemTile.medium.inventory.asset.partial.active:enabled #itemTile_container {
+    background-color: var( --buttons_buttonWarningPressed);
+}
+
+.itemTile.medium.inventory.asset.partial.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonWarningHover);
+}
+
+.itemTile.medium.inventory:disabled #itemTile_container {
+    background-color: var( --black_black15);
+}
+
+.itemTile.medium.cosmetic #itemTile_container {
+    border-radius: 8px;
+    padding: 2px 2px 2px 2px;
+}
+
+.itemTile.medium.cosmetic.asset.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemTile.medium.cosmetic.asset.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --slots_selected);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --slots_selectedHover);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredFalse #itemTile_container {
+    background-color: var( --white_white10);
+    border-color: var( --white_white25);
+    border-width: 2px;
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredFalse.hover:enabled #itemTile_container {
+    background-color: var( --white_white15);
+    border-color: var( --white_white50);
+}
+
+.itemTile.medium.cosmetic.asset.acquiredFalse #itemTile_container {
+    background-color: var( --black_black35);
+}
+
+.itemTile.medium.cosmetic.asset.acquiredFalse.hover:enabled #itemTile_container {
+    background-color: var( --black_black50);
+}
+
+.itemTile.medium.cosmetic.colorWheel.acquiredTrue #itemTile_container {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.itemTile.medium.cosmetic.colorWheel.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.itemTile.medium.cosmetic.colorWheel.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --slots_selected);
+}
+
+.itemTile.medium.cosmetic.colorWheel.selectedTrue.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --slots_selectedHover);
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse #itemTile_container {
+    background-color: var( --black_black35);
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse.hover:enabled #itemTile_container {
+    background-color: var( --black_black50);
+}
+
+.itemTile.medium.button #itemTile_container {
+    border-radius: 8px;
+    flex-direction: row;
+}
+
+.itemTile.medium.button.icon #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+    --shadow: var( --secondaryButton_innerShadowsEnabledHover);
+}
+
+.itemTile.medium.button.icon:disabled #itemTile_container {
+    background-color: var( --white_white10);
+}
+
+.itemTile.medium.button.icon.active:enabled #itemTile_container {
+    background-color: var( --white_white50);
+    --shadow: "inset 0px 1px rgba(255,255,255,0.4) | inset 0px -1px rgba(255,255,255,0.4)";
+}
+
+.itemTile.medium.button.icon.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryPressed);
+}
+
+.itemTile.medium.spell #itemTile_container {
+    border-radius: 12px;
+}
+
+.itemTile.small.inventory #itemTile_container {
+    border-radius: 2px;
+}
+
+.itemTile.small.inventory.asset.acquiredTrue #itemTile_container {
+    background-color: var( --white_white5);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.withBackgroundFalse #itemTile_container {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.blue #itemTile_container {
+    background-color: var( --preset_bluePreset50);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.blue.hover:enabled #itemTile_container {
+    background-color: var( --preset_bluePreset65);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.blue.active:enabled #itemTile_container {
+    background-color: var( --preset_bluePreset85);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.draggedTrue #itemTile_container {
+    background-color: var( --highlight_secondary100);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.draggedTrue.blue #itemTile_container {
+    background-color: var( --preset_bluePreset85);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.draggedTrue.green #itemTile_container {
+    background-color: var( --outfit_greenOutfit85);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.draggedTrue:disabled #itemTile_container {
+    background-color: var( --highlight_secondary50);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.green #itemTile_container {
+    background-color: var( --outfit_greenOutfit50);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.green.hover:enabled #itemTile_container {
+    background-color: var( --outfit_greenOutfit65);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.green.active:enabled #itemTile_container {
+    background-color: var( --outfit_greenOutfit85);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --white_white15);
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.active:enabled #itemTile_container {
+    background-color: var( --white_white35);
+}
+
+.itemTile.small.inventory.asset.ghostTrue #itemTile_container {
+    opacity: 0.5;
+}
+
+.itemTile.small.inventory.asset.ghostTrue.acquiredTrue #itemTile_container {
+    background-color: var( --white_white5);
+}
+
+.itemTile.small.inventory.asset.ghostTrue.partial #itemTile_container {
+    padding: 2px 2px 2px 2px;
+    background-color: var( --buttons_buttonWarning);
+}
+
+.itemTile.small.inventory.asset.ghostTrue.acquiredFalse #itemTile_container {
+    padding: 2px 2px 2px 2px;
+    background-color: var( --buttons_buttonNegative);
+}
+
+.itemTile.small.inventory.asset.selectedTrue.acquiredTrue #itemTile_container {
+    background-color: var( --white_white5);
+    border-color: var( --white_white100);
+    border-width: 1px;
+}
+
+.itemTile.small.inventory.asset.selectedTrue.acquiredTrue.green #itemTile_container {
+    background-color: var( --slots_selected);
+    border-color: rgb(0, 0, 0);
+    border-width: 0;
+}
+
+.itemTile.small.inventory.asset.selectedTrue.acquiredTrue.green.hover:enabled #itemTile_container {
+    background-color: var( --slots_selectedHover);
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_container {
+    padding: 2px 2px 2px 2px;
+    background-color: var( --black_black15);
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_container {
+    padding: 2px 2px 2px 2px;
+    background-color: var( --buttons_buttonWarning);
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_container {
+    padding: 2px 2px 2px 2px;
+    background-color: var( --buttons_buttonNegative);
+}
+
+.itemTile.small.button #itemTile_container {
+    border-radius: 8px;
+    flex-direction: row;
+}
+
+.itemTile.small.button.icon #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+    --shadow: var( --secondaryButton_innerShadowsEnabledHover);
+}
+
+.itemTile.small.button.icon:disabled #itemTile_container {
+    background-color: var( --white_white10);
+}
+
+.itemTile.small.button.icon.active:enabled #itemTile_container {
+    background-color: var( --white_white50);
+    --shadow: "inset 0px 1px rgba(255,255,255,0.4) | inset 0px -1px rgba(255,255,255,0.4)";
+}
+
+.itemTile.small.button.icon.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryPressed);
+}
+
+.itemTile.small.spell #itemTile_container {
+    border-radius: 8px;
+}
+
+.itemTile.xSmall.inventory #itemTile_container {
+    border-radius: 2px;
+}
+
+.itemTile.xSmall.inventory.asset.acquiredTrue:disabled #itemTile_container {
+    background-color: var( --white_white5);
+}
+
+.itemTile.xSmall.inventory.asset.acquiredTrue.hover:enabled #itemTile_container {
+    background-color: var( --white_white15);
+}
+
+.itemTile.xSmall.inventory.asset.acquiredTrue.active:enabled #itemTile_container {
+    background-color: var( --white_white35);
+}
+
+.itemTile.xSmall.button #itemTile_container {
+    border-radius: 4px;
+    flex-direction: row;
+}
+
+.itemTile.xSmall.button.icon #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryHover);
+    --shadow: var( --secondaryButton_innerShadowsEnabledHover);
+}
+
+.itemTile.xSmall.button.icon:disabled #itemTile_container {
+    background-color: var( --white_white10);
+}
+
+.itemTile.xSmall.button.icon.active:enabled #itemTile_container {
+    background-color: var( --white_white50);
+    --shadow: "inset 0px 1px rgba(255,255,255,0.4) | inset 0px -1px rgba(255,255,255,0.4)";
+}
+
+.itemTile.xSmall.button.icon.hover:enabled #itemTile_container {
+    background-color: var( --buttons_buttonSecondaryPressed);
+}
+
+.itemTile.xSmall.spell #itemTile_container {
+    border-radius: 4px;
+}
+
+.itemTile #itemTile_indicatorCircle {
+    position: absolute;
+    width: 8px;
+    min-width: 8px;
+    height: 8px;
+    min-height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    border-color: var( --black_black35);
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    --shadow: var( --dropShadows_light);
+}
+
+.itemTile.medium.navigation.asset.acquiredTrue #itemTile_indicatorCircle {
+    left: 6px;
+    top: 6px;
+    background-color: var( --qualitative_green100);
+}
+
+.itemTile.medium.navigation.asset.selectedTrue #itemTile_indicatorCircle {
+    left: 6px;
+    top: 6px;
+    background-color: var( --qualitative_green100);
+}
+
+.itemTile.medium.navigation.asset.acquiredFalse #itemTile_indicatorCircle {
+    left: 5px;
+    top: 6px;
+    background-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.navigation.asset.acquiredFalse.hover:enabled #itemTile_indicatorCircle {
+    left: 2px;
+    top: 3px;
+}
+
+.itemTile.medium.cosmetic.asset.acquiredTrue #itemTile_indicatorCircle {
+    left: 6px;
+    top: 6px;
+    background-color: var( --qualitative_green100);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue #itemTile_indicatorCircle {
+    top: 6px;
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredTrue #itemTile_indicatorCircle {
+    left: 6px;
+    background-color: var( --qualitative_green100);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredFalse #itemTile_indicatorCircle {
+    left: 6px;
+    background-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.cosmetic.asset.selectedTrue.acquiredFalse.hover:enabled #itemTile_indicatorCircle {
+    left: 5px;
+}
+
+.itemTile.medium.cosmetic.asset.acquiredFalse #itemTile_indicatorCircle {
+    left: 5px;
+    top: 6px;
+    background-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.cosmetic.asset.acquiredFalse.hover:enabled #itemTile_indicatorCircle {
+    left: 2px;
+    top: 3px;
+}
+
+.itemTile.medium.cosmetic.colorWheel #itemTile_indicatorCircle {
+    left: 6px;
+    top: 6px;
+    background-color: var( --qualitative_green100);
+}
+
+.itemTile.medium.cosmetic.icon #itemTile_indicatorCircle {
+    background-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse #itemTile_indicatorCircle {
+    left: 5px;
+    top: 6px;
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse.hover:enabled #itemTile_indicatorCircle {
+    left: 2px;
+    top: 3px;
+}
+
+.itemTile #itemTile_warning {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_warning {
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.medium.navigation #itemTile_warning {
+    right: 4px;
+    bottom: 4px;
+}
+
+.itemTile.medium.inventory #itemTile_warning {
+    right: 4px;
+    bottom: 4px;
+}
+
+.itemTile.medium.cosmetic #itemTile_warning {
+    right: 4px;
+    bottom: 4px;
+}
+
+.itemTile.medium.spell #itemTile_warning {
+    right: 2px;
+    bottom: 2px;
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_warning {
+    right: 4px;
+    bottom: 4px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_warning {
+    right: 2px;
+    bottom: 3px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile.small.inventory.asset.ghostTrue #itemTile_warning {
+    right: 2px;
+    bottom: 3px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_warning {
+    right: 2px;
+    bottom: 3px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile.small.spell #itemTile_warning {
+    right: 2px;
+    bottom: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.xSmall #itemTile_warning {
+    left: 7px;
+    top: 7px;
+    width: 12px;
+    min-width: 12px;
+    height: 12px;
+    min-height: 12px;
+}
+
+.itemTile #itemTile_warning_Vector {
+    width: 100%;
+    height: 100%;
+    --hasShadow: true;
+}
+
+.itemTile.medium.navigation #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.ghostTrue #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.selectedTrue #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.inventory.asset.partial #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_yellow100);
+}
+
+.itemTile.medium.inventory:disabled #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.cosmetic #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.medium.spell #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_yellow100);
+}
+
+.itemTile.small.inventory.asset.ghostTrue.partial #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_yellow100);
+}
+
+.itemTile.small.inventory.asset.ghostTrue.acquiredFalse #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.small.spell #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile.xSmall #itemTile_warning_Vector {
+    -unity-background-image-tint-color: var( --qualitative_red100);
+}
+
+.itemTile #itemTile_asset {
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium.navigation #itemTile_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.navigation.asset.acquiredFalse #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory #itemTile_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.gold:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.silver:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.multiple #itemTile_asset {
+    opacity: 0.75;
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.medium.cosmetic #itemTile_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.cosmetic.asset.acquiredFalse #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.medium.button #itemTile_asset {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 68px;
+    min-width: 68px;
+    height: 68px;
+    min-height: 68px;
+}
+
+.itemTile.medium.spell #itemTile_asset {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.itemTile.small.inventory #itemTile_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.small.inventory.asset.acquiredTrue.draggedTrue:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.small.inventory.asset.acquiredTrue:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.small.button #itemTile_asset {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+}
+
+.itemTile.small.spell #itemTile_asset {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.itemTile.xSmall.inventory #itemTile_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.xSmall.inventory.asset.acquiredTrue:disabled #itemTile_asset {
+    opacity: 0.5;
+}
+
+.itemTile.xSmall.button #itemTile_asset {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+}
+
+.itemTile.xSmall.spell #itemTile_asset {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.itemTile #itemTile_asset_asset {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.navigation #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.medium.inventory #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.medium.cosmetic #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.medium.button #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.medium.button.icon:disabled #itemTile_asset_asset {
+    opacity: 0.6;
+}
+
+.itemTile.medium.spell #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.small.inventory #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.small.button #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.small.button.icon:disabled #itemTile_asset_asset {
+    opacity: 0.6;
+}
+
+.itemTile.small.spell #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.xSmall.inventory #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.xSmall.button #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile.xSmall.button.icon:disabled #itemTile_asset_asset {
+    opacity: 0.6;
+}
+
+.itemTile.xSmall.spell #itemTile_asset_asset {
+    background-image: none;
+}
+
+.itemTile #itemTile_counter {
+    position: absolute;
+    -unity-text-align: middle-left;
+    -unity-text-outline-color: rgba(0, 0, 0, 0.5);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+    --labelShadow: "inset 0px 2px rgba(0,0,0,0.5)";
+    color: var( --white_white100);
+}
+
+.itemTile.medium #itemTile_counter {
+    left: 4px;
+    top: 2px;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset.ghostTrue #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset.selectedTrue #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory.asset.partial #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.inventory:disabled #itemTile_counter {
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.medium.spell #itemTile_counter {
+    --text-style: "textShort_largeBold";
+}
+
+.itemTile.small #itemTile_counter {
+    left: 4px;
+}
+
+.itemTile.small.inventory.asset.acquiredTrue #itemTile_counter {
+    top: 2px;
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.small.inventory.asset.ghostTrue.acquiredTrue #itemTile_counter {
+    top: 2px;
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.small.inventory.asset.ghostTrue.partial #itemTile_counter {
+    top: 3px;
+    --text-style: "textShort_mediumRegular";
+}
+
+.itemTile.small.inventory.asset.ghostTrue.acquiredFalse #itemTile_counter {
+    top: 3px;
+    --text-style: "textShort_mediumRegular";
+}
+
+.itemTile.small.inventory.asset.selectedTrue #itemTile_counter {
+    top: 2px;
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_counter {
+    top: 2px;
+    --text-style: "textShort_largeRegular";
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_counter {
+    top: 3px;
+    --text-style: "textShort_mediumRegular";
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_counter {
+    top: 3px;
+    --text-style: "textShort_mediumRegular";
+}
+
+.itemTile.small.spell #itemTile_counter {
+    top: 2px;
+    --text-style: "textShort_largeBold";
+}
+
+.itemTile.xSmall #itemTile_counter {
+    left: 2px;
+    top: -1px;
+    --text-style: "textShort_smallRegular";
+}
+
+.itemTile #itemTile_favorite {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_favorite {
+    right: 4px;
+    top: 4px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    min-height: 22px;
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_favorite {
+    right: 4px;
+    top: 4px;
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    min-height: 22px;
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_favorite {
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.small.inventory.asset.ghostTrue #itemTile_favorite {
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_favorite {
+    right: 2px;
+    top: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile #itemTile_favorite_Vector {
+    width: 100%;
+    height: 100%;
+    -unity-background-image-tint-color: var( --white_white80);
+    --hasShadow: true;
+}
+
+.itemTile #itemTile_link {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_link {
+    right: 2px;
+    bottom: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_link {
+    right: 2px;
+    bottom: 2px;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+}
+
+.itemTile.small.inventory.asset.partial #itemTile_link {
+    right: 1px;
+    bottom: -1px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile.small.inventory.asset.ghostTrue #itemTile_link {
+    right: 1px;
+    bottom: -1px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile.small.inventory.asset.acquiredFalse #itemTile_link {
+    right: 1px;
+    bottom: -1px;
+    width: 18px;
+    min-width: 18px;
+    height: 18px;
+    min-height: 18px;
+}
+
+.itemTile #itemTile_link_Vector {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.draggedTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.multiple #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.ghostTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.selectedTrue.acquiredTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.selectedTrue.acquiredTrue.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue.draggedTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.ghostTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue.acquiredTrue #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue.acquiredTrue.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse.active:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.acquiredFalse.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.partial #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.inventory.asset.partial.active:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory.asset.partial.hover:enabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.medium.inventory:disabled #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.cosmetic #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.small #itemTile_link_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile #itemTile_conditionalBG {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    border-color: var( --black_black80);
+    border-width: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_conditionalBG {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    min-height: 72px;
+}
+
+.itemTile.medium.inventory.asset.ghostTrue #itemTile_conditionalBG {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.ghostTrue #itemTile_conditionalBG {
+    opacity: 0.5;
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_conditionalBG {
+    opacity: 0.5;
+}
+
+.itemTile.small #itemTile_conditionalBG {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
+    opacity: 0.5;
+}
+
+.itemTile #itemTile_conditionalBG_color {
+    width: 100%;
+    height: 100%;
+    background-color: var( --highlight_secondary25);
+}
+
+.itemTile #itemTile_conditionalBG_white {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.ghostTrue.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.selectedTrue.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.ghostTrue.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset.favoriteTrue.selectedTrue.acquiredTrue #itemTile_conditionalBG_white {
+    opacity: 0.5;
+    background-color: var( --white_white100);
+    border-color: var( --white_white100);
+    border-width: 2px;
+}
+
+.itemTile.medium.inventory.asset:disabled #itemTile_conditionalBG_white {
+    border-color: var( --white_white100);
+    background-color: var( --white_white100);
+    border-width: 2px;
+    opacity: 0.5;
+}
+
+.itemTile.small.inventory.asset:disabled #itemTile_conditionalBG_white {
+    border-color: var( --white_white100);
+    background-color: var( --white_white100);
+    border-width: 2px;
+    opacity: 0.5;
+}
+
+.itemTile #itemTile_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.itemTile.medium #itemTile_overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.inventory #itemTile_overlay {
+    border-radius: 2px;
+    background-color: var( --black_black35);
+}
+
+.itemTile.medium.spell #itemTile_overlay {
+    border-radius: 12px;
+}
+
+.itemTile.medium.spell.asset.draggedTrue #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.medium.spell.asset.active:enabled #itemTile_overlay {
+    background-color: var( --white_white35);
+}
+
+.itemTile.medium.spell.asset.hover:enabled #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.small #itemTile_overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.small.inventory #itemTile_overlay {
+    border-radius: 2px;
+    background-color: var( --black_black35);
+}
+
+.itemTile.small.spell #itemTile_overlay {
+    border-radius: 8px;
+}
+
+.itemTile.small.spell.asset.draggedTrue #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.small.spell.asset.draggedTrue:disabled #itemTile_overlay {
+    background-color: var( --black_black35);
+}
+
+.itemTile.small.spell.asset:disabled #itemTile_overlay {
+    background-color: var( --black_black50);
+}
+
+.itemTile.small.spell.asset.hover:enabled #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.small.spell.asset.active:enabled #itemTile_overlay {
+    background-color: var( --white_white35);
+}
+
+.itemTile.xSmall #itemTile_overlay {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.itemTile.xSmall.spell.asset.draggedTrue #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.xSmall.spell.asset:disabled #itemTile_overlay {
+    background-color: var( --black_black50);
+}
+
+.itemTile.xSmall.spell.asset.hover:enabled #itemTile_overlay {
+    background-color: var( --white_white15);
+}
+
+.itemTile.xSmall.spell.asset.active:enabled #itemTile_overlay {
+    background-color: var( --white_white35);
+}
+
+.itemTile #itemTile_circleTick {
+    position: absolute;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.itemTile.small #itemTile_circleTick {
+    right: 2px;
+    top: 2px;
+}
+
+.itemTile.medium #itemTile_circleTick {
+    right: 4px;
+    top: 4px;
+}
+
+.itemTile #itemTile_Vector {
+    position: absolute;
+    left: 6.25%;
+    top: 6.25%;
+    width: 100%;
+    height: 100%;
+    -unity-background-image-tint-color: var( --white_white100);
+    --hasShadow: true;
+}
+
+.itemTile #itemTile_stackShadow {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    min-height: 72px;
+    overflow: hidden;
+    border-radius: 2px;
+    padding: 2px 2px 2px 2px;
+    background-color: var( --black_black25);
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile #itemTile_stack {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    min-height: 72px;
+    overflow: hidden;
+    border-radius: 2px;
+    padding: 2px 2px 2px 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.draggedTrue #itemTile_stack {
+    background-color: var( --highlight_secondary80);
+}
+
+.itemTile.medium.inventory.asset.acquiredTrue.multiple #itemTile_stack {
+    background-color: var( --highlight_secondary100);
+}
+
+.itemTile #itemTile_tag {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    overflow: hidden;
+    border-radius: 4px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    --shadow: var( --dropShadows_medium);
+}
+
+.itemTile #itemTile_tag_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    --gap: 1px;
+    padding: 2px 4px 2px 4px;
+    background-color: var( --white_white100);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile #itemTile_label {
+    -unity-text-align: middle-left;
+    --text-style: "label_small";
+    color: var( --black_black65);
+}
+
+.itemTile #itemTile_ColorPalette {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    justify-content: center;
+    align-items: center;
+    --shadow: var( --transversal_dropShadowMedium);
+}
+
+.itemTile #itemTile_ColorPalette_Vector {
+    width: 100%;
+    height: 100%;
+    -unity-background-image-tint-color: rgb(255, 175, 237);
+}
+
+.itemTile #itemTile_icon {
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_icon {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    min-height: 32px;
+}
+
+.itemTile.medium.button #itemTile_icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.itemTile.medium.button.icon:disabled #itemTile_icon {
+    opacity: 0.5;
+}
+
+.itemTile.xSmall #itemTile_icon {
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+}
+
+.itemTile.xSmall.button.icon:disabled #itemTile_icon {
+    opacity: 0.5;
+}
+
+.itemTile.small #itemTile_icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    min-height: 24px;
+}
+
+.itemTile.small.button.icon:disabled #itemTile_icon {
+    opacity: 0.5;
+}
+
+.itemTile #itemTile_icon_Vector {
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.cosmetic.icon.acquiredFalse.hover:enabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white50);
+}
+
+.itemTile.medium.button #itemTile_icon_Vector {
+    --hasShadow: true;
+}
+
+.itemTile.medium.button.icon #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --highlight_secondary100);
+}
+
+.itemTile.medium.button.icon:disabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.medium.button.icon.active:enabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.xSmall #itemTile_icon_Vector {
+    --hasShadow: true;
+}
+
+.itemTile.xSmall.button.icon #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --highlight_secondary100);
+}
+
+.itemTile.xSmall.button.icon:disabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.xSmall.button.icon.active:enabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile.small #itemTile_icon_Vector {
+    --hasShadow: true;
+}
+
+.itemTile.small.button.icon #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --highlight_secondary100);
+}
+
+.itemTile.small.button.icon:disabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white25);
+}
+
+.itemTile.small.button.icon.active:enabled #itemTile_icon_Vector {
+    -unity-background-image-tint-color: var( --white_white80);
+}
+
+.itemTile #itemTile_twinkle {
+    width: 100%;
+    height: 100%;
+    --gap: 10px;
+    background-color: var( --buttons_buttonPrimary);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemTile.medium #itemTile_twinkle {
+    border-radius: 8px;
+}
+
+.itemTile.medium.button.icon #itemTile_twinkle {
+    padding: 10px 10px 10px 10px;
+}
+
+.itemTile.xSmall #itemTile_twinkle {
+    border-radius: 4px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemTile.small #itemTile_twinkle {
+    border-radius: 8px;
+    padding: 10px 10px 10px 10px;
+}
+
+.itemTile__timer {
+    background-color: rgba(101, 101, 101, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.itemTile__ctr-timer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+

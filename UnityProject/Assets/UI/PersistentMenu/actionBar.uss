@@ -1,0 +1,98 @@
+﻿.actionBar {
+    width: 706px;
+    height: auto;
+}
+
+#gd_spellitemotes {
+    width: 624px;
+    height: auto;
+}
+
+#ctr_lines {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#ctr_lines > DofusVisualElement {
+    flex-direction: row;
+}
+
+#ctr_controller {
+    flex-direction: row;
+}
+
+#ctr_pages {
+    display: none;
+    flex-direction: column;
+}
+
+.mainBar #ctr_pages {
+    display: flex;
+}
+
+.mainBar #ctr_lineTag {
+    display: none;
+}
+
+#btn_prev:disabled {
+    visibility: hidden;
+}
+
+#btn_next:disabled {
+    visibility: hidden;
+}
+
+.lineTag {
+    width: 16px;
+    height: 44px;
+}
+
+.actionBar.vertical {
+    width: auto;
+    height: 724px;
+}
+
+.vertical #header_content {
+    display: none;
+}
+
+.vertical #header-widget {
+    flex-direction: row-reverse;
+    margin-right: -4px;
+}
+
+.vertical #ctr_lines {
+    flex-direction: column-reverse;
+}
+
+.vertical #ctr_lines > DofusVisualElement {
+    flex-direction: column;
+}
+
+.vertical #ctr_controller {
+    flex-direction: column-reverse;
+}
+
+.vertical #ctr_pages {
+    flex-direction: row;
+}
+
+.vertical #ctr_lineTag {
+    flex-direction: row;
+}
+
+.vertical #gd_spellitemotes {
+    width: auto;
+    height: 624px;
+}
+
+.vertical .lineTag {
+    width: 44px;
+    height: 16px;
+}
+
+.vertical #lineTag_background {
+    rotate: -90deg;
+}
+

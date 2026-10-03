@@ -1,0 +1,26 @@
+﻿.btn-tab .unity-label {
+    font-size: 14px;
+    color: rgb(196, 196, 196);
+    -unity-text-align: middle-center;
+    -unity-font-definition: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.btn-tab .unity-label:hover {
+    color: rgb(222, 255, 0);
+}
+
+.btn-tab #tx_greenLine {
+    display: none;
+}
+
+.btn-tab--selected .unity-label {
+    font-size: 14px;
+    color: rgb(222, 255, 0);
+    -unity-text-align: upper-center;
+    -unity-font-definition: url("/Assets/Resources/DefaultFont.asset");
+}
+
+.btn-tab--selected #tx_greenLine {
+    display: flex;
+}
+

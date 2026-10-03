@@ -1,0 +1,28 @@
+﻿#btn_eye:hover {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_normal.png");
+}
+
+#btn_eye {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_normal.png");
+}
+
+#btn_eye:active {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_normal.png");
+}
+
+#btn_eye:focus {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_selected.png");
+}
+
+#btn_eye:focus:hover {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_selected.png");
+}
+
+#btn_eye:focus:active {
+    --bgTexturebtn_eyeImgVar: url("/Assets/UI/Themes/darkStone/texture/icon_eye_selected.png");
+}
+
+#bgTexturebtn_eye {
+    background-image: var( --bgTexturebtn_eyeImgVar);
+}
+

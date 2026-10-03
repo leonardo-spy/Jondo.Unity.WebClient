@@ -1,0 +1,32 @@
+﻿#item_main {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.selected {
+    --shadow: "inset 2px 2px var(--highlight_primary100) | inset -2px -2px var(--highlight_primary100)";
+}
+
+#btn_item:hover {
+    background-color: var( --white_white10);
+}
+
+#btn_item:active {
+    background-color: var( --white_white25);
+}
+
+#btn_item:hover #lbl_storeTime {
+    color: var( --white_white100);
+}
+
+#btn_item:active #lbl_storeTime {
+    color: var( --white_white100);
+}
+
+#btn_item:hover #lbl_itemStack {
+    color: var( --white_white100);
+}
+
+#btn_item:active #lbl_itemStack {
+    color: var( --white_white100);
+}
+

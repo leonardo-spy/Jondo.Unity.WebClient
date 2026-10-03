@@ -1,0 +1,43 @@
+﻿#btn_addContact:hover {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact:active {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact:disabled {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact:focus {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact:focus:hover {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#btn_addContact:focus:active {
+    --bgTexturebtn_addContactImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+    --iconTexturebtn_addContactImgVar: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_add_friend.png");
+}
+
+#bgTexturebtn_addContact {
+    background-image: var( --bgTexturebtn_addContactImgVar);
+}
+
+#iconTexturebtn_addContact {
+    background-image: var( --iconTexturebtn_addContactImgVar);
+}
+

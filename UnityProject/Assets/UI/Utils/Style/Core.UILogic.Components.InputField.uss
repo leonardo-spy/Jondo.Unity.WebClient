@@ -1,0 +1,384 @@
+﻿.search-field {
+    width: 295px;
+    min-width: 32px;
+    background-image: url("/Assets/UI/Themes/darkStone/common/bg_small_border_dark.png");
+    min-height: 30px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-items: center;
+    flex: none;
+    flex-direction: row;
+    border-radius: 3px;
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 44px;
+}
+
+.search-field__search-button {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-image: url("/Assets/UI/Themes/darkStone/texture/icon_magnifier.png");
+}
+
+.search-field__search-button:hover {
+    background-color: transparent;
+}
+
+.search-field__text-field {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    visibility: visible;
+    margin-right: 5px;
+    justify-content: flex-start;
+    height: 100%;
+    --unity-cursor-color: rgb(200, 200, 200);
+    --unity-selection-color: rgb(128, 128, 128);
+}
+
+.search-field__text-field:focus {
+    background-image: none;
+}
+
+.search-field__input {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    border-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(210, 210, 210);
+    -unity-text-align: middle-left;
+}
+
+.search-field__cancel-button {
+    width: 20px;
+    height: 20px;
+    background-image: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    visibility: visible;
+    display: flex;
+    margin-right: 4px;
+    background-color: transparent;
+}
+
+.search-field__cancel-button:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+    background-color: transparent;
+}
+
+.search-field__cancel-button--off {
+    background-image: none;
+    visibility: hidden;
+}
+
+.search-field__text-field--transparentCursor {
+    --unity-cursor-color: rgba(0, 0, 0, 0);
+}
+
+.search-field__placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 25px;
+    color: rgb(128, 128, 128);
+    -unity-font-style: italic;
+    padding-left: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -unity-text-align: middle-left;
+}
+
+.search-field__placeholder--off {
+    visibility: hidden;
+}
+
+.search-field:disabled .search-field__search-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-field:disabled .search-field__text-field {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-field:disabled .search-field__cancel-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-field:disabled .search-field__placeholder {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.search-field:disabled .search-field__input {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dofus-text-field {
+    width: 295px;
+    min-width: 32px;
+    background-image: url("/Assets/UI/Themes/darkStone/common/bg_small_border_dark.png");
+    min-height: 30px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-items: center;
+    flex: none;
+    flex-direction: row;
+    border-radius: 3px;
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 44px;
+}
+
+.dofus-text-field__icon {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.dofus-text-field__icon--off {
+    display: none;
+}
+
+.dofus-text-field__text-field {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    visibility: visible;
+    margin-right: 5px;
+    justify-content: flex-start;
+    height: 100%;
+    --unity-cursor-color: rgb(200, 200, 200);
+    --unity-selection-color: rgb(128, 128, 128);
+}
+
+.dofus-text-field__text-field:focus {
+    background-image: none;
+}
+
+.dofus-text-field__input {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    border-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(210, 210, 210);
+    -unity-text-align: middle-left;
+}
+
+.dofus-text-field__cancel-button {
+    width: 20px;
+    height: 20px;
+    background-image: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    visibility: visible;
+    display: flex;
+    margin-right: 4px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dofus-text-field__cancel-button:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+    background-color: transparent;
+}
+
+.dofus-text-field__cancel-button--off {
+    background-image: none;
+    visibility: hidden;
+}
+
+.dofus-text-field__cancel-button--noButton {
+    display: none;
+}
+
+.dofus-text-field__text-field--transparentCursor {
+    --unity-cursor-color: rgba(0, 0, 0, 0);
+}
+
+.dofus-text-field__placeholder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 30px;
+    color: rgb(128, 128, 128);
+    -unity-font-style: italic;
+    padding-left: 35px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    -unity-text-align: middle-left;
+}
+
+.dofus-text-field__placeholder--off {
+    visibility: hidden;
+}
+
+.dofus-text-field__placeholder--noIcon {
+    padding-left: 10px;
+}
+
+.dofus-integer-field {
+    width: 150px;
+    min-width: 32px;
+    background-image: url("/Assets/UI/Themes/darkStone/common/bg_small_border_dark.png");
+    min-height: 30px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    align-items: center;
+    flex: none;
+    flex-direction: row;
+    border-radius: 3px;
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-slice-left: 8;
+    -unity-slice-top: 8;
+    -unity-slice-right: 8;
+    -unity-slice-bottom: 8;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: 50px;
+}
+
+.dofus-integer-field__icon {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    margin-left: 2px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.dofus-integer-field__icon--off {
+    display: none;
+}
+
+.dofus-integer-field__text-field {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    visibility: visible;
+    margin-right: 5px;
+    justify-content: flex-start;
+    height: 100%;
+    --unity-cursor-color: rgb(200, 200, 200);
+    --unity-selection-color: rgb(128, 128, 128);
+}
+
+.dofus-integer-field__text-field:focus {
+    background-image: none;
+}
+
+.dofus-integer-field__input {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    border-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(210, 210, 210);
+    -unity-text-align: middle-right;
+}
+
+.dofus-integer-field__cancel-button {
+    width: 20px;
+    height: 20px;
+    background-image: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    visibility: visible;
+    display: flex;
+    margin-right: 4px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dofus-integer-field__cancel-button:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+    background-color: transparent;
+}
+
+.dofus-integer-field__cancel-button--off {
+    background-image: none;
+    visibility: hidden;
+}
+
+.dofus-integer-field__cancel-button--noButton {
+    display: none;
+    visibility: hidden;
+}
+
+.dofus-integer-field__text-field--transparentCursor {
+    --unity-cursor-color: rgba(0, 0, 0, 0);
+}
+

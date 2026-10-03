@@ -1,0 +1,1777 @@
+{
+  "type": "fyv",
+  "methodCount": 26,
+  "transcribed": 26,
+  "methods": [
+    {
+      "method": "kyy",
+      "signature": "private void kyy()",
+      "line": 386411,
+      "va": "0x1d98b60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbe == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo,0);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbe = '\\x01';\n\n  }\n\n  peV..."
+    },
+    {
+      "method": "wt",
+      "signature": "private void wt()",
+      "line": 386414,
+      "va": "0x1d9a190",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fb9 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "DX94MRoXEC07hx2Iw6HLwt8SQTeJgi1QB640PBffhnY="
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_1867a4661 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pSVar1 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if ((pSVar1->fields)._stringLength == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (DAT_1867831d7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "GetRawStringData",
+            "line": 144,
+            "string_arg": "DX94MRoXEC07hx2Iw6HLwt8SQTeJgi1QB640PBffhnY="
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (_DAT_1867a4710 == (code *)0x0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {
+          "pSVar1": "DX94MRoXEC07hx2Iw6HLwt8SQTeJgi1QB640PBffhnY="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_String_o *pSVar1;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericStructType_o *pUVar2;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *apUStackX_8 [4];\n\n  System_Span_T__o SStack_48;\n\n  undefined1 auStack_38 [8];\n\n  undefined1 *puStack_30;\n\n  undefined8 uStack_28;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o **ppUStack_20;\n\n  Unity_Hierarchy_ReadOnlyNativeVector_T__o UStack_18;\n\n\n\n  if (DAT_186787fb9 == '\\0') {\n\n    puStack_30 = (undefined1 *)0x181d9a1ab;\n..."
+    },
+    {
+      "method": "bjdx",
+      "signature": "private faa bjdx()",
+      "line": 386418,
+      "va": "0x126c270",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return (__this->fields).m_OnValidateInput;\n\n}"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(VisualElement a, fca b, faa c)",
+      "line": 386421,
+      "va": "0x1d98570",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 511,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (DAT_186787fba == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (__this_00 != (System_Configuration_ConfigurationCollectionAttribute_o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "GetLocalized",
+            "line": 118,
+            "string_arg": "ui.common.mainMenu"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pCVar4 != (Core_UILogic_Components_Figma_WindowFigma_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Components_Figma_WindowFigma",
+            "method": "set_title",
+            "line": 122,
+            "string_arg": "ui.common.mainMenu"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 134,
+            "string_arg": "ui.common.options"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Components_Figma_DofusButtonCustom",
+            "method": "set_text",
+            "line": 138,
+            "string_arg": "ui.common.options"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 150,
+            "string_arg": "ui.common.quitGame"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Components_Figma_DofusButtonCustom",
+            "method": "set_text",
+            "line": 154,
+            "string_arg": "ui.common.quitGame"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 168,
+            "string_arg": "ui.common.cancel"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 186,
+            "string_arg": "ui.header.subscribe"
+          },
+          {
+            "type": "IF",
+            "line": 190,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (*(int *)&(gmf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (pCVar7 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if ((__this->fields)._dwki_k__BackingField != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (cVar3 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 314
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 336
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (pCVar4 != (Core_UILogic_Components_Figma_WindowFigma_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 358
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 374
+          },
+          {
+            "type": "IF",
+            "line": 376,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 390
+          },
+          {
+            "type": "IF",
+            "line": 392,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 406
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if (pCVar6 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 450,
+            "condition": "if (*pcVar10 == '\\0') {"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {
+          "pSVar5": "ui.information.safeAccount"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 14,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  longlong lVar1;\n\n  code *pcVar2;\n\n  char cVar3;\n\n  System_Configuration_ConfigurationCollectionAttribute_o *__this_00;\n\n  Core_UILogic_Components_Figma_WindowFigma_o *pCVar4;\n\n  System_String_o *pSVar5;\n\n  Core_UILogic_Components_Figma_DofusButtonCustom_o *pCVar6;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar7;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *pCVar8;\n\n  fbj_o *tooltipService;\n\n  Core_UILogic_Components_Tooltips_TooltipManipulator_o *__this_01;\n\n  System_Action_Visual..."
+    },
+    {
+      "method": "ikk",
+      "signature": "private void ikk()",
+      "line": 386424,
+      "va": "0x1d998f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbb == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cxf>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbb == '\\0') {\n\n    FUN_1805658a0(&cxf_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<cxf>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbb = '\\x01';\n\n  }\n\n  peVar8 = f..."
+    },
+    {
+      "method": "bjdz",
+      "signature": "private void bjdz()",
+      "line": 386427,
+      "va": "0x1d98b70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fbc == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "cmu_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 80
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  cmu_o *__this_00;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_01;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbc == '\\0') {\n\n    FUN_1805658a0(&cmu_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cmu>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbc = ..."
+    },
+    {
+      "method": "bjdy",
+      "signature": "private void bjdy()",
+      "line": 386430,
+      "va": "0x1d98b60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbe == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo,0);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbe = '\\x01';\n\n  }\n\n  peV..."
+    },
+    {
+      "method": "nxb",
+      "signature": "private void nxb()",
+      "line": 386433,
+      "va": "0x1d98b60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbe == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo,0);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbe = '\\x01';\n\n  }\n\n  peV..."
+    },
+    {
+      "method": "faq",
+      "signature": "private void faq()",
+      "line": 386436,
+      "va": "0x1d99580",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 135,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fbd == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "319avOsPWJvDFotQudhJFZs863SVi1EoKWvj0xVcAac="
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 72,
+            "string_arg": "SELCbGgiJjHe7r4WxLb1W/ICQ0mLy+tTDTKTgCuFhWY="
+          },
+          {
+            "type": "CALL",
+            "class": "fon_",
+            "method": "ctor",
+            "line": 76,
+            "string_arg": "SELCbGgiJjHe7r4WxLb1W/ICQ0mLy+tTDTKTgCuFhWY="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "FeQIdhbcrXkWuZWnzDtjcnWI4RMZtxt8Vm5fNY6lBlk="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 100,
+            "string_arg": "AeCufkQVVMoz0TZEh9LOIQqjo3FNXciMIKh9d+pwszw="
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 108
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pfVar6 != (fac_o *)0x0) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar3": "AeCufkQVVMoz0TZEh9LOIQqjo3FNXciMIKh9d+pwszw=",
+          "pSVar4": "SELCbGgiJjHe7r4WxLb1W/ICQ0mLy+tTDTKTgCuFhWY="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 9,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  System_String_o *pSVar3;\n\n  System_String_o *pSVar4;\n\n  fon_o *__this_00;\n\n  System_Action_o *pSVar5;\n\n  fop_o *__this_01;\n\n  fop_o *__this_02;\n\n  fac_o *pfVar6;\n\n\n\n  if (DAT_186787fbd == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_LocalizedStringUtilities_TypeInfo);\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInf..."
+    },
+    {
+      "method": "bjed",
+      "signature": "private void bjed()",
+      "line": 386439,
+      "va": "0x1d99020",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbe == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbe = '\\x01';\n\n  }\n\n  peVar..."
+    },
+    {
+      "method": "lky",
+      "signature": "private void lky()",
+      "line": 386442,
+      "va": "0x1d9a050",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbf == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbf == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbf = '\\x01';\n\n  }\n\n  peVar..."
+    },
+    {
+      "method": "bjef",
+      "signature": "private void bjef()",
+      "line": 386446,
+      "va": "0x1d99200",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787fc0 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "cms_",
+            "method": "ctor",
+            "line": 32
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t a;\n\n  code *pcVar1;\n\n  ezp_o *peVar2;\n\n  cms_o *__this_00;\n\n\n\n  if (DAT_186787fc0 == '\\0') {\n\n    FUN_1805658a0(&cms_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cms>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fc0 = '\\x01';\n\n  }\n\n  peVar2 = fzy<__Il2CppFullySharedGenericType>__bjmn\n\n                     ((fzy_a__o *)__this,_Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n  a = (__this->fields).dwkj;\n\n  __this_00 = (cms_o *)func_0x000180565b00(c..."
+    },
+    {
+      "method": "cbq",
+      "signature": "private void cbq()",
+      "line": 386449,
+      "va": "0x1d992c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 135,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc1 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "S++u1fahf8m6SzcN9i/uG7iDSPIgtsEIuhg/A3GP4Bs="
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 72,
+            "string_arg": "iuH/29tBFTDfD5Lfui1d3lsbu/lnVMOULaUb3mJ7WCo="
+          },
+          {
+            "type": "CALL",
+            "class": "fon_",
+            "method": "ctor",
+            "line": 76,
+            "string_arg": "iuH/29tBFTDfD5Lfui1d3lsbu/lnVMOULaUb3mJ7WCo="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "ahyDFC8SQHduGBMQI+JOjbpgqFXU57M1HmquNiY3zWQ="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 100,
+            "string_arg": "dZ2pSK9I20OKT0GycUtWjiMB0wJVgmlO9cVkClE3Sq8="
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 108
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pfVar6 != (fac_o *)0x0) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar3": "dZ2pSK9I20OKT0GycUtWjiMB0wJVgmlO9cVkClE3Sq8=",
+          "pSVar4": "iuH/29tBFTDfD5Lfui1d3lsbu/lnVMOULaUb3mJ7WCo="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 9,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  System_String_o *pSVar3;\n\n  System_String_o *pSVar4;\n\n  fon_o *__this_00;\n\n  System_Action_o *pSVar5;\n\n  fop_o *__this_01;\n\n  fop_o *__this_02;\n\n  fac_o *pfVar6;\n\n\n\n  if (DAT_186787fc1 == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_LocalizedStringUtilities_TypeInfo);\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInf..."
+    },
+    {
+      "method": "get_m_canTakeFocus",
+      "signature": "protected override bool get_m_canTakeFocus()",
+      "line": 386452,
+      "va": "0xdbdd50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return true;\n\n}"
+    },
+    {
+      "method": "bjea",
+      "signature": "private void bjea()",
+      "line": 386455,
+      "va": "0x1d98c20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc2 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "ui.link.subscribe"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_1867a4661 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pSVar1 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if ((pSVar1->fields)._stringLength == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (DAT_1867831d7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "GetRawStringData",
+            "line": 144,
+            "string_arg": "ui.link.subscribe"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (_DAT_1867a4710 == (code *)0x0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {
+          "pSVar1": "ui.link.subscribe"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_String_o *pSVar1;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericStructType_o *pUVar2;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *apUStackX_8 [4];\n\n  System_Span_T__o SStack_48;\n\n  undefined1 auStack_38 [8];\n\n  undefined1 *puStack_30;\n\n  undefined8 uStack_28;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o **ppUStack_20;\n\n  Unity_Hierarchy_ReadOnlyNativeVector_T__o UStack_18;\n\n\n\n  if (DAT_186787fc2 == '\\0') {\n\n    puStack_30 = (undefined1 *)0x181d98c3b;\n..."
+    },
+    {
+      "method": "hvk",
+      "signature": "private void hvk()",
+      "line": 386458,
+      "va": "0x1d99840",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fc3 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "cmu_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 80
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  ezp_o *peVar8;\n\n  cmu_o *__this_01;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fc3 == '\\0') {\n\n    FUN_1805658a0(&cmu_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cmu>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fc3 = ..."
+    },
+    {
+      "method": "ss",
+      "signature": "private void ss()",
+      "line": 386461,
+      "va": "0x1d9a0f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "a0zgCL9tSGeVS3GPSnIRRcZhHZZcwXNkjqqVzRhooFI="
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_1867a4661 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pSVar1 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if ((pSVar1->fields)._stringLength == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (DAT_1867831d7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "GetRawStringData",
+            "line": 144,
+            "string_arg": "a0zgCL9tSGeVS3GPSnIRRcZhHZZcwXNkjqqVzRhooFI="
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (_DAT_1867a4710 == (code *)0x0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {
+          "pSVar1": "a0zgCL9tSGeVS3GPSnIRRcZhHZZcwXNkjqqVzRhooFI="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_String_o *pSVar1;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericStructType_o *pUVar2;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *apUStackX_8 [4];\n\n  System_Span_T__o SStack_48;\n\n  undefined1 auStack_38 [8];\n\n  undefined1 *puStack_30;\n\n  undefined8 uStack_28;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o **ppUStack_20;\n\n  Unity_Hierarchy_ReadOnlyNativeVector_T__o UStack_18;\n\n\n\n  if (DAT_186787fc4 == '\\0') {\n\n    puStack_30 = (undefined1 *)0x181d9a10b;\n..."
+    },
+    {
+      "method": "get_m_appearEffects",
+      "signature": "protected override bool get_m_appearEffects()",
+      "line": 386464,
+      "va": "0xdbdd50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return true;\n\n}"
+    },
+    {
+      "method": "inx",
+      "signature": "private void inx()",
+      "line": 386467,
+      "va": "0x1d99990",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 135,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "g8P3Q8u/ToNKRhHnjWZtm2K19gqkFyJdnJjc38Me+QY="
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 72,
+            "string_arg": "EphLXRNf2LL+2X5FD8DvEXzVUIZHaZVroZmmMuJvvyw="
+          },
+          {
+            "type": "CALL",
+            "class": "fon_",
+            "method": "ctor",
+            "line": 76,
+            "string_arg": "EphLXRNf2LL+2X5FD8DvEXzVUIZHaZVroZmmMuJvvyw="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "TAvU9BsQhwLdRAzKmdxO26jLY+7Nc76pAuC7ebmlz48="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 100,
+            "string_arg": "+QPs+vVsTU2pA13L0sVKyokXC9Fe2U0r8TtUDkk3dHw="
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 108
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pfVar6 != (fac_o *)0x0) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar3": "+QPs+vVsTU2pA13L0sVKyokXC9Fe2U0r8TtUDkk3dHw=",
+          "pSVar4": "EphLXRNf2LL+2X5FD8DvEXzVUIZHaZVroZmmMuJvvyw="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 9,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  System_String_o *pSVar3;\n\n  System_String_o *pSVar4;\n\n  fon_o *__this_00;\n\n  System_Action_o *pSVar5;\n\n  fop_o *__this_01;\n\n  fop_o *__this_02;\n\n  fac_o *pfVar6;\n\n\n\n  if (DAT_186787fc5 == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_LocalizedStringUtilities_TypeInfo);\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInf..."
+    },
+    {
+      "method": "bjeb",
+      "signature": "private void bjeb()",
+      "line": 386470,
+      "va": "0x1d98cc0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 135,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc6 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "ui.common.confirm"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 72,
+            "string_arg": "ui.common.confirmQuitGame"
+          },
+          {
+            "type": "CALL",
+            "class": "fon_",
+            "method": "ctor",
+            "line": 76,
+            "string_arg": "ui.common.confirmQuitGame"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "ui.common.yes"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 100,
+            "string_arg": "ui.common.no"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 108
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pfVar6 != (fac_o *)0x0) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar3": "ui.common.no",
+          "pSVar4": "ui.common.confirmQuitGame"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 9,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  System_String_o *pSVar3;\n\n  System_String_o *pSVar4;\n\n  fon_o *__this_00;\n\n  System_Action_o *pSVar5;\n\n  fop_o *__this_01;\n\n  fop_o *__this_02;\n\n  fac_o *pfVar6;\n\n\n\n  if (DAT_186787fc6 == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_LocalizedStringUtilities_TypeInfo);\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInf..."
+    },
+    {
+      "method": "bjec",
+      "signature": "private void bjec()",
+      "line": 386473,
+      "va": "0x1d98f80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fc7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<cxf>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fc7 == '\\0') {\n\n    FUN_1805658a0(&cxf_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<cxf>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fc7 = '\\x01';\n\n  }\n\n  peVar8 = f..."
+    },
+    {
+      "method": "kmy",
+      "signature": "private void kmy()",
+      "line": 386476,
+      "va": "0x1d99d90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 135,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "sONxsV96kF1k9Gz4Yt+YE8uQtBLyNFtS6eTR8lMEklk="
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 72,
+            "string_arg": "td6mqrFQc4jEJQRZicwBK7kjfh6lqXl7hx/He6meCV8="
+          },
+          {
+            "type": "CALL",
+            "class": "fon_",
+            "method": "ctor",
+            "line": 76,
+            "string_arg": "td6mqrFQc4jEJQRZicwBK7kjfh6lqXl7hx/He6meCV8="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "YhNDhDjtYnsdK03NLwHJHeKmOS+Fc7QMZCoikon43yY="
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "fop_",
+            "method": "ctor",
+            "line": 100,
+            "string_arg": "93aJffLLwQMBeVusS4ZVqpgDZdna7l42Hw7Kz/IlTCY="
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 108
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pcq",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pfVar6 != (fac_o *)0x0) {"
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {
+          "pSVar3": "93aJffLLwQMBeVusS4ZVqpgDZdna7l42Hw7Kz/IlTCY=",
+          "pSVar4": "td6mqrFQc4jEJQRZicwBK7kjfh6lqXl7hx/He6meCV8="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 9,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  System_String_o *pSVar3;\n\n  System_String_o *pSVar4;\n\n  fon_o *__this_00;\n\n  System_Action_o *pSVar5;\n\n  fop_o *__this_01;\n\n  fop_o *__this_02;\n\n  fac_o *pfVar6;\n\n\n\n  if (DAT_186787fc8 == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&Core_Localization_LocalizedStringUtilities_TypeInfo);\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInf..."
+    },
+    {
+      "method": "jzj",
+      "signature": "private void jzj()",
+      "line": 386479,
+      "va": "0x1d98b60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fbe == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fbe == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo,0);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fbe = '\\x01';\n\n  }\n\n  peV..."
+    },
+    {
+      "method": "jmw",
+      "signature": "private void jmw()",
+      "line": 386482,
+      "va": "0x1d99c50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186787fc9 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 66,
+            "string_arg": "y/rgK65R8FrUo+ug7N7T7QYnaMj/nqnZfHoV2HtOLKs="
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_1867a4661 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pSVar1 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if ((pSVar1->fields)._stringLength == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (DAT_1867831d7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "GetRawStringData",
+            "line": 144,
+            "string_arg": "y/rgK65R8FrUo+ug7N7T7QYnaMj/nqnZfHoV2HtOLKs="
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (_DAT_1867a4710 == (code *)0x0) {"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {
+          "pSVar1": "y/rgK65R8FrUo+ug7N7T7QYnaMj/nqnZfHoV2HtOLKs="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_String_o *pSVar1;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericStructType_o *pUVar2;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *apUStackX_8 [4];\n\n  System_Span_T__o SStack_48;\n\n  undefined1 auStack_38 [8];\n\n  undefined1 *puStack_30;\n\n  undefined8 uStack_28;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o **ppUStack_20;\n\n  Unity_Hierarchy_ReadOnlyNativeVector_T__o UStack_18;\n\n\n\n  if (DAT_186787fc9 == '\\0') {\n\n    puStack_30 = (undefined1 *)0x181d99c6b;\n..."
+    },
+    {
+      "method": "jys",
+      "signature": "private void jys()",
+      "line": 386485,
+      "va": "0x1d99cf0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186787fca == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 44
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar8 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar3[uVar5].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgu<cox>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ushort uVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ezp_o *peVar8;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186787fca == '\\0') {\n\n    FUN_1805658a0(&cox_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cox>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fca = '\\x01';\n\n  }\n\n  peVar..."
+    },
+    {
+      "method": "bjee",
+      "signature": "private void bjee()",
+      "line": 386489,
+      "va": "0x1d990c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (DAT_186787fcb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fc7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 46
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "cms_",
+            "method": "ctor",
+            "line": 60
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t a;\n\n  code *pcVar1;\n\n  ezp_o *peVar2;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_00;\n\n  cms_o *__this_01;\n\n\n\n  if (DAT_186787fcb == '\\0') {\n\n    FUN_1805658a0(&cms_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<cms>__);\n\n    FUN_1805658a0(&Method_fzy<PreGameMainMenuBinding>_bjmn__);\n\n    DAT_186787fcb = '\\x01';\n\n  }\n\n  if (DAT_186787fc7 == '\\0') {\n\n    FUN_1805658a0(&cxf_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<cxf>__);\n\n    FUN_1805658a0(&Method_fzy<PreGam..."
+    }
+  ]
+}

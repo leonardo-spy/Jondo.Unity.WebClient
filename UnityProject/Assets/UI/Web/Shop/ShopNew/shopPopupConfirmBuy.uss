@@ -1,0 +1,27 @@
+﻿#btn_secondary {
+    min-width: 180px;
+}
+
+#btn_primary {
+    min-width: 180px;
+}
+
+.confirmed #btn_secondary {
+    display: none;
+}
+
+.confirmed #btn_primary {
+    min-width: initial;
+}
+
+#lbl_price {
+    -unity-text-outline-color: rgba(0, 0, 0, 0.35);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+    --labelShadow: var( --dropShadows_medium);
+}
+
+#ctr_itemTile {
+    background-color: var( --white_white10);
+}
+

@@ -1,0 +1,52 @@
+﻿#btn_website:hover {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_over.png");
+}
+
+#btn_website {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/InlineTextures/fighterGridSlot_7_btn_green_small_normal.png");
+}
+
+#btn_website:active {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_pressed.png");
+}
+
+#btn_website:disabled {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_disabled.png");
+}
+
+#btn_website:focus {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selected.png");
+}
+
+#btn_website:focus:hover {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedover.png");
+}
+
+#btn_website:focus:active {
+    --bgTexturebtn_websiteImgVar: url("/Assets/UI/USSTextures/btn_green_small_selectedpressed.png");
+}
+
+#bgTexturebtn_website {
+    background-image: var( --bgTexturebtn_websiteImgVar);
+}
+
+#btn_close_ctr_popupWindow:hover {
+    --bgTexturebtn_close_ctr_popupWindowImgVar: url("/Assets/UI/USSTextures/btn_close_over.png");
+}
+
+#btn_close_ctr_popupWindow {
+    --bgTexturebtn_close_ctr_popupWindowImgVar: url("/Assets/UI/Themes/darkStone/common/btn_close_normal.png");
+}
+
+#btn_close_ctr_popupWindow:active {
+    --bgTexturebtn_close_ctr_popupWindowImgVar: url("/Assets/UI/USSTextures/btn_close_pressed.png");
+}
+
+#btn_close_ctr_popupWindow:disabled {
+    --bgTexturebtn_close_ctr_popupWindowImgVar: url("/Assets/UI/USSTextures/btn_close_disabled.png");
+}
+
+#bgTexturebtn_close_ctr_popupWindow {
+    background-image: var( --bgTexturebtn_close_ctr_popupWindowImgVar);
+}
+

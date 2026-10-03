@@ -1,0 +1,58 @@
+﻿#btn_spell:hover {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_over.png");
+}
+
+#btn_spell {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_normal.png");
+}
+
+#btn_spell:active {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_pressed.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_pressed.png");
+}
+
+#btn_spell:focus {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+}
+
+#btn_spell:focus:hover {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_over.png");
+}
+
+#btn_spell:focus:active {
+    --tx_bgSpellImgVar_activated: url("/Assets/UI/USSTextures/btn_spell_selected_pressed.png");
+    --tx_bgSpellImgVar: url("/Assets/UI/USSTextures/btn_spell_pressed.png");
+}
+
+.spellBg {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_normal.png");
+}
+
+.spellBgActive {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+}
+
+.spellBg:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_over.png");
+}
+
+.spellBg:active {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_pressed.png");
+}
+
+.spellBgActive:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_selected_over.png");
+}
+
+.spellBgActive:active {
+    background-image: url("/Assets/UI/USSTextures/btn_spell_selected_pressed.png");
+}
+
+.obtentionLevelsList .renderstudio-grid-view__item__background {
+    background-color: transparent;
+}
+

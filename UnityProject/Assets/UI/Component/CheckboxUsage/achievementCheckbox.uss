@@ -1,0 +1,36 @@
+﻿.achievementCheckbox > #background {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+.achievementCheckbox:hover > #background {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.achievementCheckbox.active > #background {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+.achievementCheckbox.done > #background {
+    background-color: var( --qualitative_green15);
+}
+
+.achievementCheckbox:hover.done > #background {
+    background-color: var( --qualitative_green35);
+}
+
+.achievementCheckbox.active.done > #background {
+    background-color: var( --qualitative_green35);
+}
+
+.achievementCheckbox > #lbl_achievement {
+    color: var( --highlight_secondary100);
+}
+
+.achievementCheckbox.active > #lbl_achievement {
+    color: var( --highlight_primary100);
+}
+
+.achievementCheckbox.done > #lbl_achievement {
+    color: var( --qualitative_lightGreen100);
+}
+

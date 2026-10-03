@@ -1,0 +1,79 @@
+﻿#ctr_spellList {
+    width: 1440px;
+    height: 845px;
+}
+
+.small#ctr_spellList {
+    width: auto;
+    flex-grow: 1;
+    max-width: 507;
+}
+
+.large#ctr_spellList {
+    width: 728px;
+}
+
+.scrollbarPadding > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 0;
+}
+
+.scrollbarPadding > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 0;
+}
+
+.large .scrollbarPadding > * > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 24px;
+}
+
+.large .scrollbarPadding > .unity-scroll-view__content-and-vertical-scroll-container {
+    padding-right: 24px;
+}
+
+#ctr_footer {
+    display: flex;
+}
+
+.small #ctr_footer {
+    display: none;
+}
+
+.spellGap {
+    margin-right: 32px;
+}
+
+.large .spellGap {
+    margin-right: 0;
+}
+
+#ctr_spellContainer {
+    padding: 16px 24px 16px 24px;
+    flex-direction: row;
+    max-height: 730px;
+}
+
+.small #ctr_spellContainer {
+    padding: 16px 24px 16px 24px;
+}
+
+.large #ctr_spellContainer {
+    padding: 16px 0 16px 24px;
+    flex-direction: column;
+    max-height: none;
+}
+
+#ctr_spellCont {
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.small #ctr_spellCont {
+    padding-left: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+#ctr_spellContainer {
+    align-items: flex-start;
+}
+

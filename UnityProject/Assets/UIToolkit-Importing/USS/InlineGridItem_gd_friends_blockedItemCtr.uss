@@ -1,0 +1,20 @@
+﻿#btn_unlock:hover {
+    --btn_texture_btn_unlockImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_unlock {
+    --btn_texture_btn_unlockImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_unlock:active {
+    --btn_texture_btn_unlockImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_unlock:disabled {
+    --btn_texture_btn_unlockImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_unlock {
+    background-image: var( --btn_texture_btn_unlockImgVar);
+}
+

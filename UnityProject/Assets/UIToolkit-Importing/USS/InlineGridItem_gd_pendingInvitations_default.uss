@@ -1,0 +1,40 @@
+﻿#btn_acceptInvitation:hover {
+    --btn_texture_btn_acceptInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_acceptInvitation {
+    --btn_texture_btn_acceptInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_acceptInvitation:active {
+    --btn_texture_btn_acceptInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_acceptInvitation:disabled {
+    --btn_texture_btn_acceptInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_acceptInvitation {
+    background-image: var( --btn_texture_btn_acceptInvitationImgVar);
+}
+
+#btn_cancelInvitation:hover {
+    --btn_texture_btn_cancelInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_cancelInvitation {
+    --btn_texture_btn_cancelInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_cancelInvitation:active {
+    --btn_texture_btn_cancelInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_cancelInvitation:disabled {
+    --btn_texture_btn_cancelInvitationImgVar: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_cancelInvitation {
+    background-image: var( --btn_texture_btn_cancelInvitationImgVar);
+}
+

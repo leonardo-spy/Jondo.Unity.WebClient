@@ -1,0 +1,47 @@
+﻿.unity-toggle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.unity-toggle__label {
+    position: absolute;
+    left: 30px;
+    color: rgb(199, 199, 197);
+}
+
+.unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+    width: 25px;
+    height: 25px;
+    border-width: 0;
+    -unity-background-image-tint-color: white;
+    background-color: transparent;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.unity-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+.unity-collection-view__item--selected {
+    background-color: rgba(204, 204, 204, 0.15);
+}
+
+.unity-collection-view__item {
+    background-color: rgba(204, 204, 204, 0);
+}
+
+.unity-list-view__empty-label {
+    display: none;
+}
+
+.application > #titleApplication > #tx_catplusminus {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/icon_plus_grey.png");
+}
+
+.application--opened > #titleApplication > #tx_catplusminus {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/icon_minus_grey.png");
+}
+

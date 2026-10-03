@@ -1,0 +1,74 @@
+﻿#subheader {
+    flex-direction: row;
+}
+
+#dropArea_items {
+    display: none;
+}
+
+#lbl_emptyText {
+    display: flex;
+    flex-grow: 1;
+}
+
+#ctr_pods {
+    opacity: 0.5;
+}
+
+#ctr_choice {
+    display: none;
+}
+
+#footer {
+    border-bottom-left-radius: 12px;
+}
+
+.currentPlayer #subheader {
+    flex-direction: row-reverse;
+}
+
+.currentPlayer #dropArea_items {
+    display: flex;
+}
+
+.currentPlayer #lbl_emptyText {
+    display: none;
+}
+
+.currentPlayer #ctr_pods {
+    opacity: 1;
+}
+
+.currentPlayer #ctr_status {
+    display: none;
+}
+
+.currentPlayer #ctr_choice {
+    display: flex;
+}
+
+.currentPlayer #footer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 12px;
+}
+
+.feedback_global {
+    display: none;
+}
+
+.feedback_global DofusIcon {
+    display: none;
+}
+
+.feedback_global.warning {
+    background-color: var( --buttons_buttonNegative);
+}
+
+.feedback_global.warning DofusIcon {
+    display: flex;
+}
+
+.feedback_global.positive {
+    background-color: var( --buttons_buttonPositive);
+}
+

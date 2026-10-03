@@ -1,0 +1,32 @@
+﻿#btn_loc:hover {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_normal.png");
+}
+
+#btn_loc {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_normal.png");
+}
+
+#btn_loc:active {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_normal.png");
+}
+
+#btn_loc:disabled {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_normal.png");
+}
+
+#btn_loc:focus {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_selected.png");
+}
+
+#btn_loc:focus:hover {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_selected.png");
+}
+
+#btn_loc:focus:active {
+    --bgTexturebtn_locImgVar: url("/Assets/UI/USSTextures/icon_pin_selected.png");
+}
+
+#bgTexturebtn_loc {
+    background-image: var( --bgTexturebtn_locImgVar);
+}
+

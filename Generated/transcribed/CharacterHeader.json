@@ -1,0 +1,1408 @@
+{
+  "type": "CharacterHeader",
+  "methodCount": 11,
+  "transcribed": 11,
+  "methods": [
+    {
+      "method": "get_m_canTakeFocus",
+      "signature": "protected override bool get_m_canTakeFocus()",
+      "line": 150894,
+      "va": "0xd1e2a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 49,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 0,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 4,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)(lVar9 + 0xe4) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "  if (bVar4) {\n\n    lVar9 = *(longlong *)(lVar5 + 0x20);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de21;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    lVar9 = *(longlong *)(*(longlong *)(lVar9 + 0xc0) + 0x10);\n\n    if ((*(byte *)(lVar9 + 0x135) & 1) == 0) {\n\n      *(undefined1 **)((longlong)apuStack_90 + lVar8 + lVar7) = &LAB_182f5de3d;\n\n      lVar9 = FUN_180563450(lVar9);\n\n    }\n\n    if (*(int *)(lVar9 + 0xe4) =..."
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(VisualElement parent, faa playerService, fca baseUiDependenciesService)",
+      "line": 150897,
+      "va": "0x2a13ec0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 415,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_186792c2f == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 108
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (pgVar4 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 118
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pgVar4 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pgVar6 != (glr_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 150
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 192
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_GreaterThan",
+            "line": 194
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 208,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (pCVar8 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (pCVar12 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 370,
+            "condition": "if (*pcVar13 == '\\0') {"
+          }
+        ],
+        "opsCount": 23,
+        "varMap": {
+          "pSVar10": "ui.common.admin"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  longlong lVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  gmd_o *pgVar4;\n\n  Core_Engine_Messages_listener_T__o *pCVar5;\n\n  glr_o *pgVar6;\n\n  undefined8 uVar7;\n\n  Core_UILogic_Components_Figma_DofusButtonCustom_o *pCVar8;\n\n  UnityEngine_UIElements_EventCallback_TEventType__o *callback;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *a;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n  fbj_o *pfVar9;\n\n  System_String_o *pSVar10;\n\n  Core_UILogic_Components_Tooltips_TooltipManipulator_o *pCV..."
+    },
+    {
+      "method": "OnAccountRightsLoaded",
+      "signature": "public void OnAccountRightsLoaded()",
+      "line": 150900,
+      "va": "0x2a133d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186792c30 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (DAT_186795b20 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_00 != (Core_UILogic_Components_Figma_DofusVisualElement_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pUVar6 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pIVar3[uVar8].interfaceType == (Il2CppClass *)UnityEngine_UIElements_IStyle_"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  undefined1 uVar5;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *__this_00;\n\n  UnityEngine_UIElements_IStyle_o *pUVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ushort uVar8;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_20;\n\n\n\n  if (DAT_186792c30 == '\\0') {\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&faa_TypeInfo);\n\n    DAT_186792c30 = '\\x01';\n\n..."
+    },
+    {
+      "method": "OnEnable",
+      "signature": "protected sealed override void OnEnable()",
+      "line": 150903,
+      "va": "0x2a13470",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 385,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186792c31 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (DAT_186792c34 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 116,
+            "string_arg": "#"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pca",
+            "line": 140
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 152
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThan",
+            "line": 154
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (cVar3 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (*(int *)&(qo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "qo",
+            "method": "pkv",
+            "line": 216
+          },
+          {
+            "type": "IF",
+            "line": 218,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (*(int *)&(System_Globalization_CultureInfo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Globalization_CultureInfo",
+            "method": "get_CurrentCulture",
+            "line": 226
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (provider == (System_Globalization_CultureInfo_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 264,
+            "string_arg": ", "
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (valuesToInterpolate == (System_String_array *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 296
+          },
+          {
+            "type": "IF",
+            "line": 296,
+            "condition": "if ((int)valuesToInterpolate->max_length == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 356,
+            "string_arg": "ui.common.infiniteSubscription"
+          },
+          {
+            "type": "IF",
+            "line": 358,
+            "condition": "if (pCVar4 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          }
+        ],
+        "opsCount": 41,
+        "varMap": {
+          "pSVar6": "ui.common.infiniteSubscription",
+          "pSVar7": "ui.common.until"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 8,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  faa_o *a;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  char cVar3;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar4;\n\n  undefined8 uVar5;\n\n  System_String_o *pSVar6;\n\n  System_String_o *pSVar7;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *a_00;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n  System_Globalization_CultureInfo_o *provider;\n\n  System_Globalization_DateTimeFormatInfo_o *pSVar8;\n\n  System_String_o *str2;\n\n  System_String_array *valuesToInterpolate;\n\n  MethodInfo *in_R8;\n\n  Me..."
+    },
+    {
+      "method": "Toggle",
+      "signature": "public override void Toggle(bool state)",
+      "line": 150906,
+      "va": "0x2a13d30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 131,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_186792c32 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (*plVar4 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (__this_00 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "set_visible",
+            "line": 50
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (!state) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (DAT_186792c35 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 84
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThanOrEqual",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13eb7;"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Connection_CharacterHeader",
+            "method": "PlayerDisplay",
+            "line": 110
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  char cVar3;\n\n  longlong *plVar4;\n\n  UnityEngine_UIElements_VisualElement_o *__this_00;\n\n  Core_UILogic_Components_Figma_DofusButtonCustom_o *__this_01;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n\n\n  if (DAT_186792c32 == '\\0') {\n\n    FUN_1805658a0(&Method_fzy<CharacterHeaderBinding>_Toggle__);\n\n    FUN_1805658a0(&Method_fzy<CharacterHeaderBinding>_bjlz__);\n\n    DAT_186792c32 = '\\x01';\n\n  }\n\n  fzy<__Il2CppFullySharedGenericType>__Toggle\n\n            ((f..."
+    },
+    {
+      "method": "ShowHeader",
+      "signature": "private void ShowHeader(bool visible)",
+      "line": 150909,
+      "va": "0x2a13c10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 107,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (__this_00 != (UnityEngine_UIElements_VisualElement_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_UIElements_VisualElement",
+            "method": "set_visible",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (!visible) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (DAT_186792c35 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 60
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThanOrEqual",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13d2a;"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (__this_01 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Connection_CharacterHeader",
+            "method": "PlayerDisplay",
+            "line": 86
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  char cVar3;\n\n  UnityEngine_UIElements_VisualElement_o *__this_00;\n\n  Core_UILogic_Components_Figma_DofusButtonCustom_o *__this_01;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n\n\n  __this_00 = Core_UILogic_Bindings_CharacterHeaderBinding__get_CharacterHeader_Container\n\n                        ((Core_UILogic_Bindings_CharacterHeaderBinding_o *)&__this->fields,\n\n                         (MethodInfo *)0x0);\n\n  if (__this_00 != (UnityEngine_UIElements_Visual..."
+    },
+    {
+      "method": "OnServersList",
+      "signature": "private void OnServersList(beb message)",
+      "line": 150912,
+      "va": "0x2a134c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 369,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186792c34 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 100,
+            "string_arg": "#"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pca",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 136
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThan",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (cVar3 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (*(int *)&(qo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "qo",
+            "method": "pkv",
+            "line": 200
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (*(int *)&(System_Globalization_CultureInfo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Globalization_CultureInfo",
+            "method": "get_CurrentCulture",
+            "line": 210
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (provider == (System_Globalization_CultureInfo_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 218,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 248,
+            "string_arg": ", "
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 266,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (valuesToInterpolate == (System_String_array *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 280,
+            "condition": "if ((int)valuesToInterpolate->max_length == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 334,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 340,
+            "string_arg": "ui.common.infiniteSubscription"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (pCVar4 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          }
+        ],
+        "opsCount": 40,
+        "varMap": {
+          "pSVar6": "ui.common.infiniteSubscription",
+          "pSVar7": "ui.common.until"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 8,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  faa_o *a;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  char cVar3;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar4;\n\n  undefined8 uVar5;\n\n  System_String_o *pSVar6;\n\n  System_String_o *pSVar7;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *a_00;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n  System_Globalization_CultureInfo_o *provider;\n\n  System_Globalization_DateTimeFormatInfo_o *pSVar8;\n\n  System_String_o *str2;\n\n  System_String_array *valuesToInterpolate;\n\n  MethodInfo *pMVar9;\n\n  C..."
+    },
+    {
+      "method": "OnSubscribe",
+      "signature": "private void OnSubscribe(ClickEvent evt)",
+      "line": 150915,
+      "va": "0x2a134d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 249,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (DAT_186792c33 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a",
+            "method": "mqp",
+            "line": 64
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (peVar5 == (ewc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 86,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pIVar3[uVar9].interfaceType == (Il2CppClass *)ewc_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 134,
+            "string_arg": "ui.link.subscribe"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (DAT_1867a4661 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (pSVar7 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if ((pSVar7->fields)._stringLength == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (DAT_1867831d7 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "GetRawStringData",
+            "line": 212,
+            "string_arg": "ui.link.subscribe"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (*(int *)&(UnityEngine_Application_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (_DAT_1867a4710 == (code *)0x0) {"
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {
+          "pSVar7": "ui.link.subscribe"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ewc_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  ewc_o *peVar5;\n\n  VirtualInvokeData *pVVar6;\n\n  System_String_o *pSVar7;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericStructType_o *pUVar8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *ptr;\n\n  ushort uVar9;\n\n  System_Span_T__o SStack_48;\n\n  undefined1 auStack_38 [8];\n\n  undefined8 uStack_30;\n\n  undefined8 uStack_28;\n\n  undefined1 *puStack_20;\n\n  Unity_Hierarchy_ReadOnlyNative..."
+    },
+    {
+      "method": "PlayerDisplay",
+      "signature": "private void PlayerDisplay()",
+      "line": 150918,
+      "va": "0x2a13760",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 369,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186792c34 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 100,
+            "string_arg": "#"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pca",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 136
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThan",
+            "line": 138
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (cVar3 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (*(int *)&(qo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "qo",
+            "method": "pkv",
+            "line": 200
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (*(int *)&(System_Globalization_CultureInfo_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Globalization_CultureInfo",
+            "method": "get_CurrentCulture",
+            "line": 210
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (provider == (System_Globalization_CultureInfo_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 218,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar8 == (System_Globalization_DateTimeFormatInfo_o *)0x0) goto LAB_182a13b"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 248,
+            "string_arg": ", "
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 266,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (valuesToInterpolate == (System_String_array *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "max_length",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 280,
+            "condition": "if ((int)valuesToInterpolate->max_length == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 294,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (pCVar4 == (Core_UILogic_Components_DofusLabel_o *)0x0) goto LAB_182a13bf8;"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 334,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 340,
+            "string_arg": "ui.common.infiniteSubscription"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (pCVar4 != (Core_UILogic_Components_DofusLabel_o *)0x0) {"
+          }
+        ],
+        "opsCount": 40,
+        "varMap": {
+          "pSVar6": "ui.common.infiniteSubscription",
+          "pSVar7": "ui.common.until"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 8,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  faa_o *a;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  char cVar3;\n\n  Core_UILogic_Components_DofusLabel_o *pCVar4;\n\n  undefined8 uVar5;\n\n  System_String_o *pSVar6;\n\n  System_String_o *pSVar7;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *a_00;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n  System_Globalization_CultureInfo_o *provider;\n\n  System_Globalization_DateTimeFormatInfo_o *pSVar8;\n\n  System_String_o *str2;\n\n  System_String_array *valuesToInterpolate;\n\n  MethodInfo *pMVar9;\n\n  C..."
+    },
+    {
+      "method": "OnSubscriptionEndDateUpdate",
+      "signature": "private void OnSubscriptionEndDateUpdate(bdn update)",
+      "line": 150921,
+      "va": "0x2a13670",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 233,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_186792c35 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if ((__this->fields).m_playerService != (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (*(int *)&(System_DateTime_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "get_Now",
+            "line": 64
+          },
+          {
+            "type": "CALL",
+            "class": "System_DateTime",
+            "method": "op_LessThanOrEqual",
+            "line": 66
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (bVar5) {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) goto LAB_182a13752;"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (__this_00 != (Core_UILogic_Components_Figma_DofusButtonCustom_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 86,
+            "condition": "if (DAT_1867aa9dd == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (DAT_1867aa9dc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IResolvedStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pUVar10 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (pIVar3[uVar12].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (DAT_1867aa9dc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (pUVar9 != (UnityEngine_UIElements_IResolvedStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 184,
+            "condition": "if ((iVar7 == 0) != (iVar8 == 0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (*(int *)&(UnityEngine_UIElements_VisualElement_TypeInfo->_2).field_0x1c == 0"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  bool bVar5;\n\n  char cVar6;\n\n  int iVar7;\n\n  int iVar8;\n\n  Core_UILogic_Components_Figma_DofusButtonCustom_o *__this_00;\n\n  System_DateTime_o t1;\n\n  System_DateTime_o t2;\n\n  UnityEngine_UIElements_IResolvedStyle_o *pUVar9;\n\n  UnityEngine_UIElements_IStyle_o *pUVar10;\n\n  VirtualInvokeData *pVVar11;\n\n  ushort uVar12;\n\n  uint auStackX_20 [2];\n\n  undefined8 auStack_18 [2];\n\n..."
+    },
+    {
+      "method": "b__3_0",
+      "signature": "private void <.ctor>b__3_0(crg _)",
+      "line": 150925,
+      "va": "0x2a133d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186792c30 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if ((__this->fields).m_playerService == (faa_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (DAT_186795b20 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_00 != (Core_UILogic_Components_Figma_DofusVisualElement_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pUVar6 != (UnityEngine_UIElements_IStyle_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pIVar3[uVar8].interfaceType == (Il2CppClass *)UnityEngine_UIElements_IStyle_"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  UnityEngine_UIElements_IStyle_c *pUVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  code *pcVar4;\n\n  undefined1 uVar5;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *__this_00;\n\n  UnityEngine_UIElements_IStyle_o *pUVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ushort uVar8;\n\n  undefined8 unaff_RDI;\n\n  undefined8 uStackX_20;\n\n\n\n  if (DAT_186792c30 == '\\0') {\n\n    FUN_1805658a0(&Core_UI_UIUtils_TypeInfo);\n\n    FUN_1805658a0(&faa_TypeInfo);\n\n    DAT_186792c30 = '\\x01';\n\n..."
+    }
+  ]
+}

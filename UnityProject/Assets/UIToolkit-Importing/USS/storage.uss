@@ -1,0 +1,102 @@
+﻿#btn_closeSearch:hover {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_over.png");
+}
+
+#btn_closeSearch {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/InlineTextures/PreviousUserButton_0_btn_cross_in_grey_circle_normal.png");
+}
+
+#btn_closeSearch:active {
+    --bgTexturebtn_closeSearchImgVar: url("/Assets/UI/USSTextures/btn_cross_in_grey_circle_pressed.png");
+}
+
+#bgTexturebtn_closeSearch {
+    background-image: var( --bgTexturebtn_closeSearchImgVar);
+}
+
+#btn_itemsFilter:hover {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+}
+
+#btn_itemsFilter {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+}
+
+#btn_itemsFilter:active {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+}
+
+#btn_itemsFilter:disabled {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+}
+
+#btn_itemsFilter:focus {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+#btn_itemsFilter:focus:hover {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+#btn_itemsFilter:focus:active {
+    --btn_texture_btn_itemsFilterImgVar: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+#btn_texture_btn_itemsFilter {
+    background-image: var( --btn_texture_btn_itemsFilterImgVar);
+}
+
+.whiteboldright {
+    -unity-font-style: bold;
+    -unity-font: url("/Assets/Resources/DefaultFont.asset");
+    -unity-text-align: upper-right;
+    color: rgb(207, 207, 207);
+}
+
+.redright {
+    color: rgb(219, 0, 0);
+    -unity-font-style: bold;
+}
+
+.unity-toggle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.unity-toggle__label {
+    position: absolute;
+    left: 30px;
+    color: rgb(199, 199, 197);
+}
+
+.unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+    width: 25px;
+    height: 25px;
+    border-width: 0;
+    -unity-background-image-tint-color: white;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.unity-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+.slot-item__effect--highlight {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/blueSlot_40.png");
+}
+
+#lbl_kamas {
+    -unity-text-outline-color: var( --black_black35);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+}
+
+.renderstudio-grid-view__itemContainer:hover,
+.renderstudio-grid-view__item__background:hover,
+.renderstudio-grid-view__item--alternative-background:hover {
+    background-color: rgba(255, 255, 255, 0);
+}
+

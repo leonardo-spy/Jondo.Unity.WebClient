@@ -1,0 +1,86 @@
+﻿.renderstudio-grid-view__itemContainer {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.renderstudio-grid-view__item__background {
+    background-color: rgba(204, 204, 204, 0.0627);
+}
+
+.noBackground .renderstudio-grid-view__item__background,
+.renderstudio-grid-view__item--alternative-background {
+    background-color: transparent;
+}
+
+.renderstudio-grid-view__itemContainer:hover,
+.renderstudio-grid-view__item__background:hover,
+.renderstudio-grid-view__item--alternative-background:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.noBackground .renderstudio-grid-view__itemContainer:hover,
+.noBackground .renderstudio-grid-view__item__background:hover,
+.noBackground .renderstudio-grid-view__item--alternative-background:hover,
+SlotGrid .renderstudio-grid-view__itemContainer:hover,
+SlotGrid .renderstudio-grid-view__item__background:hover,
+SlotGrid .renderstudio-grid-view__item--alternative-background:hover {
+    background-color: transparent;
+}
+
+.renderstudio-grid-view__item--selected,
+.renderstudio-grid-view__item--alternative-background--selected {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.iconBackground {
+    background-image: url("/Assets/UI/InlineTextures/EmptySlot_0_emptySlotDark.png");
+}
+
+.slot-item__background {
+    flex-grow: 1;
+    background-image: url("/Assets/UI/InlineTextures/EmptySlot_0_emptySlotDark.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.slot-item__icon {
+    flex-grow: 1;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.slot-item__effect {
+    flex-grow: 1;
+}
+
+.slot-item__effect--acceptDrop {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/acceptDrop.png");
+}
+
+.slot-item__effect--refuseDrop {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/refuseDrop.png");
+}
+
+.slot-item__effect--selected {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/selected.png");
+}
+
+.slot-item__effect--warningSlot {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/warningSlot.png");
+}
+
+.slot-item__effect--validSlot {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/validSlot.png");
+}
+
+.slot-item__effect--rareSlot {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/rareSlot.png");
+}
+
+.slot-item__effect--failureSlot {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/slot/failureSlot.png");
+}
+
+.slot-item--disabled {
+    background-color: rgba(128, 128, 128, 0.5);
+}
+

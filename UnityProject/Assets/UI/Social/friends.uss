@@ -1,0 +1,49 @@
+﻿.sectionHeader {
+    flex-shrink: 0;
+}
+
+#ctr_friends #sectionHeader_title {
+    padding-left: 0;
+}
+
+#ctr_friends #sectionHeaderContent {
+    border-bottom-width: 0;
+}
+
+#ctr_friends #sectionHeader_subContent {
+    padding: 0;
+    border-bottom-width: 0;
+}
+
+#ctr_content > #ctr_ankama {
+    display: none;
+}
+
+#ctr_content > #ctr_inGame {
+    display: none;
+}
+
+#ctr_content > #ctr_blocked {
+    display: none;
+}
+
+#ctr_header > #ctr_status {
+    display: none;
+}
+
+.ankama #ctr_header > #ctr_status {
+    display: flex;
+}
+
+.ankama #ctr_content > #ctr_ankama {
+    display: flex;
+}
+
+.friends #ctr_content > #ctr_inGame {
+    display: flex;
+}
+
+.blocked #ctr_content > #ctr_blocked {
+    display: flex;
+}
+

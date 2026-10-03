@@ -1,0 +1,57 @@
+﻿.configWindow {
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    background-color: rgba(1, 1, 1, 0);
+    display: flex;
+}
+
+.configCategory {
+    background-image: url("/Assets/UI/Themes/darkStone/common/bg_small_border_light.png");
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 11;
+    -unity-slice-bottom: 10;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 14px;
+    width: 780px;
+}
+
+.configCategory .unity-toggle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.configCategory .unity-toggle__label {
+    position: absolute;
+    left: 30px;
+    color: rgb(199, 199, 197);
+}
+
+.configCategory .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_normal.png");
+    width: 25px;
+    height: 25px;
+    border-width: 0;
+    -unity-background-image-tint-color: white;
+    background-color: transparent;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.configCategory .unity-toggle > .unity-toggle__input:checked > .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/common/btn_checkbox_selected.png");
+}
+
+.configCategory .unity-label {
+    font-size: 14px;
+    color: rgb(199, 199, 197);
+}
+
+.configCategory .unity-label:focus {
+    color: rgb(199, 199, 197);
+}
+

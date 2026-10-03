@@ -1,0 +1,45 @@
+﻿.unity-toggle .unity-toggle__checkmark {
+    -unity-background-image-tint-color: white;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.unity-toggle:checked .unity-toggle__checkmark {
+    background-image: url("/Assets/UI/Themes/darkStone/texture/btnIcon/btnIcon_cross.png");
+    -unity-background-image-tint-color: white;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+#btn_ok:hover {
+    background-image: url("/Assets/UI/USSTextures/btn_green_over.png");
+}
+
+#btn_ok {
+    background-image: url("/Assets/UI/USSTextures/btn_green_normal.png");
+}
+
+#btn_ok:active {
+    background-image: url("/Assets/UI/USSTextures/btn_green_pressed.png");
+}
+
+#btn_ok:disabled {
+    background-image: url("/Assets/UI/USSTextures/btn_green_disabled.png");
+}
+
+#btn_texture_btn_ok {
+    background-image: var( --btn_texture_btn_okImgVar);
+}
+

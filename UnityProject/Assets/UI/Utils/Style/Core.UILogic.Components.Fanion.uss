@@ -1,0 +1,31 @@
+﻿.fanion {
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-image: url("/Assets/UI/Themes/darkStone/texture/fanions/bg_white.png");
+    flex-direction: row;
+    width: 174px;
+    height: 33px;
+    justify-content: space-between;
+    -unity-slice-left: 15;
+    -unity-slice-right: 6;
+    padding-left: 16px;
+    padding-right: 6px;
+    -unity-text-align: middle-left;
+    -unity-font-style: bold;
+    color: rgb(224, 224, 224);
+    align-items: center;
+    -unity-background-image-tint-color: rgb(255, 0, 255);
+}
+
+.fanion__label {
+    flex-grow: 1;
+}
+
+.fanion__icon {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+

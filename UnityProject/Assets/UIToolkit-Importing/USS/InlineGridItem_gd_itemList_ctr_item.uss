@@ -1,0 +1,49 @@
+﻿.inSetItem {
+    color: var( --qualitative_yellow100);
+}
+
+.notInSetItem {
+    color: var( --white_white100);
+}
+
+.availableItem {
+    -unity-font-style: bold;
+}
+
+#btn_item {
+    background-color: var( --buttons_buttonSecondary);
+}
+
+#btn_item:hover {
+    background-color: var( --buttons_buttonSecondaryHover);
+}
+
+#detailedItems {
+    display: none;
+}
+
+.open #detailedItems {
+    display: flex;
+}
+
+#kamasContainer {
+    --labelShadow: var( --dropShadows_light);
+    -unity-text-outline-color: var( --black_black50);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+}
+
+#lbl_price {
+    --labelShadow: var( --dropShadows_light);
+}
+
+#icon_kamas {
+    --labelShadow: var( --dropShadows_light);
+}
+
+#lbl_name {
+    -unity-text-outline-color: var( --black_black50);
+    -unity-text-outline-width: 1px;
+    -unity-font-style: bold;
+}
+

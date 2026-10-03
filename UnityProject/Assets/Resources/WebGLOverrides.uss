@@ -1,0 +1,36 @@
+/* WebGL Overrides — substitutes for C# ExtendedClickable manipulator behavior.
+   The original game handles hover/focus via ExtendedClickable (C# code) which
+   prevents UIToolkit default styles. Our factories can't run the broken IL,
+   so we override the defaults via USS instead.
+   Types derived from CUSTOM_ELEMENTS_CONSTRUCTORS.md analysis. */
+
+/* All custom button types that use ExtendedClickable in their constructors */
+.PlayButton:hover,
+.PlayButton:focus,
+.PlayButton:active,
+.DofusButtonCustom:hover,
+.DofusButtonCustom:focus,
+.DofusButtonCustom:active,
+.DropdownButton:hover,
+.DropdownButton:focus,
+.DropdownButton:active {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: transparent;
+}
+
+/* Combobox dropdown button area */
+.combobox:hover,
+.combobox:focus {
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    background-color: transparent;
+}
