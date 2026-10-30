@@ -1,0 +1,2758 @@
+{
+  "type": "MapDisplayService",
+  "methodCount": 38,
+  "transcribed": 38,
+  "methods": [
+    {
+      "method": "vdi",
+      "signature": "public MapRenderer vdi()",
+      "line": 282717,
+      "va": "0x713710",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return (__this->fields)._Shapes_IFillableMpb_fillStart_k__BackingField;\n\n}"
+    },
+    {
+      "method": "vdj",
+      "signature": "private void vdj(MapRenderer a)",
+      "line": 282721,
+      "va": "0x11407f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  (__this->fields)._Requires_k__BackingField = value;\n\n  return;\n\n}"
+    },
+    {
+      "method": "vdk",
+      "signature": "public sl vdk()",
+      "line": 282724,
+      "va": "0x15d9f50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 55,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784041 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  sl_o *psVar4;\n\n\n\n  if (DAT_186784041 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186784041 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields)._dleg_k__BackingField;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object_o *)pCVar1,(UnityEngine_Object_o *)0x0,(MethodInf..."
+    },
+    {
+      "method": "vdl",
+      "signature": "private bool vdl()",
+      "line": 282727,
+      "va": "0x15d9fe0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 55,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784042 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  undefined1 uVar4;\n\n\n\n  if (DAT_186784042 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186784042 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields)._dleg_k__BackingField;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Inequality\n\n                    ((UnityEngine_Object_o *)pCVar1,(UnityEngine_Object_o *)0x0,(Metho..."
+    },
+    {
+      "method": "vdm",
+      "signature": "public static GameObject vdm()",
+      "line": 282731,
+      "va": "0x15da070",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 15,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 2,
+            "condition": "if (DAT_186784043 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  if (DAT_186784043 == '\\0') {\n\n    FUN_1805658a0(&Core_Services_Rendering_MapDisplayService_MapDisplayService_TypeInfo);\n\n    DAT_186784043 = '\\x01';\n\n  }\n\n  return Core_Services_Rendering_MapDisplayService_MapDisplayService_TypeInfo->static_fields->\n\n         _dleh_k__BackingField;\n\n}"
+    },
+    {
+      "method": "vdn",
+      "signature": "private static void vdn(GameObject a)",
+      "line": 282735,
+      "va": "0x15da0b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 17,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 2,
+            "condition": "if (DAT_186784044 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  if (DAT_186784044 == '\\0') {\n\n    FUN_1805658a0(&Core_Services_Rendering_MapDisplayService_MapDisplayService_TypeInfo);\n\n    DAT_186784044 = '\\x01';\n\n  }\n\n  Core_Services_Rendering_MapDisplayService_MapDisplayService_TypeInfo->static_fields->\n\n  _dleh_k__BackingField = a;\n\n  return;\n\n}"
+    },
+    {
+      "method": "vdo",
+      "signature": "private void vdo()",
+      "line": 282740,
+      "va": "0x15da0f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 327,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (DAT_186784045 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (plVar7 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (*(ushort *)(lVar10 + 0x12e) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (*(feu_c **)(*(longlong *)(lVar10 + 0xb0) + (ulonglong)uVar16 * 0x10) == feu_"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if ((__this->fields).dldj != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 140
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if ((__this->fields).dldj != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 158
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (pgVar13 != (gmd_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (pMVar17 != (MethodInfo *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "gat",
+            "method": "bjqz",
+            "line": 188
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (bVar18) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if ((__this_00->fields).dley != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 252
+          },
+          {
+            "type": "IF",
+            "line": 254,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 262
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if ((__this_00->fields).dley != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (lVar10 != 0) {"
+          }
+        ],
+        "opsCount": 23,
+        "varMap": {
+          "pSVar8": "MapDisplayService"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  feo_o *pfVar1;\n\n  ewz_o *peVar2;\n\n  fbj_o *pfVar3;\n\n  ezp_o *peVar4;\n\n  code *pcVar5;\n\n  int32_t iVar6;\n\n  longlong *plVar7;\n\n  System_String_o *pSVar8;\n\n  undefined8 *puVar9;\n\n  longlong lVar10;\n\n  undefined8 uVar11;\n\n  glu_o *pgVar12;\n\n  gmd_o *pgVar13;\n\n  Core_Engine_Messages_listener_T__o *callback;\n\n  void *pvVar14;\n\n  eym_o *handler;\n\n  ebu_o *__this_00;\n\n  glr_o *pgVar15;\n\n  ushort uVar16;\n\n  MethodInfo *pMVar17;\n\n  bool bVar18;\n\n\n\n  if (DAT_186784045 == '\\0') {\n\n    FUN_1805658a0(&M..."
+    },
+    {
+      "method": "vdp",
+      "signature": "private void vdp(ccc a)",
+      "line": 282743,
+      "va": "0x15da5f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 97,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186784046 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 38
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (((a == (ccc_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pIVar3[uVar6].interfaceType == (Il2CppClass *)ewz_TypeInfo) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ewz_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ewz_o *peVar4;\n\n  code *pcVar5;\n\n  ushort uVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_00;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_186784046 == '\\0') {\n\n    FUN_1805658a0(&ewz_TypeInfo);\n\n    FUN_1805658a0(&kry_TypeInfo);\n\n    DAT_186784046 = '\\x01';\n\n  }\n\n  peVar4 = (__this->fields).dlee;\n\n  __this_00 = (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *)\n..."
+    },
+    {
+      "method": "vdq",
+      "signature": "private void vdq(ksc a)",
+      "line": 282746,
+      "va": "0x15da690",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 43,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_186784047 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (a != (ksc_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if ((a->fields).ewdv != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (peVar1 == (eyq_o *)0x0) goto LAB_1815da6f8;"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eyq_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  if (DAT_186784047 == '\\0') {\n\n    FUN_1805658a0(&eyq_TypeInfo);\n\n    DAT_186784047 = '\\x01';\n\n  }\n\n  if (a != (ksc_o *)0x0) {\n\n    if ((a->fields).ewdv != false) {\n\n      peVar1 = (__this->fields).dlea;\n\n      if (peVar1 == (eyq_o *)0x0) goto LAB_1815da6f8;\n\n      FUN_180086e70(0x17,eyq_TypeInfo,peVar1,(a->fields).ewdt,0);\n\n    }\n\n    return;\n\n  }\n\nLAB_1815da6f8:\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  (*pcVar2)();\n\n  return;\n\n}"
+    },
+    {
+      "method": "vdr",
+      "signature": "public long vdr()",
+      "line": 282750,
+      "va": "0x1145550",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return (__this->fields).m_InfiniteClipRemoveOffset;\n\n}"
+    },
+    {
+      "method": "vds",
+      "signature": "public void vds(long a)",
+      "line": 282754,
+      "va": "0x1145620",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  (__this->fields).m_InfiniteClip = value;\n\n  return;\n\n}"
+    },
+    {
+      "method": "vdt",
+      "signature": "public bool vdt()",
+      "line": 282758,
+      "va": "0x15da700",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 5,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  return (__this->fields).m_SupportsLightLayers;\n\n}"
+    },
+    {
+      "method": "vdu",
+      "signature": "public void vdu(bool a)",
+      "line": 282762,
+      "va": "0x15da710",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  (__this->fields)._drsu_k__BackingField = a;\n\n  return;\n\n}"
+    },
+    {
+      "method": "vdv",
+      "signature": "public bool vdv()",
+      "line": 282765,
+      "va": "0x15da720",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 55,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784048 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  code *pcVar2;\n\n  bool bVar3;\n\n  undefined1 uVar4;\n\n\n\n  if (DAT_186784048 == '\\0') {\n\n    FUN_1805658a0(&UnityEngine_Object_TypeInfo);\n\n    DAT_186784048 = '\\x01';\n\n  }\n\n  pCVar1 = (__this->fields)._dleg_k__BackingField;\n\n  if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  bVar3 = UnityEngine_Object__op_Equality\n\n                    ((UnityEngine_Object_o *)pCVar1,(UnityEngine_Object_o *)0x0,(MethodI..."
+    },
+    {
+      "method": "vdw",
+      "signature": "public Vector2 vdw(int a)",
+      "line": 282768,
+      "va": "0x15da7b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 99,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186784049 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "oxg",
+            "line": 38
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if ((pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((pEVar2 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (lStackX_20 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (*(int *)(lStackX_20 + 0x2c) != 0) {"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar2;\n\n  System_Collections_Generic_List_ClientCellData__o *__return_storage_ptr__;\n\n  code *pcVar3;\n\n  UnityEngine_Vector2_o UVar4;\n\n  UnityEngine_Vector2_Fields UVar5;\n\n  float fStackX_8;\n\n  float fStackX_c;\n\n  longlong lStackX_20;\n\n\n\n  if (DAT_186784049 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<ClientCellData>_get_Item__);\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_186784049 = '\\x0..."
+    },
+    {
+      "method": "vdx",
+      "signature": "public int vdx(Vector3 a)",
+      "line": 282771,
+      "va": "0x15da8a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 419,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (DAT_18678404a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "oxa",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (((__this->fields).dldl != (fdz_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (cVar8 != '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if ((int)uVar9 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if ((((pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if ((pSVar4->fields)._size <= (int)uVar9) {"
+          },
+          {
+            "type": "IF",
+            "line": 190,
+            "condition": "if (pSVar5 != (System_Collections_Generic_Dictionary_int__List_int___o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (((cVar8 != '\\0') &&"
+          },
+          {
+            "type": "IF",
+            "line": 248,
+            "condition": "if (pCVar1 == (Core_Rendering_MapRenderer_o *)0x0) goto LAB_1815dad3b;"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (pCVar2 == (Core_World_Metadata_Maps_MapMetadata_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (pEVar3 == (Editor_AleCore_Data_ClientMapData_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (pSVar4 == (System_Collections_Generic_List_ClientCellData__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((Il2CppMethodPointer)auStack_50._0_8_ == (Il2CppMethodPointer)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "oxa",
+            "line": 334
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (uVar10 == uVar11) {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (((pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 392,
+            "condition": "if (*(int *)((longlong)&(pCStackX_8->fields).dldk + 4) == 0) {"
+          }
+        ],
+        "opsCount": 25,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  Core_World_Metadata_Maps_MapMetadata_o *pCVar2;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar3;\n\n  System_Collections_Generic_List_ClientCellData__o *pSVar4;\n\n  System_Collections_Generic_Dictionary_int__List_int___o *pSVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  char cVar8;\n\n  uint uVar9;\n\n  uint uVar10;\n\n  uint uVar11;\n\n  int32_t iVar12;\n\n  longlong lVar13;\n\n  MethodInfo *method_00;\n\n  Core_Services_Rendering_MapDisplayService_MapDisplayService_o *pCS..."
+    },
+    {
+      "method": "ruq",
+      "signature": "protected override void ruq()",
+      "line": 282774,
+      "va": "0x15d9930",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 313,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_18678404b == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "gat",
+            "method": "ruq",
+            "line": 52
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "vep",
+            "line": 54
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (DAT_1867840d0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Equality",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject_",
+            "method": "ctor",
+            "line": 94,
+            "string_arg": "parentTiles"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (DAT_1867840d1 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (DAT_1867840d0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pUVar4 != (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "SetActive",
+            "line": 124
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((__this->fields).dled != (ejo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 154
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (pCVar6 != (Core_Engine_Inputs_Events_InputCustomEvent_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 170
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (pCVar6 != (Core_Engine_Inputs_Events_InputCustomEvent_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 186
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (lVar5 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 190,
+            "condition": "if (DAT_1867885c6 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (*(System_Collections_Generic_List_T__o **)(lVar5 + 0x10) !="
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (*(longlong *)(lVar5 + 0x10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 226,
+            "condition": "if (1000 < *(int *)(*(longlong *)(lVar5 + 0x10) + 0x18)) {"
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 248,
+            "string_arg": " contains too many callbacks, what happened ?"
+          },
+          {
+            "type": "IF",
+            "line": 256,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 262,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Engine\\Inputs\\Events\\InputCustomEvent.cs"
+          }
+        ],
+        "opsCount": 35,
+        "varMap": {
+          "pSVar3": "parentTiles",
+          "pSVar8": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Engine\\Inputs\\Events\\InputCustomEvent.cs",
+          "str2": " contains too many callbacks, what happened ?"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 10,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Object_o *x;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_String_o *pSVar3;\n\n  UnityEngine_GameObject_o *pUVar4;\n\n  longlong lVar5;\n\n  Core_Engine_Inputs_Events_InputCustomEvent_o *pCVar6;\n\n  System_Action_o *pSVar7;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *item;\n\n  System_String_o *pSVar8;\n\n  System_String_o *str2;\n\n\n\n  if (DAT_18678404b == '\\0') {\n\n    FUN_1805658a0(&System_Action_TypeInfo);\n\n    FUN_1805658a0(&UnityEngine_GameObject_TypeInfo);\n\n    FUN_1805658a..."
+    },
+    {
+      "method": "vdy",
+      "signature": "private void vdy()",
+      "line": 282777,
+      "va": "0x15dad50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 103,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678404c == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 38
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (peVar2 == (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (pIVar4[uVar8].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<czn>__ + 0"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_o *peVar2;\n\n  ezp_c *peVar3;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar4;\n\n  code *pcVar5;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_00;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ushort uVar8;\n\n\n\n  if (DAT_18678404c == '\\0') {\n\n    FUN_1805658a0(&czn_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<czn>__);\n\n    DAT_18678404c = '\\x01';\n\n  }\n\n  peVar2 = (__this->fields).dldj;\n\n  __this_00 = (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o..."
+    },
+    {
+      "method": "vdz",
+      "signature": "private void vdz()",
+      "line": 282780,
+      "va": "0x15dae50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 123,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_18678404d == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "d__6_",
+            "method": "ctor",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 54
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar4[uVar8].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<czm>__ + 0"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_o *peVar2;\n\n  ezp_c *peVar3;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar4;\n\n  code *pcVar5;\n\n  QFSW_QC_Demo_Robot__KillAction_d__6_o *__this_00;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_01;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ushort uVar8;\n\n\n\n  if (DAT_18678404d == '\\0') {\n\n    FUN_1805658a0(&czm_TypeInfo);\n\n    FUN_1805658a0(&dij_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<czm>__);\n\n    FUN_1805658a0(&Method_ezp_bdgr<dij>__);\n\n  ..."
+    },
+    {
+      "method": "vea",
+      "signature": "private void vea()",
+      "line": 282783,
+      "va": "0x15dafa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 123,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_18678404e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "d__6_",
+            "method": "ctor",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnitySourceGeneratedAssemblyMonoScriptTypes_v1_",
+            "method": "ctor",
+            "line": 54
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (pIVar4[uVar8].interfaceType == *(Il2CppClass **)(_Method_ezp_bdgr<czf>__ + 0"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_o *peVar2;\n\n  ezp_c *peVar3;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar4;\n\n  code *pcVar5;\n\n  QFSW_QC_Demo_Robot__KillAction_d__6_o *__this_00;\n\n  UnitySourceGeneratedAssemblyMonoScriptTypes_v1_47_o *__this_01;\n\n  VirtualInvokeData *pVVar6;\n\n  longlong lVar7;\n\n  ushort uVar8;\n\n\n\n  if (DAT_18678404e == '\\0') {\n\n    FUN_1805658a0(&czf_TypeInfo);\n\n    FUN_1805658a0(&dij_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgr<czf>__);\n\n    FUN_1805658a0(&Method_ezp_bdgr<dij>__);\n\n  ..."
+    },
+    {
+      "method": "rur",
+      "signature": "protected override void rur()",
+      "line": 282786,
+      "va": "0x15d9cb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 353,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_18678404f == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "gat",
+            "method": "rur",
+            "line": 80
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "vep",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 86,
+            "condition": "if (DAT_1867840d0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (__this_00 != (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "SetActive",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (peVar3 != (ejo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 152
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (pCVar7 != (Core_Engine_Inputs_Events_InputCustomEvent_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 176
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (pCVar7 != (Core_Engine_Inputs_Events_InputCustomEvent_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if ((__this->fields).dldy != (fdt_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_AI_NavMesh_OnNavMeshPreUpdate_",
+            "method": "ctor",
+            "line": 198
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (DAT_1867885c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 218,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (*(int *)(lVar6 + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 266,
+            "condition": "if (*(int *)(*(longlong *)(lVar6 + 0x48) + 0x28) < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (-1 < index) {"
+          }
+        ],
+        "opsCount": 25,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 *puVar1;\n\n  undefined4 uVar2;\n\n  UnityEngine_GameObject_o *__this_00;\n\n  ejo_o *peVar3;\n\n  System_Collections_Generic_List_T__o *__this_01;\n\n  MethodInfo_3204620 *method_00;\n\n  MethodInfo_3205140 *method_01;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  int32_t index;\n\n  longlong lVar6;\n\n  Core_Engine_Inputs_Events_InputCustomEvent_o *pCVar7;\n\n  System_Action_o *pSVar8;\n\n  undefined1 *puVar9;\n\n  longlong lVar10;\n\n  longlong lVar11;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType..."
+    },
+    {
+      "method": "veb",
+      "signature": "private void veb()",
+      "line": 282789,
+      "va": "0x15db0f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 293,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186784050 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 72
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if ((pCVar11 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "SetActive",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (peVar4 != (ezo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pIVar3[uVar8].interfaceType == (Il2CppClass *)ezo_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "else if ((__this->fields).dldq != (ezo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if ((__this->fields).dldq == (ezo_o *)0x0) goto LAB_1815db1eb;"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (DAT_186784051 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject_",
+            "method": "ctor",
+            "line": 200,
+            "string_arg": "Map Renderer"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (pUVar10 != (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (((__this->fields).dldk != (feo_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (((__this->fields).dldl != (fdz_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if ((((__this->fields).dldk != (feo_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 23,
+        "varMap": {
+          "name": "Map Renderer"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 4,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezo_c *peVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ezo_o *peVar4;\n\n  ezk_o *b;\n\n  vb_o *d;\n\n  fbj_o *g;\n\n  fex_o *h;\n\n  ewc_o *l;\n\n  code *pcVar5;\n\n  bool bVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  VirtualInvokeData *pVVar9;\n\n  System_String_o *name;\n\n  UnityEngine_GameObject_o *pUVar10;\n\n  Core_Rendering_MapRenderer_o *pCVar11;\n\n  exm_o *c;\n\n  ejd_o *e;\n\n  fer_o *f;\n\n  fea_o *i;\n\n  fai_o *j;\n\n  fes_o *m;\n\n  eyv_o *n;\n\n  undefined8 unaff_RDI;\n\n\n\n  if (DAT_1867840..."
+    },
+    {
+      "method": "vec",
+      "signature": "public void vec()",
+      "line": 282792,
+      "va": "0x15db200",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 167,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186784051 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 66
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject_",
+            "method": "ctor",
+            "line": 88,
+            "string_arg": "Map Renderer"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (__this_00 != (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (((__this->fields).dldk != (feo_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (((__this->fields).dldl != (fdz_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((((__this->fields).dldk != (feo_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 11,
+        "varMap": {
+          "name": "Map Renderer"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezo_o *a;\n\n  ezk_o *b;\n\n  vb_o *d;\n\n  fbj_o *g;\n\n  fex_o *h;\n\n  ewc_o *l;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_String_o *name;\n\n  UnityEngine_GameObject_o *__this_00;\n\n  Core_Rendering_MapRenderer_o *pCVar3;\n\n  exm_o *c;\n\n  ejd_o *e;\n\n  fer_o *f;\n\n  fea_o *i;\n\n  fai_o *j;\n\n  fes_o *m;\n\n  eyv_o *n;\n\n\n\n  if (DAT_186784051 == '\\0') {\n\n    FUN_1805658a0(&Method_UnityEngine_GameObject_AddComponent<MapRenderer>__);\n\n    FUN_1805658a0(&UnityEngine_GameObject_TypeInfo);\n\n    FUN_1805658a0(&Uni..."
+    },
+    {
+      "method": "ved",
+      "signature": "public void ved(long a)",
+      "line": 282795,
+      "va": "0x15db580",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 131,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_186784052 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (a == 0xe240509) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((__this->fields).dldk == (feo_o *)0x0) goto LAB_1815db615;"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (lVar3 == 0) goto LAB_1815db615;"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (DAT_186787d77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_00 != (System_Configuration_ConfigurationCollectionAttribute_o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if ((pCVar1->fields).dfjv != (ezn_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "AWAIT",
+            "class": "Cysharp_Threading_Tasks_UniTask",
+            "method": "Create",
+            "line": 94
+          },
+          {
+            "type": "AWAIT",
+            "class": "Cysharp_Threading_Tasks_UniTaskExtensions",
+            "method": "Forget",
+            "line": 102
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  code *pcVar2;\n\n  longlong lVar3;\n\n  System_Configuration_ConfigurationCollectionAttribute_o *__this_00;\n\n  System_Func_UniTask__o *factory;\n\n  Cysharp_Threading_Tasks_UniTask_o *pCVar4;\n\n  MethodInfo *method_00;\n\n  Cysharp_Threading_Tasks_UniTask_o CStack_18;\n\n\n\n  if (DAT_186784052 == '\\0') {\n\n    FUN_1805658a0(&feo_TypeInfo);\n\n    FUN_1805658a0(&fes_TypeInfo);\n\n    DAT_186784052 = '\\x01';\n\n  }\n\n  if (a == 0xe240509) {\n\n    if ((__this->fields).dldk ..."
+    },
+    {
+      "method": "vee",
+      "signature": "private void vee(long a)",
+      "line": 282798,
+      "va": "0x15db620",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 43,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_186784052 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (a != 0xe240509) {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (((__this->fields).dldk != (feo_o *)0x0) && (lVar2 = FUN_180007c70(8,feo_Type"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  longlong lVar2;\n\n\n\n  if (DAT_186784052 == '\\0') {\n\n    FUN_1805658a0(&feo_TypeInfo);\n\n    FUN_1805658a0(&fes_TypeInfo);\n\n    DAT_186784052 = '\\x01';\n\n  }\n\n  if (a != 0xe240509) {\n\n    return;\n\n  }\n\n  if (((__this->fields).dldk != (feo_o *)0x0) && (lVar2 = FUN_180007c70(8,feo_TypeInfo), lVar2 != 0)\n\n     ) {\n\n    FUN_1800074c0(0x23,fes_TypeInfo,lVar2);\n\n    return;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  (*pcVar1)();\n\n  return;\n\n}"
+    },
+    {
+      "method": "vef",
+      "signature": "public void vef(WorldPoint a, bool b)",
+      "line": 282801,
+      "va": "0x15db6b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_186784053 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if ((__this->fields).super.super.dwsf != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (lVar2 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "vep",
+            "line": 40
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if ((a != (Core_DataCenter_Metadata_World_WorldPoint_o *)0x0) &&"
+          },
+          {
+            "type": "AWAIT",
+            "class": "Cysharp_Threading_Tasks_UniTaskExtensions",
+            "method": "Forget",
+            "line": 60
+          },
+          {
+            "type": "CALL",
+            "class": "System_InvalidOperationException_",
+            "method": "ctor",
+            "line": 96,
+            "string_arg": "Calling RenderService.Display() with RenderService disabled"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {
+          "message": "Calling RenderService.Display() with RenderService disabled"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *__this_00;\n\n  code *pcVar1;\n\n  longlong lVar2;\n\n  Cysharp_Threading_Tasks_UniTask_o *pCVar3;\n\n  System_String_o *message;\n\n  undefined8 uVar4;\n\n  System_InvalidOperationException_o *__this_01;\n\n  Cysharp_Threading_Tasks_UniTask_o CStack_18;\n\n\n\n  if (DAT_186784053 == '\\0') {\n\n    FUN_1805658a0(&exm_TypeInfo);\n\n    FUN_1805658a0(&feo_TypeInfo);\n\n    DAT_186784053 = '\\x01';\n\n  }\n\n  if ((__this->fields).super.super.dwsf != false) {\n\n    if ((__this->fields).dldk !=..."
+    },
+    {
+      "method": "veg",
+      "signature": "public void veg(MapMetadata a, GameObject b, List<UniTask> c)",
+      "line": 282804,
+      "va": "0x15db7f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 581,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (DAT_186784054 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (((a != (Core_World_Metadata_Maps_MapMetadata_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (pSVar5 != (System_Collections_Generic_List_IClientInteractiveElement__o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if ((pSVar5->fields)._size + (pSVar4->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "hdb",
+            "method": "bnxr",
+            "line": 192,
+            "string_arg": "AnimatedObjectRoot"
+          },
+          {
+            "type": "IF",
+            "line": 198,
+            "condition": "if ((pEVar3 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (__this_00 == (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "get_transform",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (DAT_186784055 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (c == (System_Collections_Generic_List_UniTask__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 334,
+            "condition": "if ((pEVar3 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (!bVar10) {"
+          },
+          {
+            "type": "IF",
+            "line": 398,
+            "condition": "if (peVar6 != (eyu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if (uVar2 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if ((gas_c *)(&pMVar18->methodPointer)[(ulonglong)uVar17 * 2] == gas_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 440,
+            "condition": "if (cVar11 == '\\0') goto LAB_1815dbc8a;"
+          },
+          {
+            "type": "IF",
+            "line": 444,
+            "condition": "if ((Core_World_Metadata_Maps_MapMetadata_o *)AStackX_10.fields.m_pool !="
+          },
+          {
+            "type": "IF",
+            "line": 452,
+            "condition": "if (pMVar18 != (MethodInfo *)0x0) goto code_r0x0001815dbc6b;"
+          },
+          {
+            "type": "IF",
+            "line": 502,
+            "condition": "if (cVar11 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 506,
+            "condition": "if ((Core_World_Metadata_Maps_MapMetadata_o *)pAVar9 !="
+          },
+          {
+            "type": "IF",
+            "line": 514,
+            "condition": "if (((((Core_World_Metadata_Maps_MapMetadata_c *)pAVar9->klass)->_2).naturalAlig"
+          },
+          {
+            "type": "IF",
+            "line": 536,
+            "condition": "if (bVar10) {"
+          },
+          {
+            "type": "IF",
+            "line": 542,
+            "condition": "if (a_01 != (Core_World_Metadata_Maps_MapMetadata_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 544,
+            "condition": "if (__this_00 == (UnityEngine_GameObject_o *)0x0) goto LAB_1815dbdab;"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "get_transform",
+            "line": 546
+          },
+          {
+            "type": "IF",
+            "line": 556,
+            "condition": "if (c == (System_Collections_Generic_List_UniTask__o *)0x0) goto LAB_1815dbda6;"
+          }
+        ],
+        "opsCount": 27,
+        "varMap": {
+          "a_00": "AnimatedObjectRoot"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  byte bVar1;\n\n  ushort uVar2;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar3;\n\n  System_Collections_Generic_List_ClientAnimatedElementTransform__o *pSVar4;\n\n  System_Collections_Generic_List_IClientInteractiveElement__o *pSVar5;\n\n  eyu_o *peVar6;\n\n  eyu_c *peVar7;\n\n  code *pcVar8;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAVar9;\n\n  bool bVar10;\n\n  char cVar11;\n\n  undefined4 uVar12;\n\n  System_String_o *a_00;\n\n  UnityEngine_GameObject_o *__this_00;\n\n  UnityEngine_Transform_o *pUVar13;\n\n ..."
+    },
+    {
+      "method": "veh",
+      "signature": "private UniTask veh(ClientAnimatedElementTransform a, Transform b)",
+      "line": 282808,
+      "va": "0x15dbdd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 79,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784055 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  undefined8 uVar1;\n\n  undefined8 *puVar2;\n\n  undefined1 auStack_68 [16];\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_58;\n\n  undefined8 uStack_48;\n\n  Editor_AleCore_Data_ClientAnimatedElementTransform_o *pEStack_40;\n\n  UnityEngine_Transform_o *pUStack_38;\n\n  Core_Services_Rendering_MapDisplayService_MapDisplayService_o *pCStack_30;\n\n  undefined8 uStack_28;\n\n  undefined8 uStack_20;\n\n  undefined8 uStack_18;\n\n\n\n  if (DAT_186784055 == '\\0') {\n\n    FUN_1805658a0(&\n\n           ..."
+    },
+    {
+      "method": "vei",
+      "signature": "public void vei(MapMetadata a, GameObject b, List<UniTask> c)",
+      "line": 282811,
+      "va": "0x15dbe90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 37,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_186784056 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (*(int *)&(hda_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Int32",
+            "method": "ToString",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "vej",
+            "line": 26
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "vek",
+            "line": 30
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_String_o *d;\n\n  int32_t aiStackX_10 [2];\n\n\n\n  if (DAT_186784056 == '\\0') {\n\n    FUN_1805658a0(&hda_TypeInfo);\n\n    DAT_186784056 = '\\x01';\n\n  }\n\n  if (*(int *)&(hda_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0(hda_TypeInfo);\n\n  }\n\n  aiStackX_10[0] = hda_TypeInfo->static_fields->ebca;\n\n  d = System_Int32__ToString((int32_t)aiStackX_10,(MethodInfo *)0x0);\n\n  Core_Services_Rendering_MapDisplayService_MapDisplayService__vej(__this,a,b,c,d,(MethodInfo *)0x0)\n\n  ;\n\n  Core_Serv..."
+    },
+    {
+      "method": "vej",
+      "signature": "public void vej(MapMetadata a, GameObject b, List<UniTask> c, string d)",
+      "line": 282814,
+      "va": "0x15dbf60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 663,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (DAT_186784057 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (((a != (Core_World_Metadata_Maps_MapMetadata_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if ((pSVar5->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_ClientInteractiveElementTransform"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((pSVar6->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "hdb",
+            "method": "bnxr",
+            "line": 188,
+            "string_arg": "InteractiveRoot"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((pEVar4 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 230,
+            "condition": "if (bVar13) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (peVar7 == (eyu_o *)0x0) goto LAB_1815dc59f;"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (uVar19 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if ((gas_c *)(&pMVar20->methodPointer)[(ulonglong)uVar18 * 2] == gas_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 284,
+            "condition": "if (cVar14 == '\\0') goto LAB_1815dc23c;"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (auStack_b0 == (undefined1  [8])0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pMVar20 == (MethodInfo *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (cVar14 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (auVar12 != (undefined1  [8])0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if ((((*(Editor_AleCore_Data_ClientInteractiveElementTransform_c **)auVar12)->_2"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (bVar13) {"
+          },
+          {
+            "type": "IF",
+            "line": 348,
+            "condition": "if (a_02 != (undefined1  [8])0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 356,
+            "condition": "if (pUVar9 != (UnityEngine_Material_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 358,
+            "condition": "if (uVar3 < (uint)pUVar9->max_length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "uz",
+            "method": "qph",
+            "line": 360
+          },
+          {
+            "type": "IF",
+            "line": 366,
+            "condition": "if (c != (System_Collections_Generic_List_UniTask__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 434,
+            "condition": "if ((pEVar4 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 472,
+            "condition": "if (!bVar13) {"
+          },
+          {
+            "type": "IF",
+            "line": 496,
+            "condition": "if (peVar7 != (eyu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 504,
+            "condition": "if (uVar2 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 512,
+            "condition": "if (pIVar10[uVar19].interfaceType == (Il2CppClass *)gas_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 534,
+            "condition": "if (cVar14 == '\\0') goto LAB_1815dc4a7;"
+          },
+          {
+            "type": "IF",
+            "line": 538,
+            "condition": "if ((Core_World_Metadata_Maps_MapMetadata_o *)AStackX_10.fields.m_pool !="
+          },
+          {
+            "type": "IF",
+            "line": 542,
+            "condition": "if (pMVar20 != (MethodInfo *)0x0) goto code_r0x0001815dc48a;"
+          },
+          {
+            "type": "IF",
+            "line": 582,
+            "condition": "if (cVar14 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 588,
+            "condition": "if ((Core_World_Metadata_Maps_MapMetadata_o *)a_00 =="
+          },
+          {
+            "type": "IF",
+            "line": 596,
+            "condition": "if (pUVar9 == (UnityEngine_Material_array *)0x0) goto LAB_1815dc5bf;"
+          },
+          {
+            "type": "IF",
+            "line": 598,
+            "condition": "if ((uint)pUVar9->max_length <= uVar3) goto LAB_1815dc5ab;"
+          },
+          {
+            "type": "CALL",
+            "class": "uz",
+            "method": "qph",
+            "line": 600
+          },
+          {
+            "type": "IF",
+            "line": 606,
+            "condition": "if (c == (System_Collections_Generic_List_UniTask__o *)0x0) goto LAB_1815dc5ba;"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {
+          "a_01": "InteractiveRoot"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  byte bVar1;\n\n  ushort uVar2;\n\n  uint uVar3;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar4;\n\n  System_Collections_Generic_List_IClientInteractiveElement__o *pSVar5;\n\n  System_Collections_Generic_List_ClientInteractiveElementTransform__o *pSVar6;\n\n  eyu_o *peVar7;\n\n  eyu_c *peVar8;\n\n  UnityEngine_Material_array *pUVar9;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar10;\n\n  code *pcVar11;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *a_00;\n\n  undefined1 auVar12 [8];\n\n  ushort uVar18;\n\n  ushort uV..."
+    },
+    {
+      "method": "vek",
+      "signature": "public void vek(MapMetadata a, GameObject b, List<UniTask> c, string d)",
+      "line": 282817,
+      "va": "0x15dc5e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_186784058 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (((a != (Core_World_Metadata_Maps_MapMetadata_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (0 < (pSVar3->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "hdb",
+            "method": "bnxr",
+            "line": 94,
+            "string_arg": "RefractionRoot"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if ((pEVar2 == (Editor_AleCore_Data_ClientMapData_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (!bVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pEStackX_10 == (Editor_AleCore_Data_ClientElementTransform_o *)0x0) goto LAB"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (pUVar4 == (UnityEngine_Material_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if ((uint)pUVar4->max_length <= uVar1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ux",
+            "method": "qov",
+            "line": 184
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (c == (System_Collections_Generic_List_UniTask__o *)0x0) goto LAB_1815dc85e;"
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {
+          "a_00": "RefractionRoot"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint uVar1;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar2;\n\n  System_Collections_Generic_List_ClientElementTransform__o *pSVar3;\n\n  UnityEngine_Material_array *pUVar4;\n\n  code *pcVar5;\n\n  bool bVar6;\n\n  System_String_o *a_00;\n\n  UnityEngine_GameObject_o *d_00;\n\n  Cysharp_Threading_Tasks_UniTask_MapSprite__o *pCVar7;\n\n  MethodInfo *method_00;\n\n  Editor_AleCore_Data_ClientElementTransform_o *pEStackX_10;\n\n  undefined1 auStack_a8 [32];\n\n  undefined1 auStack_88 [16];\n\n  System_Object_array *pS..."
+    },
+    {
+      "method": "vel",
+      "signature": "public bool vel(int a)",
+      "line": 282820,
+      "va": "0x15dc880",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (DAT_186784059 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if ((((pCVar2 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (!bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if ((((method_00->_2).naturalAligment < bVar1) ||"
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (*(int *)&pAStackX_8[1].fields.m_items == a) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  byte bVar1;\n\n  Core_Rendering_MapRenderer_o *pCVar2;\n\n  Core_World_Metadata_Maps_MapMetadata_o *pCVar3;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar4;\n\n  System_Collections_Generic_List_IClientInteractiveElement__o *__return_storage_ptr__;\n\n  code *pcVar5;\n\n  bool bVar6;\n\n  undefined1 uVar7;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__c *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_8;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array..."
+    },
+    {
+      "method": "vem",
+      "signature": "public bool vem(int a)",
+      "line": 282823,
+      "va": "0x15dcaa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678405a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (__this_01 != (System_Configuration_ConfigurationCollectionAttribute_o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (((pCVar1 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_ClientCellData__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Rendering_MapRenderer_o *pCVar1;\n\n  Core_World_Metadata_Maps_MapMetadata_o *pCVar2;\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar3;\n\n  System_Collections_Generic_List_ClientCellData__o *__this_00;\n\n  code *pcVar4;\n\n  undefined1 uVar5;\n\n  int32_t iVar6;\n\n  System_Configuration_ConfigurationCollectionAttribute_o *__this_01;\n\n  System_Predicate_T__o *match;\n\n\n\n  if (DAT_18678405a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<ClientCellData>_Exists__);\n\n    FUN_1805..."
+    },
+    {
+      "method": "ven",
+      "signature": "public void ven()",
+      "line": 282826,
+      "va": "0x15dcb90",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 285,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_18678405b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if ((__this->fields).dldu == (evy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (cVar2 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (plVar3 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if ((__this->fields).dldu == (evy_o *)0x0) goto LAB_1815dcf3c;"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if ((__this->fields).dldm == (vb_o *)0x0) goto LAB_1815dcf3c;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (plVar3 == (longlong *)0x0) goto LAB_1815dcf4d;"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (*(ushort *)(lVar5 + 0x12e) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(System_Collections_Generic_IEnumerator_sn__c **)"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (lVar5 == 0) goto LAB_1815dcf48;"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (*(Core_Rendering_Entity_Entity_o **)(lVar5 + 0x18) =="
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (plVar3 == (longlong *)0x0) goto LAB_1815dcf68;"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (*(ushort *)(lVar5 + 0x12e) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (*(System_Collections_IEnumerator_c **)"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (cVar2 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 218,
+            "condition": "if (plVar3 != (longlong *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if ((__this->fields).dldm != (vb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if (plVar3 == (longlong *)0x0) goto LAB_1815dcf63;"
+          },
+          {
+            "type": "IF",
+            "line": 240,
+            "condition": "if (*(ushort *)(lVar5 + 0x12e) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (*(System_Collections_Generic_IEnumerator_Interactive__c **)"
+          },
+          {
+            "type": "IF",
+            "line": 278,
+            "condition": "if (__this_00 == (Core_Rendering_Sprites_Interactive_Interactive_o *)0x0) goto L"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Rendering_Sprites_Interactive_Interactive",
+            "method": "pzb",
+            "line": 280
+          }
+        ],
+        "opsCount": 22,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  char cVar2;\n\n  longlong *plVar3;\n\n  undefined8 *puVar4;\n\n  longlong lVar5;\n\n  Core_Rendering_Sprites_Interactive_Interactive_o *__this_00;\n\n  ushort uVar6;\n\n  ushort uVar7;\n\n\n\n  if (DAT_18678405b == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerable<Interactive>_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerable<sn>_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<Inter..."
+    },
+    {
+      "method": "veo",
+      "signature": "public bool veo(MapMetadata a)",
+      "line": 282829,
+      "va": "0x15dcf80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 175,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_18678405c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((a != (Core_World_Metadata_Maps_MapMetadata_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if ((pEVar1 != (Editor_AleCore_Data_ClientMapData_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((pSVar3->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).dldm != (vb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "else if ((__this->fields).dldu != (evy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (iVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if ((__this->fields).dldu == (evy_o *)0x0) goto LAB_1815dd19f;"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (lVar9 == 0) goto LAB_1815dd1b5;"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (lVar9 == 0) goto LAB_1815dd1b0;"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (lVar10 == 0) goto LAB_1815dd1ab;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (*(Core_Rendering_Entity_Entity_o **)(lVar10 + 0x18) =="
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (lVar9 != 0) {"
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Editor_AleCore_Data_ClientMapData_o *pEVar1;\n\n  System_Collections_Generic_List_ClientAnimatedElementTransform__o *pSVar2;\n\n  System_Collections_Generic_List_IClientInteractiveElement__o *pSVar3;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  bool bVar6;\n\n  undefined1 uVar7;\n\n  int iVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n\n\n  if (DAT_18678405c == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerable<sn>_TypeInfo);\n\n    FUN_1805658a0(&..."
+    },
+    {
+      "method": "vep",
+      "signature": "public void vep(bool a)",
+      "line": 282832,
+      "va": "0x15dd1d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 445,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (DAT_18678405d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (DAT_186784050 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if ((pCVar13 != (Core_Rendering_MapRenderer_o *)0x0) &&"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "SetActive",
+            "line": 114
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (peVar4 != (ezo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if (uVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (pIVar2[uVar10].interfaceType == (Il2CppClass *)ezo_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "else if ((__this->fields).dldq != (ezo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (cVar8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if ((__this->fields).dldq == (ezo_o *)0x0) goto LAB_1815dd460;"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (DAT_186784051 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 202,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 208
+          },
+          {
+            "type": "IF",
+            "line": 210,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject_",
+            "method": "ctor",
+            "line": 230,
+            "string_arg": "Map Renderer"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (pUVar14 != (UnityEngine_GameObject_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if ((__this->fields).dldk != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 252,
+            "condition": "if (((__this->fields).dldk != (feo_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (((__this->fields).dldl != (fdz_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if ((((__this->fields).dldk != (feo_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "op_Implicit",
+            "line": 324
+          },
+          {
+            "type": "IF",
+            "line": 326,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 330,
+            "condition": "if ((pCVar13 == (Core_Rendering_MapRenderer_o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_GameObject",
+            "method": "SetActive",
+            "line": 338
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (pCVar13 == (Core_Rendering_MapRenderer_o *)0x0) goto LAB_1815dd460;"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Rendering_MapRenderer",
+            "method": "qds",
+            "line": 344
+          },
+          {
+            "type": "IF",
+            "line": 348,
+            "condition": "if (pCVar13 == (Core_Rendering_MapRenderer_o *)0x0) goto LAB_1815dd460;"
+          },
+          {
+            "type": "IF",
+            "line": 356,
+            "condition": "if (*(int *)&(UnityEngine_Object_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "UnityEngine_Object",
+            "method": "Destroy",
+            "line": 362
+          },
+          {
+            "type": "IF",
+            "line": 368,
+            "condition": "if (((__this->fields).dldk != (feo_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 376,
+            "condition": "if (peVar4 != (ezo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 382,
+            "condition": "if (peVar5 != (ezn_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 392,
+            "condition": "if (uVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 398,
+            "condition": "if (pIVar2[uVar9].interfaceType == (Il2CppClass *)ezn_TypeInfo) {"
+          }
+        ],
+        "opsCount": 40,
+        "varMap": {
+          "name": "Map Renderer"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 8,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ezn_c *peVar1;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar2;\n\n  ezo_c *peVar3;\n\n  ezk_o *b;\n\n  vb_o *d;\n\n  fbj_o *g;\n\n  fex_o *h;\n\n  ewc_o *l;\n\n  ezo_o *peVar4;\n\n  ezn_o *peVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  char cVar8;\n\n  ushort uVar9;\n\n  ushort uVar10;\n\n  undefined8 *puVar11;\n\n  VirtualInvokeData *pVVar12;\n\n  System_String_o *name;\n\n  Core_Rendering_MapRenderer_o *pCVar13;\n\n  exm_o *c;\n\n  ejd_o *e;\n\n  fer_o *f;\n\n  fea_o *i;\n\n  fai_o *j;\n\n  fes_o *m;\n\n  eyv_o *n;\n\n  UnityEngine_GameOb..."
+    },
+    {
+      "method": "Reset",
+      "signature": "public void Reset()",
+      "line": 282835,
+      "va": "0x15d98e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 17,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "Core_Services_Rendering_MapDisplayService_MapDisplayService",
+            "method": "ven",
+            "line": 2
+          },
+          {
+            "type": "IF",
+            "line": 4,
+            "condition": "if ((__this->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_Services_Rendering_MapDisplayService_MapDisplayService__ven(__this,(MethodInfo *)0x0);\n\n  if ((__this->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(__this->klass->vtable)._7_rur.methodPtr)(__this,(__this->klass->vtable)._7_rur.method);\n\n  (__this->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor()",
+      "line": 282838,
+      "va": "0x15d9910",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 43,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_18678814d == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_eym__o *__this_00;\n\n  MethodInfo *in_R8;\n\n\n\n  (__this->fields).dlei = -1;\n\n  if (DAT_18678814d == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<eym>__ctor__,0);\n\n    FUN_1805658a0(&System_Collections_Generic_List<eym>_TypeInfo);\n\n    DAT_18678814d = '\\x01';\n\n  }\n\n  __this_00 = (System_Collections_Generic_List_eym__o *)\n\n              func_0x000180565b00(System_Collections_Generic_List<eym>_TypeInfo);\n\n  System_Collections_Generic_LowLevel..."
+    }
+  ]
+}

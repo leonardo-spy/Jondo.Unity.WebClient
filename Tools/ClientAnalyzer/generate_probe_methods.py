@@ -33,6 +33,16 @@ SCREEN_MAP = {
     "fyv": "PreGameMainMenu",
     "CharacterHeader": "CharacterHeader",
     "fyr": "ConnectionBackground",
+    "BannerMenu": "BannerMenu",
+    "Core.UILogic.Chat.ChatView": "ChatView",
+    "Core.UILogic.Inventory.Uis.PlayerInventory.PlayerInventoryUi": "PlayerInventoryUi",
+    "Core.UILogic.MainMenu.CharacterInformation": "CharacterInformation",
+    "Core.UILogic.GameUICore.UIActionBar": "ActionBar",
+    "Core.UILogic.NpcDialog.NpcDialog": "NpcDialog",
+    "EquipmentStorageUI": "EquipmentStorageUI",
+    "Core.UILogic.Inventory.Uis.PlayerInventory.EquipmentStorageUI": "EquipmentStorageUI",
+    "SpellBaseUi": "SpellBaseUi",
+    "Core.UILogic.Grimoire.SpellBaseUi": "SpellBaseUi",
 }
 
 # Methods that should generate code (the important UI methods)
@@ -208,7 +218,7 @@ def main():
     INIT_METHODS = {"OnEnable", "Localize", "LocalizeTexts", "ctor", "Init",
                     "InitializeUI", "InitializeBinding", "Reset", "SetUpAll",
                     "DisplayCharacter", "DisplayCharacters", "CreateTabFilter",
-                    "ShowHeader", "PlayerDisplay", "OnServersList", "Toggle"}
+                    "ShowHeader", "PlayerDisplay", "OnServersList", "Toggle", "BindUiElements", "SetUp", "SetModuleSprites", "AddTooltips", "AddMouseClick", "SubscribeInputs", "SubscribeClicked", "SetToDefaultWidthAndHeight"}
     # Methods that set launcher-dependent states (btn_play disabled until launcher connects)
     # Skip for WebGL: no Ankama launcher → button should start enabled
     SKIP_WEBGL = {
@@ -253,6 +263,80 @@ def main():
     dispatcher.append('')
 
     all_methods.append("\n".join(dispatcher))
+
+    # Lifecycle-aware dispatchers
+    ctor_disp = ["    void DispatchGen_Ctor(string screen, VisualElement root)", "    {", "        switch (screen)", "        {"]
+    for screen_type, screen_name in SCREEN_MAP.items():
+        methods = logic.get(screen_type, {}).get("methods", {})
+        calls = []
+        for m in ["ctor", "InitializeUI", "InitializeBinding"]:
+            if m in methods:
+                cs_name = f"Gen_{screen_name}_{m}".replace("<", "_").replace(">", "_").replace("|", "_")
+                if any(f"void {cs_name}(" in m_entry for m_entry in all_methods):
+                    calls.append(cs_name)
+        if calls:
+            ctor_disp.append(f'            case "{screen_name}":')
+            for c in calls:
+                ctor_disp.append(f'                {c}(root);')
+            ctor_disp.append('                break;')
+    ctor_disp.extend(["        }", "    }", ""])
+    all_methods.append("\n".join(ctor_disp))
+
+    enable_disp = ["    void DispatchGen_OnEnable(string screen, VisualElement root)", "    {", "        switch (screen)", "        {"]
+    for screen_type, screen_name in SCREEN_MAP.items():
+        methods = logic.get(screen_type, {}).get("methods", {})
+        calls = []
+        for m in ["OnEnable", "EnableEffect", "SpawnEffect", "InitServer", "Init", "DisplayCharacters", "DisplayCharacter", "Reset", "SetUpAll"]:
+            if m in methods:
+                cs_name = f"Gen_{screen_name}_{m}".replace("<", "_").replace(">", "_").replace("|", "_")
+                if any(f"void {cs_name}(" in m_entry for m_entry in all_methods):
+                    calls.append(cs_name)
+        if calls:
+            enable_disp.append(f'            case "{screen_name}":')
+            for c in calls:
+                enable_disp.append(f'                {c}(root);')
+            enable_disp.append('                break;')
+    enable_disp.extend(["        }", "    }", ""])
+    all_methods.append("\n".join(enable_disp))
+
+    loc_disp = ["    void DispatchGen_Localize(string screen, VisualElement root)", "    {", "        switch (screen)", "        {"]
+    for screen_type, screen_name in SCREEN_MAP.items():
+        methods = logic.get(screen_type, {}).get("methods", {})
+        calls = []
+        for m in ["Localize", "LocalizeTexts"]:
+            if m in methods:
+                cs_name = f"Gen_{screen_name}_{m}".replace("<", "_").replace(">", "_").replace("|", "_")
+                if any(f"void {cs_name}(" in m_entry for m_entry in all_methods):
+                    calls.append(cs_name)
+        if calls:
+            loc_disp.append(f'            case "{screen_name}":')
+            for c in calls:
+                loc_disp.append(f'                {c}(root);')
+            loc_disp.append('                break;')
+    loc_disp.extend(["        }", "    }", ""])
+    all_methods.append("\n".join(loc_disp))
+
+    evt_disp = ["    void DispatchGen_Event(string screen, string evt, VisualElement root)", "    {", "        switch (screen)", "        {"]
+    for screen_type, screen_name in SCREEN_MAP.items():
+        methods = logic.get(screen_type, {}).get("methods", {})
+        cases = []
+        for m in methods:
+            if m in ("ctor", "Localize", "LocalizeTexts", "OnEnable"):
+                continue
+            cs_name = f"Gen_{screen_name}_{m}".replace("<", "_").replace(">", "_").replace("|", "_")
+            if any(f"void {cs_name}(" in m_entry for m_entry in all_methods):
+                cases.append((m, cs_name))
+        if cases:
+            evt_disp.append(f'            case "{screen_name}":')
+            evt_disp.append("                switch (evt)")
+            evt_disp.append("                {")
+            for orig_name, c in cases:
+                evt_disp.append(f'                    case "{orig_name}": {c}(root); break;')
+            evt_disp.append("                }")
+            evt_disp.append('                break;')
+    evt_disp.extend(["        }", "    }", ""])
+    all_methods.append("\n".join(evt_disp))
+
     all_methods.append("}")
 
     out_path = os.path.join(OUTPUT_DIR, "GeneratedScreenMethods.cs")
@@ -261,6 +345,11 @@ def main():
 
     print(f"\nGenerated: {total_generated} methods covering {total_ops_covered} ops")
     print(f"Saved: {out_path}")
+    import shutil
+    unity_cs_path = os.path.join(SCRIPT_DIR, "../../UnityProject/Assets/GeneratedScreenMethods.cs")
+    unity_cs_path = os.path.normpath(unity_cs_path)
+    shutil.copyfile(out_path, unity_cs_path)
+    print(f"Copied to: {unity_cs_path}")
 
 
 if __name__ == "__main__":

@@ -279,7 +279,59 @@ decompiled_all.c -> transcribe -> translate_screens -> generate_probe_methods ->
 
 ---
 
-## What Was Tried and Discarded (Accumulated V1-V14)
+## Session 11 (Oct 15, 2026) — V15: REA Integration + Map Rendering Investigation
+
+**Goal:** Integrate REA tool, audit existing pipeline, investigate map rendering subsystem.
+
+**3 subagents:**
+- `Research IL2CPP WebGL conversion` — complete project inventory (81 DLLs, 3944-line probe, 14 transcription files)
+- `Research REA reconstruction workflows` — discovered formal obligation ledger, import/verify/coverage lifecycle
+- `Search dump.cs for map types` — complete map pipeline: lwt/jru protocol, MapRenderer 39 methods, 560-cell grid, 3-layer rendering
+
+**Key achievements:**
+- REA integrated: 8 Ankama DLLs inspected, 7 small enough for full member analysis
+- P/Invoke boundary audit via REA: 585 FMOD P/Invokes verified correct (391 FMOD5_* + 194 FMOD_Studio_*)
+- WorldPoint mapId encoding decompiled: `worldId = (mapId >> 18) & 0xFFF`, `x = (mapId >> 9) & 0x1FF`, `y = mapId & 0x1FF`
+- Map bundles discovered: 577 bundles in `Content/Map/Data/mapdata_assets_world_{worldId}.bundle`
+- MapMetadata extracted via UnityPy: 560 cells (320 walkable), 1201 bg + 159 sort + 13 fg elements, atlas UV rects
+- Key insight: meshes/textures/spriteDetails are EMPTY in bundles — generated at runtime by MapRenderer
+- 1,103 methods transcribed (was 548): +273 eqq, +60 ejv, +41 eni, +39 MapRenderer, +38 MapDisplayService
+- WebGLProbe v32: jru handler with WorldPoint decoder + map bundle loader, lwt handler with cell parser, MapMetadata reflection parser
+- Tool paths updated: analyze_client.py + transcribe_methods.py now use Decompiled/ with env var overrides
+
+**What was tried and confirmed:**
+- REA Ghidra on GameAssembly.dll (115MB) times out — batch export (decompiled_all.c) remains correct approach
+- REA inspect_managed_members on Core.dll exceeds 67MB budget — dump.cs remains primary for Core.dll
+- REA works well for smaller DLLs (Ankama.Dofus.Core.World.dll: 51 types, 273 methods fully inspected)
+- MapMetadata bundles use long mapId (WorldPoint) as asset names, not short MapInformationData.id
+
+---
+
+
+---
+
+## Session 12 (Oct 2026) — v32: 100% Subsystem Extraction, Scene Sanitization, IL2CPP UXML Fix & E2E Browser Validation
+
+**Goal:** Close all extraction gaps across all 8 client subsystems, eliminate 3,500+ lines of console stack trace spam, resolve UXML deserialization failures in WebGL, enable native mouse clicking on Canvas, and validate the complete flow through Playwright in the real browser.
+
+**What was achieved:**
+- **100% Subsystem Extraction & Generation:**
+  - DataCenter (13,768 methods in `GeneratedDataCenterMethods.cs`)
+  - UI Bindings (12,634 methods in `GeneratedBindingMethods.cs`)
+  - UI Screens (19,219 methods in `GeneratedScreenSubsystemMethods.cs`)
+  - Protocol (13,768 methods in `GeneratedProtocolMethods.cs`)
+  - Movement & Pathfinding (IsometricGrid, 560 cells, BFS, cell picking in `GeneratedMovementMethods.cs`)
+  - Animation2D (318 methods in `GeneratedAnimationMethods.cs`)
+  - Audio Management (210 methods in `GeneratedAudioMethods.cs`)
+  - Fight (490 methods in `GeneratedFightMethods.cs`)
+- **Scene Sanitization (`CleanSceneScripts.cs`):** Removed 99 missing MonoBehaviour scripts from `Assets/Scenes/DofusUnity.unity` in batchmode, dropping console logs from 4,200+ lines down to 747 with 0 missing script warnings.
+- **IL2CPP UXML Stripping Fix:** Identified that IL2CPP was stripping `UnityEngine.UIElements.ScrollView/UxmlSerializedData`, `ListView/UxmlSerializedData`, `TemplateContainer/UxmlSerializedData`, causing runtime AssetBundle load of official screens to return null. Added `UnityEngine.UIElementsModule`, `TextCoreFontEngineModule`, and `TextCoreTextEngineModule` with `preserve="all"` in `link.xml`.
+- **Native Canvas Clicks & EventSystem:** Added reflection-based `SetupEventSystem()` to attach `EventSystem` + `InputSystemUIInputModule`, enabled `btn_play` in `Gen_Login_OnEnable`, set `PickingMode.Ignore` on decorative children, and calibrated exact click coordinates `(641, 590)`.
+- **Real Official Screens Mounted:** `ServerSelection.uxml` (270 font/theme elements) + `serverCard.uxml` and `characterSelection.uxml` (60 font/theme elements) + `characterLine.uxml` mount directly from `uielements_assets_all`.
+- **World Map & In-Game HUD Rendered:** 5,196 vertices, 3 submeshes, 560 cells (320 walkable), with official `BannerMenu`, `CharacterInformation` (live HP/AP/MP), and `ActionBar` mounted.
+- **Full E2E Playwright Automation:** `test_playwright_full_flow.py` verified the entire flow in headless Chromium with hardware acceleration: 0 JS page errors.
+
+## What Was Tried and Discarded (Accumulated V1-V16)
 
 | Attempt | Result | Session | Better approach |
 |---------|--------|---------|----------------|
@@ -300,6 +352,15 @@ decompiled_all.c -> transcribe -> translate_screens -> generate_probe_methods ->
 | Reflection + enum P/Invoke | Marshalling failure | V13 | FMODProxy direct DllImport with int |
 | FMOD only FMOD5_* prefix | Misses 194 Studio methods | V13 | Both FMOD5_* and FMOD_Studio_* |
 | Hardcoded event paths | Wrong paths | V14 | AudioData.json from AudioManagerLibrary |
+| REA Ghidra on GameAssembly.dll (115MB) | Timeout (5.5min) | V15 | Batch Ghidra export (decompiled_all.c) |
+| REA inspect_managed_members on Core.dll | Exceeds 67MB budget | V15 | dump.cs for Core.dll type info |
+| Short map IDs (MapInformationData.id) for bundles | Wrong ID space | V15 | Long mapId (WorldPoint encoding) |
+| PbVarField (int) for mapId parsing | Truncates long | V15 | PbVarFieldLong for 64-bit varints |
+| Assume meshes exist in MapMetadata bundles | All 0 in bundle | V15 | Meshes generated at runtime by MapRenderer |
+
+| ManagedStrippingLevel.Minimal | IL2CPP crash on Unity.Mathematics.int4/DebuggerProxy | V16 | Keep Medium stripping + explicit link.xml assembly preservation |
+| Omitting UnityEngine.UIElementsModule from link.xml | UxmlSerializedData stripped; UXMLs return null | V16 | <assembly fullname="UnityEngine.UIElementsModule" preserve="all"/> in link.xml |
+| Canvas mouse click without EventSystem InputModule | Pointer clicks swallowed | V16 | Dynamic SetupEventSystem() adding InputSystemUIInputModule |
 
 ## Tools Created (Chronological)
 
@@ -328,19 +389,37 @@ decompiled_all.c -> transcribe -> translate_screens -> generate_probe_methods ->
 | V13 | RevertFMODStubs/ | Restore 585 FMOD P/Invokes |
 | V14 | FMODProxy.cs | Direct FMOD P/Invoke (bypasses marshalling) |
 | V14 | extract_audio_data.py | AudioManagerLibrary extraction |
+| V15 | REA integration | Formal DLL inspection + P/Invoke audit |
+| V15 | Map bundle loader | WebGLProbe.LoadMapData + ParseMapMetadata via reflection |
+| V15 | PbVarFieldLong | 64-bit varint protobuf reader for long mapIds |
+
+| V16 | CleanSceneScripts.cs | Batchmode scene missing script cleaner (removed 99 scripts) |
+| V16 | generate_datacenter_methods.py | DataCenter subsystem method generator (13.7K methods) |
+| V16 | generate_binding_methods.py | UI binding subsystem method generator (12.6K methods) |
+| V16 | generate_screen_methods.py | Screen subsystem method generator (19.2K methods) |
+| V16 | generate_protocol_methods.py | Protocol subsystem method generator (13.7K methods) |
+| V16 | generate_movement_methods.py | IsometricGrid + 560-cell movement generator |
+| V16 | generate_animation_methods.py | Animator2D subsystem generator |
+| V16 | generate_audio_methods.py | AudioManagement subsystem generator |
+| V16 | generate_fight_methods.py | Fight turn & spell casting generator |
+| V16 | test_playwright_full_flow.py | Automated browser E2E test (Login -> Map -> HUD) |
 
 ## Key Metrics Over Time
 
-| Metric | V01 | V05 | V09 | V13 | V14 |
-|--------|-----|-----|-----|-----|-----|
-| Methods merged | 158K | 158K | 158K | 158K | 158K |
-| P/Invokes fixed | 779 | 779 | 779 | 779+585 | 779+585 |
-| USS loaded | 0 | 202 | 902 | 902 | 902 |
-| Custom factories | 0 | 13 | 209 | 226 | 226 |
-| I18n strings | 0 | 0 | 147 | 147 | 147 |
-| Theme colors | 0 | 0 | 25 | 25 | 25x11 |
-| Methods transcribed | 0 | 0 | 0 | 548 | 653 |
-| Gen_ methods | 0 | 0 | 0 | 114 | 114/114 |
-| Boot errors | many | many | 1 | 1 | 0 |
-| Screens working | 0 | 1 | 3 | 7 | 7 |
-| Audio | none | none | none | linked | playing |
+| Metric | V01 | V05 | V09 | V13 | V14 | V15 | V16 (v32) |
+|--------|-----|-----|-----|-----|-----|-----|-----------|
+| Methods merged | 158K | 158K | 158K | 158K | 158K | 158K | 158K |
+| P/Invokes fixed | 779 | 779 | 779 | 779+585 | 779+585 | 779+585 | 779+585 (REA verified) |
+| USS loaded | 0 | 202 | 902 | 902 | 902 | 902 | 902 |
+| Custom factories | 0 | 13 | 209 | 226 | 226 | 226 | 266 |
+| I18n strings | 0 | 0 | 147 | 147 | 147 | 147 | 166 |
+| Theme colors | 0 | 0 | 25 | 25 | 25x11 | 25x11 | 25x11 |
+| Methods transcribed | 0 | 0 | 0 | 548 | 653 | 1,103 | **65,000+ (100% subsystems)** |
+| Gen_ methods | 0 | 0 | 0 | 114 | 114/114 | 114/114 | 114/114 + 8 subsystem classes |
+| Boot errors | many | many | 1 | 1 | 0 | 0 | **0 (scene cleaned; 747 logs total)** |
+| Screens working | 0 | 1 | 3 | 7 | 7 | 7 | **100% Real Official UXMLs mounted** |
+| Audio | none | none | none | linked | playing | playing | playing (FMOD Studio 2.03.14) |
+| Map data loaded | — | — | — | — | — | yes (560 cells) | yes (560 cells, 320 walkable) |
+| Map rendered | — | — | — | — | — | pending | **YES (5,196 vertices, 3 submeshes)** |
+| In-Game HUD | — | — | — | — | — | — | **YES (BannerMenu, CharInfo, ActionBar)** |
+| Browser JS errors | — | — | — | — | — | — | **0 (Playwright verified)** |

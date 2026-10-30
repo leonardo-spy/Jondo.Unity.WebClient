@@ -1,4 +1,11 @@
 <linker>
+  <!-- Unity Engine UIElements and TextCore types preserved for UXML deserialization from AssetBundles -->
+  <assembly fullname="UnityEngine.UIElementsModule" preserve="all"/>
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule" preserve="all"/>
+  <assembly fullname="UnityEngine.TextCoreTextEngineModule" preserve="all"/>
+  <assembly fullname="UnityEngine.UIModule" preserve="all"/>
+  <assembly fullname="UnityEngine.IMGUIModule" preserve="all"/>
+  <assembly fullname="Assembly-CSharp" preserve="all"/>
   <assembly fullname="Core" preserve="nothing">
     <!-- Service types (obfuscated names) -->
     <type fullname="glo" preserve="all"/>

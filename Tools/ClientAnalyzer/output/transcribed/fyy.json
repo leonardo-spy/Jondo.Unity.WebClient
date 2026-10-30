@@ -1,0 +1,425 @@
+{
+  "type": "fyy",
+  "methodCount": 9,
+  "transcribed": 4,
+  "methods": [
+    {
+      "method": "bjep",
+      "signature": "public void bjep(rc a)",
+      "line": 386614,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjeq",
+      "signature": "public int bjeq()",
+      "line": 386617,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjeo",
+      "signature": "public rc bjeo()",
+      "line": 386621,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(MapPoint a, rc b = 0)",
+      "line": 386624,
+      "va": "0x181d9ca20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 57,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186787fe4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (__this != (fyy_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  undefined4 in_register_00000084;\n\n\n\n  iVar2 = b;\n\n  if (DAT_186787fe4 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_186787fe4 = '\\x01';\n\n  }\n\n  System_Configuration_ConfigurationCollectionAttribute___ctor\n\n            ((System_Configuration_ConfigurationCollectionAttribute_o *)__this,(System_Type_o *)0x0,\n\n             (MethodInfo *)CONCAT44(in_register_00000084,iVar2));\n\n  if (a == (Core_PathFinding_WorldData_MapPo..."
+    },
+    {
+      "method": "bjer",
+      "signature": "public string bjer()",
+      "line": 386627,
+      "va": "0x181d9caa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 213,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fe5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (args != (System_Object_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if ((int)args->max_length != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9cc72;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (1 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9cc72;"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (2 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (3 < (uint)args->max_length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 178,
+            "string_arg": "[PathElement(cellId: {0}, x: {1}, y: {2}, orientation: {3})]"
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "pSVar3": "[PathElement(cellId: {0}, x: {1}, y: {2}, orientation: {3})]"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  code *pcVar2;\n\n  System_String_o *pSVar3;\n\n  System_Object_array *args;\n\n  Il2CppObject *pIVar4;\n\n  longlong lVar5;\n\n  undefined8 uVar6;\n\n  int32_t aiStackX_8 [2];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t aiStack_28 [4];\n\n\n\n  if (DAT_186787fe5 == '\\0') {\n\n    FUN_1805658a0(&object___TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInfo);\n\n    FUN_1805658a0(&rc..."
+    },
+    {
+      "method": "fqk",
+      "signature": "public int fqk()",
+      "line": 386630,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "mcn",
+      "signature": "public string mcn()",
+      "line": 386633,
+      "va": "0x181d9ccc0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 213,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fe6 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (args != (System_Object_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if ((int)args->max_length != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9ce92;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (1 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9ce92;"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (2 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (3 < (uint)args->max_length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 178,
+            "string_arg": "QKa3+lDxYqySCIep1HQRnyzmc2qtkXp5uAllaGq5kq4="
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "pSVar3": "QKa3+lDxYqySCIep1HQRnyzmc2qtkXp5uAllaGq5kq4="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  code *pcVar2;\n\n  System_String_o *pSVar3;\n\n  System_Object_array *args;\n\n  Il2CppObject *pIVar4;\n\n  longlong lVar5;\n\n  undefined8 uVar6;\n\n  int32_t aiStackX_8 [2];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t aiStack_28 [4];\n\n\n\n  if (DAT_186787fe6 == '\\0') {\n\n    FUN_1805658a0(&object___TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInfo);\n\n    FUN_1805658a0(&rc..."
+    },
+    {
+      "method": "onf",
+      "signature": "public string onf()",
+      "line": 386636,
+      "va": "0x181d9cee0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 213,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186787fe7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (args != (System_Object_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if ((int)args->max_length != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9d0b2;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (1 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pCVar1 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) goto LAB_181d9d0b2;"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (2 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (pIVar4 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (3 < (uint)args->max_length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 178,
+            "string_arg": "GTexxKrTKsmqsmC4/LgQhe3rr4x+n735ukVrvw8YAyU="
+          }
+        ],
+        "opsCount": 19,
+        "varMap": {
+          "pSVar3": "GTexxKrTKsmqsmC4/LgQhe3rr4x+n735ukVrvw8YAyU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  code *pcVar2;\n\n  System_String_o *pSVar3;\n\n  System_Object_array *args;\n\n  Il2CppObject *pIVar4;\n\n  longlong lVar5;\n\n  undefined8 uVar6;\n\n  int32_t aiStackX_8 [2];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t aiStack_28 [4];\n\n\n\n  if (DAT_186787fe7 == '\\0') {\n\n    FUN_1805658a0(&object___TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInfo);\n\n    FUN_1805658a0(&rc..."
+    },
+    {
+      "method": "bum",
+      "signature": "public int bum()",
+      "line": 386639,
+      "status": "NOT_FOUND"
+    }
+  ]
+}

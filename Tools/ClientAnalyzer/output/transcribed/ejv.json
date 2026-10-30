@@ -1,0 +1,5827 @@
+{
+  "type": "ejv",
+  "methodCount": 60,
+  "transcribed": 60,
+  "methods": [
+    {
+      "method": "oug",
+      "signature": "private void oug(jse a)",
+      "line": 303920,
+      "va": "0x171ec50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jse_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "Enable",
+      "signature": "public void Enable()",
+      "line": 303923,
+      "va": "0x171e3e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 399,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186784c2b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((peVar1 != (ekb_o *)0x0) && ((peVar1->fields).dnzu != (ezp_o *)0x0)) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 134
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 144
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 154
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 164
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 174
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 184
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 194
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if ((peVar1 != (ekb_o *)0x0) && ((peVar1->fields).dnzu != (ezp_o *)0x0)) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 212
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 222
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 232
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 244
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 258
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 272
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 286
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 300
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (lVar3 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (lVar3 != 0) {"
+          }
+        ],
+        "opsCount": 35,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 15,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n  longlong lVar3;\n\n  undefined8 uVar4;\n\n  glr_o *pgVar5;\n\n  glu_o *pgVar6;\n\n\n\n  if (DAT_186784c2b == '\\0') {\n\n    FUN_1805658a0(&Method_ejv_yvn__);\n\n    FUN_1805658a0(&Method_ejv_yvo__);\n\n    FUN_1805658a0(&Method_ejv_yvp__);\n\n    FUN_1805658a0(&Method_ejv_yvq__);\n\n    FUN_1805658a0(&Method_ejv_yvr__);\n\n    FUN_1805658a0(&Method_ejv_yvs__);\n\n    FUN_1805658a0(&Method_ejv_yvt__);\n\n    FUN_1805658a0(&Method_ejv_yvv__);\n\n    FUN_1805658a0(&Method_ejv_yvw__);\n\n ..."
+    },
+    {
+      "method": "epi",
+      "signature": "private void epi(jsn a)",
+      "line": 303926,
+      "va": "0x171ed70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c2c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (jsn_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxe",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_ljx__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ljx_o *a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c2c == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<l..."
+    },
+    {
+      "method": "yvn",
+      "signature": "private void yvn(ctt a)",
+      "line": 303929,
+      "va": "0x171efa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 189,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if ((a == (ctv_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186784c49 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pCVar1 != (Core_Rendering_Entity_Entity_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (iVar3 == -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((a_00 != (ekb_ejw_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (fVar5 == 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (DAT_186784c6e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 168
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Core_Rendering_Entity_Entity_o *pCVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  ekb_ejw_o *a_00;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar4;\n\n  MethodInfo *method_00;\n\n  float fVar5;\n\n  undefined1 uStackX_10;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_20;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  ekb_e..."
+    },
+    {
+      "method": "yvx",
+      "signature": "private void yvx(jse a)",
+      "line": 303932,
+      "va": "0x171ec50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jse_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "yvt",
+      "signature": "private void yvt(csx a)",
+      "line": 303935,
+      "va": "0x171faf0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 87,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 24
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c39 == '\\0') {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  MethodInfo *method_00;\n\n  System_Configuration_ConfigurationCollectionAttribute_o aSStackX_8 [2];\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  ejv_o *peStack_28;\n\n  undefined8 uStack_20;\n\n  undefined8 uStack_18;\n\n\n\n  __this_00 = (__this->fields).dnyw;\n\n  if (__this_00 != (ekb_o *)0x0) {\n\n    ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    if (DAT_186784c39 == '\\0') {\n\n      FUN_1805658a0(&\n\n                    Method_Cysharp_Threa..."
+    },
+    {
+      "method": "yvv",
+      "signature": "private void yvv(jru a)",
+      "line": 303938,
+      "va": "0x171f110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 513,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c59 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (pUStackX_18 != (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)0x0"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728471;"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728443;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 188
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((__this_00->fields).dnzs == (feo_o *)0x0) goto LAB_18172846c;"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (pMVar9 == (MethodInfo *)0x0) goto LAB_181728467;"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (lVar4 == 0) goto LAB_181728462;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 216
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 234
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172845d;"
+          },
+          {
+            "type": "IF",
+            "line": 248,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 250
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728458;"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (lVar10 == 0) goto LAB_181728453;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 276
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 292,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 294
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172844e;"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 310
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728449;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 324
+          },
+          {
+            "type": "IF",
+            "line": 340,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (cVar8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (0 < length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 364
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (pSVar5 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181728"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 4
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int32_t length;\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  longlong lVar4;\n\n  System_Collections_Generic_HashSet_long__o *pSVar5;\n\n  code *pcVar6;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *__this_01;\n\n  bool bVar7;\n\n  char cVar8;\n\n  MethodInfo *pMVar9;\n\n  longlong lVar10;\n\n  System_Delegate_o *pSVar11;\n\n  System_Delegate_o *pSVar12;\n\n  System_Delegate_o *pSVar13;\n\n  Un..."
+    },
+    {
+      "method": "iyt",
+      "signature": "private void iyt(jwi a)",
+      "line": 303941,
+      "va": "0x171ef80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (DAT_186784c5c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_ekb_ejw__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (__this_01 == (System_Collections_Generic_HashSet_long__o *)0x0) break;"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 150
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 156
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *__return_storage_ptr__;\n\n  System_Collections_Generic_HashSet_long__o *__this_01;\n\n  code *pcVar1;\n\n  ekb_ejw_o *a_00;\n\n  bool bVar2;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar3;\n\n  MethodInfo *method_00;\n\n  ekb_ejw_o *peStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_18;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  __this_00 = (__th..."
+    },
+    {
+      "method": "iss",
+      "signature": "private void iss(long a)",
+      "line": 303944,
+      "va": "0x171f060",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 377,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 100
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 102
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 176
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 190,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 198,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 254
+          },
+          {
+            "type": "IF",
+            "line": 256,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 284,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 298,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 326
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 328
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 358,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  __this_00 = (__this->fields).dnyw;\n\n..."
+    },
+    {
+      "method": "yvy",
+      "signature": "private void yvy(jsn a)",
+      "line": 303947,
+      "va": "0x171fbf0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c2d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (jsn_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxe",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_ljx__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ljx_o *a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c2d == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<l..."
+    },
+    {
+      "method": "ywd",
+      "signature": "private void ywd(jyg a)",
+      "line": 303950,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "fiv",
+      "signature": "private void fiv(kmu a)",
+      "line": 303953,
+      "va": "0x171ecb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 379,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (kmu_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 102
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 178
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 180
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 290,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 328
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 330
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  int64_t a_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  if ((a == (kmu_o *)..."
+    },
+    {
+      "method": "ywf",
+      "signature": "private void ywf(jwi a)",
+      "line": 303956,
+      "va": "0x171ef80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (DAT_186784c5c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_ekb_ejw__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (__this_01 == (System_Collections_Generic_HashSet_long__o *)0x0) break;"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 150
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 156
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *__return_storage_ptr__;\n\n  System_Collections_Generic_HashSet_long__o *__this_01;\n\n  code *pcVar1;\n\n  ekb_ejw_o *a_00;\n\n  bool bVar2;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar3;\n\n  MethodInfo *method_00;\n\n  ekb_ejw_o *peStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_18;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  __this_00 = (__th..."
+    },
+    {
+      "method": "mtl",
+      "signature": "private void mtl(cub a)",
+      "line": 303959,
+      "va": "0x171f730",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cub_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cub_o *)0x0) || ..."
+    },
+    {
+      "method": "hsf",
+      "signature": "private void hsf(ctt a)",
+      "line": 303962,
+      "va": "0x171efa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 189,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if ((a == (ctv_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186784c49 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pCVar1 != (Core_Rendering_Entity_Entity_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (iVar3 == -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((a_00 != (ekb_ejw_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (fVar5 == 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (DAT_186784c6e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 168
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Core_Rendering_Entity_Entity_o *pCVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  ekb_ejw_o *a_00;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar4;\n\n  MethodInfo *method_00;\n\n  float fVar5;\n\n  undefined1 uStackX_10;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_20;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  ekb_e..."
+    },
+    {
+      "method": "joq",
+      "signature": "private void joq(jru a)",
+      "line": 303965,
+      "va": "0x171f110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 513,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c59 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (pUStackX_18 != (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)0x0"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728471;"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728443;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 188
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((__this_00->fields).dnzs == (feo_o *)0x0) goto LAB_18172846c;"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (pMVar9 == (MethodInfo *)0x0) goto LAB_181728467;"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (lVar4 == 0) goto LAB_181728462;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 216
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 234
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172845d;"
+          },
+          {
+            "type": "IF",
+            "line": 248,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 250
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728458;"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (lVar10 == 0) goto LAB_181728453;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 276
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 292,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 294
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172844e;"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 310
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728449;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 324
+          },
+          {
+            "type": "IF",
+            "line": 340,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (cVar8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (0 < length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 364
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (pSVar5 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181728"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 4
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int32_t length;\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  longlong lVar4;\n\n  System_Collections_Generic_HashSet_long__o *pSVar5;\n\n  code *pcVar6;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *__this_01;\n\n  bool bVar7;\n\n  char cVar8;\n\n  MethodInfo *pMVar9;\n\n  longlong lVar10;\n\n  System_Delegate_o *pSVar11;\n\n  System_Delegate_o *pSVar12;\n\n  System_Delegate_o *pSVar13;\n\n  Un..."
+    },
+    {
+      "method": "ywa",
+      "signature": "private void ywa(long a)",
+      "line": 303968,
+      "va": "0x171f060",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 377,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 100
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 102
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 176
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 190,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 198,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 254
+          },
+          {
+            "type": "IF",
+            "line": 256,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 274,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 284,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 298,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 326
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 328
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 358,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  __this_00 = (__this->fields).dnyw;\n\n..."
+    },
+    {
+      "method": "yvz",
+      "signature": "private void yvz(kmu a)",
+      "line": 303971,
+      "va": "0x171ecb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 379,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (kmu_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 102
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 178
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 180
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 290,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 328
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 330
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  int64_t a_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  if ((a == (kmu_o *)..."
+    },
+    {
+      "method": "ivd",
+      "signature": "private void ivd(csh a)",
+      "line": 303974,
+      "va": "0x171f080",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c2e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c2e == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c2e = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "nqp",
+      "signature": "private void nqp(jse a)",
+      "line": 303977,
+      "va": "0x171ec50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jse_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "ywe",
+      "signature": "private void ywe(jxb a)",
+      "line": 303980,
+      "va": "0x171ef80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (DAT_186784c5c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_ekb_ejw__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (__this_01 == (System_Collections_Generic_HashSet_long__o *)0x0) break;"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 150
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 156
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *__return_storage_ptr__;\n\n  System_Collections_Generic_HashSet_long__o *__this_01;\n\n  code *pcVar1;\n\n  ekb_ejw_o *a_00;\n\n  bool bVar2;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar3;\n\n  MethodInfo *method_00;\n\n  ekb_ejw_o *peStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_18;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  __this_00 = (__th..."
+    },
+    {
+      "method": "kew",
+      "signature": "private void kew(jru a)",
+      "line": 303983,
+      "va": "0x171f110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 513,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c59 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (pUStackX_18 != (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)0x0"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728471;"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728443;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 188
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((__this_00->fields).dnzs == (feo_o *)0x0) goto LAB_18172846c;"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (pMVar9 == (MethodInfo *)0x0) goto LAB_181728467;"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (lVar4 == 0) goto LAB_181728462;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 216
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 234
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172845d;"
+          },
+          {
+            "type": "IF",
+            "line": 248,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 250
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728458;"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (lVar10 == 0) goto LAB_181728453;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 276
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 292,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 294
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172844e;"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 310
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728449;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 324
+          },
+          {
+            "type": "IF",
+            "line": 340,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (cVar8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (0 < length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 364
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (pSVar5 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181728"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 4
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int32_t length;\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  longlong lVar4;\n\n  System_Collections_Generic_HashSet_long__o *pSVar5;\n\n  code *pcVar6;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *__this_01;\n\n  bool bVar7;\n\n  char cVar8;\n\n  MethodInfo *pMVar9;\n\n  longlong lVar10;\n\n  System_Delegate_o *pSVar11;\n\n  System_Delegate_o *pSVar12;\n\n  System_Delegate_o *pSVar13;\n\n  Un..."
+    },
+    {
+      "method": "yvp",
+      "signature": "private void yvp(csi a)",
+      "line": 303986,
+      "va": "0x171f9d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c2f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c2f == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c2f = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "liq",
+      "signature": "private void liq(csi a)",
+      "line": 303989,
+      "va": "0x171f610",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c30 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c30 == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c30 = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "nib",
+      "signature": "private void nib(jyg a)",
+      "line": 303992,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ow",
+      "signature": "private void ow(csi a)",
+      "line": 303995,
+      "va": "0x171f760",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c31 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c31 == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c31 = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "kgs",
+      "signature": "private void kgs(jsn a)",
+      "line": 303998,
+      "va": "0x171f3a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c32 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (jsn_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxe",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_ljx__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ljx_o *a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c32 == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<l..."
+    },
+    {
+      "method": "lkk",
+      "signature": "private void lkk(csh a)",
+      "line": 304001,
+      "va": "0x171f6a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c33 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c33 == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c33 = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "kuj",
+      "signature": "private void kuj(csh a)",
+      "line": 304004,
+      "va": "0x171f580",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c34 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c34 == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c34 = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "yvo",
+      "signature": "private void yvo(ctv a)",
+      "line": 304007,
+      "va": "0x171efa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 189,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if ((a == (ctv_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186784c49 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pCVar1 != (Core_Rendering_Entity_Entity_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (iVar3 == -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((a_00 != (ekb_ejw_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (fVar5 == 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (DAT_186784c6e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 168
+          }
+        ],
+        "opsCount": 12,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Core_Rendering_Entity_Entity_o *pCVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  ekb_ejw_o *a_00;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar4;\n\n  MethodInfo *method_00;\n\n  float fVar5;\n\n  undefined1 uStackX_10;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_20;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  ekb_e..."
+    },
+    {
+      "method": "bxq",
+      "signature": "private void bxq(jyg a)",
+      "line": 304010,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ywb",
+      "signature": "private void ywb(kmq a)",
+      "line": 304013,
+      "va": "0x171fdd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c35 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (kmq_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yyc",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_T__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  int64_t a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c35 == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<lo..."
+    },
+    {
+      "method": "ouf",
+      "signature": "private void ouf(cua a)",
+      "line": 304016,
+      "va": "0x171ec80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cua_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cua_o *)0x0) || ..."
+    },
+    {
+      "method": "jfs",
+      "signature": "private void jfs(csi a)",
+      "line": 304019,
+      "va": "0x171f130",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c36 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c36 == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c36 = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "nuj",
+      "signature": "private void nuj(cua a)",
+      "line": 304022,
+      "va": "0x171ec80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cua_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cua_o *)0x0) || ..."
+    },
+    {
+      "method": "ywc",
+      "signature": "private void ywc(kam a)",
+      "line": 304025,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ffc",
+      "signature": "private void ffc(jyg a)",
+      "line": 304028,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(ekb a)",
+      "line": 304031,
+      "va": "0x64e630",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 131,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (DAT_186797550 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if ((param_1->fields)._IsReadOnly_k__BackingField != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (pSVar1 == (System_Collections_Generic_Dictionary_string__T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (!bVar4) goto code_r0x0001802ad21d;"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (*(int *)&(System_Text_Json_JsonHelpers_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar3 != '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (__this != (System_Collections_Generic_List_KeyValuePair_string__T___o *)0x0)"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_string__T__o *pSVar1;\n\n  System_Collections_Generic_List_KeyValuePair_string__T___o *__this;\n\n  code *pcVar2;\n\n  char cVar3;\n\n  bool bVar4;\n\n  undefined8 uVar5;\n\n  System_String_o *pSStackX_8;\n\n  undefined8 uStackX_10;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStack_28;\n\n  void *pvStack_20;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_18;\n\n\n\n  pSStackX_8 = param_2;\n\n  uStackX_10 = param_3;\n\n  if (DAT_186797550 == '..."
+    },
+    {
+      "method": "fex",
+      "signature": "private void fex(jsj a)",
+      "line": 304034,
+      "va": "0x171ef50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jsj_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "je",
+      "signature": "private void je(jru a)",
+      "line": 304037,
+      "va": "0x171f110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 513,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c59 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (pUStackX_18 != (Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *)0x0"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728471;"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 178,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_181728443;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 188
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((__this_00->fields).dnzs == (feo_o *)0x0) goto LAB_18172846c;"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (pMVar9 == (MethodInfo *)0x0) goto LAB_181728467;"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (lVar10 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (lVar4 == 0) goto LAB_181728462;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 216
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 234
+          },
+          {
+            "type": "IF",
+            "line": 242,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172845d;"
+          },
+          {
+            "type": "IF",
+            "line": 248,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 250
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728458;"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (lVar10 == 0) goto LAB_181728453;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 276
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 280
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 292,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 294
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_18172844e;"
+          },
+          {
+            "type": "IF",
+            "line": 308,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 310
+          },
+          {
+            "type": "IF",
+            "line": 318,
+            "condition": "if (pSVar12 == (System_Delegate_o *)0x0) goto LAB_181728449;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 324
+          },
+          {
+            "type": "IF",
+            "line": 340,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (cVar8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (0 < length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 364
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (pSVar5 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181728"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (pSVar5 != (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          }
+        ],
+        "opsCount": 38,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 4
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int32_t length;\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  longlong lVar4;\n\n  System_Collections_Generic_HashSet_long__o *pSVar5;\n\n  code *pcVar6;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *__this_01;\n\n  bool bVar7;\n\n  char cVar8;\n\n  MethodInfo *pMVar9;\n\n  longlong lVar10;\n\n  System_Delegate_o *pSVar11;\n\n  System_Delegate_o *pSVar12;\n\n  System_Delegate_o *pSVar13;\n\n  Un..."
+    },
+    {
+      "method": "Disable",
+      "signature": "public void Disable()",
+      "line": 304040,
+      "va": "0x171e360",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 43,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_186784c37 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pgVar1 != (glr_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (pgVar2 != (glu_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  glr_o *pgVar1;\n\n  glu_o *pgVar2;\n\n\n\n  if (DAT_186784c37 == '\\0') {\n\n    FUN_1805658a0(&Method_gkt<glu,_IMessage>_Dispose__);\n\n    FUN_1805658a0(&Method_gkt<glr,_glf>_Dispose__);\n\n    DAT_186784c37 = '\\x01';\n\n  }\n\n  pgVar1 = (__this->fields).dnyx;\n\n  if (pgVar1 != (glr_o *)0x0) {\n\n    gkt<object,___Il2CppFullySharedGenericType>__Dispose(pgVar1,_Method_gkt<glr,_glf>_Dispose__);\n\n  }\n\n  pgVar2 = (__this->fields).dnyy;\n\n  (__this->fields).dnyx = (glr_o *)0x0;\n\n  if (pgVar2 != (glu_o *)0x0) {\n\n ..."
+    },
+    {
+      "method": "lgm",
+      "signature": "private void lgm(kam a)",
+      "line": 304043,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ecs",
+      "signature": "private void ecs(kmu a)",
+      "line": 304046,
+      "va": "0x171ecb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 379,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (kmu_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 102
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 178
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 180
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 290,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 328
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 330
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  int64_t a_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  if ((a == (kmu_o *)..."
+    },
+    {
+      "method": "kek",
+      "signature": "private void kek(kmu a)",
+      "line": 304049,
+      "va": "0x171ecb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 379,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (kmu_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 102
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 178
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 180
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 290,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 328
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 330
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  int64_t a_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  if ((a == (kmu_o *)..."
+    },
+    {
+      "method": "kdq",
+      "signature": "private void kdq(jsn a)",
+      "line": 304052,
+      "va": "0x171f1c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c38 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (jsn_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxe",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_ljx__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  ljx_o *a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c38 == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<l..."
+    },
+    {
+      "method": "yvu",
+      "signature": "private UniTaskVoid yvu()",
+      "line": 304056,
+      "va": "0x171fb80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 51,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (DAT_186784c39 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ulonglong extraout_RAX;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o UStack_38;\n\n  ejv_o *peStack_28;\n\n  undefined8 uStack_20;\n\n  undefined8 uStack_18;\n\n\n\n  if (DAT_186784c39 == '\\0') {\n\n    FUN_1805658a0(&\n\n                  Method_Cysharp_Threading_Tasks_CompilerServices_AsyncUniTaskVoidMethodBuilder_Start<ejv_<RefreshAfterZoom>d__13>__\n\n                 );\n\n    DAT_186784c39 = '\\x01';\n\n  }\n\n  UStack_38.klass._4_4_ = 0;\n\n  UStack_38.monitor = (void *)0x0;\n\n  uStack_20 = 0;\n\n ..."
+    },
+    {
+      "method": "ibf",
+      "signature": "private void ibf(csh a)",
+      "line": 304059,
+      "va": "0x171efd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c3a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c3a == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c3a = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "ekw",
+      "signature": "private void ekw(csi a)",
+      "line": 304062,
+      "va": "0x171ece0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c3b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c3b == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c3b = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csi_o *)0x0) && ((a->fields)._dhfu_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "og",
+      "signature": "private void og(kmu a)",
+      "line": 304065,
+      "va": "0x171ecb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 379,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (kmu_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (DAT_186784c65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (((__this_00->fields).dnzs == (feo_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 102
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 104
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 166,
+            "condition": "if (lVar8 == 0) goto LAB_18172a6c5;"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Utilities_Collections_CollectionsExtensions_ExceptionHandler_",
+            "method": "ctor",
+            "line": 178
+          },
+          {
+            "type": "CALL",
+            "class": "System_Delegate",
+            "method": "Remove",
+            "line": 180
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar9 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (pSVar10 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if ((Core_Rendering_Entity_Animations_EntityAnimator_AnimationEventDelegate_c *)"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (pSVar11 == (System_Delegate_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (DAT_186784c4e == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 256
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (index != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 286,
+            "condition": "if (index_00 != -1) {"
+          },
+          {
+            "type": "IF",
+            "line": 290,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_ekb_ejw__o *)0x0) goto LAB_181727"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "IF",
+            "line": 316,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (pUVar3 == (UnityEngine_UIElements_VisualElement_o *)0x0) goto LAB_1817278ea;"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxn",
+            "line": 328
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywq",
+            "line": 330
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 360,
+            "condition": "if (bVar7) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (pSVar4 == (System_Collections_Generic_HashSet_long__o *)0x0) goto LAB_181727"
+          }
+        ],
+        "opsCount": 37,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  int64_t a_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *pSVar1;\n\n  System_Collections_Generic_List_T__o *pSVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  System_Collections_Generic_HashSet_long__o *pSVar4;\n\n  longlong lVar5;\n\n  code *pcVar6;\n\n  bool bVar7;\n\n  int32_t index;\n\n  int32_t index_00;\n\n  ekb_ejw_o *__this_01;\n\n  longlong lVar8;\n\n  System_Delegate_o *pSVar9;\n\n  System_Delegate_o *pSVar10;\n\n  System_Delegate_o *pSVar11;\n\n\n\n  if ((a == (kmu_o *)..."
+    },
+    {
+      "method": "yvr",
+      "signature": "private void yvr(cub a)",
+      "line": 304068,
+      "va": "0x171f730",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cub_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cub_o *)0x0) || ..."
+    },
+    {
+      "method": "bzq",
+      "signature": "private void bzq(jse a)",
+      "line": 304071,
+      "va": "0x171ec50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jse_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "lun",
+      "signature": "private void lun(kam a)",
+      "line": 304074,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "qd",
+      "signature": "private void qd(kmq a)",
+      "line": 304077,
+      "va": "0x171f7f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 157,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186784c3c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((a == (kmq_o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (pSVar6 != (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar6 == (System_Collections_Generic_IEnumerator_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (pIVar3[uVar8].interfaceType =="
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (__this_01 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yyc",
+            "line": 152
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  Google_Protobuf_Collections_RepeatedField_T__o *__this_00;\n\n  System_Collections_Generic_IEnumerator_T__c *pSVar2;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar3;\n\n  ekb_o *__this_01;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  System_Collections_Generic_IEnumerator_T__o *pSVar6;\n\n  VirtualInvokeData *pVVar7;\n\n  int64_t a_00;\n\n  ushort uVar8;\n\n\n\n  if (DAT_186784c3c == '\\0') {\n\n    FUN_1805658a0(&System_IDisposable_TypeInfo);\n\n    FUN_1805658a0(&System_Collections_Generic_IEnumerator<lo..."
+    },
+    {
+      "method": "yvw",
+      "signature": "private void yvw(jsj a)",
+      "line": 304080,
+      "va": "0x171ef50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 333,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if ((a == (jsj_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186784c46 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (lVar8 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar8 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 136,
+            "string_arg": "The entity {0} not found"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Warning",
+            "line": 154,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 162
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (item != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (__this_01 != (System_Collections_Generic_List_ekb_ejw__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (__this_02 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 212,
+            "condition": "if (DAT_186784c5b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 224,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 236,
+            "condition": "if ((pSVar2->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (*(int *)&(Cysharp_Threading_Tasks_UniTask_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (DAT_1867769da == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 260,
+            "condition": "if ((pCVar3 != (Cysharp_Threading_Tasks_IUniTaskSource_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (DAT_186784c72 == '\\0') {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {
+          "pSVar9": "The entity {0} not found",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Entities\\DisplayedEntityInfoService\\DisplayedEntityInfoService.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUVar1;\n\n  System_Collections_Generic_List_ekb_ejw__o *__this_01;\n\n  System_Collections_Generic_List_T__o *__this_02;\n\n  System_Collections_Generic_List_long__o *pSVar2;\n\n  Cysharp_Threading_Tasks_IUniTaskSource_o *pCVar3;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  int32_t iVar6;\n\n  int iVar7;\n\n  longlong lVar8;\n\n  ekb_ejw_o *item;\n\n  System_String_o *pSVar9;\n\n  Il2CppObject *arg0;\n\n  System_String_o *file;\n\n  undefi..."
+    },
+    {
+      "method": "kru",
+      "signature": "private void kru(jyg a)",
+      "line": 304083,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "cuo",
+      "signature": "private void cuo(cua a)",
+      "line": 304086,
+      "va": "0x171ec80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cua_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cua_o *)0x0) || ..."
+    },
+    {
+      "method": "yvq",
+      "signature": "private void yvq(csh a)",
+      "line": 304089,
+      "va": "0x171fa60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 53,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186784c3d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (__this_00 != (ekb_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 28
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 34
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  int64_t a_00;\n\n  ekb_ejw_o *__this_01;\n\n\n\n  if (DAT_186784c3d == '\\0') {\n\n    FUN_1805658a0(&zd_TypeInfo);\n\n    DAT_186784c3d = '\\x01';\n\n  }\n\n  __this_00 = (__this->fields).dnyw;\n\n  if ((a != (csh_o *)0x0) && ((a->fields)._dhft_k__BackingField != (zd_o *)0x0)) {\n\n    a_00 = FUN_180007c70(0,zd_TypeInfo);\n\n    if (__this_00 != (ekb_o *)0x0) {\n\n      __this_01 = ekb__yxj(__this_00,a_00,(MethodInfo *)0x0);\n\n      ekb__yxr(__this_00,(MethodInfo *)0x0);\n\n    ..."
+    },
+    {
+      "method": "jnq",
+      "signature": "private void jnq(kam a)",
+      "line": 304092,
+      "va": "0x171ec20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (peVar1 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if ((peVar1->fields).super.super.dwsf == false) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *peVar1;\n\n  code *pcVar2;\n\n\n\n  peVar1 = (__this->fields).dnyw;\n\n  if (peVar1 == (ekb_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar2 = (code *)swi(3);\n\n    (*pcVar2)();\n\n    return;\n\n  }\n\n  if ((peVar1->fields).super.super.dwsf == false) {\n\n    return;\n\n  }\n\n  (*(peVar1->klass->vtable)._7_rur.methodPtr)(peVar1,(peVar1->klass->vtable)._7_rur.method);\n\n  (peVar1->fields).super.super.dwsf = false;\n\n  return;\n\n}"
+    },
+    {
+      "method": "yvs",
+      "signature": "private void yvs(cua a)",
+      "line": 304095,
+      "va": "0x171ec80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if ((a == (cua_o *)0x0) || (__this_00 = (__this->fields).dnyw, __this_00 == (ekb"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (DAT_186784c77 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this_00->fields).dnzs != (feo_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvw",
+            "line": 74
+          },
+          {
+            "type": "CALL",
+            "class": "wc",
+            "method": "qvz",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (((pwVar5 != (wc_o *)0x0) && (pwVar5 = wc__qvz(pwVar5,a_00,(MethodInfo *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)auStack_60._0_8_ =="
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "klass",
+            "line": 146
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (((Ankama_Utilities_Pooling_TrackingPool_T__o *)(auStack_60._0_8_ + 0x50))->k"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (!bVar3) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if ((Ankama_Utilities_Pooling_TrackingPool_T__o *)uVar2 !="
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxj",
+            "line": 172
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxr",
+            "line": 178
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (__this_01 != (ekb_ejw_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb_ejw",
+            "method": "ywr",
+            "line": 182
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 1
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  ekb_o *__this_00;\n\n  code *pcVar1;\n\n  undefined8 uVar2;\n\n  bool bVar3;\n\n  longlong lVar4;\n\n  wc_o *pwVar5;\n\n  System_Collections_Generic_List_Enumerator_T__o *__return_storage_ptr__;\n\n  ekb_ejw_o *__this_01;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_60 [24];\n\n  System_Configuration_ConfigurationCollectionAttribute_o *pSStack_48;\n\n  Il2CppObject *pIStack_40;\n\n  undefined1 auStack_38 [8];\n\n  void *pvStack_30;\n\n  Il2CppObject *pIStack_28;\n\n\n\n  if ((a == (cua_o *)0x0) || ..."
+    },
+    {
+      "method": "fyx",
+      "signature": "private void fyx(jwi a)",
+      "line": 304098,
+      "va": "0x171ef80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 183,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__this_00 == (ekb_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (DAT_186784c5c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_ekb_ejw__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if (__this_01 == (System_Collections_Generic_HashSet_long__o *)0x0) break;"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (!bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxx",
+            "line": 150
+          },
+          {
+            "type": "CALL",
+            "class": "ekb",
+            "method": "yxm",
+            "line": 156
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ekb_o *__this_00;\n\n  System_Collections_Generic_List_ekb_ejw__o *__return_storage_ptr__;\n\n  System_Collections_Generic_HashSet_long__o *__this_01;\n\n  code *pcVar1;\n\n  ekb_ejw_o *a_00;\n\n  bool bVar2;\n\n  Core_DataCenter_Interfaces_IRectangle_o *pCVar3;\n\n  MethodInfo *method_00;\n\n  ekb_ejw_o *peStackX_8;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_c *pUStackX_18;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  __this_00 = (__th..."
+    }
+  ]
+}

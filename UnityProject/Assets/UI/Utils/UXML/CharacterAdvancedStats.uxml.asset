@@ -1,180 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: CharacterAdvancedStats.uxml
-  m_EditorClassIdentifier: 
-  m_ImportedWithErrors: 0
-  m_HasEditorElements: 0
-  m_HasUpdatedUrls: 0
-  m_ImportedWithWarnings: 0
-  m_Usings: []
-  inlineSheet: {fileID: 8555775428148780643}
-  m_VisualTree:
-    rid: 1000
-  m_AssetEntries: []
-  m_Slots: []
-  m_ContentContainerId: 0
-  m_ContentHash: 1295900592
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.UXML
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1113578224
-        m_Parent:
-          rid: -2
-        m_Children:
-        - rid: 1001
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions:
-        - prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        - prefix: uie
-          resolvedNamespace: UnityEditor.UIElements
-        m_Properties:
-        - name: editor-extension-mode
-          value: False
-        m_RuleIndex: -1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1001
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Block
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -589878439
-        m_Parent:
-          rid: 1000
-        m_Children:
-        - rid: 1002
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: Block
-        m_RuleIndex: 0
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1002
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 480497899
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1004
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: AdvancedStatsBlockContent
-        m_RuleIndex: 1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1005
-        m_SkipClone: 0
-    - rid: 1004
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.InlineXmlGrid
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 29739942
-        m_Parent:
-          rid: 1002
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: uxml-path
-          value: Assets/UI/PersistentMenu/characterSheet/AdvancedCharacteristicItem.uxml
-        - name: item-height
-          value: 33
-        - name: show-horizontal
-          value: false
-        - name: name
-          value: gd_caracAdvanced
-        - name: vertical-scroller-visibility
-          value: Auto
-        - name: horizontal-scroller-visibility
-          value: Hidden
-        - name: flex-direction
-          value: Column
-        - name: fixed-column-count
-          value: 1
-        - name: selection-type
-          value: None
-        m_RuleIndex: 2
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1005
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 480497899
-        name: AdvancedStatsBlockContent
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
---- !u!114 &8555775428148780643
+--- !u!114 &-6576399519386248476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -345,3 +171,177 @@ MonoBehaviour:
   m_FlattenedImportedStyleSheets: []
   m_ContentHash: 0
   scalableImages: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: CharacterAdvancedStats.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: -6576399519386248476}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 1295900592
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1113578224
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: editor-extension-mode
+          value: False
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Block
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -589878439
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: Block
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 480497899
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1004
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: AdvancedStatsBlockContent
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1005
+        m_SkipClone: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.InlineXmlGrid
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 29739942
+        m_Parent:
+          rid: 1002
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: uxml-path
+          value: Assets/UI/PersistentMenu/characterSheet/AdvancedCharacteristicItem.uxml
+        - name: item-height
+          value: 33
+        - name: show-horizontal
+          value: false
+        - name: name
+          value: gd_caracAdvanced
+        - name: vertical-scroller-visibility
+          value: Auto
+        - name: horizontal-scroller-visibility
+          value: Hidden
+        - name: flex-direction
+          value: Column
+        - name: fixed-column-count
+          value: 1
+        - name: selection-type
+          value: None
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 480497899
+        name: AdvancedStatsBlockContent
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0

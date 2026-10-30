@@ -53,6 +53,19 @@ SCREEN_TYPES = [
     "fyv",                # PreGameMainMenu
     "CharacterHeader",    # Character header bar
     "fpm",                # Auth screen manager
+    "BannerMenu",         # Persistent bottom banner HUD
+    "Core.UILogic.Chat.ChatView", # Persistent chat HUD
+    "Core.UILogic.Inventory.Uis.PlayerInventory.PlayerInventoryUi", # Inventory UI
+    "Core.UILogic.MainMenu.CharacterInformation", # HP/AP/MP HUD
+    "Core.UILogic.GameUICore.UIActionBar", # Spells/Items bar HUD
+    "Core.UILogic.NpcDialog.NpcDialog",    # Npc Dialog UI
+    "NpcDialog",                           # Npc Dialog short name
+    "PlayerInfoUi",                        # Player Info UI
+    "MapTransition",                       # Map transition
+    "EquipmentStorageUI",                  # Inventory & Equipment Storage UI
+    "Core.UILogic.Inventory.Uis.PlayerInventory.EquipmentStorageUI",
+    "SpellBaseUi",                         # Grimoire / Spells Base UI
+    "Core.UILogic.Grimoire.SpellBaseUi",
 ]
 
 KEY_METHODS = [

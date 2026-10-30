@@ -1,948 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: houseItem.uxml
-  m_EditorClassIdentifier: 
-  m_ImportedWithErrors: 0
-  m_HasEditorElements: 0
-  m_HasUpdatedUrls: 0
-  m_ImportedWithWarnings: 0
-  m_Usings: []
-  inlineSheet: {fileID: 2033491072954627941}
-  m_VisualTree:
-    rid: 1000
-  m_AssetEntries: []
-  m_Slots: []
-  m_ContentContainerId: 0
-  m_ContentHash: 1925421638
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.UXML
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1743099270
-        m_Parent:
-          rid: -2
-        m_Children:
-        - rid: 1001
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions:
-        - prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        - prefix: uie
-          resolvedNamespace: UnityEditor.UIElements
-        m_Properties:
-        - name: xsi
-          value: http://www.w3.org/2001/XMLSchema-instance
-        - name: engine
-          value: UnityEngine.UIElements
-        - name: editor
-          value: UnityEditor.UIElements
-        - name: noNamespaceSchemaLocation
-          value: ../../UIElementsSchema/UIElements.xsd
-        - name: editor-extension-mode
-          value: False
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: InlineGridItem_gd_houses_default
-        m_RuleIndex: 0
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1001
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 39642607
-        m_Parent:
-          rid: 1000
-        m_Children:
-        - rid: 1002
-        - rid: 1003
-        - rid: 1004
-        - rid: 1005
-        - rid: 1006
-        - rid: 1007
-        - rid: 1008
-        - rid: 1009
-        - rid: 1010
-        - rid: 1011
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: houseItem
-        m_RuleIndex: 1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1012
-        m_SkipClone: 0
-    - rid: 1002
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1110018945
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: tx_light_bg_inventory
-        m_RuleIndex: 2
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1013
-        m_SkipClone: 0
-    - rid: 1003
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -411115350
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: tx_bg_small_border_dark
-        m_RuleIndex: 3
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1014
-        m_SkipClone: 0
-    - rid: 1004
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1932249645
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: tx_illu
-        m_RuleIndex: 4
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1015
-        m_SkipClone: 0
-    - rid: 1005
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.Label
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 841583356
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_house
-        m_RuleIndex: 5
-        m_Classes:
-        - normal2_white
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1016
-        m_SkipClone: 0
-    - rid: 1006
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.Label
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -679550939
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_loc
-        m_RuleIndex: 6
-        m_Classes:
-        - normal2_p
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1017
-        m_SkipClone: 0
-    - rid: 1007
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.Label
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 2094282062
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_coord
-        m_RuleIndex: 7
-        m_Classes:
-        - normal2_p
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1018
-        m_SkipClone: 0
-    - rid: 1008
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 573147767
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1019
-        - rid: 1020
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: ctr_icons
-        m_RuleIndex: 8
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1021
-        m_SkipClone: 0
-    - rid: 1009
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.Label
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 304712178
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[ui.house.accessGuildShare]'
-        - name: name
-          value: lbl_guildShare
-        m_RuleIndex: 11
-        m_Classes:
-        - normal2_green
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1022
-        m_SkipClone: 0
-    - rid: 1010
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1216422117
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1023
-        - rid: 1024
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_emblem
-        m_RuleIndex: 12
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1025
-        m_SkipClone: 0
-    - rid: 1011
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusButton
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1484857706
-        m_Parent:
-          rid: 1001
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: btn_join
-        - name: text
-          value: ui.common.join
-        m_RuleIndex: 15
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1012
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 39642607
-        name: houseItem
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1013
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 1110018945
-        name: tx_light_bg_inventory
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1014
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -411115350
-        name: tx_bg_small_border_dark
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1015
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1932249645
-        name: tx_illu
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1016
-      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 841583356
-        name: lbl_house
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        text: 
-        text_UxmlAttributeFlags: 0
-        enableRichText: 0
-        enableRichText_UxmlAttributeFlags: 0
-        emojiFallbackSupport: 0
-        emojiFallbackSupport_UxmlAttributeFlags: 0
-        parseEscapeSequences: 0
-        parseEscapeSequences_UxmlAttributeFlags: 0
-        isSelectable: 0
-        isSelectable_UxmlAttributeFlags: 0
-        doubleClickSelectsWord: 0
-        doubleClickSelectsWord_UxmlAttributeFlags: 0
-        tripleClickSelectsLine: 0
-        tripleClickSelectsLine_UxmlAttributeFlags: 0
-        displayTooltipWhenElided: 0
-        displayTooltipWhenElided_UxmlAttributeFlags: 0
-    - rid: 1017
-      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -679550939
-        name: lbl_loc
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        text: 
-        text_UxmlAttributeFlags: 0
-        enableRichText: 0
-        enableRichText_UxmlAttributeFlags: 0
-        emojiFallbackSupport: 0
-        emojiFallbackSupport_UxmlAttributeFlags: 0
-        parseEscapeSequences: 0
-        parseEscapeSequences_UxmlAttributeFlags: 0
-        isSelectable: 0
-        isSelectable_UxmlAttributeFlags: 0
-        doubleClickSelectsWord: 0
-        doubleClickSelectsWord_UxmlAttributeFlags: 0
-        tripleClickSelectsLine: 0
-        tripleClickSelectsLine_UxmlAttributeFlags: 0
-        displayTooltipWhenElided: 0
-        displayTooltipWhenElided_UxmlAttributeFlags: 0
-    - rid: 1018
-      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 2094282062
-        name: lbl_coord
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        text: 
-        text_UxmlAttributeFlags: 0
-        enableRichText: 0
-        enableRichText_UxmlAttributeFlags: 0
-        emojiFallbackSupport: 0
-        emojiFallbackSupport_UxmlAttributeFlags: 0
-        parseEscapeSequences: 0
-        parseEscapeSequences_UxmlAttributeFlags: 0
-        isSelectable: 0
-        isSelectable_UxmlAttributeFlags: 0
-        doubleClickSelectsWord: 0
-        doubleClickSelectsWord_UxmlAttributeFlags: 0
-        tripleClickSelectsLine: 0
-        tripleClickSelectsLine_UxmlAttributeFlags: 0
-        displayTooltipWhenElided: 0
-        displayTooltipWhenElided_UxmlAttributeFlags: 0
-    - rid: 1019
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -414481368
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: tx_isLocked
-        m_RuleIndex: 9
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1027
-        m_SkipClone: 0
-    - rid: 1020
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1935615663
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: tx_isOnSale
-        m_RuleIndex: 10
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1028
-        m_SkipClone: 0
-    - rid: 1021
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 573147767
-        name: ctr_icons
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1022
-      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 304712178
-        name: lbl_guildShare
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        text: '[ui.house.accessGuildShare]'
-        text_UxmlAttributeFlags: 1
-        enableRichText: 0
-        enableRichText_UxmlAttributeFlags: 0
-        emojiFallbackSupport: 0
-        emojiFallbackSupport_UxmlAttributeFlags: 0
-        parseEscapeSequences: 0
-        parseEscapeSequences_UxmlAttributeFlags: 0
-        isSelectable: 0
-        isSelectable_UxmlAttributeFlags: 0
-        doubleClickSelectsWord: 0
-        doubleClickSelectsWord_UxmlAttributeFlags: 0
-        tripleClickSelectsLine: 0
-        tripleClickSelectsLine_UxmlAttributeFlags: 0
-        displayTooltipWhenElided: 0
-        displayTooltipWhenElided_UxmlAttributeFlags: 0
-    - rid: 1023
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 301346160
-        m_Parent:
-          rid: 1010
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: tx_emblemBack
-        m_RuleIndex: 13
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1029
-        m_SkipClone: 0
-    - rid: 1024
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1219788135
-        m_Parent:
-          rid: 1010
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: tx_emblemUp
-        m_RuleIndex: 14
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1030
-        m_SkipClone: 0
-    - rid: 1025
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1216422117
-        name: ctr_emblem
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1027
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -414481368
-        name: tx_isLocked
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1028
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1935615663
-        name: tx_isOnSale
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1029
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 301346160
-        name: tx_emblemBack
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1030
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1219788135
-        name: tx_emblemUp
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
---- !u!114 &2033491072954627941
+--- !u!114 &-226401961070761705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2014,3 +1072,945 @@ MonoBehaviour:
   m_FlattenedImportedStyleSheets: []
   m_ContentHash: 0
   scalableImages: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: houseItem.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: -226401961070761705}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 1925421638
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1743099270
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: xsi
+          value: http://www.w3.org/2001/XMLSchema-instance
+        - name: engine
+          value: UnityEngine.UIElements
+        - name: editor
+          value: UnityEditor.UIElements
+        - name: noNamespaceSchemaLocation
+          value: ../../UIElementsSchema/UIElements.xsd
+        - name: editor-extension-mode
+          value: False
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: InlineGridItem_gd_houses_default
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 39642607
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        - rid: 1003
+        - rid: 1004
+        - rid: 1005
+        - rid: 1006
+        - rid: 1007
+        - rid: 1008
+        - rid: 1009
+        - rid: 1010
+        - rid: 1011
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: houseItem
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1012
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1110018945
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: tx_light_bg_inventory
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1013
+        m_SkipClone: 0
+    - rid: 1003
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -411115350
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: tx_bg_small_border_dark
+        m_RuleIndex: 3
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1014
+        m_SkipClone: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1932249645
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: tx_illu
+        m_RuleIndex: 4
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1015
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Label
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 841583356
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_house
+        m_RuleIndex: 5
+        m_Classes:
+        - normal2_white
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1016
+        m_SkipClone: 0
+    - rid: 1006
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Label
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -679550939
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_loc
+        m_RuleIndex: 6
+        m_Classes:
+        - normal2_p
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1017
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Label
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 2094282062
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_coord
+        m_RuleIndex: 7
+        m_Classes:
+        - normal2_p
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1018
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 573147767
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1019
+        - rid: 1020
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: ctr_icons
+        m_RuleIndex: 8
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1021
+        m_SkipClone: 0
+    - rid: 1009
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Label
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 304712178
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[ui.house.accessGuildShare]'
+        - name: name
+          value: lbl_guildShare
+        m_RuleIndex: 11
+        m_Classes:
+        - normal2_green
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1022
+        m_SkipClone: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1216422117
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1023
+        - rid: 1024
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_emblem
+        m_RuleIndex: 12
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1025
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusButton
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1484857706
+        m_Parent:
+          rid: 1001
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: btn_join
+        - name: text
+          value: ui.common.join
+        m_RuleIndex: 15
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1012
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 39642607
+        name: houseItem
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1013
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1110018945
+        name: tx_light_bg_inventory
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1014
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -411115350
+        name: tx_bg_small_border_dark
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1015
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1932249645
+        name: tx_illu
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1016
+      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 841583356
+        name: lbl_house
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        text: 
+        text_UxmlAttributeFlags: 0
+        enableRichText: 0
+        enableRichText_UxmlAttributeFlags: 0
+        emojiFallbackSupport: 0
+        emojiFallbackSupport_UxmlAttributeFlags: 0
+        parseEscapeSequences: 0
+        parseEscapeSequences_UxmlAttributeFlags: 0
+        isSelectable: 0
+        isSelectable_UxmlAttributeFlags: 0
+        doubleClickSelectsWord: 0
+        doubleClickSelectsWord_UxmlAttributeFlags: 0
+        tripleClickSelectsLine: 0
+        tripleClickSelectsLine_UxmlAttributeFlags: 0
+        displayTooltipWhenElided: 0
+        displayTooltipWhenElided_UxmlAttributeFlags: 0
+    - rid: 1017
+      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -679550939
+        name: lbl_loc
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        text: 
+        text_UxmlAttributeFlags: 0
+        enableRichText: 0
+        enableRichText_UxmlAttributeFlags: 0
+        emojiFallbackSupport: 0
+        emojiFallbackSupport_UxmlAttributeFlags: 0
+        parseEscapeSequences: 0
+        parseEscapeSequences_UxmlAttributeFlags: 0
+        isSelectable: 0
+        isSelectable_UxmlAttributeFlags: 0
+        doubleClickSelectsWord: 0
+        doubleClickSelectsWord_UxmlAttributeFlags: 0
+        tripleClickSelectsLine: 0
+        tripleClickSelectsLine_UxmlAttributeFlags: 0
+        displayTooltipWhenElided: 0
+        displayTooltipWhenElided_UxmlAttributeFlags: 0
+    - rid: 1018
+      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 2094282062
+        name: lbl_coord
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        text: 
+        text_UxmlAttributeFlags: 0
+        enableRichText: 0
+        enableRichText_UxmlAttributeFlags: 0
+        emojiFallbackSupport: 0
+        emojiFallbackSupport_UxmlAttributeFlags: 0
+        parseEscapeSequences: 0
+        parseEscapeSequences_UxmlAttributeFlags: 0
+        isSelectable: 0
+        isSelectable_UxmlAttributeFlags: 0
+        doubleClickSelectsWord: 0
+        doubleClickSelectsWord_UxmlAttributeFlags: 0
+        tripleClickSelectsLine: 0
+        tripleClickSelectsLine_UxmlAttributeFlags: 0
+        displayTooltipWhenElided: 0
+        displayTooltipWhenElided_UxmlAttributeFlags: 0
+    - rid: 1019
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -414481368
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_isLocked
+        m_RuleIndex: 9
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1027
+        m_SkipClone: 0
+    - rid: 1020
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1935615663
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tx_isOnSale
+        m_RuleIndex: 10
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1028
+        m_SkipClone: 0
+    - rid: 1021
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 573147767
+        name: ctr_icons
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1022
+      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 304712178
+        name: lbl_guildShare
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        text: '[ui.house.accessGuildShare]'
+        text_UxmlAttributeFlags: 1
+        enableRichText: 0
+        enableRichText_UxmlAttributeFlags: 0
+        emojiFallbackSupport: 0
+        emojiFallbackSupport_UxmlAttributeFlags: 0
+        parseEscapeSequences: 0
+        parseEscapeSequences_UxmlAttributeFlags: 0
+        isSelectable: 0
+        isSelectable_UxmlAttributeFlags: 0
+        doubleClickSelectsWord: 0
+        doubleClickSelectsWord_UxmlAttributeFlags: 0
+        tripleClickSelectsLine: 0
+        tripleClickSelectsLine_UxmlAttributeFlags: 0
+        displayTooltipWhenElided: 0
+        displayTooltipWhenElided_UxmlAttributeFlags: 0
+    - rid: 1023
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 301346160
+        m_Parent:
+          rid: 1010
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: tx_emblemBack
+        m_RuleIndex: 13
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1029
+        m_SkipClone: 0
+    - rid: 1024
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1219788135
+        m_Parent:
+          rid: 1010
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: tx_emblemUp
+        m_RuleIndex: 14
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1030
+        m_SkipClone: 0
+    - rid: 1025
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1216422117
+        name: ctr_emblem
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1027
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -414481368
+        name: tx_isLocked
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1028
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1935615663
+        name: tx_isOnSale
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1029
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 301346160
+        name: tx_emblemBack
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1030
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1219788135
+        name: tx_emblemUp
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0

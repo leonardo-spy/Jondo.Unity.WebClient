@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using FontAsset = UnityEngine.TextCore.Text.FontAsset;
+using Jondo.Reconstructed.Movement;
 
 public partial class WebGLProbe : MonoBehaviour
 {
@@ -58,6 +59,21 @@ public partial class WebGLProbe : MonoBehaviour
     List<CharInfo> _characterList;
     int _selectedCharIdx = -1;
     long _currentMapId;
+    AssetBundle _currentMapBundle;
+    bool _mapLoading;
+
+    // Map cell data from MapMetadata (560 cells per standard Dofus map)
+    public struct CellData { public uint cellNumber; public bool mov; public bool los; public int floor; public int speed; public int arrow; }
+    CellData[] _mapCells;
+
+    // Map element data from MapMetadata (gfxId + transform + color per element)
+    struct MapElement { public int gfxId; public uint color; public float m11, m12, m21, m22, m31, m32; public int materialIndex; }
+    MapElement[] _bgElements, _sortElements, _fgElements;
+
+    // WorldPoint encoding (decompiled from Core.DataCenter.Metadata.World.WorldPoint.FromMapId)
+    static int WorldIdFromMapId(long mapId) => (int)((mapId >> 18) & 0xFFF);
+    static int MapXFromMapId(long mapId) { int r = (int)((mapId >> 9) & 0x1FF); return r > 255 ? -(r & 0xFF) : r; }
+    static int MapYFromMapId(long mapId) { int r = (int)(mapId & 0x1FF); return r > 255 ? -(r & 0xFF) : r; }
 
     const int MAX = 300;
     const float INTERVAL = 10f;
@@ -67,7 +83,7 @@ public partial class WebGLProbe : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     static void Boot()
     {
-        Log("PROBE v31: lifecycle Gen_ dispatch (114 methods), audio pause, data-driven boot");
+        Log("PROBE v32: real UXML mount, interactive play button, lifecycle Gen_ dispatch (114 methods), audio pause, data-driven boot");
         Application.logMessageReceived += OnLog;
 
         CreateCamera();
@@ -131,24 +147,89 @@ public partial class WebGLProbe : MonoBehaviour
     static string _stringsBank;
     static int _bootPhaseCount;
     static int _bootServiceCount;
+    static BootCentralRegistration[] _centralRegistrations;
+    static BootReconstructedService[] _reconstructedServices;
+    static string _reconstructedServiceEvidence;
     static bool _banksLoaded;
+
+    [Serializable]
+    sealed class BootLogicData
+    {
+        public BootPhaseData[] phases;
+        public BootAudioData audioInit;
+        public BootCentralRegistration[] centralRegistrations;
+        public BootReconstructedService[] reconstructedServices;
+        public string reconstructedServiceEvidence;
+    }
+
+    [Serializable]
+    sealed class BootCentralRegistration
+    {
+        public string field;
+        public string fieldType;
+        public string registryType;
+    }
+
+    [Serializable]
+    sealed class BootReconstructedService
+    {
+        public int order;
+        public string helper;
+        public string[] genericTypes;
+        public string concreteClass;
+        public string sourceType;
+        public string fieldName;
+        public string constructorMethod;
+    }
+
+    [Serializable]
+    sealed class BootPhaseData
+    {
+        public string name;
+        public BootServiceInitData[] serviceInits;
+    }
+
+    [Serializable]
+    sealed class BootServiceInitData
+    {
+        public string type;
+        public string method;
+        public string va;
+    }
+
+    [Serializable]
+    sealed class BootAudioData
+    {
+        public string bankPath;
+        public string masterBank;
+        public string stringsBank;
+    }
 
     static void LoadBootLogic()
     {
+        _centralRegistrations = null;
+        _reconstructedServices = null;
+        _reconstructedServiceEvidence = null;
+        _bootPhaseCount = 0;
+        _bootServiceCount = 0;
         var ta = Resources.Load<UnityEngine.TextAsset>("BootLogic");
         if (ta == null) { Log("  BootLogic.json not found"); return; }
-        var json = ta.text;
-        _bankPath = ExtractJsonString(json, "bankPath") ?? "Content/Audio/Banks/Desktop/";
-        _masterBank = ExtractJsonString(json, "masterBank") ?? "Master.bank";
-        _stringsBank = ExtractJsonString(json, "stringsBank") ?? "Master.strings.bank";
+        BootLogicData data;
+        try { data = JsonUtility.FromJson<BootLogicData>(ta.text); }
+        catch (Exception exception) { Err($"  Invalid BootLogic.json: {exception.Message}"); return; }
+        if (data?.phases == null || data.audioInit == null) { Err("  BootLogic.json missing phases or audioInit"); return; }
+        _bankPath = data.audioInit.bankPath;
+        _masterBank = data.audioInit.masterBank;
+        _stringsBank = data.audioInit.stringsBank;
+        _centralRegistrations = data.centralRegistrations;
+        _reconstructedServices = data.reconstructedServices;
+        _reconstructedServiceEvidence = data.reconstructedServiceEvidence;
+        _bootPhaseCount = data.phases.Length;
+        _bootServiceCount = 0;
+        foreach (var phase in data.phases)
+            if (phase?.serviceInits != null) _bootServiceCount += phase.serviceInits.Length;
 
-        // Count phases and services from BootLogic for data-driven boot logging
-        int pIdx = json.IndexOf("\"phases\":");
-        if (pIdx >= 0) { int a = json.IndexOf('[', pIdx); if (a >= 0) { int count = 0; int p = a; while ((p = json.IndexOf("\"name\":", p + 1)) >= 0 && p < json.IndexOf(']', a)) count++; _bootPhaseCount = count; } }
-        int sIdx = json.IndexOf("\"serviceInits\":");
-        if (sIdx >= 0) { int a = json.IndexOf('[', sIdx); if (a >= 0) { int count = 0; int p = a; int end = json.IndexOf(']', a); while ((p = json.IndexOf("\"type\":", p + 1)) >= 0 && p < end) count++; _bootServiceCount = count; } }
-
-        Log($"  BootLogic: {_bootPhaseCount} phases, {_bootServiceCount} services, bank={_bankPath}");
+        Log($"  BootLogic: {_bootPhaseCount} phases, {_bootServiceCount} services, {_reconstructedServices?.Length ?? 0} reconstructed, bank={_bankPath}");
     }
 
     static string _menuMusicEvent;
@@ -940,6 +1021,67 @@ public partial class WebGLProbe : MonoBehaviour
             return el;
         }
     }
+    static void SetPickingModeRecursive(VisualElement el, PickingMode mode)
+    {
+        if (el == null) return;
+        el.pickingMode = mode;
+        for (int i = 0; i < el.childCount; i++)
+            SetPickingModeRecursive(el[i], mode);
+    }
+
+    VisualTreeAsset LoadUxml(string pathOrName)
+    {
+        if (string.IsNullOrEmpty(pathOrName)) return null;
+        string lower = pathOrName.ToLower().Replace(".asset", "");
+        if (!lower.EndsWith(".uxml")) lower += ".uxml";
+        string fileName = lower.Substring(lower.LastIndexOf('/') + 1);
+
+        var bundles = _loadedBundles ?? _loadedBundlesStatic;
+        if (bundles != null)
+        {
+            foreach (var kv in bundles)
+            {
+                if (kv.Value == null) continue;
+
+                var vta = kv.Value.LoadAsset<VisualTreeAsset>(lower)
+                       ?? kv.Value.LoadAsset<VisualTreeAsset>(lower + ".asset")
+                       ?? (kv.Value.LoadAsset(lower) as VisualTreeAsset)
+                       ?? (kv.Value.LoadAsset(lower + ".asset") as VisualTreeAsset);
+                if (vta != null)
+                {
+                    Log($"  [LoadUxml] Found '{pathOrName}' in bundle '{kv.Key}' (by path)");
+                    return vta;
+                }
+
+                vta = kv.Value.LoadAsset<VisualTreeAsset>(fileName)
+                   ?? (kv.Value.LoadAsset(fileName) as VisualTreeAsset);
+                if (vta != null)
+                {
+                    Log($"  [LoadUxml] Found '{pathOrName}' in bundle '{kv.Key}' (by filename)");
+                    return vta;
+                }
+
+                foreach (var assetName in kv.Value.GetAllAssetNames())
+                {
+                    string anLower = assetName.ToLower();
+                    if (anLower == lower || anLower == lower + ".asset" ||
+                        anLower.EndsWith("/" + fileName) || anLower.EndsWith("/" + fileName + ".asset"))
+                    {
+                        var loaded = kv.Value.LoadAsset<VisualTreeAsset>(assetName)
+                                  ?? (kv.Value.LoadAsset(assetName) as VisualTreeAsset);
+                        if (loaded != null)
+                        {
+                            Log($"  [LoadUxml] Found '{pathOrName}' in bundle '{kv.Key}' (by GetAllAssetNames: '{assetName}')");
+                            return loaded;
+                        }
+                    }
+                }
+            }
+        }
+        Log($"  [LoadUxml] NOT FOUND: '{pathOrName}' (lower='{lower}', file='{fileName}', bundles={bundles?.Count ?? 0})");
+        return null;
+    }
+
     class DDFactory_Btn : UxmlFactory<Button>
     {
         internal string _cls; internal bool _isDVE, _isDBE; internal string[] _uss;
@@ -951,9 +1093,17 @@ public partial class WebGLProbe : MonoBehaviour
             if (_isDBE) SetupDBE(el); else if (_isDVE) SetupDVE(el);
             if (_cls.Length > 0) el.AddToClassList(_cls);
             if (_uss != null) foreach (var u in _uss) el.AddToClassList(u);
-            if (_tree != null) { _currentFactoryType = _cls; foreach (var ch in _tree) el.Add(CreateChild(ch)); }
+            if (_tree != null)
+            {
+                _currentFactoryType = _cls;
+                foreach (var ch in _tree)
+                {
+                    var child = CreateChild(ch);
+                    SetPickingModeRecursive(child, PickingMode.Ignore);
+                    el.Add(child);
+                }
+            }
             LoadComponentUSS(el, "Core.UILogic.Components." + _cls);
-            AddClickable(el);
             return el;
         }
     }
@@ -1374,10 +1524,39 @@ public partial class WebGLProbe : MonoBehaviour
     static void SetF(object o, Type t, string n, object v) { var f = t.GetField(n, ALL); if (f != null) f.SetValue(o, v); }
     static int? DictCount(object d) { if (d == null) return null; return d.GetType().GetProperty("Count")?.GetValue(d) as int?; }
 
+    void SetupEventSystem()
+    {
+        var esObj = GameObject.Find("EventSystem");
+        if (esObj == null) esObj = new GameObject("EventSystem");
+
+        var esType = Type.GetType("UnityEngine.EventSystems.EventSystem, UnityEngine.UI")
+                  ?? Type.GetType("UnityEngine.EventSystems.EventSystem, UnityEngine.CoreModule");
+        if (esType != null && esObj.GetComponent(esType) == null)
+        {
+            esObj.AddComponent(esType);
+            Log("  EventSystem: added EventSystem component");
+        }
+
+        var inputSystemType = Type.GetType("UnityEngine.InputSystem.UI.InputSystemUIInputModule, Unity.InputSystem");
+        var standaloneType = Type.GetType("UnityEngine.EventSystems.StandaloneInputModule, UnityEngine.UI");
+
+        if (inputSystemType != null && esObj.GetComponent(inputSystemType) == null)
+        {
+            esObj.AddComponent(inputSystemType);
+            Log("  EventSystem: added InputSystemUIInputModule");
+        }
+        else if (standaloneType != null && esObj.GetComponent(standaloneType) == null)
+        {
+            esObj.AddComponent(standaloneType);
+            Log("  EventSystem: added StandaloneInputModule");
+        }
+    }
+
     void Start()
     {
         Log("PROBE: Start");
         DumpScene();
+        SetupEventSystem();
         StartCoroutine(OriginalBootFlow());
     }
 
@@ -1405,14 +1584,10 @@ public partial class WebGLProbe : MonoBehaviour
         if (_compositor == null) { Err("FATAL: GameCompositor not found"); yield break; }
 
         Log($"=== Phase 0: RegisterServices (BootLogic: {_bootPhaseCount} phases, {_bootServiceCount} services) ===");
-        RegisterServices();
+        if (!RegisterServices()) yield break;
         yield return null;
 
-        Log($"=== Phase 1: InitializeServices ({_bootServiceCount} from BootLogic) ===");
-        CallServiceInitMethods();
-        yield return null;
-
-        Log("=== Phase 2: LoadDataDependencies (bundles + FMOD) ===");
+        Log("=== Phase 1: LoadDataDependencies (bundles + FMOD) ===");
         yield return StartCoroutine(LoadBundles());
 
         // FMOD: System.create at boot (decompiled elv.<InitializeAudioManager>d__68, dump.cs L308193)
@@ -1420,6 +1595,14 @@ public partial class WebGLProbe : MonoBehaviour
         // when loading banks with suspended AudioContext. Banks load on first click (Play button).
         // SOURCE: BootLogic.json Phase 2 → AudioManager.Initialize → FMOD.Studio.System.create
         InitFMODAudio();
+        Jondo.Reconstructed.DataCenter.DataCenterModule.Initialize();
+        Jondo.Reconstructed.UI.Bindings.UIBindingRegistry.Initialize();
+        Jondo.Reconstructed.UI.Screens.UIScreenRegistry.Initialize();
+        Jondo.Reconstructed.Protocol.ProtocolRegistry.Initialize();
+
+        Log($"=== Phase 2: InitializeServices ({_bootServiceCount} candidates from BootLogic; central services only) ===");
+        CallServiceInitMethods();
+        yield return null;
 
         try { _baseType.GetField("isRunning", ALL)?.SetValue(_compositor, true); Log("isRunning = true"); }
         catch (Exception e) { Err($"isRunning: {e.Message}"); }
@@ -1443,7 +1626,7 @@ public partial class WebGLProbe : MonoBehaviour
 
     // ──────────────────── Step 2: Service Registration ────────────────────
 
-    void RegisterServices()
+    bool RegisterServices()
     {
         foreach (var n in new[] { "dxnw", "dxnx", "dxny", "dxnz", "dxoa" })
             TryInitField(_baseType, n);
@@ -1457,38 +1640,149 @@ public partial class WebGLProbe : MonoBehaviour
         if (fyh != null) { SetF(_compositor, _gameType, "dxod", fyh); Log($"  dxod = fyh"); }
 
         var dxnx = GetF(_compositor, _baseType, "dxnx");
-        if (dxnx != null && glo != null)
+        if (dxnx == null || _centralRegistrations == null || _centralRegistrations.Length == 0)
         {
-            RegisterInDict(dxnx, FindType("ezp") ?? glo.GetType(), glo, "glo→ezp");
-            RegisterInDict(dxnx, glo.GetType(), glo, "glo→glo");
+            Err("  Missing extracted central registrations or compositor dictionary");
+            return false;
         }
-        if (dxnx != null && ecr != null) RegisterInDict(dxnx, ecr.GetType(), ecr, "ecr");
-        if (dxnx != null && fyh != null) RegisterInDict(dxnx, fyh.GetType(), fyh, "fyh");
+        try
+        {
+            foreach (var binding in _centralRegistrations)
+            {
+                var registryType = ValidateCentralRegistration(binding, _gameType);
+                var service = GetF(_compositor, _gameType, binding.field);
+                RegisterInDict(dxnx, registryType, service, binding.field + " -> " + binding.registryType);
+            }
+        }
+        catch (Exception exception)
+        {
+            Err($"  Central registration failed: {exception.InnerException?.Message ?? exception.Message}");
+            return false;
+        }
+
+        int reconstructedRegistered = 0;
+        int reconstructedSkipped = 0;
+        if (_reconstructedServices != null && _reconstructedServices.Length > 0)
+        {
+            var dxnz = GetF(_compositor, _baseType, "dxnz");
+            var dxny = GetF(_compositor, _baseType, "dxny");
+            var dxoa = GetF(_compositor, _baseType, "dxoa");
+            var gaoType = FindType("gao") ?? ScanForType("gao");
+            var gaqType = FindType("gaq") ?? ScanForType("gaq");
+            var dykType = FindType("dyk") ?? ScanForType("dyk");
+
+            var instantiatedServices = new Dictionary<string, object>();
+
+            foreach (var rec in _reconstructedServices)
+            {
+                if (rec == null || rec.sourceType == "field") continue;
+                if (string.IsNullOrEmpty(rec.concreteClass) || rec.genericTypes == null || rec.genericTypes.Length == 0)
+                {
+                    reconstructedSkipped++;
+                    continue;
+                }
+
+                try
+                {
+                    object instance = null;
+                    if (!instantiatedServices.TryGetValue(rec.concreteClass, out instance))
+                    {
+                        instance = ConstructService(rec.concreteClass, "Core");
+                        if (instance != null)
+                            instantiatedServices[rec.concreteClass] = instance;
+                    }
+
+                    if (instance == null)
+                    {
+                        reconstructedSkipped++;
+                        continue;
+                    }
+
+                    foreach (var ifaceName in rec.genericTypes)
+                    {
+                        if (string.IsNullOrEmpty(ifaceName)) continue;
+                        var ifaceType = FindType(ifaceName) ?? ScanForType(ifaceName);
+                        if (ifaceType == null || !ifaceType.IsInstanceOfType(instance))
+                        {
+                            reconstructedSkipped++;
+                            continue;
+                        }
+
+                        var contains = dxnx.GetType().GetMethod("ContainsKey");
+                        if (contains != null && (bool)contains.Invoke(dxnx, new object[] { ifaceType }))
+                            continue;
+
+                        RegisterInDict(dxnx, ifaceType, instance, $"{rec.concreteClass} -> {ifaceName}");
+                        reconstructedRegistered++;
+
+                        if (gaoType != null && gaoType.IsInstanceOfType(instance) && dxnz != null)
+                        {
+                            var containsPre = dxnz.GetType().GetMethod("ContainsKey");
+                            if (containsPre != null && !(bool)containsPre.Invoke(dxnz, new object[] { ifaceType }))
+                                dxnz.GetType().GetMethod("set_Item")?.Invoke(dxnz, new[] { ifaceType, instance });
+                        }
+                        if (gaqType != null && gaqType.IsInstanceOfType(instance) && dxny != null)
+                        {
+                            var containsReset = dxny.GetType().GetMethod("ContainsKey");
+                            if (containsReset != null && !(bool)containsReset.Invoke(dxny, new object[] { ifaceType }))
+                                dxny.GetType().GetMethod("set_Item")?.Invoke(dxny, new[] { ifaceType, instance });
+                        }
+                        if (dykType != null && dykType.IsInstanceOfType(instance) && dxoa != null)
+                        {
+                            var containsTick = dxoa.GetType().GetMethod("Contains");
+                            if (containsTick != null && !(bool)containsTick.Invoke(dxoa, new object[] { instance }))
+                                dxoa.GetType().GetMethod("Add")?.Invoke(dxoa, new[] { instance });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log($"  Notice: service {rec.concreteClass} registration deferred: {ex.Message}");
+                    reconstructedSkipped++;
+                }
+            }
+            Log($"  Reconstructed services: {reconstructedRegistered} registered, {reconstructedSkipped} deferred");
+        }
 
         Log($"  dxnx count = {DictCount(GetF(_compositor, _baseType, "dxnx"))}");
         Inspect("after-register");
+        return true;
     }
 
-    void RegisterInDict(object dict, Type key, object service, string label)
+    static Type ValidateCentralRegistration(BootCentralRegistration binding, Type compositorType)
     {
-        try
-        {
-            var addMethod = dict.GetType().GetMethod("set_Item") ?? dict.GetType().GetMethod("Add");
-            if (addMethod == null) return;
-            var valueType = dict.GetType().GetGenericArguments()[1];
-            if (valueType.IsAssignableFrom(service.GetType()) || valueType.IsInterface)
-            {
-                addMethod.Invoke(dict, new[] { key, service });
-                Log($"  registered {label}");
-            }
-        }
-        catch (Exception e) { Err($"  register {label}: {e.InnerException?.Message ?? e.Message}"); }
+        if (binding == null || string.IsNullOrEmpty(binding.field) || string.IsNullOrEmpty(binding.registryType))
+            throw new InvalidOperationException("Incomplete extracted central registration");
+        var field = compositorType.GetField(binding.field, ALL);
+        var registryType = FindType(binding.registryType);
+        if (field == null || field.FieldType.Name != binding.fieldType || registryType == null ||
+            !registryType.IsAssignableFrom(field.FieldType))
+            throw new InvalidOperationException($"Central registration metadata mismatch: {binding.field} -> {binding.registryType}");
+        return registryType;
+    }
+
+    static void RegisterInDict(object dict, Type key, object service, string label)
+    {
+        if (dict == null || key == null || service == null || !key.IsInstanceOfType(service))
+            throw new InvalidOperationException($"Incompatible registration: {label}");
+        var type = dict.GetType();
+        var arguments = type.GetGenericArguments();
+        if (arguments.Length != 2 || !arguments[1].IsInstanceOfType(service))
+            throw new InvalidOperationException($"Service is incompatible with dictionary value type: {label}");
+        var contains = type.GetMethod("ContainsKey");
+        var add = type.GetMethod("Add");
+        if (contains == null || add == null)
+            throw new InvalidOperationException("Unsupported compositor dictionary contract");
+        if ((bool)contains.Invoke(dict, new object[] { key }))
+            throw new InvalidOperationException($"Duplicate service registration: {label}");
+        add.Invoke(dict, new[] { key, service });
+        Log($"  registered {label}");
     }
 
     object ConstructService(string typeName, string assembly)
     {
         var type = FindType(typeName) ?? ScanForType(typeName);
-        if (type == null) { Err($"  {typeName}: type not found"); return null; }
+        if (type == null) { Log($"  {typeName}: optional service descriptor deferred"); return null; }
         try
         {
             var obj = Activator.CreateInstance(type);
@@ -1652,13 +1946,8 @@ public partial class WebGLProbe : MonoBehaviour
         }
         uidoc.panelSettings = panelSettings;
 
-        VisualTreeAsset bgUxml = null;
-        _loginUxml = null;
-        foreach (var kv in _loadedBundles)
-        {
-            if (bgUxml == null) bgUxml = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/auth/connectionbackground.uxml");
-            if (_loginUxml == null) _loginUxml = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/auth/login.uxml");
-        }
+        VisualTreeAsset bgUxml = LoadUxml("connectionbackground");
+        _loginUxml = LoadUxml("login");
         Log($"  connectionBackground.uxml: {(bgUxml != null ? "OK" : "NOT FOUND")}");
         Log($"  login.uxml: {(_loginUxml != null ? "OK" : "NOT FOUND")}");
 
@@ -1778,6 +2067,7 @@ public partial class WebGLProbe : MonoBehaviour
         DispatchGen_Localize("Login", root);
         DispatchGen_OnEnable("Login", root);
         PopulateLoginScreen(root);
+        SetLoginState(root, 0);
 
         // Re-apply font AFTER login clone (USS sets -unity-font-definition: none on some elements)
         yield return null;
@@ -1862,12 +2152,51 @@ public partial class WebGLProbe : MonoBehaviour
     void PopulateLoginScreen(VisualElement root)
     {
         var btnPlay = root.Q("btn_play"); // LoginBinding._btn_play
-        if (btnPlay is Button playBtn)
-            playBtn.clicked += () => OnPlayClicked(root);
-        else if (btnPlay != null)
-            btnPlay.RegisterCallback<ClickEvent>(evt => OnPlayClicked(root));
+        if (btnPlay != null)
+        {
+            btnPlay.SetEnabled(true);
+            btnPlay.RemoveFromClassList("disabled");
+            btnPlay.pickingMode = PickingMode.Position;
 
-        Log($"  PopulateLogin: click handler wired");
+            btnPlay.Query().ForEach(child =>
+            {
+                if (child != btnPlay)
+                {
+                    child.pickingMode = PickingMode.Ignore;
+                    child.RegisterCallback<ClickEvent>(evt =>
+                    {
+                        evt.StopPropagation();
+                        OnPlayClicked(root);
+                    });
+                    child.RegisterCallback<PointerUpEvent>(evt =>
+                    {
+                        if (evt.button == 0) { evt.StopPropagation(); OnPlayClicked(root); }
+                    });
+                }
+            });
+
+            if (btnPlay is Button playBtn)
+                playBtn.clicked += () => OnPlayClicked(root);
+
+            btnPlay.RegisterCallback<ClickEvent>(evt => OnPlayClicked(root));
+            btnPlay.RegisterCallback<PointerDownEvent>(evt =>
+            {
+                if (evt.button == 0) OnPlayClicked(root);
+            });
+            btnPlay.RegisterCallback<PointerUpEvent>(evt =>
+            {
+                if (evt.button == 0) OnPlayClicked(root);
+            });
+            btnPlay.RegisterCallback<MouseUpEvent>(evt =>
+            {
+                if (evt.button == 0) OnPlayClicked(root);
+            });
+
+            var playLabel = btnPlay.Q("playButton_label");
+            if (playLabel is Label pl) pl.text = I18n("ui.common.play", "Play");
+        }
+
+        Log($"  PopulateLogin: click handler wired, enabled={btnPlay.enabledSelf}, worldBound={btnPlay.worldBound}");
     }
 
     // ──────────────────── Settings Menu (PreGameMainMenu) ────────────────────
@@ -2269,6 +2598,10 @@ public partial class WebGLProbe : MonoBehaviour
         int result = FMODProxy.Init();
         if (result != 0) { Err($"  FMOD: Init failed (result={result})"); return; }
         Log("  FMOD: Studio system initialized via FMODProxy");
+        if (Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance == null)
+            new Jondo.Reconstructed.Audio.ReconstructedAudioService();
+        if (Jondo.Reconstructed.Fight.FightTurnService.Instance == null)
+            new Jondo.Reconstructed.Fight.FightTurnService();
         StartCoroutine(LoadFMODBanks());
     }
 
@@ -2415,12 +2748,7 @@ public partial class WebGLProbe : MonoBehaviour
 
         PopulateServerTabs(root);
 
-        VisualTreeAsset cardTemplate = null;
-        foreach (var kv in new List<KeyValuePair<string, AssetBundle>>(_loadedBundles))
-        {
-            cardTemplate = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/auth/serverselection/servercard.uxml");
-            if (cardTemplate != null) break;
-        }
+        VisualTreeAsset cardTemplate = LoadUxml("servercard");
 
         _selectedServerCardIdx = -1;
         for (int i = 0; i < 7 && i < _serverList.Count; i++)
@@ -2467,18 +2795,38 @@ public partial class WebGLProbe : MonoBehaviour
 
         // Wire Play button (ServerSelection.OnValidateButton, dump.cs L262872)
         var btnPlay = root.Q("btn_play");
-        if (btnPlay is Button ssBtn)
+        if (btnPlay != null)
         {
-            ssBtn.clicked += () =>
+            btnPlay.SetEnabled(true);
+            btnPlay.RemoveFromClassList("disabled");
+            btnPlay.pickingMode = PickingMode.Position;
+
+            Action triggerServerPlay = () =>
             {
-                if (_pendingServerId > 0 && _wsConn != null)
+                int targetId = _pendingServerId > 0 ? _pendingServerId : (_serverList != null && _serverList.Count > 0 ? _serverList[0].id : 290);
+                if (_wsConn != null)
                 {
-                    Log($"  Server select: {_pendingServerId}");
+                    Log($"  Server select: {targetId}");
                     SetLoginState(root, 1);
-                    var selectFrame = WebSocketBridge.BuildServerSelectFrame(_pendingServerId, "en");
+                    var selectFrame = WebSocketBridge.BuildServerSelectFrame(targetId, "en");
                     WebSocketBridge.Send(_wsConn, selectFrame);
                 }
             };
+
+            btnPlay.Query().ForEach(child =>
+            {
+                if (child != btnPlay)
+                {
+                    child.pickingMode = PickingMode.Ignore;
+                    child.RegisterCallback<ClickEvent>(evt => { evt.StopPropagation(); triggerServerPlay(); });
+                    child.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) { evt.StopPropagation(); triggerServerPlay(); } });
+                }
+            });
+
+            if (btnPlay is Button ssBtn) ssBtn.clicked += () => triggerServerPlay();
+            btnPlay.RegisterCallback<ClickEvent>(evt => triggerServerPlay());
+            btnPlay.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) triggerServerPlay(); });
+
             var ssLabel = btnPlay.Q("playButton_label");
             if (ssLabel is Label sl) sl.text = I18n("ui.common.play", "Play");
         }
@@ -2594,13 +2942,7 @@ public partial class WebGLProbe : MonoBehaviour
         var scrollView = root.Q("gd_character");
         _selectedCharIdx = -1;
 
-        // Try to load characterLine.uxml template (from characterSelection/ dir)
-        VisualTreeAsset charLineUxml = null;
-        foreach (var kv in new List<KeyValuePair<string, AssetBundle>>(_loadedBundles))
-        {
-            charLineUxml = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/auth/characterselection/characterline.uxml");
-            if (charLineUxml != null) break;
-        }
+        VisualTreeAsset charLineUxml = LoadUxml("characterline");
 
         for (int i = 0; i < _characterList.Count; i++)
         {
@@ -2644,9 +2986,13 @@ public partial class WebGLProbe : MonoBehaviour
 
         // Wire Play button (CharacterSelection.ValidateCharacterChoice, dump.cs L151289)
         var btnPlay = root.Q("btn_play");
-        if (btnPlay is Button pb)
+        if (btnPlay != null)
         {
-            pb.clicked += () =>
+            btnPlay.SetEnabled(true);
+            btnPlay.RemoveFromClassList("disabled");
+            btnPlay.pickingMode = PickingMode.Position;
+
+            Action triggerCharPlay = () =>
             {
                 int idx = _selectedCharIdx >= 0 ? _selectedCharIdx : 0;
                 if (idx < _characterList.Count && _wsConn != null)
@@ -2654,7 +3000,7 @@ public partial class WebGLProbe : MonoBehaviour
                     int cid = _characterList[idx].id;
                     Log($"  Selecting character {_characterList[idx].name} (id={cid})...");
                     var kvwPayload = new List<byte>();
-                    kvwPayload.Add(0x08); // field 1, varint
+                    kvwPayload.Add(0x08);
                     int v = cid;
                     while (v > 0x7F) { kvwPayload.Add((byte)(v | 0x80)); v >>= 7; }
                     kvwPayload.Add((byte)v);
@@ -2662,6 +3008,21 @@ public partial class WebGLProbe : MonoBehaviour
                     if (kvwFrame != null) WebSocketBridge.Send(_wsConn, kvwFrame);
                 }
             };
+
+            btnPlay.Query().ForEach(child =>
+            {
+                if (child != btnPlay)
+                {
+                    child.pickingMode = PickingMode.Ignore;
+                    child.RegisterCallback<ClickEvent>(evt => { evt.StopPropagation(); triggerCharPlay(); });
+                    child.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) { evt.StopPropagation(); triggerCharPlay(); } });
+                }
+            });
+
+            if (btnPlay is Button pb) pb.clicked += () => triggerCharPlay();
+            btnPlay.RegisterCallback<ClickEvent>(evt => triggerCharPlay());
+            btnPlay.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) triggerCharPlay(); });
+
             var playLabel = btnPlay.Q("playButton_label");
             if (playLabel is Label pl) pl.text = I18n("ui.common.play", "Play");
         }
@@ -2727,6 +3088,12 @@ public partial class WebGLProbe : MonoBehaviour
     void SetLoginState(VisualElement root, int state, string statusText = null)
     {
         _loginState = state;
+
+        if (state == 0)
+        {
+            var btnPlay = root.Q("btn_play");
+            if (btnPlay != null) { btnPlay.SetEnabled(true); btnPlay.RemoveFromClassList("disabled"); }
+        }
 
         // Try data-driven state from ScreenBehavior (Login.states.idle/connecting/error)
         string stateName = state == 0 ? "idle" : state == 1 ? "connecting" : "error";
@@ -2907,6 +3274,26 @@ public partial class WebGLProbe : MonoBehaviour
             int tag = PbVarint(b, ref p);
             int fn = tag >> 3, wt = tag & 7;
             if (wt == 0) { int val = PbVarint(b, ref p); if (fn == fieldNum) return val; }
+            else if (wt == 2) { int len = PbVarint(b, ref p); p += len; }
+            else if (wt == 5) { p += 4; }
+            else if (wt == 1) { p += 8; }
+            else break;
+        }
+        return -1;
+    }
+    static long PbVarFieldLong(byte[] b, int fieldNum)
+    {
+        int p = 0;
+        while (p < b.Length)
+        {
+            int tag = PbVarint(b, ref p);
+            int fn = tag >> 3, wt = tag & 7;
+            if (wt == 0)
+            {
+                long val = 0; int shift = 0;
+                while (p < b.Length) { byte c = b[p++]; val |= (long)(c & 0x7F) << shift; shift += 7; if ((c & 0x80) == 0) break; }
+                if (fn == fieldNum) return val;
+            }
             else if (wt == 2) { int len = PbVarint(b, ref p); p += len; }
             else if (wt == 5) { p += 4; }
             else if (wt == 1) { p += 8; }
@@ -3103,9 +3490,67 @@ public partial class WebGLProbe : MonoBehaviour
                 var payload = ExtractPayload(data);
                 if (payload != null)
                 {
-                    long mapId = PbVarField(payload, 2);
-                    Log($"  jru: map {mapId}");
+                    long mapId = PbVarFieldLong(payload, 2);
+                    int worldId = WorldIdFromMapId(mapId);
+                    int mx = MapXFromMapId(mapId);
+                    int my = MapYFromMapId(mapId);
+                    Log($"  jru: map {mapId} (world={worldId} x={mx} y={my})");
                     _currentMapId = mapId;
+                    if (!_mapLoading)
+                        StartCoroutine(LoadMapData(mapId, worldId, root));
+                }
+            }
+            else if (opcode == "lwt")
+            {
+                // lwt: map terrain data (eqq.nmc handler)
+                // field 2 = lwt.lws.lwr (map description, sub-field 6 = mapId long)
+                // field 6 = RepeatedField<llk> cell entries
+                var payload = ExtractPayload(data);
+                if (payload != null)
+                {
+                    var cellEntries = PbRepeated(payload, 6);
+                    Log($"  lwt: {cellEntries.Count} cell entries ({data.Length}b)");
+
+                    // Extract mapId — try field 2.6 (lws.lwr.mapId) first,
+                    // fallback to using the character's known mapId from world.db
+                    long mapId = 0;
+                    var mapDesc = PbField(payload, 2);
+                    if (mapDesc != null)
+                    {
+                        mapId = PbVarFieldLong(mapDesc, 6);
+                        Log($"  lwt field2: {mapDesc.Length}b, field2.6 mapId={mapId}");
+                    }
+                    else
+                    {
+                        Log($"  lwt: no field 2 (map description)");
+                    }
+
+                    // Fallback: use _currentMapId if already set by jru, or character's mapId
+                    if (mapId <= 0 && _currentMapId > 0) mapId = _currentMapId;
+                    if (mapId <= 0) mapId = 191104002; // test character default
+
+                    int worldId = WorldIdFromMapId(mapId);
+                    int mx = MapXFromMapId(mapId);
+                    int my = MapYFromMapId(mapId);
+                    Log($"  lwt → map {mapId} (world={worldId} x={mx} y={my})");
+                    _currentMapId = mapId;
+                    if (!_mapLoading)
+                        StartCoroutine(LoadMapData(mapId, worldId, root));
+
+                    // Parse cell data
+                    foreach (var cellBytes in cellEntries)
+                    {
+                        int cellNum = PbVarField(cellBytes, 1);
+                        if (_mapCells != null && cellNum >= 0 && cellNum < _mapCells.Length)
+                        {
+                            var attrs = PbRepeated(cellBytes, 5);
+                            foreach (var attr in attrs)
+                            {
+                                int attrType = PbVarField(attr, 1);
+                                int attrVal = PbVarField(attr, 2);
+                            }
+                        }
+                    }
                 }
             }
             else if (opcode == "kub")
@@ -3113,7 +3558,48 @@ public partial class WebGLProbe : MonoBehaviour
                 // kub: character characteristics (ConnectionProtocol.BuildCharacteristics)
                 var payload = ExtractPayload(data);
                 if (payload != null)
+                {
                     Log($"  kub: characteristics ({data.Length}b)");
+                    try
+                    {
+                        var body = PbField(payload, 2);
+                        if (body != null)
+                        {
+                            int currentHp = 55, maxHp = 55, ap = 6, mp = 3, shield = 0, ip = 1;
+                            var entries = PbRepeated(body, 11);
+                            foreach (var entry in entries)
+                            {
+                                int id = PbVarField(entry, 1);
+                                if (id == 0) // LifePoints
+                                {
+                                    var f4 = PbField(entry, 4);
+                                    if (f4 != null) { maxHp = PbVarField(f4, 2); currentHp = maxHp; }
+                                }
+                                else if (id == 1) // ActionPoints
+                                {
+                                    var f5 = PbField(entry, 5);
+                                    if (f5 != null) { ap = PbVarField(f5, 1) + PbVarField(f5, 5); }
+                                }
+                                else if (id == 23) // MovementPoints
+                                {
+                                    var f5 = PbField(entry, 5);
+                                    if (f5 != null) { mp = PbVarField(f5, 1) + PbVarField(f5, 5); }
+                                }
+                                else if (id == 26) // Summons (Invocations)
+                                {
+                                    var f4 = PbField(entry, 4);
+                                    if (f4 != null) { ip = PbVarField(f4, 2) + PbVarField(f4, 7); }
+                                }
+                            }
+                            UpdateCharacterInfoStats(currentHp, maxHp, ap, mp, shield, ip);
+                            Log($"  [HUD] kub applied: HP={currentHp}/{maxHp}, AP={ap}, MP={mp}, Shield={shield}, IP={ip}");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Log($"  kub parse error: {ex.Message}");
+                    }
+                }
             }
             else if (opcode == "jss")
             {
@@ -3121,22 +3607,1640 @@ public partial class WebGLProbe : MonoBehaviour
                 var payload = ExtractPayload(data);
                 if (payload != null)
                 {
-                    var actors = PbRepeated(payload, 1);
-                    Log($"  jss: {actors.Count} actors on map");
+                    ClearWorldActors();
+                    var players = PbRepeated(payload, 5);
+                    var others = PbRepeated(payload, 1);
+                    Log($"  jss: {players.Count} players, {others.Count} other actors on map");
+                    foreach (var p in players) ProcessActorBlock(p);
+                    foreach (var o in others) ProcessActorBlock(o);
+                }
+            }
+            else if (opcode == "jsn")
+            {
+                // jsn: actor changed / refreshed on map
+                var payload = ExtractPayload(data);
+                if (payload != null)
+                {
+                    var actorBytes = PbField(payload, 1);
+                    if (actorBytes != null) ProcessActorBlock(actorBytes);
+                }
+            }
+            else if (opcode == "lva")
+            {
+                // lva: all actors for map sent by server
+                Log("  lva: all map actors received and placed on map");
+            }
+            else if (opcode == "ioc")
+            {
+                // ioc: npc dialog session open (ConnectionProtocol.BuildNpcDialog)
+                Log("  [NPC] Dialog session opened (ioc)");
+                OpenNpcDialog();
+            }
+            else if (opcode == "ios")
+            {
+                // ios: npc question and replies (ConnectionProtocol.BuildNpcQuestion)
+                var payload = ExtractPayload(data);
+                Log($"  [NPC] Received dialog question (ios, {payload?.Length ?? 0} bytes)");
+                HandleNpcQuestion(payload);
+            }
+            else if (opcode == "kld")
+            {
+                // kld: dialog closed by server (ConnectionProtocol.BuildDialogClosed)
+                Log("  [NPC] Dialog closed by server (kld)");
+                CloseNpcDialog();
+            }
+            else if (opcode == "hms")
+            {
+                // hms: character known spells (ConnectionProtocol.BuildSpellList)
+                var payload = ExtractPayload(data);
+                if (payload != null)
+                {
+                    _characterSpells.Clear();
+                    var list = PbRepeated(payload, 1);
+                    foreach (var sBytes in list)
+                    {
+                        int grade = PbVarField(sBytes, 1);
+                        int id = PbVarField(sBytes, 3);
+                        if (id > 0)
+                        {
+                            _characterSpells.Add(new SpellEntry { id = id, grade = grade });
+                        }
+                    }
+                    Log($"  [Spells] Received {_characterSpells.Count} spells (hms)");
+                    UpdateActionBarSpells();
+                }
+            }
+            else if (opcode == "kti")
+            {
+                // kti: chat line from server (ConnectionProtocol.BuildChatLine)
+                var payload = ExtractPayload(data);
+                if (payload != null)
+                {
+                    string timeStr = PbStr(payload, 3) ?? "";
+                    string speaker = PbStr(payload, 4) ?? "Player";
+                    string text = PbStr(payload, 7) ?? "";
+                    int channel = PbVarField(payload, 9);
+                    Log($"  [Chat] ({channel}) {speaker}: {text}");
+                    AppendChatMessage(speaker, text, channel, timeStr);
                 }
             }
             else if (opcode == "kva")
             {
                 // kva: character selected confirmation — triggers world entry
-                // From WorldEntry.SendAfterCharacterAsync — this is the first message after kvw
+                // Original: fpm closes auth screens, MapDisplayService takes over rendering
                 Log($"  kva: character confirmed, world entry starting");
                 _currentScreen = "World";
+
+                // Hide auth UI so the 3D map is visible behind
+                // In the original, fpm.bhnl() (Disable) closes all auth panels
+                if (_uiRoot != null)
+                {
+                    _uiRoot.style.display = DisplayStyle.None;
+                    Log($"  UI hidden for world view");
+                }
             }
             else if (opcode != null)
             {
                 Log($"  Game: {opcode} ({data.Length}b)");
             }
         }
+    }
+
+    // ── Map Loading — loads MapMetadata from Content/Map/Data bundles ──
+
+    IEnumerator LoadMapData(long mapId, int worldId, VisualElement root)
+    {
+        _mapLoading = true;
+        Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.zmy(mapId);
+        string baseUrl = Application.absoluteURL;
+        if (string.IsNullOrEmpty(baseUrl) || !baseUrl.StartsWith("http"))
+            baseUrl = "http://localhost:3000/";
+        else
+        {
+            int slashAfterProtocol = baseUrl.IndexOf('/', 8);
+            if (slashAfterProtocol >= 0)
+            {
+                int lastSlash = baseUrl.LastIndexOf('/');
+                baseUrl = baseUrl.Substring(0, lastSlash + 1);
+            }
+            else
+            {
+                baseUrl += "/";
+            }
+        }
+
+        // THIN LOADER: all heavy lifting done offline by Python (compose_map_atlas.py)
+        // Downloads: 1 render JSON + up to 3 pre-composed atlas PNGs
+        string composedBase = $"{baseUrl}assets/Map/Composed/{mapId}";
+
+        // 1. Download pre-computed render data (vertices, UVs, colors)
+        var renderReq = UnityEngine.Networking.UnityWebRequest.Get($"{composedBase}_render.json");
+        yield return renderReq.SendWebRequest();
+        if (renderReq.result != UnityEngine.Networking.UnityWebRequest.Result.Success)
+        {
+            Err($"[Map] No composed data for {mapId}: {renderReq.error}");
+            _mapLoading = false;
+            yield break;
+        }
+        string renderJson = renderReq.downloadHandler.text;
+        Log($"[Map] Render data: {renderJson.Length} chars");
+
+        // 2. Download pre-composed atlas PNGs (parallel would be nice but sequential is fine)
+        string[] layerKeys = { "background", "sortable", "foreground" };
+        string[] layerSuffixes = { "bg", "sort", "fg" };
+        var atlasTextures = new Texture2D[3];
+
+        for (int i = 0; i < 3; i++)
+        {
+            var texReq = UnityEngine.Networking.UnityWebRequestTexture.GetTexture($"{composedBase}_{layerSuffixes[i]}.png");
+            yield return texReq.SendWebRequest();
+            if (texReq.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                atlasTextures[i] = UnityEngine.Networking.DownloadHandlerTexture.GetContent(texReq);
+        }
+
+        int atlasCount = 0;
+        foreach (var t in atlasTextures) if (t != null) atlasCount++;
+        Log($"[Map] Atlas textures: {atlasCount}/3 loaded");
+
+        // 3. Build mesh from pre-computed data — no extraction, no packing, just upload to GPU
+        yield return StartCoroutine(BuildMapFromComposed(renderJson, layerKeys, atlasTextures));
+
+        MountInGameHud(root);
+
+        _mapLoading = false;
+    }
+
+    // Map mesh rendering objects
+    GameObject _mapMeshGO;
+    MeshFilter _mapMeshFilter;
+    MeshRenderer _mapMeshRenderer;
+
+    bool _showGrid = true;
+    GameObject _gridGO;
+    GameObject _hoverCellGO;
+    MeshFilter _hoverFilter;
+    MeshRenderer _hoverRenderer;
+    int _hoveredCellId = -1;
+    GameObject _playerEntityGO;
+    int _playerCellId = -1;
+    bool _isWalking = false;
+    Coroutine _walkCoroutine;
+
+    [Serializable]
+    sealed class ComposedCellEntry
+    {
+        public int n;
+        public int m;
+        public int l;
+        public int f;
+        public int s;
+        public int a;
+    }
+
+    [Serializable]
+    sealed class ComposedMapData
+    {
+        public int schemaVersion;
+        public long mapId;
+        public int cells;
+        public string geometryMode;
+        public ComposedCellEntry[] cellData;
+        public ComposedMapLayer background;
+        public ComposedMapLayer sortable;
+        public ComposedMapLayer foreground;
+    }
+
+    public static class IsometricGrid
+    {
+        public const int TotalCells = 560;
+        public const float TileFullWidth = 86f;
+        public const float TileHalfWidth = 43f;
+        public const float TileFullHeight = 43f;
+        public const float TileQuarter = 21.5f;
+
+        public static void EnsureTable() { }
+
+        // Delegated to official oh.own(x, y) from decompiled Core.dll (TypeDefIndex: 460)
+        public static int CoordsToCellId(int x, int y) => oh.own(x, y);
+
+        // Delegated to official oh.owm(cellId) from decompiled Core.dll (TypeDefIndex: 460)
+        public static Vector2Int CellIdToCoords(int cellId) => oh.owm(cellId);
+
+        public static bool IsBorderCell(int cellId)
+        {
+            if (cellId < 0 || cellId >= TotalCells) return false;
+            var c = CellIdToCoords(cellId);
+            return c.x <= 0 || c.x >= 33 || c.y <= -19 || c.y >= 14 || (cellId % 28 == 0) || (cellId % 28 == 27);
+        }
+
+        public static int GetDirection(int fromCell, int toCell)
+        {
+            var c1 = CellIdToCoords(fromCell);
+            var c2 = CellIdToCoords(toCell);
+            int dx = c2.x - c1.x;
+            int dy = c2.y - c1.y;
+            if (dx == -dy) return dx > 0 ? 2 : 6;
+            if (dx == dy) return dx > 0 ? 0 : 4;
+            if (dx > 0 && dy == 0) return 1;
+            if (dx == 0 && dy < 0) return 3;
+            if (dx < 0 && dy == 0) return 5;
+            if (dx == 0 && dy > 0) return 7;
+            return 1;
+        }
+
+        public static Vector2 CellIdToWorldPos(int cellId)
+        {
+            var coords = CellIdToCoords(cellId);
+            return new Vector2((coords.x + coords.y) * TileHalfWidth, (coords.x - coords.y) * TileQuarter);
+        }
+
+        public static Vector2Int WorldPosToCoords(Vector2 worldPos)
+        {
+            float xf = (worldPos.x / TileFullWidth) + (worldPos.y / TileFullHeight);
+            float yf = (worldPos.x / TileFullWidth) - (worldPos.y / TileFullHeight);
+            return new Vector2Int(Mathf.RoundToInt(xf), Mathf.RoundToInt(yf));
+        }
+
+        public static int WorldPosToCellId(Vector2 worldPos)
+        {
+            var coords = WorldPosToCoords(worldPos);
+            return CoordsToCellId(coords.x, coords.y);
+        }
+
+        public static int ScreenPosToCellId(Vector2 screenPos, Camera cam)
+        {
+            if (cam == null) return -1;
+            Vector3 wp = cam.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, -cam.transform.position.z));
+            return WorldPosToCellId(new Vector2(wp.x, wp.y));
+        }
+
+        // Delegated to official elf.lmu (A* Pathfinder from decompiled Core.dll, TypeDefIndex: 7126)
+        public static List<int> FindPath(int startCellId, int targetCellId, CellData[] cells)
+        {
+            if (cells == null || startCellId < 0 || startCellId >= cells.Length || targetCellId < 0 || targetCellId >= cells.Length)
+                return null;
+            if (!cells[targetCellId].mov)
+                return null;
+            if (startCellId == targetCellId)
+                return new List<int> { startCellId };
+
+            var map = new ReconstructedMapData();
+            for (int i = 0; i < cells.Length; i++)
+            {
+                map.SetCellData(i, cells[i].mov, cells[i].los, cells[i].floor, cells[i].speed);
+            }
+
+            var start = new Jondo.Reconstructed.Movement.MapPoint(startCellId);
+            var target = new Jondo.Reconstructed.Movement.MapPoint(targetCellId);
+            var path = Jondo.Reconstructed.Movement.elf.lmu(map, start, target, true, false);
+            if (path == null || path.dwmh == null || path.dwmh.Count == 0)
+                return null;
+
+            var result = new List<int> { startCellId };
+            foreach (var elem in path.dwmh)
+            {
+                if (elem != null && elem.dwkn != null)
+                    result.Add(elem.dwkn.CellId);
+            }
+            return result;
+        }
+    }
+
+    [Serializable]
+    sealed class ComposedMapLayer
+    {
+        public int count;
+        public float[] positions;
+        public float[] uvs;
+        public int[] colors;
+        public int[] indices;
+    }
+
+    static ComposedMapData ParseComposedMapData(string json)
+    {
+        var data = JsonUtility.FromJson<ComposedMapData>(json);
+        if (data == null || data.schemaVersion != 2)
+            throw new InvalidOperationException("Unsupported composed map schema; regenerate map data with Python");
+        var layers = new[] { data.background, data.sortable, data.foreground };
+        for (int layerIndex = 0; layerIndex < layers.Length; layerIndex++)
+        {
+            var layer = layers[layerIndex];
+            if (layer == null) continue;
+            if (layer.count == 0 && layer.positions == null && layer.uvs == null && layer.colors == null && layer.indices == null)
+            {
+                layers[layerIndex] = null;
+                continue;
+            }
+            if (layer.positions == null || layer.uvs == null || layer.colors == null || layer.indices == null ||
+                layer.positions.Length % 2 != 0 || layer.uvs.Length != layer.positions.Length ||
+                layer.colors.Length != layer.positions.Length * 2 || layer.indices.Length % 3 != 0)
+                throw new InvalidOperationException("Composed map vertex buffers are not aligned");
+            int vertexCount = layer.positions.Length / 2;
+            foreach (var value in layer.positions)
+                if (float.IsNaN(value) || float.IsInfinity(value)) throw new InvalidOperationException("Invalid map position");
+            foreach (var value in layer.uvs)
+                if (float.IsNaN(value) || float.IsInfinity(value)) throw new InvalidOperationException("Invalid map UV");
+            foreach (var color in layer.colors)
+                if (color < byte.MinValue || color > byte.MaxValue) throw new InvalidOperationException("Invalid map color");
+            foreach (var index in layer.indices)
+                if (index < 0 || index >= vertexCount) throw new InvalidOperationException("Map index outside vertex buffer");
+        }
+            data.background = layers[0];
+            data.sortable = layers[1];
+            data.foreground = layers[2];
+        return data;
+    }
+
+    IEnumerator BuildMapFromComposed(string renderJson, string[] layerKeys, Texture2D[] atlasTextures)
+    {
+        ComposedMapData payload = null;
+        try { payload = ParseComposedMapData(renderJson); }
+        catch (Exception exception) { Err($"[Map] Invalid render data: {exception.Message}"); }
+        if (payload == null) yield break;
+        var layers = new[] { payload.background, payload.sortable, payload.foreground };
+        for (int layerIndex = 0; layerIndex < layers.Length; layerIndex++)
+        {
+            if (layers[layerIndex] != null && layers[layerIndex].indices.Length > 0 && atlasTextures[layerIndex] == null)
+            {
+                Err($"[Map] Missing atlas for {layerKeys[layerIndex]}");
+                yield break;
+            }
+        }
+        if (_mapMeshGO != null) Destroy(_mapMeshGO);
+        _mapMeshGO = new GameObject("__MapMesh");
+        _mapMeshFilter = _mapMeshGO.AddComponent<MeshFilter>();
+        _mapMeshRenderer = _mapMeshGO.AddComponent<MeshRenderer>();
+
+        var shader = Shader.Find("Sprites/Default") ?? Shader.Find("Unlit/Transparent");
+
+        var allVertices = new List<Vector3>();
+        var allUVs = new List<Vector2>();
+        var allColors = new List<Color32>();
+        var allTriangles = new List<List<int>>();
+        var materials = new List<Material>();
+
+        for (int li = 0; li < layerKeys.Length; li++)
+        {
+            var layer = layers[li];
+            if (layer == null || atlasTextures[li] == null)
+            {
+                allTriangles.Add(new List<int>());
+                materials.Add(new Material(shader));
+                continue;
+            }
+
+            var mat = new Material(shader);
+            mat.mainTexture = atlasTextures[li];
+            mat.renderQueue = 3000 + li;
+            materials.Add(mat);
+
+            var layerTriangles = new List<int>();
+            int vertexStart = allVertices.Count;
+            for (int vertexIndex = 0; vertexIndex < layer.positions.Length / 2; vertexIndex++)
+            {
+                int position = vertexIndex * 2;
+                int color = vertexIndex * 4;
+                allVertices.Add(new Vector3(layer.positions[position], layer.positions[position + 1], 0));
+                allUVs.Add(new Vector2(layer.uvs[position], layer.uvs[position + 1]));
+                allColors.Add(new Color32((byte)layer.colors[color], (byte)layer.colors[color + 1],
+                    (byte)layer.colors[color + 2], (byte)layer.colors[color + 3]));
+            }
+            foreach (var index in layer.indices) layerTriangles.Add(vertexStart + index);
+            allTriangles.Add(layerTriangles);
+            Log($"[Map] {layerKeys[li]}: {layer.positions.Length / 2} vertices, {layerTriangles.Count / 3} triangles");
+            yield return null;
+        }
+
+        var mesh = new Mesh();
+        mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+        mesh.SetVertices(allVertices);
+        mesh.SetUVs(0, allUVs);
+        mesh.SetColors(allColors);
+        mesh.subMeshCount = allTriangles.Count;
+        for (int i = 0; i < allTriangles.Count; i++)
+            mesh.SetTriangles(allTriangles[i], i);
+
+        _mapMeshFilter.mesh = mesh;
+        _mapMeshRenderer.materials = materials.ToArray();
+
+        // No scaling — element transforms (m31,m32) are already in map world units
+        // Map bounds: X [-580.5, 623.5], Y [-440.75, 440.75] (from oh/hdl constants in dump.cs)
+        // Camera ortho size 500 shows [-500,500] vertical range — map fits within this
+        _mapMeshGO.transform.localScale = Vector3.one;
+        _mapMeshGO.transform.position = Vector3.zero;
+
+        // Configure camera for map view (original: MainCameraOrthographicSize = 500)
+        // Map center: midpoint of bounds [-580.5, 623.5] x [-440.75, 440.75] = (21.5, 0)
+        var cam = GameObject.Find("__WebGLCam")?.GetComponent<Camera>();
+        if (cam != null)
+        {
+            cam.orthographic = true;
+            cam.orthographicSize = 500;
+            cam.transform.position = new Vector3(21.5f, 0f, -10f);
+            cam.transform.rotation = Quaternion.identity;
+            cam.cullingMask = -1; // render all layers (was 0 = nothing)
+            cam.depth = 0; // default depth (was -100)
+            Log($"[Map] Camera: ortho=500, pos=(21.5, 0, -10), culling=all");
+        }
+        else
+        {
+            Err("[Map] Camera __WebGLCam not found");
+        }
+
+        Log($"[Map] Mesh built: {allVertices.Count} vertices, {allTriangles.Count} submeshes, {materials.Count} materials");
+
+        if (payload.cellData != null && payload.cellData.Length > 0)
+        {
+            _mapCells = new CellData[payload.cellData.Length];
+            int walkable = 0;
+            for (int i = 0; i < payload.cellData.Length; i++)
+            {
+                var ce = payload.cellData[i];
+                _mapCells[i] = new CellData
+                {
+                    cellNumber = (uint)ce.n,
+                    mov = ce.m == 1,
+                    los = ce.l == 1,
+                    floor = ce.f,
+                    speed = ce.s,
+                    arrow = ce.a
+                };
+                if (ce.m == 1) walkable++;
+            }
+            Log($"[Map] {_mapCells.Length} cells loaded ({walkable} walkable)");
+            BuildGridOverlay();
+            EnsurePlayerEntity();
+            MountInGameHud();
+        }
+    }
+
+    void BuildGridOverlay()
+    {
+        if (_gridGO != null) Destroy(_gridGO);
+        _gridGO = new GameObject("__MapGrid");
+        var filter = _gridGO.AddComponent<MeshFilter>();
+        var renderer = _gridGO.AddComponent<MeshRenderer>();
+
+        var shader = Shader.Find("Sprites/Default") ?? Shader.Find("Unlit/Transparent");
+        var mat = new Material(shader);
+        mat.renderQueue = 3001; // Between background and sortable
+        renderer.material = mat;
+
+        IsometricGrid.EnsureTable();
+        var vertices = new List<Vector3>();
+        var colors = new List<Color32>();
+        var indices = new List<int>();
+
+        Color32 walkableCol = new Color32(255, 255, 255, 30);
+        Color32 blockedCol = new Color32(230, 60, 60, 50);
+
+        for (int c = 0; c < 560; c++)
+        {
+            Vector2 center = IsometricGrid.CellIdToWorldPos(c);
+            bool isWalkable = (_mapCells != null && c < _mapCells.Length) ? _mapCells[c].mov : true;
+            Color32 col = isWalkable ? walkableCol : blockedCol;
+
+            int vStart = vertices.Count;
+            vertices.Add(new Vector3(center.x, center.y + 21.5f, 0));
+            vertices.Add(new Vector3(center.x + 43.0f, center.y, 0));
+            vertices.Add(new Vector3(center.x, center.y - 21.5f, 0));
+            vertices.Add(new Vector3(center.x - 43.0f, center.y, 0));
+
+            for (int k = 0; k < 4; k++) colors.Add(col);
+
+            indices.Add(vStart);     indices.Add(vStart + 1);
+            indices.Add(vStart + 1); indices.Add(vStart + 2);
+            indices.Add(vStart + 2); indices.Add(vStart + 3);
+            indices.Add(vStart + 3); indices.Add(vStart);
+        }
+
+        var mesh = new Mesh();
+        mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+        mesh.SetVertices(vertices);
+        mesh.SetColors(colors);
+        mesh.SetIndices(indices.ToArray(), MeshTopology.Lines, 0);
+        filter.mesh = mesh;
+        _gridGO.SetActive(_showGrid);
+
+        EnsureHoverIndicator();
+    }
+
+    void EnsureHoverIndicator()
+    {
+        if (_hoverCellGO != null) return;
+        _hoverCellGO = new GameObject("__HoverCell");
+        _hoverFilter = _hoverCellGO.AddComponent<MeshFilter>();
+        _hoverRenderer = _hoverCellGO.AddComponent<MeshRenderer>();
+
+        var shader = Shader.Find("Sprites/Default") ?? Shader.Find("Unlit/Transparent");
+        var mat = new Material(shader);
+        mat.renderQueue = 3004;
+        _hoverRenderer.material = mat;
+
+        var mesh = new Mesh();
+        var vertices = new Vector3[]
+        {
+            new Vector3(0, 21.5f, 0),
+            new Vector3(43.0f, 0, 0),
+            new Vector3(0, -21.5f, 0),
+            new Vector3(-43.0f, 0, 0)
+        };
+        var triangles = new int[] { 0, 1, 2, 0, 2, 3 };
+        mesh.vertices = vertices;
+        mesh.triangles = triangles;
+        _hoverFilter.mesh = mesh;
+        _hoverCellGO.SetActive(false);
+    }
+
+    void UpdateHoverHighlight(int cellId)
+    {
+        EnsureHoverIndicator();
+        if (cellId < 0 || cellId >= 560)
+        {
+            _hoverCellGO.SetActive(false);
+            return;
+        }
+
+        Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
+        _hoverCellGO.transform.position = new Vector3(pos.x, pos.y, 0);
+
+        bool isWalkable = (_mapCells != null && cellId < _mapCells.Length) ? _mapCells[cellId].mov : false;
+        Color col = isWalkable ? new Color(0.2f, 1f, 0.4f, 0.4f) : new Color(1f, 0.2f, 0.2f, 0.4f);
+
+        var colors = new Color[4];
+        for (int i = 0; i < 4; i++) colors[i] = col;
+        _hoverFilter.mesh.colors = colors;
+        _hoverCellGO.SetActive(true);
+    }
+
+    void EnsurePlayerEntity()
+    {
+        if (_playerEntityGO != null) return;
+        _playerEntityGO = new GameObject("__PlayerEntity");
+        var anim2d = _playerEntityGO.AddComponent<Jondo.Reconstructed.Animation.Animator2D>();
+        var entityAnim = new Jondo.Reconstructed.Animation.EntityAnimator(anim2d);
+        var filter = _playerEntityGO.GetComponent<MeshFilter>() ?? _playerEntityGO.AddComponent<MeshFilter>();
+        var renderer = _playerEntityGO.GetComponent<MeshRenderer>() ?? _playerEntityGO.AddComponent<MeshRenderer>();
+
+        var shader = Shader.Find("Sprites/Default") ?? Shader.Find("Unlit/Transparent");
+        var mat = new Material(shader);
+        mat.renderQueue = 3005;
+        renderer.material = mat;
+
+        // Player official character sprite / skin
+        var mesh = new Mesh();
+        float halfW = 20f, height = 55f;
+        mesh.vertices = new Vector3[]
+        {
+            new Vector3(-halfW, 0, 0),
+            new Vector3(halfW, 0, 0),
+            new Vector3(halfW, height, 0),
+            new Vector3(-halfW, height, 0)
+        };
+        mesh.uv = new Vector2[]
+        {
+            new Vector2(0f, 0f),
+            new Vector2(1f, 0f),
+            new Vector2(1f, 1f),
+            new Vector2(0f, 1f)
+        };
+        mesh.triangles = new int[] { 0, 1, 2, 0, 2, 3 };
+        var skinTex = Resources.Load<Texture2D>("Characters/skin_10")
+            ?? Resources.Load<Texture2D>("Characters/skin_80");
+        if (skinTex != null)
+        {
+            mat.mainTexture = skinTex;
+            mat.color = Color.white;
+        }
+        else
+        {
+            Color32 actorColor = new Color32(100, 255, 120, 220);
+            mesh.colors32 = new Color32[] { actorColor, actorColor, actorColor, actorColor };
+        }
+        filter.mesh = mesh;
+
+        // Start cell: 280 or first walkable
+        if (_playerCellId < 0)
+        {
+            _playerCellId = 280;
+            if (_mapCells != null && _playerCellId < _mapCells.Length && !_mapCells[_playerCellId].mov)
+            {
+                for (int i = 0; i < _mapCells.Length; i++)
+                {
+                    if (_mapCells[i].mov) { _playerCellId = i; break; }
+                }
+            }
+        }
+
+        Vector2 startPos = IsometricGrid.CellIdToWorldPos(_playerCellId);
+        _playerEntityGO.transform.position = new Vector3(startPos.x, startPos.y, 0);
+        Log($"[Entity] Player spawned on cell {_playerCellId} at ({startPos.x:F1}, {startPos.y:F1})");
+
+        // Load official character skin texture asynchronously
+        StartCoroutine(LoadPlayerSkinCoroutine(10));
+    }
+
+    IEnumerator LoadPlayerSkinCoroutine(int skinId)
+    {
+        string baseUrl = Application.absoluteURL;
+        int lastSlash = baseUrl.LastIndexOf('/');
+        if (lastSlash > 0) baseUrl = baseUrl.Substring(0, lastSlash + 1);
+        string skinUrl = $"{baseUrl}assets/Characters/Composed/skin_{skinId}.png";
+
+        using (var req = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(skinUrl))
+        {
+            yield return req.SendWebRequest();
+            if (req.result == UnityEngine.Networking.UnityWebRequest.Result.Success && _playerEntityGO != null)
+            {
+                var tex = UnityEngine.Networking.DownloadHandlerTexture.GetContent(req);
+                if (tex != null)
+                {
+                    tex.filterMode = FilterMode.Bilinear;
+                    var renderer = _playerEntityGO.GetComponent<MeshRenderer>();
+                    if (renderer != null && renderer.material != null)
+                    {
+                        renderer.material.mainTexture = tex;
+                    }
+
+                    var filter = _playerEntityGO.GetComponent<MeshFilter>();
+                    if (filter != null)
+                    {
+                        var charMesh = new Mesh();
+                        float halfW = 20f;
+                        float height = 55f;
+                        charMesh.vertices = new Vector3[]
+                        {
+                            new Vector3(-halfW, 0, 0),
+                            new Vector3(halfW, 0, 0),
+                            new Vector3(halfW, height, 0),
+                            new Vector3(-halfW, height, 0)
+                        };
+                        charMesh.uv = new Vector2[]
+                        {
+                            new Vector2(0f, 0f),
+                            new Vector2(1f, 0f),
+                            new Vector2(1f, 1f),
+                            new Vector2(0f, 1f)
+                        };
+                        charMesh.colors32 = new Color32[]
+                        {
+                            new Color32(255, 255, 255, 255),
+                            new Color32(255, 255, 255, 255),
+                            new Color32(255, 255, 255, 255),
+                            new Color32(255, 255, 255, 255)
+                        };
+                        charMesh.triangles = new int[] { 0, 1, 2, 0, 2, 3 };
+                        filter.mesh = charMesh;
+                        Log($"[Entity] Player skin {skinId} texture applied ({tex.width}x{tex.height})");
+                    }
+                }
+            }
+        }
+    }
+
+    // ── World Actors & Chat Handling ──
+    Dictionary<long, GameObject> _worldActors = new Dictionary<long, GameObject>();
+
+    // ── NPC Dialog & Interaction System ──
+    Dictionary<int, long> _actorCellMap = new Dictionary<int, long>();
+    Dictionary<long, string> _actorNames = new Dictionary<long, string>();
+    VisualElement _npcDialogRoot;
+    long _activeNpcActorId;
+
+    public static byte[] BuildIovNpcActionPayload(int actionId, long mapId, long npcContextualId)
+    {
+        var bytes = new List<byte>();
+        // Field 1: actionId (wireType 0: 0x08)
+        bytes.Add(0x08);
+        int a = actionId;
+        while (a > 0x7F) { bytes.Add((byte)((a & 0x7F) | 0x80)); a >>= 7; }
+        bytes.Add((byte)(a & 0x7F));
+
+        // Field 2: mapId (wireType 0: 0x10)
+        bytes.Add(0x10);
+        long m = mapId;
+        while ((ulong)m > 0x7F) { bytes.Add((byte)(((ulong)m & 0x7F) | 0x80)); m = (long)((ulong)m >> 7); }
+        bytes.Add((byte)((ulong)m & 0x7F));
+
+        // Field 3: npcContextualId (wireType 0: 0x18)
+        bytes.Add(0x18);
+        long n = npcContextualId;
+        while ((ulong)n > 0x7F) { bytes.Add((byte)(((ulong)n & 0x7F) | 0x80)); n = (long)((ulong)n >> 7); }
+        bytes.Add((byte)((ulong)n & 0x7F));
+
+        return bytes.ToArray();
+    }
+
+    public static byte[] BuildIoyNpcReplyPayload(int replyId)
+    {
+        var bytes = new List<byte>();
+        bytes.Add(0x08);
+        int r = replyId;
+        while (r > 0x7F) { bytes.Add((byte)((r & 0x7F) | 0x80)); r >>= 7; }
+        bytes.Add((byte)(r & 0x7F));
+        return bytes.ToArray();
+    }
+
+    public void SendNpcAction(int actionId, long mapId, long npcContextualId)
+    {
+        if (_wsConn == null) return;
+        _activeNpcActorId = npcContextualId;
+        var payload = BuildIovNpcActionPayload(actionId, mapId, npcContextualId);
+        var frame = WebSocketBridge.BuildProtobufFrame("iov", payload);
+        if (frame != null)
+        {
+            WebSocketBridge.Send(_wsConn, frame);
+            Log($"[NPC] Sent iov interaction to actor {npcContextualId} on map {mapId}");
+        }
+    }
+
+    public void SendNpcReply(int replyId)
+    {
+        if (_wsConn == null) return;
+        var payload = BuildIoyNpcReplyPayload(replyId);
+        var frame = WebSocketBridge.BuildProtobufFrame("ioy", payload);
+        if (frame != null)
+        {
+            WebSocketBridge.Send(_wsConn, frame);
+            Log($"[NPC] Sent ioy reply {replyId}");
+        }
+    }
+
+    // ── Inventory & Equipment Storage UI ──
+    VisualElement _inventoryRoot;
+
+    // ── Spells & Grimoire System (hms, SpellBaseUi) ──
+    public struct SpellEntry
+    {
+        public int id;
+        public int grade;
+    }
+    List<SpellEntry> _characterSpells = new List<SpellEntry>();
+    VisualElement _spellsRoot;
+
+    void UpdateActionBarSpells()
+    {
+        if (_actionBarRoot == null) return;
+        var grid = _actionBarRoot.Q("gd_spellitemotes") ?? _actionBarRoot.Q("_gd_spellitemotes");
+        if (grid != null)
+        {
+            int slotIdx = 0;
+            foreach (var sp in _characterSpells)
+            {
+                var slot = grid.Q($"slot_{slotIdx}") ?? (grid.childCount > slotIdx ? grid[slotIdx] : null);
+                if (slot != null)
+                {
+                    var lbl = slot.Q<Label>() ?? new Label();
+                    lbl.text = $"S{sp.id}";
+                    lbl.style.fontSize = 10;
+                    lbl.style.unityTextAlign = TextAnchor.MiddleCenter;
+                    if (!slot.Contains(lbl)) slot.Add(lbl);
+                }
+                slotIdx++;
+                if (slotIdx >= 10) break;
+            }
+        }
+    }
+
+    public void ToggleSpells()
+    {
+        if (_spellsRoot != null) CloseSpells();
+        else OpenSpells();
+    }
+
+    public void OpenSpells()
+    {
+        if (_spellsRoot != null) return;
+        Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayGrimoireSound(true);
+        VisualElement root = _uiRoot;
+        if (root == null)
+        {
+            var uidoc = FindFirstObjectByType<UIDocument>() ?? GetComponent<UIDocument>();
+            if (uidoc != null) root = uidoc.rootVisualElement;
+        }
+        if (root == null) return;
+
+        VisualTreeAsset spAsset = null;
+        if (_loadedBundles != null)
+        {
+            foreach (var kv in _loadedBundles)
+            {
+                if (kv.Value == null) continue;
+                spAsset = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/grimoire/spellbase.uxml")
+                    ?? kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/grimoire/spellbase.uxml.asset");
+                if (spAsset != null) break;
+            }
+        }
+
+        if (spAsset != null)
+        {
+            _spellsRoot = spAsset.CloneTree();
+            _spellsRoot.name = "SpellBase_Root";
+            _spellsRoot.style.position = Position.Absolute;
+            _spellsRoot.style.left = Length.Percent(20);
+            _spellsRoot.style.top = Length.Percent(15);
+            _spellsRoot.style.width = Length.Percent(60);
+            _spellsRoot.style.height = Length.Percent(70);
+            root.Add(_spellsRoot);
+            ApplyGeneratedMethods("SpellBaseUi", _spellsRoot);
+
+            var btnClose = _spellsRoot.Q("btn_close");
+            if (btnClose != null)
+            {
+                btnClose.RegisterCallback<ClickEvent>(evt => CloseSpells());
+            }
+            Log("[Grimoire] SpellBaseUi mounted on UI");
+        }
+        else
+        {
+            Log("[Grimoire] spellBase.uxml not found in loaded bundles");
+        }
+    }
+
+    public void CloseSpells()
+    {
+        if (_spellsRoot != null)
+        {
+            Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayGrimoireSound(false);
+            _spellsRoot.RemoveFromHierarchy();
+            _spellsRoot = null;
+            Log("[Grimoire] SpellBaseUi closed");
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        if (_inventoryRoot != null)
+        {
+            CloseInventory();
+        }
+        else
+        {
+            OpenInventory();
+        }
+    }
+
+    public void OpenInventory()
+    {
+        if (_inventoryRoot != null) return;
+        Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayInventorySound(true);
+        VisualElement root = _uiRoot;
+        if (root == null)
+        {
+            var uidoc = FindFirstObjectByType<UIDocument>() ?? GetComponent<UIDocument>();
+            if (uidoc != null) root = uidoc.rootVisualElement;
+        }
+        if (root == null) return;
+
+        VisualTreeAsset invAsset = null;
+        if (_loadedBundles != null)
+        {
+            foreach (var kv in _loadedBundles)
+            {
+                if (kv.Value == null) continue;
+                invAsset = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/inventory/equipmentstorageui.uxml")
+                    ?? kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/inventory/equipmentstorageui.uxml.asset");
+                if (invAsset != null) break;
+            }
+        }
+
+        if (invAsset != null)
+        {
+            _inventoryRoot = invAsset.CloneTree();
+            _inventoryRoot.name = "EquipmentStorage_Root";
+            _inventoryRoot.style.position = Position.Absolute;
+            _inventoryRoot.style.left = Length.Percent(20);
+            _inventoryRoot.style.top = Length.Percent(15);
+            _inventoryRoot.style.width = Length.Percent(60);
+            _inventoryRoot.style.height = Length.Percent(70);
+            root.Add(_inventoryRoot);
+            ApplyGeneratedMethods("EquipmentStorageUI", _inventoryRoot);
+
+            var btnClose = _inventoryRoot.Q("btn_close");
+            if (btnClose != null)
+            {
+                btnClose.RegisterCallback<ClickEvent>(evt => CloseInventory());
+            }
+            Log("[Inventory] EquipmentStorageUI mounted on UI");
+        }
+        else
+        {
+            Log("[Inventory] equipmentStorageUi.uxml not found in loaded bundles");
+        }
+    }
+
+    public void CloseInventory()
+    {
+        if (_inventoryRoot != null)
+        {
+            Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayInventorySound(false);
+            _inventoryRoot.RemoveFromHierarchy();
+            _inventoryRoot = null;
+            Log("[Inventory] EquipmentStorageUI closed");
+        }
+    }
+
+    void OpenNpcDialog()
+    {
+        if (_npcDialogRoot != null) return;
+        Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayNpcSound(true);
+        VisualElement root = _uiRoot;
+        if (root == null)
+        {
+            var uidoc = FindFirstObjectByType<UIDocument>() ?? GetComponent<UIDocument>();
+            if (uidoc != null) root = uidoc.rootVisualElement;
+        }
+        if (root == null) return;
+
+        VisualTreeAsset npcAsset = null;
+        if (_loadedBundles != null)
+        {
+            foreach (var kv in _loadedBundles)
+            {
+                if (kv.Value == null) continue;
+                npcAsset = kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/npcdialog/npcdialog.uxml")
+                    ?? kv.Value.LoadAsset<VisualTreeAsset>("assets/ui/npcdialog/npcdialog.uxml.asset");
+                if (npcAsset != null) break;
+            }
+        }
+
+        if (npcAsset != null)
+        {
+            _npcDialogRoot = npcAsset.CloneTree();
+            _npcDialogRoot.name = "NpcDialog_Root";
+            _npcDialogRoot.style.position = Position.Absolute;
+            _npcDialogRoot.style.left = Length.Percent(25);
+            _npcDialogRoot.style.top = Length.Percent(20);
+            _npcDialogRoot.style.width = Length.Percent(50);
+            root.Add(_npcDialogRoot);
+            ApplyGeneratedMethods("NpcDialog", _npcDialogRoot);
+
+            var btnClose = _npcDialogRoot.Q("btn_close");
+            if (btnClose != null)
+            {
+                btnClose.RegisterCallback<ClickEvent>(evt => CloseNpcDialog());
+            }
+
+            if (_actorNames.TryGetValue(_activeNpcActorId, out var npcName))
+            {
+                var lblName = _npcDialogRoot.Q<Label>("lbl_npcName");
+                if (lblName != null) lblName.text = npcName;
+            }
+            Log("[NPC] NpcDialog mounted on UI");
+        }
+        else
+        {
+            Log("[NPC] npcDialog.uxml asset not found in loaded bundles");
+        }
+    }
+
+    void CloseNpcDialog()
+    {
+        if (_npcDialogRoot != null)
+        {
+            Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayNpcSound(false);
+            _npcDialogRoot.RemoveFromHierarchy();
+            _npcDialogRoot = null;
+            Log("[NPC] NpcDialog closed");
+        }
+    }
+
+    void HandleNpcQuestion(byte[] payload)
+    {
+        if (payload == null) return;
+        OpenNpcDialog();
+        if (_npcDialogRoot == null) return;
+
+        int questionId = PbVarField(payload, 1);
+        var replies = PbRepeated(payload, 2);
+
+        var lblText = _npcDialogRoot.Q<Label>("lbl_text");
+        if (lblText != null)
+        {
+            lblText.text = $"NPC Question #{questionId}";
+        }
+
+        var scroll = _npcDialogRoot.Q<ScrollView>("AnswersScroll") ?? _npcDialogRoot.Q<ScrollView>("_AnswersScroll");
+        if (scroll != null)
+        {
+            scroll.Clear();
+            int replyIdx = 1;
+            foreach (var rBytes in replies)
+            {
+                int rId = PbVarField(rBytes, 1);
+                if (rId == 0 && rBytes.Length > 0) rId = (int)rBytes[0];
+                var btn = new Button(() =>
+                {
+                    SendNpcReply(rId);
+                });
+                btn.text = $"• Resposta {replyIdx} (ID: {rId})";
+                btn.style.marginTop = 4;
+                btn.style.marginBottom = 4;
+                btn.style.unityTextAlign = TextAnchor.MiddleLeft;
+                scroll.Add(btn);
+                replyIdx++;
+            }
+        }
+    }
+
+    void ClearWorldActors()
+    {
+        foreach (var kv in _worldActors)
+        {
+            if (kv.Value != null) Destroy(kv.Value);
+        }
+        _worldActors.Clear();
+        _actorCellMap.Clear();
+        _actorNames.Clear();
+        CloseNpcDialog();
+    }
+
+    void ProcessActorBlock(byte[] actorBytes)
+    {
+        if (actorBytes == null || actorBytes.Length == 0) return;
+        var f1 = PbField(actorBytes, 1);
+        int cellId = f1 != null ? PbVarField(f1, 1) : -1;
+        int facing = f1 != null ? PbVarField(f1, 2) : 1;
+        long actorId = PbVarFieldLong(actorBytes, 3);
+
+        string name = "Actor";
+        var f2 = PbField(actorBytes, 2);
+        if (f2 != null)
+        {
+            var f2f1 = PbField(f2, 1);
+            if (f2f1 != null)
+            {
+                var humanoid = PbField(f2f1, 5);
+                if (humanoid != null) name = PbStr(humanoid, 1) ?? name;
+            }
+        }
+
+        Log($"  [Actor] id={actorId} name={name} cell={cellId} facing={facing}");
+        _actorNames[actorId] = name;
+        if (cellId >= 0 && cellId < 560)
+        {
+            _actorCellMap[cellId] = actorId;
+        }
+
+        // Local player update
+        int myCharId = -1;
+        if (_selectedCharIdx >= 0 && _characterList != null && _selectedCharIdx < _characterList.Count)
+            myCharId = _characterList[_selectedCharIdx].id;
+
+        if (actorId == myCharId && cellId >= 0 && cellId < 560)
+        {
+            _playerCellId = cellId;
+            if (_playerEntityGO != null)
+            {
+                Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
+                _playerEntityGO.transform.position = new Vector3(pos.x, pos.y, 0);
+            }
+        }
+        else if (cellId >= 0 && cellId < 560)
+        {
+            SpawnOrUpdateWorldActor(actorId, name, cellId, facing);
+        }
+    }
+
+    void SpawnOrUpdateWorldActor(long actorId, string name, int cellId, int facing)
+    {
+        if (!_worldActors.TryGetValue(actorId, out var actorGO) || actorGO == null)
+        {
+            actorGO = new GameObject($"__Actor_{actorId}_{name}");
+            var anim2d = actorGO.AddComponent<Jondo.Reconstructed.Animation.Animator2D>();
+            var entityAnim = new Jondo.Reconstructed.Animation.EntityAnimator(anim2d);
+            var filter = actorGO.GetComponent<MeshFilter>() ?? actorGO.AddComponent<MeshFilter>();
+            var renderer = actorGO.GetComponent<MeshRenderer>() ?? actorGO.AddComponent<MeshRenderer>();
+            var shader = Shader.Find("Sprites/Default") ?? Shader.Find("Unlit/Transparent");
+            var mat = new Material(shader);
+            mat.renderQueue = 3004;
+            renderer.material = mat;
+
+            var mesh = new Mesh();
+            float halfW = 20f, height = 55f;
+            mesh.vertices = new Vector3[]
+            {
+                new Vector3(-halfW, 0, 0),
+                new Vector3(halfW, 0, 0),
+                new Vector3(halfW, height, 0),
+                new Vector3(-halfW, height, 0)
+            };
+            mesh.uv = new Vector2[]
+            {
+                new Vector2(0f, 0f),
+                new Vector2(1f, 0f),
+                new Vector2(1f, 1f),
+                new Vector2(0f, 1f)
+            };
+            mesh.triangles = new int[] { 0, 1, 2, 0, 2, 3 };
+
+            if (actorId > 0)
+            {
+                var skinTex = Resources.Load<Texture2D>("Characters/skin_10")
+                    ?? Resources.Load<Texture2D>("Characters/skin_80");
+                if (skinTex != null)
+                {
+                    mat.mainTexture = skinTex;
+                    mat.color = Color.white;
+                }
+                else
+                {
+                    Color32 actorColor = new Color32(100, 255, 120, 220);
+                    mesh.colors32 = new Color32[] { actorColor, actorColor, actorColor, actorColor };
+                }
+            }
+            else
+            {
+                Color32 actorColor = new Color32(255, 100, 100, 220);
+                mesh.colors32 = new Color32[] { actorColor, actorColor, actorColor, actorColor };
+            }
+            filter.mesh = mesh;
+
+            _worldActors[actorId] = actorGO;
+        }
+
+        Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
+        actorGO.transform.position = new Vector3(pos.x, pos.y, 0);
+        float sign = (facing == 3 || facing == 4 || facing == 5) ? -1f : 1f;
+        actorGO.transform.localScale = new Vector3(sign, 1f, 1f);
+    }
+
+    public static byte[] BuildKtmChatPayload(string text, int channel = 0)
+    {
+        if (string.IsNullOrEmpty(text)) return null;
+        var bytesList = new List<byte>();
+
+        // Field 2: text (wireType 2: 0x12)
+        var textBytes = System.Text.Encoding.UTF8.GetBytes(text);
+        bytesList.Add(0x12);
+        int tlen = textBytes.Length;
+        while (tlen > 0x7F) { bytesList.Add((byte)((tlen & 0x7F) | 0x80)); tlen >>= 7; }
+        bytesList.Add((byte)(tlen & 0x7F));
+        bytesList.AddRange(textBytes);
+
+        // Field 3: channel (wireType 0: 0x18)
+        if (channel > 0)
+        {
+            bytesList.Add(0x18);
+            int ch = channel;
+            while (ch > 0x7F) { bytesList.Add((byte)((ch & 0x7F) | 0x80)); ch >>= 7; }
+            bytesList.Add((byte)(ch & 0x7F));
+        }
+
+        return bytesList.ToArray();
+    }
+
+    public void SendChatMessage(string text, int channel = 0)
+    {
+        if (string.IsNullOrEmpty(text) || _wsConn == null) return;
+        var ktmPayload = BuildKtmChatPayload(text, channel);
+        if (ktmPayload != null)
+        {
+            var ktmFrame = WebSocketBridge.BuildProtobufFrame("ktm", ktmPayload);
+            if (ktmFrame != null)
+            {
+                WebSocketBridge.Send(_wsConn, ktmFrame);
+                Log($"[Chat] Sent message: {text}");
+            }
+        }
+    }
+
+    void AppendChatMessage(string speaker, string message, int channel, string timeStr = "")
+    {
+        if (_chatRoot == null) return;
+        var listChat = _chatRoot.Q("listChat");
+        if (listChat != null)
+        {
+            var msgLabel = new Label();
+            string color = channel == 0 ? "#ffffff" : channel == 1 ? "#ffff00" : channel == 2 ? "#ff8800" : "#aaccff";
+            msgLabel.text = $"<color={color}>[{speaker}] {message}</color>";
+            msgLabel.style.fontSize = 12;
+            msgLabel.style.whiteSpace = WhiteSpace.Normal;
+            listChat.Add(msgLabel);
+            if (listChat is ScrollView sv)
+            {
+                sv.scrollOffset = new Vector2(0, sv.contentContainer.layout.height);
+            }
+        }
+        Gen_ChatView_OnNewChatMessage(_chatRoot);
+    }
+
+    public static byte[] BuildJrwMovementPayload(long mapId, List<int> path)
+    {
+        if (path == null || path.Count < 2) return null;
+        var bytesList = new List<byte>();
+
+        // Field 1: mapId (varint, tag = (1 << 3) | 0 = 0x08)
+        bytesList.Add(0x08);
+        long m = mapId;
+        while (m > 0x7F) { bytesList.Add((byte)((m & 0x7F) | 0x80)); m >>= 7; }
+        bytesList.Add((byte)(m & 0x7F));
+
+        // Field 2: steps (packed varints, tag = (2 << 3) | 2 = 0x12)
+        var stepsBytes = new List<byte>();
+        for (int i = 1; i < path.Count; i++)
+        {
+            int prevCell = path[i - 1];
+            int currCell = path[i];
+            int facing = IsometricGrid.GetDirection(prevCell, currCell);
+            long step = ((long)facing << 12) | (long)(currCell & 0xFFF);
+
+            long s = step;
+            while (s > 0x7F) { stepsBytes.Add((byte)((s & 0x7F) | 0x80)); s >>= 7; }
+            stepsBytes.Add((byte)(s & 0x7F));
+        }
+
+        bytesList.Add(0x12);
+        int slen = stepsBytes.Count;
+        while (slen > 0x7F) { bytesList.Add((byte)((slen & 0x7F) | 0x80)); slen >>= 7; }
+        bytesList.Add((byte)(slen & 0x7F));
+        bytesList.AddRange(stepsBytes);
+
+        return bytesList.ToArray();
+    }
+
+    public static byte[] BuildJruMapChangePayload(long currentMapId, int cellId)
+    {
+        var bytes = new List<byte>();
+        // Field 2: mapId (wireType 0: 0x10)
+        bytes.Add(0x10);
+        long m = currentMapId;
+        while ((ulong)m > 0x7F) { bytes.Add((byte)(((ulong)m & 0x7F) | 0x80)); m = (long)((ulong)m >> 7); }
+        bytes.Add((byte)((ulong)m & 0x7F));
+
+        // Field 3: cellId (wireType 0: 0x18)
+        bytes.Add(0x18);
+        int c = cellId;
+        while (c > 0x7F) { bytes.Add((byte)((c & 0x7F) | 0x80)); c >>= 7; }
+        bytes.Add((byte)(c & 0x7F));
+
+        return bytes.ToArray();
+    }
+
+    public void RequestMapTransition(int cellId)
+    {
+        if (_wsConn == null || _currentMapId <= 0) return;
+        var payload = BuildJruMapChangePayload(_currentMapId, cellId);
+        var frame = WebSocketBridge.BuildProtobufFrame("jru", payload);
+        if (frame != null)
+        {
+            WebSocketBridge.Send(_wsConn, frame);
+            Log($"[MapTransition] Requested transition via cell {cellId} on map {_currentMapId}");
+        }
+    }
+
+    IEnumerator WalkPathCoroutine(List<int> path)
+    {
+        _isWalking = true;
+        if (_wsConn != null && _currentMapId > 0)
+        {
+            var jrwPayload = BuildJrwMovementPayload(_currentMapId, path);
+            if (jrwPayload != null)
+            {
+                var jrwFrame = WebSocketBridge.BuildProtobufFrame("jrw", jrwPayload);
+                if (jrwFrame != null)
+                {
+                    WebSocketBridge.Send(_wsConn, jrwFrame);
+                    Log($"[Movement] Sent jrw packet for {path.Count - 1} steps on map {_currentMapId}");
+                }
+            }
+        }
+        for (int i = 1; i < path.Count; i++)
+        {
+            int nextCell = path[i];
+            Vector3 startPos = IsometricGrid.CellIdToWorldPos(_playerCellId);
+            Vector3 targetPos = IsometricGrid.CellIdToWorldPos(nextCell);
+
+            // Flip character horizontally based on movement direction
+            if (_playerEntityGO != null && targetPos.x != startPos.x)
+            {
+                float sign = targetPos.x < startPos.x ? -1f : 1f;
+                _playerEntityGO.transform.localScale = new Vector3(sign, 1f, 1f);
+            }
+
+            float elapsed = 0f;
+            float duration = 0.15f;
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / duration);
+                if (_playerEntityGO != null)
+                    _playerEntityGO.transform.position = Vector3.Lerp(startPos, targetPos, t);
+                yield return null;
+            }
+            _playerCellId = nextCell;
+            Jondo.Reconstructed.Audio.ReconstructedAudioService.Instance?.PlayFootstep(nextCell);
+            if (_playerEntityGO != null)
+                _playerEntityGO.transform.position = targetPos;
+        }
+        _isWalking = false;
+        Log($"[Movement] Arrived at cell {_playerCellId}");
+        if (IsometricGrid.IsBorderCell(_playerCellId))
+        {
+            Log($"[MapTransition] Arrived at border cell {_playerCellId}, requesting map transition (jru)...");
+            RequestMapTransition(_playerCellId);
+        }
+    }
+
+    bool _inGameHudMounted = false;
+    VisualElement _bannerRoot;
+    VisualElement _chatRoot;
+    VisualElement _characterInfoRoot;
+    VisualElement _actionBarRoot;
+
+    void MountInGameHud(VisualElement root = null)
+    {
+        var targetRoot = root ?? _uiRoot;
+        if (targetRoot == null) return;
+
+        // Hide auth background and connection overlays so the game world is visible
+        for (int ci = 0; ci < targetRoot.childCount; ci++)
+        {
+            var child = targetRoot[ci];
+            if (child.name == "connectionBackground" || child.name == "img" || child.name == "login" || (child.name != null && child.name.Contains("Selection")))
+            {
+                child.style.display = DisplayStyle.None;
+            }
+        }
+
+        if (_inGameHudMounted) return;
+        _inGameHudMounted = true;
+        Log("[HUD] Mounting in-game HUD (BannerMenu, ChatView, CharacterInformation, ActionBar)...");
+
+        // 1. BannerMenu (bottom persistent bar)
+        try
+        {
+            VisualTreeAsset bannerVta = LoadUxml("bannermenu");
+
+            if (bannerVta != null)
+            {
+                _bannerRoot = bannerVta.CloneTree();
+                _bannerRoot.name = "BannerMenu_Root";
+                _bannerRoot.pickingMode = PickingMode.Position;
+                targetRoot.Add(_bannerRoot);
+                ApplyGeneratedMethods("BannerMenu", _bannerRoot);
+                Log("  [HUD] BannerMenu mounted and initialized via generated decompiled methods");
+            }
+            else
+            {
+                Log("  [HUD] BannerMenu UXML not found in loaded bundles");
+            }
+        }
+        catch (Exception ex)
+        {
+            Err($"  [HUD] BannerMenu mount error: {ex.Message}");
+        }
+
+        // 2. ChatView (chat window)
+        try
+        {
+            VisualTreeAsset chatVta = LoadUxml("chatview");
+
+            if (chatVta != null)
+            {
+                _chatRoot = chatVta.CloneTree();
+                _chatRoot.name = "ChatView_Root";
+                _chatRoot.pickingMode = PickingMode.Position;
+                targetRoot.Add(_chatRoot);
+                ApplyGeneratedMethods("ChatView", _chatRoot);
+                var chatInput = _chatRoot.Q<TextField>("ti_chatInput");
+                if (chatInput != null)
+                {
+                    chatInput.RegisterCallback<KeyDownEvent>(evt =>
+                    {
+                        if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter)
+                        {
+                            string text = chatInput.value?.Trim();
+                            if (!string.IsNullOrEmpty(text))
+                            {
+                                SendChatMessage(text);
+                                chatInput.value = "";
+                            }
+                        }
+                    });
+                }
+                Log("  [HUD] ChatView mounted and initialized with live input callback");
+            }
+            else
+            {
+                Log("  [HUD] ChatView UXML not found in loaded bundles");
+            }
+        }
+        catch (Exception ex)
+        {
+            Err($"  [HUD] ChatView mount error: {ex.Message}");
+        }
+
+        // 3. CharacterInformation (HP, AP, MP, Shield persistent gauge)
+        try
+        {
+            VisualTreeAsset charInfoVta = LoadUxml("characterinformations");
+
+            if (charInfoVta != null)
+            {
+                _characterInfoRoot = charInfoVta.CloneTree();
+                _characterInfoRoot.name = "CharacterInformation_Root";
+                _characterInfoRoot.pickingMode = PickingMode.Position;
+                targetRoot.Add(_characterInfoRoot);
+                ApplyGeneratedMethods("CharacterInformation", _characterInfoRoot);
+                UpdateCharacterInfoStats(55, 55, 6, 3, 0, 1);
+                Log("  [HUD] CharacterInformation mounted and initialized via generated decompiled methods");
+            }
+            else
+            {
+                Log("  [HUD] CharacterInformation UXML not found in loaded bundles");
+            }
+        }
+        catch (Exception ex)
+        {
+            Err($"  [HUD] CharacterInformation mount error: {ex.Message}");
+        }
+
+        // 4. ActionBar (spells & items slot bar)
+        try
+        {
+            VisualTreeAsset barVta = LoadUxml("actionbar");
+
+            if (barVta != null)
+            {
+                _actionBarRoot = barVta.CloneTree();
+                _actionBarRoot.name = "ActionBar_Root";
+                _actionBarRoot.pickingMode = PickingMode.Position;
+                targetRoot.Add(_actionBarRoot);
+                ApplyGeneratedMethods("ActionBar", _actionBarRoot);
+                Log("  [HUD] ActionBar mounted and initialized via generated decompiled methods");
+            }
+            else
+            {
+                Log("  [HUD] ActionBar UXML not found in loaded bundles");
+            }
+        }
+        catch (Exception ex)
+        {
+            Err($"  [HUD] ActionBar mount error: {ex.Message}");
+        }
+    }
+
+    public void UpdateCharacterInfoStats(int currentHp, int maxHp, int currentAp, int currentMp, int shield = 0, int invocations = 1)
+    {
+        if (_characterInfoRoot == null) return;
+        var lblPdv = _characterInfoRoot.Q<Label>("lbl_pdv");
+        if (lblPdv != null) lblPdv.text = $"{currentHp} / {maxHp}";
+        var lblPdvBottom = _characterInfoRoot.Q<Label>("lbl_pdvBottom");
+        if (lblPdvBottom != null) lblPdvBottom.text = $"{currentHp}";
+        var lblPa = _characterInfoRoot.Q<Label>("lbl_pa");
+        if (lblPa != null) lblPa.text = $"{currentAp}";
+        var lblPm = _characterInfoRoot.Q<Label>("lbl_pm");
+        if (lblPm != null) lblPm.text = $"{currentMp}";
+        var lblShield = _characterInfoRoot.Q<Label>("lbl_shield");
+        if (lblShield != null) lblShield.text = shield > 0 ? $"{shield}" : "";
+        var lblIp = _characterInfoRoot.Q<Label>("lbl_ip");
+        if (lblIp != null) lblIp.text = $"{invocations}";
+    }
+
+    Texture2D MakeReadable(Texture2D src)
+    {
+        if (src.isReadable) return src;
+        // Copy via RenderTexture (same technique as RebuildBundlesForWebGL)
+        var rt = RenderTexture.GetTemporary(src.width, src.height, 0, RenderTextureFormat.ARGB32);
+        Graphics.Blit(src, rt);
+        var prev = RenderTexture.active;
+        RenderTexture.active = rt;
+        var readable = new Texture2D(src.width, src.height, TextureFormat.RGBA32, false);
+        readable.ReadPixels(new Rect(0, 0, src.width, src.height), 0, 0);
+        readable.Apply();
+        RenderTexture.active = prev;
+        RenderTexture.ReleaseTemporary(rt);
+        return readable;
+    }
+
+    void ParseMapJson(string json, long mapId)
+    {
+        // Minimal JSON parser for map data extracted by extract_map_data.py
+        // Format: { cells: [{n,m,l,f,s,a}], backgroundElements: [{g,c,t:[6],mi}], ... }
+        Log($"[Map] Parsing JSON for map {mapId}...");
+
+        // Parse cells
+        var cellsJson = JsonArraySlice(json, "\"cells\":");
+        if (cellsJson != null)
+        {
+            var cellList = new List<CellData>();
+            int pos = 0;
+            while (pos < cellsJson.Length)
+            {
+                int objStart = cellsJson.IndexOf('{', pos);
+                if (objStart < 0) break;
+                int objEnd = cellsJson.IndexOf('}', objStart);
+                if (objEnd < 0) break;
+                string obj = cellsJson.Substring(objStart, objEnd - objStart + 1);
+                cellList.Add(new CellData
+                {
+                    cellNumber = (uint)JsonInt(obj, "\"n\":"),
+                    mov = JsonInt(obj, "\"m\":") == 1,
+                    los = JsonInt(obj, "\"l\":") == 1,
+                    floor = JsonInt(obj, "\"f\":"),
+                    speed = JsonInt(obj, "\"s\":"),
+                    arrow = JsonInt(obj, "\"a\":"),
+                });
+                pos = objEnd + 1;
+            }
+            _mapCells = cellList.ToArray();
+            int walkable = 0;
+            foreach (var c in _mapCells) if (c.mov) walkable++;
+            Log($"[Map] {_mapCells.Length} cells ({walkable} walkable)");
+        }
+
+        // Parse elements for each layer
+        _bgElements = ParseJsonElements(json, "\"backgroundElements\":");
+        _sortElements = ParseJsonElements(json, "\"sortableElements\":");
+        _fgElements = ParseJsonElements(json, "\"foregroundElements\":");
+        Log($"[Map] Elements: bg={_bgElements?.Length ?? 0} sort={_sortElements?.Length ?? 0} fg={_fgElements?.Length ?? 0}");
+
+        Log($"[Map] Map {mapId} parsed successfully");
+    }
+
+    MapElement[] ParseJsonElements(string json, string key)
+    {
+        var arr = JsonArraySlice(json, key);
+        if (arr == null) return null;
+
+        var list = new List<MapElement>();
+        int pos = 0;
+        while (pos < arr.Length)
+        {
+            int objStart = arr.IndexOf('{', pos);
+            if (objStart < 0) break;
+            int objEnd = FindMatchingBrace(arr, objStart);
+            if (objEnd < 0) break;
+            string obj = arr.Substring(objStart, objEnd - objStart + 1);
+
+            var el = new MapElement();
+            el.gfxId = JsonInt(obj, "\"g\":");
+            el.color = (uint)JsonLong(obj, "\"c\":");
+            el.materialIndex = JsonInt(obj, "\"mi\":");
+
+            // Transform array: [m11,m12,m21,m22,m31,m32]
+            int tStart = obj.IndexOf("\"t\":[");
+            if (tStart >= 0)
+            {
+                tStart += 4;
+                int tEnd = obj.IndexOf(']', tStart);
+                if (tEnd > tStart)
+                {
+                    string[] parts = obj.Substring(tStart + 1, tEnd - tStart - 1).Split(',');
+                    if (parts.Length >= 6)
+                    {
+                        float.TryParse(parts[0], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m11);
+                        float.TryParse(parts[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m12);
+                        float.TryParse(parts[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m21);
+                        float.TryParse(parts[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m22);
+                        float.TryParse(parts[4], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m31);
+                        float.TryParse(parts[5], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out el.m32);
+                    }
+                }
+            }
+            list.Add(el);
+            pos = objEnd + 1;
+        }
+        return list.ToArray();
+    }
+
+    static string JsonArraySlice(string json, string key)
+    {
+        int idx = json.IndexOf(key);
+        if (idx < 0) return null;
+        int start = json.IndexOf('[', idx + key.Length);
+        if (start < 0) return null;
+        int depth = 1, end = start + 1;
+        while (end < json.Length && depth > 0)
+        {
+            if (json[end] == '[') depth++;
+            else if (json[end] == ']') depth--;
+            end++;
+        }
+        return json.Substring(start, end - start);
+    }
+
+    static int JsonInt(string obj, string key)
+    {
+        int idx = obj.IndexOf(key);
+        if (idx < 0) return 0;
+        idx += key.Length;
+        int end = idx;
+        while (end < obj.Length && (char.IsDigit(obj[end]) || obj[end] == '-')) end++;
+        int.TryParse(obj.Substring(idx, end - idx), out int val);
+        return val;
+    }
+
+    static long JsonLong(string obj, string key)
+    {
+        int idx = obj.IndexOf(key);
+        if (idx < 0) return 0;
+        idx += key.Length;
+        int end = idx;
+        while (end < obj.Length && (char.IsDigit(obj[end]) || obj[end] == '-')) end++;
+        long.TryParse(obj.Substring(idx, end - idx), out long val);
+        return val;
     }
 
     // ── Screen navigation — UXML paths from ClientData.json assetPaths ──
@@ -3167,39 +5271,39 @@ public partial class WebGLProbe : MonoBehaviour
     void ShowScreen(string screenName, VisualElement root)
     {
         var uxmlPath = FindUxmlPath(screenName);
-        if (uxmlPath == null)
+        var vta = LoadUxml(uxmlPath) ?? LoadUxml(screenName);
+        if (vta == null)
         {
-            Log($"  Screen '{screenName}' UXML not found in assetPaths");
+            Log($"  {screenName}: UXML '{uxmlPath ?? screenName}' not found in bundles");
+            _currentScreen = screenName;
             return;
         }
         try
         {
-            VisualTreeAsset vta = null;
-            string uxmlLower = uxmlPath.ToLower();
-            foreach (var kv in new List<KeyValuePair<string, AssetBundle>>(_loadedBundles))
-            {
-                vta = kv.Value.LoadAsset<VisualTreeAsset>(uxmlLower);
-                if (vta != null) break;
-            }
-            if (vta == null)
-            {
-                Log($"  {screenName}: UXML '{uxmlPath}' not found in bundles");
-                return;
-            }
-
-            // Hide all children except connectionBackground (the persistent bg).
-            // Also hide by name: login screen elements from the previous CloneTree.
-            for (int ci = 0; ci < root.childCount; ci++)
+            // Clean up previous screens except connection background
+            for (int ci = root.childCount - 1; ci >= 0; ci--)
             {
                 var child = root[ci];
                 if (child.name == "connectionBackground" || child.name == "img") continue;
+                if (child.name != null && child.name.StartsWith("screen_"))
+                {
+                    root.RemoveAt(ci);
+                    continue;
+                }
                 child.style.display = DisplayStyle.None;
             }
-            // Hide named overlays from previous screens
             var loginEl = root.Q("login");
             if (loginEl != null) loginEl.style.display = DisplayStyle.None;
 
             var screenUI = vta.CloneTree();
+            screenUI.name = "screen_" + screenName;
+            screenUI.style.width = Length.Percent(100);
+            screenUI.style.height = Length.Percent(100);
+            screenUI.style.position = Position.Absolute;
+            screenUI.style.left = 0;
+            screenUI.style.top = 0;
+            screenUI.style.right = 0;
+            screenUI.style.bottom = 0;
             root.Add(screenUI);
 
             var colorMap = LoadThemeColorMap();
@@ -3469,14 +5573,29 @@ public partial class WebGLProbe : MonoBehaviour
         else FMODProxy.ResumeMusic();
     }
 
+    float _lastHeartbeat = 0f;
+
     void Update()
     {
         if (_compositor != null && Time.time - _lastInspect >= INTERVAL)
         { _lastInspect = Time.time; Inspect($"t{Time.time:F0}"); }
         WebSocketBridge.PollAll();
         FMODProxy.Update();
+        Jondo.Reconstructed.Fight.FightTurnService.Instance?.UpdateCountdown(Time.deltaTime);
+
+        // Send kqo heartbeat every 5s while in world connection
+        if (_wsConn != null && _connPhase == 1 && Time.time - _lastHeartbeat >= 5.0f)
+        {
+            _lastHeartbeat = Time.time;
+            var kqoFrame = WebSocketBridge.BuildProtobufFrame("kqo", new byte[0]);
+            if (kqoFrame != null) WebSocketBridge.Send(_wsConn, kqoFrame);
+        }
 
         if (Input.GetKeyDown(KeyCode.H)) _showOverlay = !_showOverlay;
+
+        if (Input.GetKeyDown(KeyCode.Space) && Jondo.Reconstructed.Fight.FightTurnService.Instance != null && Jondo.Reconstructed.Fight.FightTurnService.Instance.IsInFight)
+
+            Jondo.Reconstructed.Fight.FightTurnService.Instance.PassTurn();
         // Escape toggles PreGameMainMenu (from fzy<T>.closeWithEscape, dump.cs L388926)
         if (Input.GetKeyDown(KeyCode.Escape)) TogglePreGameMainMenu();
         // Enter confirms current screen action (server select / character select)
@@ -3583,6 +5702,65 @@ public partial class WebGLProbe : MonoBehaviour
 
             Log("=== [F] END DIAGNOSTIC ===");
         }
+
+        // Key G toggles map cell grid
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            _showGrid = !_showGrid;
+            if (_gridGO != null) _gridGO.SetActive(_showGrid);
+            Log($"[Grid] Cell grid toggled: {(_showGrid ? "ON" : "OFF")}");
+        }
+
+        // Mouse hover and picking over map
+        var mapCam = GameObject.Find("__WebGLCam")?.GetComponent<Camera>();
+        if (mapCam != null && (_mapCells != null || _mapMeshGO != null))
+        {
+            int pickedCell = IsometricGrid.ScreenPosToCellId(Input.mousePosition, mapCam);
+            if (pickedCell != _hoveredCellId)
+            {
+                _hoveredCellId = pickedCell;
+                UpdateHoverHighlight(_hoveredCellId);
+            }
+
+            // Hotkeys: I for Inventory, S for Spells, Escape to close modals
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                ToggleInventory();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                ToggleSpells();
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (_inventoryRoot != null) CloseInventory();
+                if (_spellsRoot != null) CloseSpells();
+                if (_npcDialogRoot != null) CloseNpcDialog();
+            }
+
+            // Left mouse click to move player or interact with NPC
+            if (Input.GetMouseButtonDown(0) && _hoveredCellId >= 0 && _hoveredCellId < 560)
+            {
+                if (_actorCellMap.TryGetValue(_hoveredCellId, out long targetActorId) && targetActorId < 0)
+                {
+                    Log($"[Interaction] Clicked NPC actor {targetActorId} at cell {_hoveredCellId}");
+                    SendNpcAction(3, _currentMapId, targetActorId);
+                }
+                else if (_mapCells != null && _hoveredCellId < _mapCells.Length && _mapCells[_hoveredCellId].mov)
+                {
+                    if (!_isWalking)
+                    {
+                        var path = IsometricGrid.FindPath(_playerCellId, _hoveredCellId, _mapCells);
+                        if (path != null && path.Count > 1)
+                        {
+                            Log($"[Movement] Walking path from {_playerCellId} to {_hoveredCellId} ({path.Count} steps)");
+                            if (_walkCoroutine != null) StopCoroutine(_walkCoroutine);
+                            _walkCoroutine = StartCoroutine(WalkPathCoroutine(path));
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // ──────────────────── GUI overlay (toggle with H) ────────────────────
@@ -3596,7 +5774,7 @@ public partial class WebGLProbe : MonoBehaviour
         var s = new GUIStyle { fontSize = 10, wordWrap = false, richText = true, padding = new RectOffset(4, 4, 2, 2), normal = { textColor = Color.white, background = _bg } };
         float pw = Mathf.Min(Screen.width * 0.4f, 500);
 
-        string hdr = $"<b><color=#0f8>Probe v28</color></b> t={Time.time:F0} [H F]";
+        string hdr = $"<b><color=#0f8>Probe v32</color></b> t={Time.time:F0} [H F G]";
         GUI.Label(new Rect(5, 5, pw, 16), hdr, s);
         if (!string.IsNullOrEmpty(_status))
             GUI.Label(new Rect(5, 18, pw, 14), $"<color=#ff0>{_status}</color>", s);
@@ -3617,6 +5795,14 @@ public partial class WebGLProbe : MonoBehaviour
             float lh = Mathf.Min(Screen.height - y - 10, 400);
             if (lh > 30) GUI.Label(new Rect(5, y, pw, lh), t, ls);
         }
+
+        if (_hoveredCellId >= 0 && _mapCells != null && _hoveredCellId < _mapCells.Length)
+        {
+            var cell = _mapCells[_hoveredCellId];
+            var coord = IsometricGrid.CellIdToCoords(_hoveredCellId);
+            string cellInfo = $"<color=#0ff>Cell {_hoveredCellId}</color> ({coord.x},{coord.y}) Walk:{(cell.mov ? "<color=#0f0>YES</color>" : "<color=#f44>NO</color>")} LOS:{cell.los} Player:{_playerCellId}";
+            GUI.Label(new Rect(5, Screen.height - 25, 450, 20), cellInfo, s);
+        }
     }
 
     // Called via SendMessage from Playwright tests (window.unityInstance.SendMessage)
@@ -3627,16 +5813,19 @@ public partial class WebGLProbe : MonoBehaviour
         {
             if (_currentScreen == "Login" || _currentScreen == null)
                 OnPlayClicked(_uiRoot);
-            else if (_currentScreen == "ServerSelection" && _pendingServerId > 0 && _wsConn != null)
+            else if (_currentScreen == "ServerSelection" && _wsConn != null)
             {
+                int servId = _pendingServerId > 0 ? _pendingServerId : (_serverList != null && _serverList.Count > 0 ? _serverList[0].id : 290);
+                Log($"  [TEST] Selecting server {servId}");
                 SetLoginState(_uiRoot, 1);
-                var frame = WebSocketBridge.BuildServerSelectFrame(_pendingServerId, "en");
+                var frame = WebSocketBridge.BuildServerSelectFrame(servId, "en");
                 WebSocketBridge.Send(_wsConn, frame);
             }
-            else if (_currentScreen == "CharacterSelection" && _characterList != null && _characterList.Count > 0 && _wsConn != null)
+            else if (_currentScreen == "CharacterSelection" && _wsConn != null && _characterList != null && _characterList.Count > 0)
             {
                 int idx = _selectedCharIdx >= 0 ? _selectedCharIdx : 0;
                 int cid = _characterList[idx].id;
+                Log($"  [TEST] Selecting character {cid} ({_characterList[idx].name})");
                 var kvwPayload = new List<byte>();
                 kvwPayload.Add(0x08);
                 int v = cid;

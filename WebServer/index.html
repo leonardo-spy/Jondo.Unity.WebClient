@@ -1,123 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jondo — Dofus 3 Web</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .container { max-width: 700px; padding: 40px; text-align: center; }
-  h1 { font-size: 48px; color: #58a6ff; margin-bottom: 8px; letter-spacing: 2px; }
-  .subtitle { color: #8b949e; font-size: 16px; margin-bottom: 40px; }
-  .status-card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 24px; text-align: left; }
-  .status-card h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-  .check { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: 14px; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-  .dot.ok { background: #3fb950; }
-  .dot.wait { background: #d29922; }
-  .dot.fail { background: #f85149; }
-  .dot.info { background: #58a6ff; }
-  .instructions { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 24px; text-align: left; font-size: 14px; line-height: 1.8; }
-  .instructions h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-  code { background: #0d1117; border: 1px solid #30363d; border-radius: 4px; padding: 2px 6px; font-family: monospace; color: #79c0ff; }
-  .step { color: #58a6ff; font-weight: bold; }
-  a { color: #58a6ff; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-</style>
-</head>
-<body>
-<div class="container">
-  <h1>JONDO</h1>
-  <p class="subtitle">Dofus 3 Web Client</p>
-
-  <div class="status-card">
-    <h2>Status</h2>
-    <div class="check">
-      <span class="dot" id="dotServer"></span>
-      <span id="statusServer">Checking emulator...</span>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | ExportedProject</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">ExportedProject</div>
+      </div>
     </div>
-    <div class="check">
-      <span class="dot" id="dotWs"></span>
-      <span id="statusWs">Checking WebSocket bridge...</span>
-    </div>
-    <div class="check">
-      <span class="dot" id="dotAssets"></span>
-      <span id="statusAssets">Checking assets...</span>
-    </div>
-    <div class="check">
-      <span class="dot" id="dotBuild"></span>
-      <span id="statusBuild">Checking Unity WebGL build...</span>
-    </div>
-  </div>
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
 
-  <div class="instructions" id="instructions">
-    <h2>Next steps</h2>
-    <p>The Node.js server is running. To get the game in the browser:</p>
-    <br>
-    <p><span class="step">1.</span> Install <a href="https://github.com/AssetRipper/AssetRipper/releases" target="_blank">AssetRipper</a> and extract the Unity project from the client:</p>
-    <p><code>AssetRipper "Cliente 3.6.10.11"</code></p>
-    <br>
-    <p><span class="step">2.</span> Open the extracted project in <strong>Unity 6</strong> Editor</p>
-    <br>
-    <p><span class="step">3.</span> Switch build target to <strong>WebGL</strong> and build</p>
-    <br>
-    <p><span class="step">4.</span> Copy the build output into <code>PlayBrowser/WebClient/unity-build/</code></p>
-    <br>
-    <p>The game will then load at <code>http://localhost:3000</code></p>
-  </div>
-</div>
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        var warningBanner = document.querySelector("#unity-warning");
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
 
-<script>
-async function check(id, label, testFn) {
-  const dot = document.getElementById('dot' + id);
-  const text = document.getElementById('status' + id);
-  try {
-    const result = await testFn();
-    dot.className = 'dot ' + (result.ok ? 'ok' : 'fail');
-    text.textContent = result.msg;
-  } catch (e) {
-    dot.className = 'dot fail';
-    text.textContent = label + ': ' + e.message;
-  }
-}
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/unity-build.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/unity-build.data.gz",
+        frameworkUrl: buildUrl + "/unity-build.framework.js.gz",
+        codeUrl: buildUrl + "/unity-build.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "ExportedProject",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+        // errorHandler: function(err, url, line) {
+        //    alert("error " + err + " occurred at line " + line);
+        //    // Return 'true' if you handled this error and don't want Unity
+        //    // to process it further, 'false' otherwise.
+        //    return true;
+        // },
+      };
 
-async function checkAll() {
-  await check('Server', 'Emulator', async () => {
-    const r = await fetch('/api/config/dofus3.json', { signal: AbortSignal.timeout(2000) });
-    return r.ok
-      ? { ok: true, msg: 'Emulator running (HAAPI reachable)' }
-      : { ok: false, msg: 'Emulator returned ' + r.status };
-  });
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
 
-  await check('Ws', 'WebSocket', () => new Promise((resolve) => {
-    const ws = new WebSocket(`ws://${location.host}/game-ws`);
-    ws.binaryType = 'arraybuffer';
-    const timer = setTimeout(() => { ws.close(); resolve({ ok: false, msg: 'WebSocket bridge: timeout' }); }, 3000);
-    ws.onopen = () => { clearTimeout(timer); ws.close(); resolve({ ok: true, msg: 'WebSocket bridge: connected' }); };
-    ws.onerror = () => { clearTimeout(timer); resolve({ ok: false, msg: 'WebSocket bridge: connection failed' }); };
-  }));
+      // If you would like all file writes inside Unity Application.persistentDataPath
+      // directory to automatically persist so that the contents are remembered when
+      // the user revisits the site the next time, uncomment the following line:
+      // config.autoSyncPersistentDataPath = true;
+      // This autosyncing is currently not the default behavior to avoid regressing
+      // existing user projects that might rely on the earlier manual
+      // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
+      // expected to change.
 
-  await check('Assets', 'Assets', async () => {
-    try {
-      const r = await fetch('/assets/Data/catalog_1.0.hash', { signal: AbortSignal.timeout(2000) });
-      return r.ok
-        ? { ok: true, msg: 'Asset bundles available (' + (await r.text()).trim().substring(0,8) + '...)' }
-        : { ok: false, msg: 'Assets not found (place client in "Cliente 3.6.10.11/")' };
-    } catch { return { ok: false, msg: 'Assets directory not accessible' }; }
-  });
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
 
-  await check('Build', 'WebGL', async () => {
-    try {
-      const r = await fetch('/game/index.html', { signal: AbortSignal.timeout(2000) });
-      return r.ok
-        ? { ok: true, msg: 'Unity WebGL build found — ready to play!' }
-        : { ok: false, msg: 'No WebGL build yet (see instructions below)' };
-    } catch { return { ok: false, msg: 'No WebGL build yet (see instructions below)' }; }
-  });
-}
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
 
-checkAll();
-</script>
-</body>
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      document.querySelector("#unity-loading-bar").style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+              }).then((unityInstance) => { window.unityInstance = unityInstance;
+                document.querySelector("#unity-loading-bar").style.display = "none";
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+
+    </script>
+  </body>
 </html>

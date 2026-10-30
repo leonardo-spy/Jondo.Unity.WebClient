@@ -22,15 +22,17 @@ Output:
   output/BootLogic.json — complete boot spec for the probe
 """
 
+import argparse
 import json
 import os
+import shutil
 import sys
 import io
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
+REPO_ROOT = os.path.dirname(os.path.dirname(SCRIPT_DIR))
+OUTPUT_DIR = os.environ.get("GENERATED_OUTPUT_DIR", os.path.join(REPO_ROOT, "Generated", "output"))
+RESOURCE_DIR = os.path.join(REPO_ROOT, "UnityProject", "Assets", "Resources")
 
 
 def load_json(name):
@@ -42,11 +44,23 @@ def load_json(name):
         return json.load(f)
 
 
-def main():
+def main(deploy=False):
     print("Loading extracted data...")
     services = load_json("services.json")
+    if services is None:
+        raise FileNotFoundError("services.json is required to generate BootLogic.json")
     asset_paths = load_json("asset_paths.json")
     screen_handlers = load_json("screen_handlers.json")
+    registration = load_json("RegistrationObservations.json") or {}
+    catalog = load_json("ReconstructedServiceCatalog.json") or {}
+    central_registrations = registration.get("existingFieldRegistrations", [])
+    registry_keys = set()
+    for binding in central_registrations:
+        if not all(binding.get(key) for key in ("field", "fieldType", "registryType")):
+            raise ValueError("Incomplete extracted central registration")
+        if binding["registryType"] in registry_keys:
+            raise ValueError(f"Duplicate extracted registry key: {binding['registryType']}")
+        registry_keys.add(binding["registryType"])
 
     boot = {
         "phases": [],
@@ -54,6 +68,10 @@ def main():
         "audioInit": {},
         "screens": {},
         "assetPaths": {},
+        "centralRegistrations": central_registrations,
+        "registrationSource": registration.get("source", {}),
+        "reconstructedServices": catalog.get("services", []),
+        "reconstructedServiceEvidence": catalog.get("evidenceId"),
     }
 
     # Phase 0: RegisterServices (bkqa)
@@ -109,7 +127,7 @@ def main():
                     if 'audio' in path.lower() or 'DofusUISettings' in path:
                         audio_assets[entry.get('key', '')] = path
 
-    boot["phases"].append({
+    boot["phases"].insert(1, {
         "name": "LoadDataDependencies",
         "decompiled": "Compositor.bkqe (dump.cs L405245)",
         "description": "Addressables.InitializeAsync, loads configuration assets",
@@ -179,6 +197,10 @@ def main():
     out_path = os.path.join(OUTPUT_DIR, "BootLogic.json")
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(boot, f, indent=2, ensure_ascii=False)
+    if deploy:
+        os.makedirs(RESOURCE_DIR, exist_ok=True)
+        shutil.copyfile(out_path, os.path.join(RESOURCE_DIR, "BootLogic.json"))
+        print(f"  Deployed to {RESOURCE_DIR}")
 
     print(f"\nSaved: {out_path} ({os.path.getsize(out_path) // 1024}KB)")
     print(f"  Phases: {len(boot['phases'])}")
@@ -187,4 +209,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--deploy", action="store_true", help="Copy generated BootLogic.json into Unity Resources")
+    args = parser.parse_args()
+    main(deploy=args.deploy)

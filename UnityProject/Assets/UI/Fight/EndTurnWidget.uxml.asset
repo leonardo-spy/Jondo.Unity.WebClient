@@ -1,6 +1,1666 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-3408367904817856705
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: EndTurnWidget.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: 5114762372517672897}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 370132901
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 187810533
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: xsi
+          value: http://www.w3.org/2001/XMLSchema-instance
+        - name: engine
+          value: UnityEngine.UIElements
+        - name: editor
+          value: UnityEditor.UIElements
+        - name: noNamespaceSchemaLocation
+          value: ../../../UIElementsSchema/UIElements.xsd
+        - name: editor-extension-mode
+          value: False
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets:
+        - {fileID: 0}
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.MagneticDragWindow
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1515646130
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        - rid: 1003
+        - rid: 1004
+        - rid: 1005
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: EndTurnWidget
+        - name: corner-resizable
+          value: false
+        - name: horizontal-resizable
+          value: false
+        - name: drag-position
+          value: Custom
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -445269792
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1007
+        - rid: 1008
+        - rid: 1009
+        - rid: 1010
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_baseHeader
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1011
+        m_SkipClone: 0
+    - rid: 1003
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -266313442
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1012
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 15
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1013
+        m_SkipClone: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -803184620
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1014
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 21
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1015
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1340055798
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1016
+        - rid: 1017
+        - rid: 1018
+        - rid: 1019
+        - rid: 1020
+        - rid: 1021
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_toggles
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 27
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1022
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -896027749
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1023
+        - rid: 1024
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_animation
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 2
+        m_Classes:
+        - tintColor_background_medium100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1025
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1164463338
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1026
+        - rid: 1027
+        - rid: 1028
+        - rid: 1029
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_counter
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 5
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1030
+        m_SkipClone: 0
+    - rid: 1009
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -180200221
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1031
+        - rid: 1032
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_turnCounter
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 10
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1033
+        m_SkipClone: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -448635810
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1034
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_requestHelp
+        m_RuleIndex: 13
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1035
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -445269792
+        name: ctr_baseHeader
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1012
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -538115049
+        m_Parent:
+          rid: 1003
+        m_Children:
+        - rid: 1036
+        - rid: 1037
+        - rid: 1038
+        - rid: 1039
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_EndTurn
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 16
+        m_Classes:
+        - tintColor_background_dark100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1040
+        m_SkipClone: 0
+    - rid: 1013
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -266313442
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1014
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1611857405
+        m_Parent:
+          rid: 1004
+        m_Children:
+        - rid: 1041
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: ctr_timeGauge
+        m_RuleIndex: 22
+        m_Classes:
+        - backgroundColor_white_white25
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1042
+        m_SkipClone: 0
+    - rid: 1015
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -803184620
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1016
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1609367535
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: pin
+        - name: name
+          value: tg_permanentPing
+        m_RuleIndex: 28
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1017
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 88233240
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: pinClock
+        - name: name
+          value: tg_pointCell
+        m_RuleIndex: 29
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1018
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1432901055
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: eye
+        - name: name
+          value: tg_noSpectator
+        - name: icon-selected-value
+          value: eyeSlashed
+        m_RuleIndex: 30
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1019
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1340931946
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: lock
+        - name: name
+          value: tg_lockFight
+        m_RuleIndex: 31
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1020
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -180202349
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon-value
+          value: party
+        - name: name
+          value: tg_lockParty
+        m_RuleIndex: 32
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1021
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1701336644
+        m_Parent:
+          rid: 1005
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: enable-rich-text
+          value: false
+        - name: name
+          value: btn_leave
+        - name: icon
+          value: leave
+        - name: status
+          value: negative
+        m_RuleIndex: 33
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1022
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1340055798
+        name: ctr_toggles
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1023
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1427047295
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_animationMessageSeconds
+        - name: is-single-line
+          value: true
+        - name: shadow-offset-y
+          value: 3
+        - name: picking-mode
+          value: Ignore
+        - name: text
+          value: '[+ 20 S]'
+        - name: shadow-offset-x
+          value: -1
+        - name: shadow-color
+          value: '#00000059'
+        m_RuleIndex: 3
+        m_Classes:
+        - title_medium
+        - textColor_spellElements_air
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1024
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -94087000
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_animationMessage
+        - name: is-single-line
+          value: true
+        - name: shadow-offset-y
+          value: 3
+        - name: picking-mode
+          value: Ignore
+        - name: text
+          value: '[AU PROCHAIN TOUR]'
+        - name: shadow-offset-x
+          value: -1
+        - name: shadow-color
+          value: '#00000059'
+        m_RuleIndex: 4
+        m_Classes:
+        - title_medium
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1025
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -896027749
+        name: ctr_animation
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1026
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 890176117
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: backgroundCounter
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 6
+        m_Classes:
+        - tintColor_background_dark100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1051
+        m_SkipClone: 0
+    - rid: 1027
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -630958178
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: contentCounter
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 7
+        m_Classes:
+        - tintColor_background_medium100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1052
+        m_SkipClone: 0
+    - rid: 1028
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 2142874823
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: contentCounter
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 8
+        m_Classes:
+        - tintColor_highlight_secondary50
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1053
+        m_SkipClone: 0
+    - rid: 1029
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 621740528
+        m_Parent:
+          rid: 1008
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: shadow-offset-y
+          value: 1
+        - name: text
+          value: '[19s]'
+        - name: name
+          value: lbl_seconds
+        m_RuleIndex: 9
+        m_Classes:
+        - labelShadow_dropShadows_medium
+        - textColor_spellElements_air
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1030
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1164463338
+        name: ctr_counter
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1031
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1436264945
+        m_Parent:
+          rid: 1009
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon
+          value: turn
+        - name: name
+          value: icon_turnCount
+        m_RuleIndex: 11
+        m_Classes:
+        - tintColor_white_white80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1032
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.Label
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1337568056
+        m_Parent:
+          rid: 1009
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[4]'
+        - name: parse-escape-sequences
+          value: true
+        - name: display-tooltip-when-elided
+          value: true
+        - name: name
+          value: lbl_turnCount
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 12
+        m_Classes:
+        - textShort_largeRegular
+        - textColor_white_white80
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1056
+        m_SkipClone: 0
+    - rid: 1033
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -180200221
+        name: ctr_turnCounter
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1034
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1973136123
+        m_Parent:
+          rid: 1010
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon
+          value: flashingLight
+        - name: has-shadow
+          value: true
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 14
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1035
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -448635810
+        name: ctr_requestHelp
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1036
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1963916345
+        m_Parent:
+          rid: 1012
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: buttonBackground
+        m_RuleIndex: 17
+        m_Classes:
+        - tintColor_buttons_buttonPrimary
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1058
+        m_SkipClone: 0
+    - rid: 1037
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 442782050
+        m_Parent:
+          rid: 1012
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: buttonHighlight
+        m_RuleIndex: 18
+        m_Classes:
+        - tintColor_highlight_primary100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1059
+        m_SkipClone: 0
+    - rid: 1038
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1078352245
+        m_Parent:
+          rid: 1012
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_endTurn
+        - name: is-single-line
+          value: false
+        - name: shadow-offset-y
+          value: 3
+        - name: picking-mode
+          value: Ignore
+        - name: text
+          value: CHOISIR LES CHALLENGES
+        - name: shadow-offset-x
+          value: -1
+        - name: shadow-color
+          value: '#00000059'
+        m_RuleIndex: 19
+        m_Classes:
+        - title_medium
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1039
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1695480756
+        m_Parent:
+          rid: 1012
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: btn_EndTurn
+        m_RuleIndex: 20
+        m_Classes:
+        - title_medium
+        - textColor_white_white100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1061
+        m_SkipClone: 0
+    - rid: 1040
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -538115049
+        name: ctr_EndTurn
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1041
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 353302811
+        m_Parent:
+          rid: 1014
+        m_Children:
+        - rid: 1062
+        - rid: 1063
+        - rid: 1064
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: ctr_timerBarValue
+        m_RuleIndex: 23
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1065
+        m_SkipClone: 0
+    - rid: 1042
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1611857405
+        name: ctr_timeGauge
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1051
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 890176117
+        name: backgroundCounter
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1052
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -630958178
+        name: contentCounter
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1053
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 2142874823
+        name: contentCounter
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1056
+      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1337568056
+        name: lbl_turnCount
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        text: '[4]'
+        text_UxmlAttributeFlags: 1
+        enableRichText: 0
+        enableRichText_UxmlAttributeFlags: 0
+        emojiFallbackSupport: 0
+        emojiFallbackSupport_UxmlAttributeFlags: 0
+        parseEscapeSequences: 1
+        parseEscapeSequences_UxmlAttributeFlags: 1
+        isSelectable: 0
+        isSelectable_UxmlAttributeFlags: 0
+        doubleClickSelectsWord: 0
+        doubleClickSelectsWord_UxmlAttributeFlags: 0
+        tripleClickSelectsLine: 0
+        tripleClickSelectsLine_UxmlAttributeFlags: 0
+        displayTooltipWhenElided: 1
+        displayTooltipWhenElided_UxmlAttributeFlags: 1
+    - rid: 1058
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1963916345
+        name: buttonBackground
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1059
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 442782050
+        name: buttonHighlight
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1061
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1695480756
+        name: btn_EndTurn
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1062
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 797328732
+        m_Parent:
+          rid: 1041
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        - name: name
+          value: coloredTimerGauge
+        m_RuleIndex: 24
+        m_Classes:
+        - backgroundColor_spellElements_air
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1066
+        m_SkipClone: 0
+    - rid: 1063
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -723805563
+        m_Parent:
+          rid: 1041
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 25
+        m_Classes:
+        - backgroundColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1067
+        m_SkipClone: 0
+    - rid: 1064
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 2050027438
+        m_Parent:
+          rid: 1041
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 26
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1068
+        m_SkipClone: 0
+    - rid: 1065
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 353302811
+        name: ctr_timerBarValue
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1066
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 797328732
+        name: coloredTimerGauge
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1067
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -723805563
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1068
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 2050027438
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 1
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 1
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+--- !u!114 &5114762372517672897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1717,1663 +3377,3 @@ MonoBehaviour:
   m_FlattenedImportedStyleSheets: []
   m_ContentHash: 0
   scalableImages: []
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: EndTurnWidget.uxml
-  m_EditorClassIdentifier: 
-  m_ImportedWithErrors: 0
-  m_HasEditorElements: 0
-  m_HasUpdatedUrls: 0
-  m_ImportedWithWarnings: 0
-  m_Usings: []
-  inlineSheet: {fileID: -3408367904817856705}
-  m_VisualTree:
-    rid: 1000
-  m_AssetEntries: []
-  m_Slots: []
-  m_ContentContainerId: 0
-  m_ContentHash: 370132901
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.UXML
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 187810533
-        m_Parent:
-          rid: -2
-        m_Children:
-        - rid: 1001
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions:
-        - prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        - prefix: uie
-          resolvedNamespace: UnityEditor.UIElements
-        m_Properties:
-        - name: xsi
-          value: http://www.w3.org/2001/XMLSchema-instance
-        - name: engine
-          value: UnityEngine.UIElements
-        - name: editor
-          value: UnityEditor.UIElements
-        - name: noNamespaceSchemaLocation
-          value: ../../../UIElementsSchema/UIElements.xsd
-        - name: editor-extension-mode
-          value: False
-        m_RuleIndex: -1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets:
-        - {fileID: 0}
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1001
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.MagneticDragWindow
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1515646130
-        m_Parent:
-          rid: 1000
-        m_Children:
-        - rid: 1002
-        - rid: 1003
-        - rid: 1004
-        - rid: 1005
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: EndTurnWidget
-        - name: corner-resizable
-          value: false
-        - name: horizontal-resizable
-          value: false
-        - name: drag-position
-          value: Custom
-        m_RuleIndex: 0
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1002
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -445269792
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1007
-        - rid: 1008
-        - rid: 1009
-        - rid: 1010
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_baseHeader
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1011
-        m_SkipClone: 0
-    - rid: 1003
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -266313442
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1012
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 15
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1013
-        m_SkipClone: 0
-    - rid: 1004
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -803184620
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1014
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 21
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1015
-        m_SkipClone: 0
-    - rid: 1005
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1340055798
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1016
-        - rid: 1017
-        - rid: 1018
-        - rid: 1019
-        - rid: 1020
-        - rid: 1021
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_toggles
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 27
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1022
-        m_SkipClone: 0
-    - rid: 1007
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -896027749
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1023
-        - rid: 1024
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_animation
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 2
-        m_Classes:
-        - tintColor_background_medium100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1025
-        m_SkipClone: 0
-    - rid: 1008
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1164463338
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1026
-        - rid: 1027
-        - rid: 1028
-        - rid: 1029
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_counter
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 5
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1030
-        m_SkipClone: 0
-    - rid: 1009
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -180200221
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1031
-        - rid: 1032
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_turnCounter
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 10
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1033
-        m_SkipClone: 0
-    - rid: 1010
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -448635810
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1034
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_requestHelp
-        m_RuleIndex: 13
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1035
-        m_SkipClone: 0
-    - rid: 1011
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -445269792
-        name: ctr_baseHeader
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1012
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -538115049
-        m_Parent:
-          rid: 1003
-        m_Children:
-        - rid: 1036
-        - rid: 1037
-        - rid: 1038
-        - rid: 1039
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_EndTurn
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 16
-        m_Classes:
-        - tintColor_background_dark100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1040
-        m_SkipClone: 0
-    - rid: 1013
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -266313442
-        name: 
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 0
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1014
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1611857405
-        m_Parent:
-          rid: 1004
-        m_Children:
-        - rid: 1041
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: ctr_timeGauge
-        m_RuleIndex: 22
-        m_Classes:
-        - backgroundColor_white_white25
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1042
-        m_SkipClone: 0
-    - rid: 1015
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -803184620
-        name: 
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 0
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1016
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1609367535
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon-value
-          value: pin
-        - name: name
-          value: tg_permanentPing
-        m_RuleIndex: 28
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1017
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 88233240
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon-value
-          value: pinClock
-        - name: name
-          value: tg_pointCell
-        m_RuleIndex: 29
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1018
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1432901055
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon-value
-          value: eye
-        - name: name
-          value: tg_noSpectator
-        - name: icon-selected-value
-          value: eyeSlashed
-        m_RuleIndex: 30
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1019
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1340931946
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon-value
-          value: lock
-        - name: name
-          value: tg_lockFight
-        m_RuleIndex: 31
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1020
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusToggleButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -180202349
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon-value
-          value: party
-        - name: name
-          value: tg_lockParty
-        m_RuleIndex: 32
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1021
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusButtonCustom
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1701336644
-        m_Parent:
-          rid: 1005
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: enable-rich-text
-          value: false
-        - name: name
-          value: btn_leave
-        - name: icon
-          value: leave
-        - name: status
-          value: negative
-        m_RuleIndex: 33
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1022
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1340055798
-        name: ctr_toggles
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1023
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1427047295
-        m_Parent:
-          rid: 1007
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_animationMessageSeconds
-        - name: is-single-line
-          value: true
-        - name: shadow-offset-y
-          value: 3
-        - name: picking-mode
-          value: Ignore
-        - name: text
-          value: '[+ 20 S]'
-        - name: shadow-offset-x
-          value: -1
-        - name: shadow-color
-          value: '#00000059'
-        m_RuleIndex: 3
-        m_Classes:
-        - title_medium
-        - textColor_spellElements_air
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1024
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -94087000
-        m_Parent:
-          rid: 1007
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_animationMessage
-        - name: is-single-line
-          value: true
-        - name: shadow-offset-y
-          value: 3
-        - name: picking-mode
-          value: Ignore
-        - name: text
-          value: '[AU PROCHAIN TOUR]'
-        - name: shadow-offset-x
-          value: -1
-        - name: shadow-color
-          value: '#00000059'
-        m_RuleIndex: 4
-        m_Classes:
-        - title_medium
-        - textColor_white_white100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1025
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -896027749
-        name: ctr_animation
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1026
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 890176117
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: backgroundCounter
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 6
-        m_Classes:
-        - tintColor_background_dark100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1051
-        m_SkipClone: 0
-    - rid: 1027
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -630958178
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: contentCounter
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 7
-        m_Classes:
-        - tintColor_background_medium100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1052
-        m_SkipClone: 0
-    - rid: 1028
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 2142874823
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: contentCounter
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 8
-        m_Classes:
-        - tintColor_highlight_secondary50
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1053
-        m_SkipClone: 0
-    - rid: 1029
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 621740528
-        m_Parent:
-          rid: 1008
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: shadow-offset-y
-          value: 1
-        - name: text
-          value: '[19s]'
-        - name: name
-          value: lbl_seconds
-        m_RuleIndex: 9
-        m_Classes:
-        - labelShadow_dropShadows_medium
-        - textColor_spellElements_air
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1030
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1164463338
-        name: ctr_counter
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1031
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1436264945
-        m_Parent:
-          rid: 1009
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon
-          value: turn
-        - name: name
-          value: icon_turnCount
-        m_RuleIndex: 11
-        m_Classes:
-        - tintColor_white_white80
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1032
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.Label
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1337568056
-        m_Parent:
-          rid: 1009
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[4]'
-        - name: parse-escape-sequences
-          value: true
-        - name: display-tooltip-when-elided
-          value: true
-        - name: name
-          value: lbl_turnCount
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 12
-        m_Classes:
-        - textShort_largeRegular
-        - textColor_white_white80
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1056
-        m_SkipClone: 0
-    - rid: 1033
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -180200221
-        name: ctr_turnCounter
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1034
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1973136123
-        m_Parent:
-          rid: 1010
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon
-          value: flashingLight
-        - name: has-shadow
-          value: true
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 14
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1035
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -448635810
-        name: ctr_requestHelp
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1036
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1963916345
-        m_Parent:
-          rid: 1012
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: buttonBackground
-        m_RuleIndex: 17
-        m_Classes:
-        - tintColor_buttons_buttonPrimary
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1058
-        m_SkipClone: 0
-    - rid: 1037
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 442782050
-        m_Parent:
-          rid: 1012
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: buttonHighlight
-        m_RuleIndex: 18
-        m_Classes:
-        - tintColor_highlight_primary100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1059
-        m_SkipClone: 0
-    - rid: 1038
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1078352245
-        m_Parent:
-          rid: 1012
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_endTurn
-        - name: is-single-line
-          value: false
-        - name: shadow-offset-y
-          value: 3
-        - name: picking-mode
-          value: Ignore
-        - name: text
-          value: CHOISIR LES CHALLENGES
-        - name: shadow-offset-x
-          value: -1
-        - name: shadow-color
-          value: '#00000059'
-        m_RuleIndex: 19
-        m_Classes:
-        - title_medium
-        - textColor_white_white100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1039
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1695480756
-        m_Parent:
-          rid: 1012
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: btn_EndTurn
-        m_RuleIndex: 20
-        m_Classes:
-        - title_medium
-        - textColor_white_white100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1061
-        m_SkipClone: 0
-    - rid: 1040
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -538115049
-        name: ctr_EndTurn
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1041
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 353302811
-        m_Parent:
-          rid: 1014
-        m_Children:
-        - rid: 1062
-        - rid: 1063
-        - rid: 1064
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: ctr_timerBarValue
-        m_RuleIndex: 23
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1065
-        m_SkipClone: 0
-    - rid: 1042
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1611857405
-        name: ctr_timeGauge
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1051
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 890176117
-        name: backgroundCounter
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1052
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -630958178
-        name: contentCounter
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1053
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 2142874823
-        name: contentCounter
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1056
-      type: {class: Label/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 1337568056
-        name: lbl_turnCount
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        text: '[4]'
-        text_UxmlAttributeFlags: 1
-        enableRichText: 0
-        enableRichText_UxmlAttributeFlags: 0
-        emojiFallbackSupport: 0
-        emojiFallbackSupport_UxmlAttributeFlags: 0
-        parseEscapeSequences: 1
-        parseEscapeSequences_UxmlAttributeFlags: 1
-        isSelectable: 0
-        isSelectable_UxmlAttributeFlags: 0
-        doubleClickSelectsWord: 0
-        doubleClickSelectsWord_UxmlAttributeFlags: 0
-        tripleClickSelectsLine: 0
-        tripleClickSelectsLine_UxmlAttributeFlags: 0
-        displayTooltipWhenElided: 1
-        displayTooltipWhenElided_UxmlAttributeFlags: 1
-    - rid: 1058
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 1963916345
-        name: buttonBackground
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1059
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 442782050
-        name: buttonHighlight
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1061
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 1695480756
-        name: btn_EndTurn
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1062
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 797328732
-        m_Parent:
-          rid: 1041
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        - name: name
-          value: coloredTimerGauge
-        m_RuleIndex: 24
-        m_Classes:
-        - backgroundColor_spellElements_air
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1066
-        m_SkipClone: 0
-    - rid: 1063
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -723805563
-        m_Parent:
-          rid: 1041
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 25
-        m_Classes:
-        - backgroundColor_white_white65
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1067
-        m_SkipClone: 0
-    - rid: 1064
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 2050027438
-        m_Parent:
-          rid: 1041
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 26
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1068
-        m_SkipClone: 0
-    - rid: 1065
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 353302811
-        name: ctr_timerBarValue
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1066
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 797328732
-        name: coloredTimerGauge
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1067
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -723805563
-        name: 
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 0
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1068
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 2050027438
-        name: 
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 1
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 0
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 1
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0

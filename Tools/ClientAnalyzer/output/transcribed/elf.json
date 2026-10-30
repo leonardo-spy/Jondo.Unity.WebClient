@@ -1,0 +1,4220 @@
+{
+  "type": "elf",
+  "methodCount": 4,
+  "transcribed": 4,
+  "methods": [
+    {
+      "method": "lmu",
+      "signature": "public static fzc lmu(ezl a, MapPoint b, MapPoint c, bool d = True, bool e = True, bool f = False)",
+      "line": 306919,
+      "va": "0x18174c480",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 1941,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (DAT_186784dbe == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((c != (Core_PathFinding_WorldData_MapPoint_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 212
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (a != (ezl_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (cVar24 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (0 < iVar26) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 252
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (uVar29 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 312,
+            "condition": "if ((pSVar2->fields)._size < 1) break;"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 326,
+            "condition": "if (peVar3->m_Items[(int)uStack_228].fields.isCellClosed != false) break;"
+          },
+          {
+            "type": "IF",
+            "line": 330,
+            "condition": "if (-0x41 < (int)uVar29) {"
+          },
+          {
+            "type": "IF",
+            "line": 332,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 380,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 382,
+            "condition": "if ((pSVar2->fields)._size <= (int)uVar42) break;"
+          },
+          {
+            "type": "IF",
+            "line": 384,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 394,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_int__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if ((uint)peVar3->max_length <= (uint)apfStack_1c8[0]) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 424,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 432,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 440,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 460
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 462
+          },
+          {
+            "type": "IF",
+            "line": 468,
+            "condition": "if (__this == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 478,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 480,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 490,
+            "condition": "if (iVar43 <= iVar27 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 500,
+            "condition": "if (UStack_218.monitor._4_4_ <= iVar26 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 508,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 514
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 516
+          },
+          {
+            "type": "IF",
+            "line": 518,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 528,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 530,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 532,
+            "condition": "if (((peVar3->m_Items[(int)a_00].fields.isCellClosed == false) &&"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (a_00 != uStack_228) {"
+          },
+          {
+            "type": "IF",
+            "line": 560,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 562,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 572,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 576,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell == false) {"
+          },
+          {
+            "type": "IF",
+            "line": 578,
+            "condition": "if ((int)uVar28 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 580,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 604,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 612,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 614,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 616,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 622,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 628
+          },
+          {
+            "type": "IF",
+            "line": 630,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 632,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 640,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 646
+          },
+          {
+            "type": "IF",
+            "line": 648,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 650,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 652,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 660,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 666
+          },
+          {
+            "type": "IF",
+            "line": 668,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 670,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 678,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 684
+          },
+          {
+            "type": "IF",
+            "line": 686,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 688,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 690,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 698,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 704
+          },
+          {
+            "type": "IF",
+            "line": 706,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 708,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 716,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 722
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 726,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 728,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 736,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 742
+          },
+          {
+            "type": "IF",
+            "line": 744,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 746,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 754,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 760
+          },
+          {
+            "type": "IF",
+            "line": 762,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 764,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 766,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 778,
+            "condition": "if ((uVar41 & 2) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 788,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 796,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 798,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 800,
+            "condition": "if ((iVar43 == iVar27) || (lVar33 = 0x34, iVar30 == iVar26)) {"
+          },
+          {
+            "type": "IF",
+            "line": 810,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 830,
+            "condition": "if (((!bVar25) && (iVar37 != iVar38)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 834,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 840
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 842
+          },
+          {
+            "type": "IF",
+            "line": 850,
+            "condition": "if ((UStack_218.monitor._4_4_ == UStack_200.monitor._4_4_) ||"
+          },
+          {
+            "type": "IF",
+            "line": 858,
+            "condition": "if (((iVar37 == iVar38 || bVar25) ||"
+          },
+          {
+            "type": "IF",
+            "line": 868,
+            "condition": "if (((uint)SStack_1e8.ulomidLE == (b->fields).dwlw) ||"
+          },
+          {
+            "type": "IF",
+            "line": 876,
+            "condition": "if (iVar37 == iVar36 || iVar40 == iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 882,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 888
+          },
+          {
+            "type": "IF",
+            "line": 896,
+            "condition": "if (iVar31 < SStack_1e8.ulomidLE._4_4_) {"
+          },
+          {
+            "type": "IF",
+            "line": 906,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 914,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 916,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 920,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 926
+          },
+          {
+            "type": "IF",
+            "line": 928,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 930,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 938,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 940,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 942,
+            "condition": "if ((float)peVar3->m_Items[(int)a_00].fields.costOfCell <= fVar47)"
+          },
+          {
+            "type": "IF",
+            "line": 948,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 956,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 958,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 964,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 966,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 970,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 978,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 980,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 994,
+            "condition": "if (auVar46._0_8_ < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1016,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 1030,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1032,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1042,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 1088
+          },
+          {
+            "type": "IF",
+            "line": 1090,
+            "condition": "if (pfVar35 == (fzc_o *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1094,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1102,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1104,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1108,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1114
+          },
+          {
+            "type": "IF",
+            "line": 1118,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1122,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1128
+          },
+          {
+            "type": "IF",
+            "line": 1142,
+            "condition": "if (uStack_228 == uStack_1f0) goto LAB_18174e08b;"
+          },
+          {
+            "type": "IF",
+            "line": 1174,
+            "condition": "if (-0x1b < (int)uVar42) {"
+          },
+          {
+            "type": "IF",
+            "line": 1176,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 1192,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 1202,
+            "string_arg": "ShRxxXCqJiT//DJiFdRPLZUXxSbsMYKYlH8w7nHrsbU="
+          },
+          {
+            "type": "IF",
+            "line": 1208,
+            "condition": "if (!d) {"
+          },
+          {
+            "type": "IF",
+            "line": 1210,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1218,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1220,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1224,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1230
+          },
+          {
+            "type": "IF",
+            "line": 1234,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1236,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1240,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1246
+          },
+          {
+            "type": "IF",
+            "line": 1254,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1262,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1264,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1268,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1274
+          },
+          {
+            "type": "IF",
+            "line": 1276,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1278,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1286,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1288,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1300,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1306
+          },
+          {
+            "type": "IF",
+            "line": 1308,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1310,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1318,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1320,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1332,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1338
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1340
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1342
+          },
+          {
+            "type": "IF",
+            "line": 1344,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1346,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1352
+          },
+          {
+            "type": "IF",
+            "line": 1354,
+            "condition": "if (iVar32 != 1) goto LAB_18174d79f;"
+          },
+          {
+            "type": "IF",
+            "line": 1358,
+            "condition": "if (cVar24 != '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1362,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1370,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1372,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1384,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1390
+          },
+          {
+            "type": "IF",
+            "line": 1392,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1394,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1400
+          },
+          {
+            "type": "IF",
+            "line": 1402,
+            "condition": "if (iVar32 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1404,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1410
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1412
+          },
+          {
+            "type": "IF",
+            "line": 1414,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1450
+          },
+          {
+            "type": "IF",
+            "line": 1478,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1484,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1492,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1536
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1572
+          },
+          {
+            "type": "IF",
+            "line": 1600,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1608,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1650
+          },
+          {
+            "type": "IF",
+            "line": 1654,
+            "condition": "if ((cVar24 != '\\0') && (fVar44 = (float)FUN_1800a6920(8), fVar44 < fVar18)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1656,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1664,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1666,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1672
+          },
+          {
+            "type": "IF",
+            "line": 1674,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1696,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1702
+          },
+          {
+            "type": "IF",
+            "line": 1704,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1706,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1712
+          },
+          {
+            "type": "IF",
+            "line": 1714,
+            "condition": "if (iVar26 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1716,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1722
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1724
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1726
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1730
+          },
+          {
+            "type": "IF",
+            "line": 1732,
+            "condition": "if ((iVar31 + iVar30 == b_00 + iVar32) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1734,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1740
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1742
+          },
+          {
+            "type": "IF",
+            "line": 1748,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174dc0b;"
+          },
+          {
+            "type": "IF",
+            "line": 1752,
+            "condition": "if ((iVar30 - iVar31 == iVar32 - b_00) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1754,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1760
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1762
+          },
+          {
+            "type": "IF",
+            "line": 1766,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174dc0b;"
+          },
+          {
+            "type": "IF",
+            "line": 1772,
+            "condition": "if ((((iVar30 != iVar32) || (iVar30 == (int32_t)UStack_218.monitor)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 1778,
+            "condition": "if (((iVar31 == b_00) && (iVar31 != b_01)) &&"
+          },
+          {
+            "type": "IF",
+            "line": 1784,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1792,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1794,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1800
+          },
+          {
+            "type": "IF",
+            "line": 1802,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1812,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1820,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1822,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1828
+          },
+          {
+            "type": "IF",
+            "line": 1830,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1844,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1852,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1854,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1858,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1864
+          },
+          {
+            "type": "IF",
+            "line": 1868,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1870,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1874,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1880
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 1890
+          },
+          {
+            "type": "CALL",
+            "class": "fzc",
+            "method": "bjhs",
+            "line": 1892
+          },
+          {
+            "type": "IF",
+            "line": 1894,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1902,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174e0f5;"
+          },
+          {
+            "type": "IF",
+            "line": 1904,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174e0fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1910,
+            "condition": "if (uStack_228 == uVar29) goto LAB_18174e08b;"
+          },
+          {
+            "type": "IF",
+            "line": 1918,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 263,
+        "varMap": {
+          "message": "FmDPvZmHeLkE79IyuSBMrNNASIuWk8g6PmiYBs5SOU4=",
+          "file": "ShRxxXCqJiT//DJiFdRPLZUXxSbsMYKYlH8w7nHrsbU="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 55,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  System_Collections_Generic_List_int__o *pSVar2;\n\n  elf_CellData_array *peVar3;\n\n  System_Collections_Generic_List_T__o *__this;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  undefined8 uVar6;\n\n  undefined8 uVar7;\n\n  undefined8 uVar8;\n\n  undefined8 uVar9;\n\n  undefined8 uVar10;\n\n  undefined8 uVar11;\n\n  undefined8 uVar12;\n\n  undefined8 uVar13;\n\n  undefined8 uVar14;\n\n  undefined8 uVar15;\n\n  undefined8 uVar16;\n\n  float fVar17;\n..."
+    },
+    {
+      "method": "zgr",
+      "signature": "public static fzc zgr(ezl a, MapPoint b, MapPoint c, bool d = True, bool e = True, bool f = False)",
+      "line": 306922,
+      "va": "0x18174e110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 1935,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (DAT_186784dbf == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((c != (Core_PathFinding_WorldData_MapPoint_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 212
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (a != (ezl_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (cVar24 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (0 < iVar26) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 252
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (uVar29 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 312,
+            "condition": "if ((pSVar2->fields)._size < 1) break;"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 326,
+            "condition": "if (peVar3->m_Items[(int)uStack_228].fields.isCellClosed != false) break;"
+          },
+          {
+            "type": "IF",
+            "line": 330,
+            "condition": "if (1000 < (int)uVar29) {"
+          },
+          {
+            "type": "IF",
+            "line": 332,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 380,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 382,
+            "condition": "if ((pSVar2->fields)._size <= (int)uVar42) break;"
+          },
+          {
+            "type": "IF",
+            "line": 384,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 394,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_int__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if ((uint)peVar3->max_length <= (uint)apfStack_1c8[0]) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 424,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 432,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 440,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 460
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 462
+          },
+          {
+            "type": "IF",
+            "line": 468,
+            "condition": "if (__this == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 478,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 480,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 490,
+            "condition": "if (iVar43 <= iVar27 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 500,
+            "condition": "if (UStack_218.monitor._4_4_ <= iVar26 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 508,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 514
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 516
+          },
+          {
+            "type": "IF",
+            "line": 518,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 528,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 530,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 532,
+            "condition": "if (((peVar3->m_Items[(int)a_00].fields.isCellClosed == false) &&"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (a_00 != uStack_228) {"
+          },
+          {
+            "type": "IF",
+            "line": 558,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 560,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 568,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 574,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell == false) {"
+          },
+          {
+            "type": "IF",
+            "line": 576,
+            "condition": "if ((int)uVar28 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 578,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 602,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 610,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 612,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 614,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 620,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 626
+          },
+          {
+            "type": "IF",
+            "line": 628,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 630,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 638,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 644
+          },
+          {
+            "type": "IF",
+            "line": 646,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 648,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 650,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 658,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 664
+          },
+          {
+            "type": "IF",
+            "line": 666,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 668,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 676,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 682
+          },
+          {
+            "type": "IF",
+            "line": 684,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 686,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 688,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 696,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 702
+          },
+          {
+            "type": "IF",
+            "line": 704,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 706,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 714,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 720
+          },
+          {
+            "type": "IF",
+            "line": 722,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 726,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 734,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 740
+          },
+          {
+            "type": "IF",
+            "line": 742,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 744,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 752,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 758
+          },
+          {
+            "type": "IF",
+            "line": 760,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 762,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 764,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 776,
+            "condition": "if ((uVar41 & 2) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 786,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 794,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 796,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 798,
+            "condition": "if ((iVar43 == iVar27) || (lVar33 = 0xf, iVar30 == iVar26)) {"
+          },
+          {
+            "type": "IF",
+            "line": 808,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 828,
+            "condition": "if (((!bVar25) && (iVar37 != iVar38)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 832,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 838
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 840
+          },
+          {
+            "type": "IF",
+            "line": 848,
+            "condition": "if ((UStack_218.monitor._4_4_ == UStack_200.monitor._4_4_) ||"
+          },
+          {
+            "type": "IF",
+            "line": 856,
+            "condition": "if (((iVar37 == iVar38 || bVar25) ||"
+          },
+          {
+            "type": "IF",
+            "line": 866,
+            "condition": "if (((uint)SStack_1e8.ulomidLE == (b->fields).dwlw) ||"
+          },
+          {
+            "type": "IF",
+            "line": 874,
+            "condition": "if (iVar37 == iVar36 || iVar40 == iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 880,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 886
+          },
+          {
+            "type": "IF",
+            "line": 894,
+            "condition": "if (iVar31 < SStack_1e8.ulomidLE._4_4_) {"
+          },
+          {
+            "type": "IF",
+            "line": 904,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 912,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 914,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 918,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 924
+          },
+          {
+            "type": "IF",
+            "line": 926,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 928,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 936,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 938,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 940,
+            "condition": "if ((float)peVar3->m_Items[(int)a_00].fields.costOfCell <= fVar47)"
+          },
+          {
+            "type": "IF",
+            "line": 946,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 954,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 956,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 962,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 964,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 968,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 976,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 978,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 992,
+            "condition": "if (auVar46._0_8_ < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1014,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 1028,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1030,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1040,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 1086
+          },
+          {
+            "type": "IF",
+            "line": 1088,
+            "condition": "if (pfVar35 == (fzc_o *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1092,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1100,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1102,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1106,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1112
+          },
+          {
+            "type": "IF",
+            "line": 1116,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1120,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1126
+          },
+          {
+            "type": "IF",
+            "line": 1136,
+            "condition": "if (uStack_228 == uStack_1f0) goto LAB_18174fcfd;"
+          },
+          {
+            "type": "IF",
+            "line": 1168,
+            "condition": "if (1000 < (int)uVar42) {"
+          },
+          {
+            "type": "IF",
+            "line": 1170,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 1186,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 1196,
+            "string_arg": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Engine\\PathFindingService\\MapPathfinding.cs"
+          },
+          {
+            "type": "IF",
+            "line": 1202,
+            "condition": "if (!d) {"
+          },
+          {
+            "type": "IF",
+            "line": 1204,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1212,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1214,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1218,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1224
+          },
+          {
+            "type": "IF",
+            "line": 1228,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1230,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1234,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1240
+          },
+          {
+            "type": "IF",
+            "line": 1248,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1256,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1258,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1262,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1268
+          },
+          {
+            "type": "IF",
+            "line": 1270,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1272,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1280,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1282,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1294,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1300
+          },
+          {
+            "type": "IF",
+            "line": 1302,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1304,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1312,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1314,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1326,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1332
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1334
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1336
+          },
+          {
+            "type": "IF",
+            "line": 1338,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1340,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1346
+          },
+          {
+            "type": "IF",
+            "line": 1348,
+            "condition": "if (iVar32 != 1) goto LAB_18174f411;"
+          },
+          {
+            "type": "IF",
+            "line": 1352,
+            "condition": "if (cVar24 != '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1356,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1364,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1366,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1378,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1384
+          },
+          {
+            "type": "IF",
+            "line": 1386,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1388,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1394
+          },
+          {
+            "type": "IF",
+            "line": 1396,
+            "condition": "if (iVar32 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1398,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1404
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1406
+          },
+          {
+            "type": "IF",
+            "line": 1408,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1444
+          },
+          {
+            "type": "IF",
+            "line": 1472,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1478,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1486,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1530
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1566
+          },
+          {
+            "type": "IF",
+            "line": 1594,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1602,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1644
+          },
+          {
+            "type": "IF",
+            "line": 1648,
+            "condition": "if ((cVar24 != '\\0') && (fVar44 = (float)FUN_1800a6920(8), fVar44 < fVar17)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1650,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1658,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1660,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1666
+          },
+          {
+            "type": "IF",
+            "line": 1668,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1690,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1696
+          },
+          {
+            "type": "IF",
+            "line": 1698,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1700,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1706
+          },
+          {
+            "type": "IF",
+            "line": 1708,
+            "condition": "if (iVar26 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1710,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1716
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1718
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1720
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1724
+          },
+          {
+            "type": "IF",
+            "line": 1726,
+            "condition": "if ((iVar31 + iVar30 == b_00 + iVar32) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1728,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1734
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1736
+          },
+          {
+            "type": "IF",
+            "line": 1742,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174f87d;"
+          },
+          {
+            "type": "IF",
+            "line": 1746,
+            "condition": "if ((iVar30 - iVar31 == iVar32 - b_00) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1748,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1754
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1756
+          },
+          {
+            "type": "IF",
+            "line": 1760,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174f87d;"
+          },
+          {
+            "type": "IF",
+            "line": 1766,
+            "condition": "if ((((iVar30 != iVar32) || (iVar30 == (int32_t)UStack_218.monitor)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 1772,
+            "condition": "if (((iVar31 == b_00) && (iVar31 != b_01)) &&"
+          },
+          {
+            "type": "IF",
+            "line": 1778,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1786,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1788,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1794
+          },
+          {
+            "type": "IF",
+            "line": 1796,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1806,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1814,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1816,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1822
+          },
+          {
+            "type": "IF",
+            "line": 1824,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1838,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1846,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1848,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1852,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1858
+          },
+          {
+            "type": "IF",
+            "line": 1862,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1864,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1868,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1874
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 1884
+          },
+          {
+            "type": "CALL",
+            "class": "fzc",
+            "method": "bjhs",
+            "line": 1886
+          },
+          {
+            "type": "IF",
+            "line": 1888,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1896,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174fd68;"
+          },
+          {
+            "type": "IF",
+            "line": 1898,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174fd6e;"
+          },
+          {
+            "type": "IF",
+            "line": 1904,
+            "condition": "if (uStack_228 == uVar29) goto LAB_18174fcfd;"
+          },
+          {
+            "type": "IF",
+            "line": 1912,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 263,
+        "varMap": {
+          "message": "Too many iterations on MapPathfinding",
+          "file": "C:\\TeamCity\\buildAgent-2\\work\\bb6631cefc89a98\\Dofus-Client-Unity\\Assets\\Core\\Services\\Engine\\PathFindingService\\MapPathfinding.cs"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 55,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  System_Collections_Generic_List_int__o *pSVar2;\n\n  elf_CellData_array *peVar3;\n\n  System_Collections_Generic_List_T__o *__this;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  undefined8 uVar6;\n\n  undefined8 uVar7;\n\n  undefined8 uVar8;\n\n  undefined8 uVar9;\n\n  undefined8 uVar10;\n\n  undefined8 uVar11;\n\n  undefined8 uVar12;\n\n  undefined8 uVar13;\n\n  undefined8 uVar14;\n\n  undefined8 uVar15;\n\n  undefined8 uVar16;\n\n  float fVar17;\n..."
+    },
+    {
+      "method": "cctor",
+      "signature": "private static void .cctor()",
+      "line": 306925,
+      "va": "0x18174a740",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 39,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_186784dc0 == '\\0') {"
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "doja",
+            "line": 24
+          },
+          {
+            "type": "FIELD_SET",
+            "field": "dojb",
+            "line": 34
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 2
+      },
+      "bodyPreview": "{\n\n  elf_CellData_array *peVar1;\n\n  System_Collections_Generic_List_T__o *__this;\n\n\n\n  if (DAT_186784dc0 == '\\0') {\n\n    FUN_1805658a0(&elf_CellData___TypeInfo);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_List<int>_TypeInfo);\n\n    FUN_1805658a0(&elf_TypeInfo);\n\n    DAT_186784dc0 = '\\x01';\n\n  }\n\n  peVar1 = (elf_CellData_array *)func_0x000180564c50(elf_CellData___TypeInfo,0x230);\n\n  elf_TypeInfo->static_fields->doja = pe..."
+    },
+    {
+      "method": "ll",
+      "signature": "public static fzc ll(ezl a, MapPoint b, MapPoint c, bool d = True, bool e = True, bool f = False)",
+      "line": 306928,
+      "va": "0x18174a7f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 1941,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (DAT_186784dc1 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 192,
+            "condition": "if ((c != (Core_PathFinding_WorldData_MapPoint_o *)0x0) &&"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 212
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 220,
+            "condition": "if (a != (ezl_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 228,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 238,
+            "condition": "if (cVar24 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 250,
+            "condition": "if (0 < iVar26) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 252
+          },
+          {
+            "type": "IF",
+            "line": 262,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 264,
+            "condition": "if (uVar29 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 272,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 310,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 312,
+            "condition": "if ((pSVar2->fields)._size < 1) break;"
+          },
+          {
+            "type": "IF",
+            "line": 314,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 324,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 326,
+            "condition": "if (peVar3->m_Items[(int)uStack_228].fields.isCellClosed != false) break;"
+          },
+          {
+            "type": "IF",
+            "line": 330,
+            "condition": "if (0x1e < (int)uVar29) {"
+          },
+          {
+            "type": "IF",
+            "line": 332,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 350,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 380,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 382,
+            "condition": "if ((pSVar2->fields)._size <= (int)uVar42) break;"
+          },
+          {
+            "type": "IF",
+            "line": 384,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 394,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_int__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if ((uint)peVar3->max_length <= (uint)apfStack_1c8[0]) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 414,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 424,
+            "condition": "if (iVar43 < iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 432,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 440,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_int__o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 460
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 462
+          },
+          {
+            "type": "IF",
+            "line": 468,
+            "condition": "if (__this == (System_Collections_Generic_List_T__o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 478,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 480,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 490,
+            "condition": "if (iVar43 <= iVar27 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 500,
+            "condition": "if (UStack_218.monitor._4_4_ <= iVar26 + 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 508,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 514
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 516
+          },
+          {
+            "type": "IF",
+            "line": 518,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 528,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 530,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 532,
+            "condition": "if (((peVar3->m_Items[(int)a_00].fields.isCellClosed == false) &&"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (a_00 != uStack_228) {"
+          },
+          {
+            "type": "IF",
+            "line": 560,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 562,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 572,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 576,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell == false) {"
+          },
+          {
+            "type": "IF",
+            "line": 578,
+            "condition": "if ((int)uVar28 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 580,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 604,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 612,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 614,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 616,
+            "condition": "if (peVar3->m_Items[(int)a_00].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 622,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 628
+          },
+          {
+            "type": "IF",
+            "line": 630,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 632,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 640,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 646
+          },
+          {
+            "type": "IF",
+            "line": 648,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 650,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 652,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 660,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 666
+          },
+          {
+            "type": "IF",
+            "line": 668,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 670,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 678,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 684
+          },
+          {
+            "type": "IF",
+            "line": 686,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 688,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 690,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 698,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 704
+          },
+          {
+            "type": "IF",
+            "line": 706,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 708,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 716,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 722
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 726,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 728,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 736,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 742
+          },
+          {
+            "type": "IF",
+            "line": 744,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 746,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 754,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 760
+          },
+          {
+            "type": "IF",
+            "line": 762,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 764,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 766,
+            "condition": "if (peVar3->m_Items[(int)uVar29].fields.isEntityOnCell != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 778,
+            "condition": "if ((uVar41 & 2) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 788,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 796,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 798,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 800,
+            "condition": "if ((iVar43 == iVar27) || (lVar33 = 0x11, iVar30 == iVar26)) {"
+          },
+          {
+            "type": "IF",
+            "line": 810,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 830,
+            "condition": "if (((!bVar25) && (iVar37 != iVar38)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 834,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 840
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 842
+          },
+          {
+            "type": "IF",
+            "line": 850,
+            "condition": "if ((UStack_218.monitor._4_4_ == UStack_200.monitor._4_4_) ||"
+          },
+          {
+            "type": "IF",
+            "line": 858,
+            "condition": "if (((iVar37 == iVar38 || bVar25) ||"
+          },
+          {
+            "type": "IF",
+            "line": 868,
+            "condition": "if (((uint)SStack_1e8.ulomidLE == (b->fields).dwlw) ||"
+          },
+          {
+            "type": "IF",
+            "line": 876,
+            "condition": "if (iVar37 == iVar36 || iVar40 == iVar27) {"
+          },
+          {
+            "type": "IF",
+            "line": 882,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 888
+          },
+          {
+            "type": "IF",
+            "line": 896,
+            "condition": "if (iVar31 < SStack_1e8.ulomidLE._4_4_) {"
+          },
+          {
+            "type": "IF",
+            "line": 906,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 914,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 916,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 920,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 926
+          },
+          {
+            "type": "IF",
+            "line": 928,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 930,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 938,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 940,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 942,
+            "condition": "if ((float)peVar3->m_Items[(int)a_00].fields.costOfCell <= fVar47)"
+          },
+          {
+            "type": "IF",
+            "line": 948,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 956,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 958,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 964,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 966,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 970,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 978,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 980,
+            "condition": "if ((uint)peVar3->max_length <= a_00) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 994,
+            "condition": "if (auVar46._0_8_ < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1016,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "IF",
+            "line": 1030,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1032,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1042,
+            "condition": "if (pSVar39 == (System_Collections_Generic_List_T__o *)0x0)"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 1088
+          },
+          {
+            "type": "IF",
+            "line": 1090,
+            "condition": "if (pfVar35 == (fzc_o *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1094,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1102,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1104,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1108,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1114
+          },
+          {
+            "type": "IF",
+            "line": 1118,
+            "condition": "if (!bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1122,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1128
+          },
+          {
+            "type": "IF",
+            "line": 1142,
+            "condition": "if (uStack_228 == uStack_1f0) goto LAB_18174c3fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1174,
+            "condition": "if (0x62 < (int)uVar42) {"
+          },
+          {
+            "type": "IF",
+            "line": 1176,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 1192,
+            "condition": "if (*(int *)&(Ankama_Logging_Log_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Ankama_Logging_Log",
+            "method": "Error",
+            "line": 1202,
+            "string_arg": "33cuID0zjkEyCpJoBe+0s3DzBzbhPkowNvQnumzTwDc="
+          },
+          {
+            "type": "IF",
+            "line": 1208,
+            "condition": "if (!d) {"
+          },
+          {
+            "type": "IF",
+            "line": 1210,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1218,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1220,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1224,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1230
+          },
+          {
+            "type": "IF",
+            "line": 1234,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1236,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1240,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1246
+          },
+          {
+            "type": "IF",
+            "line": 1254,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1262,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1264,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1268,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1274
+          },
+          {
+            "type": "IF",
+            "line": 1276,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1278,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1286,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1288,
+            "condition": "if ((uint)peVar3->max_length <= uVar29) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1300,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1306
+          },
+          {
+            "type": "IF",
+            "line": 1308,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1310,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1318,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1320,
+            "condition": "if ((uint)peVar3->max_length <= uVar42) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1332,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1338
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1340
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1342
+          },
+          {
+            "type": "IF",
+            "line": 1344,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1346,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1352
+          },
+          {
+            "type": "IF",
+            "line": 1354,
+            "condition": "if (iVar32 != 1) goto LAB_18174bb0f;"
+          },
+          {
+            "type": "IF",
+            "line": 1358,
+            "condition": "if (cVar24 != '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1362,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1370,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1372,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1384,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1390
+          },
+          {
+            "type": "IF",
+            "line": 1392,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1394,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1400
+          },
+          {
+            "type": "IF",
+            "line": 1402,
+            "condition": "if (iVar32 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1404,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1410
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1412
+          },
+          {
+            "type": "IF",
+            "line": 1414,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1450
+          },
+          {
+            "type": "IF",
+            "line": 1478,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1484,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1492,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1536
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal_",
+            "method": "ctor",
+            "line": 1572
+          },
+          {
+            "type": "IF",
+            "line": 1600,
+            "condition": "if (DAT_186784ea0 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 1608,
+            "condition": "if (*(int *)&(System_Decimal_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Decimal",
+            "method": "op_Explicit",
+            "line": 1650
+          },
+          {
+            "type": "IF",
+            "line": 1654,
+            "condition": "if ((cVar24 != '\\0') && (fVar44 = (float)FUN_1800a6920(8), fVar44 < fVar19)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1656,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1664,
+            "condition": "if (peVar3 != (elf_CellData_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1666,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1672
+          },
+          {
+            "type": "IF",
+            "line": 1674,
+            "condition": "if (uStack_228 < (uint)peVar3->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 1696,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 1702
+          },
+          {
+            "type": "IF",
+            "line": 1704,
+            "condition": "if (bVar25) {"
+          },
+          {
+            "type": "IF",
+            "line": 1706,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owi",
+            "line": 1712
+          },
+          {
+            "type": "IF",
+            "line": 1714,
+            "condition": "if (iVar26 == 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 1716,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1722
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1724
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owg",
+            "line": 1726
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owh",
+            "line": 1730
+          },
+          {
+            "type": "IF",
+            "line": 1732,
+            "condition": "if ((iVar31 + iVar30 == b_00 + iVar32) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1734,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1740
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1742
+          },
+          {
+            "type": "IF",
+            "line": 1748,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174bf7b;"
+          },
+          {
+            "type": "IF",
+            "line": 1752,
+            "condition": "if ((iVar30 - iVar31 == iVar32 - b_00) && (iVar30 - iVar31 != iVar26 - b_01)) {"
+          },
+          {
+            "type": "IF",
+            "line": 1754,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1760
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1762
+          },
+          {
+            "type": "IF",
+            "line": 1766,
+            "condition": "if (cVar24 == '\\0') goto LAB_18174bf7b;"
+          },
+          {
+            "type": "IF",
+            "line": 1772,
+            "condition": "if ((((iVar30 != iVar32) || (iVar30 == (int32_t)UStack_218.monitor)) ||"
+          },
+          {
+            "type": "IF",
+            "line": 1778,
+            "condition": "if (((iVar31 == b_00) && (iVar31 != b_01)) &&"
+          },
+          {
+            "type": "IF",
+            "line": 1784,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1792,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1794,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1800
+          },
+          {
+            "type": "IF",
+            "line": 1802,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1812,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1820,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1822,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 1828
+          },
+          {
+            "type": "IF",
+            "line": 1830,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1844,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1852,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1854,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1858,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 1864
+          },
+          {
+            "type": "IF",
+            "line": 1868,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1870,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1874,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovk",
+            "line": 1880
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 1890
+          },
+          {
+            "type": "CALL",
+            "class": "fzc",
+            "method": "bjhs",
+            "line": 1892
+          },
+          {
+            "type": "IF",
+            "line": 1894,
+            "condition": "if (*(int *)&(elf_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 1902,
+            "condition": "if (peVar3 == (elf_CellData_array *)0x0) goto LAB_18174c465;"
+          },
+          {
+            "type": "IF",
+            "line": 1904,
+            "condition": "if ((uint)peVar3->max_length <= uStack_228) goto LAB_18174c46b;"
+          },
+          {
+            "type": "IF",
+            "line": 1910,
+            "condition": "if (uStack_228 == uVar29) goto LAB_18174c3fb;"
+          },
+          {
+            "type": "IF",
+            "line": 1918,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 263,
+        "varMap": {
+          "message": "gkIOyFH6QxIZ0Baf58HmbZ8TKvL8NxLY1Ck/1z9YmSM=",
+          "file": "33cuID0zjkEyCpJoBe+0s3DzBzbhPkowNvQnumzTwDc="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 55,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  System_Collections_Generic_List_int__o *pSVar2;\n\n  elf_CellData_array *peVar3;\n\n  System_Collections_Generic_List_T__o *__this;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  undefined8 uVar5;\n\n  undefined8 uVar6;\n\n  undefined8 uVar7;\n\n  undefined8 uVar8;\n\n  undefined8 uVar9;\n\n  undefined8 uVar10;\n\n  undefined8 uVar11;\n\n  undefined8 uVar12;\n\n  undefined8 uVar13;\n\n  undefined8 uVar14;\n\n  undefined8 uVar15;\n\n  undefined8 uVar16;\n\n  float fVar17;\n..."
+    }
+  ]
+}

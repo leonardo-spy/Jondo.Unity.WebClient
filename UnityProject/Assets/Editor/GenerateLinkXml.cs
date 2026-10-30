@@ -97,6 +97,13 @@ public static class GenerateLinkXml
         // Build link.xml
         var sb = new StringBuilder();
         sb.AppendLine("<linker>");
+        sb.AppendLine("  <!-- Unity Engine UIElements and TextCore types preserved for UXML deserialization from AssetBundles -->");
+        sb.AppendLine("  <assembly fullname=\"UnityEngine.UIElementsModule\" preserve=\"all\"/>");
+        sb.AppendLine("  <assembly fullname=\"UnityEngine.TextCoreFontEngineModule\" preserve=\"all\"/>");
+        sb.AppendLine("  <assembly fullname=\"UnityEngine.TextCoreTextEngineModule\" preserve=\"all\"/>");
+        sb.AppendLine("  <assembly fullname=\"UnityEngine.UIModule\" preserve=\"all\"/>");
+        sb.AppendLine("  <assembly fullname=\"UnityEngine.IMGUIModule\" preserve=\"all\"/>");
+        sb.AppendLine("  <assembly fullname=\"Assembly-CSharp\" preserve=\"all\"/>");
 
         // Core assembly: services + VE types
         sb.AppendLine("  <assembly fullname=\"Core\" preserve=\"nothing\">");

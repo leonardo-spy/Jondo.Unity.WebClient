@@ -1,0 +1,1927 @@
+{
+  "type": "eni",
+  "methodCount": 41,
+  "transcribed": 41,
+  "methods": [
+    {
+      "method": "zyv",
+      "signature": "private bool zyv(hpp a)",
+      "line": 311833,
+      "va": "0x17ab9f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (a != (hpp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if ((a->fields).edvw == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "mig_mif_mia",
+            "method": "dacm",
+            "line": 18
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "hpp",
+            "method": "brim",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 26
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t a_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  undefined1 uVar3;\n\n  int32_t b;\n\n\n\n  if (a != (hpp_o *)0x0) {\n\n    if ((a->fields).edvw == 1) {\n\n      bVar2 = mig_mif_mia__dacm((mig_mif_mia_o *)a,(MethodInfo *)0x0);\n\n      if (bVar2) {\n\n        a_00 = (a->fields).edwa;\n\n        b = hpp__brim(a,(MethodInfo *)0x0);\n\n        eni__zyz(__this,a_00,b,(a->fields).edvu,(MethodInfo *)0x0);\n\n      }\n\n    }\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  uVar3 = (*pcVar1)();..."
+    },
+    {
+      "method": "bvl",
+      "signature": "private bool bvl(hpp a)",
+      "line": 311836,
+      "va": "0x17ab9f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (a != (hpp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if ((a->fields).edvw == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "mig_mif_mia",
+            "method": "dacm",
+            "line": 18
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "hpp",
+            "method": "brim",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 26
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t a_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  undefined1 uVar3;\n\n  int32_t b;\n\n\n\n  if (a != (hpp_o *)0x0) {\n\n    if ((a->fields).edvw == 1) {\n\n      bVar2 = mig_mif_mia__dacm((mig_mif_mia_o *)a,(MethodInfo *)0x0);\n\n      if (bVar2) {\n\n        a_00 = (a->fields).edwa;\n\n        b = hpp__brim(a,(MethodInfo *)0x0);\n\n        eni__zyz(__this,a_00,b,(a->fields).edvu,(MethodInfo *)0x0);\n\n      }\n\n    }\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  uVar3 = (*pcVar1)();..."
+    },
+    {
+      "method": "dgz",
+      "signature": "private bool dgz(long a)",
+      "line": 311839,
+      "va": "0x17abb10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 2
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eni__zza(__this,a,(MethodInfo *)0x0);\n\n  return true;\n\n}"
+    },
+    {
+      "method": "zzb",
+      "signature": "private void zzb()",
+      "line": 311842,
+      "va": "0x17acf00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_1867850f4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (cVar7 == '\\0') break;"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pfVar3 == (fbj_o *)0x0) goto LAB_1817ad107;"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5[uVar8].interfaceType == (Il2CppClass *)fbj_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  fbj_c *pfVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  code *pcVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  longlong lVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined8 uStack_50;\n\n  undefined8 uStack_48;\n\n  undefined8 uStack_40;\n\n  System_Configuration_ConfigurationCollectionAttribute_o SStack_38;\n\n  u..."
+    },
+    {
+      "method": "grc",
+      "signature": "private bool grc(hpq a)",
+      "line": 311845,
+      "va": "0x17abea0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 25,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (a != (hpq_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 10
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n\n\n  if (a != (hpq_o *)0x0) {\n\n    eni__zza(__this,(a->fields).edwe,(MethodInfo *)0x0);\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  bVar2 = (bool)(*pcVar1)();\n\n  return bVar2;\n\n}"
+    },
+    {
+      "method": "zyx",
+      "signature": "private bool zyx(long a)",
+      "line": 311848,
+      "va": "0x17abb10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 2
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eni__zza(__this,a,(MethodInfo *)0x0);\n\n  return true;\n\n}"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor()",
+      "line": 311851,
+      "va": "0x17ab980",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 29,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 6,
+            "condition": "if (DAT_1867850f5 == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n\n\n  if (DAT_1867850f5 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_Dictionary<long,_string>_TypeInfo);\n\n    DAT_1867850f5 = '\\x01';\n\n  }\n\n  pSVar1 = (System_Collections_Generic_Dictionary_long__string__o *)\n\n           func_0x000180565b00(System_Collections_Generic_Dictionary<long,_string>_TypeInfo);\n\n  System_Collections_Gener..."
+    },
+    {
+      "method": "miy",
+      "signature": "private void miy(kmq a)",
+      "line": 311854,
+      "va": "0x17ac430",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_1867850f6 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (a == (kmq_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_1867850fc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 122
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Google_Protobuf_Collections_RepeatedField_long__o *collection;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int64_t unaff_RBX;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850f6 == '\\0') {\n\n    auStack_40._16_8_ = (System_Object_array *)0x1817ac455;\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<long>__ctor__);\n\n    auStack_40._16_8_ = (System..."
+    },
+    {
+      "method": "fkl",
+      "signature": "private bool fkl(ctp a)",
+      "line": 311857,
+      "va": "0x17abb30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 25,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (a != (ctp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 10
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n\n\n  if (a != (ctp_o *)0x0) {\n\n    eni__zyz(__this,(a->fields).dhhs,(a->fields).dhht,(longlong)(a->fields).dhhu,(MethodInfo *)0x0);\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  bVar2 = (bool)(*pcVar1)();\n\n  return bVar2;\n\n}"
+    },
+    {
+      "method": "fed",
+      "signature": "private void fed(long a)",
+      "line": 311860,
+      "va": "0x17aba60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (cVar4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pfVar2 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n  fbj_o *pfVar2;\n\n  code *pcVar3;\n\n  char cVar4;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,a,0);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_TryGetValue__);\n\n    FUN_1805658a0(&fbj_TypeInfo);\n\n    DAT_1867850ff = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dozb;\n\n  uSta..."
+    },
+    {
+      "method": "ctq",
+      "signature": "private void ctq(jru a)",
+      "line": 311863,
+      "va": "0x17abb00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_1867850f4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (cVar7 == '\\0') break;"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pfVar3 == (fbj_o *)0x0) goto LAB_1817ad107;"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5[uVar8].interfaceType == (Il2CppClass *)fbj_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  fbj_c *pfVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  code *pcVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  longlong lVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined8 uStack_50;\n\n  undefined8 uStack_48;\n\n  undefined8 uStack_40;\n\n  System_Configuration_ConfigurationCollectionAttribute_o SStack_38;\n\n  u..."
+    },
+    {
+      "method": "oiq",
+      "signature": "private bool oiq(long a, int b, long c)",
+      "line": 311866,
+      "va": "0x17ac4c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 153,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_1867850f7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((__this->fields).doyw != (feo_o *)0x0) && (lVar5 = FUN_180007c70(1,feo_Type"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if ((__this->fields).doyx != (fbi_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Net_FtpMethodInfo_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).doyy != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pfVar1 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((__this_01 !="
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fbj_o *pfVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  code *pcVar3;\n\n  undefined1 uVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_Tooltips_Builder_Infos_DelayedActionItem_o *__this_00;\n\n  Core_UILogic_Components_Tooltips_Builder_Internal_TooltipPositioning_o *positionInfo;\n\n  Core_UILogic_Components_Tooltips_Builder_DelayedActionTooltipBuilder_o *__this_01;\n\n  undefined8 *puVar6;\n\n  int64_t iStackX_8;\n\n\n\n  if (DAT_1867850f7 == '\\0') {\n\n    FUN_1805658a0(&\n..."
+    },
+    {
+      "method": "csg",
+      "signature": "private void csg(kmq a)",
+      "line": 311869,
+      "va": "0x17aba70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_1867850f8 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (a == (kmq_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_1867850fc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 122
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Google_Protobuf_Collections_RepeatedField_long__o *collection;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int64_t unaff_RBX;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850f8 == '\\0') {\n\n    auStack_40._16_8_ = (System_Object_array *)0x1817aba95;\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<long>__ctor__);\n\n    auStack_40._16_8_ = (System..."
+    },
+    {
+      "method": "zys",
+      "signature": "private void zys(long a)",
+      "line": 311872,
+      "va": "0x17aba60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (cVar4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pfVar2 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n  fbj_o *pfVar2;\n\n  code *pcVar3;\n\n  char cVar4;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,a,0);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_TryGetValue__);\n\n    FUN_1805658a0(&fbj_TypeInfo);\n\n    DAT_1867850ff = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dozb;\n\n  uSta..."
+    },
+    {
+      "method": "zyt",
+      "signature": "private void zyt(kmq a)",
+      "line": 311875,
+      "va": "0x17aca70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 145,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_1867850f9 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (a == (kmq_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_1867850fc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 122
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Google_Protobuf_Collections_RepeatedField_long__o *collection;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int64_t unaff_RBX;\n\n  MethodInfo *method_00;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850f9 == '\\0') {\n\n    auStack_40._16_8_ = (System_Object_array *)0x1817aca95;\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<long>__ctor__);\n\n    auStack_40._16_8_ = (System..."
+    },
+    {
+      "method": "ifg",
+      "signature": "private void ifg(jru a)",
+      "line": 311878,
+      "va": "0x17abb00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_1867850f4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (cVar7 == '\\0') break;"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pfVar3 == (fbj_o *)0x0) goto LAB_1817ad107;"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5[uVar8].interfaceType == (Il2CppClass *)fbj_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  fbj_c *pfVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  code *pcVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  longlong lVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined8 uStack_50;\n\n  undefined8 uStack_48;\n\n  undefined8 uStack_40;\n\n  System_Configuration_ConfigurationCollectionAttribute_o SStack_38;\n\n  u..."
+    },
+    {
+      "method": "cdm",
+      "signature": "private void cdm(long a)",
+      "line": 311881,
+      "va": "0x17aba60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (cVar4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pfVar2 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n  fbj_o *pfVar2;\n\n  code *pcVar3;\n\n  char cVar4;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,a,0);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_TryGetValue__);\n\n    FUN_1805658a0(&fbj_TypeInfo);\n\n    DAT_1867850ff = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dozb;\n\n  uSta..."
+    },
+    {
+      "method": "ivb",
+      "signature": "private void ivb(kmu a)",
+      "line": 311884,
+      "va": "0x17ac2f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 99,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (a == (kmu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pfVar3 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t iVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (a == (kmu_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar4 = (code *)swi(3);\n\n    (*pcVar4)();\n\n    return;\n\n  }\n\n  iVar1 = (a->fields).evdf;\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,iVar1,0);\n\n    FUN_1805658a0(&Method_System_Colle..."
+    },
+    {
+      "method": "llz",
+      "signature": "private bool llz(long a)",
+      "line": 311887,
+      "va": "0x17abb10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 2
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eni__zza(__this,a,(MethodInfo *)0x0);\n\n  return true;\n\n}"
+    },
+    {
+      "method": "mvj",
+      "signature": "private bool mvj(long a)",
+      "line": 311890,
+      "va": "0x17abb10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 2
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eni__zza(__this,a,(MethodInfo *)0x0);\n\n  return true;\n\n}"
+    },
+    {
+      "method": "gak",
+      "signature": "private void gak(List<long> a)",
+      "line": 311893,
+      "va": "0x17abd80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 95,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_1867850fa == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (a != (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 72
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_Enumerator_T__o AStackX_10;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850fa == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_Dispose__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_MoveNext__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enu..."
+    },
+    {
+      "method": "czz",
+      "signature": "private bool czz(hpp a)",
+      "line": 311896,
+      "va": "0x17ab9f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (a != (hpp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if ((a->fields).edvw == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "mig_mif_mia",
+            "method": "dacm",
+            "line": 18
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "hpp",
+            "method": "brim",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 26
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t a_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  undefined1 uVar3;\n\n  int32_t b;\n\n\n\n  if (a != (hpp_o *)0x0) {\n\n    if ((a->fields).edvw == 1) {\n\n      bVar2 = mig_mif_mia__dacm((mig_mif_mia_o *)a,(MethodInfo *)0x0);\n\n      if (bVar2) {\n\n        a_00 = (a->fields).edwa;\n\n        b = hpp__brim(a,(MethodInfo *)0x0);\n\n        eni__zyz(__this,a_00,b,(a->fields).edvu,(MethodInfo *)0x0);\n\n      }\n\n    }\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  uVar3 = (*pcVar1)();..."
+    },
+    {
+      "method": "ogl",
+      "signature": "private void ogl(long a)",
+      "line": 311899,
+      "va": "0x17aba60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (cVar4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pfVar2 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n  fbj_o *pfVar2;\n\n  code *pcVar3;\n\n  char cVar4;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,a,0);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_TryGetValue__);\n\n    FUN_1805658a0(&fbj_TypeInfo);\n\n    DAT_1867850ff = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dozb;\n\n  uSta..."
+    },
+    {
+      "method": "zyw",
+      "signature": "private bool zyw(hpq a)",
+      "line": 311902,
+      "va": "0x17abea0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 25,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (a != (hpq_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 10
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n\n\n  if (a != (hpq_o *)0x0) {\n\n    eni__zza(__this,(a->fields).edwe,(MethodInfo *)0x0);\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  bVar2 = (bool)(*pcVar1)();\n\n  return bVar2;\n\n}"
+    },
+    {
+      "method": "zyq",
+      "signature": "private void zyq(jru a)",
+      "line": 311905,
+      "va": "0x17abb00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_1867850f4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (cVar7 == '\\0') break;"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pfVar3 == (fbj_o *)0x0) goto LAB_1817ad107;"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5[uVar8].interfaceType == (Il2CppClass *)fbj_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  fbj_c *pfVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  code *pcVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  longlong lVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined8 uStack_50;\n\n  undefined8 uStack_48;\n\n  undefined8 uStack_40;\n\n  System_Configuration_ConfigurationCollectionAttribute_o SStack_38;\n\n  u..."
+    },
+    {
+      "method": "mfm",
+      "signature": "private void mfm(List<long> a)",
+      "line": 311908,
+      "va": "0x17ac310",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 95,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_1867850fb == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (a != (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 72
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_Enumerator_T__o AStackX_10;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850fb == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_Dispose__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_MoveNext__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enu..."
+    },
+    {
+      "method": "kir",
+      "signature": "private bool kir(hpp a)",
+      "line": 311911,
+      "va": "0x17ab9f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (a != (hpp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if ((a->fields).edvw == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "mig_mif_mia",
+            "method": "dacm",
+            "line": 18
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "hpp",
+            "method": "brim",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 26
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t a_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  undefined1 uVar3;\n\n  int32_t b;\n\n\n\n  if (a != (hpp_o *)0x0) {\n\n    if ((a->fields).edvw == 1) {\n\n      bVar2 = mig_mif_mia__dacm((mig_mif_mia_o *)a,(MethodInfo *)0x0);\n\n      if (bVar2) {\n\n        a_00 = (a->fields).edwa;\n\n        b = hpp__brim(a,(MethodInfo *)0x0);\n\n        eni__zyz(__this,a_00,b,(a->fields).edvu,(MethodInfo *)0x0);\n\n      }\n\n    }\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  uVar3 = (*pcVar1)();..."
+    },
+    {
+      "method": "zyr",
+      "signature": "private void zyr(kmu a)",
+      "line": 311914,
+      "va": "0x17ac2f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 99,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (a == (kmu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pfVar3 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t iVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (a == (kmu_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar4 = (code *)swi(3);\n\n    (*pcVar4)();\n\n    return;\n\n  }\n\n  iVar1 = (a->fields).evdf;\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,iVar1,0);\n\n    FUN_1805658a0(&Method_System_Colle..."
+    },
+    {
+      "method": "zyu",
+      "signature": "private void zyu(List<long> a)",
+      "line": 311917,
+      "va": "0x17acb00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 95,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_1867850fc == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (a != (System_Collections_Generic_List_long__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (!bVar2) break;"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 72
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_Enumerator_T__o AStackX_10;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_1867850fc == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_Dispose__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enumerator<long>_MoveNext__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List_Enu..."
+    },
+    {
+      "method": "nr",
+      "signature": "private void nr(kmu a)",
+      "line": 311920,
+      "va": "0x17ac2f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 99,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (a == (kmu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pfVar3 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t iVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (a == (kmu_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar4 = (code *)swi(3);\n\n    (*pcVar4)();\n\n    return;\n\n  }\n\n  iVar1 = (a->fields).evdf;\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,iVar1,0);\n\n    FUN_1805658a0(&Method_System_Colle..."
+    },
+    {
+      "method": "zyy",
+      "signature": "private bool zyy(ctp a)",
+      "line": 311923,
+      "va": "0x17abb30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 25,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (a != (ctp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 10
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  bool bVar2;\n\n\n\n  if (a != (ctp_o *)0x0) {\n\n    eni__zyz(__this,(a->fields).dhhs,(a->fields).dhht,(longlong)(a->fields).dhhu,(MethodInfo *)0x0);\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  bVar2 = (bool)(*pcVar1)();\n\n  return bVar2;\n\n}"
+    },
+    {
+      "method": "zyz",
+      "signature": "private bool zyz(long a, int b, long c)",
+      "line": 311926,
+      "va": "0x17acc20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 153,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_1867850fd == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((__this->fields).doyw != (feo_o *)0x0) && (lVar5 = FUN_180007c70(1,feo_Type"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if ((__this->fields).doyx != (fbi_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Net_FtpMethodInfo_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).doyy != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pfVar1 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((__this_01 !="
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fbj_o *pfVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  code *pcVar3;\n\n  undefined1 uVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_Tooltips_Builder_Infos_DelayedActionItem_o *__this_00;\n\n  Core_UILogic_Components_Tooltips_Builder_Internal_TooltipPositioning_o *positionInfo;\n\n  Core_UILogic_Components_Tooltips_Builder_DelayedActionTooltipBuilder_o *__this_01;\n\n  undefined8 *puVar6;\n\n  int64_t iStackX_8;\n\n\n\n  if (DAT_1867850fd == '\\0') {\n\n    FUN_1805658a0(&\n..."
+    },
+    {
+      "method": "zyp",
+      "signature": "private void zyp()",
+      "line": 311931,
+      "va": "0x17ac6d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 203,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_1867850fe == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if ((__this->fields).doyv != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 76
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 86
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 96
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 106
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 116
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (lVar6 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if (peVar2 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (pIVar4[uVar11].interfaceType == (Il2CppClass *)ezp_TypeInfo) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 166
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (lVar6 != 0) {"
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  ezp_o *peVar2;\n\n  ezp_c *peVar3;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar4;\n\n  code *pcVar5;\n\n  longlong lVar6;\n\n  undefined8 uVar7;\n\n  glu_o *pgVar8;\n\n  VirtualInvokeData *pVVar9;\n\n  glr_o *pgVar10;\n\n  ushort uVar11;\n\n\n\n  if (DAT_1867850fe == '\\0') {\n\n    FUN_1805658a0(&Method_eni_zyq__);\n\n    FUN_1805658a0(&Method_eni_zyr__);\n\n    FUN_1805658a0(&Method_eni_zyt__);\n\n    FUN_1805658a0(&Method_eni_zyv__);\n\n    FUN_1805658a0(&Method_eni_zyw__);\n\n    FUN_1805658a0(&Method_en..."
+    },
+    {
+      "method": "dgd",
+      "signature": "private bool dgd(hpp a)",
+      "line": 311934,
+      "va": "0x17ab9f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (a != (hpp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if ((a->fields).edvw == 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "mig_mif_mia",
+            "method": "dacm",
+            "line": 18
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "hpp",
+            "method": "brim",
+            "line": 24
+          },
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zyz",
+            "line": 26
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t a_00;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  undefined1 uVar3;\n\n  int32_t b;\n\n\n\n  if (a != (hpp_o *)0x0) {\n\n    if ((a->fields).edvw == 1) {\n\n      bVar2 = mig_mif_mia__dacm((mig_mif_mia_o *)a,(MethodInfo *)0x0);\n\n      if (bVar2) {\n\n        a_00 = (a->fields).edwa;\n\n        b = hpp__brim(a,(MethodInfo *)0x0);\n\n        eni__zyz(__this,a_00,b,(a->fields).edvu,(MethodInfo *)0x0);\n\n      }\n\n    }\n\n    return true;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar1 = (code *)swi(3);\n\n  uVar3 = (*pcVar1)();..."
+    },
+    {
+      "method": "jqd",
+      "signature": "private bool jqd(long a)",
+      "line": 311937,
+      "va": "0x17abb10",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 7,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "eni",
+            "method": "zza",
+            "line": 2
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  eni__zza(__this,a,(MethodInfo *)0x0);\n\n  return true;\n\n}"
+    },
+    {
+      "method": "kgw",
+      "signature": "private void kgw(kmu a)",
+      "line": 311940,
+      "va": "0x17ac2f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 99,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (a == (kmu_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (cVar5 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (pfVar3 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int64_t iVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  code *pcVar4;\n\n  char cVar5;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (a == (kmu_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar4 = (code *)swi(3);\n\n    (*pcVar4)();\n\n    return;\n\n  }\n\n  iVar1 = (a->fields).evdf;\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__,iVar1,0);\n\n    FUN_1805658a0(&Method_System_Colle..."
+    },
+    {
+      "method": "zza",
+      "signature": "private void zza(long a)",
+      "line": 311943,
+      "va": "0x17ace30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 83,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_1867850ff == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (cVar4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pfVar2 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar1 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar1;\n\n  fbj_o *pfVar2;\n\n  code *pcVar3;\n\n  char cVar4;\n\n  undefined8 uStackX_8;\n\n  int64_t iStackX_10;\n\n\n\n  if (DAT_1867850ff == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_Remove__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_Dictionary<long,_string>_TryGetValue__);\n\n    FUN_1805658a0(&fbj_TypeInfo);\n\n    DAT_1867850ff = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields).dozb;\n\n  uStackX_..."
+    },
+    {
+      "method": "jiu",
+      "signature": "private void jiu(jru a)",
+      "line": 311946,
+      "va": "0x17abb00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 211,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_1867850f4 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (lVar9 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (cVar7 == '\\0') break;"
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (pfVar3 == (fbj_o *)0x0) goto LAB_1817ad107;"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (uVar1 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5[uVar8].interfaceType == (Il2CppClass *)fbj_TypeInfo) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar2 != (System_Collections_Generic_Dictionary_long__string__o *)0x0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  ushort uVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  fbj_o *pfVar3;\n\n  fbj_c *pfVar4;\n\n  Il2CppRuntimeInterfaceOffsetPair *pIVar5;\n\n  code *pcVar6;\n\n  char cVar7;\n\n  ushort uVar8;\n\n  longlong lVar9;\n\n  VirtualInvokeData *pVVar10;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined8 uStack_50;\n\n  undefined8 uStack_48;\n\n  undefined8 uStack_40;\n\n  System_Configuration_ConfigurationCollectionAttribute_o SStack_38;\n\n  u..."
+    },
+    {
+      "method": "ioc",
+      "signature": "private bool ioc(long a, int b, long c)",
+      "line": 311949,
+      "va": "0x17ac0e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 153,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186785100 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((__this->fields).doyw != (feo_o *)0x0) && (lVar5 = FUN_180007c70(1,feo_Type"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if ((__this->fields).doyx != (fbi_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Net_FtpMethodInfo_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).doyy != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pfVar1 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((__this_01 !="
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fbj_o *pfVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  code *pcVar3;\n\n  undefined1 uVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_Tooltips_Builder_Infos_DelayedActionItem_o *__this_00;\n\n  Core_UILogic_Components_Tooltips_Builder_Internal_TooltipPositioning_o *positionInfo;\n\n  Core_UILogic_Components_Tooltips_Builder_DelayedActionTooltipBuilder_o *__this_01;\n\n  undefined8 *puVar6;\n\n  int64_t iStackX_8;\n\n\n\n  if (DAT_186785100 == '\\0') {\n\n    FUN_1805658a0(&\n..."
+    },
+    {
+      "method": "hwr",
+      "signature": "private bool hwr(long a, int b, long c)",
+      "line": 311952,
+      "va": "0x17abed0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 153,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186785101 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((__this->fields).doyw != (feo_o *)0x0) && (lVar5 = FUN_180007c70(1,feo_Type"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if ((__this->fields).doyx != (fbi_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Net_FtpMethodInfo_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).doyy != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pfVar1 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((__this_01 !="
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fbj_o *pfVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  code *pcVar3;\n\n  undefined1 uVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_Tooltips_Builder_Infos_DelayedActionItem_o *__this_00;\n\n  Core_UILogic_Components_Tooltips_Builder_Internal_TooltipPositioning_o *positionInfo;\n\n  Core_UILogic_Components_Tooltips_Builder_DelayedActionTooltipBuilder_o *__this_01;\n\n  undefined8 *puVar6;\n\n  int64_t iStackX_8;\n\n\n\n  if (DAT_186785101 == '\\0') {\n\n    FUN_1805658a0(&\n..."
+    },
+    {
+      "method": "fsm",
+      "signature": "private bool fsm(long a, int b, long c)",
+      "line": 311955,
+      "va": "0x17abb70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 153,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186785102 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (((__this->fields).doyw != (feo_o *)0x0) && (lVar5 = FUN_180007c70(1,feo_Type"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (lVar5 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if ((__this->fields).doyx != (fbi_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Net_FtpMethodInfo_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if ((__this->fields).doyy != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pfVar1 != (fbj_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((__this_01 !="
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fbj_o *pfVar1;\n\n  System_Collections_Generic_Dictionary_long__string__o *pSVar2;\n\n  code *pcVar3;\n\n  undefined1 uVar4;\n\n  longlong lVar5;\n\n  Core_UILogic_Components_Tooltips_Builder_Infos_DelayedActionItem_o *__this_00;\n\n  Core_UILogic_Components_Tooltips_Builder_Internal_TooltipPositioning_o *positionInfo;\n\n  Core_UILogic_Components_Tooltips_Builder_DelayedActionTooltipBuilder_o *__this_01;\n\n  undefined8 *puVar6;\n\n  int64_t iStackX_8;\n\n\n\n  if (DAT_186785102 == '\\0') {\n\n    FUN_1805658a0(&\n..."
+    }
+  ]
+}

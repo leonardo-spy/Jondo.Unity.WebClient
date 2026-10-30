@@ -1,0 +1,1775 @@
+{
+  "type": "Core.PathFinding.WorldData.MapPoint",
+  "methodCount": 28,
+  "transcribed": 24,
+  "methods": [
+    {
+      "method": "bjfu",
+      "signature": "public int bjfu()",
+      "line": 387070,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjfv",
+      "signature": "public void bjfv(int a)",
+      "line": 387073,
+      "va": "0x181d9d810",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 39,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 32
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t b;\n\n  int32_t iVar1;\n\n  bool bVar2;\n\n\n\n  bVar2 = DAT_18678801a == '\\0';\n\n  (__this->fields).dwlw = a;\n\n  if (bVar2) {\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_18678801a = '\\x01';\n\n  }\n\n  iVar1 = (__this->fields).dwlw;\n\n  b = (__this->fields).dwlx;\n\n  if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  iVar1 = oh__own(iVar1,b,(MethodInfo *)0x0);\n\n  (__this->fields).dwly = iVar1;\n\n  return;\n\n}"
+    },
+    {
+      "method": "bjfw",
+      "signature": "public int bjfw()",
+      "line": 387076,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjfx",
+      "signature": "public void bjfx(int a)",
+      "line": 387079,
+      "va": "0x181d9d880",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 39,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 32
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t b;\n\n  int32_t iVar1;\n\n  bool bVar2;\n\n\n\n  bVar2 = DAT_18678801a == '\\0';\n\n  (__this->fields).dwlx = a;\n\n  if (bVar2) {\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_18678801a = '\\x01';\n\n  }\n\n  iVar1 = (__this->fields).dwlw;\n\n  b = (__this->fields).dwlx;\n\n  if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  iVar1 = oh__own(iVar1,b,(MethodInfo *)0x0);\n\n  (__this->fields).dwly = iVar1;\n\n  return;\n\n}"
+    },
+    {
+      "method": "bjfy",
+      "signature": "public int bjfy()",
+      "line": 387082,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjfz",
+      "signature": "public void bjfz(int a)",
+      "line": 387085,
+      "va": "0x181d9d8f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 39,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owm",
+            "line": 30
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  UnityEngine_Vector2Int_o UVar1;\n\n  bool bVar2;\n\n\n\n  bVar2 = DAT_18678801b == '\\0';\n\n  (__this->fields).dwly = a;\n\n  if (bVar2) {\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_18678801b = '\\x01';\n\n  }\n\n  a_00 = (__this->fields).dwly;\n\n  if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  UVar1 = oh__owm(a_00,(MethodInfo *)0x0);\n\n  (__this->fields).dwlw = UVar1.fields.m_X;\n\n  (__this->fields).dwlx = UVar1.fields.m_Y;\n\n  return;\n\n}"
+    },
+    {
+      "method": "bjga",
+      "signature": "public Vector2Int bjga()",
+      "line": 387088,
+      "va": "0x181d9d960",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 13,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_Vector2Int_Fields UVar1;\n\n\n\n  UVar1.m_X = (__this->fields).dwlw;\n\n  UVar1.m_Y = (__this->fields).dwlx;\n\n  return (UnityEngine_Vector2Int_o)UVar1;\n\n}"
+    },
+    {
+      "method": "bjgb",
+      "signature": "public static MapPoint bjgb(int a)",
+      "line": 387091,
+      "va": "0x181d9d980",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_18678800f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pCVar2 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owm",
+            "line": 56
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t a_00;\n\n  code *pcVar1;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar2;\n\n  UnityEngine_Vector2Int_o UVar3;\n\n  MethodInfo *in_R8;\n\n  bool bVar4;\n\n\n\n  if (DAT_18678800f == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_18678800f = '\\x01';\n\n  }\n\n  pCVar2 = (Core_PathFinding_WorldData_MapPoint_o *)\n\n           func_0x000180565b00(Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n  System_Configuration_ConfigurationCollectionAttribute___ctor\n\n         ..."
+    },
+    {
+      "method": "bjgc",
+      "signature": "public static MapPoint bjgc(int a, int b)",
+      "line": 387094,
+      "va": "0x181d9da30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 14,
+            "condition": "if (DAT_186788010 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 58
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t b_00;\n\n  code *pcVar1;\n\n  int32_t iVar2;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar3;\n\n  bool bVar4;\n\n\n\n  if (DAT_186788010 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_186788010 = '\\x01';\n\n  }\n\n  pCVar3 = (Core_PathFinding_WorldData_MapPoint_o *)\n\n           func_0x000180565b00(Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n  System_Configuration_ConfigurationCollectionAttribute___ctor\n\n            ((System_Configuration_Configuration..."
+    },
+    {
+      "method": "bjgd",
+      "signature": "public rc bjgd(MapPoint a)",
+      "line": 387097,
+      "va": "0x181d9daf0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186788011 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (iVar6 < iVar5) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (iVar5 < iVar1) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 130,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if ((iVar6 == UVar2.m_X) && (iVar5 == UVar2.m_Y)) {"
+          }
+        ],
+        "opsCount": 20,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  UnityEngine_Vector2Int_Fields UVar2;\n\n  code *pcVar3;\n\n  int32_t iVar4;\n\n  int iVar5;\n\n  int iVar6;\n\n\n\n  if (DAT_186788011 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_186788011 = '\\x01';\n\n  }\n\n  if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    iVar5 = (a->fields).dwlw;\n\n    iVar6 = (__this->fields).dwlw;\n\n    if (iVar6 < iVar5) {\n\n      iVar6 = 1;\n\n    }\n\n    else {\n\n      iVar6 = (iVar6 <= iVar5) - 1;\n\n    }\n\n    iVar1 =..."
+    },
+    {
+      "method": "bjge",
+      "signature": "public bool bjge(MapPoint a, out float b)",
+      "line": 387100,
+      "va": "0x181d9dd50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 69,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgp",
+            "line": 22
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if ((iVar4 == 0) && (iVar3 == 0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if ((float)(iVar3 * iVar3 + iVar4 * iVar4) < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (iVar1 <= (a->fields).dwlx) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  bool bVar2;\n\n  int iVar3;\n\n  int iVar4;\n\n  float fVar5;\n\n\n\n  *b = 0.0;\n\n  if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    return false;\n\n  }\n\n  bVar2 = Core_PathFinding_WorldData_MapPoint__bjgp(__this,a,(MethodInfo *)0x0);\n\n  if (bVar2) {\n\n    *b = 3.1415927;\n\n    return true;\n\n  }\n\n  iVar1 = (__this->fields).dwlx;\n\n  iVar3 = (a->fields).dwlx - iVar1;\n\n  iVar4 = (a->fields).dwlw - (__this->fields).dwlw;\n\n  if ((iVar4 == 0) && (iVar3 == 0)) {\n\n    fVar5 = 0.0;\n\n  ..."
+    },
+    {
+      "method": "bjgf",
+      "signature": "public bool bjgf(int a, out float b)",
+      "line": 387103,
+      "va": "0x181d9de70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 87,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186788012 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 30
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (a_00 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgp",
+            "line": 40
+          },
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if ((iVar4 == 0) && (iVar3 == 0)) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if ((float)(iVar3 * iVar3 + iVar4 * iVar4) < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (iVar1 <= (a_00->fields).dwlx) {"
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  bool bVar2;\n\n  int iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *a_00;\n\n  int iVar4;\n\n  float fVar5;\n\n\n\n  if (DAT_186788012 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_186788012 = '\\x01';\n\n  }\n\n  if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  a_00 = Core_PathFinding_WorldData_MapPoint__bjgb(a,(MethodInfo *)0x0);\n\n  *b = 0.0;\n\n  if (a_00 == (Core_PathFinding_Wor..."
+    },
+    {
+      "method": "bjgg",
+      "signature": "public rc bjgg(int a, bool b = True)",
+      "line": 387106,
+      "va": "0x181d9def0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 245,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_186788013 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 38
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (DAT_186788014 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a_00 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgp",
+            "line": 52
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjge",
+            "line": 60
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (DAT_186795a65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (b) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (DAT_1867787c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (DAT_1867787c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (DAT_186795a6f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 144,
+            "condition": "if (iVar6 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          }
+        ],
+        "opsCount": 30,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  rc_array *prVar1;\n\n  code *pcVar2;\n\n  il2cpp_array_size_t iVar3;\n\n  bool bVar4;\n\n  int32_t iVar5;\n\n  int iVar6;\n\n  Core_PathFinding_WorldData_MapPoint_o *a_00;\n\n  double dVar7;\n\n  float fVar8;\n\n  float afStackX_18 [4];\n\n\n\n  if (DAT_186788013 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_186788013 = '\\x01';\n\n  }\n\n  if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  a_00 = Core_PathFin..."
+    },
+    {
+      "method": "bjgh",
+      "signature": "public rc bjgh(MapPoint a, bool b = True)",
+      "line": 387109,
+      "va": "0x181d9e000",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186788014 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgp",
+            "line": 34
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjge",
+            "line": 42
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (bVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (DAT_186795a65 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (b) {"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_1867787c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 74,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (DAT_1867787c7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 98,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 110,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (DAT_186795a6f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if (iVar6 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 142,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (DAT_186795a78 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 204,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          }
+        ],
+        "opsCount": 27,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  rc_array *prVar1;\n\n  code *pcVar2;\n\n  il2cpp_array_size_t iVar3;\n\n  bool bVar4;\n\n  int32_t iVar5;\n\n  int iVar6;\n\n  double dVar7;\n\n  float fVar8;\n\n  float afStackX_10 [2];\n\n\n\n  if (DAT_186788014 == '\\0') {\n\n    FUN_1805658a0(&og_TypeInfo);\n\n    DAT_186788014 = '\\x01';\n\n  }\n\n  afStackX_10[0] = 0.0;\n\n  if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    bVar4 = Core_PathFinding_WorldData_MapPoint__bjgp(__this,a,(MethodInfo *)0x0);\n\n    if (bVar4) {\n\n      return 0;\n\n    }\n\n    bVar4 ..."
+    },
+    {
+      "method": "bjgi",
+      "signature": "public uint bjgi(MapPoint a)",
+      "line": 387112,
+      "va": "0x181d9e0d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 91,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (DAT_186788102 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (dVar7 < 0.0) {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if ((float)dVar7 < 0.0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  int iVar2;\n\n  int iVar3;\n\n  int iVar4;\n\n  code *pcVar5;\n\n  uint32_t uVar6;\n\n  double dVar7;\n\n  undefined1 auVar8 [16];\n\n  float fVar9;\n\n  float fVar10;\n\n\n\n  if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar5 = (code *)swi(3);\n\n    uVar6 = (*pcVar5)();\n\n    return uVar6;\n\n  }\n\n  iVar1 = (a->fields).dwlw;\n\n  iVar2 = (__this->fields).dwlx;\n\n  iVar3 = (__this->fields).dwlw;\n\n  iVar4 = (a->fields).dwlx;\n\n  if (DAT_186788102 == '\\0') {\n\n    FU..."
+    },
+    {
+      "method": "bjgj",
+      "signature": "public uint bjgj(MapPoint a)",
+      "line": 387115,
+      "va": "0x181d9e1c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 79,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186778516 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (DAT_186778516 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 58,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  int iVar2;\n\n  code *pcVar3;\n\n  uint32_t uVar4;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  uint uVar7;\n\n  uint uVar8;\n\n\n\n  iVar1 = (__this->fields).dwlw;\n\n  if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    iVar2 = (a->fields).dwlw;\n\n    if (DAT_186778516 == '\\0') {\n\n      FUN_1805658a0(&System_Math_TypeInfo);\n\n      DAT_186778516 = '\\x01';\n\n    }\n\n    uVar7 = iVar1 - iVar2;\n\n    if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {\n\n      func_0x000180565be0();\n\n    }\n\n..."
+    },
+    {
+      "method": "bjgk",
+      "signature": "public MapPoint bjgk(ezl a, bool b = True, List<int> c)",
+      "line": 387118,
+      "va": "0x181d9e290",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 75,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788015 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (prVar1 != (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((int)prVar1->max_length <= (int)uVar4) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if ((uint)prVar1->max_length <= uVar4) break;"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  rc_array *prVar1;\n\n  code *pcVar2;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar3;\n\n  uint uVar4;\n\n\n\n  if (DAT_186788015 == '\\0') {\n\n    FUN_1805658a0(&og_TypeInfo);\n\n    DAT_186788015 = '\\x01';\n\n  }\n\n  uVar4 = 0;\n\n  if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0(og_TypeInfo);\n\n  }\n\n  prVar1 = og_TypeInfo->static_fields->ddiy;\n\n  if (prVar1 != (rc_array *)0x0) {\n\n    while( true ) {\n\n      if ((int)prVar1->max_length <= (int)uVar4) {\n\n        return (Core_PathF..."
+    },
+    {
+      "method": "bjgl",
+      "signature": "public MapPoint bjgl(rc a)",
+      "line": 387121,
+      "va": "0x181d9e380",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 197,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 16,
+            "condition": "if (DAT_186788016 == '\\0') {"
+          },
+          {
+            "type": "SWITCH",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgc",
+            "line": 168
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if (pCVar4 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 182
+          },
+          {
+            "type": "IF",
+            "line": 184,
+            "condition": "if (bVar3) {"
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  int iVar2;\n\n  bool bVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  int32_t iVar5;\n\n  int32_t iVar6;\n\n\n\n  if (DAT_186788016 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_186788016 = '\\x01';\n\n  }\n\n  switch(a) {\n\n  case 0:\n\n    iVar2 = (__this->fields).dwlw;\n\n    iVar5 = (__this->fields).dwlx;\n\n    if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0) {\n\n      func_0x..."
+    },
+    {
+      "method": "bjgm",
+      "signature": "public MapPoint bjgm(rc a, ezm b)",
+      "line": 387124,
+      "va": "0x181d9e560",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 71,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788017 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgl",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (b == (ezm_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if ((cVar2 == '\\0') &&"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 62,
+            "condition": "if (8 < iVar4) {"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  char cVar2;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar3;\n\n  int iVar4;\n\n\n\n  if (DAT_186788017 == '\\0') {\n\n    FUN_1805658a0(&ezm_TypeInfo);\n\n    DAT_186788017 = '\\x01';\n\n  }\n\n  iVar4 = 0;\n\n  do {\n\n    iVar4 = iVar4 + 1;\n\n    pCVar3 = Core_PathFinding_WorldData_MapPoint__bjgl(__this,a,(MethodInfo *)0x0);\n\n    if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n      if (b == (ezm_o *)0x0) {\n\n        FUN_180565b50();\n\n        pcVar1 = (code *)swi(3);\n\n        ..."
+    },
+    {
+      "method": "bjgn",
+      "signature": "public MapPoint bjgn(rc a, ezl b, bool c = True, bool d = True, bool e = False, List<int> f)",
+      "line": 387127,
+      "va": "0x181d9e640",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 411,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (DAT_186788018 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (__this_00 == (System_Collections_Generic_List_T__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "out",
+            "line": 96
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "out",
+            "line": 100
+          },
+          {
+            "type": "IF",
+            "line": 108,
+            "condition": "if (prVar4 == (rc_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 126,
+            "condition": "if ((uint)prVar4->max_length <= uVar19) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgl",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 132,
+            "condition": "if (plVar11 == (longlong *)0x0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (pCVar13 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 138,
+            "condition": "if (lVar14 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (*(uint *)(plVar11 + 3) <= a_00) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pCVar13 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 160,
+            "condition": "if (lVar12 == 0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 162,
+            "condition": "if (*(uint *)(lVar12 + 0x18) <= a_00) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (b == (ezl_o *)0x0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 176,
+            "condition": "if (__this_00 == (System_Collections_Generic_List_T__o *)0x0) goto LAB_181d9eb54"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 198,
+            "condition": "if (cVar7 == '\\0') goto LAB_181d9e8c0;"
+          },
+          {
+            "type": "IF",
+            "line": 200,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovw",
+            "line": 206
+          },
+          {
+            "type": "IF",
+            "line": 208,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 214,
+            "condition": "else if ((int)uVar9 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 216,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (lVar12 == 0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 234,
+            "condition": "if (*(uint *)(lVar12 + 0x18) <= a_00) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 244,
+            "condition": "if (cVar7 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 256,
+            "condition": "if (lVar12 != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 258,
+            "condition": "if (a_00 < *(uint *)(lVar12 + 0x18)) goto LAB_181d9ea09;"
+          },
+          {
+            "type": "IF",
+            "line": 268,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "ovw",
+            "line": 274
+          },
+          {
+            "type": "IF",
+            "line": 276,
+            "condition": "if (e) {"
+          },
+          {
+            "type": "IF",
+            "line": 282,
+            "condition": "else if ((int)uVar9 < 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 284,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 300,
+            "condition": "if (lVar12 == 0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 302,
+            "condition": "if (*(uint *)(lVar12 + 0x18) <= a_00) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 322,
+            "condition": "if (*(int *)&(og_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "og",
+            "method": "out",
+            "line": 328
+          },
+          {
+            "type": "IF",
+            "line": 332,
+            "condition": "if (iVar8 <= (int)uVar19) break;"
+          },
+          {
+            "type": "IF",
+            "line": 334,
+            "condition": "if (lVar12 == 0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 336,
+            "condition": "if (*(uint *)(lVar12 + 0x18) <= uVar19) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 340,
+            "condition": "if ((iVar3 != -1) && (iVar3 < iVar10)) {"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (plVar11 == (longlong *)0x0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 344,
+            "condition": "if (*(uint *)(plVar11 + 3) <= uVar19) goto LAB_181d9eb6a;"
+          },
+          {
+            "type": "IF",
+            "line": 346,
+            "condition": "if (plVar11[(longlong)(int)uVar19 + 4] != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (uVar19 != 0xffffffff) {"
+          },
+          {
+            "type": "IF",
+            "line": 364,
+            "condition": "if (plVar11 == (longlong *)0x0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 366,
+            "condition": "if (*(uint *)(plVar11 + 3) <= uVar19) {"
+          },
+          {
+            "type": "IF",
+            "line": 386,
+            "condition": "if (pCVar13 == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 392,
+            "condition": "if (bVar6 != false) {"
+          },
+          {
+            "type": "IF",
+            "line": 394,
+            "condition": "if (b == (ezl_o *)0x0) goto LAB_181d9eb54;"
+          },
+          {
+            "type": "IF",
+            "line": 400,
+            "condition": "if (cVar7 != '\\0') {"
+          }
+        ],
+        "opsCount": 52,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint a_00;\n\n  int32_t iVar1;\n\n  int32_t iVar2;\n\n  int iVar3;\n\n  rc_array *prVar4;\n\n  code *pcVar5;\n\n  bool bVar6;\n\n  char cVar7;\n\n  int32_t iVar8;\n\n  uint uVar9;\n\n  int iVar10;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  longlong *plVar11;\n\n  longlong lVar12;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar13;\n\n  longlong lVar14;\n\n  undefined8 uVar15;\n\n  uint uVar16;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar17;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar18;\n\n  uint uVar1..."
+    },
+    {
+      "method": "bjgo",
+      "signature": "public MapPoint bjgo(MapPoint a)",
+      "line": 387130,
+      "va": "0x181d9eb70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 129,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_186788019 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 46,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owj",
+            "line": 52
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (DAT_186788010 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (pCVar4 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (bVar2) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 108
+          }
+        ],
+        "opsCount": 11,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t b;\n\n  code *pcVar1;\n\n  bool bVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  int b_00;\n\n  int a_00;\n\n  MethodInfo *method_00;\n\n\n\n  if (DAT_186788019 == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_186788019 = '\\x01';\n\n  }\n\n  if (a == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    FUN_180565b50();\n\n    pcVar1 = (code *)swi(3);\n\n    pCVar4 = (Core_PathFinding_WorldData_MapPoint_..."
+    },
+    {
+      "method": "bjgp",
+      "signature": "public bool bjgp(MapPoint a)",
+      "line": 387133,
+      "va": "0x181d9ec30",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 47,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (__this == a) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Object",
+            "method": "GetType",
+            "line": 20
+          },
+          {
+            "type": "CALL",
+            "class": "System_Object",
+            "method": "GetType",
+            "line": 24
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (*(int *)(_DAT_1867acee0 + 0xe4) == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Xml_Linq_XNamespace",
+            "method": "op_Inequality",
+            "line": 32
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (((!bVar1) && ((__this->fields).dwlw == (a->fields).dwlw)) &&"
+          }
+        ],
+        "opsCount": 7,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  bool bVar1;\n\n  System_Xml_Linq_XNamespace_o *left;\n\n  System_Xml_Linq_XNamespace_o *right;\n\n\n\n  if (a != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n    if (__this == a) {\n\n      return true;\n\n    }\n\n    left = (System_Xml_Linq_XNamespace_o *)\n\n           System_Object__GetType((Il2CppObject *)__this,(MethodInfo *)0x0);\n\n    right = (System_Xml_Linq_XNamespace_o *)\n\n            System_Object__GetType((Il2CppObject *)a,(MethodInfo *)0x0);\n\n    if (*(int *)(_DAT_1867acee0 + 0xe4) == 0) {..."
+    },
+    {
+      "method": "bjgq",
+      "signature": "private void bjgq()",
+      "line": 387136,
+      "va": "0x181d9ece0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 33,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_18678801a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "own",
+            "line": 26
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t b;\n\n  int32_t iVar1;\n\n\n\n  if (DAT_18678801a == '\\0') {\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_18678801a = '\\x01';\n\n  }\n\n  iVar1 = (__this->fields).dwlw;\n\n  b = (__this->fields).dwlx;\n\n  if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  iVar1 = oh__own(iVar1,b,(MethodInfo *)0x0);\n\n  (__this->fields).dwly = iVar1;\n\n  return;\n\n}"
+    },
+    {
+      "method": "bjgr",
+      "signature": "private void bjgr()",
+      "line": 387139,
+      "va": "0x181d9ed50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 33,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 8,
+            "condition": "if (DAT_18678801b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owm",
+            "line": 24
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t a;\n\n  UnityEngine_Vector2Int_o UVar1;\n\n\n\n  if (DAT_18678801b == '\\0') {\n\n    FUN_1805658a0(&oh_TypeInfo);\n\n    DAT_18678801b = '\\x01';\n\n  }\n\n  a = (__this->fields).dwly;\n\n  if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {\n\n    func_0x000180565be0();\n\n  }\n\n  UVar1 = oh__owm(a,(MethodInfo *)0x0);\n\n  (__this->fields).dwlw = UVar1.fields.m_X;\n\n  (__this->fields).dwlx = UVar1.fields.m_Y;\n\n  return;\n\n}"
+    },
+    {
+      "method": "ToString",
+      "signature": "public override string ToString()",
+      "line": 387142,
+      "va": "0x181d9d4e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 193,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (DAT_18678801c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (args == (System_Object_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (pSVar3 != (System_String_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (lVar4 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if ((int)args->max_length != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pIVar5 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (lVar4 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (1 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pIVar5 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (lVar4 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (2 < (uint)args->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if (pIVar5 != (Il2CppObject *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 152,
+            "condition": "if (lVar4 == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (3 < (uint)args->max_length) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 172,
+            "string_arg": "{0}[x:{1}, y:{2}, cell ID:{3}]"
+          }
+        ],
+        "opsCount": 16,
+        "varMap": {
+          "pSVar2": "{0}[x:{1}, y:{2}, cell ID:{3}]",
+          "pSVar3": "MapPoint"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  code *pcVar1;\n\n  System_String_o *pSVar2;\n\n  System_Object_array *args;\n\n  System_String_o *pSVar3;\n\n  longlong lVar4;\n\n  Il2CppObject *pIVar5;\n\n  undefined8 uVar6;\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t aiStack_28 [4];\n\n\n\n  if (DAT_18678801c == '\\0') {\n\n    FUN_1805658a0(&object___TypeInfo);\n\n    FUN_1805658a0(&<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0F__a_TypeInfo);\n\n    DAT_18678801c = '\\x01';\n\n  }\n\n  if (*(int *)&(<PrivateImplementati..."
+    },
+    {
+      "method": "bjgs",
+      "signature": "public float bjgs(MapPoint a)",
+      "line": 387145,
+      "va": "0x181d9edb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 49,
+        "ops": [
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkg",
+            "line": 14
+          },
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkg",
+            "line": 16
+          },
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkh",
+            "line": 18
+          },
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkh",
+            "line": 20
+          },
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkh",
+            "line": 22
+          },
+          {
+            "type": "CALL",
+            "class": "fly",
+            "method": "bgkh",
+            "line": 24
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (iVar2 < iVar1) {"
+          },
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (fVar4 + fVar5 < 0.0) {"
+          }
+        ],
+        "opsCount": 8,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 6,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t iVar1;\n\n  int32_t iVar2;\n\n  int iVar3;\n\n  float fVar4;\n\n  float fVar5;\n\n\n\n  fly__bgkg(a,(MethodInfo *)0x0);\n\n  fly__bgkg(__this,(MethodInfo *)0x0);\n\n  fly__bgkh(__this,(MethodInfo *)0x0);\n\n  fly__bgkh(a,(MethodInfo *)0x0);\n\n  iVar1 = fly__bgkh(a,(MethodInfo *)0x0);\n\n  iVar2 = fly__bgkh(__this,(MethodInfo *)0x0);\n\n  iVar3 = -1;\n\n  if (iVar2 < iVar1) {\n\n    iVar3 = 1;\n\n  }\n\n  fVar4 = (float)FUN_1805fafc0();\n\n  fVar5 = (float)FUN_1805fafc0();\n\n  if (fVar4 + fVar5 < 0.0) {\n\n    FUN_1805..."
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor()",
+      "line": 387148,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "cctor",
+      "signature": "private static void .cctor()",
+      "line": 387151,
+      "va": "0x181d9d6c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 2,
+            "condition": "if (DAT_18678801d == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  if (DAT_18678801d == '\\0') {\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_18678801d = '\\x01';\n\n  }\n\n  (Core_PathFinding_WorldData_MapPoint_TypeInfo->static_fields->dwlo).fields =\n\n       (UnityEngine_Vector2Int_Fields)0x100000001;\n\n  (Core_PathFinding_WorldData_MapPoint_TypeInfo->static_fields->dwlp).fields =\n\n       (UnityEngine_Vector2Int_Fields)0x1;\n\n  (Core_PathFinding_WorldData_MapPoint_TypeInfo->static_fields->dwlq).fields =\n\n       (UnityEngine_Vector2I..."
+    }
+  ]
+}

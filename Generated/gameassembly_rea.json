@@ -1,0 +1,132 @@
+{
+  "evidence_id": "ev_87e352be82efdebe90bc1d4ad457c73a1a9813736dd426aa4171368a034813c5",
+  "subject": {
+    "name": "C:\\Users\\Leona\\Documents\\GitHub\\JondoEmu\\Jondo.Unity.WebClient\\Cliente 3.6.10.11\\GameAssembly.dll",
+    "digest": {
+      "sha256": "51a2545a04e3b8242ad7d45540e4161411a78b6ce52edfc2ce24ddd8e28e55a9"
+    },
+    "format": "pe",
+    "architecture": "x86_64",
+    "local_path": "C:\\Users\\Leona\\Documents\\GitHub\\JondoEmu\\Jondo.Unity.WebClient\\Cliente 3.6.10.11\\GameAssembly.dll"
+  },
+  "provider": {
+    "id": "rea-workflow",
+    "name": "REA composed investigation workflow",
+    "version": "1"
+  },
+  "analysis_profile": {
+    "provider": {
+      "id": "rea-workflow",
+      "name": "REA composed investigation workflow",
+      "version": "1"
+    },
+    "parameters": {
+      "upstream_analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "12.1.4"
+        },
+        "parameters": {
+          "target_kind": "executable",
+          "target_format": "pe",
+          "architecture": "x86_64",
+          "available_architectures": [
+            "x86_64"
+          ],
+          "import_mode": "ephemeral-source-immutable",
+          "annotation_policy": "atomic-function-entry-metadata-v1",
+          "load_image_observations": "source-mappings-entry-context-v2",
+          "function_body_evidence": "complete-inclusive-ranges-v1",
+          "function_references": "complete-body-and-entry-reference-manager-v2",
+          "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+          "instruction_flow_evidence": "decoded-return-pcode-v1",
+          "process_launch": "official-headless-script-v1",
+          "jump_table_evidence": "typed-case-default-blocks-v1",
+          "decompiler_jump_loads": true,
+          "loader": "auto-from-header",
+          "language_id": "auto-from-header",
+          "compiler_spec_id": "auto-default",
+          "analyzer_preset": "ghidra-default"
+        },
+        "digest": "20bfe56b47550c7a4bcc39521ee7f248c55bbdc15d7b66d36cdef836324a4c5c"
+      },
+      "workflow_revision": 2
+    },
+    "digest": "462e5aeb101f99e18552cdbefbc0978c7529cd235eda755d95201b8cab8619c4"
+  },
+  "predicate_type": "rea.analysis",
+  "operation": "binary_overview",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "document": "target-51a2545a04e3.dll",
+    "segments": [
+      {
+        "name": "Headers",
+        "start": "0x180000000",
+        "end": "0x180000400",
+        "length": 1024
+      },
+      {
+        "name": ".text",
+        "start": "0x180001000",
+        "end": "0x180623e00",
+        "length": 6434304
+      },
+      {
+        "name": "il2cpp",
+        "start": "0x180624000",
+        "end": "0x1851d1c00",
+        "length": 79354880
+      },
+      {
+        "name": ".rdata",
+        "start": "0x1851d2000",
+        "end": "0x185f35800",
+        "length": 14039040
+      },
+      {
+        "name": ".data",
+        "start": "0x185f36000",
+        "end": "0x186a53210",
+        "length": 11653648
+      },
+      {
+        "name": ".pdata",
+        "start": "0x186a54000",
+        "end": "0x186ef6a00",
+        "length": 4860416
+      },
+      {
+        "name": "_RDATA",
+        "start": "0x186ef7000",
+        "end": "0x186ef7200",
+        "length": 512
+      },
+      {
+        "name": ".reloc",
+        "start": "0x186ef8000",
+        "end": "0x1870e6200",
+        "length": 2023936
+      },
+      {
+        "name": "tdb",
+        "start": "0xff00000000",
+        "end": "0xff00001850",
+        "length": 6224
+      }
+    ],
+    "segment_count": 9,
+    "procedure_count": 294514,
+    "string_count": 7394
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Derived by an REA composed workflow."
+  ],
+  "locations": [],
+  "evidence_links": []
+}

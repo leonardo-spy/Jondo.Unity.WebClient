@@ -1,0 +1,238 @@
+{
+  "type": "Core.UILogic.Inventory.Uis.PlayerInventory.PlayerInventoryUi",
+  "methodCount": 11,
+  "transcribed": 4,
+  "methods": [
+    {
+      "method": "get_m_isCenteredByDefault",
+      "signature": "protected override bool get_m_isCenteredByDefault()",
+      "status": "TRIVIAL",
+      "note": "Property getter — returns constant bool"
+    },
+    {
+      "method": "get_m_appearEffects",
+      "signature": "protected override bool get_m_appearEffects()",
+      "status": "TRIVIAL",
+      "note": "Property getter — returns constant bool"
+    },
+    {
+      "method": "get_m_reorderable",
+      "signature": "protected override bool get_m_reorderable()",
+      "status": "TRIVIAL",
+      "note": "Property getter — returns constant bool"
+    },
+    {
+      "method": "get_m_closeOnArenaFightStart",
+      "signature": "protected override bool get_m_closeOnArenaFightStart()",
+      "status": "TRIVIAL",
+      "note": "Property getter — returns constant bool"
+    },
+    {
+      "method": "get_binding",
+      "signature": "public EquipmentStorageUiBinding get_binding()",
+      "line": 126490,
+      "va": "0x182858790",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 77,
+        "ops": [],
+        "opsCount": 0,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  UnityEngine_UIElements_VisualElement_o *pUVar1;\n\n  Core_UILogic_Components_Figma_WindowFigma_o *pCVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *pCVar4;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar5;\n\n  Core_UILogic_Components_EquipmentComponentCharacter_o *pCVar6;\n\n  Core_UILogic_Components_CharacterPresetManager_o *pCVar7;\n\n  Core_UILogic_Components_Figma_DofusVisualElement_o *pCVar8;\n\n  UnityEngine_UIElements_Label_o *p..."
+    },
+    {
+      "method": "get_storageInventory",
+      "signature": "public EquipmentStorageUI get_storageInventory()",
+      "line": 126494,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor(VisualElement root, fca baseUiDependenciesService, fdl storageDependenciesProvider, exd criterionDependenciesProvider, fct itemTooltipDependenciesProvider, fei fightService)",
+      "line": 126497,
+      "va": "0x182858380",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 437,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if (DAT_186792071 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Bindings_StorageBinding_",
+            "method": "ctor",
+            "line": 110
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Bindings_StorageBinding",
+            "method": "get_grid",
+            "line": 112
+          },
+          {
+            "type": "IF",
+            "line": 114,
+            "condition": "if (pCVar15 != (Core_UILogic_Components_Slots_StorageSlotGrid_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 342,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 354,
+            "condition": "if (*(int *)&(Core_Localization_LocalizedStringUtilities_TypeInfo->_2).field_0x1"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_Localization_LocalizedStringUtilities",
+            "method": "Localized",
+            "line": 360,
+            "string_arg": "ui.common.character"
+          },
+          {
+            "type": "IF",
+            "line": 362,
+            "condition": "if (pCVar17 != (Core_UILogic_Components_Figma_WindowFigma_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UILogic_Components_Figma_WindowFigma",
+            "method": "set_title",
+            "line": 364,
+            "string_arg": "ui.common.character"
+          },
+          {
+            "type": "IF",
+            "line": 372,
+            "condition": "if (pCVar17 != (Core_UILogic_Components_Figma_WindowFigma_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "_",
+            "method": "ctor",
+            "line": 382
+          },
+          {
+            "type": "IF",
+            "line": 384,
+            "condition": "if (*(int *)&(Core_UI_UIUtils_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "paw",
+            "line": 390
+          },
+          {
+            "type": "CALL",
+            "class": "Core_UI_UIUtils",
+            "method": "pbr",
+            "line": 406,
+            "string_arg": "openInventory"
+          },
+          {
+            "type": "IF",
+            "line": 408,
+            "condition": "if (pCVar17 != (Core_UILogic_Components_Figma_WindowFigma_o *)0x0) {"
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {
+          "pSVar18": "ui.common.character",
+          "pSStackX_8": "openInventory"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 7,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  fca_o *baseUiDependenciesService_00;\n\n  code *pcVar1;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar2;\n\n  UnityEngine_UIElements_VisualElement_o *pUVar3;\n\n  Core_UILogic_Components_Figma_DofusToggleButtonCustom_o *pCVar4;\n\n  Core_UILogic_Components_Figma_DofusToggleButtonCustom_o *pCVar5;\n\n  Core_UILogic_Components_Figma_DofusToggleButtonCustom_o *pCVar6;\n\n  Core_UILogic_Components_Figma_DofusToggleButtonCustom_o *pCVar7;\n\n  Core_UILogic_Components_Figma_TextInput_o *pCVar8;\n\n  Core_UILog..."
+    },
+    {
+      "method": "OnEnable",
+      "signature": "protected override void OnEnable()",
+      "line": 126500,
+      "va": "0x1828582b0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 33,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (pCVar1 != (Core_UILogic_Inventory_Uis_EquipmentStorageUI_o *)0x0) {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_UILogic_Inventory_Uis_EquipmentStorageUI_o *pCVar1;\n\n  code *pcVar2;\n\n\n\n  pCVar1 = (__this->fields)._storageInventory_k__BackingField;\n\n  if (pCVar1 != (Core_UILogic_Inventory_Uis_EquipmentStorageUI_o *)0x0) {\n\n                    /* WARNING: Could not recover jumptable at 0x0001828582d0. Too many branches */\n\n                    /* WARNING: Treating indirect jump as call */\n\n    (*(pCVar1->klass->vtable)._167_Toggle.methodPtr)\n\n              (pCVar1,1,(pCVar1->klass->vtable)._167_Togg..."
+    },
+    {
+      "method": "OnDisable",
+      "signature": "protected override void OnDisable()",
+      "line": 126503,
+      "va": "0x1828581f0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 65,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186792072 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Runtime_CompilerServices_IsReadOnlyAttribute_",
+            "method": "ctor",
+            "line": 32
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (peVar3 != (ezp_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (pCVar1 != (Core_UILogic_Inventory_Uis_EquipmentStorageUI_o *)0x0) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_UILogic_Inventory_Uis_EquipmentStorageUI_o *pCVar1;\n\n  code *pcVar2;\n\n  ezp_o *peVar3;\n\n  System_Runtime_CompilerServices_IsReadOnlyAttribute_14_o *__this_00;\n\n\n\n  if (DAT_186792072 == '\\0') {\n\n    FUN_1805658a0(&bzb_TypeInfo);\n\n    FUN_1805658a0(&Method_ezp_bdgu<bzb>__);\n\n    FUN_1805658a0(&Method_fzy<EquipmentStorageUiBinding>_bjmn__);\n\n    DAT_186792072 = '\\x01';\n\n  }\n\n  peVar3 = fzy<__Il2CppFullySharedGenericType>__bjmn\n\n                     ((fzy_a__o *)__this,_Method_fzy<Equipmen..."
+    },
+    {
+      "method": "get_m_canTakeFocus",
+      "signature": "protected override bool get_m_canTakeFocus()",
+      "status": "TRIVIAL",
+      "note": "Property getter — returns constant bool"
+    },
+    {
+      "method": "b__13_0",
+      "signature": "private void <.ctor>b__13_0(VisualElement _)",
+      "status": "TRIVIAL",
+      "note": "Lambda/anonymous sort comparator"
+    }
+  ]
+}

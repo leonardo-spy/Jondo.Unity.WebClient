@@ -13,11 +13,11 @@ const EMU_HOST = '127.0.0.1';
 const EMU_GAME_PORT = 5555;
 const EMU_HAAPI_PORT = 8888;
 
-// Where the Unity WebGL build lives (after AssetRipper + rebuild)
-const WEBGL_BUILD_DIR = path.join(__dirname, 'unity-build');
+// Where the Unity WebGL build lives — serves index.html + Build/ + TemplateData/ from this directory
+const WEBGL_BUILD_DIR = __dirname;
 
 // Where the client's streaming assets live (served on demand)
-const ASSETS_DIR = path.resolve(__dirname, '../../Cliente 3.6.10.11/Dofus_Data/StreamingAssets/Content');
+const ASSETS_DIR = process.env.DOFUS_ASSETS_DIR || path.resolve(__dirname, '../Cliente 3.6.10.11/Dofus_Data/StreamingAssets/Content');
 
 // ─── Express app ─────────────────────────────────────────────────────────────
 

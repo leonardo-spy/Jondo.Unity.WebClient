@@ -1,0 +1,3626 @@
+{
+  "type": "fzc",
+  "methodCount": 59,
+  "transcribed": 49,
+  "methods": [
+    {
+      "method": "bjhr",
+      "signature": "public void bjhr(List<int> a)",
+      "line": 387245,
+      "va": "0x181da5290",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_18678801e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 70
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5508;"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if ((a->fields)._size + -1 <= (int)uVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5508;"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5508;"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) goto LAB_181da5508;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5508;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (((lStackX_20 == 0) || (pCVar4 == (Core_PathFinding_WorldData_MapPoint_o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  fyy_o *__this_00;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  int32_t iStackX_10;\n\n  undefined4 uStackX_14;\n\n  longlong lStackX_20;\n\n  longlong alStack_38 [2];\n\n\n\n  if (DAT_18678801e == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_get_Count__);\n\n    FUN_1805658a0(&Method..."
+    },
+    {
+      "method": "bjhz",
+      "signature": "public void bjhz(MapPoint a)",
+      "line": 387248,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjhf",
+      "signature": "public MapPoint bjhf()",
+      "line": 387252,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjhh",
+      "signature": "public List<fyy> bjhh()",
+      "line": 387256,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjhk",
+      "signature": "public int bjhk()",
+      "line": 387259,
+      "va": "0x181da4dc0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 41,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_18678801f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar2 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if ((__this->fields)._dwmg_k__BackingField == (Core_PathFinding_WorldData_MapPoi"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int iVar1;\n\n  System_Collections_Generic_List_fyy__o *pSVar2;\n\n  int iVar3;\n\n\n\n  if (DAT_18678801f == '\\0') {\n\n    FUN_1805658a0();\n\n    DAT_18678801f = '\\x01';\n\n  }\n\n  pSVar2 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar2 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    iVar1 = (pSVar2->fields)._size;\n\n    iVar3 = iVar1 + 1;\n\n    if ((__this->fields)._dwmg_k__BackingField == (Core_PathFinding_WorldData_MapPoint_o *)0x0) {\n\n      iVar3 = iVar1;\n\n    }\n\n    return iVar3;\n\n  ..."
+    },
+    {
+      "method": "egu",
+      "signature": "public void egu(List<int> a)",
+      "line": 387262,
+      "va": "0x181da74a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186788020 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 70
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7718;"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if ((a->fields)._size + -1 <= (int)uVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7718;"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7718;"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) goto LAB_181da7718;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7718;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (((lStackX_20 == 0) || (pCVar4 == (Core_PathFinding_WorldData_MapPoint_o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  fyy_o *__this_00;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  int32_t iStackX_10;\n\n  undefined4 uStackX_14;\n\n  longlong lStackX_20;\n\n  longlong alStack_38 [2];\n\n\n\n  if (DAT_186788020 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_get_Count__);\n\n    FUN_1805658a0(&Method..."
+    },
+    {
+      "method": "kzw",
+      "signature": "public int kzw()",
+      "line": 387265,
+      "va": "0x181da8200",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_186788021 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n\n\n  if (DAT_186788021 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788021 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  iVar3 = (*pcVar2)();\n\n  return iVar3;\n\n}"
+    },
+    {
+      "method": "lrk",
+      "signature": "public void lrk(MapPoint a)",
+      "line": 387268,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "czp",
+      "signature": "public int czp()",
+      "line": 387271,
+      "va": "0x181da7290",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_186788022 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n\n\n  if (DAT_186788022 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788022 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  iVar3 = (*pcVar2)();\n\n  return iVar3;\n\n}"
+    },
+    {
+      "method": "jjl",
+      "signature": "public void jjl(List<int> a)",
+      "line": 387274,
+      "va": "0x181da7d50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_186788023 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 70
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7fc8;"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if ((a->fields)._size + -1 <= (int)uVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7fc8;"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7fc8;"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) goto LAB_181da7fc8;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7fc8;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (((lStackX_20 == 0) || (pCVar4 == (Core_PathFinding_WorldData_MapPoint_o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  fyy_o *__this_00;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  int32_t iStackX_10;\n\n  undefined4 uStackX_14;\n\n  longlong lStackX_20;\n\n  longlong alStack_38 [2];\n\n\n\n  if (DAT_186788023 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_get_Count__);\n\n    FUN_1805658a0(&Method..."
+    },
+    {
+      "method": "bjhy",
+      "signature": "public List<int> bjhy()",
+      "line": 387277,
+      "va": "0x181da63d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 125,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_186788024 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "if (pSVar4 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (pSVar4 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if ((((pSVar4 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 88,
+            "condition": "if (pSVar4 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da6515;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if ((pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) &&"
+          }
+        ],
+        "opsCount": 6,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t capacity;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  code *pcVar2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  System_Collections_Generic_List_int__o *pSVar3;\n\n  System_Collections_Generic_List_fyy__o *pSVar4;\n\n  uint uVar5;\n\n  int32_t iStackX_8;\n\n  longlong lStackX_18;\n\n\n\n  if (DAT_186788024 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>__ctor__);\n\n    FUN_180565..."
+    },
+    {
+      "method": "kdr",
+      "signature": "public fyy kdr(int a)",
+      "line": 387280,
+      "va": "0x181da8110",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788025 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *pfStackX_8;\n\n\n\n  if (DAT_186788025 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788025 = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2CppFullySharedGenericType>__get_Item\n..."
+    },
+    {
+      "method": "bjhp",
+      "signature": "public fyy bjhp()",
+      "line": 387283,
+      "va": "0x181da51c0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 63,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788026 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((__return_storage_ptr__->fields)._size < 1) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788026 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788026 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n ..."
+    },
+    {
+      "method": "dwq",
+      "signature": "public fyy dwq()",
+      "line": 387286,
+      "va": "0x181da7420",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788027 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788027 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788027 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2Cpp..."
+    },
+    {
+      "method": "nst",
+      "signature": "public int nst()",
+      "line": 387289,
+      "va": "0x181da8a60",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_186788028 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n\n\n  if (DAT_186788028 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788028 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  iVar3 = (*pcVar2)();\n\n  return iVar3;\n\n}"
+    },
+    {
+      "method": "boi",
+      "signature": "public fyy boi()",
+      "line": 387292,
+      "va": "0x181da65e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 63,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788029 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((__return_storage_ptr__->fields)._size < 1) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788029 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788029 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n ..."
+    },
+    {
+      "method": "bjhd",
+      "signature": "public MapPoint bjhd()",
+      "line": 387296,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "fag",
+      "signature": "public void fag(List<int> a)",
+      "line": 387299,
+      "va": "0x181da7720",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_18678802a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 70
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7998;"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if ((a->fields)._size + -1 <= (int)uVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7998;"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7998;"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) goto LAB_181da7998;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7998;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (((lStackX_20 == 0) || (pCVar4 == (Core_PathFinding_WorldData_MapPoint_o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  fyy_o *__this_00;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  int32_t iStackX_10;\n\n  undefined4 uStackX_14;\n\n  longlong lStackX_20;\n\n  longlong alStack_38 [2];\n\n\n\n  if (DAT_18678802a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_get_Count__);\n\n    FUN_1805658a0(&Method..."
+    },
+    {
+      "method": "bjhs",
+      "signature": "public void bjhs(fyy a)",
+      "line": 387302,
+      "va": "0x181da5510",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 219,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 38,
+            "condition": "if (DAT_18678802b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if (__this_00 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (pfVar6 == (fyy_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 118,
+            "condition": "if (uVar4 < (uint)pfVar6->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar7 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 136,
+            "condition": "if (uVar4 < (uint)pfVar6->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (uVar4 < (uint)pfVar6->max_length) {"
+          },
+          {
+            "type": "IF",
+            "line": 148,
+            "condition": "if ((*(byte *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar7 + 0x20) + 0xc0) +"
+          },
+          {
+            "type": "IF",
+            "line": 180,
+            "condition": "if (*(int *)(*(longlong *)(*(longlong *)(*(longlong *)(lVar7 + 0x20) + 0xc0) + 0"
+          },
+          {
+            "type": "IF",
+            "line": 196,
+            "condition": "if (*(int *)(*(longlong *)(lVar7 + 0x48) + 0x28) < 0) {"
+          }
+        ],
+        "opsCount": 10,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  undefined8 *puVar2;\n\n  undefined4 uVar3;\n\n  uint uVar4;\n\n  uint uVar5;\n\n  fyy_array *pfVar6;\n\n  longlong lVar7;\n\n  MethodInfo_32032D0 *method_00;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar8;\n\n  longlong lVar9;\n\n  longlong lVar10;\n\n  Unity_IL2CPP_Metadata___Il2CppFullySharedGenericType_o *item;\n\n  fyy_o *pfVar11;\n\n  fyy_c *pfStackX_10;\n\n  undefined8 auStack_50 [4];\n\n  undefined8 uStack_30;\n\n\n\n  if (DAT_18678802b == '\\0') {\n\n    uStack_30 = 0x181d..."
+    },
+    {
+      "method": "bjhx",
+      "signature": "public void bjhx()",
+      "line": 387305,
+      "va": "0x181da5ac0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 761,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_18678802c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((pSVar6->fields)._size < 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (pfVar5 != (fyy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (((__this_00 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da634d;"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if ((lStackX_18 == 0) || (*(longlong *)(lStackX_18 + 0x10) == 0)) goto LAB_181da"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 184,
+            "condition": "if ((int)((uVar10 ^ uVar9) - uVar9) < 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (1 < (int)((uVar10 ^ uVar9) - uVar9)) goto LAB_181da5d46;"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 242
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "SWITCH",
+            "line": 264
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 354,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 370,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 388,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 404,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 420,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 470,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 488,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 504,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 538,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 588,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 604,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 620,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 638,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 654,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 676,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da634d;"
+          },
+          {
+            "type": "IF",
+            "line": 690,
+            "condition": "if (100 < (int)uVar11) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Exception_",
+            "method": "ctor",
+            "line": 708,
+            "string_arg": "Path too long. Maybe an orientation problem?"
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da634d;"
+          },
+          {
+            "type": "IF",
+            "line": 728,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 48,
+        "varMap": {
+          "message": "Path too long. Maybe an orientation problem?"
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint index;\n\n  int iVar1;\n\n  int iVar2;\n\n  int32_t iVar3;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  fyy_o *pfVar5;\n\n  System_Collections_Generic_List_fyy__o *pSVar6;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar7;\n\n  System_String_o *message;\n\n  undefined8 uVar8;\n\n  System_Exception_o *__this_01;\n\n  uint uVar9;\n\n  uint uVar10;\n\n  uint uVar11;\n\n  longlong lStackX_8;\n\n  longlong lStackX_18;\n\n  longlong lStackX_20;\n\n  longlong lStack_c8;\n\n  longlong lStack_c0;..."
+    },
+    {
+      "method": "htu",
+      "signature": "public fyy htu()",
+      "line": 387308,
+      "va": "0x181da7b50",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678802d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_18678802d == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678802d = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2Cpp..."
+    },
+    {
+      "method": "bjhq",
+      "signature": "public int bjhq()",
+      "line": 387311,
+      "va": "0x181da5250",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_18678802e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n\n\n  if (DAT_18678802e == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678802e = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  iVar3 = (*pcVar2)();\n\n  return iVar3;\n\n}"
+    },
+    {
+      "method": "bjhe",
+      "signature": "public void bjhe(MapPoint a)",
+      "line": 387315,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjia",
+      "signature": "public fzc bjia()",
+      "line": 387318,
+      "va": "0x181da6520",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 63,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678802f == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (pfVar2 != (fzc_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *collection;\n\n  code *pcVar1;\n\n  fzc_o *pfVar2;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n\n\n  if (DAT_18678802f == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_List<fyy>_TypeInfo);\n\n    FUN_1805658a0(&fzc_TypeInfo);\n\n    DAT_18678802f = '\\x01';\n\n  }\n\n  pfVar2 = (fzc_o *)func_0x000180565b00(fzc_TypeInfo);\n\n  fzc___ctor(pfVar2,(MethodInfo *)0x0);\n\n  if (pfVar..."
+    },
+    {
+      "method": "ivm",
+      "signature": "public fyy ivm()",
+      "line": 387321,
+      "va": "0x181da7bd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 73,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788030 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((pSVar1->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788030 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788030 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  pSVar1 = (__this..."
+    },
+    {
+      "method": "oja",
+      "signature": "public string oja()",
+      "line": 387324,
+      "va": "0x181da8aa0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 237,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186788031 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 84,
+            "string_arg": "7JUsUTvmcboSEuW6iIrWFp30PXd/M+jRIrWYAP412hU="
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 106,
+            "string_arg": "a1fZ5AdDDnaCNsTyVuaHJLEc2rgPOL+5rFouhk1xu90="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 108,
+            "string_arg": "a1fZ5AdDDnaCNsTyVuaHJLEc2rgPOL+5rFouhk1xu90="
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((pSVar2->fields)._size <= (int)__this_00) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 202,
+            "string_arg": "N89PMbDxD1nmx/VIbvV7PC50TuFaIgUzlyA4rBSIKBA="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 204,
+            "string_arg": "N89PMbDxD1nmx/VIbvV7PC50TuFaIgUzlyA4rBSIKBA="
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {
+          "pSVar4": "7JUsUTvmcboSEuW6iIrWFp30PXd/M+jRIrWYAP412hU=",
+          "pSVar7": "N89PMbDxD1nmx/VIbvV7PC50TuFaIgUzlyA4rBSIKBA="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  System_Collections_Generic_List_fyy__o *pSVar2;\n\n  code *pcVar3;\n\n  System_String_o *pSVar4;\n\n  Il2CppObject *pIVar5;\n\n  Il2CppObject *pIVar6;\n\n  System_String_o *pSVar7;\n\n  Il2CppObject *arg2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int32_t aiStackX_8 [4];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t iStack_68;\n\n  undefined4 uStack_64;\n\n  undefined4 uStack_60;\n\n  undefined4 uStack_5c;\n\n  longlong lStack_..."
+    },
+    {
+      "method": "ss",
+      "signature": "public void ss()",
+      "line": 387327,
+      "va": "0x181da8dc0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 761,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_186788032 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((pSVar6->fields)._size < 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (pfVar5 != (fyy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (((__this_00 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da964d;"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if ((lStackX_18 == 0) || (*(longlong *)(lStackX_18 + 0x10) == 0)) goto LAB_181da"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 184,
+            "condition": "if ((int)((uVar10 ^ uVar9) - uVar9) < 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (1 < (int)((uVar10 ^ uVar9) - uVar9)) goto LAB_181da9046;"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 242
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "SWITCH",
+            "line": 264
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 354,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 370,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 388,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 404,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 420,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 470,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 488,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 504,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 538,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 588,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 604,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 620,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 638,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 654,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 676,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da964d;"
+          },
+          {
+            "type": "IF",
+            "line": 690,
+            "condition": "if (-0x30 < (int)uVar11) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Exception_",
+            "method": "ctor",
+            "line": 708,
+            "string_arg": "qDC0THvYnZJrtYTb2PW3FYOYuyn7ciArs1C9Tb+q+Lo="
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da964d;"
+          },
+          {
+            "type": "IF",
+            "line": 728,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 48,
+        "varMap": {
+          "message": "qDC0THvYnZJrtYTb2PW3FYOYuyn7ciArs1C9Tb+q+Lo="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint index;\n\n  int iVar1;\n\n  int iVar2;\n\n  int32_t iVar3;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  fyy_o *pfVar5;\n\n  System_Collections_Generic_List_fyy__o *pSVar6;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar7;\n\n  System_String_o *message;\n\n  undefined8 uVar8;\n\n  System_Exception_o *__this_01;\n\n  uint uVar9;\n\n  uint uVar10;\n\n  uint uVar11;\n\n  longlong lStackX_8;\n\n  longlong lStackX_18;\n\n  longlong lStackX_20;\n\n  longlong lStack_c8;\n\n  longlong lStack_c0;..."
+    },
+    {
+      "method": "csd",
+      "signature": "private void csd(int a, int b = 1)",
+      "line": 387330,
+      "va": "0x181da7200",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_186788033 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (b == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7281;"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "else if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowIndexArgumentOutOfRange_NeedNonNegNumException",
+            "line": 56
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (b < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentOutOfRangeException",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((pSVar3->fields)._size - a < b) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentException",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (0 < b) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a < iVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Copy",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (cVar6 != '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 98
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  fyy_array *sourceArray;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  char cVar6;\n\n\n\n  if (DAT_186788033 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveRange__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788033 = '\\x01';\n\n  }\n\n  lVar5 = _Method_System_Collections_Generic_List<fyy>_RemoveRange__;\n\n  pSVar3 = (__this->fields)._dwmh_k__..."
+    },
+    {
+      "method": "bjhw",
+      "signature": "public void bjhw()",
+      "line": 387333,
+      "va": "0x181da5980",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_186788034 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (0 < (pSVar3->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if ((pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5ab7;"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (alStackX_18[0] == 0) goto LAB_181da5ab7;"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (iVar2 == *(int *)(alStackX_18[0] + 0x18)) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (DAT_18678803f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5ab7;"
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint uVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  code *pcVar4;\n\n  uint index;\n\n  longlong lStackX_8;\n\n  longlong alStackX_18 [2];\n\n\n\n  if (DAT_186788034 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788034 = '\\x01';\n\n  }\n\n  pSVar3 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar3 == (System_Collections_Generic_List_fyy__o *)..."
+    },
+    {
+      "method": "bjhm",
+      "signature": "public fyy bjhm()",
+      "line": 387336,
+      "va": "0x181da5020",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788035 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788035 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788035 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2Cpp..."
+    },
+    {
+      "method": "bjhn",
+      "signature": "public fyy bjhn()",
+      "line": 387339,
+      "va": "0x181da50a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 73,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788036 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((pSVar1->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788036 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788036 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  pSVar1 = (__this..."
+    },
+    {
+      "method": "dhp",
+      "signature": "private void dhp(int a, int b = 1)",
+      "line": 387342,
+      "va": "0x181da7390",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_186788037 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (b == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7411;"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "else if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowIndexArgumentOutOfRange_NeedNonNegNumException",
+            "line": 56
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (b < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentOutOfRangeException",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((pSVar3->fields)._size - a < b) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentException",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (0 < b) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a < iVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Copy",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (cVar6 != '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 98
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  fyy_array *sourceArray;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  char cVar6;\n\n\n\n  if (DAT_186788037 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveRange__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788037 = '\\x01';\n\n  }\n\n  lVar5 = _Method_System_Collections_Generic_List<fyy>_RemoveRange__;\n\n  pSVar3 = (__this->fields)._dwmh_k__..."
+    },
+    {
+      "method": "nbt",
+      "signature": "public int nbt()",
+      "line": 387345,
+      "va": "0x181da8700",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_186788038 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n\n\n  if (DAT_186788038 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788038 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  iVar3 = (*pcVar2)();\n\n  return iVar3;\n\n}"
+    },
+    {
+      "method": "lfk",
+      "signature": "public fyy lfk()",
+      "line": 387348,
+      "va": "0x181da8240",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 73,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788039 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((pSVar1->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788039 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788039 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  pSVar1 = (__this..."
+    },
+    {
+      "method": "bjht",
+      "signature": "public fyy bjht(int a)",
+      "line": 387351,
+      "va": "0x181da5570",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678803a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *pfStackX_8;\n\n\n\n  if (DAT_18678803a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678803a = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2CppFullySharedGenericType>__get_Item\n..."
+    },
+    {
+      "method": "bjhi",
+      "signature": "public void bjhi(List<fyy> a)",
+      "line": 387355,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjho",
+      "signature": "public fyy bjho()",
+      "line": 387358,
+      "va": "0x181da5140",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678803b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if ((__return_storage_ptr__->fields)._size < 1) {"
+          }
+        ],
+        "opsCount": 4,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_18678803b == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678803b = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__ret..."
+    },
+    {
+      "method": "ctor",
+      "signature": "public void .ctor()",
+      "line": 387361,
+      "va": "0x181da4cb0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 61,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_18678803c == '\\0') {"
+          }
+        ],
+        "opsCount": 1,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  MethodInfo *in_R8;\n\n\n\n  if (DAT_18678803c == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_List<fyy>_TypeInfo);\n\n    FUN_1805658a0(&Core_PathFinding_WorldData_MapPoint_TypeInfo);\n\n    DAT_18678803c = '\\x01';\n\n  }\n\n  pCVar1 = (Core_PathFinding_WorldData_MapPoint_o *)\n\n           func_0x000180565b00(Core_Path..."
+    },
+    {
+      "method": "jdd",
+      "signature": "public fyy jdd(int a)",
+      "line": 387364,
+      "va": "0x181da7cf0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678803d == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *pfStackX_8;\n\n\n\n  if (DAT_18678803d == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678803d = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2CppFullySharedGenericType>__get_Item\n..."
+    },
+    {
+      "method": "car",
+      "signature": "public void car(List<int> a)",
+      "line": 387367,
+      "va": "0x181da6f80",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 227,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 26,
+            "condition": "if (DAT_18678803e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (a != (System_Collections_Generic_List_int__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 64,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "CALL",
+            "class": "Core_PathFinding_WorldData_MapPoint",
+            "method": "bjgb",
+            "line": 70
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 74
+          },
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da71f8;"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if ((a->fields)._size + -1 <= (int)uVar6) break;"
+          },
+          {
+            "type": "IF",
+            "line": 94,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da71f8;"
+          },
+          {
+            "type": "IF",
+            "line": 106,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da71f8;"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) goto LAB_181da71f8;"
+          },
+          {
+            "type": "IF",
+            "line": 122,
+            "condition": "if (pSVar1 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da71f8;"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (((lStackX_20 == 0) || (pCVar4 == (Core_PathFinding_WorldData_MapPoint_o *)0x"
+          },
+          {
+            "type": "IF",
+            "line": 146,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 156,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 164,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 182,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 194,
+            "condition": "if (CONCAT44(uStackX_14,iStackX_10) != 0) {"
+          }
+        ],
+        "opsCount": 18,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 2,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  int32_t iVar3;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar4;\n\n  fyy_o *__this_00;\n\n  uint uVar5;\n\n  uint uVar6;\n\n  int32_t iStackX_10;\n\n  undefined4 uStackX_14;\n\n  longlong lStackX_20;\n\n  longlong alStack_38 [2];\n\n\n\n  if (DAT_18678803e == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_Add__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<int>_get_Count__);\n\n    FUN_1805658a0(&Method..."
+    },
+    {
+      "method": "bjhg",
+      "signature": "public void bjhg(MapPoint a)",
+      "line": 387371,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "bjhu",
+      "signature": "private void bjhu(int a, int b = 1)",
+      "line": 387374,
+      "va": "0x181da55d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_18678803f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (b == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da5651;"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "else if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowIndexArgumentOutOfRange_NeedNonNegNumException",
+            "line": 56
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (b < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentOutOfRangeException",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((pSVar3->fields)._size - a < b) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentException",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (0 < b) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a < iVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Copy",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (cVar6 != '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 98
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  fyy_array *sourceArray;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  char cVar6;\n\n\n\n  if (DAT_18678803f == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveRange__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678803f = '\\x01';\n\n  }\n\n  lVar5 = _Method_System_Collections_Generic_List<fyy>_RemoveRange__;\n\n  pSVar3 = (__this->fields)._dwmh_k__..."
+    },
+    {
+      "method": "hfp",
+      "signature": "private void hfp(int a, int b = 1)",
+      "line": 387377,
+      "va": "0x181da7ac0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_186788040 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (b == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da7b41;"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "else if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowIndexArgumentOutOfRange_NeedNonNegNumException",
+            "line": 56
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (b < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentOutOfRangeException",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((pSVar3->fields)._size - a < b) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentException",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (0 < b) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a < iVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Copy",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (cVar6 != '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 98
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  fyy_array *sourceArray;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  char cVar6;\n\n\n\n  if (DAT_186788040 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveRange__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788040 = '\\x01';\n\n  }\n\n  lVar5 = _Method_System_Collections_Generic_List<fyy>_RemoveRange__;\n\n  pSVar3 = (__this->fields)._dwmh_k__..."
+    },
+    {
+      "method": "mjv",
+      "signature": "public fyy mjv()",
+      "line": 387380,
+      "va": "0x181da8660",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 73,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788041 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if ((pSVar1->fields)._size < 1) {"
+          },
+          {
+            "type": "IF",
+            "line": 50,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 5,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788041 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788041 = '\\x01';\n\n  }\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  pSVar1 = (__this..."
+    },
+    {
+      "method": "bjhv",
+      "signature": "public string bjhv()",
+      "line": 387383,
+      "va": "0x181da5660",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 237,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186788042 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 84,
+            "string_arg": "\nstart : [{0}, {1}]"
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 106,
+            "string_arg": "\narrival : [{0}, {1}]\npath :"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 108,
+            "string_arg": "\narrival : [{0}, {1}]\npath :"
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((pSVar2->fields)._size <= (int)__this_00) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 202,
+            "string_arg": "[{0}, {1}, {2}]  "
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 204,
+            "string_arg": "[{0}, {1}, {2}]  "
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {
+          "pSVar4": "\nstart : [{0}, {1}]",
+          "pSVar7": "[{0}, {1}, {2}]  "
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  System_Collections_Generic_List_fyy__o *pSVar2;\n\n  code *pcVar3;\n\n  System_String_o *pSVar4;\n\n  Il2CppObject *pIVar5;\n\n  Il2CppObject *pIVar6;\n\n  System_String_o *pSVar7;\n\n  Il2CppObject *arg2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int32_t aiStackX_8 [4];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t iStack_68;\n\n  undefined4 uStack_64;\n\n  undefined4 uStack_60;\n\n  undefined4 uStack_5c;\n\n  longlong lStack_..."
+    },
+    {
+      "method": "mnc",
+      "signature": "public void mnc(MapPoint a)",
+      "line": 387386,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "mhj",
+      "signature": "public fyy mhj(int a)",
+      "line": 387389,
+      "va": "0x181da8600",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788043 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *pfStackX_8;\n\n\n\n  if (DAT_186788043 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788043 = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2CppFullySharedGenericType>__get_Item\n..."
+    },
+    {
+      "method": "kwn",
+      "signature": "private void kwn(int a, int b = 1)",
+      "line": 387392,
+      "va": "0x181da8170",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 109,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_186788044 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 32,
+            "condition": "if (b == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 34,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da81f1;"
+          },
+          {
+            "type": "IF",
+            "line": 40,
+            "condition": "else if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 54,
+            "condition": "if (a < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowIndexArgumentOutOfRange_NeedNonNegNumException",
+            "line": 56
+          },
+          {
+            "type": "IF",
+            "line": 60,
+            "condition": "if (b < 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentOutOfRangeException",
+            "line": 62
+          },
+          {
+            "type": "IF",
+            "line": 66,
+            "condition": "if ((pSVar3->fields)._size - a < b) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_ThrowHelper",
+            "method": "ThrowArgumentException",
+            "line": 68
+          },
+          {
+            "type": "IF",
+            "line": 72,
+            "condition": "if (0 < b) {"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (a < iVar2) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Copy",
+            "line": 84
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (cVar6 != '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Array",
+            "method": "Clear",
+            "line": 98
+          }
+        ],
+        "opsCount": 15,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t *piVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  fyy_array *sourceArray;\n\n  code *pcVar4;\n\n  longlong lVar5;\n\n  char cVar6;\n\n\n\n  if (DAT_186788044 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveRange__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_186788044 = '\\x01';\n\n  }\n\n  lVar5 = _Method_System_Collections_Generic_List<fyy>_RemoveRange__;\n\n  pSVar3 = (__this->fields)._dwmh_k__..."
+    },
+    {
+      "method": "ner",
+      "signature": "public string ner()",
+      "line": 387395,
+      "va": "0x181da8740",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 237,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186788045 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 84,
+            "string_arg": "EE243IojV0yjjJE79EdfrldzSzZFvv1tqkuJ7NyXnoM="
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 106,
+            "string_arg": "dy4A2H2q7Ocar/iDOhUBLfnrv5lI1h9RUEoyPppqcAs="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 108,
+            "string_arg": "dy4A2H2q7Ocar/iDOhUBLfnrv5lI1h9RUEoyPppqcAs="
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((pSVar2->fields)._size <= (int)__this_00) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 202,
+            "string_arg": "7Q3DxUeHMa2HYxuWxnozlUlc8/DXBTugD66HM3itTa8="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 204,
+            "string_arg": "7Q3DxUeHMa2HYxuWxnozlUlc8/DXBTugD66HM3itTa8="
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {
+          "pSVar4": "EE243IojV0yjjJE79EdfrldzSzZFvv1tqkuJ7NyXnoM=",
+          "pSVar7": "7Q3DxUeHMa2HYxuWxnozlUlc8/DXBTugD66HM3itTa8="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  System_Collections_Generic_List_fyy__o *pSVar2;\n\n  code *pcVar3;\n\n  System_String_o *pSVar4;\n\n  Il2CppObject *pIVar5;\n\n  Il2CppObject *pIVar6;\n\n  System_String_o *pSVar7;\n\n  Il2CppObject *arg2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int32_t aiStackX_8 [4];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t iStack_68;\n\n  undefined4 uStack_64;\n\n  undefined4 uStack_60;\n\n  undefined4 uStack_5c;\n\n  longlong lStack_..."
+    },
+    {
+      "method": "lye",
+      "signature": "public void lye(MapPoint a)",
+      "line": 387398,
+      "status": "NOT_FOUND"
+    },
+    {
+      "method": "mdl",
+      "signature": "public string mdl()",
+      "line": 387401,
+      "va": "0x181da82e0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 237,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 42,
+            "condition": "if (DAT_186788046 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 56,
+            "condition": "if (*(int *)&(<PrivateImplementationDetails>_0E33E920_F2DB_4E99_9C5F_1C320EFCDB0"
+          },
+          {
+            "type": "IF",
+            "line": 70,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 78,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 84,
+            "string_arg": "57qHl1VzwA2B0UhDd0q23/JX2SLagxXJG5mQuGJFXp4="
+          },
+          {
+            "type": "IF",
+            "line": 92,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pCVar1 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 106,
+            "string_arg": "5M2HOvOl2AGO1NhQve8g1YHMIjBP7aBjpb17vOMHqjw="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 108,
+            "string_arg": "5M2HOvOl2AGO1NhQve8g1YHMIjBP7aBjpb17vOMHqjw="
+          },
+          {
+            "type": "IF",
+            "line": 116,
+            "condition": "if (pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 128,
+            "condition": "if ((pSVar2->fields)._size <= (int)__this_00) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (*(int *)&("
+          },
+          {
+            "type": "IF",
+            "line": 150,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 168,
+            "condition": "if (((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 186,
+            "condition": "if ((pSVar2 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Format",
+            "line": 202,
+            "string_arg": "cqleqcN760x+2JQFqsULLHi6NpUiLU/2LSOVNiocHYc="
+          },
+          {
+            "type": "CALL",
+            "class": "System_String",
+            "method": "Concat",
+            "line": 204,
+            "string_arg": "cqleqcN760x+2JQFqsULLHi6NpUiLU/2LSOVNiocHYc="
+          }
+        ],
+        "opsCount": 17,
+        "varMap": {
+          "pSVar4": "57qHl1VzwA2B0UhDd0q23/JX2SLagxXJG5mQuGJFXp4=",
+          "pSVar7": "cqleqcN760x+2JQFqsULLHi6NpUiLU/2LSOVNiocHYc="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 5,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar1;\n\n  System_Collections_Generic_List_fyy__o *pSVar2;\n\n  code *pcVar3;\n\n  System_String_o *pSVar4;\n\n  Il2CppObject *pIVar5;\n\n  Il2CppObject *pIVar6;\n\n  System_String_o *pSVar7;\n\n  Il2CppObject *arg2;\n\n  System_Collections_Generic_List_T__o *__this_00;\n\n  int32_t aiStackX_8 [4];\n\n  int32_t aiStackX_18 [2];\n\n  int32_t aiStackX_20 [2];\n\n  int32_t iStack_68;\n\n  undefined4 uStack_64;\n\n  undefined4 uStack_60;\n\n  undefined4 uStack_5c;\n\n  longlong lStack_..."
+    },
+    {
+      "method": "ghu",
+      "signature": "public fzc ghu()",
+      "line": 387404,
+      "va": "0x181da7a00",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 63,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788047 == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (pfVar2 != (fzc_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *collection;\n\n  code *pcVar1;\n\n  fzc_o *pfVar2;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n\n\n  if (DAT_186788047 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_List<fyy>_TypeInfo);\n\n    FUN_1805658a0(&fzc_TypeInfo);\n\n    DAT_186788047 = '\\x01';\n\n  }\n\n  pfVar2 = (fzc_o *)func_0x000180565b00(fzc_TypeInfo);\n\n  fzc___ctor(pfVar2,(MethodInfo *)0x0);\n\n  if (pfVar..."
+    },
+    {
+      "method": "bvf",
+      "signature": "public void bvf()",
+      "line": 387407,
+      "va": "0x181da6670",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 761,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 76,
+            "condition": "if (DAT_186788048 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 102,
+            "condition": "if ((pSVar6->fields)._size < 1) {"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (pfVar5 != (fyy_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 134,
+            "condition": "if (pSVar6 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 140,
+            "condition": "if (((__this_00 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da6efd;"
+          },
+          {
+            "type": "IF",
+            "line": 170,
+            "condition": "if ((lStackX_18 == 0) || (*(longlong *)(lStackX_18 + 0x10) == 0)) goto LAB_181da"
+          },
+          {
+            "type": "IF",
+            "line": 174,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 184,
+            "condition": "if ((int)((uVar10 ^ uVar9) - uVar9) < 2) {"
+          },
+          {
+            "type": "IF",
+            "line": 188,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 206,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 222,
+            "condition": "if (*(int *)&(System_Math_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "IF",
+            "line": 232,
+            "condition": "if (1 < (int)((uVar10 ^ uVar9) - uVar9)) goto LAB_181da68f6;"
+          },
+          {
+            "type": "CALL",
+            "class": "fyy_",
+            "method": "ctor",
+            "line": 242
+          },
+          {
+            "type": "IF",
+            "line": 246,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "SWITCH",
+            "line": 264
+          },
+          {
+            "type": "IF",
+            "line": 270,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 288,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 304,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 320,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 338,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 354,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 370,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 388,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 404,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 420,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 438,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 454,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 470,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 488,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 504,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 520,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 538,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 554,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 570,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 588,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 604,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 620,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 638,
+            "condition": "if (((pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 654,
+            "condition": "if (*(int *)&(Core_PathFinding_WorldData_MapPoint_TypeInfo->_2).field_0x1c == 0)"
+          },
+          {
+            "type": "IF",
+            "line": 676,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da6efd;"
+          },
+          {
+            "type": "IF",
+            "line": 690,
+            "condition": "if (-0x25 < (int)uVar11) {"
+          },
+          {
+            "type": "CALL",
+            "class": "System_Exception_",
+            "method": "ctor",
+            "line": 708,
+            "string_arg": "EQbh1bJ3WZq44LFPQyjQFBlEWWd8n+W1ImK6DNsO5/c="
+          },
+          {
+            "type": "IF",
+            "line": 724,
+            "condition": "if (pSVar6 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da6efd;"
+          },
+          {
+            "type": "IF",
+            "line": 728,
+            "condition": "if (__this_00 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 48,
+        "varMap": {
+          "message": "EQbh1bJ3WZq44LFPQyjQFBlEWWd8n+W1ImK6DNsO5/c="
+        },
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint index;\n\n  int iVar1;\n\n  int iVar2;\n\n  int32_t iVar3;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n  code *pcVar4;\n\n  fyy_o *pfVar5;\n\n  System_Collections_Generic_List_fyy__o *pSVar6;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar7;\n\n  System_String_o *message;\n\n  undefined8 uVar8;\n\n  System_Exception_o *__this_01;\n\n  uint uVar9;\n\n  uint uVar10;\n\n  uint uVar11;\n\n  longlong lStackX_8;\n\n  longlong lStackX_18;\n\n  longlong lStackX_20;\n\n  longlong lStack_c8;\n\n  longlong lStack_c0;..."
+    },
+    {
+      "method": "iwd",
+      "signature": "public fyy iwd()",
+      "line": 387410,
+      "va": "0x181da7c70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 59,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_186788049 == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 24,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 36,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  fyy_o *pfVar3;\n\n  fyy_o *apfStackX_8 [4];\n\n\n\n  if (DAT_186788049 == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_RemoveAt__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_186788049 = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2Cpp..."
+    },
+    {
+      "method": "bjhj",
+      "signature": "public bool bjhj()",
+      "line": 387413,
+      "va": "0x181da4d70",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 35,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 10,
+            "condition": "if (DAT_18678804a == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 20,
+            "condition": "if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *pSVar1;\n\n  code *pcVar2;\n\n  undefined1 uVar3;\n\n\n\n  if (DAT_18678804a == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    DAT_18678804a = '\\x01';\n\n  }\n\n  pSVar1 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar1 != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    return (pSVar1->fields)._size < 1;\n\n  }\n\n  FUN_180565b50();\n\n  pcVar2 = (code *)swi(3);\n\n  uVar3 = (*pcVar2)();\n\n  return (bool)uVar3;\n\n}"
+    },
+    {
+      "method": "foy",
+      "signature": "public fyy foy(int a)",
+      "line": 387416,
+      "va": "0x181da79a0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 45,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678804b == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 22,
+            "condition": "if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {"
+          }
+        ],
+        "opsCount": 2,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  code *pcVar1;\n\n  fyy_o *pfVar2;\n\n  fyy_o *pfStackX_8;\n\n\n\n  if (DAT_18678804b == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678804b = '\\x01';\n\n  }\n\n  __return_storage_ptr__ = (__this->fields)._dwmh_k__BackingField;\n\n  if (__return_storage_ptr__ != (System_Collections_Generic_List_fyy__o *)0x0) {\n\n    System_Collections_Generic_List<__Il2CppFullySharedGenericType>__get_Item\n..."
+    },
+    {
+      "method": "jqq",
+      "signature": "public void jqq()",
+      "line": 387419,
+      "va": "0x181da7fd0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 113,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 18,
+            "condition": "if (DAT_18678804c == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 44,
+            "condition": "if (0 < (pSVar3->fields)._size) {"
+          },
+          {
+            "type": "IF",
+            "line": 52,
+            "condition": "if ((pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) ||"
+          },
+          {
+            "type": "IF",
+            "line": 68,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da8107;"
+          },
+          {
+            "type": "IF",
+            "line": 80,
+            "condition": "if (alStackX_18[0] == 0) goto LAB_181da8107;"
+          },
+          {
+            "type": "IF",
+            "line": 82,
+            "condition": "if (iVar2 == *(int *)(alStackX_18[0] + 0x18)) {"
+          },
+          {
+            "type": "IF",
+            "line": 84,
+            "condition": "if (DAT_18678803f == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 96,
+            "condition": "if (pSVar3 == (System_Collections_Generic_List_fyy__o *)0x0) goto LAB_181da8107;"
+          }
+        ],
+        "opsCount": 9,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 0,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  uint uVar1;\n\n  int iVar2;\n\n  System_Collections_Generic_List_fyy__o *pSVar3;\n\n  code *pcVar4;\n\n  uint index;\n\n  longlong lStackX_8;\n\n  longlong alStackX_18 [2];\n\n\n\n  if (DAT_18678804c == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Count__);\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>_get_Item__);\n\n    DAT_18678804c = '\\x01';\n\n  }\n\n  pSVar3 = (__this->fields)._dwmh_k__BackingField;\n\n  if (pSVar3 == (System_Collections_Generic_List_fyy__o *)..."
+    },
+    {
+      "method": "dhg",
+      "signature": "public fzc dhg()",
+      "line": 387422,
+      "va": "0x181da72d0",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 63,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 12,
+            "condition": "if (DAT_18678804d == '\\0') {"
+          },
+          {
+            "type": "CALL",
+            "class": "fzc_",
+            "method": "ctor",
+            "line": 26
+          },
+          {
+            "type": "IF",
+            "line": 28,
+            "condition": "if (pfVar2 != (fzc_o *)0x0) {"
+          }
+        ],
+        "opsCount": 3,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 1,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  System_Collections_Generic_List_fyy__o *collection;\n\n  code *pcVar1;\n\n  fzc_o *pfVar2;\n\n  System_Collections_Generic_List_fyy__o *__this_00;\n\n\n\n  if (DAT_18678804d == '\\0') {\n\n    FUN_1805658a0(&Method_System_Collections_Generic_List<fyy>__ctor__);\n\n    FUN_1805658a0(&System_Collections_Generic_List<fyy>_TypeInfo);\n\n    FUN_1805658a0(&fzc_TypeInfo);\n\n    DAT_18678804d = '\\x01';\n\n  }\n\n  pfVar2 = (fzc_o *)func_0x000180565b00(fzc_TypeInfo);\n\n  fzc___ctor(pfVar2,(MethodInfo *)0x0);\n\n  if (pfVar..."
+    },
+    {
+      "method": "bjhl",
+      "signature": "public bool bjhl()",
+      "line": 387425,
+      "va": "0x181da4e20",
+      "status": "OK",
+      "analysis": {
+        "totalLines": 191,
+        "ops": [
+          {
+            "type": "IF",
+            "line": 30,
+            "condition": "if (DAT_18678804e == '\\0') {"
+          },
+          {
+            "type": "IF",
+            "line": 48,
+            "condition": "if (__return_storage_ptr__ == (System_Collections_Generic_List_fyy__o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 90,
+            "condition": "if (!bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 100,
+            "condition": "if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 104,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 110
+          },
+          {
+            "type": "IF",
+            "line": 112,
+            "condition": "if (!bVar6) {"
+          },
+          {
+            "type": "IF",
+            "line": 120,
+            "condition": "if (pCVar3 != (Core_PathFinding_WorldData_MapPoint_o *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 124,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 130
+          },
+          {
+            "type": "IF",
+            "line": 154,
+            "condition": "if (pAStackX_18 == (Ankama_Utilities_Pooling_TrackingPool_T__o *)0x0) break;"
+          },
+          {
+            "type": "IF",
+            "line": 158,
+            "condition": "if (pSVar2 == (System_Object_array *)0x0) {"
+          },
+          {
+            "type": "IF",
+            "line": 172,
+            "condition": "if (*(int *)&(oh_TypeInfo->_2).field_0x1c == 0) {"
+          },
+          {
+            "type": "CALL",
+            "class": "oh",
+            "method": "owe",
+            "line": 178
+          }
+        ],
+        "opsCount": 14,
+        "varMap": {},
+        "hasAsync": false,
+        "hasScreenOpen": false,
+        "callCount": 3,
+        "fieldSetCount": 0
+      },
+      "bodyPreview": "{\n\n  int32_t iVar1;\n\n  System_Collections_Generic_List_fyy__o *__return_storage_ptr__;\n\n  System_Object_array *pSVar2;\n\n  Core_PathFinding_WorldData_MapPoint_o *pCVar3;\n\n  code *pcVar4;\n\n  il2cpp_array_size_t iVar5;\n\n  bool bVar6;\n\n  undefined1 uVar7;\n\n  MethodInfo *method_00;\n\n  Ankama_Utilities_Pooling_TrackingPool_T__o *pAStackX_18;\n\n  undefined1 auStack_40 [24];\n\n  undefined1 auStack_28 [16];\n\n  System_Object_array *pSStack_18;\n\n\n\n  if (DAT_18678804e == '\\0') {\n\n    FUN_1805658a0(&Method_Sys..."
+    }
+  ]
+}

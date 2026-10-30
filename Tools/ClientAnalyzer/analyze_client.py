@@ -25,6 +25,7 @@ Usage:
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
@@ -34,14 +35,14 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 REPO_ROOT = SCRIPT_DIR.parent.parent
-IL2CPP_DIR = REPO_ROOT / "Il2CppDumper" / "Il2CppDumper V6.7.48"
+DECOMPILED_DIR = Path(os.environ.get("DECOMPILED_DIR", str(REPO_ROOT / "Decompiled")))
 OUTPUT_DIR = SCRIPT_DIR / "output"
 
-DUMP_CS = IL2CPP_DIR / "dump.cs"
-DECOMPILED_C = IL2CPP_DIR / "decompiled_all.c"
-SCRIPT_JSON = IL2CPP_DIR / "script.json"
-STRINGLIT_JSON = IL2CPP_DIR / "stringliteral.json"
-GLOBAL_METADATA = REPO_ROOT / "Cliente 3.6.10.11" / "Dofus_Data" / "il2cpp_data" / "Metadata" / "global-metadata.dat"
+DUMP_CS = DECOMPILED_DIR / "dump.cs"
+DECOMPILED_C = DECOMPILED_DIR / "decompiled_all.c"
+SCRIPT_JSON = DECOMPILED_DIR / "script.json"
+STRINGLIT_JSON = DECOMPILED_DIR / "stringliteral.json"
+GLOBAL_METADATA = Path(os.environ.get("METADATA_PATH", str(REPO_ROOT / "Cliente 3.6.10.11" / "Dofus_Data" / "il2cpp_data" / "Metadata" / "global-metadata.dat")))
 
 # OPS Obfuscator encrypted string table (main GUID)
 OBF_METADATA_OFFSET = 0x13D51B0
@@ -766,6 +767,254 @@ def extract_bindings(all_types):
 RE_FUNC_HEADER = re.compile(r'^// === (.+?)\$\$(.+?) @ ([0-9a-fA-F]+) ===$')
 
 
+def read_recovered_pseudocode(run_path, export_sha256, binary_sha256):
+    run_path = Path(run_path).resolve()
+    with run_path.open(encoding="utf-8-sig") as source:
+        run = json.load(source)
+    if run["binary"]["sha256"] != binary_sha256:
+        raise ValueError("Recovery binary differs from the audited binary")
+    with open(run["audit"]["path"], encoding="utf-8-sig") as source:
+        audit = json.load(source)
+    if audit["source"]["sha256"] != export_sha256:
+        raise ValueError("Recovery export differs from the audited export")
+    results = run.get("results", [])
+    bundle_path = run_path.parent / f"evidence-{len(results) - 1:03}.json"
+    with bundle_path.open(encoding="utf-8-sig") as source:
+        bundle = json.load(source)
+    records = {record["evidence_id"]: record for record in bundle["records"]}
+    recovered = []
+    for result in results:
+        if result.get("status") != "tool-completed":
+            continue
+        response_path = (run_path.parent / result["response"]).resolve()
+        if not response_path.is_relative_to(run_path.parent):
+            raise ValueError("Recovery response escapes its run directory")
+        with response_path.open(encoding="utf-8-sig") as source:
+            response = json.load(source)
+        record = records.get(result.get("evidenceId"))
+        if response.get("isError") or record is None or record.get("operation") != "procedure_pseudo_code":
+            raise ValueError("Successful recovery lacks matching pseudocode Evidence")
+        inline = response.get("structuredContent", {})
+        code = record.get("normalized_result")
+        if inline.get("evidence_id") != record["evidence_id"] or inline.get("normalized_result") != code:
+            raise ValueError("Recovery response and retained Evidence differ")
+        if record["subject"]["digest"]["sha256"] != binary_sha256:
+            raise ValueError("Recovered pseudocode belongs to another binary")
+        if record.get("parameters", {}).get("procedure", "").lower() != result["address"].lower():
+            raise ValueError("Recovered pseudocode is bound to another procedure")
+        if not isinstance(code, str) or "{" not in code or not code.rstrip().endswith("}"):
+            raise ValueError("Recovered pseudocode has no observed outer body")
+        recovered.append({"address": hex(int(result["address"], 16)), "symbol": result["symbol"],
+                          "evidenceId": record["evidence_id"], "codeSha256": hashlib.sha256(code.encode("utf-8")).hexdigest(),
+                          "codeBytes": len(code.encode("utf-8")), "responsePath": str(response_path),
+                          "bundlePath": str(bundle_path), "runPath": str(run_path)})
+    return recovered
+
+
+def audit_decompiled_export(export_path, metadata_bundle_path=None, symbol_map_path=None, recovery_runs=None):
+    header_pattern = re.compile(rb'^// === (.+?) @ ([0-9a-fA-F]+) ===(?: (.*))?$')
+    digest = hashlib.sha256()
+    addresses = {}
+    symbol_counts = {}
+    failures = []
+    incomplete = []
+    malformed = []
+    current = None
+    header_count = 0
+    body_count = 0
+    offset = 0
+
+    def finish():
+        nonlocal body_count
+        if current is None:
+            return
+        address = current["address"]
+        if current["failed"]:
+            failures.append({key: current[key] for key in ("symbol", "address", "offset", "line")})
+            addresses.setdefault(address, "failed")
+        elif current["opened"] and current["closed"]:
+            addresses[address] = "body-observed"
+            body_count += 1
+        else:
+            incomplete.append({key: current[key] for key in ("symbol", "address", "offset", "line")})
+            addresses.setdefault(address, "header-only")
+
+    with open(export_path, "rb") as source:
+        for line_number, raw in enumerate(source, 1):
+            digest.update(raw)
+            line = raw.rstrip(b"\r\n")
+            if line.startswith(b"// === "):
+                finish()
+                current = None
+                match = header_pattern.fullmatch(line)
+                if match is None:
+                    malformed.append({"offset": offset, "line": line_number})
+                else:
+                    symbol = match.group(1).decode("utf-8")
+                    address = hex(int(match.group(2), 16))
+                    current = {"symbol": symbol, "address": address, "offset": offset, "line": line_number,
+                               "failed": b"FAILED TO DECOMPILE" in (match.group(3) or b""),
+                               "opened": False, "closed": False}
+                    header_count += 1
+                    symbol_counts[symbol] = symbol_counts.get(symbol, 0) + 1
+            elif current is not None and not current["failed"]:
+                if line == b"{":
+                    current["opened"] = True
+                elif line == b"}" and current["opened"]:
+                    current["closed"] = True
+            offset += len(raw)
+    finish()
+    report = {
+        "schemaVersion": 1,
+        "source": {"path": str(Path(export_path).resolve()), "bytes": offset, "sha256": digest.hexdigest()},
+        "export": {"headers": header_count, "uniqueAddresses": len(addresses),
+                   "explicitFailures": len(failures), "braceDelimitedBodies": body_count,
+                   "headerOnly": len(incomplete), "malformedHeaders": len(malformed),
+                   "repeatedSymbolNames": sum(count > 1 for count in symbol_counts.values())},
+        "failedFunctions": failures, "headerOnlyFunctions": incomplete, "malformedHeaders": malformed,
+        "coverageStatus": "partial" if failures or incomplete or malformed else "unverified",
+        "limitations": [
+            "Brace-delimited output is not proof of correct pseudocode or behavioral equivalence.",
+            "Export headers, Ghidra procedure counts and managed method rows have different denominators.",
+            "Addresses preserve aliases; repeated symbol names can collide in the legacy name-only index.",
+            "No executable completeness or recovered C# IL percentage is inferred from this report.",
+        ],
+    }
+    if metadata_bundle_path is not None:
+        with open(metadata_bundle_path, encoding="utf-8-sig") as source:
+            bundle = json.load(source)
+        records = [record for record in bundle["records"] if record.get("operation") == "inspect_il2cpp_metadata"]
+        if len(records) != 1:
+            raise ValueError("Coverage requires one IL2CPP metadata Evidence record")
+        record = records[0]
+        metadata = record["normalized_result"]
+        recovered = []
+        for run_path in recovery_runs or []:
+            recovered.extend(read_recovered_pseudocode(run_path, report["source"]["sha256"], metadata["binary"]["artifact"]["sha256"]))
+        if len({item["address"] for item in recovered}) != len(recovered):
+            raise ValueError("Recovery runs contain overlapping procedure addresses")
+        for item in recovered:
+            if addresses.get(item["address"]) != "failed":
+                raise ValueError("Recovered procedure is not a recorded export failure")
+            addresses[item["address"]] = "body-observed"
+        if recovery_runs:
+            remaining = [item for item in failures if addresses[item["address"]] != "body-observed"]
+            report["recovery"] = {"recoveredBodies": recovered, "recoveredCount": len(recovered),
+                                  "remainingFailures": remaining, "remainingFailureCount": len(remaining)}
+            report["coverageStatus"] = "partial" if remaining or incomplete or malformed else "unverified"
+            report["limitations"].append("Recovered sidecars preserve the original export; outer body shape is not proof of correct pseudocode. Retained Evidence integrity should also be checked with REA's public bundle reader.")
+        if len(metadata["methods"]) != len(metadata["method_addresses"]):
+            raise ValueError("Metadata methods and address rows are not aligned")
+        type_images = [None] * len(metadata["types"])
+        assemblies = {}
+        for image in metadata["images"]:
+            name = image["name"]
+            assemblies[name] = {"methods": 0, "code": 0, "noBody": 0, "unknown": 0,
+                                "bodyObserved": 0, "failed": 0, "missing": 0}
+            for type_index in range(image["type_start"], image["type_start"] + image["type_count"]):
+                if type_index < 0 or type_index >= len(type_images) or type_images[type_index] is not None:
+                    raise ValueError("Metadata image/type ranges overlap or are out of bounds")
+                type_images[type_index] = name
+        missing_methods = []
+        code_addresses = set()
+        for method_index, method in enumerate(metadata["methods"]):
+            owner = method["declaring_type"]
+            if owner < 0 or owner >= len(type_images) or type_images[owner] is None:
+                raise ValueError("Metadata method has no image owner")
+            image = type_images[owner]
+            counts = assemblies[image]
+            counts["methods"] += 1
+            location = metadata["method_addresses"][method_index]
+            state = location["state"]
+            if state == "no-body":
+                counts["noBody"] += 1
+            elif state != "code" or not location.get("address"):
+                counts["unknown"] += 1
+            else:
+                counts["code"] += 1
+                address = hex(int(location["address"], 16))
+                code_addresses.add(address)
+                export_state = addresses.get(address)
+                if export_state == "body-observed":
+                    counts["bodyObserved"] += 1
+                elif export_state == "failed":
+                    counts["failed"] += 1
+                else:
+                    counts["missing"] += 1
+                    owner_type = metadata["types"][owner]
+                    missing_methods.append({"image": image, "methodIndex": method_index, "address": address,
+                                            "owner": owner_type["namespace"] + "." + owner_type["name"],
+                                            "method": method["name"], "exportState": export_state or "absent"})
+        report["metadata"] = {"evidenceId": record["evidence_id"], "artifact": metadata["artifact"],
+                              "binary": metadata["binary"]["artifact"], "uniqueCodeAddresses": len(code_addresses),
+                              "assemblies": assemblies, "missingCodeMethods": missing_methods,
+                              "genericInstancesRequested": metadata.get("generic_method_instances") is not None}
+        instances = metadata.get("generic_method_instances")
+        if instances is not None:
+            generic_counts = {"instances": len(instances), "code": 0, "noBody": 0, "unknown": 0,
+                              "bodyObserved": 0, "failed": 0, "missing": 0}
+            generic_addresses = set()
+            missing_instances = []
+            for instance_index, instance in enumerate(instances):
+                if instance["state"] == "no-body":
+                    generic_counts["noBody"] += 1
+                elif instance["state"] != "code" or not instance.get("address"):
+                    generic_counts["unknown"] += 1
+                else:
+                    generic_counts["code"] += 1
+                    address = hex(int(instance["address"], 16))
+                    generic_addresses.add(address)
+                    state = addresses.get(address)
+                    if state == "body-observed":
+                        generic_counts["bodyObserved"] += 1
+                    elif state == "failed":
+                        generic_counts["failed"] += 1
+                    else:
+                        generic_counts["missing"] += 1
+                        missing_instances.append({"instanceIndex": instance_index, "address": address,
+                                                  "methodIndex": instance.get("method"), "name": instance.get("name"),
+                                                  "exportState": state or "absent"})
+            report["metadata"]["genericInstances"] = {"counts": generic_counts,
+                                                       "uniqueCodeAddresses": len(generic_addresses),
+                                                       "missingInstances": missing_instances}
+        if missing_methods or any(counts["unknown"] for counts in assemblies.values()) or (
+            instances is not None and (generic_counts["missing"] or generic_counts["unknown"])
+        ):
+            report["coverageStatus"] = "partial"
+        report["limitations"].append("Metadata/export joins use addresses; common-build origin and generic instance completeness remain separate obligations.")
+    if symbol_map_path is not None:
+        with open(symbol_map_path, encoding="utf-8-sig") as source:
+            script = json.load(source)
+        if metadata_bundle_path is None:
+            raise ValueError("Symbol map coverage requires the retained metadata image base")
+        image_base = int(metadata["binary"]["image_base"], 16)
+        rows = script.get("ScriptMethod", [])
+        counts = {"methods": len(rows), "bodyObserved": 0, "failed": 0, "missing": 0}
+        symbol_addresses = set()
+        missing = []
+        for method in rows:
+            address = hex(image_base + method["Address"])
+            symbol_addresses.add(address)
+            state = addresses.get(address)
+            if state == "body-observed":
+                counts["bodyObserved"] += 1
+            elif state == "failed":
+                counts["failed"] += 1
+            else:
+                counts["missing"] += 1
+                missing.append({"symbol": method["Name"], "address": address, "exportState": state or "absent"})
+        digest = hashlib.sha256()
+        with open(symbol_map_path, "rb") as source:
+            for chunk in iter(lambda: source.read(1024 * 1024), b""):
+                digest.update(chunk)
+        report["symbolMap"] = {"source": {"path": str(Path(symbol_map_path).resolve()), "sha256": digest.hexdigest()},
+                               "counts": counts, "uniqueAddresses": len(symbol_addresses), "missingMethods": missing}
+        report["limitations"].append("Il2CppDumper symbol-map address coverage is a separate derived inventory, not proof that the REA v39 generic-instance decoder supports this format.")
+        if missing:
+            report["coverageStatus"] = "partial"
+    return report
+
+
 def build_decompiled_index():
     """Scan decompiled_all.c and record byte offsets of all function headers."""
     index_file = OUTPUT_DIR / "decompiled_index.json"
@@ -1118,13 +1367,27 @@ def synthesize(ve_types, constructors, asset_paths, screen_handlers, services, b
 
 def main():
     parser = argparse.ArgumentParser(description="Dofus 3 Client Analyzer")
-    parser.add_argument("--phase", choices=["dump", "index", "constructors", "synthesize", "all"],
+    parser.add_argument("--phase", choices=["dump", "index", "coverage", "constructors", "synthesize", "all"],
                         default="all", help="Which phase to run")
     parser.add_argument("--output", default=str(OUTPUT_DIR), help="Output directory")
+    parser.add_argument("--metadata-bundle", help="Retained IL2CPP metadata bundle for address-based coverage")
+    parser.add_argument("--symbol-map", help="Il2CppDumper script.json for separate derived-symbol coverage")
+    parser.add_argument("--recovery-run", action="append", default=[], help="Captured pseudocode run journal; may repeat for disjoint runs")
     args = parser.parse_args()
 
     OUTPUT_DIR_PATH = Path(args.output)
     OUTPUT_DIR_PATH.mkdir(parents=True, exist_ok=True)
+    if args.phase == "coverage":
+        if args.recovery_run and not args.metadata_bundle:
+            parser.error("--recovery-run requires --metadata-bundle")
+        report = audit_decompiled_export(DECOMPILED_C, args.metadata_bundle, args.symbol_map, args.recovery_run)
+        path = OUTPUT_DIR_PATH / "DecompilationCoverage.json"
+        with path.open("w", encoding="utf-8") as output:
+            json.dump(report, output, indent=2, sort_keys=True)
+            output.write("\n")
+        print(f"Coverage: {path}")
+        print(json.dumps(report["export"], sort_keys=True))
+        return
 
     if not DUMP_CS.exists():
         print(f"ERROR: dump.cs not found at {DUMP_CS}")

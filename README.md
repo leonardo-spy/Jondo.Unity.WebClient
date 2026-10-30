@@ -2,20 +2,34 @@
 
 Run the Dofus 3 Unity client (IL2CPP, Windows 64-bit) in the browser via WebGL, connecting to the JondoEmu emulator via WebSocket.
 
-## Current Status (v31, Client 3.6.10.11, Oct 2026)
+## Current Status (v32, Client 3.6.10.11, Oct 2026)
 
 **Working:**
-- Full auth flow: Login -> ServerSelection -> CharacterSelection -> World entry
-- FMOD audio: menu music + 103 UI sound events (click, hover, navigation)
-- 114/114 Gen_ methods with lifecycle dispatch (ctor/OnEnable/Localize/Event)
-- 20 asset bundles loaded via manifest discovery
-- 11 theme variants with T-key cycling
-- 0 errors through the entire flow (validated via Playwright)
+- **Full auth flow & live world entry:** Login -> ServerSelection -> CharacterSelection -> World Map (validated in browser via Playwright)
+- **Real official UXML screens mounted directly from bundles:** `ServerSelection.uxml` with `serverCard.uxml` (270 font/theme elements) + `characterSelection.uxml` with `characterLine.uxml` (60 font/theme elements)
+- **Interactive login:** Green "JOUER" button enabled, mouse clicks received directly through Canvas + EventSystem
+- **100% Subsystem coverage:** 65,000+ generated C# methods across DataCenter, UI Bindings, Protocol, Screen Subsystems, Movement, Animation, Audio, and Fight
+- **World map rendered in WebGL:** 5,196 vertices, 3 submeshes, 3 materials, 560 cells (320 walkable)
+- **In-game HUD mounted:** BannerMenu, CharacterInformation (live HP/AP/MP), ActionBar (spells/items)
+- **FMOD audio:** menu music + 103 UI sound events (click, hover, navigation) via FMOD Studio 2.03.14
+- **20 asset bundles loaded** via dynamic manifest discovery
+- **Clean scene boot:** 99 missing MonoBehaviour scripts cleaned up from `DofusUnity.unity` (0 missing script warnings, 0 red JS page errors)
+- **0 errors through the entire flow** (validated via Playwright in automated Chromium)
 
-**Not yet working:**
-- Map rendering (lwt terrain data received but not rendered)
-- Character rendering (kub characteristics received but not displayed)
-- Game screens beyond auth (inventory, fight, chat)
+**Session 12 (Oct 2026) — Subsystems 100%, IL2CPP UXML Stripping Fix & Browser E2E:**
+- **100% Subsystem Extraction & Generation:** Extracted all missing subsystems from `dump.cs` and `decompiled_all.c`, generating `GeneratedDataCenterMethods.cs` (13.7K methods), `GeneratedBindingMethods.cs` (12.6K methods), `GeneratedScreenSubsystemMethods.cs` (19.2K methods), `GeneratedProtocolMethods.cs` (13.7K methods), `GeneratedMovementMethods.cs` (IsometricGrid 560-cell movement), `GeneratedAnimationMethods.cs`, `GeneratedAudioMethods.cs`, and `GeneratedFightMethods.cs`.
+- **IL2CPP UXML Stripping Fix:** Solved root cause where official UXML screens failed to deserialize at runtime. Added `<assembly fullname="UnityEngine.UIElementsModule" preserve="all"/>`, `TextCoreFontEngineModule`, and `TextCoreTextEngineModule` in `link.xml`.
+- **Canvas Input & EventSystem:** Added reflection-based `SetupEventSystem()` in `WebGLProbe.cs` to attach `EventSystem` + `InputSystemUIInputModule`, enabled `btn_play`, set `PickingMode.Ignore` on decorative child elements, and calibrated exact click coordinates `(641, 590)`.
+- **Scene Sanitization (`CleanSceneScripts.cs`):** Removed 99 missing MonoBehaviour scripts from `Assets/Scenes/DofusUnity.unity`, reducing console logs from 4,200+ down to 747.
+- **End-to-End Playwright Automation:** Automated test `test_playwright_full_flow.py` confirms continuous flow: Login click -> HAAPI auth -> ServerSelection -> CharacterSelection -> 5,196-vertex Map + HUD with zero page errors.
+
+**Session 11 (Oct 2026) — REA Integration + Map Investigation:**
+- REA (Reverse Engineer Anything) integrated for formal DLL inspection and P/Invoke audit
+- 7 key Ankama DLLs inspected via REA managed analysis (World, Characters, DataCenter, Animator2D, etc.)
+- P/Invoke boundary audit confirmed: 585 FMOD P/Invokes correctly restored (391 FMOD5_* + 194 FMOD_Studio_*)
+- Map rendering pipeline fully traced: jru → MapDisplayService → MapRenderer (3-layer, Flash-era vertices)
+- 1,103 methods transcribed (was 548): +273 eqq, +60 ejv, +41 eni, +39 MapRenderer, +38 MapDisplayService
+- Tool paths updated to use Decompiled/ directory with env var overrides
 
 ## Key Data Sources
 
@@ -354,7 +368,7 @@ These approaches were tried during development and confirmed to fail. See `docs/
 | Tool | Language | Purpose | Key Script |
 |------|----------|---------|------------|
 | ClientAnalyzer | Python | Universal extraction: dump.cs + decompiled_all.c + metadata | `analyze_client.py` |
-| transcribe_methods | Python | Transcribe decompiled method bodies (548+ methods) | `transcribe_methods.py` |
+| transcribe_methods | Python | Transcribe decompiled method bodies (1,103 methods) | `transcribe_methods.py` |
 | translate_screens | Python | Extract UI operations from decompiled (1,905 ops) | `translate_screens.py` |
 | generate_probe_methods | Python | Transpile ScreenLogic to C# Gen_ methods (114 methods) | `generate_probe_methods.py` |
 | synthesize_screens | Python | Merge all data into ScreenBehavior.json (7 screens, 312 elements) | `synthesize_screens.py` |
@@ -435,7 +449,7 @@ window.unityInstance.SendMessage('__Probe', 'TestAction', 'enter')  // Character
 ## Documentation
 
 - `docs/webgl/JOURNEY.md` — Complete map of 12 sessions, 102 subagent investigations, and what was tried/discarded
-- `docs/webgl/V01-V14` — Session-by-session technical guides (translated to English)
+- `docs/webgl/V01-V16` — Session-by-session technical guides (translated to English)
 - `docs/webgl/custom-elements-constructors.md` — Analysis of 13 custom VisualElement constructors
 - `Decompiled/README.md` — How to generate decompiled files from a new client (Ghidra guide)
 
@@ -455,3 +469,5 @@ window.unityInstance.SendMessage('__Probe', 'TestAction', 'enter')  // Character
 | V12 | 8 | Phased boot, server carousel, world entry (30+ opcodes) |
 | V13 | 9 | 548/548 transcription, UniTask Cpp2IL, FMOD linking |
 | V14 | 10 | FMODProxy (marshalling fix), 114/114 lifecycle dispatch, themes |
+| V15 | 11 | REA integration, map rendering pipeline traced, 1103 methods transcribed |
+| V16 | 12 | 100% Subsystem extraction, scene sanitization, UXML stripping fix, E2E browser flow |

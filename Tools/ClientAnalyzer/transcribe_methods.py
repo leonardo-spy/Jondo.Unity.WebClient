@@ -25,8 +25,10 @@ Output:
     output/transcribed/<TypeName>.cs   — C# stub translation
 """
 
+import hashlib
 import json
 import os
+from pathlib import Path
 import re
 import sys
 import time
@@ -35,11 +37,30 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "output")
 TRANSCRIBED_DIR = os.path.join(OUTPUT_DIR, "transcribed")
 
-DUMP_CS = os.path.join(SCRIPT_DIR, "..", "..", "Il2CppDumper", "Il2CppDumper V6.7.48", "dump.cs")
-DECOMPILED_C = os.path.join(SCRIPT_DIR, "..", "..", "Il2CppDumper", "Il2CppDumper V6.7.48", "decompiled_all.c")
-METADATA = os.path.join(SCRIPT_DIR, "..", "..", "Cliente 3.6.10.11", "Dofus_Data", "il2cpp_data", "Metadata", "global-metadata.dat")
-SCRIPT_JSON = os.path.join(SCRIPT_DIR, "..", "..", "Il2CppDumper", "Il2CppDumper V6.7.48", "script.json")
+REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
+DECOMPILED_DIR = os.environ.get("DECOMPILED_DIR", os.path.join(REPO_ROOT, "Decompiled"))
+
+DUMP_CS = os.path.join(DECOMPILED_DIR, "dump.cs")
+if not os.path.exists(DUMP_CS):
+    DUMP_CS = os.path.join(REPO_ROOT, "Il2CppDumper", "Il2CppDumper V6.7.48", "dump.cs")
+
+DECOMPILED_C = os.path.join(DECOMPILED_DIR, "decompiled_all.c")
+if not os.path.exists(DECOMPILED_C):
+    DECOMPILED_C = os.path.join(REPO_ROOT, "Il2CppDumper", "Il2CppDumper V6.7.48", "decompiled_all.c")
+
+METADATA = os.environ.get(
+    "METADATA_PATH",
+    os.path.join(REPO_ROOT, "Cliente 3.6.10.11", "Dofus_Data", "il2cpp_data", "Metadata", "global-metadata.dat")
+)
+
+SCRIPT_JSON = os.path.join(DECOMPILED_DIR, "script.json")
+if not os.path.exists(SCRIPT_JSON):
+    SCRIPT_JSON = os.path.join(REPO_ROOT, "Il2CppDumper", "Il2CppDumper V6.7.48", "script.json")
+
 IMAGE_BASE = 0x180000000  # IL2CPP 64-bit image base
+RECOVERY_COVERAGE = os.path.join(
+    SCRIPT_DIR, "..", "..", "Generated", "output", "coverage-complete-known-inventory", "DecompilationCoverage.json"
+)
 
 # Patterns for parsing decompiled C code
 RE_FIELD_ACCESS = re.compile(r'(?:this|param_\d+)\s*(?:->|\.)\s*(\w+)')
@@ -83,6 +104,58 @@ def load_obfuscated_strings():
     return data
 
 
+def load_recovered_methods(coverage_path=None):
+    """Load verified pseudocode bodies recovered via REA evidence."""
+    path = coverage_path or RECOVERY_COVERAGE
+    if not path or not os.path.exists(path):
+        return {}
+
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Check export checksum if present
+    expected_export_sha = data.get("source", {}).get("sha256")
+    if expected_export_sha and os.path.exists(DECOMPILED_C):
+        actual_export_sha = hashlib.sha256(Path(DECOMPILED_C).read_bytes()).hexdigest()
+        if actual_export_sha != expected_export_sha:
+            raise ValueError(
+                f"Checksum mismatch for current decompiled export: expected {expected_export_sha}, got {actual_export_sha}"
+            )
+
+    recovered = {}
+    recovery = data.get("recovery", {})
+    for item in recovery.get("recoveredBodies", []):
+        addr_str = item.get("address", "0")
+        addr = int(addr_str, 16) if isinstance(addr_str, str) else addr_str
+        response_path = item.get("responsePath")
+        if not response_path or not os.path.exists(response_path):
+            continue
+
+        resp_data = json.loads(Path(response_path).read_text(encoding="utf-8"))
+        structured = resp_data.get("structuredContent", {})
+        code = structured.get("normalized_result", "")
+
+        expected_code_sha = item.get("codeSha256")
+        if expected_code_sha:
+            actual_code_sha = hashlib.sha256(code.encode("utf-8")).hexdigest()
+            if actual_code_sha != expected_code_sha:
+                raise ValueError(
+                    f"Checksum mismatch for audited pseudocode at {addr_str}: expected {expected_code_sha}, got {actual_code_sha}"
+                )
+
+        evidence_id = item.get("evidenceId") or structured.get("evidence_id")
+        recovered[addr] = {
+            "body": code,
+            "source": {
+                "kind": "rea-pseudocode",
+                "evidenceId": evidence_id,
+                "semanticTranslationVerified": False,
+            }
+        }
+
+    return recovered
+
+
 def read_function_body(func_entry, max_bytes=200000):
     """Read function body from decompiled_all.c."""
     with open(DECOMPILED_C, 'r', encoding='utf-8', errors='replace') as f:
@@ -109,7 +182,7 @@ def read_function_body(func_entry, max_bytes=200000):
         return '\n'.join(lines)
 
 
-def find_type_methods(type_name):
+def find_type_methods(type_name, typedef_index=None):
     """Find all methods of a type from dump.cs with their virtual addresses."""
     methods = []
     in_type = False
@@ -118,27 +191,37 @@ def find_type_methods(type_name):
     pending_va = None
     full_namespace = None
     current_namespace = ""
+    target_ns = None
+    target_name = type_name
+    if "." in type_name:
+        target_ns, target_name = type_name.rsplit(".", 1)
 
     with open(DUMP_CS, 'r', encoding='utf-8', errors='replace') as f:
         for line_no, line in enumerate(f, 1):
             stripped = line.strip()
 
             # Track namespace — dump.cs uses "// Namespace: X.Y.Z" comment format
-            ns_match = re.match(r'namespace\s+([\w.]+)', stripped) or \
-                       re.match(r'//\s*Namespace:\s*([\w.]+)', stripped)
+            ns_match = re.match(r'namespace\s+([\w.]*)', stripped) or \
+                       re.match(r'//\s*Namespace:\s*([\w.]*)', stripped)
             if ns_match:
-                current_namespace = ns_match.group(1)
+                current_namespace = ns_match.group(1).strip()
 
             # Find the type declaration — handle generics, inheritance, comments
             # Skip inner classes: ServerSelection.<>c appears BEFORE ServerSelection in dump.cs
             if not in_type:
-                if re.search(rf'\b(class|struct)\s+{re.escape(type_name)}\b', stripped):
-                    if re.search(rf'{re.escape(type_name)}\s*[.<]\s*<', stripped) or \
-                       re.search(rf'{re.escape(type_name)}\.\w', stripped):
+                if re.search(rf'\b(class|struct)\s+{re.escape(target_name)}\b', stripped):
+                    if re.search(rf'{re.escape(target_name)}\s*[.<]\s*<', stripped) or \
+                       re.search(rf'{re.escape(target_name)}\.\w', stripped):
                         continue  # inner class (TypeName.<>c, TypeName.DisplayClass, etc.)
+                    if target_ns is not None and current_namespace != target_ns:
+                        continue
+                    if typedef_index is not None:
+                        td_match = re.search(r'//\s*TypeDefIndex:\s*(\d+)', stripped)
+                        if not td_match or int(td_match.group(1)) != typedef_index:
+                            continue
                     in_type = True
                     brace_depth = 0
-                    full_namespace = f"{current_namespace}.{type_name}" if current_namespace else type_name
+                    full_namespace = f"{current_namespace}.{target_name}" if current_namespace else target_name
                 continue
 
             # Track braces — inner classes increase depth, type closing `}` at depth 0
@@ -148,7 +231,7 @@ def find_type_methods(type_name):
 
             # VA comment appears on the line BEFORE the method:
             # // RVA: 0xABCDEF Offset: 0xABCDEF VA: 0x181ABCDEF
-            va_match = re.search(r'VA:\s*0x([0-9A-Fa-f]+)', stripped)
+            va_match = re.search(r'\bVA:\s*0x([0-9A-Fa-f]+)', stripped)
             if va_match:
                 pending_va = int(va_match.group(1), 16)
                 pending_va_line = line_no
@@ -411,8 +494,25 @@ def load_rva_map_all():
     return _rva_to_all_names
 
 
+_decompiled_index_cache = None
+
 def find_c_function(type_name, method_name, full_namespace=None, va=None):
     """Find a C function in decompiled_all.c using multiple strategies."""
+    global _decompiled_index_cache
+    if _decompiled_index_cache is None:
+        try:
+            _decompiled_index_cache = load_decompiled_index()
+        except Exception:
+            _decompiled_index_cache = {}
+
+    # Strategy 0: Direct lookup in precomputed decompiled_index.json (fastest)
+    if _decompiled_index_cache:
+        prefixes = [p for p in [full_namespace, type_name] if p]
+        for p in prefixes:
+            for cand in [f"{p}$${method_name}", f"{p}$$.{method_name}"]:
+                if cand in _decompiled_index_cache:
+                    return _decompiled_index_cache[cand]
+
     idx = build_type_function_index(type_name, full_namespace)
 
     # Strategy 1: Direct name match
@@ -488,14 +588,15 @@ def find_c_function(type_name, method_name, full_namespace=None, va=None):
     return None
 
 
-def transcribe_type(type_name, method_filter=None):
+def transcribe_type(type_name, method_filter=None, typedef_index=None):
     """Transcribe all methods of a type from decompiled_all.c."""
     print(f"Transcribing type: {type_name}")
 
     dec_index = load_decompiled_index()
     obf_strings = load_obfuscated_strings()
+    recovered_methods = load_recovered_methods()
 
-    methods, full_namespace = find_type_methods(type_name)
+    methods, full_namespace = find_type_methods(type_name, typedef_index=typedef_index)
     print(f"  Found {len(methods)} methods in dump.cs (namespace: {full_namespace})")
 
     if method_filter:
@@ -504,23 +605,61 @@ def transcribe_type(type_name, method_filter=None):
 
     results = []
     for method in methods:
+        va = method.get("va")
+        if va and va in recovered_methods:
+            recovered_entry = recovered_methods[va]
+            body = recovered_entry["body"]
+            analysis = analyze_method_body(body, obf_strings)
+            results.append({
+                "method": method["name"],
+                "signature": method["signature"],
+                "line": method.get("line"),
+                "va": hex(va),
+                "status": "OK",
+                "source": recovered_entry["source"],
+                "analysis": analysis,
+                "bodyPreview": body[:500] + "..." if len(body) > 500 else body,
+            })
+            continue
+
         # Try indexed lookup first (namespace-qualified types)
         possible_keys = [
             f"{type_name}$${method['name']}",
             f"{type_name}$$.{method['name']}",
         ]
+        if full_namespace:
+            possible_keys.append(f"{full_namespace}$${method['name']}")
+            possible_keys.append(f"{full_namespace}$$.{method['name']}")
+            possible_keys.append(f"{full_namespace}.{type_name}$${method['name']}")
+            possible_keys.append(f"{full_namespace}.{type_name}$$.{method['name']}")
         func_entry = None
         for key in possible_keys:
             if key in dec_index:
                 func_entry = dec_index[key]
                 break
 
+        # Fast check for trivial methods before expensive grep fallbacks
+        if not func_entry:
+            sig = method.get("signature", "")
+            if method["name"] in ("SetStateMachine", "MoveNext") and ("DisplayClass" in sig or "d__" in sig or not sig):
+                results.append({"method": method["name"], "signature": sig, "status": "TRIVIAL",
+                                "note": "Async infrastructure"})
+                continue
+            if method["name"].startswith("get_m_") and "bool" in sig:
+                results.append({"method": method["name"], "signature": sig, "status": "TRIVIAL",
+                                "note": "Property getter — returns constant bool"})
+                continue
+            if len(method["name"]) <= 5 and "private" in sig and sig.count(',') == 0 and "void" not in sig:
+                results.append({"method": method["name"], "signature": sig, "status": "TRIVIAL",
+                                "note": "Simple field getter"})
+                continue
+
         # Fallback: direct grep for C function name (with full namespace + VA)
         if not func_entry:
             func_entry = find_c_function(type_name, method['name'], full_namespace, method.get('va'))
 
         if not func_entry:
-            # Trivial methods that don't need a decompiled body
+            # Additional trivial methods that don't need a decompiled body
             sig = method["signature"]
             if method["name"] in ("SetStateMachine", "MoveNext"):
                 results.append({"method": method["name"], "signature": sig, "status": "TRIVIAL",
@@ -686,5 +825,14 @@ if __name__ == "__main__":
                     transcribe_type(svc["type"])
     else:
         type_name = sys.argv[1]
-        method_filter = sys.argv[2] if len(sys.argv) > 2 else None
-        transcribe_type(type_name, method_filter)
+        method_filter = None
+        typedef_index = None
+        i = 2
+        while i < len(sys.argv):
+            if sys.argv[i] == "--typedef" and i + 1 < len(sys.argv):
+                typedef_index = int(sys.argv[i + 1])
+                i += 2
+            else:
+                method_filter = sys.argv[i]
+                i += 1
+        transcribe_type(type_name, method_filter, typedef_index=typedef_index)

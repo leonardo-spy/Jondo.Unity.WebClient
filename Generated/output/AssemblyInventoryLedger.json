@@ -1,0 +1,863 @@
+{
+  "totalMethods": 366413,
+  "thirdPartyMethods": 148179,
+  "thirdPartyPercentage": 40.44,
+  "proprietaryMethods": 218234,
+  "proprietaryPercentage": 59.56,
+  "thirdPartyAssemblies": [
+    {
+      "name": "BouncyCastle.Crypto.dll",
+      "methods": 15655,
+      "bodies": 15142,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "mscorlib.dll",
+      "methods": 14513,
+      "bodies": 12229,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UIElementsModule.dll",
+      "methods": 12514,
+      "bodies": 10575,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "mcs.dll",
+      "methods": 10345,
+      "bodies": 9928,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Mathematics.dll",
+      "methods": 9427,
+      "bodies": 9427,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Xml.dll",
+      "methods": 7869,
+      "bodies": 7556,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.CoreModule.dll",
+      "methods": 7437,
+      "bodies": 6887,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.dll",
+      "methods": 6311,
+      "bodies": 5689,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.InputSystem.dll",
+      "methods": 5840,
+      "bodies": 5342,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.RenderPipelines.Core.Runtime.dll",
+      "methods": 5394,
+      "bodies": 4483,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Newtonsoft.Json.dll",
+      "methods": 4181,
+      "bodies": 3755,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Google.Protobuf.dll",
+      "methods": 3707,
+      "bodies": 3207,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Core.dll",
+      "methods": 3691,
+      "bodies": 2967,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Burst.dll",
+      "methods": 3667,
+      "bodies": 3625,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Collections.dll",
+      "methods": 3552,
+      "bodies": 1472,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Data.dll",
+      "methods": 3326,
+      "bodies": 3178,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.RenderPipelines.Universal.Runtime.dll",
+      "methods": 3099,
+      "bodies": 3052,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DotNetty.Buffers.dll",
+      "methods": 2485,
+      "bodies": 2019,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UI.dll",
+      "methods": 1965,
+      "bodies": 1852,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.TextMeshPro.dll",
+      "methods": 1823,
+      "bodies": 1750,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DotNetty.Transport.dll",
+      "methods": 1708,
+      "bodies": 1207,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DotNetty.Common.dll",
+      "methods": 1459,
+      "bodies": 968,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "ZaapClient.dll",
+      "methods": 1141,
+      "bodies": 1045,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DOTween.dll",
+      "methods": 1097,
+      "bodies": 985,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.RenderPipelines.GPUDriven.Runtime.dll",
+      "methods": 985,
+      "bodies": 970,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.ResourceManager.dll",
+      "methods": 938,
+      "bodies": 569,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Timeline.dll",
+      "methods": 918,
+      "bodies": 858,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.TextCoreTextEngineModule.dll",
+      "methods": 855,
+      "bodies": 828,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DotNetty.Codecs.dll",
+      "methods": 819,
+      "bodies": 484,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "XLuaAssembly.dll",
+      "methods": 810,
+      "bodies": 715,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.ParticleSystemModule.dll",
+      "methods": 711,
+      "bodies": 711,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AdaptivePerformanceModule.dll",
+      "methods": 677,
+      "bodies": 627,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.PropertiesModule.dll",
+      "methods": 659,
+      "bodies": 346,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Addressables.dll",
+      "methods": 650,
+      "bodies": 593,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AnimationModule.dll",
+      "methods": 622,
+      "bodies": 617,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Net.Http.dll",
+      "methods": 612,
+      "bodies": 557,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.IMGUIModule.dll",
+      "methods": 607,
+      "bodies": 607,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Mono.Security.dll",
+      "methods": 596,
+      "bodies": 587,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.UnifiedRayTracing.Runtime.dll",
+      "methods": 443,
+      "bodies": 405,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.Physics2DModule.dll",
+      "methods": 435,
+      "bodies": 423,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "K4os.Compression.LZ4.dll",
+      "methods": 363,
+      "bodies": 345,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AndroidJNIModule.dll",
+      "methods": 340,
+      "bodies": 322,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DOTween.Modules.dll",
+      "methods": 324,
+      "bodies": 324,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "DotNetty.Handlers.dll",
+      "methods": 306,
+      "bodies": 255,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Xml.Linq.dll",
+      "methods": 298,
+      "bodies": 282,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.HierarchyCoreModule.dll",
+      "methods": 294,
+      "bodies": 278,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.InputForUIModule.dll",
+      "methods": 242,
+      "bodies": 211,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UIModule.dll",
+      "methods": 235,
+      "bodies": 234,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Numerics.dll",
+      "methods": 205,
+      "bodies": 205,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.TextCoreFontEngineModule.dll",
+      "methods": 191,
+      "bodies": 189,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityWebRequestModule.dll",
+      "methods": 161,
+      "bodies": 160,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AudioModule.dll",
+      "methods": 137,
+      "bodies": 133,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AccessibilityModule.dll",
+      "methods": 132,
+      "bodies": 129,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.PhysicsModule.dll",
+      "methods": 124,
+      "bodies": 124,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.TextRenderingModule.dll",
+      "methods": 98,
+      "bodies": 98,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Logger.dll",
+      "methods": 86,
+      "bodies": 85,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.InputLegacyModule.dll",
+      "methods": 79,
+      "bodies": 79,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.TerrainModule.dll",
+      "methods": 71,
+      "bodies": 71,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.VideoModule.dll",
+      "methods": 68,
+      "bodies": 68,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Drawing.dll",
+      "methods": 67,
+      "bodies": 67,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityAnalyticsCommonModule.dll",
+      "methods": 65,
+      "bodies": 65,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.XRModule.dll",
+      "methods": 65,
+      "bodies": 65,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.SharedInternalsModule.dll",
+      "methods": 63,
+      "bodies": 63,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.DirectorModule.dll",
+      "methods": 60,
+      "bodies": 58,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.SubsystemsModule.dll",
+      "methods": 60,
+      "bodies": 41,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.TilemapModule.dll",
+      "methods": 59,
+      "bodies": 59,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.InputSystem.ForUI.dll",
+      "methods": 48,
+      "bodies": 48,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AssetBundleModule.dll",
+      "methods": 42,
+      "bodies": 40,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.VFXModule.dll",
+      "methods": 42,
+      "bodies": 39,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.SpriteMaskModule.dll",
+      "methods": 41,
+      "bodies": 41,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "io.sentry.unity.runtime.dll",
+      "methods": 40,
+      "bodies": 40,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Burst.Unsafe.dll",
+      "methods": 37,
+      "bodies": 10,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityWebRequestAssetBundleModule.dll",
+      "methods": 24,
+      "bodies": 24,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.InputModule.dll",
+      "methods": 21,
+      "bodies": 21,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Configuration.dll",
+      "methods": 17,
+      "bodies": 17,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Runtime.Serialization.dll",
+      "methods": 17,
+      "bodies": 17,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityWebRequestTextureModule.dll",
+      "methods": 16,
+      "bodies": 16,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityAnalyticsModule.dll",
+      "methods": 14,
+      "bodies": 14,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Runtime.CompilerServices.Unsafe.dll",
+      "methods": 13,
+      "bodies": 5,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.MemoryProfiler.dll",
+      "methods": 10,
+      "bodies": 9,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "OPS.Obfuscator.dll",
+      "methods": 8,
+      "bodies": 8,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.JSONSerializeModule.dll",
+      "methods": 8,
+      "bodies": 7,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "System.Web.dll",
+      "methods": 7,
+      "bodies": 7,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.ScreenCaptureModule.dll",
+      "methods": 6,
+      "bodies": 6,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.ImageConversionModule.dll",
+      "methods": 5,
+      "bodies": 5,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.UnityConsentModule.dll",
+      "methods": 5,
+      "bodies": 5,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.Collections.LowLevel.ILSupport.dll",
+      "methods": 4,
+      "bodies": 2,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.AIModule.dll",
+      "methods": 4,
+      "bodies": 4,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.InternalAPIEngineBridge.004.dll",
+      "methods": 3,
+      "bodies": 3,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.RenderPipelines.Core.Runtime.Shared.dll",
+      "methods": 3,
+      "bodies": 3,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "__Generated",
+      "methods": 3,
+      "bodies": 2,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "Unity.RenderPipeline.Universal.ShaderLibrary.dll",
+      "methods": 2,
+      "bodies": 2,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.GridModule.dll",
+      "methods": 1,
+      "bodies": 1,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.MultiplayerModule.dll",
+      "methods": 1,
+      "bodies": 1,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.VRModule.dll",
+      "methods": 1,
+      "bodies": 1,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.SpriteShapeModule.dll",
+      "methods": 0,
+      "bodies": 0,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    },
+    {
+      "name": "UnityEngine.dll",
+      "methods": 0,
+      "bodies": 0,
+      "reason": "Runtime .NET / Unity Engine / Standard Lib"
+    }
+  ],
+  "proprietaryAssemblies": [
+    {
+      "name": "Core.dll",
+      "methods": 110808,
+      "bodies": 105697,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Dofus.Protocol.Game.dll",
+      "methods": 55927,
+      "bodies": 55927,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Com.Ankama.HaapiAnkama.dll",
+      "methods": 11097,
+      "bodies": 9603,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.dll",
+      "methods": 4093,
+      "bodies": 3584,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "UniTask.dll",
+      "methods": 3541,
+      "bodies": 1717,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Reflection.Metadata.dll",
+      "methods": 3432,
+      "bodies": 3316,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "ShapesRuntime.dll",
+      "methods": 3238,
+      "bodies": 3144,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Text.Json.dll",
+      "methods": 3028,
+      "bodies": 2265,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.AudioManagement.dll",
+      "methods": 2826,
+      "bodies": 2699,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Com.Ankama.Shopi.dll",
+      "methods": 2737,
+      "bodies": 2471,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Polly.dll",
+      "methods": 2322,
+      "bodies": 915,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "RestSharp.dll",
+      "methods": 1796,
+      "bodies": 1319,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Dofus.Core.DataCenter.dll",
+      "methods": 1723,
+      "bodies": 1685,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Collections.Immutable.dll",
+      "methods": 1656,
+      "bodies": 58,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Animator2D.dll",
+      "methods": 1277,
+      "bodies": 1191,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.dll",
+      "methods": 1003,
+      "bodies": 750,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Dofus.Protocol.Connection.dll",
+      "methods": 955,
+      "bodies": 955,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Com.Ankama.HaapiDofus.dll",
+      "methods": 934,
+      "bodies": 724,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.Unity.dll",
+      "methods": 769,
+      "bodies": 696,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "AleCore.dll",
+      "methods": 764,
+      "bodies": 735,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Memory.dll",
+      "methods": 704,
+      "bodies": 389,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Utilities.dll",
+      "methods": 571,
+      "bodies": 403,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Numerics.Vectors.dll",
+      "methods": 488,
+      "bodies": 381,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Text.Encodings.Web.dll",
+      "methods": 449,
+      "bodies": 441,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Dofus.Core.World.dll",
+      "methods": 257,
+      "bodies": 241,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Extras.dll",
+      "methods": 248,
+      "bodies": 246,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.ScreenManager.dll",
+      "methods": 244,
+      "bodies": 242,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.SpinConnection.dll",
+      "methods": 221,
+      "bodies": 75,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.LauncherConnection.dll",
+      "methods": 150,
+      "bodies": 135,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Zendesk.dll",
+      "methods": 132,
+      "bodies": 116,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Threading.Tasks.Extensions.dll",
+      "methods": 111,
+      "bodies": 57,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Suggestors.dll",
+      "methods": 94,
+      "bodies": 94,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Grammar.dll",
+      "methods": 88,
+      "bodies": 80,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.Unity.Native.dll",
+      "methods": 83,
+      "bodies": 80,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.AddressableUtility.Runtime.dll",
+      "methods": 58,
+      "bodies": 41,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Core.Localization.dll",
+      "methods": 57,
+      "bodies": 54,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Parsers.dll",
+      "methods": 53,
+      "bodies": 53,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Ankama.Dofus.Core.Characters.dll",
+      "methods": 47,
+      "bodies": 47,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Runtime.CompilerServices.Unsafe.dll",
+      "methods": 47,
+      "bodies": 13,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.Microsoft.Bcl.AsyncInterfaces.dll",
+      "methods": 46,
+      "bodies": 12,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "UniTask.Addressables.dll",
+      "methods": 44,
+      "bodies": 25,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Serializers.dll",
+      "methods": 43,
+      "bodies": 40,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "Sentry.System.Buffers.dll",
+      "methods": 35,
+      "bodies": 18,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.Demo.dll",
+      "methods": 32,
+      "bodies": 32,
+      "scope": "Transcribe / Emulate in WebClient"
+    },
+    {
+      "name": "QFSW.QC.ScanRules.dll",
+      "methods": 6,
+      "bodies": 4,
+      "scope": "Transcribe / Emulate in WebClient"
+    }
+  ]
+}

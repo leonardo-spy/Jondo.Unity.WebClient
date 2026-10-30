@@ -1,0 +1,121 @@
+{
+  "open_binary": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "Absolute local filesystem path for the analysis target; relative paths are rejected."
+      },
+      "format": {
+        "type": "string",
+        "description": "Explicit interpretation: dos-com or raw-binary (headerless), or gamecube-dol (GameCube/Wii DOL, never auto-detected). Omission preserves header-based detection."
+      },
+      "architecture": {
+        "type": "string",
+        "description": "Caller-supplied CPU family. Required with format=raw-binary; rejected otherwise. format=gamecube-dol takes powerpc from the header, so it must be omitted."
+      },
+      "entry_point": {
+        "type": "string",
+        "description": "Caller-supplied load and entry address (0xhex). File offset 0 is mapped here. Required with format=raw-binary; rejected otherwise. Optional with format=gamecube-dol; must equal the DOL header entry."
+      },
+      "provider_id": {
+        "type": "string",
+        "description": "Exact deep-analysis provider ID, or automatic selection when omitted."
+      },
+      "snapshot_path": {
+        "type": "string",
+        "description": "Absolute local filesystem path for the analysis snapshot; relative paths are rejected."
+      }
+    },
+    "required": [
+      "path"
+    ],
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Advertised in reduced form by the compact input schema profile; the server still validates complete canonical inputs.",
+    "additionalProperties": false
+  },
+  "procedure_pseudo_code": {
+    "type": "object",
+    "properties": {
+      "procedure": {
+        "type": "string"
+      },
+      "document": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "procedure"
+    ],
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false
+  },
+  "export_evidence_bundle": {
+    "type": "object",
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "Absolute local filesystem path for the exported evidence bundle; relative paths are rejected."
+      },
+      "overwrite": {
+        "type": "boolean",
+        "description": "Whether an existing destination may be replaced."
+      }
+    },
+    "required": [
+      "path"
+    ],
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Advertised in reduced form by the compact input schema profile; the server still validates complete canonical inputs.",
+    "additionalProperties": false
+  },
+  "binary_session": {
+    "type": "object",
+    "properties": {
+      "expected_package_version": {
+        "type": "string",
+        "minLength": 1
+      },
+      "expected_catalog_digest": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      },
+      "expected_server_path": {
+        "type": "string",
+        "minLength": 1,
+        "allOf": [
+          {
+            "pattern": "^[^\\x00]*$"
+          },
+          {
+            "pattern": "^\\/"
+          }
+        ]
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false
+  },
+  "close_binary": {
+    "type": "object",
+    "properties": {
+      "snapshot_path": {
+        "type": "string",
+        "minLength": 1,
+        "allOf": [
+          {
+            "pattern": "^[^\\x00]*$"
+          },
+          {
+            "pattern": "^\\/"
+          }
+        ]
+      },
+      "overwrite": {
+        "type": "boolean"
+      }
+    },
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false
+  }
+}

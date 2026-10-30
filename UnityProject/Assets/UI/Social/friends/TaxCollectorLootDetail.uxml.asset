@@ -1,6 +1,1028 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5177407797340524630
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TaxCollectorLootDetail.uxml
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_HasEditorElements: 0
+  m_HasUpdatedUrls: 0
+  m_ImportedWithWarnings: 0
+  m_Usings: []
+  inlineSheet: {fileID: 222133278863291695}
+  m_VisualTree:
+    rid: 1000
+  m_AssetEntries: []
+  m_Slots: []
+  m_ContentContainerId: 0
+  m_ContentHash: 1118593218
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.UXML
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 936270850
+        m_Parent:
+          rid: -2
+        m_Children:
+        - rid: 1001
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions:
+        - prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        - prefix: uie
+          resolvedNamespace: UnityEditor.UIElements
+        m_Properties:
+        - name: xsi
+          value: http://www.w3.org/2001/XMLSchema-instance
+        - name: engine
+          value: UnityEngine.UIElements
+        - name: editor
+          value: UnityEditor.UIElements
+        - name: noNamespaceSchemaLocation
+          value: ../../../../UIElementsSchema/UIElements.xsd
+        - name: editor-extension-mode
+          value: False
+        m_RuleIndex: -1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets:
+        - {fileID: 0}
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1001
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.WindowFigma
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -767185813
+        m_Parent:
+          rid: 1000
+        m_Children:
+        - rid: 1002
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: title
+          value: "[Percepteur Collect\xE9]"
+        - name: name
+          value: CollectorLootDetail
+        m_RuleIndex: 0
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1002
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 303190525
+        m_Parent:
+          rid: 1001
+        m_Children:
+        - rid: 1004
+        - rid: 1005
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 8
+        - name: name
+          value: window
+        m_RuleIndex: 1
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1004
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -147567432
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1007
+        - rid: 1008
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_topContainer
+        m_RuleIndex: 2
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1005
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -773917849
+        m_Parent:
+          rid: 1002
+        m_Children:
+        - rid: 1010
+        - rid: 1011
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: contentContainer
+        m_RuleIndex: 24
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1007
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -2119459684
+        m_Parent:
+          rid: 1004
+        m_Children:
+        - rid: 1013
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: ctr_Illu
+        m_RuleIndex: 3
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1008
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -866760978
+        m_Parent:
+          rid: 1004
+        m_Children:
+        - rid: 1015
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 12
+        m_RuleIndex: 5
+        m_Classes:
+        - buttonSecondary
+        - backgroundColor_buttons_buttonSecondary
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1010
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 922806778
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1017
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 16
+        - name: name
+          value: header
+        m_RuleIndex: 25
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1011
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1907069895
+        m_Parent:
+          rid: 1005
+        m_Children:
+        - rid: 1019
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 6
+        m_RuleIndex: 30
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1013
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.EntityDisplay.EntityDisplayer
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1317518935
+        m_Parent:
+          rid: 1007
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: taxCollectorIllu
+        - name: picking-mode
+          value: Ignore
+        m_RuleIndex: 4
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1015
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1187878477
+        m_Parent:
+          rid: 1008
+        m_Children:
+        - rid: 1022
+        - rid: 1023
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 16
+        m_RuleIndex: 6
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1017
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1098397110
+        m_Parent:
+          rid: 1010
+        m_Children:
+        - rid: 1025
+        - rid: 1026
+        - rid: 1027
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: tablePlaceholders
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 26
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1019
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.ListView
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: -1228043952
+        m_Parent:
+          rid: 1011
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: collectedElements
+        - name: virtualization-method
+          value: FixedHeight
+        - name: show-border
+          value: true
+        - name: fixed-item-height
+          value: 54
+        m_RuleIndex: 31
+        m_Classes:
+        - scrollbarPadding
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1029
+        m_SkipClone: 0
+    - rid: 1022
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1721383637
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1030
+        - rid: 1031
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: title
+        - name: gap-value
+          value: 2
+        m_RuleIndex: 7
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1023
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1184512459
+        m_Parent:
+          rid: 1015
+        m_Children:
+        - rid: 1033
+        - rid: 1034
+        - rid: 1035
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: Group
+        m_RuleIndex: 12
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1025
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -247146853
+        m_Parent:
+          rid: 1017
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: itemNamePlaceholder
+        - name: header-text
+          value: '[Nom de l''objet]'
+        - name: icon-header
+          value: arrowBottom
+        - name: table-column-header-type
+          value: text
+        m_RuleIndex: 27
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1026
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1768281148
+        m_Parent:
+          rid: 1017
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: itemQuantityPlaceholder
+        - name: header-text
+          value: "[Quantit\xE9]"
+        m_RuleIndex: 28
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1027
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1005551853
+        m_Parent:
+          rid: 1017
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: estimatedValuePlaceholder
+        - name: header-text
+          value: "[Valeur estim\xE9e]"
+        m_RuleIndex: 29
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1029
+      type: {class: ListView/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: -1228043952
+        name: collectedElements
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 1
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+        bindingPath: 
+        bindingPath_UxmlAttributeFlags: 0
+        fixedItemHeight: 54
+        virtualizationMethod: 0
+        selectionType: 0
+        showAlternatingRowBackgrounds: 0
+        showBorder: 1
+        reorderable: 0
+        horizontalScrollingEnabled: 0
+        fixedItemHeight_UxmlAttributeFlags: 1
+        virtualizationMethod_UxmlAttributeFlags: 1
+        showBorder_UxmlAttributeFlags: 1
+        selectionType_UxmlAttributeFlags: 0
+        showAlternatingRowBackgrounds_UxmlAttributeFlags: 0
+        reorderable_UxmlAttributeFlags: 0
+        horizontalScrollingEnabled_UxmlAttributeFlags: 0
+        headerTitle: 
+        reorderMode: 0
+        bindingSourceSelectionMode: 0
+        showFoldoutHeader: 0
+        showAddRemoveFooter: 0
+        allowAdd: 0
+        allowRemove: 0
+        showBoundCollectionSize: 0
+        showFoldoutHeader_UxmlAttributeFlags: 0
+        headerTitle_UxmlAttributeFlags: 0
+        showAddRemoveFooter_UxmlAttributeFlags: 0
+        allowAdd_UxmlAttributeFlags: 0
+        allowRemove_UxmlAttributeFlags: 0
+        reorderMode_UxmlAttributeFlags: 0
+        showBoundCollectionSize_UxmlAttributeFlags: 0
+        bindingSourceSelectionMode_UxmlAttributeFlags: 0
+        itemTemplate: {fileID: 0}
+        itemTemplate_UxmlAttributeFlags: 0
+    - rid: 1030
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 733754502
+        m_Parent:
+          rid: 1022
+        m_Children:
+        - rid: 1040
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: gap-value
+          value: 8
+        m_RuleIndex: 8
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1031
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: UnityEngine.UIElements.VisualElement
+        m_XmlNamespace:
+          prefix: ui
+          resolvedNamespace: UnityEngine.UIElements
+        m_Id: 1986453208
+        m_Parent:
+          rid: 1022
+        m_Children:
+        - rid: 1042
+        - rid: 1043
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties: []
+        m_RuleIndex: 9
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: 1044
+        m_SkipClone: 0
+    - rid: 1033
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -339987854
+        m_Parent:
+          rid: 1023
+        m_Children:
+        - rid: 1045
+        - rid: 1046
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: estimatedValue
+        m_RuleIndex: 13
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1034
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 644275263
+        m_Parent:
+          rid: 1023
+        m_Children:
+        - rid: 1048
+        - rid: 1049
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: pods
+        m_RuleIndex: 18
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1035
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 375839674
+        m_Parent:
+          rid: 1023
+        m_Children:
+        - rid: 1051
+        - rid: 1052
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: owner
+        m_RuleIndex: 21
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1040
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1775008928
+        m_Parent:
+          rid: 1030
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[Nom Perco]'
+        - name: name
+          value: lbl_taxCollectorName
+        m_RuleIndex: -1
+        m_Classes:
+        - title_medium
+        - textColor_highlight_primary100
+        - labelShadow_dropShadows_light
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1042
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 730388484
+        m_Parent:
+          rid: 1031
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_taxCollectorLocationName
+        - name: text
+          value: '[Arbre de Moon]'
+        m_RuleIndex: 10
+        m_Classes:
+        - textColor_highlight_secondary100
+        - textShort_mediumRegular
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1043
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -790745811
+        m_Parent:
+          rid: 1031
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_taxCollectorLocation
+        - name: text
+          value: '[29,6]'
+        m_RuleIndex: 11
+        m_Classes:
+        - section_medium
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1044
+      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        uxmlAssetId: 1986453208
+        name: 
+        bindings: []
+        tooltip: 
+        dataSourcePathString: 
+        dataSourceTypeString: 
+        dataSourceUnityObject: {fileID: 0}
+        viewDataKey: 
+        pickingMode: 0
+        usageHints: 0
+        languageDirection: 0
+        tabIndex: 0
+        focusable: 0
+        enabledSelf: 0
+        name_UxmlAttributeFlags: 0
+        enabledSelf_UxmlAttributeFlags: 0
+        viewDataKey_UxmlAttributeFlags: 0
+        pickingMode_UxmlAttributeFlags: 0
+        tooltip_UxmlAttributeFlags: 0
+        usageHints_UxmlAttributeFlags: 0
+        tabIndex_UxmlAttributeFlags: 0
+        focusable_UxmlAttributeFlags: 0
+        languageDirection_UxmlAttributeFlags: 0
+        dataSourceUnityObject_UxmlAttributeFlags: 0
+        dataSourcePathString_UxmlAttributeFlags: 0
+        dataSourceTypeString_UxmlAttributeFlags: 0
+        bindings_UxmlAttributeFlags: 0
+    - rid: 1045
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 909344834
+        m_Parent:
+          rid: 1033
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_estimatedValuePlaceholder
+        - name: text
+          value: "[Valeur estim\xE9e :]"
+        m_RuleIndex: 14
+        m_Classes:
+        - textShort_mediumRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1046
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -611789461
+        m_Parent:
+          rid: 1033
+        m_Children:
+        - rid: 1058
+        - rid: 1059
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: data
+        - name: gap-value
+          value: 0
+        m_RuleIndex: 15
+        m_Classes: []
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1048
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1417096228
+        m_Parent:
+          rid: 1034
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_podsPlaceholder
+        - name: text
+          value: '[Pods :]'
+        m_RuleIndex: 19
+        m_Classes:
+        - textShort_mediumRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1049
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1356736773
+        m_Parent:
+          rid: 1034
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[1 420]'
+        - name: name
+          value: lbl_podsValue
+        m_RuleIndex: 20
+        m_Classes:
+        - textShort_mediumRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1051
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: -1953967406
+        m_Parent:
+          rid: 1035
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: name
+          value: lbl_ownerNamePlaceholder
+        - name: text
+          value: "[Propri\xE9taire :]"
+        m_RuleIndex: 22
+        m_Classes:
+        - textShort_mediumRegular
+        - textColor_white_white65
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1052
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 819865595
+        m_Parent:
+          rid: 1035
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[Gamura]'
+        - name: name
+          value: lbl_ownerNameValue
+        m_RuleIndex: 23
+        m_Classes:
+        - textShort_mediumBold
+        - textColor_highlight_primary100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1058
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.DofusLabel
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 1890241933
+        m_Parent:
+          rid: 1046
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: text
+          value: '[300 000]'
+        - name: name
+          value: lbl_estimatedValue
+        m_RuleIndex: 16
+        m_Classes:
+        - textShort_largeBold
+        - textColor_white_white100
+        - labelShadow_dropShadows_light
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+    - rid: 1059
+      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
+      data:
+        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
+        m_XmlNamespace:
+          prefix: 
+          resolvedNamespace: 
+        m_Id: 369107638
+        m_Parent:
+          rid: 1046
+        m_Children: []
+        m_VisualTreeAsset: {fileID: 11400000}
+        m_NamespaceDefinitions: []
+        m_Properties:
+        - name: icon
+          value: kamas
+        - name: has-shadow
+          value: true
+        m_RuleIndex: 17
+        m_Classes:
+        - tintColor_qualitative_kamaYellow100
+        m_StylesheetPaths: []
+        m_Stylesheets: []
+        m_SerializedData:
+          rid: -2
+        m_SkipClone: 0
+--- !u!114 &222133278863291695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1515,1025 +2537,3 @@ MonoBehaviour:
   m_FlattenedImportedStyleSheets: []
   m_ContentHash: 0
   scalableImages: []
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11995, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TaxCollectorLootDetail.uxml
-  m_EditorClassIdentifier: 
-  m_ImportedWithErrors: 0
-  m_HasEditorElements: 0
-  m_HasUpdatedUrls: 0
-  m_ImportedWithWarnings: 0
-  m_Usings: []
-  inlineSheet: {fileID: -5177407797340524630}
-  m_VisualTree:
-    rid: 1000
-  m_AssetEntries: []
-  m_Slots: []
-  m_ContentContainerId: 0
-  m_ContentHash: 1118593218
-  references:
-    version: 2
-    RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 1000
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.UXML
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 936270850
-        m_Parent:
-          rid: -2
-        m_Children:
-        - rid: 1001
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions:
-        - prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        - prefix: uie
-          resolvedNamespace: UnityEditor.UIElements
-        m_Properties:
-        - name: xsi
-          value: http://www.w3.org/2001/XMLSchema-instance
-        - name: engine
-          value: UnityEngine.UIElements
-        - name: editor
-          value: UnityEditor.UIElements
-        - name: noNamespaceSchemaLocation
-          value: ../../../../UIElementsSchema/UIElements.xsd
-        - name: editor-extension-mode
-          value: False
-        m_RuleIndex: -1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets:
-        - {fileID: 0}
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1001
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.WindowFigma
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -767185813
-        m_Parent:
-          rid: 1000
-        m_Children:
-        - rid: 1002
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: title
-          value: "[Percepteur Collect\xE9]"
-        - name: name
-          value: CollectorLootDetail
-        m_RuleIndex: 0
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1002
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 303190525
-        m_Parent:
-          rid: 1001
-        m_Children:
-        - rid: 1004
-        - rid: 1005
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 8
-        - name: name
-          value: window
-        m_RuleIndex: 1
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1004
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -147567432
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1007
-        - rid: 1008
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_topContainer
-        m_RuleIndex: 2
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1005
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -773917849
-        m_Parent:
-          rid: 1002
-        m_Children:
-        - rid: 1010
-        - rid: 1011
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: contentContainer
-        m_RuleIndex: 24
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1007
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -2119459684
-        m_Parent:
-          rid: 1004
-        m_Children:
-        - rid: 1013
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: ctr_Illu
-        m_RuleIndex: 3
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1008
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -866760978
-        m_Parent:
-          rid: 1004
-        m_Children:
-        - rid: 1015
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 12
-        m_RuleIndex: 5
-        m_Classes:
-        - buttonSecondary
-        - backgroundColor_buttons_buttonSecondary
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1010
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 922806778
-        m_Parent:
-          rid: 1005
-        m_Children:
-        - rid: 1017
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 16
-        - name: name
-          value: header
-        m_RuleIndex: 25
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1011
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1907069895
-        m_Parent:
-          rid: 1005
-        m_Children:
-        - rid: 1019
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 6
-        m_RuleIndex: 30
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1013
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.EntityDisplay.EntityDisplayer
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1317518935
-        m_Parent:
-          rid: 1007
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: taxCollectorIllu
-        - name: picking-mode
-          value: Ignore
-        m_RuleIndex: 4
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1015
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1187878477
-        m_Parent:
-          rid: 1008
-        m_Children:
-        - rid: 1022
-        - rid: 1023
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 16
-        m_RuleIndex: 6
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1017
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1098397110
-        m_Parent:
-          rid: 1010
-        m_Children:
-        - rid: 1025
-        - rid: 1026
-        - rid: 1027
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: tablePlaceholders
-        - name: gap-value
-          value: 8
-        m_RuleIndex: 26
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1019
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.ListView
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: -1228043952
-        m_Parent:
-          rid: 1011
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: collectedElements
-        - name: virtualization-method
-          value: FixedHeight
-        - name: show-border
-          value: true
-        - name: fixed-item-height
-          value: 54
-        m_RuleIndex: 31
-        m_Classes:
-        - scrollbarPadding
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1029
-        m_SkipClone: 0
-    - rid: 1022
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1721383637
-        m_Parent:
-          rid: 1015
-        m_Children:
-        - rid: 1030
-        - rid: 1031
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: title
-        - name: gap-value
-          value: 2
-        m_RuleIndex: 7
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1023
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1184512459
-        m_Parent:
-          rid: 1015
-        m_Children:
-        - rid: 1033
-        - rid: 1034
-        - rid: 1035
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: Group
-        m_RuleIndex: 12
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1025
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -247146853
-        m_Parent:
-          rid: 1017
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: itemNamePlaceholder
-        - name: header-text
-          value: '[Nom de l''objet]'
-        - name: icon-header
-          value: arrowBottom
-        - name: table-column-header-type
-          value: text
-        m_RuleIndex: 27
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1026
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1768281148
-        m_Parent:
-          rid: 1017
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: itemQuantityPlaceholder
-        - name: header-text
-          value: "[Quantit\xE9]"
-        m_RuleIndex: 28
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1027
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.TableColumnHeader
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1005551853
-        m_Parent:
-          rid: 1017
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: estimatedValuePlaceholder
-        - name: header-text
-          value: "[Valeur estim\xE9e]"
-        m_RuleIndex: 29
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1029
-      type: {class: ListView/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: -1228043952
-        name: collectedElements
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 1
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-        bindingPath: 
-        bindingPath_UxmlAttributeFlags: 0
-        fixedItemHeight: 54
-        virtualizationMethod: 0
-        selectionType: 0
-        showAlternatingRowBackgrounds: 0
-        showBorder: 1
-        reorderable: 0
-        horizontalScrollingEnabled: 0
-        fixedItemHeight_UxmlAttributeFlags: 1
-        virtualizationMethod_UxmlAttributeFlags: 1
-        showBorder_UxmlAttributeFlags: 1
-        selectionType_UxmlAttributeFlags: 0
-        showAlternatingRowBackgrounds_UxmlAttributeFlags: 0
-        reorderable_UxmlAttributeFlags: 0
-        horizontalScrollingEnabled_UxmlAttributeFlags: 0
-        headerTitle: 
-        reorderMode: 0
-        bindingSourceSelectionMode: 0
-        showFoldoutHeader: 0
-        showAddRemoveFooter: 0
-        allowAdd: 0
-        allowRemove: 0
-        showBoundCollectionSize: 0
-        showFoldoutHeader_UxmlAttributeFlags: 0
-        headerTitle_UxmlAttributeFlags: 0
-        showAddRemoveFooter_UxmlAttributeFlags: 0
-        allowAdd_UxmlAttributeFlags: 0
-        allowRemove_UxmlAttributeFlags: 0
-        reorderMode_UxmlAttributeFlags: 0
-        showBoundCollectionSize_UxmlAttributeFlags: 0
-        bindingSourceSelectionMode_UxmlAttributeFlags: 0
-        itemTemplate: {fileID: 0}
-        itemTemplate_UxmlAttributeFlags: 0
-    - rid: 1030
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 733754502
-        m_Parent:
-          rid: 1022
-        m_Children:
-        - rid: 1040
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: gap-value
-          value: 8
-        m_RuleIndex: 8
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1031
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: UnityEngine.UIElements.VisualElement
-        m_XmlNamespace:
-          prefix: ui
-          resolvedNamespace: UnityEngine.UIElements
-        m_Id: 1986453208
-        m_Parent:
-          rid: 1022
-        m_Children:
-        - rid: 1042
-        - rid: 1043
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties: []
-        m_RuleIndex: 9
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: 1044
-        m_SkipClone: 0
-    - rid: 1033
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -339987854
-        m_Parent:
-          rid: 1023
-        m_Children:
-        - rid: 1045
-        - rid: 1046
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: estimatedValue
-        m_RuleIndex: 13
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1034
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 644275263
-        m_Parent:
-          rid: 1023
-        m_Children:
-        - rid: 1048
-        - rid: 1049
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: pods
-        m_RuleIndex: 18
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1035
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 375839674
-        m_Parent:
-          rid: 1023
-        m_Children:
-        - rid: 1051
-        - rid: 1052
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: owner
-        m_RuleIndex: 21
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1040
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1775008928
-        m_Parent:
-          rid: 1030
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[Nom Perco]'
-        - name: name
-          value: lbl_taxCollectorName
-        m_RuleIndex: -1
-        m_Classes:
-        - title_medium
-        - textColor_highlight_primary100
-        - labelShadow_dropShadows_light
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1042
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 730388484
-        m_Parent:
-          rid: 1031
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_taxCollectorLocationName
-        - name: text
-          value: '[Arbre de Moon]'
-        m_RuleIndex: 10
-        m_Classes:
-        - textColor_highlight_secondary100
-        - textShort_mediumRegular
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1043
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -790745811
-        m_Parent:
-          rid: 1031
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_taxCollectorLocation
-        - name: text
-          value: '[29,6]'
-        m_RuleIndex: 11
-        m_Classes:
-        - section_medium
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1044
-      type: {class: VisualElement/UxmlSerializedData, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        uxmlAssetId: 1986453208
-        name: 
-        bindings: []
-        tooltip: 
-        dataSourcePathString: 
-        dataSourceTypeString: 
-        dataSourceUnityObject: {fileID: 0}
-        viewDataKey: 
-        pickingMode: 0
-        usageHints: 0
-        languageDirection: 0
-        tabIndex: 0
-        focusable: 0
-        enabledSelf: 0
-        name_UxmlAttributeFlags: 0
-        enabledSelf_UxmlAttributeFlags: 0
-        viewDataKey_UxmlAttributeFlags: 0
-        pickingMode_UxmlAttributeFlags: 0
-        tooltip_UxmlAttributeFlags: 0
-        usageHints_UxmlAttributeFlags: 0
-        tabIndex_UxmlAttributeFlags: 0
-        focusable_UxmlAttributeFlags: 0
-        languageDirection_UxmlAttributeFlags: 0
-        dataSourceUnityObject_UxmlAttributeFlags: 0
-        dataSourcePathString_UxmlAttributeFlags: 0
-        dataSourceTypeString_UxmlAttributeFlags: 0
-        bindings_UxmlAttributeFlags: 0
-    - rid: 1045
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 909344834
-        m_Parent:
-          rid: 1033
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_estimatedValuePlaceholder
-        - name: text
-          value: "[Valeur estim\xE9e :]"
-        m_RuleIndex: 14
-        m_Classes:
-        - textShort_mediumRegular
-        - textColor_white_white65
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1046
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusVisualElement
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -611789461
-        m_Parent:
-          rid: 1033
-        m_Children:
-        - rid: 1058
-        - rid: 1059
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: data
-        - name: gap-value
-          value: 0
-        m_RuleIndex: 15
-        m_Classes: []
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1048
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1417096228
-        m_Parent:
-          rid: 1034
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_podsPlaceholder
-        - name: text
-          value: '[Pods :]'
-        m_RuleIndex: 19
-        m_Classes:
-        - textShort_mediumRegular
-        - textColor_white_white65
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1049
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1356736773
-        m_Parent:
-          rid: 1034
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[1 420]'
-        - name: name
-          value: lbl_podsValue
-        m_RuleIndex: 20
-        m_Classes:
-        - textShort_mediumRegular
-        - textColor_white_white65
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1051
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: -1953967406
-        m_Parent:
-          rid: 1035
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: name
-          value: lbl_ownerNamePlaceholder
-        - name: text
-          value: "[Propri\xE9taire :]"
-        m_RuleIndex: 22
-        m_Classes:
-        - textShort_mediumRegular
-        - textColor_white_white65
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1052
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 819865595
-        m_Parent:
-          rid: 1035
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[Gamura]'
-        - name: name
-          value: lbl_ownerNameValue
-        m_RuleIndex: 23
-        m_Classes:
-        - textShort_mediumBold
-        - textColor_highlight_primary100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1058
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.DofusLabel
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 1890241933
-        m_Parent:
-          rid: 1046
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: text
-          value: '[300 000]'
-        - name: name
-          value: lbl_estimatedValue
-        m_RuleIndex: 16
-        m_Classes:
-        - textShort_largeBold
-        - textColor_white_white100
-        - labelShadow_dropShadows_light
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0
-    - rid: 1059
-      type: {class: VisualElementAsset, ns: UnityEngine.UIElements, asm: UnityEngine.UIElementsModule}
-      data:
-        m_FullTypeName: Core.UILogic.Components.Figma.DofusIcon
-        m_XmlNamespace:
-          prefix: 
-          resolvedNamespace: 
-        m_Id: 369107638
-        m_Parent:
-          rid: 1046
-        m_Children: []
-        m_VisualTreeAsset: {fileID: 11400000}
-        m_NamespaceDefinitions: []
-        m_Properties:
-        - name: icon
-          value: kamas
-        - name: has-shadow
-          value: true
-        m_RuleIndex: 17
-        m_Classes:
-        - tintColor_qualitative_kamaYellow100
-        m_StylesheetPaths: []
-        m_Stylesheets: []
-        m_SerializedData:
-          rid: -2
-        m_SkipClone: 0

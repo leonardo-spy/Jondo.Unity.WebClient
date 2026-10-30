@@ -1,106 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-960929578323017330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11998, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: inlineSheet
-  m_EditorClassIdentifier: 
-  m_ImportedWithErrors: 0
-  m_ImportedWithWarnings: 0
-  m_Rules:
-  - m_ComplexSelectors: []
-    m_Properties:
-    - m_Id: 131085
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 2
-        valueIndex: 0
-    - m_Id: 131105
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 0
-    - m_Id: 131087
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 1
-    - m_Id: 131101
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 2
-    - m_Id: 131100
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 3
-    - m_Id: 131098
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 4
-    - m_Id: 131099
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 5
-    line: -1
-  - m_ComplexSelectors: []
-    m_Properties:
-    - m_Id: 131105
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 6
-    - m_Id: 131087
-      m_CustomName: 
-      m_Line: -1
-      m_Values:
-      - m_ValueType: 3
-        valueIndex: 7
-    line: -1
-  floats:
-  - 0
-  dimensions:
-  - unit: 2
-    value: 100
-  - unit: 2
-    value: 100
-  - unit: 1
-    value: 16
-  - unit: 1
-    value: 16
-  - unit: 1
-    value: 16
-  - unit: 1
-    value: 16
-  - unit: 2
-    value: 100
-  - unit: 2
-    value: 100
-  colors: []
-  strings: []
-  assets: []
-  imports: []
-  m_FlattenedImportedStyleSheets: []
-  m_ContentHash: 0
-  scalableImages: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +20,7 @@ MonoBehaviour:
   - alias: fightResultSection
     path: 
     asset: {fileID: 11400000, guid: b365ab3c96b836b4ca13f00497dc56cd, type: 2}
-  inlineSheet: {fileID: -960929578323017330}
+  inlineSheet: {fileID: 3856305884923596038}
   m_VisualTree:
     rid: 1000
   m_AssetEntries: []
@@ -404,3 +303,104 @@ MonoBehaviour:
         template_UxmlAttributeFlags: 0
         templateId: fightResultSection
         templateId_UxmlAttributeFlags: 1
+--- !u!114 &3856305884923596038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11998, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: inlineSheet
+  m_EditorClassIdentifier: 
+  m_ImportedWithErrors: 0
+  m_ImportedWithWarnings: 0
+  m_Rules:
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131085
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 2
+        valueIndex: 0
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 0
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 1
+    - m_Id: 131101
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 2
+    - m_Id: 131100
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 3
+    - m_Id: 131098
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 4
+    - m_Id: 131099
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 5
+    line: -1
+  - m_ComplexSelectors: []
+    m_Properties:
+    - m_Id: 131105
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 6
+    - m_Id: 131087
+      m_CustomName: 
+      m_Line: -1
+      m_Values:
+      - m_ValueType: 3
+        valueIndex: 7
+    line: -1
+  floats:
+  - 0
+  dimensions:
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 1
+    value: 16
+  - unit: 2
+    value: 100
+  - unit: 2
+    value: 100
+  colors: []
+  strings: []
+  assets: []
+  imports: []
+  m_FlattenedImportedStyleSheets: []
+  m_ContentHash: 0
+  scalableImages: []

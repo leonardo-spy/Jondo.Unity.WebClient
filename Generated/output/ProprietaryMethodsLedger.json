@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "totalProprietaryMethods": 54018,
+  "coverageStatus": "100% Mapped & Classified",
+  "subsystems": [
+    {
+      "subsystem": "UI_SCREENS",
+      "methods": 19219,
+      "classesCount": 1159,
+      "namespacesCount": 117,
+      "percentage": 35.58,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — 1.159 classes, 19.219 métodos, BaseUiController (fzy), telas Auth, HUD, Inventário, Grimório, Luta, Social e registry",
+      "sampleClasses": [
+        "Core.UI.UICoordinates",
+        "Core.UI.UIUtils",
+        "Core.UILogic.Admin.AdminMenu",
+        "Core.UILogic.Admin.AdminSelectItemUI",
+        "Core.UILogic.Admin.Items.BasicItem",
+        "Core.UILogic.Admin.Items.BatchItem",
+        "Core.UILogic.Admin.Items.ExecItem",
+        "Core.UILogic.Admin.Items.MenuItem",
+        "Core.UILogic.Admin.Items.PrepareCommandItem",
+        "Core.UILogic.Admin.Items.ReloadXmlItem"
+      ]
+    },
+    {
+      "subsystem": "PROTOCOL_GAME",
+      "methods": 13768,
+      "classesCount": 841,
+      "namespacesCount": 13,
+      "percentage": 25.49,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — 905 classes, 13.768 métodos, IProtocolMessage, opcodes, dispatcher e registry",
+      "sampleClasses": [
+        "Ankama.SpinConnection.AnkamaNoHaapiCredentials",
+        "Ankama.SpinConnection.AnkamaSpinCredentials",
+        "Ankama.SpinConnection.AnkamaTokenCredentials",
+        "Ankama.SpinConnection.ClientDisconnectionInfo",
+        "Ankama.SpinConnection.ConnectionInterruptedError",
+        "Ankama.SpinConnection.IApplicationCodec<TCommand",
+        "Ankama.SpinConnection.IConnection<TCommand",
+        "Ankama.SpinConnection.IMessageHandler",
+        "Ankama.SpinConnection.IPingProvider",
+        "Ankama.SpinConnection.ISpinCredentials"
+      ]
+    },
+    {
+      "subsystem": "UI_BINDINGS",
+      "methods": 12634,
+      "classesCount": 757,
+      "namespacesCount": 2,
+      "percentage": 23.39,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — 757 classes, 12.634 métodos, IBinding (gar), UXML templates, slots, storage, spells e registry",
+      "sampleClasses": [
+        "Core.UI.Bindings.AchievementSummaryItemBinding",
+        "Core.UI.Bindings.AdminSelectItemEntryBinding",
+        "Core.UI.Bindings.AdministrablePopupBinding",
+        "Core.UI.Bindings.AdvancedCharacteristicItemBinding",
+        "Core.UI.Bindings.AlignmentCharacterTooltipBinding",
+        "Core.UI.Bindings.AllianceAVAItemBinding",
+        "Core.UI.Bindings.AllianceApplicationsBinding",
+        "Core.UI.Bindings.AllianceApplicationsItemBinding",
+        "Core.UI.Bindings.AllianceConquestsBinding",
+        "Core.UI.Bindings.AllianceFightBinding"
+      ]
+    },
+    {
+      "subsystem": "DATA_CENTER",
+      "methods": 1760,
+      "classesCount": 542,
+      "namespacesCount": 59,
+      "percentage": 3.26,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — DataCenterModule, ItemData, SpellData, MonsterData, BreedData, I18nService",
+      "sampleClasses": [
+        "Core.DataCenter.DataCenterModule",
+        "Core.DataCenter.Interfaces.IAdminSelectionEntry",
+        "Core.DataCenter.Interfaces.IAdminSelectionEntryType",
+        "Core.DataCenter.Interfaces.IRectangle",
+        "Core.DataCenter.Interfaces.IWorldEventData",
+        "Core.DataCenter.InternalAddressableCatalogs",
+        "Core.DataCenter.Metadata.Alignment.AlignmentGiftData",
+        "Core.DataCenter.Metadata.Alignment.AlignmentGiftsDataRoot",
+        "Core.DataCenter.Metadata.Alignment.AlignmentOrderData",
+        "Core.DataCenter.Metadata.Alignment.AlignmentOrdersDataRoot"
+      ]
+    },
+    {
+      "subsystem": "CORE_GENERAL",
+      "methods": 1627,
+      "classesCount": 117,
+      "namespacesCount": 43,
+      "percentage": 3.01,
+      "completedPercent": 3.0,
+      "remainingPercent": 97.0,
+      "status": "Mapeado no pipeline AST",
+      "sampleClasses": [
+        "Core.Characters.Data.AnimLabelEvents",
+        "Core.Characters.Data.BoneAnimMappingByBreed",
+        "Core.Characters.Data.BoneFileByAnimMapping",
+        "Core.Characters.Data.BoneIndexData",
+        "Core.Characters.Data.BoneMappingIndex",
+        "Core.Characters.Data.BonesAnimLabelEvents",
+        "Core.Characters.Data.BonesLabelEventsIndexData",
+        "Core.Characters.Data.LabelEventInfo",
+        "Core.Characters.Data.LabelEvents",
+        "Core.Characters.Data.LabelEventsParams"
+      ]
+    },
+    {
+      "subsystem": "AUDIO_MANAGEMENT",
+      "methods": 1059,
+      "classesCount": 128,
+      "namespacesCount": 8,
+      "percentage": 1.96,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — AudioManager, ewc (elv), FMODProxy, AudioData.json (100+ SFX), passos e UI",
+      "sampleClasses": [
+        "Ankama.AudioManagement.AndroidPlatformSettings",
+        "Ankama.AudioManagement.AsyncOperations.AudioAsyncOperationUtility",
+        "Ankama.AudioManagement.AsyncOperations.AudioManagerInitializationAsyncOperation",
+        "Ankama.AudioManagement.AsyncOperations.ChangeLocaleAsyncOperation",
+        "Ankama.AudioManagement.AsyncOperations.IAudioAsyncOperation",
+        "Ankama.AudioManagement.AsyncOperations.LoadBankAsyncOperation",
+        "Ankama.AudioManagement.AsyncOperations.LoadBankResultExtensions",
+        "Ankama.AudioManagement.AsyncOperations.LoadBankSampleDataAsyncOperation",
+        "Ankama.AudioManagement.AsyncOperations.LoadBankSampleDataResultExtensions",
+        "Ankama.AudioManagement.AsyncOperations.LoadEventSampleDataAsyncOperation"
+      ]
+    },
+    {
+      "subsystem": "ANKAMA_GENERAL",
+      "methods": 875,
+      "classesCount": 75,
+      "namespacesCount": 10,
+      "percentage": 1.62,
+      "completedPercent": 1.6,
+      "remainingPercent": 98.4,
+      "status": "Mapeado no pipeline AST",
+      "sampleClasses": [
+        "Ankama.AddressableUtilities.Runtime.AddressableCatalogDefinition",
+        "Ankama.AddressableUtilities.Runtime.AddressableCatalogName",
+        "Ankama.AddressableUtilities.Runtime.AddressableEntry",
+        "Ankama.AddressableUtilities.Runtime.AddressableEntryType",
+        "Ankama.AddressableUtilities.Runtime.AddressableUtility",
+        "Ankama.AddressableUtilities.Runtime.RuntimePlatformUtility",
+        "Ankama.Launcher.ApiToken",
+        "Ankama.Launcher.BlockingQueue<T>",
+        "Ankama.Launcher.LauncherConnection",
+        "Ankama.Launcher.ZaapLink"
+      ]
+    },
+    {
+      "subsystem": "FIGHT_ENGINE",
+      "methods": 797,
+      "classesCount": 52,
+      "namespacesCount": 24,
+      "percentage": 1.48,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — FightTurn, FightState, FightTurnService (fiw), FightEntities, zonas de feitiço",
+      "sampleClasses": [
+        "Core.Features.Fight.FightPreview.Contexts.Exceptions.MaxEffectCountException",
+        "Core.Features.Fight.FightPreview.Contexts.Exceptions.PreviewTimeoutException",
+        "Core.Features.Fight.FightPreview.Movements.DragResult",
+        "Core.Features.Fight.FightPreview.Spells.Exceptions.SpellCastSolutionException",
+        "Core.Features.Fight.FightPreview.Targets.HitContext",
+        "Core.Features.Fight.FightPreview.Targets.HitPosition",
+        "Core.Features.Fight.FightStates.State.EntityStateInfo",
+        "Core.Features.Fight.FightStates.State.FightState",
+        "Core.Features.Fight.Misc.CellNode",
+        "Core.Features.Fight.Spells.Buffs.Accumulated.AccumulatedBuffKey"
+      ]
+    },
+    {
+      "subsystem": "ANIMATOR_2D",
+      "methods": 712,
+      "classesCount": 70,
+      "namespacesCount": 8,
+      "percentage": 1.32,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — Animator2D, EntityAnimator, AnimTransform, SkinAsset, âncoras e malha 2D",
+      "sampleClasses": [
+        "Ankama.Animations.AnimatedObjectDefinition",
+        "Ankama.Animations.Animation",
+        "Ankama.Animations.AnimationLabel",
+        "Ankama.Animations.Animator2D",
+        "Ankama.Animations.CustomisationSlot",
+        "Ankama.Animations.Events.AnimationEndedEventArgs",
+        "Ankama.Animations.Events.AnimationEndedEventHandler",
+        "Ankama.Animations.Events.AnimationLabelChangedEventArgs",
+        "Ankama.Animations.Events.AnimationLabelChangedEventHandler",
+        "Ankama.Animations.Events.AnimationLoopedEventArgs"
+      ]
+    },
+    {
+      "subsystem": "CORE_SERVICES",
+      "methods": 666,
+      "classesCount": 34,
+      "namespacesCount": 17,
+      "percentage": 1.23,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — 6 fases sequenciais e 239 serviços integrados",
+      "sampleClasses": [
+        "AleCore.Services.IShaderTimeData",
+        "AleCore.Services.MeshService",
+        "AleCore.Services.ParticlesService",
+        "AleCore.Services.PostProcessService",
+        "AleCore.Services.ShaderFrequencyData",
+        "AleCore.Services.ShaderFrequencyManager",
+        "AleCore.Services.ShaderService",
+        "AleCore.Services.ShaderTextureOffsetData",
+        "Core.Services.Contracts.DisconnectionReason",
+        "Core.Services.Contracts.InteractiveElementData"
+      ]
+    },
+    {
+      "subsystem": "WORLD_MOVEMENT",
+      "methods": 505,
+      "classesCount": 69,
+      "namespacesCount": 13,
+      "percentage": 0.93,
+      "completedPercent": 100.0,
+      "remainingPercent": 0.0,
+      "status": "100% CONCLUÍDO — 560 células, A* oficial (elf.lmu), MapPoint, bordas e transição",
+      "sampleClasses": [
+        "Core.DataCenter.Metadata.World.AreaData",
+        "Core.DataCenter.Metadata.World.AreasDataRoot",
+        "Core.DataCenter.Metadata.World.DungeonData",
+        "Core.DataCenter.Metadata.World.DungeonsDataRoot",
+        "Core.DataCenter.Metadata.World.HintCategoriesDataRoot",
+        "Core.DataCenter.Metadata.World.HintCategoryData",
+        "Core.DataCenter.Metadata.World.HintData",
+        "Core.DataCenter.Metadata.World.HintsDataRoot",
+        "Core.DataCenter.Metadata.World.MapInformationData",
+        "Core.DataCenter.Metadata.World.MapReferenceData"
+      ]
+    },
+    {
+      "subsystem": "PROPRIETARY_OTHER",
+      "methods": 396,
+      "classesCount": 79,
+      "namespacesCount": 8,
+      "percentage": 0.73,
+      "completedPercent": 0.7,
+      "remainingPercent": 99.3,
+      "status": "Mapeado no pipeline AST",
+      "sampleClasses": [
+        "AleCore.Data.Ale2ConstantsOrCurves",
+        "AleCore.Data.Ale2ConstantsOrCurvesHideMode",
+        "AleCore.Data.AleAlphaKey",
+        "AleCore.Data.AleAnimationCurve",
+        "AleCore.Data.AleBurst",
+        "AleCore.Data.AleColor",
+        "AleCore.Data.AleColorKey",
+        "AleCore.Data.AleConstantOr2Constants",
+        "AleCore.Data.AleConstantOrCurve",
+        "AleCore.Data.AleCurve"
+      ]
+    }
+  ]
+}
