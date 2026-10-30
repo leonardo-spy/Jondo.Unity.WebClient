@@ -144,29 +144,39 @@ wss.on('connection', (ws, req) => {
     while (buffer.length > 0) {
       const frame = tryReadFrame(buffer);
       if (!frame) break;
-      ws.send(frame.raw, { binary: true });
+      if (ws.readyState === 1) { // 1 = OPEN
+        try {
+          ws.send(frame.raw, { binary: true });
+        } catch (e) {
+          console.error('[WS] Send error:', e.message);
+        }
+      }
       buffer = buffer.subarray(frame.totalLength);
     }
   });
 
   tcp.on('error', (err) => {
     console.error(`[WS] TCP error: ${err.message}`);
-    ws.close(1011, 'TCP connection error');
+    if (ws.readyState === 1) {
+      try { ws.close(1011, 'TCP connection error'); } catch (_) {}
+    }
   });
 
   tcp.on('close', () => {
     console.log('[WS] TCP connection closed');
-    ws.close(1000, 'Game server disconnected');
+    if (ws.readyState === 1) {
+      try { ws.close(1000, 'Game server disconnected'); } catch (_) {}
+    }
   });
 
   ws.on('close', (code, reason) => {
     console.log(`[WS] Browser disconnected: ${code} ${reason}`);
-    tcp.destroy();
+    try { tcp.destroy(); } catch (_) {}
   });
 
   ws.on('error', (err) => {
     console.error(`[WS] WebSocket error: ${err.message}`);
-    tcp.destroy();
+    try { tcp.destroy(); } catch (_) {}
   });
 });
 
@@ -228,4 +238,12 @@ server.listen(PORT, () => {
   }
 
   console.log('');
+});
+
+// Process-level resilience
+process.on('uncaughtException', (err) => {
+  console.error('[Process UncaughtException]', err.message);
+});
+process.on('unhandledRejection', (reason) => {
+  console.error('[Process UnhandledRejection]', reason);
 });
