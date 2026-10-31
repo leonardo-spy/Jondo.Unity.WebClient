@@ -156,6 +156,13 @@ wss.on('connection', (ws, req) => {
   });
 
   tcp.on('error', (err) => {
+    if (err.code === 'ECONNRESET') {
+      console.log('[WS] TCP connection closed (reset by peer/normal server handoff)');
+      if (ws.readyState === 1) {
+        try { ws.close(1000, 'Game server disconnected'); } catch (_) {}
+      }
+      return;
+    }
     console.error(`[WS] TCP error: ${err.message}`);
     if (ws.readyState === 1) {
       try { ws.close(1011, 'TCP connection error'); } catch (_) {}

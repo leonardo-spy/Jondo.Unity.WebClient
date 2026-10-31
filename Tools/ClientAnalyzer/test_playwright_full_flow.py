@@ -107,7 +107,7 @@ def run_full_flow():
         print("\n[Passo 3] Selecionando Servidor -> Reconnect kqz -> CharacterSelection...")
         if box:
             # Em ServerSelection, botao Play fica na parte inferior central
-            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 50))
+            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 104))
             time.sleep(1)
 
         if not any("Server select:" in l for l in console_logs):
@@ -129,7 +129,7 @@ def run_full_flow():
         # Passo 4: Clicar em Jogar / Selecionar personagem
         print("\n[Passo 4] Selecionando Personagem -> Entrada no Mundo (jru, lwt, kub, jss, HUD)...")
         if box:
-            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 50))
+            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 104))
             time.sleep(1)
 
         if not any("Selecting character" in l for l in console_logs):

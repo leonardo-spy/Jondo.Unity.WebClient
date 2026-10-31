@@ -196,3 +196,4 @@ if __name__ == "__main__":
     print("======================================================================")
     results = run_generator(dump_arg, output_arg)
     print(f"\n[SUCESSO] Total de bindings gerados: {sum(1 for v in results.values() if v > 0)}/{len(results)}")
+

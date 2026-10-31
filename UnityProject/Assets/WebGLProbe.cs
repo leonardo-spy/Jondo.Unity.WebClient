@@ -61,7 +61,8 @@ public partial class WebGLProbe : MonoBehaviour
     string _accountNickname;
     string _accountTag;
     string _subscriptionEndDate;
-    VisualElement _characterHeaderRoot;
+    VisualElement _characterHeaderRoot;
+
     static string FormatSubscriptionDisplay(string raw)
     {
         if (string.IsNullOrEmpty(raw)) return "";
@@ -2055,10 +2056,20 @@ public partial class WebGLProbe : MonoBehaviour
         var root = _uiRoot;
         if (root == null) yield break;
 
+        VisualElement loginContainer = null;
         if (_loginUxml != null)
         {
-            _loginUxml.CloneTree(root);
-            Log($"  login.uxml cloned → {root.childCount} children");
+            loginContainer = new VisualElement { name = "screen_Login" };
+            loginContainer.style.width = Length.Percent(100);
+            loginContainer.style.height = Length.Percent(100);
+            loginContainer.style.position = Position.Absolute;
+            loginContainer.style.left = 0;
+            loginContainer.style.top = 0;
+            loginContainer.style.right = 0;
+            loginContainer.style.bottom = 0;
+            _loginUxml.CloneTree(loginContainer);
+            root.Add(loginContainer);
+            Log($"  login.uxml cloned into screen_Login → {loginContainer.childCount} children");
         }
 
         if (_ussOverrides != null)
@@ -2074,12 +2085,13 @@ public partial class WebGLProbe : MonoBehaviour
         var colorMap = LoadThemeColorMap();
         ApplyThemeRecursive(root, colorMap, ref themeApplied);
 
-        ApplyScreenBehavior("Login", root);
-        DispatchGen_Ctor("Login", root);
-        DispatchGen_Localize("Login", root);
-        DispatchGen_OnEnable("Login", root);
-        PopulateLoginScreen(root);
-        SetLoginState(root, 0);
+        var targetLogin = loginContainer ?? root;
+        ApplyScreenBehavior("Login", targetLogin);
+        DispatchGen_Ctor("Login", targetLogin);
+        DispatchGen_Localize("Login", targetLogin);
+        DispatchGen_OnEnable("Login", targetLogin);
+        PopulateLoginScreen(targetLogin);
+        SetLoginState(targetLogin, 0);
 
         // Re-apply font AFTER login clone (USS sets -unity-font-definition: none on some elements)
         yield return null;
@@ -4199,7 +4211,7 @@ VisualTreeAsset _cardTemplate;
                 _wsConn = null;
                 // Race condition: WS close fires BEFORE the ServerSelected data message is processed.
                 // Defer reconnect by one frame so data callbacks process first.
-                if (code == 1000)
+                if (!string.IsNullOrEmpty(_gameTicket) || code == 1000 || _pendingServerId > 0)
                     StartCoroutine(DeferredReconnect(root, code));
                 else
                     SetLoginState(root, 0, $"Disconnected ({code})");
