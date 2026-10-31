@@ -57,7 +57,7 @@ public partial class WebGLProbe : MonoBehaviour
     int _carouselOffset; // first server index shown in carousel (ServerSelection.m_carousel)
 
     // Character list parsed from kvi (ConnectionProtocol.cs L373-385)
-    struct CharInfo { public int id; public string name; public int level; public int breed; }
+    // CharInfo defined in Jondo.UI.Models.CharInfo
     List<CharInfo> _characterList;
     int _selectedCharIdx = -1;
     string _accountNickname;
@@ -69,6 +69,8 @@ public partial class WebGLProbe : MonoBehaviour
     GeneratedLoginBinding _loginBinding;
     GeneratedServerSelectionBinding _serverSelectionBinding;
     ServerSelectionController _serverSelectionController;
+    CharacterSelectionController _charSelectionController;
+    CharacterHeaderController _charHeaderController;
     GeneratedCharacterSelectionBinding _charSelectionBinding;
     GeneratedCharacterHeaderBinding _charHeaderBinding;
     GeneratedCharacterInformationsBinding _charInfoBinding;
@@ -2700,10 +2702,10 @@ public partial class WebGLProbe : MonoBehaviour
     void MountCharacterHeader(VisualElement root)
     {
         if (root == null) return;
-        if (_characterHeaderRoot != null && _characterHeaderRoot.parent == root)
+        if (_characterHeaderController != null && _characterHeaderController.Root != null && _characterHeaderController.Root.parent == root)
         {
-            _characterHeaderRoot.style.display = DisplayStyle.Flex;
-            _characterHeaderRoot.BringToFront();
+            _characterHeaderController.Root.style.display = DisplayStyle.Flex;
+            _characterHeaderController.Root.BringToFront();
             return;
         }
 
@@ -2714,236 +2716,16 @@ public partial class WebGLProbe : MonoBehaviour
             return;
         }
 
-        _characterHeaderRoot = headerVta.CloneTree();
-        _characterHeaderRoot.name = "CharacterHeader_Overlay";
-        _characterHeaderRoot.style.position = Position.Absolute;
-        _characterHeaderRoot.style.top = 10;
-        _characterHeaderRoot.style.left = 18;
-        _characterHeaderRoot.style.right = 18;
-        _characterHeaderRoot.style.height = 48;
-        _characterHeaderRoot.style.flexDirection = FlexDirection.Row;
-        _characterHeaderRoot.style.justifyContent = Justify.SpaceBetween;
-        _characterHeaderRoot.style.alignItems = Align.Center;
-        _characterHeaderRoot.pickingMode = PickingMode.Ignore;
-        _characterHeaderRoot.style.backgroundColor = Color.clear;
-
-        _charHeaderBinding = new GeneratedCharacterHeaderBinding();
-        _charHeaderBinding.Bind(_characterHeaderRoot);
-
-        // Clean up untextured background overlays inside characterHeader
-        var leftContainer = _charHeaderBinding.left ?? _characterHeaderRoot.Q("left");
-        if (leftContainer != null)
-        {
-            leftContainer.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.88f);
-            leftContainer.style.borderTopLeftRadius = 16;
-            leftContainer.style.borderTopRightRadius = 16;
-            leftContainer.style.borderBottomLeftRadius = 16;
-            leftContainer.style.borderBottomRightRadius = 16;
-            leftContainer.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-            leftContainer.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-            leftContainer.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-            leftContainer.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-            leftContainer.style.borderLeftWidth = 1;
-            leftContainer.style.borderRightWidth = 1;
-            leftContainer.style.borderTopWidth = 1;
-            leftContainer.style.borderBottomWidth = 1;
-            leftContainer.style.paddingLeft = 8;
-            leftContainer.style.paddingRight = 8;
-            leftContainer.style.paddingTop = 4;
-            leftContainer.style.paddingBottom = 4;
-            leftContainer.style.flexDirection = FlexDirection.Row;
-            leftContainer.style.alignItems = Align.Center;
-
-            // Hide gradientOpacity or any unstyled element creating white artifacts
-            for (int i = 0; i < leftContainer.childCount; i++)
-            {
-                var ch = leftContainer[i];
-                if (ch.name != "ctr_player" && ch.name != "ctr_subscription" && ch.name != "ctr_admin")
-                {
-                    ch.style.display = DisplayStyle.None;
-                }
-            }
-        }
+        var headerEl = headerVta.CloneTree();
+        _characterHeaderController = new CharacterHeaderController(headerEl);
+        _characterHeaderRoot = _characterHeaderController.Root;
 
         var fontAsset = Resources.Load<FontAsset>("DefaultFont");
         if (fontAsset != null) { RestoreFontAtlas(fontAsset); ApplyFontRecursive(_characterHeaderRoot, fontAsset); }
 
-        // Populate user data matching selecaoServ.png
-        string nick = !string.IsNullOrEmpty(_accountNickname) ? _accountNickname : "admin";
-        SetElementText(_characterHeaderRoot, "lbl_name", nick);
-        var nameLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_name != null ? _charHeaderBinding.lbl_name : _characterHeaderRoot.Q<Label>("lbl_name");
-        if (nameLbl != null)
-        {
-            nameLbl.text = nick;
-            nameLbl.style.color = Color.white;
-            nameLbl.style.unityFontStyleAndWeight = FontStyle.Bold;
-            nameLbl.style.fontSize = 13;
-        }
-
-        string tag = !string.IsNullOrEmpty(_accountTag) ? _accountTag : "#0001";
-        SetElementText(_characterHeaderRoot, "lbl_tag", tag);
-        var tagLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_tag != null ? _charHeaderBinding.lbl_tag : _characterHeaderRoot.Q<Label>("lbl_tag");
-        if (tagLbl != null)
-        {
-            tagLbl.text = tag;
-            tagLbl.style.color = new Color(0.55f, 0.62f, 0.70f, 1f);
-            tagLbl.style.fontSize = 12;
-            tagLbl.style.marginLeft = 4;
-        }
-
-        string sub = !string.IsNullOrEmpty(_subscriptionEndDate) ? _subscriptionEndDate : "Hasta el 15/10/2027, 13:11";
-        SetElementText(_characterHeaderRoot, "lbl_subscription", sub);
-        var subLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_subscription != null ? _charHeaderBinding.lbl_subscription : _characterHeaderRoot.Q<Label>("lbl_subscription");
-        if (subLbl != null)
-        {
-            subLbl.text = sub;
-            subLbl.style.color = new Color(0.80f, 0.85f, 0.90f, 1f);
-            subLbl.style.fontSize = 12;
-            subLbl.style.marginLeft = 6;
-        }
-
-        var btnSub = _charHeaderBinding != null && _charHeaderBinding.btn_subscribe != null ? _charHeaderBinding.btn_subscribe : _characterHeaderRoot.Q("btn_subscribe");
-        if (btnSub != null)
-        {
-            btnSub.style.backgroundColor = new Color(0.48f, 0.72f, 0.15f, 1f); // Authentic vibrant green
-            btnSub.style.borderTopLeftRadius = 12;
-            btnSub.style.borderTopRightRadius = 12;
-            btnSub.style.borderBottomLeftRadius = 12;
-            btnSub.style.borderBottomRightRadius = 12;
-            btnSub.style.paddingLeft = 10;
-            btnSub.style.paddingRight = 10;
-            btnSub.style.paddingTop = 4;
-            btnSub.style.paddingBottom = 4;
-            btnSub.style.marginLeft = 12;
-            btnSub.style.borderLeftWidth = 0;
-            btnSub.style.borderRightWidth = 0;
-            btnSub.style.borderTopWidth = 0;
-            btnSub.style.borderBottomWidth = 0;
-            var bLabel = btnSub.Q<Label>() ?? btnSub as Label;
-            if (bLabel != null)
-            {
-                bLabel.text = "ABÓNATE";
-                bLabel.style.color = Color.white;
-                bLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
-                bLabel.style.fontSize = 11;
-            }
-        }
-
-        // Set character avatar icon from live dump
-        var charIcon = _characterHeaderRoot.Q("icon_character");
-        var texChar = Resources.Load<Texture2D>("UI/Icons/playerShadowOutline") ?? Resources.Load<Texture2D>("FigmaIcons/character");
-        if (charIcon != null && texChar != null)
-        {
-            charIcon.style.backgroundImage = new StyleBackground(texChar);
-            charIcon.style.width = 24;
-            charIcon.style.height = 24;
-        }
-
-        // Set subscription icon from live dump
-        var subIcon = _characterHeaderRoot.Q("icon_subscription");
-        var texSub = Resources.Load<Texture2D>("UI/Icons/ticketShadowOutline") ?? Resources.Load<Texture2D>("FigmaIcons/subscription");
-        if (subIcon != null && texSub != null)
-        {
-            subIcon.style.backgroundImage = new StyleBackground(texSub);
-            subIcon.style.width = 18;
-            subIcon.style.height = 18;
-            subIcon.style.marginLeft = 14;
-        }
-
-        VisualElement btnSubIcon = _characterHeaderRoot.Q("button_iconLeft_Vector");
-        if (btnSubIcon == null)
-        {
-            var bSub = _characterHeaderRoot.Q("btn_subscribe");
-            if (bSub != null) btnSubIcon = bSub.Q(className: "icon");
-        }
-        var texExt = Resources.Load<Texture2D>("UI/Icons/externalShadowOutline");
-        if (btnSubIcon != null && texExt != null)
-        {
-            btnSubIcon.style.backgroundImage = new StyleBackground(texExt);
-            btnSubIcon.style.width = 14;
-            btnSubIcon.style.height = 14;
-        }
-
-        // Authentic Top-Right GameMenu (bug, options/cog, quit/menu) from live dump
-        var topActions = new VisualElement();
-        topActions.name = "GameMenu_Overlay";
-        topActions.style.flexDirection = FlexDirection.Row;
-        topActions.style.alignItems = Align.Center;
-        topActions.style.position = Position.Absolute;
-        topActions.style.top = 0;
-        topActions.style.right = 0;
-
-        var menuBg = new VisualElement();
-        menuBg.name = "ctr_bg";
-        menuBg.style.flexDirection = FlexDirection.Row;
-        menuBg.style.alignItems = Align.Center;
-        menuBg.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.88f);
-        menuBg.style.borderTopLeftRadius = 16;
-        menuBg.style.borderTopRightRadius = 16;
-        menuBg.style.borderBottomLeftRadius = 16;
-        menuBg.style.borderBottomRightRadius = 16;
-        menuBg.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-        menuBg.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-        menuBg.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-        menuBg.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
-        menuBg.style.borderLeftWidth = 1;
-        menuBg.style.borderRightWidth = 1;
-        menuBg.style.borderTopWidth = 1;
-        menuBg.style.borderBottomWidth = 1;
-        menuBg.style.paddingLeft = 4;
-        menuBg.style.paddingRight = 4;
-        menuBg.style.paddingTop = 2;
-        menuBg.style.paddingBottom = 2;
-
-        (string act, string iconName)[] menuButtons = {
-            ("bug", "bugShadowOutline"),
-            ("options", "cogShadowOutline"),
-            ("menu", "leaveShadowOutline")
-        };
-
-        foreach (var (act, iconName) in menuButtons)
-        {
-            var btn = new Button();
-            btn.name = $"btn_{act}";
-            btn.style.width = 28;
-            btn.style.height = 28;
-            btn.style.marginLeft = 3;
-            btn.style.marginRight = 3;
-            btn.style.borderTopLeftRadius = 14;
-            btn.style.borderTopRightRadius = 14;
-            btn.style.borderBottomLeftRadius = 14;
-            btn.style.borderBottomRightRadius = 14;
-            btn.style.backgroundColor = new Color(0.14f, 0.17f, 0.22f, 0.95f);
-            btn.style.borderLeftWidth = 0;
-            btn.style.borderRightWidth = 0;
-            btn.style.borderTopWidth = 0;
-            btn.style.borderBottomWidth = 0;
-            btn.style.justifyContent = Justify.Center;
-            btn.style.alignItems = Align.Center;
-
-            var actTex = Resources.Load<Texture2D>($"UI/Icons/{iconName}") ?? Resources.Load<Texture2D>($"FigmaIcons/{act}");
-            if (actTex != null)
-            {
-                var iconImg = new VisualElement();
-                iconImg.style.backgroundImage = new StyleBackground(actTex);
-                iconImg.style.width = 18;
-                iconImg.style.height = 18;
-                btn.Add(iconImg);
-            }
-
-            if (act == "menu" || act == "options")
-            {
-                btn.clicked += () => TogglePreGameMainMenu();
-            }
-
-            menuBg.Add(btn);
-        }
-
-        topActions.Add(menuBg);
-        _characterHeaderRoot.Add(topActions);
+        _characterHeaderController.UpdatePlayer(_accountNickname, _accountTag, _subscriptionEndDate);
         root.Add(_characterHeaderRoot);
         _characterHeaderRoot.BringToFront();
-        Log("  [CharacterHeader] Overlay mounted and populated");
     }
 
     void PopulateServerTabs(VisualElement root)
@@ -3060,87 +2842,30 @@ public partial class WebGLProbe : MonoBehaviour
         _charSelectionBinding = new GeneratedCharacterSelectionBinding();
         _charSelectionBinding.Bind(root);
 
-        // Server name (from decompiled CharacterSelection.Localize: lbl_serverName = server name)
-        SetElementText(root, "lbl_serverName", _pendingServerId > 0 ? ServerName(_pendingServerId) : "");
-
-        if (_characterList == null || _characterList.Count == 0)
+        if (_charSelectionController == null || _charSelectionController.Binding.Root != root)
         {
-            // Empty state: show create button, hide play
-            var btnCreate = _charSelectionBinding?.btn_createCharacter ?? root.Q("btn_createCharacter");
-            if (btnCreate is Button cb)
+            _charSelectionController = new CharacterSelectionController(
+                root,
+                uxmlName => LoadUxml(uxmlName),
+                (key, def) => I18n(key, def)
+            );
+
+            _charSelectionController.OnCreateCharacter += () =>
             {
-                cb.style.display = DisplayStyle.Flex;
-                // btn_createCharacter text set by ApplyScreenBehavior (ui.charsel.createCharacter)
-                cb.clicked += () => Log("  Character creation not yet implemented");
-            }
+                Log("  Character creation not yet implemented");
+            };
 
-            // lbl_title already set by ApplyScreenBehavior (ui.charsel.onServer)
-
-            Log("  CharacterSelection: 0 characters — show create button");
-            return;
-        }
-
-        // Populate character list in gd_character (ScrollView, dump.cs L172087)
-        var scrollView = _charSelectionBinding?.gd_character ?? root.Q("gd_character");
-        _selectedCharIdx = -1;
-
-        VisualTreeAsset charLineUxml = LoadUxml("characterline");
-
-        for (int i = 0; i < _characterList.Count; i++)
-        {
-            var ch = _characterList[i];
-            VisualElement row;
-
-            if (charLineUxml != null)
+            _charSelectionController.OnCharacterSelected += (cid) =>
             {
-                // Use the real characterLine.uxml template (from CharacterLineBinding)
-                row = charLineUxml.CloneTree();
-                SetElementText(row, "lbl_name", ch.name);
-                SetElementText(row, "lbl_level", $"{ch.level}");
-            }
-            else
+                _selectedCharIdx = _charSelectionController.SelectedIndex;
+                Log($"  Character selected: id={cid}");
+            };
+
+            _charSelectionController.OnCharacterPlay += (cid) =>
             {
-                // No characterLine.uxml template — create minimal elements
-                // with names from CharacterLineBinding (dump.cs) only. NO inline styles.
-                row = new VisualElement();
-                var nameLabel = new Label(ch.name);
-                nameLabel.name = "lbl_name";
-                nameLabel.AddToClassList("DofusLabel");
-                row.Add(nameLabel);
-
-                var levelLabel = new Label($"{ch.level}");
-                levelLabel.name = "lbl_level";
-                levelLabel.AddToClassList("DofusLabel");
-                row.Add(levelLabel);
-            }
-
-            row.name = $"charRow_{i}";
-            int charIdx = i;
-            int charId = ch.id;
-            row.RegisterCallback<ClickEvent>(evt =>
-            {
-                _selectedCharIdx = charIdx;
-                Log($"  Character selected: {ch.name} (id={charId})");
-            });
-
-            scrollView?.Add(row);
-        }
-
-        // Wire Play button (CharacterSelection.ValidateCharacterChoice, dump.cs L151289)
-        var btnPlay = _charSelectionBinding?.btn_play ?? root.Q("btn_play");
-        if (btnPlay != null)
-        {
-            btnPlay.SetEnabled(true);
-            btnPlay.RemoveFromClassList("disabled");
-            btnPlay.pickingMode = PickingMode.Position;
-
-            Action triggerCharPlay = () =>
-            {
-                int idx = _selectedCharIdx >= 0 ? _selectedCharIdx : 0;
-                if (idx < _characterList.Count && _wsConn != null)
+                if (_wsConn != null)
                 {
-                    int cid = _characterList[idx].id;
-                    Log($"  Selecting character {_characterList[idx].name} (id={cid})...");
+                    Log($"  Selecting character id={cid}...");
                     var kvwPayload = new List<byte>();
                     kvwPayload.Add(0x08);
                     int v = cid;
@@ -3150,30 +2875,13 @@ public partial class WebGLProbe : MonoBehaviour
                     if (kvwFrame != null) WebSocketBridge.Send(_wsConn, kvwFrame);
                 }
             };
-
-            btnPlay.Query().ForEach(child =>
-            {
-                if (child != btnPlay)
-                {
-                    child.pickingMode = PickingMode.Ignore;
-                    child.RegisterCallback<ClickEvent>(evt => { evt.StopPropagation(); triggerCharPlay(); });
-                    child.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) { evt.StopPropagation(); triggerCharPlay(); } });
-                }
-            });
-
-            if (btnPlay is Button pb) pb.clicked += () => triggerCharPlay();
-            btnPlay.RegisterCallback<ClickEvent>(evt => triggerCharPlay());
-            btnPlay.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) triggerCharPlay(); });
-
-            var playLabel = btnPlay.Q("playButton_label");
-            if (playLabel is Label pl) pl.text = I18n("ui.common.play", "Play");
         }
 
-        Log($"  CharacterSelection: {_characterList.Count} characters populated");
+        string srvName = _pendingServerId > 0 ? ServerName(_pendingServerId) : "";
+        _charSelectionController.Init(_characterList, srvName);
+        Log($"  CharacterSelection: controller initialized with {(_characterList != null ? _characterList.Count : 0)} characters");
     }
 
-    // Deferred reconnect: waits one frame for pending data messages to be processed
-    // before checking if we have a ticket for 2-phase reconnect.
     IEnumerator DeferredReconnect(VisualElement root, int closeCode)
     {
         yield return null; // wait one frame for data callbacks to fire
