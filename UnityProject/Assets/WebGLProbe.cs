@@ -9,6 +9,8 @@ using UnityEngine.UIElements;
 using FontAsset = UnityEngine.TextCore.Text.FontAsset;
 using Jondo.Reconstructed.Movement;
 using Jondo.UI.Generated;
+using Jondo.UI.Models;
+using Jondo.UI.Controllers;
 
 public partial class WebGLProbe : MonoBehaviour
 {
@@ -49,8 +51,7 @@ public partial class WebGLProbe : MonoBehaviour
     // PreGameMainMenu overlay (from fyv handler, dump.cs L386396)
     VisualElement _menuOverlay;
 
-    // Server list parsed from AuthAccepted (ConnectionProtocol.cs L64-128)
-    struct ServerInfo { public int id; public int charCount; public List<string> charNames; }
+    // Server list parsed from AuthAccepted (ConnectionProtocol.cs L64-128, model in Jondo.UI.Models.ServerInfo)
     List<ServerInfo> _serverList;
     int _selectedServerCardIdx = -1;
     int _carouselOffset; // first server index shown in carousel (ServerSelection.m_carousel)
@@ -2053,6 +2054,13 @@ public partial class WebGLProbe : MonoBehaviour
         {
             root.styleSheets.Add(overrides);
             Log($"  WebGLOverrides.uss loaded");
+        }
+
+        var liveTheme = Resources.Load<StyleSheet>("UI/Themes/MediumFont_Standard_Generated");
+        if (liveTheme != null)
+        {
+            root.styleSheets.Add(liveTheme);
+            Log($"  MediumFont_Standard_Generated.uss loaded (399 live dump rules)");
         }
 
         // Theme colors
