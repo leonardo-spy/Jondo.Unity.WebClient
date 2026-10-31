@@ -11,6 +11,7 @@ com eventos, registro de callbacks, propriedades e métodos delegados.
 import os
 import re
 import sys
+import uuid
 from typing import Dict, List, Tuple, Optional
 
 # Reutiliza o gerador de bindings existente
@@ -35,18 +36,18 @@ def find_class_in_dump(dump_text: str, class_name: str) -> Optional[Dict]:
     - lista de métodos públicos e privados
     """
     class_decl = re.compile(
-        r"(?://\s*Namespace:\s*([^\r\n]+)\s+)?public\s+class\s+" + re.escape(class_name) + r"\s*:\s*([^\r\n]+)"
+        r"(?://\s*Namespace:\s*([^\r\n]+)\s+)?public\s+class\s+" + re.escape(class_name) + r"(?:\s*:\s*([^\r\n/]+))?"
     )
     match = class_decl.search(dump_text)
     if not match:
         return None
 
     namespace = match.group(1).strip() if match.group(1) else ""
-    inheritance = match.group(2).strip()
+    inheritance = match.group(2).strip() if match.group(2) else ""
 
     binding_match = re.search(r"<([A-Za-z0-9_]+Binding)>", inheritance)
     binding_name = binding_match.group(1) if binding_match else None
-    base_name = inheritance.split("<")[0].strip() if "<" in inheritance else inheritance.split()[0]
+    base_name = inheritance.split("<")[0].strip() if "<" in inheritance else (inheritance.split()[0] if inheritance else "object")
 
     # Encontra o corpo da classe delimitado por chaves balanceadas
     start_brace = dump_text.find("{", match.end())
@@ -69,6 +70,11 @@ def find_class_in_dump(dump_text: str, class_name: str) -> Optional[Dict]:
         end_brace = len(dump_text)
 
     body = dump_text[start_brace + 1:end_brace]
+
+    if not binding_name:
+        field_binding_match = re.search(r"([A-Za-z0-9_]+Binding)\s+[A-Za-z0-9_]+;", body)
+        if field_binding_match:
+            binding_name = field_binding_match.group(1)
 
     # Extrai métodos
     method_pattern = re.compile(
@@ -236,6 +242,27 @@ namespace Jondo.UI.Controllers
     return code
 
 
+def ensure_meta(cs_path: str):
+    meta_path = cs_path + ".meta"
+    if not os.path.exists(meta_path):
+        guid = uuid.uuid4().hex
+        meta_content = (
+            "fileFormatVersion: 2\n"
+            f"guid: {guid}\n"
+            "MonoImporter:\n"
+            "  externalObjects: {}\n"
+            "  serializedVersion: 2\n"
+            "  defaultReferences: []\n"
+            "  executionOrder: 0\n"
+            "  icon: {instanceID: 0}\n"
+            "  userData: \n"
+            "  assetBundleName: \n"
+            "  assetBundleVariant: \n"
+        )
+        with open(meta_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(meta_content)
+
+
 def scaffold_screen(screen_name: str, dump_path: str = DUMP_PATH, out_dir: str = OUTPUT_DIR) -> str:
     """
     Executa o pipeline completo para gerar o controller de uma tela:
@@ -275,6 +302,7 @@ def scaffold_screen(screen_name: str, dump_path: str = DUMP_PATH, out_dir: str =
     os.makedirs(BINDINGS_DIR, exist_ok=True)
     with open(binding_file_path, "w", encoding="utf-8", newline="\r\n") as f:
         f.write(generated_binding_csharp)
+    ensure_meta(binding_file_path)
     print(f"[{screen_name}] Binding gravada: {binding_file_path}")
 
     uxml_name = screen_name.lower().replace("ui", "")
@@ -296,6 +324,7 @@ def scaffold_screen(screen_name: str, dump_path: str = DUMP_PATH, out_dir: str =
     ctrl_file_path = os.path.join(out_dir, f"{ctrl_name}.cs")
     with open(ctrl_file_path, "w", encoding="utf-8", newline="\r\n") as f:
         f.write(ctrl_code)
+    ensure_meta(ctrl_file_path)
 
     print(f"[{screen_name}] Controller gravado: {ctrl_file_path}")
     return ctrl_file_path
