@@ -70,7 +70,7 @@ public partial class WebGLProbe : MonoBehaviour
     GeneratedServerSelectionBinding _serverSelectionBinding;
     ServerSelectionController _serverSelectionController;
     CharacterSelectionController _charSelectionController;
-    CharacterHeaderController _charHeaderController;
+    CharacterHeaderController _characterHeaderController;
     GeneratedCharacterSelectionBinding _charSelectionBinding;
     GeneratedCharacterHeaderBinding _charHeaderBinding;
     GeneratedCharacterInformationsBinding _charInfoBinding;
