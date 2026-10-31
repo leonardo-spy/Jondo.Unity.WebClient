@@ -1,0 +1,46 @@
+﻿=== TEMPLATE: ServerLine ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #ctr_line  [NaNxNaN @ 0,0] Flex
+    - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+        - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+          - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+        - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "FZEZEFEFZEFZZF"
+        - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+          - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+    - DofusVisualElement #ctr_serverLine  [NaNxNaN @ 0,0] Flex
+      - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #ctr_mainLine  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_name  [NaNxNaN @ 0,0] Flex
+          - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+          - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "Aventure de zéro (52636868)"
+        - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] Flex
+          - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+          - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+            - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+          - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+        - DofusVisualElement #ctr_type  [NaNxNaN @ 0,0] Flex
+          - Tag #tag_mainType  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "CLASSIQUE MONOCOMPTE"
+              - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+        - DofusVisualElement #ctr_friendsContainer  [NaNxNaN @ 0,0] Flex
+          - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+            - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "1111"
+        - DofusVisualElement #ctr_comu  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #asset_commu  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #ctr_shadows  [NaNxNaN @ 0,0] Flex
+      - VisualElement #ctr_border  [NaNxNaN @ 0,0] Flex

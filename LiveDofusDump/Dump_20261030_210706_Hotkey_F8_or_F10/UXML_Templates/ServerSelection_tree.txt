@@ -1,0 +1,600 @@
+﻿=== TEMPLATE: ServerSelection ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - DofusVisualElement #ctr_serverSelection  [NaNxNaN @ 0,0] Flex
+    - VisualElement #ctr_header  [NaNxNaN @ 0,0] Flex
+      - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:BorderBgHeader]
+        - VisualElement #ctr_tabSection  [NaNxNaN @ 0,0] Flex
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:slideCornerBgHeader]
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:slideCenterBgHeader@2x]
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:slideCornerBgHeader]
+          - DofusVisualElement #m_tabs  [NaNxNaN @ 0,0] Flex
+            - DofusTab #tab_pioneer  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "PIONNIER (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_pioneer_mono  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "PIONNIER MONOCOMPTE (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_classic  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "CLASSIQUE (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_classic_mono  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "CLASSIQUE MONOCOMPTE (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_epic  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "ÉPIQUE (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_tournament  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "TOURNOIS (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+            - DofusTab #tab_temporis  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #tab_container  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #tab_label  [NaNxNaN @ 0,0] Flex "TEMPORIS (X/5)"
+                - DofusVisualElement #tab_asset  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #tab_asset_asset  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #tab_icon  [NaNxNaN @ 0,0] None
+                  - DofusIcon #tab_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - ShortcutFigs #tab_CTALine  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #CTALine_controls  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #CTALine_label  [NaNxNaN @ 0,0] None
+                - DofusVisualElement #tab_indicatorCircle  [NaNxNaN @ 0,0] None
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:BorderBgHeader]
+      - DofusLabel #lbl_title  [NaNxNaN @ 0,0] Flex "[CHOIX DU SERVEUR DE JEU]"
+      - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_search  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #ctr_line  [NaNxNaN @ 0,0] Flex
+            - TextInput #inp_search  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #textInput_content  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #textInput_iconLeft  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_text  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #textInput_placeholder  [NaNxNaN @ 0,0] Flex "[Rechercher un ami...]"
+                  - DofusTextFieldCustom #textInput_userText  [NaNxNaN @ 0,0] None
+                    - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                      - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_iconRight  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconRight_Vector  [NaNxNaN @ 0,0] Flex
+                - DofusButtonCustom #textInput_button  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                      - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:crossShadowOutline]
+              - DofusVisualElement #textInput_infos  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_errorMessage  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_counter  [NaNxNaN @ 0,0] Flex "0/0"
+            - DofusButtonCustom #btn_search  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:magnifierShadowOutline]
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusButtonCustom #btn_friends  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+          - DofusLabel #lbl_errorSearch  [NaNxNaN @ 0,0] None "Erreur: uihdeuidzededeErreur: uihdeuidzededeErreur: uihdeuidzedede"
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - VisualElement #ctr_searchResult  [NaNxNaN @ 0,0] None
+            - ListView #gd_searchResults  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_searchFooter  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_searchResultsCount  [NaNxNaN @ 0,0] Flex "[Résultats : xxxx]"
+      - DofusVisualElement #ctr_force  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_freeAccount  [NaNxNaN @ 0,0] None
+          - DofusLabel #lbl_accountName  [NaNxNaN @ 0,0] Flex "[pseudo du perso]"
+          - DofusButtonCustom #btn_freeAccount  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[FREE ACCOUNT]"
+        - DofusVisualElement #ctr_forceAccount  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #ctr_forceInput  [NaNxNaN @ 0,0] Flex
+            - TextInput #inp_force  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #textInput_content  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #textInput_iconLeft  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_text  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #textInput_placeholder  [NaNxNaN @ 0,0] Flex
+                  - DofusTextFieldCustom #textInput_userText  [NaNxNaN @ 0,0] None
+                    - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                      - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_iconRight  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconRight_Vector  [NaNxNaN @ 0,0] Flex
+                - DofusButtonCustom #textInput_button  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                      - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:crossShadowOutline]
+              - DofusVisualElement #textInput_infos  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_errorMessage  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_counter  [NaNxNaN @ 0,0] Flex "0/0"
+            - DofusButtonCustom #btn_force  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:unlockShadowOutline]
+          - DofusLabel #lbl_errorForce  [NaNxNaN @ 0,0] None "[test error]"
+      - VisualElement #ctr_mode  [NaNxNaN @ 0,0] Flex
+        - DofusToggleButtonGroupCustom #tgGroup_mode  [NaNxNaN @ 0,0] Flex
+          - DofusToggleButtonCustom #tg_carousel  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:menuVerticalShadowOutline]
+          - DofusToggleButtonCustom #tg_list  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:menuShadowOutline]
+      - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_warning  [NaNxNaN @ 0,0] Flex
+          - DofusIcon #icon_warning  [NaNxNaN @ 0,0] Flex [bg:triangleWarningShadowOutline]
+          - DofusLabel #lbl_warning  [NaNxNaN @ 0,0] Flex "[Nous n'avons pas pu récupérer les information de personnages, connectez vous sur le serveur pour voir vos personnages]"
+    - VisualElement #VisualElement  [NaNxNaN @ 0,0] Flex
+      - VisualElement #ctr_listMode  [NaNxNaN @ 0,0] None
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:bkgList]
+        - DofusVisualElement #ctr_list  [NaNxNaN @ 0,0] Flex
+          - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #ctr_content  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #ctr_columns  [NaNxNaN @ 0,0] Flex
+                - TableColumnHeader #head_name  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #tableColumnHeader_label  [NaNxNaN @ 0,0] Flex "[Nom]"
+                  - VisualElement #tableColumnHeader_iconLeft  [NaNxNaN @ 0,0] None
+                    - DofusIcon #tableColumnHeader_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #tableColumnHeader_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #tableColumnHeader_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - TableColumnHeader #head_character  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #tableColumnHeader_label  [NaNxNaN @ 0,0] Flex "[Personnages]"
+                  - VisualElement #tableColumnHeader_iconLeft  [NaNxNaN @ 0,0] None
+                    - DofusIcon #tableColumnHeader_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #tableColumnHeader_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #tableColumnHeader_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - TableColumnHeader #head_type  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #tableColumnHeader_label  [NaNxNaN @ 0,0] Flex "[Type]"
+                  - VisualElement #tableColumnHeader_iconLeft  [NaNxNaN @ 0,0] None
+                    - DofusIcon #tableColumnHeader_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #tableColumnHeader_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #tableColumnHeader_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - TableColumnHeader #head_friends  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #tableColumnHeader_label  [NaNxNaN @ 0,0] Flex "[Amis]"
+                  - VisualElement #tableColumnHeader_iconLeft  [NaNxNaN @ 0,0] None
+                    - DofusIcon #tableColumnHeader_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #tableColumnHeader_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #tableColumnHeader_icon_Vector  [NaNxNaN @ 0,0] Flex
+                - TableColumnHeader #head_community  [NaNxNaN @ 0,0] None
+                  - DofusLabel #tableColumnHeader_label  [NaNxNaN @ 0,0] Flex "[zz]"
+                  - VisualElement #tableColumnHeader_iconLeft  [NaNxNaN @ 0,0] None
+                    - DofusIcon #tableColumnHeader_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #tableColumnHeader_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #tableColumnHeader_icon_Vector  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #ctr_list  [NaNxNaN @ 0,0] Flex
+                - ListView #lv_server  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_filter  [NaNxNaN @ 0,0] None
+          - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #icon_left  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+            - ScrollView #sv_filter  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #ctr_filterContent  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #icon_right  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+      - VisualElement #ctr_carouselMode  [NaNxNaN @ 0,0] None
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - ServerCard #serverCard_0  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_1  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_2  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_3  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_4  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_5  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+          - ServerCard #serverCard_6  [NaNxNaN @ 0,0] Flex
+            - VisualElement #ctr_serverCard  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardClickableArea  [NaNxNaN @ 0,0] Flex
+              - VisualElement #ctr_cardBackground  [NaNxNaN @ 0,0] Flex
+                - VisualElement #serverCard  [NaNxNaN @ 0,0] Flex
+                - VisualElement #img  [NaNxNaN @ 0,0] Flex [bg:default]
+                - VisualElement #shadow  [NaNxNaN @ 0,0] Flex [bg:innerShadowCard]
+              - VisualElement #ctr_serverTitle  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ctr_background  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #title_bg  [NaNxNaN @ 0,0] Flex [bg:containTitleBg]
+                  - VisualElement #title_bg2  [NaNxNaN @ 0,0] Flex [bg:containTitle]
+                  - VisualElement #gemStone  [NaNxNaN @ 0,0] Flex [bg:gemBackground]
+                - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[DRACONIROS]"
+                - Tag #tag  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[CLASSIQUE MONOCOMPTE]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                - Tag #tag_recommended  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #tag_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #tag_asset  [NaNxNaN @ 0,0] None
+                    - DofusVisualElement #tag_iconLeft  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+                    - DofusLabel #tag_label  [NaNxNaN @ 0,0] Flex "[RECOMMENDED]"
+                    - DofusVisualElement #tag_iconRight  [NaNxNaN @ 0,0] None
+                      - DofusIcon #tag_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:diamondFillShadowOutline]
+              - VisualElement #ctr_infoServer  [NaNxNaN @ 0,0] Flex [bg:containInfoServer]
+                - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #icon_status  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+                  - DofusLabel #lbl_characters  [NaNxNaN @ 0,0] Flex "[Personnages (32)]"
+                  - VisualElement #ctr_friends  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #icon_friends  [NaNxNaN @ 0,0] Flex [bg:partyShadowOutline]
+                    - DofusLabel #lbl_friends  [NaNxNaN @ 0,0] Flex "255"
+                - DofusVisualElement #ctr_character  [NaNxNaN @ 0,0] None
+                  - DofusButtonCustom #btn_left  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+                  - DofusVisualElement #ctr_characterScroll  [NaNxNaN @ 0,0] Flex
+                    - ScrollView #sv_character  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #ctr_characterContent  [NaNxNaN @ 0,0] Flex
+                  - DofusButtonCustom #btn_right  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                        - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+                - VisualElement #ctr_newCharacter  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:plusShadowOutline]
+                  - DofusLabel #lbl_newCharacter  [NaNxNaN @ 0,0] Flex "[Nouveau personnage]"
+        - VisualElement #btn_moveLeft  [NaNxNaN @ 0,0] Flex
+          - VisualElement #carousel_arrow  [NaNxNaN @ 0,0] Flex
+        - VisualElement #btn_moveRight  [NaNxNaN @ 0,0] Flex
+          - VisualElement #carousel_arrow  [NaNxNaN @ 0,0] Flex
+      - PlayButton #btn_play  [NaNxNaN @ 0,0] Flex
+        - VisualElement #playButton_container  [NaNxNaN @ 0,0] Flex
+          - VisualElement #playButton_background  [NaNxNaN @ 0,0] Flex [bg:defaultBackgoundButton]
+          - VisualElement #playButton_border  [NaNxNaN @ 0,0] Flex [bg:defaultBorderButton]
+          - VisualElement #playButton_shadowEffect  [NaNxNaN @ 0,0] Flex [bg:defaultShadowEffect]
+          - VisualElement #playButton_shadowEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverShadowEffect]
+          - VisualElement #playButton_shadowEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedShadowEffect]
+          - VisualElement #playButton_lightEffect  [NaNxNaN @ 0,0] Flex [bg:defaultLightEffect]
+          - VisualElement #playButton_lightEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverLightEffect]
+          - VisualElement #playButton_lightEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedLightEffect]
+          - VisualElement #playButton_gems  [NaNxNaN @ 0,0] Flex [bg:defaultGems]
+          - DofusLabel #playButton_label  [NaNxNaN @ 0,0] Flex "[PLAYBUTTON] ]"
+      - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+        - CheckboxCustom #cb_onlyCharacter  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #checkboxLine_checkbox  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #checkbox_background  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #checkbox_icon  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #checkbox_icon_Vector  [NaNxNaN @ 0,0] None
+          - DofusLabel #checkboxLine_labelRight  [NaNxNaN @ 0,0] Flex "[Afficher uniquement mes personnages]"
+      - DofusLabel #lbl_noServer  [NaNxNaN @ 0,0] None "[Aucun serveur à afficher]"

@@ -1,0 +1,23 @@
+﻿=== TEMPLATE: gameMenu ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+    - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #ctr_bg  [NaNxNaN @ 0,0] Flex
+        - DofusButtonCustom #btn_bug  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:bugShadowOutline]
+        - DofusButtonCustom #btn_abo  [NaNxNaN @ 0,0] None
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:ticketShadowOutline]
+        - DofusButtonCustom #btn_options  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:cogShadowOutline]
+        - DofusButtonCustom #btn_menu  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:shutDownShadowOutline]
+    - Label #fps  [NaNxNaN @ 0,0] None
+    - Label #time  [NaNxNaN @ 0,0] None

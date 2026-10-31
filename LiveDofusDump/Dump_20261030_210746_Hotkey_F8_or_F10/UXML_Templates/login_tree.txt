@@ -1,0 +1,34 @@
+﻿=== TEMPLATE: login ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #login  [NaNxNaN @ 0,0] Flex
+    - VisualElement #ctr_gradient  [NaNxNaN @ 0,0] Flex [bg:gradientWhiteVerticalRectangle]
+      - DofusVisualElement #tx_dofusLogo  [NaNxNaN @ 0,0] Flex [bg:logoDofus]
+      - VisualElement #ctr_error  [NaNxNaN @ 0,0] None
+        - VisualElement #ctr_message  [NaNxNaN @ 0,0] Flex
+          - DofusLabel #lbl_message  [NaNxNaN @ 0,0] Flex "reoipgjre  eoreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgrjgoregprejg porejgreoipgjre gejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgorejgjrepogjrepogjreojg eorjgoregprejg porejgrjgoreoipgjre  eoreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgrjgoregprejg porejgreoipgjre gejg porejgreoipgjre pogrek prepgojrepogjrepogjreojg eorjgoregprejg porejgorejgjrepogjrepogjreojg eorjgoregprejg porejgrjgoregprejg porejgregprejg porejg"
+      - VisualElement #ctr_login  [NaNxNaN @ 0,0] Flex
+        - VisualElement #VisualElement  [NaNxNaN @ 0,0] Flex
+          - PlayButton #btn_play  [NaNxNaN @ 0,0] Flex
+            - VisualElement #playButton_container  [NaNxNaN @ 0,0] Flex
+              - VisualElement #playButton_background  [NaNxNaN @ 0,0] Flex [bg:defaultBackgoundButton]
+              - VisualElement #playButton_border  [NaNxNaN @ 0,0] Flex [bg:defaultBorderButton]
+              - VisualElement #playButton_shadowEffect  [NaNxNaN @ 0,0] Flex [bg:defaultShadowEffect]
+              - VisualElement #playButton_shadowEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverShadowEffect]
+              - VisualElement #playButton_shadowEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedShadowEffect]
+              - VisualElement #playButton_lightEffect  [NaNxNaN @ 0,0] Flex [bg:defaultLightEffect]
+              - VisualElement #playButton_lightEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverLightEffect]
+              - VisualElement #playButton_lightEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedLightEffect]
+              - VisualElement #playButton_gems  [NaNxNaN @ 0,0] Flex [bg:defaultGems]
+              - DofusLabel #playButton_label  [NaNxNaN @ 0,0] Flex "[PLAYBUTTON] ]"
+        - VisualElement #ctr_portSelection  [NaNxNaN @ 0,0] Flex
+          - Dropdown #dd_host  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #dropdown_dropdown  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #dropdown_content  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #dropdown_caption  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #dropdown_captionLabel  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #dropdown_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #dropdown_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:worldShadowOutline]
+                - DofusVisualElement #dropdown_choice  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #dropdown_choiceLabel  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #dropdown_chevron  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #dropdown_chevron_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronBottomShadowOutline]

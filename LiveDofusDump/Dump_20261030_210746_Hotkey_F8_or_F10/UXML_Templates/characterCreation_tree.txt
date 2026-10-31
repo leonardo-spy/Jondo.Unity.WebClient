@@ -1,0 +1,480 @@
+﻿=== TEMPLATE: characterCreation ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+    - VisualElement #tx_illuBg  [NaNxNaN @ 0,0] None [bg:CharacterCreationBackground]
+    - VisualElement #stars  [NaNxNaN @ 0,0] None
+      - DofusTweenerVisualElement #flashStar1  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationStar]
+      - DofusTweenerVisualElement #rotateStar1  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRotateStar]
+      - DofusTweenerVisualElement #flashStar2  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationStar]
+      - DofusTweenerVisualElement #flashStar3  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationStar]
+      - DofusTweenerVisualElement #rotateStar2  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRotateStar]
+    - VisualElement #fogs  [NaNxNaN @ 0,0] None
+      - DofusTweenerVisualElement #fogGray  [NaNxNaN @ 0,0] Flex [bg:GreyFog]
+      - DofusTweenerVisualElement #fogPurple  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationPurpleFog]
+    - VisualElement #ctr_creationUi  [NaNxNaN @ 0,0] Flex
+      - VisualElement #rightPart  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #bloc_customization  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_shadow  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_background  [NaNxNaN @ 0,0] Flex
+          - Switch #switch_gender  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #switchLine_labelLeft  [NaNxNaN @ 0,0] None
+            - DofusVisualElement #switchLine_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #switchLine_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:femaleGenderShadowOutline]
+            - DofusVisualElement #switchLine_switch  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #switch_background  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #switch_circle  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #switchLine_labelRight  [NaNxNaN @ 0,0] None
+            - DofusVisualElement #switchLine_iconRight  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #switchLine_iconRight_Vector  [NaNxNaN @ 0,0] Flex [bg:maleGenderShadowOutline]
+          - DofusLabel #lbl_corps  [NaNxNaN @ 0,0] None "[corps]"
+          - DofusVisualElement #ctr_corps  [NaNxNaN @ 0,0] None
+            - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemSlot_container  [NaNxNaN @ 0,0] Flex
+            - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemSlot_container  [NaNxNaN @ 0,0] Flex
+            - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemSlot_container  [NaNxNaN @ 0,0] Flex
+            - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemSlot_container  [NaNxNaN @ 0,0] Flex
+          - DofusLabel #lbl_visage  [NaNxNaN @ 0,0] Flex "[visage]"
+          - ScrollView #sv_heads  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #ctr_heads  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+          - Divider #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #divider_dividerContainer  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_lineLeft  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_diamondContainer  [NaNxNaN @ 0,0] None
+                - DofusIcon #divider_diamond  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_lineRight  [NaNxNaN @ 0,0] None
+            - DofusLabel #divider_text  [NaNxNaN @ 0,0] None
+          - DofusVisualElement #ctr_colors  [NaNxNaN @ 0,0] Flex
+            - VisualElement #VisualElement  [NaNxNaN @ 0,0] Flex
+              - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - VisualElement #ColorPalette  [NaNxNaN @ 0,0] Flex [bg:ColorPalette]
+                  - VisualElement #color_1  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #color_2  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #color_3  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #color_4  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #color_5  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #color_6  [NaNxNaN @ 0,0] Flex [bg:colorPieChart]
+                  - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:ColorPalette]
+              - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - DofusButtonCustom #btn_randomizeColorSet  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                      - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                - DofusButtonCustom #btn_resetColorSet  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                      - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorSkin  [NaNxNaN @ 0,0] Flex "[Peau]"
+              - ColorPickerField #colorPicker_skin  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorHair  [NaNxNaN @ 0,0] Flex "[Cheveux]"
+              - ColorPickerField #colorPicker_hair  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorCloth1  [NaNxNaN @ 0,0] Flex "[Vêtements 1]"
+              - ColorPickerField #colorPicker_cloth1  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorCloth2  [NaNxNaN @ 0,0] Flex "[Vêtements 2]"
+              - ColorPickerField #colorPicker_cloth2  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorCloth3  [NaNxNaN @ 0,0] Flex "[Vêtements 3]"
+              - ColorPickerField #colorPicker_cloth3  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusVisualElement #ctr_colorable  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_colorCloth4  [NaNxNaN @ 0,0] Flex "[Vêtements 4]"
+              - ColorPickerField #colorPicker_cloth4  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #colorPickerField_content  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #colorPickerField_color  [NaNxNaN @ 0,0] Flex
+                  - VisualElement #colorPickerField_ctrText  [NaNxNaN @ 0,0] Flex
+                    - DofusLabel #colorPickerField_startText  [NaNxNaN @ 0,0] Flex "#"
+                    - DofusTextFieldCustom #colorPickerField_textField  [NaNxNaN @ 0,0] Flex
+                      - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                        - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex "000000"
+                  - DofusVisualElement #colorPickerField_CTA  [NaNxNaN @ 0,0] Flex
+                    - DofusButtonCustom #colorPickerField_buttonEdit  [NaNxNaN @ 0,0] Flex
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+                    - DofusButtonCustom #colorPickerField_buttonReset  [NaNxNaN @ 0,0] None
+                      - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                        - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                          - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+        - DofusVisualElement #bloc_attitude  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_shadow  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_background  [NaNxNaN @ 0,0] Flex
+          - DofusLabel #lbl_attitudes  [NaNxNaN @ 0,0] Flex "[corps]"
+          - DofusVisualElement #ctr_attitudes  [NaNxNaN @ 0,0] Flex
+            - VisualElement #btn_emote1  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+            - VisualElement #btn_emote2  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+            - VisualElement #btn_emote3  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+            - VisualElement #btn_emote4  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+            - VisualElement #btn_emote5  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+            - VisualElement #btn_emote6  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_emote  [NaNxNaN @ 0,0] Flex [bg:emoteHappy]
+              - DofusIcon #icon_play  [NaNxNaN @ 0,0] Flex [bg:playShadowOutline]
+          - DofusLabel #lbl_stuffs  [NaNxNaN @ 0,0] Flex " [Stuffs]"
+          - DofusVisualElement #ctr_stuffs  [NaNxNaN @ 0,0] Flex
+            - VisualElement #btn_stuff1  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_stuff1  [NaNxNaN @ 0,0] Flex
+            - VisualElement #btn_stuff2  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_stuff2  [NaNxNaN @ 0,0] Flex
+            - VisualElement #btn_stuff3  [NaNxNaN @ 0,0] Flex
+              - VisualElement #tx_stuff3  [NaNxNaN @ 0,0] Flex
+      - VisualElement #middlePart  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #btn_previous  [NaNxNaN @ 0,0] Flex [bg:chevronLeftShadowOutline]
+            - VisualElement #tx_breedSymbol  [NaNxNaN @ 0,0] Flex [bg:449]
+            - DofusIcon #btn_next  [NaNxNaN @ 0,0] Flex [bg:chevronRightShadowOutline]
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_breed  [NaNxNaN @ 0,0] Flex "[ENIRIPSA]"
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #icon_complexity_1  [NaNxNaN @ 0,0] Flex [bg:starFilledShadowOutline]
+            - DofusIcon #icon_complexity_2  [NaNxNaN @ 0,0] Flex [bg:starFilledShadowOutline]
+            - DofusIcon #icon_complexity_3  [NaNxNaN @ 0,0] Flex [bg:starFilledShadowOutline]
+            - DofusIcon #icon_complexity_4  [NaNxNaN @ 0,0] Flex [bg:starFilledShadowOutline]
+            - DofusIcon #icon_complexity_5  [NaNxNaN @ 0,0] Flex [bg:starFilledShadowOutline]
+        - VisualElement #VisualElement  [NaNxNaN @ 0,0] Flex
+          - VisualElement #VisualElement  [NaNxNaN @ 0,0] Flex
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - VisualElement #glowPlatformBase  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationGlowPlatform]
+              - DofusTweenerVisualElement #glowPlatformHightlight  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationGlowPlatform]
+              - VisualElement #plateform  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationPlateform]
+              - GravityTweener #floatRockRight  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockRight]
+              - GravityTweener #floatRockLittleRight  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockLittleRight]
+              - GravityTweener #floatRockLeft  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockLeft]
+              - GravityTweener #floatRockTopRight  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockTopRight]
+              - GravityTweener #floatRockTopRight_2  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockTopRight]
+              - GravityTweener #floatRockLittleRight_2  [NaNxNaN @ 0,0] Flex [bg:CharacterCreationRockLittleRight]
+            - EntityDisplayer #ed_chara  [NaNxNaN @ 0,0] Flex
+          - DofusIcon #btn_rotateLeft  [NaNxNaN @ 0,0] Flex [bg:rotationArrowUpShadowOutline]
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #btn_rotateRight  [NaNxNaN @ 0,0] Flex [bg:rotationArrowUpShadowOutline]
+          - DofusToggleButtonCustom #tg_showEquipment  [NaNxNaN @ 0,0] None
+            - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:capeShadowOutline]
+        - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_shadow  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_background  [NaNxNaN @ 0,0] Flex
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_playerNameTitle  [NaNxNaN @ 0,0] Flex "[Nom de personnage]"
+            - DofusIcon #icon_nameInfo  [NaNxNaN @ 0,0] Flex [bg:infoShadowOutline]
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - TextInput #input_name  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #textInput_content  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #textInput_iconLeft  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_text  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #textInput_placeholder  [NaNxNaN @ 0,0] Flex
+                  - DofusTextFieldCustom #textInput_userText  [NaNxNaN @ 0,0] None
+                    - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                      - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - VisualElement #textInput_iconRight  [NaNxNaN @ 0,0] None
+                  - DofusIcon #textInput_iconRight_Vector  [NaNxNaN @ 0,0] Flex
+                - DofusButtonCustom #textInput_button  [NaNxNaN @ 0,0] None
+                  - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                    - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                      - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:crossShadowOutline]
+              - DofusVisualElement #textInput_infos  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_errorMessage  [NaNxNaN @ 0,0] None
+                - DofusLabel #textInput_counter  [NaNxNaN @ 0,0] Flex "0/0"
+            - DofusButtonCustom #btn_generateName  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:randomShadowOutline]
+          - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - PlayButton #btn_play  [NaNxNaN @ 0,0] Flex
+              - VisualElement #playButton_container  [NaNxNaN @ 0,0] Flex
+                - VisualElement #playButton_background  [NaNxNaN @ 0,0] Flex [bg:defaultBackgoundButton]
+                - VisualElement #playButton_border  [NaNxNaN @ 0,0] Flex [bg:defaultBorderButton]
+                - VisualElement #playButton_shadowEffect  [NaNxNaN @ 0,0] Flex [bg:defaultShadowEffect]
+                - VisualElement #playButton_shadowEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverShadowEffect]
+                - VisualElement #playButton_shadowEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedShadowEffect]
+                - VisualElement #playButton_lightEffect  [NaNxNaN @ 0,0] Flex [bg:defaultLightEffect]
+                - VisualElement #playButton_lightEffectHover  [NaNxNaN @ 0,0] Flex [bg:hoverLightEffect]
+                - VisualElement #playButton_lightEffectPressed  [NaNxNaN @ 0,0] Flex [bg:pressedLightEffect]
+                - VisualElement #playButton_gems  [NaNxNaN @ 0,0] Flex [bg:defaultGems]
+                - DofusLabel #playButton_label  [NaNxNaN @ 0,0] Flex "[PLAYBUTTON] ]"
+      - VisualElement #leftPart  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #bloc_breeds  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_shadow  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_background  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #parentChangeServer  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusButtonCustom #btn_back  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:arrowBigLeftShadowOutline]
+              - DofusVisualElement #ctr_headerTextTop  [NaNxNaN @ 0,0] Flex
+                - DofusLabel #lbl_serverName  [NaNxNaN @ 0,0] Flex "[JIVA]"
+                - DofusLabel #lbl_title  [NaNxNaN @ 0,0] Flex "[MES PERSONNAGES]"
+            - DropdownButton #dd_servers  [NaNxNaN @ 0,0] Flex
+              - DofusButtonCustom #button  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                  - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[CHANGER DE SERVEUR]"
+              - IconDropdown #dropdownIcon  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #dropdown_dropdown  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #dropdown_chevron  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #dropdown_chevron_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronBottomShadowOutline]
+          - Divider #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #divider_dividerContainer  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_lineLeft  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_diamondContainer  [NaNxNaN @ 0,0] None
+                - DofusIcon #divider_diamond  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #divider_lineRight  [NaNxNaN @ 0,0] None
+            - DofusLabel #divider_text  [NaNxNaN @ 0,0] None
+          - DofusVisualElement #breedsParent  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_breedTitle  [NaNxNaN @ 0,0] Flex "[Classes]"
+            - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+              - DofusToggleButtonCustom #tg_role_damageDealer  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:weaponShadowOutline]
+              - DofusToggleButtonCustom #tg_role_healer  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:healShadowOutline]
+              - DofusToggleButtonCustom #tg_role_summoner  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:gobbalShadowOutline]
+              - DofusToggleButtonCustom #tg_role_prositioner  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:areaCrossShadowOutline]
+              - DofusToggleButtonCustom #tg_role_protector  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:shieldShadowOutline]
+              - DofusToggleButtonCustom #tg_role_debuffer  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:chainsShadowOutline]
+              - DofusToggleButtonCustom #tg_role_buffer  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:arrowTripleTopShadowOutline]
+              - DofusToggleButtonCustom #tg_role_tank  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+                    - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:armorShadowOutline]
+            - DofusVisualElement #ctr_breeds  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+              - Slot #btn_randomBreed  [NaNxNaN @ 0,0] Flex
+                - Tile #itemSlot_itemTile  [NaNxNaN @ 0,0] Flex
+                  - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_helpToChoose  [NaNxNaN @ 0,0] None "[M'aider à choiser une classe]"
+        - DofusVisualElement #bloc_archetype  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_shadow  [NaNxNaN @ 0,0] Flex
+          - VisualElement #window_background  [NaNxNaN @ 0,0] Flex
+          - DofusLabel #lbl_archetype  [NaNxNaN @ 0,0] Flex "[Guérrisseur]"
+          - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:turnStartDeco]
+            - DofusIcon #icon_role_1  [NaNxNaN @ 0,0] Flex [bg:heartShadowOutline]
+            - DofusIcon #icon_role_2  [NaNxNaN @ 0,0] Flex [bg:heartShadowOutline]
+            - DofusIcon #icon_role_3  [NaNxNaN @ 0,0] Flex [bg:heartShadowOutline]
+            - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:turnStartDeco]
+          - ScrollView #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_breedInfo  [NaNxNaN @ 0,0] Flex "[Les Eniripsas sont des guérisseurs qui soignent d'un simple Mot. Ils utilisent le pouvoir de la parole pour soulager les souffrances de leurs alliés, mais parfois aussi pour blesser leurs ennemis. Certains Eniripsas sont même devenus de véritables arpenteurs du verbe, des rôdeurs des langues oubliées.]\n"
+          - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - Tile #spellSlot_1  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - Tile #spellSlot_2  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - Tile #spellSlot_3  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - Tile #spellSlot_4  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+            - Tile #spellSlot_5  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #itemTile_container  [NaNxNaN @ 0,0] Flex
+          - DofusButtonCustom #btn_showSpells  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[VOIR TOUS LES SORTS]"
+          - DofusButtonCustom #btn_mechanics  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[MÉCANIQUES DE CLASSE]"
+      - WindowFigma #window_spells  [NaNxNaN @ 0,0] None
+        - VisualElement #ctr_spells  [NaNxNaN @ 0,0] Flex
+      - WindowFigma #window_mechanics  [NaNxNaN @ 0,0] None
+        - VisualElement #ctr_mechanics  [NaNxNaN @ 0,0] Flex
+    - DofusVisualElement #btnLeave  [NaNxNaN @ 0,0] None
+      - DofusButtonCustom #btn_leaveModif  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:leaveShadowOutline]
+          - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[ANNULER]"

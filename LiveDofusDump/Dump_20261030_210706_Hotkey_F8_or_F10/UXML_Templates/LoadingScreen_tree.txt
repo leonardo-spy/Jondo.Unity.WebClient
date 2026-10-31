@@ -1,0 +1,15 @@
+﻿=== TEMPLATE: LoadingScreen ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #loadingScreenRoot  [NaNxNaN @ 0,0] Flex
+    - VisualElement #centerForBackground  [NaNxNaN @ 0,0] Flex
+      - VisualElement #backgroundArea  [NaNxNaN @ 0,0] Flex
+        - VisualElement #backgroundDefault  [NaNxNaN @ 0,0] Flex [bg:splashscreenBG]
+        - VisualElement #logBackground  [NaNxNaN @ 0,0] None [bg:loading_tx_bg_log]
+    - VisualElement #centerForScreenEdgeAnchors  [NaNxNaN @ 0,0] Flex
+      - VisualElement #backgroundSimulation  [NaNxNaN @ 0,0] Flex
+        - VisualElement #logArea  [NaNxNaN @ 0,0] None
+          - TextField #logField  [NaNxNaN @ 0,0] Flex
+            - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+              - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+                - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+        - VisualElement #logAreaSpacerWhenHidden  [NaNxNaN @ 0,0] Flex

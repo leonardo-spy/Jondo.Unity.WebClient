@@ -1,0 +1,41 @@
+﻿=== TEMPLATE: SliderOptionElement ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - DofusVisualElement #ctr_sliderOptionElement  [NaNxNaN @ 0,0] Flex
+    - DofusVisualElement #ctr_container  [NaNxNaN @ 0,0] Flex
+      - DofusLabel #lbl_optionText  [NaNxNaN @ 0,0] Flex "Ceci est un test"
+      - DofusVisualElement #slider  [NaNxNaN @ 0,0] Flex
+        - TextInput #txt_value  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #textInput_content  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #textInput_iconLeft  [NaNxNaN @ 0,0] None
+              - DofusIcon #textInput_iconLeft_Vector  [NaNxNaN @ 0,0] Flex
+            - VisualElement #textInput_text  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #textInput_placeholder  [NaNxNaN @ 0,0] Flex
+              - DofusTextFieldCustom #textInput_userText  [NaNxNaN @ 0,0] None
+                - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                  - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - VisualElement #textInput_iconRight  [NaNxNaN @ 0,0] None
+              - DofusIcon #textInput_iconRight_Vector  [NaNxNaN @ 0,0] Flex
+            - DofusButtonCustom #textInput_button  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:crossShadowOutline]
+          - DofusVisualElement #textInput_infos  [NaNxNaN @ 0,0] None
+            - DofusLabel #textInput_errorMessage  [NaNxNaN @ 0,0] None
+            - DofusLabel #textInput_counter  [NaNxNaN @ 0,0] Flex "0/0"
+        - ExtendedProgressBarInt #pb_volume  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #gaugeStandard_fillContainer  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #gaugeStandard_fill  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #gaugeStandard_fill_shadow  [NaNxNaN @ 0,0] Flex
+            - VisualElement #old_progress  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #gaugeStandard_handleContainer  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #gaugeStandard_handle  [NaNxNaN @ 0,0] Flex [bg:circleShadowOutline]
+        - DofusToggleButtonCustom #tgl_mute  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #toggle_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #toggle_icon  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #toggle_icon_Vector  [NaNxNaN @ 0,0] Flex [bg:loudspeakerOnShadowOutline]
+      - DofusButtonCustom #btn_description  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronBottomShadowOutline]
+    - DofusVisualElement #ctr_optionDescription  [NaNxNaN @ 0,0] Flex
+      - DofusLabel #lbl_labelDescription  [NaNxNaN @ 0,0] Flex "La banque permet de déposer des objets dans un coffre commun aux banques de tous vos personnages sur un même serveur. Votre personnage doit être de niveau 10 minimum pour pouvoir accéder à son coffre de banque."

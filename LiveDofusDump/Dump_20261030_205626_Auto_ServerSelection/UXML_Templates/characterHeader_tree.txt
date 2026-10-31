@@ -1,0 +1,23 @@
+﻿=== TEMPLATE: characterHeader ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - VisualElement #CharacterHeader_Container  [NaNxNaN @ 0,0] Flex
+    - DofusVisualElement #left  [NaNxNaN @ 0,0] Flex
+      - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex [bg:gradientOpacity]
+      - DofusVisualElement #ctr_player  [NaNxNaN @ 0,0] Flex
+        - DofusIcon #icon_character  [NaNxNaN @ 0,0] Flex [bg:playerShadowOutline]
+        - VisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - DofusLabel #lbl_name  [NaNxNaN @ 0,0] Flex "[NomDuJoueurLong]"
+          - DofusLabel #lbl_tag  [NaNxNaN @ 0,0] Flex "[#3067]"
+      - DofusVisualElement #ctr_subscription  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - DofusIcon #icon_subscription  [NaNxNaN @ 0,0] Flex [bg:ticketShadowOutline]
+          - DofusLabel #lbl_subscription  [NaNxNaN @ 0,0] Flex "[Abonné jusqu’au 11 Nov. 2024]"
+        - DofusButtonCustom #btn_subscribe  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:externalShadowOutline]
+            - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[GÉRER L’ABONNEMENT]"
+      - DofusVisualElement #ctr_admin  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+          - DofusIcon #icon_admin  [NaNxNaN @ 0,0] Flex [bg:ankamaShadowOutline]
+          - DofusLabel #lbl_admin  [NaNxNaN @ 0,0] Flex "ADMIN"

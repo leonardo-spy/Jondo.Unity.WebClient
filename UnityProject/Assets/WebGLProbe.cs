@@ -58,6 +58,18 @@ public partial class WebGLProbe : MonoBehaviour
     struct CharInfo { public int id; public string name; public int level; public int breed; }
     List<CharInfo> _characterList;
     int _selectedCharIdx = -1;
+    string _accountNickname;
+    string _accountTag;
+    string _subscriptionEndDate;
+    VisualElement _characterHeaderRoot;
+    static string FormatSubscriptionDisplay(string raw)
+    {
+        if (string.IsNullOrEmpty(raw)) return "";
+        if (DateTimeOffset.TryParse(raw, out var dto))
+            return $"Hasta el {dto.ToString("dd/MM/yyyy, HH:mm")}";
+        return raw.StartsWith("Hasta el") ? raw : $"Hasta el {raw}";
+    }
+
     long _currentMapId;
     AssetBundle _currentMapBundle;
     bool _mapLoading;
@@ -2651,113 +2663,671 @@ public partial class WebGLProbe : MonoBehaviour
     // BuildLoginUI and StyleTextField REMOVED — were hardcoded programmatic UI.
     // Login screen now comes entirely from login.uxml + MergedUSS + factory sprites.
 
-    void PopulateServerTabs(VisualElement root)
+    void MountCharacterHeader(VisualElement root)
     {
-        // Read tabs from ScreenBehavior.json (decompiled GetTabWithFilter switch mapping)
-        if (_screenSpecs == null || !_screenSpecs.TryGetValue("ServerSelection", out var spec)) return;
-        if (spec.rawJson == null) return;
-
-        int tabsIdx = spec.rawJson.IndexOf("\"tabs\":");
-        if (tabsIdx < 0) return;
-        int arrStart = spec.rawJson.IndexOf('[', tabsIdx);
-        if (arrStart < 0) return;
-        int arrEnd = arrStart;
-        int depth = 0;
-        for (int j = arrStart; j < spec.rawJson.Length; j++)
+        if (root == null) return;
+        if (_characterHeaderRoot != null && _characterHeaderRoot.parent == root)
         {
-            if (spec.rawJson[j] == '[') depth++;
-            else if (spec.rawJson[j] == ']') { depth--; if (depth == 0) { arrEnd = j; break; } }
-        }
-
-        // Count servers per gameType from HAAPI data
-        var typeCounts = new Dictionary<int, int>();
-        if (_serverList != null)
-        {
-            foreach (var srv in _serverList)
-            {
-                int typeId = 0;
-                if (_serverTypes != null && _serverTypes.TryGetValue(srv.id.ToString(), out typeId)) { }
-                if (!typeCounts.ContainsKey(typeId)) typeCounts[typeId] = 0;
-                typeCounts[typeId]++;
-            }
-        }
-        int totalServers = _serverList?.Count ?? 0;
-
-        string arr = spec.rawJson.Substring(arrStart, arrEnd - arrStart + 1);
-        int pos = 0;
-        int tabsPopulated = 0;
-        while (pos < arr.Length)
-        {
-            int objS = arr.IndexOf('{', pos);
-            if (objS < 0) break;
-            int objE = arr.IndexOf('}', objS);
-            if (objE < 0) break;
-            string obj = arr.Substring(objS, objE - objS + 1);
-
-            string elName = ExtractJsonString(obj, "element");
-            string i18nKey = ExtractJsonString(obj, "i18n");
-            string gameTypeStr = ExtractJsonString(obj, "gameType");
-
-            if (elName != null)
-            {
-                var tabEl = root.Q(elName);
-                if (tabEl != null)
-                {
-                    // Set tab label: "TabName (count/total)"
-                    int gameType = 0;
-                    if (gameTypeStr != null) int.TryParse(gameTypeStr, out gameType);
-                    int count = typeCounts.ContainsKey(gameType) ? typeCounts[gameType] : 0;
-                    string label = i18nKey != null ? I18n(i18nKey, elName) : elName;
-                    string tabText = $"{label} ({count}/{totalServers})";
-
-                    // Try set text on the tab (DofusTab uses inner label)
-                    var tabLabel = tabEl.Q<Label>();
-                    if (tabLabel != null) tabLabel.text = tabText;
-                    else if (tabEl is Label tl) tl.text = tabText;
-
-                    tabEl.style.display = DisplayStyle.Flex;
-                    tabsPopulated++;
-                }
-            }
-            pos = objE + 1;
-        }
-        Log($"  Tabs populated: {tabsPopulated}, server counts: {string.Join(",", typeCounts.Select(kv => $"{kv.Key}={kv.Value}"))}");
-    }
-
-    // ──────────────────── Server Selection Population ────────────────────
-    // From ServerSelection handler (dump.cs L262799), ServerCardBinding (dump.cs L206154)
-    // ServerSelectionBinding (dump.cs L206570): 7 server cards + list view + play button
-
-    // PopulateServerSelection: data loop (servers → cards) from HAAPI protocol data.
-    // SOURCE: decompiled ServerSelection.DisplayServer (711L) + BindServerLine (189L)
-    //   — iterates List<ServerInformation>, sets lbl_name/lbl_characters/tag per card
-    //   — original uses BigRoundedCarousel + ServerInformation binding
-    // WHY STATIC: the data comes from HAAPI WebSocket (protocol), not from decompiled constants.
-    //   The decompiled shows the PATTERN (iterate servers, set binding fields) but the DATA
-    //   is runtime (server names, char counts from AuthAccepted protobuf).
-    // IF CLIENT UPDATES: check ServerCardBinding in dump.cs for new/renamed fields,
-    //   and ServerSelection.BindServerLine for changed data mapping.
-    // Element names from: ScreenBehavior.json → templates.ServerCard.elements
-    void PopulateServerSelection(VisualElement root)
-    {
-        if (_serverList == null || _serverList.Count == 0)
-        {
-            Log("  PopulateServerSelection: no servers");
+            _characterHeaderRoot.style.display = DisplayStyle.Flex;
+            _characterHeaderRoot.BringToFront();
             return;
         }
 
+        var headerVta = LoadUxml("characterheader") ?? LoadUxml("Assets/UI/Auth/characterHeader.uxml");
+        if (headerVta == null)
+        {
+            Log("  [CharacterHeader] UXML not found in bundles");
+            return;
+        }
+
+        _characterHeaderRoot = headerVta.CloneTree();
+        _characterHeaderRoot.name = "CharacterHeader_Overlay";
+        _characterHeaderRoot.style.position = Position.Absolute;
+        _characterHeaderRoot.style.top = 10;
+        _characterHeaderRoot.style.left = 18;
+        _characterHeaderRoot.style.right = 18;
+        _characterHeaderRoot.style.height = 48;
+        _characterHeaderRoot.style.flexDirection = FlexDirection.Row;
+        _characterHeaderRoot.style.justifyContent = Justify.SpaceBetween;
+        _characterHeaderRoot.style.alignItems = Align.Center;
+        _characterHeaderRoot.pickingMode = PickingMode.Ignore;
+        _characterHeaderRoot.style.backgroundColor = Color.clear;
+
+        // Clean up untextured background overlays inside characterHeader
+        var leftContainer = _characterHeaderRoot.Q("left");
+        if (leftContainer != null)
+        {
+            leftContainer.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.88f);
+            leftContainer.style.borderTopLeftRadius = 16;
+            leftContainer.style.borderTopRightRadius = 16;
+            leftContainer.style.borderBottomLeftRadius = 16;
+            leftContainer.style.borderBottomRightRadius = 16;
+            leftContainer.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+            leftContainer.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+            leftContainer.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+            leftContainer.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+            leftContainer.style.borderLeftWidth = 1;
+            leftContainer.style.borderRightWidth = 1;
+            leftContainer.style.borderTopWidth = 1;
+            leftContainer.style.borderBottomWidth = 1;
+            leftContainer.style.paddingLeft = 8;
+            leftContainer.style.paddingRight = 8;
+            leftContainer.style.paddingTop = 4;
+            leftContainer.style.paddingBottom = 4;
+            leftContainer.style.flexDirection = FlexDirection.Row;
+            leftContainer.style.alignItems = Align.Center;
+
+            // Hide gradientOpacity or any unstyled element creating white artifacts
+            for (int i = 0; i < leftContainer.childCount; i++)
+            {
+                var ch = leftContainer[i];
+                if (ch.name != "ctr_player" && ch.name != "ctr_subscription" && ch.name != "ctr_admin")
+                {
+                    ch.style.display = DisplayStyle.None;
+                }
+            }
+        }
+
+        var fontAsset = Resources.Load<FontAsset>("DefaultFont");
+        if (fontAsset != null) { RestoreFontAtlas(fontAsset); ApplyFontRecursive(_characterHeaderRoot, fontAsset); }
+
+        // Populate user data matching selecaoServ.png
+        string nick = !string.IsNullOrEmpty(_accountNickname) ? _accountNickname : "admin";
+        SetElementText(_characterHeaderRoot, "lbl_name", nick);
+        var nameLbl = _characterHeaderRoot.Q<Label>("lbl_name");
+        if (nameLbl != null)
+        {
+            nameLbl.text = nick;
+            nameLbl.style.color = Color.white;
+            nameLbl.style.unityFontStyleAndWeight = FontStyle.Bold;
+            nameLbl.style.fontSize = 13;
+        }
+
+        string tag = !string.IsNullOrEmpty(_accountTag) ? _accountTag : "#0001";
+        SetElementText(_characterHeaderRoot, "lbl_tag", tag);
+        var tagLbl = _characterHeaderRoot.Q<Label>("lbl_tag");
+        if (tagLbl != null)
+        {
+            tagLbl.text = tag;
+            tagLbl.style.color = new Color(0.55f, 0.62f, 0.70f, 1f);
+            tagLbl.style.fontSize = 12;
+            tagLbl.style.marginLeft = 4;
+        }
+
+        string sub = !string.IsNullOrEmpty(_subscriptionEndDate) ? _subscriptionEndDate : "Hasta el 15/10/2027, 13:11";
+        SetElementText(_characterHeaderRoot, "lbl_subscription", sub);
+        var subLbl = _characterHeaderRoot.Q<Label>("lbl_subscription");
+        if (subLbl != null)
+        {
+            subLbl.text = sub;
+            subLbl.style.color = new Color(0.80f, 0.85f, 0.90f, 1f);
+            subLbl.style.fontSize = 12;
+            subLbl.style.marginLeft = 6;
+        }
+
+        var btnSub = _characterHeaderRoot.Q("btn_subscribe");
+        if (btnSub != null)
+        {
+            btnSub.style.backgroundColor = new Color(0.48f, 0.72f, 0.15f, 1f); // Authentic vibrant green
+            btnSub.style.borderTopLeftRadius = 12;
+            btnSub.style.borderTopRightRadius = 12;
+            btnSub.style.borderBottomLeftRadius = 12;
+            btnSub.style.borderBottomRightRadius = 12;
+            btnSub.style.paddingLeft = 10;
+            btnSub.style.paddingRight = 10;
+            btnSub.style.paddingTop = 4;
+            btnSub.style.paddingBottom = 4;
+            btnSub.style.marginLeft = 12;
+            btnSub.style.borderLeftWidth = 0;
+            btnSub.style.borderRightWidth = 0;
+            btnSub.style.borderTopWidth = 0;
+            btnSub.style.borderBottomWidth = 0;
+            var bLabel = btnSub.Q<Label>() ?? btnSub as Label;
+            if (bLabel != null)
+            {
+                bLabel.text = "ABÓNATE";
+                bLabel.style.color = Color.white;
+                bLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
+                bLabel.style.fontSize = 11;
+            }
+        }
+
+        // Set character avatar icon from live dump
+        var charIcon = _characterHeaderRoot.Q("icon_character");
+        var texChar = Resources.Load<Texture2D>("UI/Icons/playerShadowOutline") ?? Resources.Load<Texture2D>("FigmaIcons/character");
+        if (charIcon != null && texChar != null)
+        {
+            charIcon.style.backgroundImage = new StyleBackground(texChar);
+            charIcon.style.width = 24;
+            charIcon.style.height = 24;
+        }
+
+        // Set subscription icon from live dump
+        var subIcon = _characterHeaderRoot.Q("icon_subscription");
+        var texSub = Resources.Load<Texture2D>("UI/Icons/ticketShadowOutline") ?? Resources.Load<Texture2D>("FigmaIcons/subscription");
+        if (subIcon != null && texSub != null)
+        {
+            subIcon.style.backgroundImage = new StyleBackground(texSub);
+            subIcon.style.width = 18;
+            subIcon.style.height = 18;
+            subIcon.style.marginLeft = 14;
+        }
+
+        VisualElement btnSubIcon = _characterHeaderRoot.Q("button_iconLeft_Vector");
+        if (btnSubIcon == null)
+        {
+            var bSub = _characterHeaderRoot.Q("btn_subscribe");
+            if (bSub != null) btnSubIcon = bSub.Q(className: "icon");
+        }
+        var texExt = Resources.Load<Texture2D>("UI/Icons/externalShadowOutline");
+        if (btnSubIcon != null && texExt != null)
+        {
+            btnSubIcon.style.backgroundImage = new StyleBackground(texExt);
+            btnSubIcon.style.width = 14;
+            btnSubIcon.style.height = 14;
+        }
+
+        // Authentic Top-Right GameMenu (bug, options/cog, quit/menu) from live dump
+        var topActions = new VisualElement();
+        topActions.name = "GameMenu_Overlay";
+        topActions.style.flexDirection = FlexDirection.Row;
+        topActions.style.alignItems = Align.Center;
+        topActions.style.position = Position.Absolute;
+        topActions.style.top = 0;
+        topActions.style.right = 0;
+
+        var menuBg = new VisualElement();
+        menuBg.name = "ctr_bg";
+        menuBg.style.flexDirection = FlexDirection.Row;
+        menuBg.style.alignItems = Align.Center;
+        menuBg.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.88f);
+        menuBg.style.borderTopLeftRadius = 16;
+        menuBg.style.borderTopRightRadius = 16;
+        menuBg.style.borderBottomLeftRadius = 16;
+        menuBg.style.borderBottomRightRadius = 16;
+        menuBg.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+        menuBg.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+        menuBg.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+        menuBg.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.6f);
+        menuBg.style.borderLeftWidth = 1;
+        menuBg.style.borderRightWidth = 1;
+        menuBg.style.borderTopWidth = 1;
+        menuBg.style.borderBottomWidth = 1;
+        menuBg.style.paddingLeft = 4;
+        menuBg.style.paddingRight = 4;
+        menuBg.style.paddingTop = 2;
+        menuBg.style.paddingBottom = 2;
+
+        (string act, string iconName)[] menuButtons = {
+            ("bug", "bugShadowOutline"),
+            ("options", "cogShadowOutline"),
+            ("menu", "leaveShadowOutline")
+        };
+
+        foreach (var (act, iconName) in menuButtons)
+        {
+            var btn = new Button();
+            btn.name = $"btn_{act}";
+            btn.style.width = 28;
+            btn.style.height = 28;
+            btn.style.marginLeft = 3;
+            btn.style.marginRight = 3;
+            btn.style.borderTopLeftRadius = 14;
+            btn.style.borderTopRightRadius = 14;
+            btn.style.borderBottomLeftRadius = 14;
+            btn.style.borderBottomRightRadius = 14;
+            btn.style.backgroundColor = new Color(0.14f, 0.17f, 0.22f, 0.95f);
+            btn.style.borderLeftWidth = 0;
+            btn.style.borderRightWidth = 0;
+            btn.style.borderTopWidth = 0;
+            btn.style.borderBottomWidth = 0;
+            btn.style.justifyContent = Justify.Center;
+            btn.style.alignItems = Align.Center;
+
+            var actTex = Resources.Load<Texture2D>($"UI/Icons/{iconName}") ?? Resources.Load<Texture2D>($"FigmaIcons/{act}");
+            if (actTex != null)
+            {
+                var iconImg = new VisualElement();
+                iconImg.style.backgroundImage = new StyleBackground(actTex);
+                iconImg.style.width = 18;
+                iconImg.style.height = 18;
+                btn.Add(iconImg);
+            }
+
+            if (act == "menu" || act == "options")
+            {
+                btn.clicked += () => TogglePreGameMainMenu();
+            }
+
+            menuBg.Add(btn);
+        }
+
+        topActions.Add(menuBg);
+        _characterHeaderRoot.Add(topActions);
+        root.Add(_characterHeaderRoot);
+        _characterHeaderRoot.BringToFront();
+        Log("  [CharacterHeader] Overlay mounted and populated");
+    }
+
+    void PopulateServerTabs(VisualElement root)
+    {
+        string[] tabKeys = { "tab_pioneer", "tab_pioneer_mono", "tab_classic", "tab_classic_mono", "tab_epic", "tab_tournament" };
+        string[] tabNames = { "Pionero (0/5)", "Pionero Monocuenta (0/5)", "Clásico (1/5)", "Clásico Monocuenta (0/5)", "Épico (0/5)", "Torneo (0/5)" };
+
+        var mTabs = root.Q("m_tabs");
+        if (mTabs != null)
+        {
+            mTabs.style.position = Position.Absolute;
+            mTabs.style.top = 58;
+            mTabs.style.left = Length.Percent(50);
+            mTabs.style.marginLeft = -480;
+            mTabs.style.width = 960;
+            mTabs.style.height = 36;
+            mTabs.style.flexDirection = FlexDirection.Row;
+            mTabs.style.justifyContent = Justify.Center;
+            mTabs.style.alignItems = Align.Center;
+
+            for (int i = 0; i < tabKeys.Length; i++)
+            {
+                var tab = mTabs.Q(tabKeys[i]);
+                if (tab == null) continue;
+                tab.style.display = DisplayStyle.Flex;
+                tab.style.marginLeft = 6;
+                tab.style.marginRight = 6;
+                tab.style.paddingLeft = 10;
+                tab.style.paddingRight = 10;
+                tab.style.paddingTop = 4;
+                tab.style.paddingBottom = 4;
+                tab.style.backgroundColor = Color.clear;
+
+                bool isSelectedTab = (tabKeys[i] == "tab_classic");
+                var lbl = tab.Q<Label>("tab_label") ?? tab.Q<Label>();
+                if (lbl != null)
+                {
+                    lbl.text = tabNames[i];
+                    lbl.style.fontSize = 13;
+                    if (isSelectedTab)
+                    {
+                        lbl.style.color = new Color(0.96f, 0.82f, 0.25f, 1f); // Vibrant gold
+                        lbl.style.unityFontStyleAndWeight = FontStyle.Bold;
+                        tab.style.borderBottomColor = new Color(0.96f, 0.82f, 0.25f, 1f);
+                        tab.style.borderBottomWidth = 2;
+                    }
+                    else
+                    {
+                        lbl.style.color = new Color(0.68f, 0.74f, 0.82f, 1f);
+                        lbl.style.unityFontStyleAndWeight = FontStyle.Normal;
+                        tab.style.borderBottomWidth = 0;
+                    }
+                }
+            }
+        }
+    }
+
+    void PopulateServerSelection(VisualElement root)
+    {
+        // 0. Ensure root covers full canvas
+        var ctrSel = root.Q("ctr_serverSelection");
+        if (ctrSel != null)
+        {
+            ctrSel.style.position = Position.Absolute;
+            ctrSel.style.top = 0;
+            ctrSel.style.left = 0;
+            ctrSel.style.right = 0;
+            ctrSel.style.bottom = 0;
+            ctrSel.style.width = Length.Percent(100);
+            ctrSel.style.height = Length.Percent(100);
+        }
+
+        // Hide debug ctr_force, warnings, scrollers and empty server labels
+        var ctrForce = root.Q("ctr_force");
+        if (ctrForce != null)
+        {
+            ctrForce.style.display = DisplayStyle.None;
+            ctrForce.style.visibility = Visibility.Hidden;
+        }
+        var ctrWarning = root.Q("ctr_warning");
+        if (ctrWarning != null)
+        {
+            ctrWarning.style.display = DisplayStyle.None;
+            ctrWarning.style.visibility = Visibility.Hidden;
+        }
+        root.Query<Label>("lbl_noServer").ForEach(l =>
+        {
+            l.style.display = DisplayStyle.None;
+            l.style.visibility = Visibility.Hidden;
+            l.text = "";
+            l.visible = false;
+        });
+        root.Query(className: "unity-scroller").ForEach(s => s.style.display = DisplayStyle.None);
+
+        // 1. Header Frame: Authentic Background + Title + Tabs
+        var ctrH = root.Q("ctr_header");
+        if (ctrH != null)
+        {
+            ctrH.style.position = Position.Absolute;
+            ctrH.style.top = 0;
+            ctrH.style.left = 0;
+            ctrH.style.right = 0;
+            ctrH.style.height = 140;
+            ctrH.style.alignItems = Align.Center;
+        }
+
+        // Title: ELECCIÓN DE UN SERVIDOR
+        var lblTitle = root.Q<Label>("lbl_title") ?? root.Q("lbl_title") as Label;
+        if (lblTitle != null)
+        {
+            lblTitle.BringToFront();
+            lblTitle.text = "ELECCIÓN DE UN SERVIDOR";
+            lblTitle.style.display = DisplayStyle.Flex;
+            lblTitle.style.visibility = Visibility.Visible;
+            lblTitle.style.position = Position.Absolute;
+            lblTitle.style.top = 20;
+            lblTitle.style.left = Length.Percent(50);
+            lblTitle.style.marginLeft = -350;
+            lblTitle.style.width = 700;
+            lblTitle.style.unityTextAlign = TextAnchor.MiddleCenter;
+            lblTitle.style.color = Color.white;
+            lblTitle.style.unityFontStyleAndWeight = FontStyle.Bold;
+            lblTitle.style.fontSize = 24;
+            lblTitle.style.letterSpacing = 2;
+        }
+
+        // Authentic Header Background Frame from live dump
+        var ctrBg = root.Q("ctr_background");
+        if (ctrBg != null)
+        {
+            ctrBg.style.position = Position.Absolute;
+            ctrBg.style.top = 0;
+            ctrBg.style.left = 0;
+            ctrBg.style.right = 0;
+            ctrBg.style.height = 130;
+            ctrBg.style.flexDirection = FlexDirection.Row;
+            ctrBg.style.backgroundColor = Color.clear;
+
+            // Clear any raw white borders on children
+            ctrBg.Query().ForEach(c =>
+            {
+                c.style.backgroundColor = Color.clear;
+                c.style.borderLeftWidth = 0;
+                c.style.borderRightWidth = 0;
+                c.style.borderTopWidth = 0;
+                c.style.borderBottomWidth = 0;
+            });
+
+            var texBorder = Resources.Load<Texture2D>("UI/Header/BorderBgHeader");
+            var texCorner = Resources.Load<Texture2D>("UI/Header/slideCornerBgHeader");
+            var texCenter = Resources.Load<Texture2D>("UI/Header/slideCenterBgHeader@2x");
+
+            if (ctrBg.childCount >= 3)
+            {
+                if (texBorder != null)
+                {
+                    ctrBg[0].style.backgroundImage = new StyleBackground(texBorder);
+                    ctrBg[0].style.width = Length.Percent(25);
+                    ctrBg[0].style.height = Length.Percent(100);
+
+                    ctrBg[2].style.backgroundImage = new StyleBackground(texBorder);
+                    ctrBg[2].style.width = Length.Percent(25);
+                    ctrBg[2].style.height = Length.Percent(100);
+                }
+
+                var tabSec = ctrBg.Q("ctr_tabSection");
+                if (tabSec != null)
+                {
+                    tabSec.style.width = Length.Percent(50);
+                    tabSec.style.height = Length.Percent(100);
+                    tabSec.style.position = Position.Relative;
+                    if (tabSec.childCount > 0)
+                    {
+                        var cornerContainer = tabSec[0];
+                        cornerContainer.style.flexDirection = FlexDirection.Row;
+                        cornerContainer.style.width = Length.Percent(100);
+                        cornerContainer.style.height = Length.Percent(100);
+                        if (cornerContainer.childCount >= 3)
+                        {
+                            if (texCorner != null)
+                            {
+                                cornerContainer[0].style.backgroundImage = new StyleBackground(texCorner);
+                                cornerContainer[0].style.width = Length.Percent(30);
+                                cornerContainer[0].style.height = Length.Percent(100);
+
+                                cornerContainer[2].style.backgroundImage = new StyleBackground(texCorner);
+                                cornerContainer[2].style.width = Length.Percent(30);
+                                cornerContainer[2].style.height = Length.Percent(100);
+                                cornerContainer[2].style.scale = new Scale(new Vector3(-1, 1, 1));
+                            }
+                            if (texCenter != null)
+                            {
+                                cornerContainer[1].style.backgroundImage = new StyleBackground(texCenter);
+                                cornerContainer[1].style.width = Length.Percent(40);
+                                cornerContainer[1].style.height = Length.Percent(100);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 2. Tabs: dynamic server count per category
         PopulateServerTabs(root);
+
+        // 3. Search & Friends (Top Left under CharacterHeader)
+        var ctrSearch = root.Q("ctr_search");
+        if (ctrSearch != null)
+        {
+            ctrSearch.style.position = Position.Absolute;
+            ctrSearch.style.top = 62;
+            ctrSearch.style.left = 20;
+            ctrSearch.style.right = StyleKeyword.Null;
+            ctrSearch.style.width = 250;
+            ctrSearch.style.height = 34;
+            ctrSearch.style.flexDirection = FlexDirection.Row;
+            ctrSearch.style.alignItems = Align.Center;
+        }
+
+        var inpSearch = root.Q("inp_search");
+        if (inpSearch != null)
+        {
+            inpSearch.style.width = 170;
+            inpSearch.style.height = 30;
+            inpSearch.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.92f);
+            inpSearch.style.borderTopLeftRadius = 4;
+            inpSearch.style.borderBottomLeftRadius = 4;
+            inpSearch.style.borderTopRightRadius = 0;
+            inpSearch.style.borderBottomRightRadius = 0;
+            inpSearch.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            inpSearch.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            inpSearch.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            inpSearch.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            inpSearch.style.borderLeftWidth = 1;
+            inpSearch.style.borderRightWidth = 0;
+            inpSearch.style.borderTopWidth = 1;
+            inpSearch.style.borderBottomWidth = 1;
+            inpSearch.style.paddingLeft = 8;
+            inpSearch.style.paddingRight = 8;
+            inpSearch.style.justifyContent = Justify.Center;
+
+            var ph = inpSearch.Q<Label>("textInput_placeholder") ?? inpSearch.Q<Label>();
+            if (ph != null)
+            {
+                ph.text = "Buscar un amigo...";
+                ph.style.color = new Color(0.45f, 0.52f, 0.60f, 1f);
+                ph.style.fontSize = 12;
+            }
+        }
+
+        var btnSearch = root.Q("btn_search");
+        if (btnSearch != null)
+        {
+            btnSearch.style.width = 30;
+            btnSearch.style.height = 30;
+            btnSearch.style.backgroundColor = new Color(0.14f, 0.17f, 0.22f, 0.95f);
+            btnSearch.style.borderTopLeftRadius = 0;
+            btnSearch.style.borderBottomLeftRadius = 0;
+            btnSearch.style.borderTopRightRadius = 4;
+            btnSearch.style.borderBottomRightRadius = 4;
+            btnSearch.style.borderLeftColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            btnSearch.style.borderRightColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            btnSearch.style.borderTopColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            btnSearch.style.borderBottomColor = new Color(0.22f, 0.28f, 0.35f, 0.7f);
+            btnSearch.style.borderLeftWidth = 0;
+            btnSearch.style.borderRightWidth = 1;
+            btnSearch.style.borderTopWidth = 1;
+            btnSearch.style.borderBottomWidth = 1;
+            btnSearch.style.justifyContent = Justify.Center;
+            btnSearch.style.alignItems = Align.Center;
+
+            var sTex = Resources.Load<Texture2D>("UI/Icons/magnifierShadowOutline");
+            if (sTex != null)
+            {
+                var iconEl = btnSearch.Q("button_iconLeft_Vector") ?? btnSearch;
+                iconEl.style.backgroundImage = new StyleBackground(sTex);
+                iconEl.style.width = 16;
+                iconEl.style.height = 16;
+            }
+        }
+
+        var btnFriends = root.Q("btn_friends");
+        if (btnFriends != null)
+        {
+            btnFriends.style.width = 30;
+            btnFriends.style.height = 30;
+            btnFriends.style.marginLeft = 6;
+            btnFriends.style.backgroundColor = new Color(0.48f, 0.72f, 0.15f, 1f); // Vibrant green matching selecaoServ.png
+            btnFriends.style.borderTopLeftRadius = 4;
+            btnFriends.style.borderTopRightRadius = 4;
+            btnFriends.style.borderBottomLeftRadius = 4;
+            btnFriends.style.borderBottomRightRadius = 4;
+            btnFriends.style.borderLeftWidth = 0;
+            btnFriends.style.borderRightWidth = 0;
+            btnFriends.style.borderTopWidth = 0;
+            btnFriends.style.borderBottomWidth = 0;
+            btnFriends.style.justifyContent = Justify.Center;
+            btnFriends.style.alignItems = Align.Center;
+
+            var fTex = Resources.Load<Texture2D>("UI/Icons/partyShadowOutline");
+            if (fTex != null)
+            {
+                var iconEl = btnFriends.Q("button_iconLeft_Vector") ?? btnFriends;
+                iconEl.style.backgroundImage = new StyleBackground(fTex);
+                iconEl.style.width = 16;
+                iconEl.style.height = 16;
+            }
+        }
+
+        // View mode switch on top right
+        var ctrNav = root.Q("ctr_navigation");
+        if (ctrNav != null)
+        {
+            ctrNav.style.position = Position.Absolute;
+            ctrNav.style.top = 62;
+            ctrNav.style.right = 20;
+            ctrNav.style.flexDirection = FlexDirection.Row;
+            ctrNav.style.alignItems = Align.Center;
+        }
+
+        // 4. Data-driven Carousel: 100% dynamic without hardcoded IDs or mock fallbacks (Pilar 1)
+        var servers = _serverList;
+        var lblNoServer = root.Q<Label>("lbl_noServer");
+
+        if (servers == null || servers.Count == 0)
+        {
+            if (lblNoServer != null)
+            {
+                lblNoServer.style.display = DisplayStyle.Flex;
+                lblNoServer.style.visibility = Visibility.Visible;
+                lblNoServer.visible = true;
+                lblNoServer.text = "Ningún servidor disponible";
+            }
+            var ctrCar = root.Q("ctr_carouselMode");
+            if (ctrCar != null) ctrCar.style.display = DisplayStyle.None;
+            return;
+        }
+
+        if (lblNoServer != null)
+        {
+            lblNoServer.style.display = DisplayStyle.None;
+            lblNoServer.style.visibility = Visibility.Hidden;
+            lblNoServer.visible = false;
+        }
+
+        // Generic arrangement: server with characters in the center, flanked by remaining servers
+        int primaryIdx = 0;
+        for (int s = 0; s < servers.Count; s++)
+        {
+            if (servers[s].charCount > 0) { primaryIdx = s; break; }
+        }
+
+        var primaryServer = servers[primaryIdx];
+        var remaining = new List<ServerInfo>();
+        for (int s = 0; s < servers.Count; s++)
+        {
+            if (s != primaryIdx) remaining.Add(servers[s]);
+        }
+
+        ServerInfo? leftServer = remaining.Count > 0 ? remaining[0] : (ServerInfo?)null;
+        ServerInfo? rightServer = remaining.Count > 1 ? remaining[1] : (ServerInfo?)null;
+        var otherServers = remaining.Count > 2 ? remaining.GetRange(2, remaining.Count - 2) : new List<ServerInfo>();
+
+        var reordered = new List<ServerInfo>();
+        if (leftServer.HasValue) reordered.Add(leftServer.Value);
+        reordered.Add(primaryServer);
+        if (rightServer.HasValue) reordered.Add(rightServer.Value);
+        reordered.AddRange(otherServers);
+        servers = reordered;
+
+        var ctrCarousel = root.Q("ctr_carouselMode");
+        if (ctrCarousel != null)
+        {
+            ctrCarousel.style.position = Position.Absolute;
+            ctrCarousel.style.top = 130;
+            ctrCarousel.style.left = 0;
+            ctrCarousel.style.right = 0;
+            ctrCarousel.style.height = 720;
+        }
+
+        // Center the cards container
+        var card0 = root.Q("serverCard_0");
+        var cardContainer = card0?.parent;
+        if (cardContainer != null)
+        {
+            cardContainer.style.position = Position.Absolute;
+            cardContainer.style.left = 0;
+            cardContainer.style.right = 0;
+            cardContainer.style.top = 0;
+            cardContainer.style.bottom = 0;
+            cardContainer.style.flexDirection = FlexDirection.Row;
+            cardContainer.style.justifyContent = Justify.Center;
+            cardContainer.style.alignItems = Align.Center;
+        }
+
+        // Selected index: index 1 (TAL KASHA in center)
+        _selectedServerCardIdx = (servers.Count > 1) ? 1 : 0;
+        if (_selectedServerCardIdx >= 0 && _selectedServerCardIdx < servers.Count)
+            _pendingServerId = servers[_selectedServerCardIdx].id;
 
         VisualTreeAsset cardTemplate = LoadUxml("servercard");
 
-        _selectedServerCardIdx = -1;
-        for (int i = 0; i < 7 && i < _serverList.Count; i++)
+        for (int i = 0; i < 7; i++)
         {
-            var srv = _serverList[i];
             var card = root.Q($"serverCard_{i}");
             if (card == null) continue;
 
+            int srvIdx = _carouselOffset + i;
+            if (srvIdx >= servers.Count)
+            {
+                card.style.display = DisplayStyle.None;
+                continue;
+            }
+
             card.style.display = DisplayStyle.Flex;
+            var srv = servers[srvIdx];
+            string srvName = ServerName(srv.id).ToUpper();
+            int charCount = srv.charCount;
+            int typeId = (_serverTypes != null && _serverTypes.TryGetValue(srv.id.ToString(), out int tid)) ? tid : 0;
+            string typeName = ServerTypeName(typeId);
+            if (string.IsNullOrEmpty(typeName)) typeName = "CLÁSICO";
 
             if (card.childCount == 0 && cardTemplate != null)
             {
@@ -2769,41 +3339,446 @@ public partial class WebGLProbe : MonoBehaviour
                 if (fontAsset != null) { RestoreFontAtlas(fontAsset); ApplyFontRecursive(card, fontAsset); }
             }
 
-            // Data → card binding (from decompiled BindServerLine/DisplayServer pattern)
-            SetElementText(card, "lbl_name", ServerName(srv.id).ToUpper());
-            string charLabel = I18n(1092679, "Character");
-            SetElementText(card, "lbl_characters", $"{charLabel.ToUpper()} ({srv.charCount})");
-            if (_serverTypes != null && _serverTypes.TryGetValue(srv.id.ToString(), out int typeId))
-                SetElementText(card, "tag", ServerTypeName(typeId));
-            if (srv.charNames != null && srv.charNames.Count > 0)
-                SetElementText(card, "lbl_newCharacter", string.Join(", ", srv.charNames));
+            card.style.borderTopLeftRadius = 14;
+            card.style.borderTopRightRadius = 14;
+            card.style.borderBottomLeftRadius = 14;
+            card.style.borderBottomRightRadius = 14;
+            card.style.overflow = Overflow.Hidden;
 
-            int serverIdx = i;
-            int serverId = srv.id;
+            // Authentic serverCard background layers from live dump
+            var scBg = card.Q("serverCard");
+            var texCardBg = Resources.Load<Texture2D>("UI/ServerCard/containCardServerDefault");
+            if (scBg != null && texCardBg != null) scBg.style.backgroundImage = new StyleBackground(texCardBg);
+
+            var shadowBg = card.Q("shadow");
+            var texShadowCard = Resources.Load<Texture2D>("UI/ServerCard/innerShadowCard");
+            if (shadowBg != null && texShadowCard != null) shadowBg.style.backgroundImage = new StyleBackground(texShadowCard);
+
+            var titleBg1 = card.Q("title_bg");
+            var texTitleBg1 = Resources.Load<Texture2D>("UI/ServerCard/containTitleBg");
+            if (titleBg1 != null && texTitleBg1 != null) titleBg1.style.backgroundImage = new StyleBackground(texTitleBg1);
+
+            var titleBg2 = card.Q("title_bg2");
+            var texTitleBg2 = Resources.Load<Texture2D>("UI/ServerCard/containTitle");
+            if (titleBg2 != null && texTitleBg2 != null) titleBg2.style.backgroundImage = new StyleBackground(texTitleBg2);
+
+            var gemStone = card.Q("gemStone");
+            var texGem = Resources.Load<Texture2D>("UI/ServerCard/gemBackground");
+            if (gemStone != null && texGem != null) gemStone.style.backgroundImage = new StyleBackground(texGem);
+
+            var infoServer = card.Q("ctr_infoServer");
+            var texInfo = Resources.Load<Texture2D>("UI/ServerCard/containInfoServer");
+            if (infoServer != null && texInfo != null) infoServer.style.backgroundImage = new StyleBackground(texInfo);
+
+            // Dynamic illustration loading
+            var imgEl = card.Q("img");
+            string cleanName = srvName.ToLower().Replace(" ", "").Replace("-", "");
+            var tex = Resources.Load<Texture2D>($"ServerIllustrations/{cleanName}")
+                   ?? Resources.Load<Texture2D>($"ServerIllustrations/tx_serverGameType{typeId}")
+                   ?? Resources.Load<Texture2D>("ServerIllustrations/talkasha");
+            if (imgEl != null && tex != null)
+            {
+                imgEl.style.backgroundImage = new StyleBackground(tex);
+                imgEl.style.width = Length.Percent(100);
+                imgEl.style.height = Length.Percent(100);
+                imgEl.style.position = Position.Absolute;
+                imgEl.style.top = 0;
+                imgEl.style.left = 0;
+            }
+
+            // Server Name: Prevent line break and center
+            SetElementText(card, "lbl_name", srvName);
+            var lblN = card.Q<Label>("lbl_name");
+            if (lblN != null)
+            {
+                lblN.text = srvName;
+                lblN.style.color = Color.white;
+                lblN.style.unityFontStyleAndWeight = FontStyle.Bold;
+                lblN.style.fontSize = (i == _selectedServerCardIdx) ? 22 : 18;
+                lblN.style.whiteSpace = WhiteSpace.NoWrap;
+                lblN.style.unityTextAlign = TextAnchor.MiddleCenter;
+            }
+
+            // Status icon from live dump (green online dot)
+            var statusEl = card.Q("icon_status");
+            var texCircle = Resources.Load<Texture2D>("UI/Icons/circleShadowOutline");
+            if (statusEl != null && texCircle != null)
+            {
+                statusEl.style.backgroundImage = new StyleBackground(texCircle);
+                statusEl.style.unityBackgroundImageTintColor = new Color(0.2f, 0.9f, 0.35f, 1f);
+                statusEl.style.width = 16;
+                statusEl.style.height = 16;
+            }
+
+            // Tag: dynamic server type with authentic diamond icon
+            var tagEl = card.Q("tag");
+            if (tagEl != null)
+            {
+                SetElementText(card, "tag", typeName.ToUpper());
+                var tagIcon = tagEl.Q("tag_iconLeft_Vector") ?? tagEl.Q(className: "icon");
+                var texDiamond = Resources.Load<Texture2D>("UI/Icons/diamondFillShadowOutline");
+                if (tagIcon != null && texDiamond != null)
+                {
+                    tagIcon.style.backgroundImage = new StyleBackground(texDiamond);
+                    tagIcon.style.width = 12;
+                    tagIcon.style.height = 12;
+                }
+            }
+
+            // Plus icon for new character
+            var newCharEl = card.Q("ctr_newCharacter");
+            VisualElement iconPlus = null;
+            if (newCharEl != null) iconPlus = newCharEl.Q("icon");
+            if (iconPlus == null) iconPlus = card.Q("plusShadowOutline");
+            var texPlus = Resources.Load<Texture2D>("UI/Icons/plusShadowOutline");
+            if (iconPlus != null && texPlus != null)
+            {
+                iconPlus.style.backgroundImage = new StyleBackground(texPlus);
+                iconPlus.style.width = 16;
+                iconPlus.style.height = 16;
+            }
+
+            // Character count: PERSONAJE (X)
+            SetElementText(card, "lbl_characters", $"PERSONAJE ({charCount})");
+            var lblChars = card.Q<Label>("lbl_characters");
+            if (lblChars != null)
+            {
+                lblChars.text = $"PERSONAJE ({charCount})";
+                lblChars.style.color = Color.white;
+                lblChars.style.fontSize = 13;
+            }
+
+            // New character button: + NUEVO PERSONAJE
+            SetElementText(card, "lbl_newCharacter", "+ NUEVO PERSONAJE");
+            var lblNew = card.Q<Label>("lbl_newCharacter");
+            if (lblNew != null)
+            {
+                lblNew.text = "+ NUEVO PERSONAJE";
+                lblNew.style.color = new Color(0.95f, 0.77f, 0.25f, 1f);
+                lblNew.style.unityFontStyleAndWeight = FontStyle.Bold;
+                lblNew.style.fontSize = 13;
+            }
+
+            // Hide any raw 'No available servers' label
+            card.Query<Label>().Where(l => l.text != null && l.text.Contains("No available")).ForEach(l => l.style.display = DisplayStyle.None);
+
+            // Sizing & margins based on selection
+            bool isSelected = (i == _selectedServerCardIdx);
+            if (isSelected)
+            {
+                card.style.width = 440;
+                card.style.height = 680;
+                card.style.marginLeft = 16;
+                card.style.marginRight = 16;
+                card.style.borderLeftColor = new Color(0.95f, 0.77f, 0.25f, 1f);
+                card.style.borderRightColor = new Color(0.95f, 0.77f, 0.25f, 1f);
+                card.style.borderTopColor = new Color(0.95f, 0.77f, 0.25f, 1f);
+                card.style.borderBottomColor = new Color(0.95f, 0.77f, 0.25f, 1f);
+                card.style.borderLeftWidth = 3;
+                card.style.borderRightWidth = 3;
+                card.style.borderTopWidth = 3;
+                card.style.borderBottomWidth = 3;
+
+                // Character miniature preview on selected card when characters exist
+                var charSlot = card.Q("ctr_character") ?? card.Q("ctr_characterContent") ?? card.Q("ctr_characterScroll");
+                if (charSlot != null)
+                {
+                    charSlot.style.display = DisplayStyle.Flex;
+                    charSlot.style.flexDirection = FlexDirection.Row;
+                    charSlot.style.alignItems = Align.Center;
+                    charSlot.style.backgroundColor = new Color(0.08f, 0.1f, 0.13f, 0.9f);
+                    charSlot.style.borderLeftColor = new Color(0.25f, 0.28f, 0.32f, 0.8f);
+                    charSlot.style.borderRightColor = new Color(0.25f, 0.28f, 0.32f, 0.8f);
+                    charSlot.style.borderTopColor = new Color(0.25f, 0.28f, 0.32f, 0.8f);
+                    charSlot.style.borderBottomColor = new Color(0.25f, 0.28f, 0.32f, 0.8f);
+                    charSlot.style.borderLeftWidth = 1;
+                    charSlot.style.borderRightWidth = 1;
+                    charSlot.style.borderTopWidth = 1;
+                    charSlot.style.borderBottomWidth = 1;
+                    charSlot.style.borderTopLeftRadius = 8;
+                    charSlot.style.borderTopRightRadius = 8;
+                    charSlot.style.borderBottomLeftRadius = 8;
+                    charSlot.style.borderBottomRightRadius = 8;
+                    charSlot.style.paddingTop = 6;
+                    charSlot.style.paddingBottom = 6;
+                    charSlot.style.paddingLeft = 10;
+                    charSlot.style.paddingRight = 10;
+
+                    var avaIcon = charSlot.Q("charMiniAvatar");
+                    if (avaIcon == null)
+                    {
+                        avaIcon = new VisualElement();
+                        avaIcon.name = "charMiniAvatar";
+                        avaIcon.style.width = 30;
+                        avaIcon.style.height = 30;
+                        avaIcon.style.marginRight = 10;
+                        avaIcon.style.borderTopLeftRadius = 15;
+                        avaIcon.style.borderTopRightRadius = 15;
+                        avaIcon.style.borderBottomLeftRadius = 15;
+                        avaIcon.style.borderBottomRightRadius = 15;
+                        var tAvatar = Resources.Load<Texture2D>("FigmaIcons/character");
+                        if (tAvatar != null) avaIcon.style.backgroundImage = new StyleBackground(tAvatar);
+                        charSlot.Insert(0, avaIcon);
+                    }
+
+                    string charDisplayName = (srv.charNames != null && srv.charNames.Count > 0) ? srv.charNames[0] : "Leonardo";
+                    var charNameLbl = charSlot.Q<Label>("charMiniLabel");
+                    if (charNameLbl == null)
+                    {
+                        charNameLbl = new Label($"{charDisplayName}  •  Nv. 1");
+                        charNameLbl.name = "charMiniLabel";
+                        charNameLbl.style.color = Color.white;
+                        charNameLbl.style.unityFontStyleAndWeight = FontStyle.Bold;
+                        charNameLbl.style.fontSize = 14;
+                        charSlot.Add(charNameLbl);
+                    }
+                    else
+                    {
+                        charNameLbl.text = $"{charDisplayName}  •  Nv. 1";
+                    }
+                }
+            }
+            else
+            {
+                card.style.width = 380;
+                card.style.height = 620;
+                card.style.marginLeft = 16;
+                card.style.marginRight = 16;
+                card.style.borderLeftWidth = 1;
+                card.style.borderRightWidth = 1;
+                card.style.borderTopWidth = 1;
+                card.style.borderBottomWidth = 1;
+                card.style.borderLeftColor = new Color(0.3f, 0.35f, 0.4f, 0.5f);
+                card.style.borderRightColor = new Color(0.3f, 0.35f, 0.4f, 0.5f);
+                card.style.borderTopColor = new Color(0.3f, 0.35f, 0.4f, 0.5f);
+                card.style.borderBottomColor = new Color(0.3f, 0.35f, 0.4f, 0.5f);
+            }
+
+            int cardLocalIdx = i;
+            int cardServerId = srv.id;
             var clickArea = card.Q("ctr_cardClickableArea") ?? card;
-            clickArea.RegisterCallback<ClickEvent>(evt => SelectServerCard(root, serverIdx, serverId));
-
-            if (_selectedServerCardIdx < 0 && (srv.charCount > 0 || i == 0))
-                SelectServerCard(root, i, srv.id);
+            clickArea.RegisterCallback<ClickEvent>(evt => SelectServerCard(root, cardLocalIdx, cardServerId));
         }
 
-        for (int i = _serverList.Count; i < 7; i++)
+        // 5. Chevrons (btn_moveLeft and btn_moveRight) styled as authentic dark pills with gold arrows
+        var btnLeft = root.Q("btn_moveLeft");
+        var btnRight = root.Q("btn_moveRight");
+
+        var texArrowL = Resources.Load<Texture2D>("UI/Icons/arrowBigLeftShadowOutline");
+        var texArrowR = Resources.Load<Texture2D>("UI/Icons/arrowBigRightShadowOutline");
+
+        if (btnLeft != null)
         {
-            var card = root.Q($"serverCard_{i}");
-            if (card != null) card.style.display = DisplayStyle.None;
+            btnLeft.style.position = Position.Absolute;
+            btnLeft.style.left = 16;
+            btnLeft.style.top = Length.Percent(50);
+            btnLeft.style.marginTop = -28;
+            btnLeft.style.width = 56;
+            btnLeft.style.height = 56;
+            btnLeft.style.borderTopLeftRadius = 10;
+            btnLeft.style.borderTopRightRadius = 10;
+            btnLeft.style.borderBottomLeftRadius = 10;
+            btnLeft.style.borderBottomRightRadius = 10;
+            btnLeft.style.backgroundColor = new Color(0.09f, 0.11f, 0.15f, 0.90f);
+            btnLeft.style.borderLeftColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnLeft.style.borderRightColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnLeft.style.borderTopColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnLeft.style.borderBottomColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnLeft.style.borderLeftWidth = 1;
+            btnLeft.style.borderRightWidth = 1;
+            btnLeft.style.borderTopWidth = 1;
+            btnLeft.style.borderBottomWidth = 1;
+            btnLeft.style.justifyContent = Justify.Center;
+            btnLeft.style.alignItems = Align.Center;
+
+            if (texArrowL != null)
+            {
+                var arrowEl = btnLeft.Q("carousel_arrow") ?? btnLeft;
+                arrowEl.style.backgroundImage = new StyleBackground(texArrowL);
+                arrowEl.style.unityBackgroundImageTintColor = new Color(0.96f, 0.82f, 0.25f, 1f); // Vibrant gold
+                arrowEl.style.width = 36;
+                arrowEl.style.height = 36;
+            }
+            btnLeft.RegisterCallback<ClickEvent>(evt =>
+            {
+                if (_carouselOffset > 0)
+                {
+                    _carouselOffset--;
+                    PopulateServerSelection(root);
+                }
+            });
         }
 
-        // Wire Play button (ServerSelection.OnValidateButton, dump.cs L262872)
+        if (btnRight != null)
+        {
+            btnRight.style.position = Position.Absolute;
+            btnRight.style.right = 16;
+            btnRight.style.top = Length.Percent(50);
+            btnRight.style.marginTop = -28;
+            btnRight.style.width = 56;
+            btnRight.style.height = 56;
+            btnRight.style.borderTopLeftRadius = 10;
+            btnRight.style.borderTopRightRadius = 10;
+            btnRight.style.borderBottomLeftRadius = 10;
+            btnRight.style.borderBottomRightRadius = 10;
+            btnRight.style.backgroundColor = new Color(0.09f, 0.11f, 0.15f, 0.90f);
+            btnRight.style.borderLeftColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnRight.style.borderRightColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnRight.style.borderTopColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnRight.style.borderBottomColor = new Color(0.28f, 0.34f, 0.42f, 0.7f);
+            btnRight.style.borderLeftWidth = 1;
+            btnRight.style.borderRightWidth = 1;
+            btnRight.style.borderTopWidth = 1;
+            btnRight.style.borderBottomWidth = 1;
+            btnRight.style.justifyContent = Justify.Center;
+            btnRight.style.alignItems = Align.Center;
+
+            if (texArrowR != null)
+            {
+                var arrowEl = btnRight.Q("carousel_arrow") ?? btnRight;
+                arrowEl.style.backgroundImage = new StyleBackground(texArrowR);
+                arrowEl.style.unityBackgroundImageTintColor = new Color(0.96f, 0.82f, 0.25f, 1f); // Vibrant gold
+                arrowEl.style.width = 36;
+                arrowEl.style.height = 36;
+            }
+            btnRight.RegisterCallback<ClickEvent>(evt =>
+            {
+                if (_carouselOffset + 3 < servers.Count)
+                {
+                    _carouselOffset++;
+                    PopulateServerSelection(root);
+                }
+            });
+        }
+
+        // 6. Bottom Controls: Checkbox and JUGAR button (matching selecaoServ.png)
+        var cbOnly = root.Q("cb_onlyCharacter");
+        if (cbOnly != null)
+        {
+            if (ctrSel != null && cbOnly.parent != ctrSel) ctrSel.Add(cbOnly);
+            cbOnly.style.position = Position.Absolute;
+            cbOnly.style.bottom = 44;
+            cbOnly.style.left = 32;
+            cbOnly.style.width = 320;
+            cbOnly.style.height = 36;
+            cbOnly.style.flexDirection = FlexDirection.Row;
+            cbOnly.style.alignItems = Align.Center;
+            cbOnly.style.whiteSpace = WhiteSpace.NoWrap;
+
+            var cbBox = cbOnly.Q("checkbox_background") ?? cbOnly.Q("checkboxLine_checkbox");
+            if (cbBox != null)
+            {
+                cbBox.style.width = 16;
+                cbBox.style.height = 16;
+                cbBox.style.backgroundColor = new Color(0.09f, 0.11f, 0.15f, 0.9f);
+                cbBox.style.borderLeftColor = new Color(0.30f, 0.36f, 0.44f, 0.8f);
+                cbBox.style.borderRightColor = new Color(0.30f, 0.36f, 0.44f, 0.8f);
+                cbBox.style.borderTopColor = new Color(0.30f, 0.36f, 0.44f, 0.8f);
+                cbBox.style.borderBottomColor = new Color(0.30f, 0.36f, 0.44f, 0.8f);
+                cbBox.style.borderLeftWidth = 1;
+                cbBox.style.borderRightWidth = 1;
+                cbBox.style.borderTopWidth = 1;
+                cbBox.style.borderBottomWidth = 1;
+                cbBox.style.borderTopLeftRadius = 3;
+                cbBox.style.borderTopRightRadius = 3;
+                cbBox.style.borderBottomLeftRadius = 3;
+                cbBox.style.borderBottomRightRadius = 3;
+            }
+
+            var cbLbl = cbOnly.Q<Label>("checkboxLine_labelRight") ?? cbOnly.Q<Label>();
+            if (cbLbl != null)
+            {
+                cbLbl.text = "Mostrar solo mis personajes";
+                cbLbl.style.color = new Color(0.65f, 0.72f, 0.80f, 1f);
+                cbLbl.style.fontSize = 13;
+                cbLbl.style.whiteSpace = WhiteSpace.NoWrap;
+                cbLbl.style.marginLeft = 8;
+            }
+        }
+
         var btnPlay = root.Q("btn_play");
         if (btnPlay != null)
         {
+            if (ctrSel != null && btnPlay.parent != ctrSel) ctrSel.Add(btnPlay);
             btnPlay.SetEnabled(true);
             btnPlay.RemoveFromClassList("disabled");
             btnPlay.pickingMode = PickingMode.Position;
+            btnPlay.style.position = Position.Absolute;
+            btnPlay.style.bottom = 44;
+            btnPlay.style.left = Length.Percent(50);
+            btnPlay.style.marginLeft = -140; // Center 280px width
+            btnPlay.style.width = 280;
+            btnPlay.style.height = 120;
+            btnPlay.style.backgroundColor = Color.clear;
+            btnPlay.style.borderLeftWidth = 0;
+            btnPlay.style.borderRightWidth = 0;
+            btnPlay.style.borderTopWidth = 0;
+            btnPlay.style.borderBottomWidth = 0;
+            btnPlay.BringToFront();
+
+            var pContainer = btnPlay.Q("playButton_container") ?? btnPlay;
+            pContainer.style.width = Length.Percent(100);
+            pContainer.style.height = Length.Percent(100);
+            pContainer.style.position = Position.Relative;
+
+            // Load 10-layer authentic sprites from live dump
+            var texBg = Resources.Load<Texture2D>("UI/PlayButton/defaultBackgoundButton");
+            var texBorder = Resources.Load<Texture2D>("UI/PlayButton/defaultBorderButton");
+            var texShadow = Resources.Load<Texture2D>("UI/PlayButton/defaultShadowEffect");
+            var texShadowHov = Resources.Load<Texture2D>("UI/PlayButton/hoverShadowEffect");
+            var texShadowPrs = Resources.Load<Texture2D>("UI/PlayButton/pressedShadowEffect");
+            var texLight = Resources.Load<Texture2D>("UI/PlayButton/defaultLightEffect");
+            var texLightHov = Resources.Load<Texture2D>("UI/PlayButton/hoverLightEffect");
+            var texLightPrs = Resources.Load<Texture2D>("UI/PlayButton/pressedLightEffect");
+            var texGems = Resources.Load<Texture2D>("UI/PlayButton/defaultGems");
+
+            void SetSprite(string elName, Texture2D texture)
+            {
+                var el = btnPlay.Q(elName);
+                if (el != null && texture != null)
+                {
+                    el.style.backgroundImage = new StyleBackground(texture);
+                    el.style.position = Position.Absolute;
+                    el.style.top = 0; el.style.left = 0;
+                    el.style.width = Length.Percent(100);
+                    el.style.height = Length.Percent(100);
+                    el.style.display = DisplayStyle.Flex;
+                }
+            }
+
+            SetSprite("playButton_background", texBg);
+            SetSprite("playButton_border", texBorder);
+            SetSprite("playButton_shadowEffect", texShadow);
+            SetSprite("playButton_lightEffect", texLight);
+            SetSprite("playButton_gems", texGems);
+
+            var shadowEl = btnPlay.Q("playButton_shadowEffect");
+            var lightEl = btnPlay.Q("playButton_lightEffect");
+
+            btnPlay.RegisterCallback<MouseEnterEvent>(evt =>
+            {
+                if (shadowEl != null && texShadowHov != null) shadowEl.style.backgroundImage = new StyleBackground(texShadowHov);
+                if (lightEl != null && texLightHov != null) lightEl.style.backgroundImage = new StyleBackground(texLightHov);
+            });
+            btnPlay.RegisterCallback<MouseLeaveEvent>(evt =>
+            {
+                if (shadowEl != null && texShadow != null) shadowEl.style.backgroundImage = new StyleBackground(texShadow);
+                if (lightEl != null && texLight != null) lightEl.style.backgroundImage = new StyleBackground(texLight);
+            });
+            btnPlay.RegisterCallback<MouseDownEvent>(evt =>
+            {
+                if (shadowEl != null && texShadowPrs != null) shadowEl.style.backgroundImage = new StyleBackground(texShadowPrs);
+                if (lightEl != null && texLightPrs != null) lightEl.style.backgroundImage = new StyleBackground(texLightPrs);
+            });
+            btnPlay.RegisterCallback<MouseUpEvent>(evt =>
+            {
+                if (shadowEl != null && texShadowHov != null) shadowEl.style.backgroundImage = new StyleBackground(texShadowHov);
+                if (lightEl != null && texLightHov != null) lightEl.style.backgroundImage = new StyleBackground(texLightHov);
+            });
 
             Action triggerServerPlay = () =>
             {
-                int targetId = _pendingServerId > 0 ? _pendingServerId : (_serverList != null && _serverList.Count > 0 ? _serverList[0].id : 290);
+                int targetId = _pendingServerId > 0 ? _pendingServerId : 290;
                 if (_wsConn != null)
                 {
                     Log($"  Server select: {targetId}");
@@ -2827,33 +3802,26 @@ public partial class WebGLProbe : MonoBehaviour
             btnPlay.RegisterCallback<ClickEvent>(evt => triggerServerPlay());
             btnPlay.RegisterCallback<PointerUpEvent>(evt => { if (evt.button == 0) triggerServerPlay(); });
 
-            var ssLabel = btnPlay.Q("playButton_label");
-            if (ssLabel is Label sl) sl.text = I18n("ui.common.play", "Play");
+            var ssLabel = btnPlay.Q("playButton_label") as Label ?? btnPlay.Q<Label>();
+            if (ssLabel != null)
+            {
+                ssLabel.text = "JUGAR";
+                ssLabel.style.color = new Color(1f, 0.92f, 0.7f, 1f);
+                ssLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
+                ssLabel.style.fontSize = 24;
+                ssLabel.style.letterSpacing = 2;
+                ssLabel.style.position = Position.Absolute;
+                ssLabel.style.top = 0; ssLabel.style.left = 0;
+                ssLabel.style.width = Length.Percent(100);
+                ssLabel.style.height = Length.Percent(100);
+                ssLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
+            }
         }
 
-        // Wire carousel navigation (ServerSelectionBinding._btn_moveLeft/_btn_moveRight, dump.cs L206570)
-        // Start carousel centered on the selected server (with characters)
-        if (_selectedServerCardIdx > 0)
-            _carouselOffset = Math.Max(0, _selectedServerCardIdx - 3); // center in 7-card view
-        else
-            _carouselOffset = 0;
-        var btnLeft = root.Q("btn_moveLeft");
-        var btnRight = root.Q("btn_moveRight");
-        if (btnLeft != null)
-            btnLeft.RegisterCallback<ClickEvent>(evt =>
-            {
-                if (_carouselOffset > 0) { _carouselOffset--; RefreshCarouselCards(root, cardTemplate); }
-            });
-        if (btnRight != null)
-            btnRight.RegisterCallback<ClickEvent>(evt =>
-            {
-                if (_carouselOffset + 7 < _serverList.Count) { _carouselOffset++; RefreshCarouselCards(root, cardTemplate); }
-            });
-
-        Log($"  ServerSelection: {_serverList.Count} servers, offset={_carouselOffset}, selected={_pendingServerId}");
+        Log($"  ServerSelection: data-driven layout populated with {servers.Count} servers, offset={_carouselOffset}");
     }
 
-    VisualTreeAsset _cardTemplate;
+VisualTreeAsset _cardTemplate;
 
     void RefreshCarouselCards(VisualElement root, VisualTreeAsset cardTemplate)
     {
@@ -3172,6 +4140,8 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         _authToken = ExtractJsonString(loginResp, "token");
+        string apodo = ExtractJsonString(loginResp, "apodo");
+        if (!string.IsNullOrEmpty(apodo)) _accountNickname = apodo;
         if (string.IsNullOrEmpty(_authToken))
         {
             SetLoginState(root, 0, "Auth error");
@@ -3407,7 +4377,12 @@ public partial class WebGLProbe : MonoBehaviour
                 var f2f3 = PbField(f2, 3);
                 var f2f3f1 = f2f3 != null ? PbField(f2f3, 1) : null;
                 string nickname = f2f3f1 != null ? PbStr(f2f3f1, 2) : null;
-                Log($"  nickname={nickname}");
+                if (!string.IsNullOrEmpty(nickname)) _accountNickname = nickname;
+                string tag = f2f3f1 != null ? PbStr(f2f3f1, 3) : null;
+                if (!string.IsNullOrEmpty(tag)) _accountTag = tag.StartsWith("#") ? tag : ("#" + tag);
+                string subEnd = f2f3f1 != null ? PbStr(f2f3f1, 5) : null;
+                if (!string.IsNullOrEmpty(subEnd)) _subscriptionEndDate = FormatSubscriptionDisplay(subEnd);
+                Log($"  nickname={nickname}, tag={tag}, subscription={subEnd}");
 
                 // Parse server list to _serverList (ConnectionProtocol.BuildAuthenticationAccepted)
                 _serverList = new List<ServerInfo>();
@@ -3440,6 +4415,7 @@ public partial class WebGLProbe : MonoBehaviour
                 ShowScreen("ServerSelection", root);
                 SetLoginState(root, 0, "");
                 PopulateServerSelection(root);
+                MountCharacterHeader(root);
                 DispatchGen_Event("ServerSelection", "DisplayServer", root);
                 DispatchGen_Event("ServerSelection", "DisplayFilter", root);
             }
@@ -3482,6 +4458,7 @@ public partial class WebGLProbe : MonoBehaviour
                 ShowScreen("CharacterSelection", root);
                 SetLoginState(root, 0, "");
                 PopulateCharacterSelection(root);
+                MountCharacterHeader(root);
                 DispatchGen_Event("CharacterSelection", "OnCharactersListUpdated", root);
             }
             else if (opcode == "jru")
@@ -3691,12 +4668,24 @@ public partial class WebGLProbe : MonoBehaviour
                 Log($"  kva: character confirmed, world entry starting");
                 _currentScreen = "World";
 
-                // Hide auth UI so the 3D map is visible behind
-                // In the original, fpm.bhnl() (Disable) closes all auth panels
+                // Hide auth UI so the map is visible behind, but keep UI root visible for in-game HUD!
                 if (_uiRoot != null)
                 {
-                    _uiRoot.style.display = DisplayStyle.None;
-                    Log($"  UI hidden for world view");
+                    for (int ci = 0; ci < _uiRoot.childCount; ci++)
+                    {
+                        var child = _uiRoot[ci];
+                        bool isAuth = child.name != null && (
+                            child.name.IndexOf("connection", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            child.name.IndexOf("selection", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            child.name.IndexOf("login", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            child.name.IndexOf("header", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            child.name.IndexOf("menu", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                            child.name == "img"
+                        );
+                        if (isAuth) child.style.display = DisplayStyle.None;
+                    }
+                    _uiRoot.style.display = DisplayStyle.Flex;
+                    Log($"  Auth UI hidden, UI root active for in-game HUD");
                 }
             }
             else if (opcode != null)
@@ -4026,7 +5015,7 @@ public partial class WebGLProbe : MonoBehaviour
         // No scaling — element transforms (m31,m32) are already in map world units
         // Map bounds: X [-580.5, 623.5], Y [-440.75, 440.75] (from oh/hdl constants in dump.cs)
         // Camera ortho size 500 shows [-500,500] vertical range — map fits within this
-        _mapMeshGO.transform.localScale = Vector3.one;
+        _mapMeshGO.transform.localScale = new Vector3(1f, -1f, 1f); // Authentic upright coordinate conversion
         _mapMeshGO.transform.position = Vector3.zero;
 
         // Configure camera for map view (original: MainCameraOrthographicSize = 500)
@@ -4120,6 +5109,7 @@ public partial class WebGLProbe : MonoBehaviour
         mesh.SetColors(colors);
         mesh.SetIndices(indices.ToArray(), MeshTopology.Lines, 0);
         filter.mesh = mesh;
+        _gridGO.transform.localScale = new Vector3(1f, -1f, 1f);
         _gridGO.SetActive(_showGrid);
 
         EnsureHoverIndicator();
@@ -4162,7 +5152,7 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
-        _hoverCellGO.transform.position = new Vector3(pos.x, pos.y, 0);
+        _hoverCellGO.transform.position = new Vector3(pos.x, -pos.y, 0);
 
         bool isWalkable = (_mapCells != null && cellId < _mapCells.Length) ? _mapCells[cellId].mov : false;
         Color col = isWalkable ? new Color(0.2f, 1f, 0.4f, 0.4f) : new Color(1f, 0.2f, 0.2f, 0.4f);
@@ -4233,7 +5223,7 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         Vector2 startPos = IsometricGrid.CellIdToWorldPos(_playerCellId);
-        _playerEntityGO.transform.position = new Vector3(startPos.x, startPos.y, 0);
+        _playerEntityGO.transform.position = new Vector3(startPos.x, -startPos.y, 0);
         Log($"[Entity] Player spawned on cell {_playerCellId} at ({startPos.x:F1}, {startPos.y:F1})");
 
         // Load official character skin texture asynchronously
@@ -4693,7 +5683,7 @@ public partial class WebGLProbe : MonoBehaviour
             if (_playerEntityGO != null)
             {
                 Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
-                _playerEntityGO.transform.position = new Vector3(pos.x, pos.y, 0);
+                _playerEntityGO.transform.position = new Vector3(pos.x, -pos.y, 0);
             }
         }
         else if (cellId >= 0 && cellId < 560)
@@ -4760,7 +5750,7 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         Vector2 pos = IsometricGrid.CellIdToWorldPos(cellId);
-        actorGO.transform.position = new Vector3(pos.x, pos.y, 0);
+        actorGO.transform.position = new Vector3(pos.x, -pos.y, 0);
         float sign = (facing == 3 || facing == 4 || facing == 5) ? -1f : 1f;
         actorGO.transform.localScale = new Vector3(sign, 1f, 1f);
     }
@@ -4908,8 +5898,10 @@ public partial class WebGLProbe : MonoBehaviour
         for (int i = 1; i < path.Count; i++)
         {
             int nextCell = path[i];
-            Vector3 startPos = IsometricGrid.CellIdToWorldPos(_playerCellId);
-            Vector3 targetPos = IsometricGrid.CellIdToWorldPos(nextCell);
+            Vector2 posStart = IsometricGrid.CellIdToWorldPos(_playerCellId);
+            Vector2 posTarget = IsometricGrid.CellIdToWorldPos(nextCell);
+            Vector3 startPos = new Vector3(posStart.x, -posStart.y, 0);
+            Vector3 targetPos = new Vector3(posTarget.x, -posTarget.y, 0);
 
             // Flip character horizontally based on movement direction
             if (_playerEntityGO != null && targetPos.x != startPos.x)
@@ -4952,38 +5944,61 @@ public partial class WebGLProbe : MonoBehaviour
     {
         var targetRoot = root ?? _uiRoot;
         if (targetRoot == null) return;
+        if (_uiRoot != null)
+        {
+            _uiRoot.style.display = DisplayStyle.Flex;
+            _uiRoot.style.backgroundImage = StyleKeyword.None;
+            _uiRoot.style.backgroundColor = Color.clear;
+        }
+        targetRoot.style.backgroundImage = StyleKeyword.None;
+        targetRoot.style.backgroundColor = Color.clear;
 
         // Hide auth background and connection overlays so the game world is visible
         for (int ci = 0; ci < targetRoot.childCount; ci++)
         {
             var child = targetRoot[ci];
-            if (child.name == "connectionBackground" || child.name == "img" || child.name == "login" || (child.name != null && child.name.Contains("Selection")))
-            {
-                child.style.display = DisplayStyle.None;
-            }
+            bool isAuth = child.name != null && (
+                child.name.IndexOf("connection", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                child.name.IndexOf("selection", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                child.name.IndexOf("login", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                child.name.IndexOf("header", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                child.name.IndexOf("menu", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                child.name.StartsWith("screen_") ||
+                child.name == "img"
+            );
+            if (isAuth) child.style.display = DisplayStyle.None;
         }
 
         if (_inGameHudMounted) return;
         _inGameHudMounted = true;
         Log("[HUD] Mounting in-game HUD (BannerMenu, ChatView, CharacterInformation, ActionBar)...");
 
+        var colorMap = LoadThemeColorMap();
+        var fontAsset = Resources.Load<FontAsset>("DefaultFont");
+
         // 1. BannerMenu (bottom persistent bar)
         try
         {
-            VisualTreeAsset bannerVta = LoadUxml("bannermenu");
-
+            VisualTreeAsset bannerVta = LoadUxml("bannermenu") ?? LoadUxml("Assets/UI/PersistentMenu/bannerMenu.uxml");
             if (bannerVta != null)
             {
                 _bannerRoot = bannerVta.CloneTree();
                 _bannerRoot.name = "BannerMenu_Root";
+                _bannerRoot.style.position = Position.Absolute;
+                _bannerRoot.style.bottom = 0;
+                _bannerRoot.style.left = 0;
+                _bannerRoot.style.right = 0;
+                _bannerRoot.style.height = 70;
+                _bannerRoot.style.backgroundColor = new Color(0.06f, 0.08f, 0.11f, 0.95f);
+                _bannerRoot.style.borderTopColor = new Color(0.95f, 0.77f, 0.25f, 0.4f);
+                _bannerRoot.style.borderTopWidth = 1;
                 _bannerRoot.pickingMode = PickingMode.Position;
+                int tc = 0;
+                ApplyThemeRecursive(_bannerRoot, colorMap, ref tc);
+                if (fontAsset != null) ApplyFontRecursive(_bannerRoot, fontAsset);
                 targetRoot.Add(_bannerRoot);
                 ApplyGeneratedMethods("BannerMenu", _bannerRoot);
-                Log("  [HUD] BannerMenu mounted and initialized via generated decompiled methods");
-            }
-            else
-            {
-                Log("  [HUD] BannerMenu UXML not found in loaded bundles");
+                Log("  [HUD] BannerMenu mounted and initialized");
             }
         }
         catch (Exception ex)
@@ -4994,15 +6009,36 @@ public partial class WebGLProbe : MonoBehaviour
         // 2. ChatView (chat window)
         try
         {
-            VisualTreeAsset chatVta = LoadUxml("chatview");
-
+            VisualTreeAsset chatVta = LoadUxml("chatview") ?? LoadUxml("Assets/UI/PersistentMenu/chatview.uxml");
             if (chatVta != null)
             {
                 _chatRoot = chatVta.CloneTree();
                 _chatRoot.name = "ChatView_Root";
+                _chatRoot.style.position = Position.Absolute;
+                _chatRoot.style.bottom = 85;
+                _chatRoot.style.left = 20;
+                _chatRoot.style.width = 440;
+                _chatRoot.style.height = 250;
+                _chatRoot.style.backgroundColor = new Color(0.07f, 0.09f, 0.12f, 0.88f);
+                _chatRoot.style.borderLeftColor = new Color(0.2f, 0.24f, 0.28f, 0.8f);
+                _chatRoot.style.borderRightColor = new Color(0.2f, 0.24f, 0.28f, 0.8f);
+                _chatRoot.style.borderTopColor = new Color(0.2f, 0.24f, 0.28f, 0.8f);
+                _chatRoot.style.borderBottomColor = new Color(0.2f, 0.24f, 0.28f, 0.8f);
+                _chatRoot.style.borderLeftWidth = 1;
+                _chatRoot.style.borderRightWidth = 1;
+                _chatRoot.style.borderTopWidth = 1;
+                _chatRoot.style.borderBottomWidth = 1;
+                _chatRoot.style.borderTopLeftRadius = 8;
+                _chatRoot.style.borderTopRightRadius = 8;
+                _chatRoot.style.borderBottomLeftRadius = 8;
+                _chatRoot.style.borderBottomRightRadius = 8;
                 _chatRoot.pickingMode = PickingMode.Position;
+                int tc = 0;
+                ApplyThemeRecursive(_chatRoot, colorMap, ref tc);
+                if (fontAsset != null) ApplyFontRecursive(_chatRoot, fontAsset);
                 targetRoot.Add(_chatRoot);
                 ApplyGeneratedMethods("ChatView", _chatRoot);
+
                 var chatInput = _chatRoot.Q<TextField>("ti_chatInput");
                 if (chatInput != null)
                 {
@@ -5010,20 +6046,16 @@ public partial class WebGLProbe : MonoBehaviour
                     {
                         if (evt.keyCode == KeyCode.Return || evt.keyCode == KeyCode.KeypadEnter)
                         {
-                            string text = chatInput.value?.Trim();
-                            if (!string.IsNullOrEmpty(text))
+                            string t = chatInput.value?.Trim();
+                            if (!string.IsNullOrEmpty(t))
                             {
-                                SendChatMessage(text);
+                                SendChatMessage(t);
                                 chatInput.value = "";
                             }
                         }
                     });
                 }
-                Log("  [HUD] ChatView mounted and initialized with live input callback");
-            }
-            else
-            {
-                Log("  [HUD] ChatView UXML not found in loaded bundles");
+                Log("  [HUD] ChatView mounted with live input");
             }
         }
         catch (Exception ex)
@@ -5031,24 +6063,27 @@ public partial class WebGLProbe : MonoBehaviour
             Err($"  [HUD] ChatView mount error: {ex.Message}");
         }
 
-        // 3. CharacterInformation (HP, AP, MP, Shield persistent gauge)
+        // 3. CharacterInformation (HP, AP, MP gauge)
         try
         {
-            VisualTreeAsset charInfoVta = LoadUxml("characterinformations");
-
+            VisualTreeAsset charInfoVta = LoadUxml("characterinformations") ?? LoadUxml("Assets/UI/PersistentMenu/characterInformations.uxml");
             if (charInfoVta != null)
             {
                 _characterInfoRoot = charInfoVta.CloneTree();
                 _characterInfoRoot.name = "CharacterInformation_Root";
+                _characterInfoRoot.style.position = Position.Absolute;
+                _characterInfoRoot.style.bottom = 12;
+                _characterInfoRoot.style.left = Length.Percent(44);
+                _characterInfoRoot.style.width = 240;
+                _characterInfoRoot.style.height = 80;
                 _characterInfoRoot.pickingMode = PickingMode.Position;
+                int tc = 0;
+                ApplyThemeRecursive(_characterInfoRoot, colorMap, ref tc);
+                if (fontAsset != null) ApplyFontRecursive(_characterInfoRoot, fontAsset);
                 targetRoot.Add(_characterInfoRoot);
                 ApplyGeneratedMethods("CharacterInformation", _characterInfoRoot);
                 UpdateCharacterInfoStats(55, 55, 6, 3, 0, 1);
-                Log("  [HUD] CharacterInformation mounted and initialized via generated decompiled methods");
-            }
-            else
-            {
-                Log("  [HUD] CharacterInformation UXML not found in loaded bundles");
+                Log("  [HUD] CharacterInformation mounted");
             }
         }
         catch (Exception ex)
@@ -5059,20 +6094,36 @@ public partial class WebGLProbe : MonoBehaviour
         // 4. ActionBar (spells & items slot bar)
         try
         {
-            VisualTreeAsset barVta = LoadUxml("actionbar");
-
+            VisualTreeAsset barVta = LoadUxml("actionbar") ?? LoadUxml("Assets/UI/PersistentMenu/actionBar.uxml");
             if (barVta != null)
             {
                 _actionBarRoot = barVta.CloneTree();
                 _actionBarRoot.name = "ActionBar_Root";
+                _actionBarRoot.style.position = Position.Absolute;
+                _actionBarRoot.style.bottom = 75;
+                _actionBarRoot.style.left = Length.Percent(25);
+                _actionBarRoot.style.right = Length.Percent(25);
+                _actionBarRoot.style.height = 62;
+                _actionBarRoot.style.backgroundColor = new Color(0.08f, 0.1f, 0.13f, 0.9f);
+                _actionBarRoot.style.borderTopLeftRadius = 8;
+                _actionBarRoot.style.borderTopRightRadius = 8;
+                _actionBarRoot.style.borderBottomLeftRadius = 8;
+                _actionBarRoot.style.borderBottomRightRadius = 8;
+                _actionBarRoot.style.borderLeftColor = new Color(0.2f, 0.25f, 0.3f, 0.6f);
+                _actionBarRoot.style.borderRightColor = new Color(0.2f, 0.25f, 0.3f, 0.6f);
+                _actionBarRoot.style.borderTopColor = new Color(0.2f, 0.25f, 0.3f, 0.6f);
+                _actionBarRoot.style.borderBottomColor = new Color(0.2f, 0.25f, 0.3f, 0.6f);
+                _actionBarRoot.style.borderLeftWidth = 1;
+                _actionBarRoot.style.borderRightWidth = 1;
+                _actionBarRoot.style.borderTopWidth = 1;
+                _actionBarRoot.style.borderBottomWidth = 1;
                 _actionBarRoot.pickingMode = PickingMode.Position;
+                int tc = 0;
+                ApplyThemeRecursive(_actionBarRoot, colorMap, ref tc);
+                if (fontAsset != null) ApplyFontRecursive(_actionBarRoot, fontAsset);
                 targetRoot.Add(_actionBarRoot);
                 ApplyGeneratedMethods("ActionBar", _actionBarRoot);
-                Log("  [HUD] ActionBar mounted and initialized via generated decompiled methods");
-            }
-            else
-            {
-                Log("  [HUD] ActionBar UXML not found in loaded bundles");
+                Log("  [HUD] ActionBar mounted");
             }
         }
         catch (Exception ex)
@@ -5284,7 +6335,7 @@ public partial class WebGLProbe : MonoBehaviour
             for (int ci = root.childCount - 1; ci >= 0; ci--)
             {
                 var child = root[ci];
-                if (child.name == "connectionBackground" || child.name == "img") continue;
+                if (child.name == "connectionBackground" || child.name == "img" || child.name == "CharacterHeader_Overlay") continue;
                 if (child.name != null && child.name.StartsWith("screen_"))
                 {
                     root.RemoveAt(ci);
@@ -5806,16 +6857,48 @@ public partial class WebGLProbe : MonoBehaviour
     }
 
     // Called via SendMessage from Playwright tests (window.unityInstance.SendMessage)
+    // ──────────────────── Live UI Toolkit Hierarchy Inspector & Dumper ────────────────────
+    public static string DumpVisualTree(VisualElement el, int maxDepth = 6)
+    {
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine($"=== LIVE UITK VISUAL TREE DUMP (Root: {el?.name ?? "null"}) ===");
+        DumpElementRecursive(el, 0, maxDepth, sb);
+        string res = sb.ToString();
+        Log(res);
+        return res;
+    }
+
+    static void DumpElementRecursive(VisualElement el, int depth, int maxDepth, System.Text.StringBuilder sb)
+    {
+        if (el == null || depth > maxDepth) return;
+        string indent = new string(' ', depth * 2);
+        string classes = string.Join(".", el.GetClasses());
+        if (!string.IsNullOrEmpty(classes)) classes = "." + classes;
+        var r = el.resolvedStyle;
+        sb.AppendLine($"{indent}<{el.GetType().Name} name=\"{el.name}\" class=\"{classes}\" display=\"{r.display}\" rect=\"({r.left:F0},{r.top:F0},{r.width:F0}x{r.height:F0})\">");
+        for (int i = 0; i < el.childCount; i++)
+            DumpElementRecursive(el[i], depth + 1, maxDepth, sb);
+    }
+
     public void TestAction(string action)
     {
         Log($"  [TEST] Action: {action}");
-        if (action == "enter")
+        if (action == "dump_ui" || action == "inspect")
+        {
+            DumpVisualTree(_uiRoot);
+        }
+        else if (action == "enter")
         {
             if (_currentScreen == "Login" || _currentScreen == null)
                 OnPlayClicked(_uiRoot);
             else if (_currentScreen == "ServerSelection" && _wsConn != null)
             {
-                int servId = _pendingServerId > 0 ? _pendingServerId : (_serverList != null && _serverList.Count > 0 ? _serverList[0].id : 290);
+                if (_serverList == null || _serverList.Count == 0)
+                {
+                    Log("  [TEST] Cannot select server: server list is empty");
+                    return;
+                }
+                int servId = _pendingServerId > 0 ? _pendingServerId : _serverList[0].id;
                 Log($"  [TEST] Selecting server {servId}");
                 SetLoginState(_uiRoot, 1);
                 var frame = WebSocketBridge.BuildServerSelectFrame(servId, "en");

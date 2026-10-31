@@ -30,7 +30,7 @@ def run_full_flow():
                 "--disable-setuid-sandbox",
             ]
         )
-        context = browser.new_context(viewport={"width": 1280, "height": 800})
+        context = browser.new_context(viewport={"width": 1920, "height": 1080})
         page = context.new_page()
 
         def on_console(msg):
@@ -78,7 +78,7 @@ def run_full_flow():
         box = canvas.bounding_box()
         if box:
             click_x = box["x"] + (box["width"] / 2)
-            click_y = box["y"] + 509
+            click_y = box["y"] + int(box["height"] * 0.72)
             print(f"  Disparando mouse.click({click_x}, {click_y}) no centro do botao PLAY...")
             page.mouse.click(click_x, click_y)
 
@@ -107,7 +107,7 @@ def run_full_flow():
         print("\n[Passo 3] Selecionando Servidor -> Reconnect kqz -> CharacterSelection...")
         if box:
             # Em ServerSelection, botao Play fica na parte inferior central
-            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + 509)
+            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 50))
             time.sleep(1)
 
         if not any("Server select:" in l for l in console_logs):
@@ -129,7 +129,7 @@ def run_full_flow():
         # Passo 4: Clicar em Jogar / Selecionar personagem
         print("\n[Passo 4] Selecionando Personagem -> Entrada no Mundo (jru, lwt, kub, jss, HUD)...")
         if box:
-            page.mouse.click(box["x"] + 641, box["y"] + 720)
+            page.mouse.click(box["x"] + (box["width"] / 2), box["y"] + int(box["height"] - 50))
             time.sleep(1)
 
         if not any("Selecting character" in l for l in console_logs):

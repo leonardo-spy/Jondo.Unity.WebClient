@@ -1,0 +1,20 @@
+﻿=== TEMPLATE: BoolOptionElement ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - DofusVisualElement #ctr_boolOptionContent  [NaNxNaN @ 0,0] Flex
+    - DofusVisualElement #ctr_option  [NaNxNaN @ 0,0] Flex
+      - CheckboxCustom #chk_option  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #checkboxLine_checkbox  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #checkbox_background  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #checkbox_icon  [NaNxNaN @ 0,0] Flex
+            - DofusIcon #checkbox_icon_Vector  [NaNxNaN @ 0,0] None
+        - DofusLabel #checkboxLine_labelRight  [NaNxNaN @ 0,0] Flex "[Test]"
+      - DofusVisualElement #ctr_button  [NaNxNaN @ 0,0] Flex
+        - DofusButtonCustom #btn_button  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "CECI EST UN TEST"
+        - DofusButtonCustom #btn_description  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:chevronBottomShadowOutline]
+    - DofusVisualElement #ctr_optionDescription  [NaNxNaN @ 0,0] Flex
+      - DofusLabel #lbl_labelDescription  [NaNxNaN @ 0,0] Flex "La banque permet de déposer des objets dans un coffre commun aux banques de tous vos personnages sur un même serveur. Votre personnage doit être de niveau 10 minimum pour pouvoir accéder à son coffre de banque."

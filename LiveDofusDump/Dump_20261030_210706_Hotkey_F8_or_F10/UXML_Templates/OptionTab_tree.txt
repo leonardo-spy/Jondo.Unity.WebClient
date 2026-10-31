@@ -1,0 +1,50 @@
+﻿=== TEMPLATE: OptionTab ===
+- TemplateContainer #(unnamed)  [NaNxNaN @ 0,0] Flex
+  - DofusVisualElement #ctr_content  [NaNxNaN @ 0,0] Flex
+    - DofusVisualElement #ctr_sidePanel  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #header  [NaNxNaN @ 0,0] Flex
+        - TextInput #inp_search  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #textInput_content  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #textInput_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #textInput_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:magnifierShadowOutline]
+            - VisualElement #textInput_text  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #textInput_placeholder  [NaNxNaN @ 0,0] Flex "[Rechercher dans le guide]"
+              - DofusTextFieldCustom #textInput_userText  [NaNxNaN @ 0,0] None
+                - TextInput #unity-text-input  [NaNxNaN @ 0,0] Flex
+                  - TextElement #(unnamed)  [NaNxNaN @ 0,0] Flex
+            - VisualElement #textInput_iconRight  [NaNxNaN @ 0,0] None
+              - DofusIcon #textInput_iconRight_Vector  [NaNxNaN @ 0,0] Flex
+            - DofusButtonCustom #textInput_button  [NaNxNaN @ 0,0] None
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:crossShadowOutline]
+          - DofusVisualElement #textInput_infos  [NaNxNaN @ 0,0] None
+            - DofusLabel #textInput_errorMessage  [NaNxNaN @ 0,0] None
+            - DofusLabel #textInput_counter  [NaNxNaN @ 0,0] Flex "0/0"
+        - DofusVisualElement #ctr_search_results  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #ctr_search_txts  [NaNxNaN @ 0,0] Flex
+            - DofusLabel #lbl_results  [NaNxNaN @ 0,0] Flex "[Résultats]"
+            - DofusVisualElement #ctr_numbers  [NaNxNaN @ 0,0] Flex
+              - DofusLabel #lbl_search_idx  [NaNxNaN @ 0,0] Flex "[2]"
+              - DofusLabel #lbl_results_count  [NaNxNaN @ 0,0] Flex "[/ 12]"
+          - DofusVisualElement #ctr_search_btns  [NaNxNaN @ 0,0] Flex
+            - DofusButtonCustom #btn_prv  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:arrowTopShadowOutline]
+            - DofusButtonCustom #btn_nxt  [NaNxNaN @ 0,0] Flex
+              - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+                - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+                  - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:arrowBottomShadowOutline]
+      - ListView #gd_category  [NaNxNaN @ 0,0] Flex
+      - DofusVisualElement #ctr_bottom  [NaNxNaN @ 0,0] Flex
+        - DofusButtonCustom #btn_resetAll  [NaNxNaN @ 0,0] Flex
+          - DofusVisualElement #button_container  [NaNxNaN @ 0,0] Flex
+            - DofusVisualElement #button_iconLeft  [NaNxNaN @ 0,0] Flex
+              - DofusIcon #button_iconLeft_Vector  [NaNxNaN @ 0,0] Flex [bg:resetShadowOutline]
+            - DofusLabel #button_label  [NaNxNaN @ 0,0] Flex "[Réinitialiser Tout]"
+    - DofusVisualElement #ctr_mainPanel  [NaNxNaN @ 0,0] Flex
+      - ScrollView #gd_options  [NaNxNaN @ 0,0] Flex
+        - DofusVisualElement #ctr_contentOptions  [NaNxNaN @ 0,0] Flex
+      - VisualElement #ctr_noResult  [NaNxNaN @ 0,0] None
+        - DofusLabel #lbl_noResult  [NaNxNaN @ 0,0] Flex "[Aucun élément ne correspond à votre recherche.]"

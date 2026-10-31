@@ -72,6 +72,8 @@ def main():
         replacement = "}).then((unityInstance) => { window.unityInstance = unityInstance;"
         if target in html and "window.unityInstance =" not in html:
             html = html.replace(target, replacement, 1)
+        # Patch canvas resolution to 1920x1080
+        html = html.replace('width=960 height=600', 'width=1920 height=1080')
         with open(dst_index, "w", encoding="utf-8") as f:
             f.write(html)
         print("  Copiado e patcheado: index.html")
