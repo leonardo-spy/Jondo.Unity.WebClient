@@ -33,7 +33,7 @@ namespace Jondo.UI.Generated
         public ScrollView gd_character { get; private set; }
         public VisualElement ctr_characterContent { get; private set; }
         public VisualElement ctr_footer { get; private set; }
-        public Button btn_createCharacter { get; private set; }
+        public VisualElement btn_createCharacter { get; private set; }
         public VisualElement txt_xp { get; private set; }
         public VisualElement ctr_display { get; private set; }
         public VisualElement socle { get; private set; }
@@ -80,7 +80,7 @@ namespace Jondo.UI.Generated
             gd_character = root.Q<ScrollView>("gd_character");
             ctr_characterContent = root.Q("ctr_characterContent");
             ctr_footer = root.Q("ctr_footer");
-            btn_createCharacter = root.Q<Button>("btn_createCharacter");
+            btn_createCharacter = root.Q("btn_createCharacter");
             txt_xp = root.Q("txt_xp");
             ctr_display = root.Q("ctr_display");
             socle = root.Q("socle");

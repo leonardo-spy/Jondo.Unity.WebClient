@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using FontAsset = UnityEngine.TextCore.Text.FontAsset;
 using Jondo.Reconstructed.Movement;
+using Jondo.UI.Generated;
 
 public partial class WebGLProbe : MonoBehaviour
 {
@@ -62,6 +63,16 @@ public partial class WebGLProbe : MonoBehaviour
     string _accountTag;
     string _subscriptionEndDate;
     VisualElement _characterHeaderRoot;
+
+    // Generated UI Toolkit Typed Bindings (Pilar 2 - Opcao 1)
+    GeneratedLoginBinding _loginBinding;
+    GeneratedServerSelectionBinding _serverSelectionBinding;
+    GeneratedCharacterSelectionBinding _charSelectionBinding;
+    GeneratedCharacterHeaderBinding _charHeaderBinding;
+    GeneratedCharacterInformationsBinding _charInfoBinding;
+    GeneratedChatviewBinding _chatviewBinding;
+    GeneratedActionBarBinding _actionBarBinding;
+    GeneratedBannerMenuBinding _bannerMenuBinding;
 
     static string FormatSubscriptionDisplay(string raw)
     {
@@ -2175,7 +2186,9 @@ public partial class WebGLProbe : MonoBehaviour
     // Element name from: LoginBinding._btn_play (dump.cs L195777)
     void PopulateLoginScreen(VisualElement root)
     {
-        var btnPlay = root.Q("btn_play"); // LoginBinding._btn_play
+        _loginBinding = new GeneratedLoginBinding();
+        _loginBinding.Bind(root);
+        var btnPlay = _loginBinding.btn_play ?? root.Q("btn_play"); // LoginBinding._btn_play
         if (btnPlay != null)
         {
             btnPlay.SetEnabled(true);
@@ -2705,8 +2718,11 @@ public partial class WebGLProbe : MonoBehaviour
         _characterHeaderRoot.pickingMode = PickingMode.Ignore;
         _characterHeaderRoot.style.backgroundColor = Color.clear;
 
+        _charHeaderBinding = new GeneratedCharacterHeaderBinding();
+        _charHeaderBinding.Bind(_characterHeaderRoot);
+
         // Clean up untextured background overlays inside characterHeader
-        var leftContainer = _characterHeaderRoot.Q("left");
+        var leftContainer = _charHeaderBinding.left ?? _characterHeaderRoot.Q("left");
         if (leftContainer != null)
         {
             leftContainer.style.backgroundColor = new Color(0.08f, 0.10f, 0.14f, 0.88f);
@@ -2746,7 +2762,7 @@ public partial class WebGLProbe : MonoBehaviour
         // Populate user data matching selecaoServ.png
         string nick = !string.IsNullOrEmpty(_accountNickname) ? _accountNickname : "admin";
         SetElementText(_characterHeaderRoot, "lbl_name", nick);
-        var nameLbl = _characterHeaderRoot.Q<Label>("lbl_name");
+        var nameLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_name != null ? _charHeaderBinding.lbl_name : _characterHeaderRoot.Q<Label>("lbl_name");
         if (nameLbl != null)
         {
             nameLbl.text = nick;
@@ -2757,7 +2773,7 @@ public partial class WebGLProbe : MonoBehaviour
 
         string tag = !string.IsNullOrEmpty(_accountTag) ? _accountTag : "#0001";
         SetElementText(_characterHeaderRoot, "lbl_tag", tag);
-        var tagLbl = _characterHeaderRoot.Q<Label>("lbl_tag");
+        var tagLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_tag != null ? _charHeaderBinding.lbl_tag : _characterHeaderRoot.Q<Label>("lbl_tag");
         if (tagLbl != null)
         {
             tagLbl.text = tag;
@@ -2768,7 +2784,7 @@ public partial class WebGLProbe : MonoBehaviour
 
         string sub = !string.IsNullOrEmpty(_subscriptionEndDate) ? _subscriptionEndDate : "Hasta el 15/10/2027, 13:11";
         SetElementText(_characterHeaderRoot, "lbl_subscription", sub);
-        var subLbl = _characterHeaderRoot.Q<Label>("lbl_subscription");
+        var subLbl = _charHeaderBinding != null && _charHeaderBinding.lbl_subscription != null ? _charHeaderBinding.lbl_subscription : _characterHeaderRoot.Q<Label>("lbl_subscription");
         if (subLbl != null)
         {
             subLbl.text = sub;
@@ -2777,7 +2793,7 @@ public partial class WebGLProbe : MonoBehaviour
             subLbl.style.marginLeft = 6;
         }
 
-        var btnSub = _characterHeaderRoot.Q("btn_subscribe");
+        var btnSub = _charHeaderBinding != null && _charHeaderBinding.btn_subscribe != null ? _charHeaderBinding.btn_subscribe : _characterHeaderRoot.Q("btn_subscribe");
         if (btnSub != null)
         {
             btnSub.style.backgroundColor = new Color(0.48f, 0.72f, 0.15f, 1f); // Authentic vibrant green
@@ -2978,8 +2994,11 @@ public partial class WebGLProbe : MonoBehaviour
 
     void PopulateServerSelection(VisualElement root)
     {
+        _serverSelectionBinding = new GeneratedServerSelectionBinding();
+        _serverSelectionBinding.Bind(root);
+
         // 0. Ensure root covers full canvas
-        var ctrSel = root.Q("ctr_serverSelection");
+        var ctrSel = _serverSelectionBinding.ctr_serverSelection ?? root.Q("ctr_serverSelection");
         if (ctrSel != null)
         {
             ctrSel.style.position = Position.Absolute;
@@ -2992,13 +3011,13 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         // Hide debug ctr_force, warnings, scrollers and empty server labels
-        var ctrForce = root.Q("ctr_force");
+        var ctrForce = _serverSelectionBinding?.ctr_force ?? root.Q("ctr_force");
         if (ctrForce != null)
         {
             ctrForce.style.display = DisplayStyle.None;
             ctrForce.style.visibility = Visibility.Hidden;
         }
-        var ctrWarning = root.Q("ctr_warning");
+        var ctrWarning = _serverSelectionBinding?.ctr_warning ?? root.Q("ctr_warning");
         if (ctrWarning != null)
         {
             ctrWarning.style.display = DisplayStyle.None;
@@ -3014,7 +3033,7 @@ public partial class WebGLProbe : MonoBehaviour
         root.Query(className: "unity-scroller").ForEach(s => s.style.display = DisplayStyle.None);
 
         // 1. Header Frame: Authentic Background + Title + Tabs
-        var ctrH = root.Q("ctr_header");
+        var ctrH = _serverSelectionBinding?.ctr_header ?? root.Q("ctr_header");
         if (ctrH != null)
         {
             ctrH.style.position = Position.Absolute;
@@ -3026,7 +3045,7 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         // Title: ELECCIÓN DE UN SERVIDOR
-        var lblTitle = root.Q<Label>("lbl_title") ?? root.Q("lbl_title") as Label;
+        var lblTitle = _serverSelectionBinding?.lbl_title ?? root.Q<Label>("lbl_title") ?? root.Q("lbl_title") as Label;
         if (lblTitle != null)
         {
             lblTitle.BringToFront();
@@ -3125,7 +3144,7 @@ public partial class WebGLProbe : MonoBehaviour
         PopulateServerTabs(root);
 
         // 3. Search & Friends (Top Left under CharacterHeader)
-        var ctrSearch = root.Q("ctr_search");
+        var ctrSearch = _serverSelectionBinding?.ctr_search ?? root.Q("ctr_search");
         if (ctrSearch != null)
         {
             ctrSearch.style.position = Position.Absolute;
@@ -3138,7 +3157,7 @@ public partial class WebGLProbe : MonoBehaviour
             ctrSearch.style.alignItems = Align.Center;
         }
 
-        var inpSearch = root.Q("inp_search");
+        var inpSearch = _serverSelectionBinding?.inp_search ?? root.Q("inp_search");
         if (inpSearch != null)
         {
             inpSearch.style.width = 170;
@@ -3169,7 +3188,7 @@ public partial class WebGLProbe : MonoBehaviour
             }
         }
 
-        var btnSearch = root.Q("btn_search");
+        var btnSearch = _serverSelectionBinding?.btn_search ?? root.Q("btn_search");
         if (btnSearch != null)
         {
             btnSearch.style.width = 30;
@@ -3200,7 +3219,7 @@ public partial class WebGLProbe : MonoBehaviour
             }
         }
 
-        var btnFriends = root.Q("btn_friends");
+        var btnFriends = _serverSelectionBinding?.btn_friends ?? root.Q("btn_friends");
         if (btnFriends != null)
         {
             btnFriends.style.width = 30;
@@ -3241,7 +3260,7 @@ public partial class WebGLProbe : MonoBehaviour
 
         // 4. Data-driven Carousel: 100% dynamic without hardcoded IDs or mock fallbacks (Pilar 1)
         var servers = _serverList;
-        var lblNoServer = root.Q<Label>("lbl_noServer");
+        var lblNoServer = _serverSelectionBinding?.lbl_noServer ?? root.Q<Label>("lbl_noServer");
 
         if (servers == null || servers.Count == 0)
         {
@@ -3573,8 +3592,8 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         // 5. Chevrons (btn_moveLeft and btn_moveRight) styled as authentic dark pills with gold arrows
-        var btnLeft = root.Q("btn_moveLeft");
-        var btnRight = root.Q("btn_moveRight");
+        var btnLeft = _serverSelectionBinding?.btn_moveLeft ?? root.Q("btn_moveLeft");
+        var btnRight = _serverSelectionBinding?.btn_moveRight ?? root.Q("btn_moveRight");
 
         var texArrowL = Resources.Load<Texture2D>("UI/Icons/arrowBigLeftShadowOutline");
         var texArrowR = Resources.Load<Texture2D>("UI/Icons/arrowBigRightShadowOutline");
@@ -3664,7 +3683,7 @@ public partial class WebGLProbe : MonoBehaviour
         }
 
         // 6. Bottom Controls: Checkbox and JUGAR button (matching selecaoServ.png)
-        var cbOnly = root.Q("cb_onlyCharacter");
+        var cbOnly = _serverSelectionBinding?.cb_onlyCharacter ?? root.Q("cb_onlyCharacter");
         if (cbOnly != null)
         {
             if (ctrSel != null && cbOnly.parent != ctrSel) ctrSel.Add(cbOnly);
@@ -3708,7 +3727,7 @@ public partial class WebGLProbe : MonoBehaviour
             }
         }
 
-        var btnPlay = root.Q("btn_play");
+        var btnPlay = _serverSelectionBinding?.btn_play ?? root.Q("btn_play");
         if (btnPlay != null)
         {
             if (ctrSel != null && btnPlay.parent != ctrSel) ctrSel.Add(btnPlay);
@@ -3898,13 +3917,16 @@ VisualTreeAsset _cardTemplate;
     // Element names from: ScreenBehavior.json → templates.CharacterLine.elements
     void PopulateCharacterSelection(VisualElement root)
     {
+        _charSelectionBinding = new GeneratedCharacterSelectionBinding();
+        _charSelectionBinding.Bind(root);
+
         // Server name (from decompiled CharacterSelection.Localize: lbl_serverName = server name)
         SetElementText(root, "lbl_serverName", _pendingServerId > 0 ? ServerName(_pendingServerId) : "");
 
         if (_characterList == null || _characterList.Count == 0)
         {
             // Empty state: show create button, hide play
-            var btnCreate = root.Q("btn_createCharacter");
+            var btnCreate = _charSelectionBinding?.btn_createCharacter ?? root.Q("btn_createCharacter");
             if (btnCreate is Button cb)
             {
                 cb.style.display = DisplayStyle.Flex;
@@ -3919,7 +3941,7 @@ VisualTreeAsset _cardTemplate;
         }
 
         // Populate character list in gd_character (ScrollView, dump.cs L172087)
-        var scrollView = root.Q("gd_character");
+        var scrollView = _charSelectionBinding?.gd_character ?? root.Q("gd_character");
         _selectedCharIdx = -1;
 
         VisualTreeAsset charLineUxml = LoadUxml("characterline");
@@ -3965,7 +3987,7 @@ VisualTreeAsset _cardTemplate;
         }
 
         // Wire Play button (CharacterSelection.ValidateCharacterChoice, dump.cs L151289)
-        var btnPlay = root.Q("btn_play");
+        var btnPlay = _charSelectionBinding?.btn_play ?? root.Q("btn_play");
         if (btnPlay != null)
         {
             btnPlay.SetEnabled(true);
@@ -4071,7 +4093,7 @@ VisualTreeAsset _cardTemplate;
 
         if (state == 0)
         {
-            var btnPlay = root.Q("btn_play");
+            var btnPlay = _loginBinding?.btn_play ?? root.Q("btn_play");
             if (btnPlay != null) { btnPlay.SetEnabled(true); btnPlay.RemoveFromClassList("disabled"); }
         }
 
@@ -4085,7 +4107,7 @@ VisualTreeAsset _cardTemplate;
         else
         {
             // Fallback: manual state management (from fys.mx transcription)
-            var btnPlay = root.Q("btn_play");
+            var btnPlay = _loginBinding?.btn_play ?? root.Q("btn_play");
             if (btnPlay != null) btnPlay.SetEnabled(state == 0);
             var ctrLogin = root.Q("ctr_login");
             if (ctrLogin != null)
@@ -5995,6 +6017,8 @@ VisualTreeAsset _cardTemplate;
             if (bannerVta != null)
             {
                 _bannerRoot = bannerVta.CloneTree();
+                _bannerMenuBinding = new GeneratedBannerMenuBinding();
+                _bannerMenuBinding.Bind(_bannerRoot);
                 _bannerRoot.name = "BannerMenu_Root";
                 _bannerRoot.style.position = Position.Absolute;
                 _bannerRoot.style.bottom = 0;
@@ -6025,6 +6049,8 @@ VisualTreeAsset _cardTemplate;
             if (chatVta != null)
             {
                 _chatRoot = chatVta.CloneTree();
+                _chatviewBinding = new GeneratedChatviewBinding();
+                _chatviewBinding.Bind(_chatRoot);
                 _chatRoot.name = "ChatView_Root";
                 _chatRoot.style.position = Position.Absolute;
                 _chatRoot.style.bottom = 85;
@@ -6082,6 +6108,8 @@ VisualTreeAsset _cardTemplate;
             if (charInfoVta != null)
             {
                 _characterInfoRoot = charInfoVta.CloneTree();
+                _charInfoBinding = new GeneratedCharacterInformationsBinding();
+                _charInfoBinding.Bind(_characterInfoRoot);
                 _characterInfoRoot.name = "CharacterInformation_Root";
                 _characterInfoRoot.style.position = Position.Absolute;
                 _characterInfoRoot.style.bottom = 12;
@@ -6110,6 +6138,8 @@ VisualTreeAsset _cardTemplate;
             if (barVta != null)
             {
                 _actionBarRoot = barVta.CloneTree();
+                _actionBarBinding = new GeneratedActionBarBinding();
+                _actionBarBinding.Bind(_actionBarRoot);
                 _actionBarRoot.name = "ActionBar_Root";
                 _actionBarRoot.style.position = Position.Absolute;
                 _actionBarRoot.style.bottom = 75;
@@ -6147,17 +6177,23 @@ VisualTreeAsset _cardTemplate;
     public void UpdateCharacterInfoStats(int currentHp, int maxHp, int currentAp, int currentMp, int shield = 0, int invocations = 1)
     {
         if (_characterInfoRoot == null) return;
-        var lblPdv = _characterInfoRoot.Q<Label>("lbl_pdv");
+        if (_charInfoBinding == null)
+        {
+            _charInfoBinding = new GeneratedCharacterInformationsBinding();
+            _charInfoBinding.Bind(_characterInfoRoot);
+        }
+
+        var lblPdv = _charInfoBinding?.lbl_pdv ?? _characterInfoRoot.Q<Label>("lbl_pdv");
         if (lblPdv != null) lblPdv.text = $"{currentHp} / {maxHp}";
-        var lblPdvBottom = _characterInfoRoot.Q<Label>("lbl_pdvBottom");
+        var lblPdvBottom = _charInfoBinding?.lbl_pdvBottom ?? _characterInfoRoot.Q<Label>("lbl_pdvBottom");
         if (lblPdvBottom != null) lblPdvBottom.text = $"{currentHp}";
-        var lblPa = _characterInfoRoot.Q<Label>("lbl_pa");
+        var lblPa = _charInfoBinding?.lbl_pa ?? _characterInfoRoot.Q<Label>("lbl_pa");
         if (lblPa != null) lblPa.text = $"{currentAp}";
-        var lblPm = _characterInfoRoot.Q<Label>("lbl_pm");
+        var lblPm = _charInfoBinding?.lbl_pm ?? _characterInfoRoot.Q<Label>("lbl_pm");
         if (lblPm != null) lblPm.text = $"{currentMp}";
-        var lblShield = _characterInfoRoot.Q<Label>("lbl_shield");
+        var lblShield = _charInfoBinding?.lbl_shield ?? _characterInfoRoot.Q<Label>("lbl_shield");
         if (lblShield != null) lblShield.text = shield > 0 ? $"{shield}" : "";
-        var lblIp = _characterInfoRoot.Q<Label>("lbl_ip");
+        var lblIp = _charInfoBinding?.lbl_ip ?? _characterInfoRoot.Q<Label>("lbl_ip");
         if (lblIp != null) lblIp.text = $"{invocations}";
     }
 

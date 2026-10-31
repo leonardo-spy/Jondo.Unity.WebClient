@@ -33,3 +33,4 @@ if os.path.exists(s4_path):
     # Bottom HUD
     img.crop((0, h - 160, w, h)).save(os.path.join(brain_dir, "crop_p3_bottom_hud_final.png"))
     print("04_world_map_hud crops saved.")
+

@@ -17,12 +17,12 @@ namespace Jondo.UI.Generated
         public VisualElement Chat { get; private set; }
         public ScrollView sv_toggles { get; private set; }
         public VisualElement ctr_toggleButtons { get; private set; }
-        public Button btn_addChannel { get; private set; }
+        public VisualElement btn_addChannel { get; private set; }
         public ListView listChat { get; private set; }
-        public Button btn_dialect { get; private set; }
-        public TextField ti_chatInput { get; private set; }
+        public VisualElement btn_dialect { get; private set; }
+        public VisualElement ti_chatInput { get; private set; }
         public VisualElement icon_status { get; private set; }
-        public Button btn_news { get; private set; }
+        public VisualElement btn_news { get; private set; }
 
         /// <summary>
         /// Vincula todos os elementos a partir da raiz da UI (UXML instanciado).
@@ -35,12 +35,12 @@ namespace Jondo.UI.Generated
             Chat = root.Q("Chat");
             sv_toggles = root.Q<ScrollView>("sv_toggles");
             ctr_toggleButtons = root.Q("ctr_toggleButtons");
-            btn_addChannel = root.Q<Button>("btn_addChannel");
+            btn_addChannel = root.Q("btn_addChannel");
             listChat = root.Q<ListView>("listChat");
-            btn_dialect = root.Q<Button>("btn_dialect");
-            ti_chatInput = root.Q<TextField>("ti_chatInput");
+            btn_dialect = root.Q("btn_dialect");
+            ti_chatInput = root.Q("ti_chatInput");
             icon_status = root.Q("icon_status");
-            btn_news = root.Q<Button>("btn_news");
+            btn_news = root.Q("btn_news");
         }
     }
 }

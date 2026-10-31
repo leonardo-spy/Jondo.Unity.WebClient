@@ -45,10 +45,10 @@ class TestBindingGenerator(unittest.TestCase):
     def test_type_mappings(self):
         """Verifica se todos os tipos Ankama críticos são mapeados corretamente."""
         self.assertEqual(map_type("DofusLabel"), "Label")
-        self.assertEqual(map_type("DofusButtonCustom"), "Button")
+        self.assertEqual(map_type("DofusButtonCustom"), "VisualElement")
         self.assertEqual(map_type("DofusVisualElement"), "VisualElement")
-        self.assertEqual(map_type("TextInput"), "TextField")
-        self.assertEqual(map_type("CheckboxCustom"), "Toggle")
+        self.assertEqual(map_type("TextInput"), "VisualElement")
+        self.assertEqual(map_type("CheckboxCustom"), "VisualElement")
         self.assertEqual(map_type("PlayButton"), "VisualElement")
         self.assertEqual(map_type("ServerCard"), "VisualElement")
 
@@ -77,9 +77,9 @@ class TestBindingGenerator(unittest.TestCase):
 
         # Tipos mapeados devem estar corretos
         self.assertEqual(mapped_types["lbl_title"], "Label")
-        self.assertEqual(mapped_types["inp_search"], "TextField")
-        self.assertEqual(mapped_types["btn_search"], "Button")
-        self.assertEqual(mapped_types["cb_onlyCharacter"], "Toggle")
+        self.assertEqual(mapped_types["inp_search"], "VisualElement")
+        self.assertEqual(mapped_types["btn_search"], "VisualElement")
+        self.assertEqual(mapped_types["cb_onlyCharacter"], "VisualElement")
         self.assertEqual(mapped_types["lbl_noServer"], "Label")
 
     def test_csharp_generation(self):
@@ -87,7 +87,7 @@ class TestBindingGenerator(unittest.TestCase):
         fields = [
             ("DofusLabel", "Label", "lbl_title"),
             ("PlayButton", "VisualElement", "btn_play"),
-            ("DofusButtonCustom", "Button", "btn_search"),
+            ("DofusButtonCustom", "VisualElement", "btn_search"),
         ]
         cs = generate_csharp_class("ServerSelectionBinding", fields)
 
@@ -99,13 +99,13 @@ class TestBindingGenerator(unittest.TestCase):
         # Valida propriedades
         self.assertIn("public Label lbl_title { get; private set; }", cs)
         self.assertIn("public VisualElement btn_play { get; private set; }", cs)
-        self.assertIn("public Button btn_search { get; private set; }", cs)
+        self.assertIn("public VisualElement btn_search { get; private set; }", cs)
 
         # Valida método Bind
         self.assertIn("public void Bind(VisualElement root)", cs)
         self.assertIn('lbl_title = root.Q<Label>("lbl_title");', cs)
         self.assertIn('btn_play = root.Q("btn_play");', cs)
-        self.assertIn('btn_search = root.Q<Button>("btn_search");', cs)
+        self.assertIn('btn_search = root.Q("btn_search");', cs)
 
     def test_parse_from_dump(self):
         """Verifica se parse_binding_from_dump localiza a struct no texto completo."""

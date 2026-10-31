@@ -13,18 +13,20 @@ import sys
 from typing import Dict, List, Tuple
 
 # Mapeamento oficial de tipos Ankama -> Unity UI Toolkit (Pilar 2 Lacuna 5)
+# Nota arquitetural: DofusButtonCustom, CheckboxCustom e TextInput herdam de DofusBindableElement
+# no IL2CPP oficial, logo mapeiam para VisualElement para evitar NullReference por type mismatch.
 TYPE_MAPPING: Dict[str, str] = {
     "DofusVisualElement": "VisualElement",
     "DofusLabel": "Label",
-    "DofusButtonCustom": "Button",
+    "DofusButtonCustom": "VisualElement",
     "DofusIcon": "VisualElement",
     "PlayButton": "VisualElement",
     "ServerCard": "VisualElement",
-    "CheckboxCustom": "Toggle",
+    "CheckboxCustom": "VisualElement",
     "DofusTab": "VisualElement",
-    "TextInput": "TextField",
+    "TextInput": "VisualElement",
     "TableColumnHeader": "VisualElement",
-    "DofusToggleButtonCustom": "Toggle",
+    "DofusToggleButtonCustom": "VisualElement",
     "DofusToggleButtonGroupCustom": "VisualElement",
     "DropdownButton": "VisualElement",
     "EntityDisplayer": "VisualElement",

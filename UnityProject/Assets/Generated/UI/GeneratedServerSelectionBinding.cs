@@ -28,9 +28,9 @@ namespace Jondo.UI.Generated
         public Label lbl_title { get; private set; }
         public VisualElement ctr_search { get; private set; }
         public VisualElement ctr_line { get; private set; }
-        public TextField inp_search { get; private set; }
-        public Button btn_search { get; private set; }
-        public Button btn_friends { get; private set; }
+        public VisualElement inp_search { get; private set; }
+        public VisualElement btn_search { get; private set; }
+        public VisualElement btn_friends { get; private set; }
         public Label lbl_errorSearch { get; private set; }
         public VisualElement ctr_searchResult { get; private set; }
         public ListView gd_searchResults { get; private set; }
@@ -39,16 +39,16 @@ namespace Jondo.UI.Generated
         public VisualElement ctr_force { get; private set; }
         public VisualElement ctr_freeAccount { get; private set; }
         public Label lbl_accountName { get; private set; }
-        public Button btn_freeAccount { get; private set; }
+        public VisualElement btn_freeAccount { get; private set; }
         public VisualElement ctr_forceAccount { get; private set; }
         public VisualElement ctr_forceInput { get; private set; }
-        public TextField inp_force { get; private set; }
-        public Button btn_force { get; private set; }
+        public VisualElement inp_force { get; private set; }
+        public VisualElement btn_force { get; private set; }
         public Label lbl_errorForce { get; private set; }
         public VisualElement ctr_mode { get; private set; }
         public VisualElement tgGroup_mode { get; private set; }
-        public Toggle tg_carousel { get; private set; }
-        public Toggle tg_list { get; private set; }
+        public VisualElement tg_carousel { get; private set; }
+        public VisualElement tg_list { get; private set; }
         public VisualElement VisualElement { get; private set; }
         public VisualElement ctr_warning { get; private set; }
         public VisualElement icon_warning { get; private set; }
@@ -79,7 +79,7 @@ namespace Jondo.UI.Generated
         public VisualElement btn_moveLeft { get; private set; }
         public VisualElement btn_moveRight { get; private set; }
         public VisualElement btn_play { get; private set; }
-        public Toggle cb_onlyCharacter { get; private set; }
+        public VisualElement cb_onlyCharacter { get; private set; }
         public Label lbl_noServer { get; private set; }
 
         /// <summary>
@@ -104,9 +104,9 @@ namespace Jondo.UI.Generated
             lbl_title = root.Q<Label>("lbl_title");
             ctr_search = root.Q("ctr_search");
             ctr_line = root.Q("ctr_line");
-            inp_search = root.Q<TextField>("inp_search");
-            btn_search = root.Q<Button>("btn_search");
-            btn_friends = root.Q<Button>("btn_friends");
+            inp_search = root.Q("inp_search");
+            btn_search = root.Q("btn_search");
+            btn_friends = root.Q("btn_friends");
             lbl_errorSearch = root.Q<Label>("lbl_errorSearch");
             ctr_searchResult = root.Q("ctr_searchResult");
             gd_searchResults = root.Q<ListView>("gd_searchResults");
@@ -115,16 +115,16 @@ namespace Jondo.UI.Generated
             ctr_force = root.Q("ctr_force");
             ctr_freeAccount = root.Q("ctr_freeAccount");
             lbl_accountName = root.Q<Label>("lbl_accountName");
-            btn_freeAccount = root.Q<Button>("btn_freeAccount");
+            btn_freeAccount = root.Q("btn_freeAccount");
             ctr_forceAccount = root.Q("ctr_forceAccount");
             ctr_forceInput = root.Q("ctr_forceInput");
-            inp_force = root.Q<TextField>("inp_force");
-            btn_force = root.Q<Button>("btn_force");
+            inp_force = root.Q("inp_force");
+            btn_force = root.Q("btn_force");
             lbl_errorForce = root.Q<Label>("lbl_errorForce");
             ctr_mode = root.Q("ctr_mode");
             tgGroup_mode = root.Q("tgGroup_mode");
-            tg_carousel = root.Q<Toggle>("tg_carousel");
-            tg_list = root.Q<Toggle>("tg_list");
+            tg_carousel = root.Q("tg_carousel");
+            tg_list = root.Q("tg_list");
             VisualElement = root.Q("VisualElement");
             ctr_warning = root.Q("ctr_warning");
             icon_warning = root.Q("icon_warning");
@@ -155,7 +155,7 @@ namespace Jondo.UI.Generated
             btn_moveLeft = root.Q("btn_moveLeft");
             btn_moveRight = root.Q("btn_moveRight");
             btn_play = root.Q("btn_play");
-            cb_onlyCharacter = root.Q<Toggle>("cb_onlyCharacter");
+            cb_onlyCharacter = root.Q("cb_onlyCharacter");
             lbl_noServer = root.Q<Label>("lbl_noServer");
         }
     }

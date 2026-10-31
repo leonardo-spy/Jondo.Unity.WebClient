@@ -23,7 +23,7 @@ namespace Jondo.UI.Generated
         public VisualElement ctr_subscription { get; private set; }
         public VisualElement icon_subscription { get; private set; }
         public Label lbl_subscription { get; private set; }
-        public Button btn_subscribe { get; private set; }
+        public VisualElement btn_subscribe { get; private set; }
         public VisualElement ctr_admin { get; private set; }
         public VisualElement icon_admin { get; private set; }
         public Label lbl_admin { get; private set; }
@@ -45,7 +45,7 @@ namespace Jondo.UI.Generated
             ctr_subscription = root.Q("ctr_subscription");
             icon_subscription = root.Q("icon_subscription");
             lbl_subscription = root.Q<Label>("lbl_subscription");
-            btn_subscribe = root.Q<Button>("btn_subscribe");
+            btn_subscribe = root.Q("btn_subscribe");
             ctr_admin = root.Q("ctr_admin");
             icon_admin = root.Q("icon_admin");
             lbl_admin = root.Q<Label>("lbl_admin");

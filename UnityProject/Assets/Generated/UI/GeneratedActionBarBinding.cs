@@ -23,10 +23,10 @@ namespace Jondo.UI.Generated
         public Label lineTag_3 { get; private set; }
         public VisualElement ctr_controller { get; private set; }
         public VisualElement ctr_pages { get; private set; }
-        public Button btn_prev { get; private set; }
+        public VisualElement btn_prev { get; private set; }
         public Label lbl_pageIndex { get; private set; }
-        public Button btn_next { get; private set; }
-        public Button btn_type { get; private set; }
+        public VisualElement btn_next { get; private set; }
+        public VisualElement btn_type { get; private set; }
 
         /// <summary>
         /// Vincula todos os elementos a partir da raiz da UI (UXML instanciado).
@@ -45,10 +45,10 @@ namespace Jondo.UI.Generated
             lineTag_3 = root.Q<Label>("lineTag_3");
             ctr_controller = root.Q("ctr_controller");
             ctr_pages = root.Q("ctr_pages");
-            btn_prev = root.Q<Button>("btn_prev");
+            btn_prev = root.Q("btn_prev");
             lbl_pageIndex = root.Q<Label>("lbl_pageIndex");
-            btn_next = root.Q<Button>("btn_next");
-            btn_type = root.Q<Button>("btn_type");
+            btn_next = root.Q("btn_next");
+            btn_type = root.Q("btn_type");
         }
     }
 }
