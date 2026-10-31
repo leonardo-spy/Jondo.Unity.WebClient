@@ -136,9 +136,17 @@ def extract_uss_rules(node, rules_by_id, rules_by_class=None):
     if font_color and font_color != "rgba(27,27,27,1.00)":
         rule["color"] = font_color
 
-    if name and not name.startswith("(unnamed)") and rule:
-        # Preserve specific rules
-        if name not in rules_by_id or len(rule) > len(rules_by_id[name]):
+    IGNORED_ID_NAMES = {
+        "VisualElement", "TemplateContainer", "(unnamed)", "DofusVisualElement",
+        "TextElement", "Label", "Button", "ScrollView", "ListView", "DofusLabel",
+        "DofusButtonCustom", "TextInput", "DofusIcon", "DofusTextFieldCustom"
+    }
+
+    if name and not name.startswith("(unnamed)") and name not in IGNORED_ID_NAMES and rule:
+        # Avoid conflicting generic names from overriding specialized screens
+        if name == "ctr_background":
+            pass # Scoped per-screen in template USS
+        elif name not in rules_by_id or len(rule) > len(rules_by_id[name]):
             rules_by_id[name] = rule
             
     for child in node.get("children", []):
@@ -199,3 +207,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

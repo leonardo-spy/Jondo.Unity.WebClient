@@ -9,3 +9,4 @@ namespace Jondo.UI.Models
         public List<string> charNames;
     }
 }
+
