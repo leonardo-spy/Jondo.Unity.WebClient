@@ -3072,8 +3072,9 @@ public partial class WebGLProbe : MonoBehaviour
             ctrBg.style.top = 0;
             ctrBg.style.left = 0;
             ctrBg.style.right = 0;
-            ctrBg.style.height = 130;
+            ctrBg.style.height = 204.4f;
             ctrBg.style.flexDirection = FlexDirection.Row;
+            ctrBg.style.justifyContent = Justify.SpaceBetween;
             ctrBg.style.backgroundColor = Color.clear;
 
             // Clear any raw white borders on children
@@ -3095,43 +3096,51 @@ public partial class WebGLProbe : MonoBehaviour
                 if (texBorder != null)
                 {
                     ctrBg[0].style.backgroundImage = new StyleBackground(texBorder);
-                    ctrBg[0].style.width = Length.Percent(25);
+                    ctrBg[0].style.flexGrow = 1;
+                    ctrBg[0].style.flexShrink = 1;
+                    ctrBg[0].style.width = StyleKeyword.Auto;
                     ctrBg[0].style.height = Length.Percent(100);
 
                     ctrBg[2].style.backgroundImage = new StyleBackground(texBorder);
-                    ctrBg[2].style.width = Length.Percent(25);
+                    ctrBg[2].style.flexGrow = 1;
+                    ctrBg[2].style.flexShrink = 1;
+                    ctrBg[2].style.width = StyleKeyword.Auto;
                     ctrBg[2].style.height = Length.Percent(100);
                 }
 
                 var tabSec = ctrBg.Q("ctr_tabSection");
                 if (tabSec != null)
                 {
-                    tabSec.style.width = Length.Percent(50);
+                    tabSec.style.flexGrow = 0;
+                    tabSec.style.flexShrink = 0;
+                    tabSec.style.width = StyleKeyword.Auto;
                     tabSec.style.height = Length.Percent(100);
                     tabSec.style.position = Position.Relative;
                     if (tabSec.childCount > 0)
                     {
                         var cornerContainer = tabSec[0];
                         cornerContainer.style.flexDirection = FlexDirection.Row;
-                        cornerContainer.style.width = Length.Percent(100);
                         cornerContainer.style.height = Length.Percent(100);
                         if (cornerContainer.childCount >= 3)
                         {
                             if (texCorner != null)
                             {
                                 cornerContainer[0].style.backgroundImage = new StyleBackground(texCorner);
-                                cornerContainer[0].style.width = Length.Percent(30);
+                                cornerContainer[0].style.width = 511;
+                                cornerContainer[0].style.flexShrink = 0;
                                 cornerContainer[0].style.height = Length.Percent(100);
 
                                 cornerContainer[2].style.backgroundImage = new StyleBackground(texCorner);
-                                cornerContainer[2].style.width = Length.Percent(30);
+                                cornerContainer[2].style.width = 512;
+                                cornerContainer[2].style.flexShrink = 0;
                                 cornerContainer[2].style.height = Length.Percent(100);
                                 cornerContainer[2].style.scale = new Scale(new Vector3(-1, 1, 1));
                             }
                             if (texCenter != null)
                             {
                                 cornerContainer[1].style.backgroundImage = new StyleBackground(texCenter);
-                                cornerContainer[1].style.width = Length.Percent(40);
+                                cornerContainer[1].style.flexGrow = 1;
+                                cornerContainer[1].style.width = StyleKeyword.Auto;
                                 cornerContainer[1].style.height = Length.Percent(100);
                             }
                         }
@@ -3247,16 +3256,44 @@ public partial class WebGLProbe : MonoBehaviour
             }
         }
 
-        // View mode switch on top right
-        var ctrNav = root.Q("ctr_navigation");
-        if (ctrNav != null)
+        // View mode switch on top right (ctr_mode: tg_carousel and tg_list from live dump)
+        var ctrMode = root.Q("ctr_mode");
+        var tgCarousel = root.Q("tg_carousel");
+        var tgList = root.Q("tg_list");
+        var ctrCarousel = root.Q("ctr_carouselMode");
+        var ctrListMode = root.Q("ctr_listMode");
+
+        if (ctrMode != null)
         {
-            ctrNav.style.position = Position.Absolute;
-            ctrNav.style.top = 62;
-            ctrNav.style.right = 20;
-            ctrNav.style.flexDirection = FlexDirection.Row;
-            ctrNav.style.alignItems = Align.Center;
+            ctrMode.style.position = Position.Absolute;
+            ctrMode.style.top = 78;
+            ctrMode.style.right = 20;
+            ctrMode.style.width = 80;
+            ctrMode.style.height = 48;
+            ctrMode.style.flexDirection = FlexDirection.Row;
+            ctrMode.style.alignItems = Align.Center;
+            ctrMode.style.backgroundColor = new Color(0, 0, 0, 0.25f);
         }
+
+        Action<bool> setDisplayMode = (isCarousel) =>
+        {
+            if (ctrCarousel != null) ctrCarousel.style.display = isCarousel ? DisplayStyle.Flex : DisplayStyle.None;
+            if (ctrListMode != null) ctrListMode.style.display = isCarousel ? DisplayStyle.None : DisplayStyle.Flex;
+
+            if (tgCarousel != null)
+            {
+                var tc = tgCarousel.Q("toggle_container") ?? tgCarousel;
+                tc.style.backgroundColor = isCarousel ? new Color(0.71f, 0.70f, 0.90f, 0.50f) : new Color(0.71f, 0.70f, 0.90f, 0.25f);
+            }
+            if (tgList != null)
+            {
+                var tl = tgList.Q("toggle_container") ?? tgList;
+                tl.style.backgroundColor = !isCarousel ? new Color(0.71f, 0.70f, 0.90f, 0.50f) : new Color(0.71f, 0.70f, 0.90f, 0.25f);
+            }
+        };
+
+        if (tgCarousel != null) tgCarousel.RegisterCallback<ClickEvent>(evt => setDisplayMode(true));
+        if (tgList != null) tgList.RegisterCallback<ClickEvent>(evt => setDisplayMode(false));
 
         // 4. Data-driven Carousel: 100% dynamic without hardcoded IDs or mock fallbacks (Pilar 1)
         var servers = _serverList;
@@ -3271,8 +3308,7 @@ public partial class WebGLProbe : MonoBehaviour
                 lblNoServer.visible = true;
                 lblNoServer.text = "Ningún servidor disponible";
             }
-            var ctrCar = root.Q("ctr_carouselMode");
-            if (ctrCar != null) ctrCar.style.display = DisplayStyle.None;
+            if (ctrCarousel != null) ctrCarousel.style.display = DisplayStyle.None;
             return;
         }
 
@@ -3308,14 +3344,13 @@ public partial class WebGLProbe : MonoBehaviour
         reordered.AddRange(otherServers);
         servers = reordered;
 
-        var ctrCarousel = root.Q("ctr_carouselMode");
         if (ctrCarousel != null)
         {
             ctrCarousel.style.position = Position.Absolute;
-            ctrCarousel.style.top = 130;
+            ctrCarousel.style.top = 204.4f;
             ctrCarousel.style.left = 0;
             ctrCarousel.style.right = 0;
-            ctrCarousel.style.height = 720;
+            ctrCarousel.style.height = 650;
         }
 
         // Center the cards container
@@ -3333,8 +3368,9 @@ public partial class WebGLProbe : MonoBehaviour
             cardContainer.style.alignItems = Align.Center;
         }
 
-        // Selected index: index 1 (TAL KASHA in center)
-        _selectedServerCardIdx = (servers.Count > 1) ? 1 : 0;
+        // Selected index: preserve existing selection or default to center
+        if (_selectedServerCardIdx < 0 || _selectedServerCardIdx >= servers.Count)
+            _selectedServerCardIdx = (servers.Count > 1) ? 1 : 0;
         if (_selectedServerCardIdx >= 0 && _selectedServerCardIdx < servers.Count)
             _pendingServerId = servers[_selectedServerCardIdx].id;
 
@@ -3493,14 +3529,18 @@ public partial class WebGLProbe : MonoBehaviour
             // Hide any raw 'No available servers' label
             card.Query<Label>().Where(l => l.text != null && l.text.Contains("No available")).ForEach(l => l.style.display = DisplayStyle.None);
 
-            // Sizing & margins based on selection
+            // Authentic 340x630 card dimension and 375px carousel pitch from live dump
+            card.style.width = 340;
+            card.style.height = 630;
+            card.style.marginLeft = 17.5f;
+            card.style.marginRight = 17.5f;
+
             bool isSelected = (i == _selectedServerCardIdx);
+            int distFromSelected = Math.Abs(i - _selectedServerCardIdx);
+
             if (isSelected)
             {
-                card.style.width = 440;
-                card.style.height = 680;
-                card.style.marginLeft = 16;
-                card.style.marginRight = 16;
+                card.style.marginTop = -50; // Elevated center card from live dump
                 card.style.borderLeftColor = new Color(0.95f, 0.77f, 0.25f, 1f);
                 card.style.borderRightColor = new Color(0.95f, 0.77f, 0.25f, 1f);
                 card.style.borderTopColor = new Color(0.95f, 0.77f, 0.25f, 1f);
@@ -3571,10 +3611,7 @@ public partial class WebGLProbe : MonoBehaviour
             }
             else
             {
-                card.style.width = 380;
-                card.style.height = 620;
-                card.style.marginLeft = 16;
-                card.style.marginRight = 16;
+                card.style.marginTop = (distFromSelected == 1) ? 0 : 50; // Authentic stepped elevation from live dump
                 card.style.borderLeftWidth = 1;
                 card.style.borderRightWidth = 1;
                 card.style.borderTopWidth = 1;
@@ -3888,21 +3925,12 @@ VisualTreeAsset _cardTemplate;
 
     void SelectServerCard(VisualElement root, int cardIdx, int serverId)
     {
-        // Remove highlight from previous
-        if (_selectedServerCardIdx >= 0)
-        {
-            var prev = root.Q($"serverCard_{_selectedServerCardIdx}");
-            prev?.RemoveFromClassList("selected");
-        }
-
         _selectedServerCardIdx = cardIdx;
         _pendingServerId = serverId;
 
-        var card = root.Q($"serverCard_{cardIdx}");
-        card?.AddToClassList("selected");
-
         Log($"  Server card {cardIdx} selected (id={serverId})");
         DispatchGen_Event("ServerSelection", "OnSelectionChanged", root);
+        PopulateServerSelection(root);
     }
 
     // ──────────────────── Character Selection Population ────────────────────
